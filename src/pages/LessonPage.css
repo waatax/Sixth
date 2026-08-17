@@ -7,16 +7,17 @@
 }
 
 .lesson-page-wrapper .markdown-body h2 {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--text-primary);
 }
 
 .lesson-page-wrapper .markdown-body h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
+  color: var(--accent-hover);
 }
 
 .lesson-page-wrapper .markdown-body p {
@@ -46,7 +47,7 @@
 .lesson-page-wrapper .markdown-body blockquote {
   border-left: 4px solid var(--accent-primary);
   background-color: var(--bg-tertiary);
-  padding: 1rem;
+  padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   color: var(--text-secondary);
@@ -59,24 +60,64 @@
 }
 
 .lesson-page-wrapper .markdown-body pre {
-  background-color: var(--bg-tertiary);
-  padding: 1rem;
+  background-color: hsl(220, 25%, 15%);
+  color: hsl(210, 30%, 95%);
+  padding: 1.25rem;
   border-radius: var(--radius-md);
   overflow-x: auto;
-  margin-bottom: 1rem;
-  border: 1px solid var(--border-light);
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border-strong);
+  font-family: 'Fira Code', Consolas, Monaco, monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .lesson-page-wrapper .markdown-body code {
-  font-family: monospace;
-  font-size: 0.9em;
+  font-family: 'Fira Code', Consolas, Monaco, monospace;
 }
 
 /* Inline code */
 .lesson-page-wrapper .markdown-body p code,
 .lesson-page-wrapper .markdown-body li code {
   background-color: var(--bg-tertiary);
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.5rem;
   border-radius: var(--radius-sm);
   color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* Tables styling */
+.lesson-page-wrapper .markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.lesson-page-wrapper .markdown-body th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.lesson-page-wrapper .markdown-body td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.lesson-page-wrapper .markdown-body tr:last-child td {
+  border-bottom: none;
+}
+
+.lesson-page-wrapper .markdown-body tr:hover td {
+  background-color: hsl(210, 20%, 98%);
 }
