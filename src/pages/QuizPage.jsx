@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX } from 'lucide-react';
+import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
+import { playSound, toggleMute, getMuteState } from '../utils/soundEffects';
 
 const QuizPage = () => {
   const { unitId } = useParams();
@@ -11,12 +13,19 @@ const QuizPage = () => {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
+  const [muted, setMuted] = useState(getMuteState());
 
   const questions = quizData[unitId] || [];
+
+  const handleMuteToggle = () => {
+    const newState = toggleMute();
+    setMuted(newState);
+  };
 
   const handleSelect = (index) => {
     if (showResult) return;
     setSelectedOption(index);
+    playSound('click');
   };
 
   const handleSubmit = () => {
@@ -25,7 +34,35 @@ const QuizPage = () => {
     const isCorrect = selectedOption === question.answerIndex;
     if (isCorrect) {
       setScore(s => s + 1);
+      playSound('correct');
+    } else {
+      playSound('wrong');
     }
+
+    // Save mistake to localStorage mistake notebook if wrong
+    if (!isCorrect) {
+      try {
+        const savedMistakes = localStorage.getItem('sixth_student_mistakes');
+        const mistakeList = savedMistakes ? JSON.parse(savedMistakes) : [];
+        const existingIdx = mistakeList.findIndex(m => m.unitId === unitId && m.questionId === question.id);
+        const mistakeItem = {
+          unitId,
+          questionId: question.id,
+          question: question.question,
+          options: question.options,
+          answerIndex: question.answerIndex,
+          explanation: question.explanation,
+          timestamp: new Date().toISOString()
+        };
+        if (existingIdx >= 0) {
+          mistakeList[existingIdx] = mistakeItem;
+        } else {
+          mistakeList.unshift(mistakeItem);
+        }
+        localStorage.setItem('sixth_student_mistakes', JSON.stringify(mistakeList));
+      } catch (e) {}
+    }
+
     setUserAnswers(prev => [...prev, { qIndex: currentQ, selected: selectedOption, correct: isCorrect }]);
     setShowResult(true);
   };
@@ -35,11 +72,20 @@ const QuizPage = () => {
       // Award XP in localStorage
       try {
         const saved = localStorage.getItem('sixth_student_stats');
-        const currentStats = saved ? JSON.parse(saved) : { xp: 100, completedUnits: 0, streak: 1, badges: [] };
+        const currentStats = saved ? JSON.parse(saved) : { xp: 100, completedUnits: 0, streak: 1, badges: ['數學小博士', '氣象小偵探'] };
         currentStats.xp += 50;
         currentStats.completedUnits += 1;
         localStorage.setItem('sixth_student_stats', JSON.stringify(currentStats));
       } catch (e) {}
+
+      // Trigger celebratory confetti & levelup sound
+      const finalScore = score + (selectedOption === question.answerIndex ? 0 : 0);
+      playSound('levelup');
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
 
       setCurrentQ(questions.length); 
     } else {
@@ -86,7 +132,7 @@ const QuizPage = () => {
             觀念檢核得分：{percentage} 分
           </h2>
           <p className="text-secondary text-sm">
-            共 {questions.length} 題，答對 {score} 題。{percentage >= 80 ? '🌟 太厲害了！你已徹底掌握本單元核心素養！' : '💪 繼續加油！錯題可以回到圖解教學單元複習喔！'}
+            共 {questions.length} 題，答對 {score} 題。{percentage >= 80 ? '🌟 太厲害了！你已徹底掌握本單元核心素養！' : '💪 繼續加油！錯題已自動收錄至「錯題筆記本」，方便考前隨時複習！'}
           </p>
         </div>
 
@@ -119,8 +165,8 @@ const QuizPage = () => {
           <button className="btn-outline flex items-center gap-2 text-sm" onClick={handleRestart}>
             <RotateCcw size={16} /> 重新挑戰一次
           </button>
-          <Link to={`/lesson/${unitId}`} className="btn-outline flex items-center gap-2 text-sm">
-            <BookOpen size={16} /> 回教學單元複習
+          <Link to="/mistakes" className="btn-outline flex items-center gap-2 text-sm" style={{ color: 'var(--accent-primary)', borderColor: 'var(--accent-primary)' }}>
+            📖 查看錯題筆記本
           </Link>
           <button className="btn-primary flex items-center gap-2 text-sm" onClick={() => navigate(-1)}>
             回到單元列表 →
@@ -132,9 +178,21 @@ const QuizPage = () => {
 
   return (
     <div className="max-w-2xl mx-auto mt-6 flex flex-col gap-6 py-2">
-      <button className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} onClick={() => navigate(-1)}>
-        <ArrowLeft size={16} /> 返回單元列表
-      </button>
+      <div className="flex justify-between items-center">
+        <button className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }} onClick={() => navigate(-1)}>
+          <ArrowLeft size={16} /> 返回單元列表
+        </button>
+
+        <button 
+          onClick={handleMuteToggle}
+          className="flex items-center gap-1 text-xs text-secondary hover:text-primary p-2 border rounded"
+          style={{ borderColor: 'var(--border-light)' }}
+          title={muted ? '開啟音效' : '靜音'}
+        >
+          {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+          <span>{muted ? '靜音中' : '音效已開'}</span>
+        </button>
+      </div>
 
       <div className="card flex flex-col gap-6" style={{ padding: '32px' }}>
         {/* Progress header */}

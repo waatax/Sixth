@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import { ArrowLeft, CheckCircle2, Image as ImageIcon, Sparkles, BookOpen, ExternalLink, Compass } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import './LessonPage.css';
@@ -146,7 +148,7 @@ const LessonPage = () => {
         </div>
       ) : (
         <div className="card markdown-body" style={{ padding: '36px', boxShadow: 'var(--shadow-sm)' }}>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>
             {content}
           </ReactMarkdown>
         </div>

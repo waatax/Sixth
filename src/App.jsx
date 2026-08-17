@@ -7,6 +7,9 @@ import QuizPage from './pages/QuizPage';
 import QuestionBankPage from './pages/QuestionBankPage';
 import ResourcesPage from './pages/ResourcesPage';
 import PrepPage from './pages/PrepPage';
+import FlashcardsPage from './pages/FlashcardsPage';
+import MockExamPage from './pages/MockExamPage';
+import MistakesPage from './pages/MistakesPage';
 import './App.css';
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
         <Route path="question-bank" element={<QuestionBankPage />} />
         <Route path="resources" element={<ResourcesPage />} />
         <Route path="prep" element={<PrepPage />} />
+        <Route path="flashcards" element={<FlashcardsPage />} />
+        <Route path="mock-exam" element={<MockExamPage />} />
+        <Route path="mistakes" element={<MistakesPage />} />
       </Route>
     </Routes>
   );
