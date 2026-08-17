@@ -1,26 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, XCircle } from 'lucide-react';
-
-// Mock quiz data (would be expanded in a real app based on unitId)
-const quizData = {
-  'math-u1': [
-    {
-      id: 1,
-      question: '請問 12 和 18 的最大公因數是多少？',
-      options: ['2', '3', '6', '36'],
-      answerIndex: 2,
-      explanation: '12的因數有1,2,3,4,6,12。18的因數有1,2,3,6,9,18。公因數為1,2,3,6，最大為6。'
-    },
-    {
-      id: 2,
-      question: '下列哪一個數是質數？',
-      options: ['9', '15', '21', '23'],
-      answerIndex: 3,
-      explanation: '23的因數只有1和23本身，所以是質數。'
-    }
-  ]
-};
+import { quizData } from '../data/quizData';
 
 const QuizPage = () => {
   const { unitId } = useParams();

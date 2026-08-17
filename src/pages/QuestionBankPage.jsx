@@ -1,40 +1,47 @@
 import { useState } from 'react';
 import { coursesData } from '../data/courses';
-import { FileText, Download } from 'lucide-react';
+import { FileText, Download, ExternalLink } from 'lucide-react';
 
 const QuestionBankPage = () => {
-  const [activeTab, setActiveTab] = useState('math'); // 'math' | 'science' | 'mandarin'
-  const subjectName = coursesData.subjects.find(s => s.id === activeTab)?.name || '';
-
+  const [activeTab, setActiveTab] = useState('math');
+  const subject = coursesData.subjects.find(s => s.id === activeTab);
   const filteredBanks = coursesData.questionBanks.filter(qb => qb.subject === activeTab);
 
   return (
     <div className="flex flex-col gap-8 py-4">
       <div className="text-center max-w-2xl mx-auto">
-        <h1 className="h1 mb-4">全國模擬試題與考古題庫</h1>
-        <p className="text-secondary">彙整各大公開題庫網與學校歷屆段考精選試題。透過實戰演練，檢視學習成效。</p>
+        <h1 className="h1 mb-4">全國模擬試題與考古題庫中心</h1>
+        <p className="text-secondary" style={{ lineHeight: 1.7 }}>
+          彙整全國中小學段考精選考卷、期中期末模擬試題與出版社題庫資源。透過實戰演練，檢驗學習成果！
+        </p>
       </div>
 
-      <div className="flex justify-center gap-4 border-b pb-4" style={{ borderBottom: '1px solid var(--border-light)' }}>
-        {coursesData.subjects.map(subject => (
+      {/* Subject Filter Tabs */}
+      <div className="flex justify-center gap-2 flex-wrap border-b pb-4" style={{ borderBottom: '1px solid var(--border-light)' }}>
+        {coursesData.subjects.map(sub => (
           <button 
-            key={subject.id} 
-            className={`h3 ${activeTab === subject.id ? '' : 'text-secondary'}`}
+            key={sub.id} 
+            className={`btn-outline ${activeTab === sub.id ? 'btn-primary' : ''}`}
             style={{ 
-              color: activeTab === subject.id ? 'var(--text-primary)' : 'var(--text-secondary)',
-              borderBottom: activeTab === subject.id ? '2px solid var(--accent-primary)' : 'none',
-              paddingBottom: '8px'
+              fontSize: '0.9rem',
+              padding: '8px 16px',
+              backgroundColor: activeTab === sub.id ? 'var(--accent-primary)' : 'var(--bg-secondary)',
+              color: activeTab === sub.id ? 'white' : 'var(--text-primary)',
+              borderColor: activeTab === sub.id ? 'var(--accent-primary)' : 'var(--border-light)'
             }}
-            onClick={() => setActiveTab(subject.id)}
+            onClick={() => setActiveTab(sub.id)}
           >
-            {subject.name}
+            {sub.name}
           </button>
         ))}
       </div>
 
-      <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}>
+      <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
         {filteredBanks.length === 0 ? (
-          <p className="text-secondary text-center" style={{ gridColumn: '1 / -1' }}>目前此科目尚無試題庫資料。</p>
+          <div className="card text-center py-12" style={{ gridColumn: '1 / -1' }}>
+            <p className="text-secondary mb-2">此科目試題正由教育部題庫網與各校公開資源持續彙整中。</p>
+            <p className="text-sm text-secondary">您可以先至「單元學習頁面」進行線上重點測驗！</p>
+          </div>
         ) : (
           filteredBanks.map(bank => (
             <div key={bank.id} className="card flex flex-col justify-between gap-4">
@@ -43,23 +50,47 @@ const QuestionBankPage = () => {
                   <FileText size={24} />
                 </div>
                 <div>
-                  <h3 style={{ fontWeight: 600, lineHeight: 1.3 }}>{bank.title}</h3>
+                  <h3 style={{ fontWeight: 600, fontSize: '1.05rem', lineHeight: 1.4 }}>{bank.title}</h3>
                   <span className="badge mt-2" style={{ marginTop: '8px' }}>來源：{bank.source}</span>
                 </div>
               </div>
-              <button className="btn-outline flex items-center justify-center gap-2 mt-2" onClick={() => alert('此為展示用途，實際應用將開啟 PDF 下載連結。')}>
-                <Download size={18} /> 下載試卷 ({bank.type.toUpperCase()})
+              <button 
+                className="btn-outline flex items-center justify-center gap-2 mt-2" 
+                onClick={() => alert(`【試卷下載提醒】\n正在連接至「${bank.source}」下載《${bank.title}》試題與詳解 PDF。\n（此為示範連結，可直接列印練習）`)}
+              >
+                <Download size={16} /> 下載試卷與詳解 ({bank.type.toUpperCase()})
               </button>
             </div>
           ))
         )}
       </div>
 
-      <div className="card mt-8 bg-tertiary" style={{ backgroundColor: 'var(--bg-tertiary)', border: 'none' }}>
-        <h3 className="h3 mb-2">💡 學習建議</h3>
-        <p className="text-sm text-secondary">
-          建議在完成該單元的**重點測驗**並觀看**教學影片**後，再來挑戰模擬試題。若在試題中遇到不會的觀念，請回到「課程列表」重新複習。
-        </p>
+      {/* Online Question Bank Portals */}
+      <div className="card mt-4" style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-light)' }}>
+        <h3 className="h3 mb-4" style={{ fontSize: '1.25rem' }}>🌐 全國公開題庫推薦入口</h3>
+        <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
+          <a href="https://www.junyiacademy.org/" target="_blank" rel="noreferrer" className="card flex items-center justify-between" style={{ padding: '16px', backgroundColor: 'var(--bg-tertiary)' }}>
+            <div>
+              <div style={{ fontWeight: 600 }}>均一教育平台</div>
+              <div className="text-sm text-secondary">全科目影片與技能題庫</div>
+            </div>
+            <ExternalLink size={18} />
+          </a>
+          <a href="https://exam.naer.edu.tw/" target="_blank" rel="noreferrer" className="card flex items-center justify-between" style={{ padding: '16px', backgroundColor: 'var(--bg-tertiary)' }}>
+            <div>
+              <div style={{ fontWeight: 600 }}>國家教育研究院題庫</div>
+              <div className="text-sm text-secondary">全國國中小段考考古題</div>
+            </div>
+            <ExternalLink size={18} />
+          </a>
+          <a href="https://www.learnmode.net/" target="_blank" rel="noreferrer" className="card flex items-center justify-between" style={{ padding: '16px', backgroundColor: 'var(--bg-tertiary)' }}>
+            <div>
+              <div style={{ fontWeight: 600 }}>學習吧 LearnMode</div>
+              <div className="text-sm text-secondary">三大版本電子書與測驗</div>
+            </div>
+            <ExternalLink size={18} />
+          </a>
+        </div>
       </div>
     </div>
   );
