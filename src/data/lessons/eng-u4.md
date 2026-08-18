@@ -1,167 +1,205 @@
-# 📌 單元標題與學習目標：Unit 4: Food, Health & Body Care (食物、健康與身體照護)
+# 📌 單元標題與學習目標
 
-**108 課綱核心素養：** 
-- 英-E-A2：具備基本的英語溝通能力，能運用於日常生活中，處理與自身、家庭、學校及社會相關之話題。
-- 英-E-B1：具備理解及使用英語基本字詞與句型的能力，並能應用於簡易的日常生活溝通中。
-- 英-E-C2：積極參與課堂活動，培養樂於與他人以英語溝通的態度及團隊合作的精神。
+**Unit 4: Food, Health & Body Care (健康飲食、身體部位與醫療照護)**  
+*(108課綱對應指標：◎ 聽 1-III-2, 1-III-6 / ◎ 說 2-III-4, 2-III-6 / ◎ 讀 3-III-4 / ◎ 寫 4-III-4)*
 
-**學習目標：**
-在這堂課中，我們將學會如何用英語表達身體各部位的名稱、描述生病時的症狀（如頭痛、感冒），並能用 "should / shouldn't" 給予健康的建議，最後認識六大類食物的英文說法，建立健康的飲食觀念！
+**🎯 學習目標：**
+1. 精熟人體由頭到腳核心「身體部位」單字及特殊不規則複數變化（$\textcolor{#e91e63}{\textbf{teeth}}$、$\textcolor{#2196f3}{\textbf{feet}}$）。
+2. 掌握常見生病症狀與字尾 $\textcolor{#ff9800}{\textbf{-ache}}$ 的字根組合規律，流利運用醫病問答句型 $\textcolor{#00bcd4}{\textbf{What's the matter?}}$。
+3. 熟練掌握情態助動詞 $\textcolor{#4caf50}{\textbf{should}}$ / $\textcolor{#e91e63}{\textbf{shouldn't}}$ 給予正確健康建議的語法公式。
+4. 認識六大類食物營養英文金字塔，建立均衡飲食的英文素養與實踐能力。
 
 ---
 
 ## 🎯 學習導引：為什麼要學這個？
-🏠 **生活情境：**
-想像一下，如果你跟家人出國去玩，突然覺得肚子超級痛，或者牙齒痛到不行，去到當地的醫院或是診所，醫生問你：「What's the matter?（你怎麼了？）」如果你只會比手畫腳，可能會花很多時間才能讓醫生知道你哪裡不舒服！學會這些身體部位、症狀以及看醫生的對話，就像是給自己買了一份「出國旅遊醫療險」，隨時都能清晰表達自己的身體狀況。而且，認識六大類食物的英文，也能幫助你在國外的超市或餐廳順利買到健康好吃的東西喔！
+
+🏥 想像一下：如果你和家人到國外自由行，在異國街頭突然覺得肚子絞痛難耐，或者發高燒全身無力。當你走進當地的診所或急診室，醫生關切地問你：*"What's the matter with you?"*
+
+如果你只會摸著肚子發出呻吟，醫生將很難在第一時間判斷你的病情！學會精確表達身體部位、常見病痛（如 $\textcolor{#e91e63}{\textbf{headache}}$、$\textcolor{#2196f3}{\textbf{sore throat}}$）以及看懂各類食物營養成分，就像隨身攜帶了「**出國雙語醫療與健康防護罩**」，無論何時何地都能照顧好自己與家人！
 
 ---
 
-## 🔑 核心觀念 1：身體部位大盤點 (Body Parts)
-要跟別人說你哪裡不舒服，首先要知道身體部位的英文怎麼說。
-我們從頭到腳來認識這些單字吧！有些字有特殊的複數變化，要特別注意喔。
+## 🔑 核心觀念 1：人體部位全覽與特殊複數 (Body Parts)
 
-📊 **身體部位單字表：**
+從頭頂到腳趾，讓我們逐一清點人體的重要部位：
 
-| 英文單字 | 中文意思 | 複數形 (要注意！) | 記憶小撇步 |
+```text
+                     【 👤 人體部位透視圖 】
+                           ( Head ) ─── 頭
+                         ( Eye / Ear ) ── 眼睛 / 耳朵
+                        ( Nose / Mouth ) ─ 鼻子 / 嘴巴
+                          ( Tooth ) ──── 牙齒 (複數 teeth)
+                          ( Throat ) ─── 喉嚨
+                         ( Shoulder ) ── 肩膀
+                          ( Arm ) ────── 手臂
+                         ( Stomach ) ─── 胃 / 肚子
+                         ( Hand / Finger ) 手 / 手指
+                          ( Leg ) ────── 腿
+                          ( Knee ) ───── 膝蓋
+                          ( Foot ) ───── 腳 (複數 feet)
+```
+
+### 📊 核心身體部位單字與複數變化表
+
+| 部位單字 | 中文意義 | 單複數規則 | 記憶聯想法 / 語音重點 |
 | :--- | :--- | :--- | :--- |
-| **head** | 頭 | heads | 戴帽子 (hat) 在頭上 (head)。 |
-| **eye / ear** | 眼睛 / 耳朵 | eyes / ears | 人有兩隻眼睛和兩隻耳朵，通常加 s。 |
-| **nose / mouth** | 鼻子 / 嘴巴 | noses / mouths | 臉部中央的器官。 |
-| **tooth** | 牙齒 | **teeth** (不規則) | 兩顆以上就變成 teeth 囉！ |
-| **throat** | 喉嚨 | throats | 吞東西必經之路。 |
-| **shoulder** | 肩膀 | shoulders | Head, shoulders, knees and toes! |
-| **arm / hand / finger** | 手臂 / 手 / 手指 | arms / hands / fingers | 一隻手有五根 fingers。 |
-| **stomach** | 胃、肚子 | stomachs | 吃太多肚子會撐撐的。 |
-| **leg / knee** | 腿 / 膝蓋 | legs / knees | 跑步需要強壯的 legs。 |
-| **foot** | 腳、足部 | **feet** (不規則) | 一隻腳 foot，兩隻腳 feet！ |
-
-🏠 **生活小例子：**
-1. 我弟弟昨天打球跌倒，他的 **knee** (膝蓋) 受傷了。
-2. 每天睡前記得刷你的 **teeth** (牙齒)，不然會蛀牙喔！
+| $\text{head}$ | 頭 | $\text{heads}$ (規則加 s) | 戴帽子 (hat) 的地方 |
+| $\text{eye / ear}$ | 眼睛 / 耳朵 | $\text{eyes / ears}$ | 人有一對雙眼雙耳 |
+| $\text{tooth}$ | 牙齒 | $\textcolor{#e91e63}{\textbf{teeth}}$ **(不規則！)** | $\text{oo} \rightarrow \text{ee}$，兩顆以上換成 teeth |
+| $\text{throat}$ | 喉嚨 | $\text{throats}$ | 發音包含 /θ/ 咬舌音 |
+| $\text{shoulder}$ | 肩膀 | $\text{shoulders}$ | 經典兒歌：*Head, shoulders, knees and toes!* |
+| $\text{stomach}$ | 胃、腹部 | $\text{stomachs}$ (字尾加 s，發 /k/) | 吃太飽會脹起來的消化器官 |
+| $\text{foot}$ | 腳掌、足部 | $\textcolor{#2196f3}{\textbf{feet}}$ **(不規則！)** | $\text{oo} \rightarrow \text{ee}$，一雙腳用 feet |
 
 ---
 
-## 🔑 核心觀念 2：怎麼表達不舒服？ (Symptoms & Doctor Dialogue)
-當身體亮紅燈時，我們常會用 **"have a + 症狀"** 來表達。很多症狀字尾都有 **"-ache"**（發音像 /eɪk/），意思是「疼痛」。
+## 🔑 核心觀念 2：病痛症狀拆解與醫病對話 (Symptoms & Clinic Dialogue)
 
-📊 **常見症狀單字表：**
+在英文中，很多疼痛單字是由「$\textcolor{#2196f3}{\textbf{身體部位}} + \textcolor{#e91e63}{\textbf{-ache (疼痛)}}$」組合而成（-ache 發音為 /eɪk/）：
 
-| 英文症狀 | 中文意思 | 組合字拆解 |
+```text
+ ┌─────────────────────────────────────────────────────────────┐
+ │                  字尾 -ACHE 魔法變身公式                    │
+ ├─────────────────────────────────────────────────────────────┤
+ │ 🤕 head (頭)       + ache ──► headache (頭痛)               │
+ │ 🦷 tooth (牙齒)    + ache ──► toothache (牙痛)              │
+ │ 🤢 stomach (胃)    + ache ──► stomachache (胃痛/肚子痛)     │
+ │ 👂 ear (耳朵)      + ache ──► earache (耳朵痛)              │
+ └─────────────────────────────────────────────────────────────┘
+```
+
+### 📊 其他高頻核心症狀
+- $\textcolor{#e91e63}{\textbf{sore throat}}$：喉嚨痛 (sore 意為發炎痠痛的)
+- $\textcolor{#2196f3}{\textbf{runny nose}}$：流鼻水 (runny 意為流動不停的)
+- $\textcolor{#ff9800}{\textbf{have a fever}}$：發燒
+- $\textcolor{#9c27b0}{\textbf{have a cough}}$：咳嗽
+- $\textcolor{#4caf50}{\textbf{catch a cold / have the flu}}$：感冒 / 得流行性感冒
+
+### 💬 診所實戰醫病對話 (Doctor & Patient Dialogue)
+> 👨‍⚕️ **Doctor**: Hello, Peter. $\textcolor{#00bcd4}{\textbf{What's the matter with you?}}$ (你怎麼了？哪裡不舒服？)  
+> 👦 **Peter**: I feel awful, Doctor. $\textcolor{#e91e63}{\textbf{I have a high fever}}$ and a $\textcolor{#2196f3}{\textbf{terrible sore throat}}$.  
+> 👨‍⚕️ **Doctor**: Open your mouth and say "Ahhh". Yes, your throat is red. You $\textcolor{#ff9800}{\textbf{caught a cold}}$.  
+> 👦 **Peter**: What $\textcolor{#4caf50}{\textbf{should I do}}$?  
+> 👨‍⚕️ **Doctor**: You $\textcolor{#4caf50}{\textbf{should drink plenty of warm water}}$ and take this medicine.
+
+---
+
+## 🔑 核心觀念 3：健康建議指令——助動詞 should / shouldn't
+
+給予病人或朋友健康建議時，使用助動詞 $\textcolor{#4caf50}{\textbf{should (應該)}}$ 與 $\textcolor{#e91e63}{\textbf{shouldn't (不應該)}}$：
+
+$$\text{肯定句：主詞} + \textcolor{#4caf50}{\textbf{should}} + \textcolor{#00bcd4}{\textbf{動詞原形 (V)}}.$$
+$$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcolor{#00bcd4}{\textbf{動詞原形 (V)}}.$$
+
+### 📊 症狀與健康建議對照表
+
+| 生病症狀 | 你應該... ($\textcolor{#4caf50}{\textbf{You should...}}$) | 你不應該... ($\textcolor{#e91e63}{\textbf{You shouldn't...}}$) |
 | :--- | :--- | :--- |
-| **headache** | 頭痛 | head (頭) + ache (痛) |
-| **stomachache** | 胃痛 / 肚子痛 | stomach (肚子) + ache (痛) |
-| **toothache** | 牙痛 | tooth (牙齒) + ache (痛) |
-| **earache** | 耳朵痛 | ear (耳朵) + ache (痛) |
-| **sore throat** | 喉嚨痛 | sore (痠痛的) + throat (喉嚨) |
-| **runny nose** | 流鼻水 | runny (流動的) + nose (鼻子) |
-| **cough** | 咳嗽 | (單獨背的單字，發音類似「喀夫」) |
-| **fever** | 發燒 | (單獨背的單字) |
-| **cold / flu** | 感冒 / 流行性感冒 | catch a cold (感冒) / have the flu (得流感) |
-
-💡 **醫病對話實戰 (Doctor-Patient Dialogue)：**
-看醫生時，最常聽到的對話模式就是這樣：
-> 👨‍⚕️ **Doctor:** What's the matter? (或者是 What's wrong?) [你怎麼了？]
-> 👦 **Patient (Peter):** I have a terrible **headache** and a **runny nose**. [我頭很痛而且流鼻水。]
-> 👨‍⚕️ **Doctor:** Let me see. Oh, you have a **cold**. [讓我看看。喔，你感冒了。]
-
-🏠 **生活小例子：**
-1. 媽媽問：「What's wrong?」，我回答：「I have a **stomachache**，可能昨天吃太多冰淇淋了。」
-2. 班上好多人都有 **runny nose** 和 **cough**，大家一定要戴好口罩！
+| **toothache** (牙痛) | $\textcolor{#4caf50}{\textbf{see a dentist}}$ (去看牙醫) | $\textcolor{#e91e63}{\textbf{eat too much candy}}$ (吃過多甜食) |
+| **fever** (發燒) | $\textcolor{#4caf50}{\textbf{rest in bed and drink water}}$ (臥床多喝水) | $\textcolor{#e91e63}{\textbf{go swimming or run}}$ (去游泳或劇烈跑步) |
+| **sore throat** (喉嚨痛) | $\textcolor{#4caf50}{\textbf{drink warm water}}$ (喝溫開水) | $\textcolor{#e91e63}{\textbf{drink ice water or soda}}$ (喝冰水或汽水) |
+| **stomachache** (肚子痛) | $\textcolor{#4caf50}{\textbf{eat light and soft food}}$ (吃清淡食物) | $\textcolor{#e91e63}{\textbf{eat spicy or fried food}}$ (吃辛辣油炸物) |
 
 ---
 
-## 🔑 核心觀念 3：給予健康建議 (Should / Shouldn't)
-知道生病了，下一步就是要給出「建議」。我們會用 **should (應該)** 或 **shouldn't (不應該)** 加上**原形動詞**。
+## 🔑 核心觀念 4：六大類食物營養金字塔 (The 6 Food Groups)
 
-- **肯定句型：** 主詞 + **should** + 原形動詞. (你應該...)
-- **否定句型：** 主詞 + **shouldn't** + 原形動詞. (你不應該...)
+要維持免疫力、長高長壯，每天必須從六大類食物攝取均衡營養：
 
-📊 **健康建議與不良習慣對照表：**
+```text
+                         /\
+                        /  \    【 Fats, Oils & Nuts 】
+                       / 🥜 \   油脂與堅果種子類 (少油多健康)
+                      /──────\
+                     /  🥛🥩  \  【 Dairy & Protein 】
+                    / 乳品 & 豆魚蛋肉 \ (長骨骼、增肌肉)
+                   /──────────────────\
+                  /      🥬  🍎        \  【 Vegetables & Fruits 】
+                 /    蔬菜類 & 水果類    \ (維生素、礦物質、膳食纖維)
+                /────────────────────────\
+               /          🌾🌾🌾          \  【 Whole Grains 】
+              /        全穀雜糧類          \ (主要能量來源：米飯、燕麥、地瓜)
+             /────────────────────────────\
+```
 
-| 症狀 (Symptom) | 你應該... (You should...) | 你不應該... (You shouldn't...) |
-| :--- | :--- | :--- |
-| **toothache** (牙痛) | go to the dentist. (去看牙醫) | eat too much candy. (吃太多糖果) |
-| **fever** (發燒) | take some medicine and rest. (吃藥並休息) | go to school today. (今天去上學) |
-| **sore throat** (喉嚨痛) | drink plenty of warm water. (多喝溫水) | drink cold drinks. (喝冷飲) |
+### 📊 六大類食物英文名稱與主要功能
 
-🏠 **生活小例子：**
-1. 你感冒了。 You **should** rest in bed. (你應該臥床休息。)
-2. 你明天有考試。 You **shouldn't** play video games all night. (你不應該整晚玩電動。)
-
----
-
-## 🔑 核心觀念 4：六大類食物與健康飲食 (Food Groups & Nutrition)
-要保持健康不生病，每天吃進去的東西很重要！我們來認識六大類食物。
-
-📊 **六大類食物營養表 (Food Groups)：**
-
-| 食物類別 (English) | 食物類別 (中文) | 常見食物例子 (Examples) | 對身體的幫助 |
+| 食物分類 (English) | 食物分類 (中文) | 代表食材範例 | 核心營養與生理功效 |
 | :--- | :--- | :--- | :--- |
-| **Grains** | 全穀雜糧類 | rice (米飯), bread (麵包), noodles (麵條) | 提供每天滿滿的能量！ |
-| **Protein** | 豆魚蛋肉類 | meat (肉), fish (魚), eggs (蛋), beans (豆類) | 長高長壯、修補肌肉。 |
-| **Dairy** | 乳品類 | milk (牛奶), cheese (起司), yogurt (優格) | 補充鈣質，骨骼強壯。 |
-| **Vegetables** | 蔬菜類 | carrots (胡蘿蔔), cabbage (高麗菜), broccoli (花椰菜) | 豐富維生素，腸胃順暢。 |
-| **Fruits** | 水果類 | apples (蘋果), bananas (香蕉), grapes (葡萄) | 充滿維他命 C，抵抗感冒！ |
-| **Fats & Nuts** | 油脂與堅果種子 | oil (油), butter (奶油), nuts (堅果) | 維持生理機能運作。 |
-
-🏠 **生活小例子：**
-1. 為了長肌肉，哥哥運動後都會吃 **eggs** 和 **meat** (Protein 類)。
-2. 媽媽說每天都要吃 **vegetables** 和 **fruits**，才不會便秘。
+| $\textcolor{#ff9800}{\textbf{Whole Grains}}$ | 全穀雜糧類 | brown rice (糙米), oats (燕麥), sweet potato (地瓜) | 提供日常活力熱量 (碳水化合物) |
+| $\textcolor{#e91e63}{\textbf{Protein Foods}}$ | 豆魚蛋肉類 | tofu (豆腐), fish (魚), eggs (雞蛋), chicken (雞肉) | 建造肌肉與細胞組織修復 |
+| $\textcolor{#2196f3}{\textbf{Dairy}}$ | 乳品類 | milk (鮮乳), cheese (起司), yogurt (優格) | 提供豐富鈣質，強健牙齒與骨骼 |
+| $\textcolor{#4caf50}{\textbf{Vegetables}}$ | 蔬菜類 | broccoli (花椰菜), spinach (菠菜), carrots (胡蘿蔔) | 膳食纖維促進腸道健康蠕動 |
+| $\textcolor{#e91e63}{\textbf{Fruits}}$ | 水果類 | apples (蘋果), oranges (柳橙), guavas (芭樂) | 豐富維他命 C，增強抵抗力 |
+| $\textcolor{#9c27b0}{\textbf{Fats, Oils & Nuts}}$ | 油脂與堅果種子 | olive oil (橄欖油), walnuts (核桃), almonds (杏仁) | 提供必需脂肪酸與脂溶性維生素 |
 
 ---
 
 ## 🧠 迷思大破解
-學習這單元時，同學們最常犯以下幾個錯誤，趕快來抓漏！
 
-1. **牙齒痛是 teethache 還是 toothache？**
-   - ❌ **錯誤想法：** 「我好多顆牙齒都在痛，所以是 teeth (複數) + ache = teethache！」
-   - ✅ **正確觀念：** 在英文的症狀單字中，習慣用單數名詞組合，所以不管是痛一顆還是痛三顆，都是 **toothache**！
-   - 同理：**headache** (不會說 headsache)，**stomachache**。
+❌ **迷思 1**：很多顆牙齒都在痛，所以叫 "teethache"？  
+✅ **正確觀念**：醫學症狀名詞一律使用單數詞根組合，無論痛一顆還是痛整排，固定都是 $\textcolor{#e91e63}{\textbf{toothache}}$！同理，頭痛也不會說 headsache。
 
-2. **Should 後面要加 to 嗎？**
-   - ❌ **錯誤寫法：** You should **to** drink more water.
-   - ✅ **正確寫法：** You should **drink** more water.
-   - 💡 **解析：** Should 是一個「助動詞」，助動詞就像超人的披風，後面直接跟著「原形動詞」小跟班，中間絕對不可以插一個 "to"！
+❌ **迷思 2**：Should 後面加上不定詞 to？"You should to rest."  
+✅ **正確觀念**：$\textcolor{#4caf50}{\textbf{should}}$ 是情態助動詞，後面必須「直接接動詞原形 (V)」，中間絕對不能加 to！  
+- ❌ You should *to sleep* early.  
+- ✅ You $\textcolor{#4caf50}{\textbf{should sleep}}$ early.
+
+❌ **迷思 3**：感冒只要喝果汁不用吃新鮮水果？  
+✅ **正確觀念**：市售果汁大多過濾掉了珍貴的膳食纖維，甚至添加了大量游離糖。吃整顆新鮮水果才能獲取最完整的維生素與抗氧化物！
 
 ---
 
 ## 📊 本單元重點速查整理表格
 
-| 學習重點 | 關鍵句型 / 單字 | 例子 (Example) |
+| 學習項目 | 語法公式 / 核心概念 | 經典速記範例 |
 | :--- | :--- | :--- |
-| **不規則複數身體部位** | foot ➔ feet, tooth ➔ teeth | Brush your **teeth** every day. |
-| **常見病痛字尾 -ache** | headache, toothache, stomachache, earache | I have a terrible **headache**. |
-| **詢問病情** | What's the matter? / What's wrong? | **What's the matter** with you? |
-| **給予建議 (should)** | 主詞 + should / shouldn't + 原形動詞 | You **should** go to bed early. |
-| **六大類食物** | Grains, Protein, Dairy, Vegetables, Fruits, Fats & Nuts | We need **protein** to grow strong. |
+| **複數不規則部位** | $\text{tooth} \rightarrow \textcolor{#e91e63}{\textbf{teeth}} \quad / \quad \text{foot} \rightarrow \textcolor{#2196f3}{\textbf{feet}}$ | Brush your $\textcolor{#e91e63}{\textbf{teeth}}$ twice a day. |
+| **痛症字尾 -ache** | $\text{部位} + \text{ache} \rightarrow \text{headache / toothache / stomachache}$ | I have a terrible $\textcolor{#2196f3}{\textbf{stomachache}}$. |
+| **問診核心句型** | $\textcolor{#00bcd4}{\textbf{What's the matter (with you)? / What's wrong?}}$ | What's the matter? I have a fever. |
+| **給予健康建議** | $\text{主詞} + \textcolor{#4caf50}{\textbf{should}} / \textcolor{#e91e63}{\textbf{shouldn't}} + \textcolor{#00bcd4}{\textbf{動詞原形}}$ | You $\textcolor{#4caf50}{\textbf{should drink}}$ warm water. |
+| **六大類食物** | $\text{Grains, Protein, Dairy, Vegetables, Fruits, Oils \& Nuts}$ | Milk and cheese belong to $\textcolor{#2196f3}{\textbf{Dairy}}$. |
 
 ---
 
 ## ✏️ 隨堂自我小練習
-試試看你吸收了多少！(解答在最後面喔)
 
-1. **選擇題：** The doctor asked, "What's ________ with you?"
-   (A) matter (B) the matter (C) wrong matter
-2. **填空題：** Oh no, my right (腳) _______ hurts so much! (請填入單數)
-3. **翻譯題：** 你喉嚨痛。你不應該喝冷飲。(用 You have... / You shouldn't...)
-4. **分類題：** 請問 "Milk" 和 "Cheese" 屬於哪一類食物？(填英文 Food Group)
-5. **文法題：** He is sick. He should ( resting / to rest / rest ) at home.
+1. **（不規則複數填空）** The marathon runner soaked both of his ________ (foot) in warm water.
+2. **（症狀單字）** Tommy ate too much cold ice cream, and now he has a bad ________ (肚子痛).
+3. **（助動詞語法選擇）**  
+   You have a terrible cough. You ________ drink ice cola.  
+   (A) should  (B) shouldn't  (C) shouldn't to  (D) not should
+4. **（問診句型重組）** ( matter / is / with / the / what / your sister / ? )  
+   👉 ___________________________________________________________
+5. **（食物分類配對）** 請問 "tofu (豆腐)" 和 "salmon (鮭魚)" 屬於六大類食物中的哪一類？  
+   👉 They belong to ________________.
 
 <details>
-<summary>👀 點我看解答</summary>
-1. (B) the matter
-2. foot
-3. You have a sore throat. You shouldn't drink cold drinks.
-4. Dairy
-5. rest (should 後面加原形動詞)
+<summary>💡 點我看詳細解答與解析</summary>
+
+1. **feet**（foot 的複數為不規則變化 feet）。
+2. **stomachache**（肚子痛/胃痛固定拼法）。
+3. **(B)**（shouldn't 後面接原形動詞，表達不應該喝冰可樂）。
+4. **What is the matter with your sister?**（經典問診句型）。
+5. **Protein Foods (豆魚蛋肉類)**（豆腐與鮭魚皆為優質蛋白質來源）。
 </details>
 
 ---
 
 ## 🌍 你知道嗎？
-在台灣，感冒發燒時，阿嬤可能會叫你喝「熱開水」或「薑湯」。但在很多西方國家，如果小朋友發燒或喉嚨痛，醫生有時候會建議他們吃「冰棒 (Popsicles) 」！你沒聽錯，因為冰冰涼涼的感覺可以幫忙舒緩喉嚨發炎的疼痛，而且可以順便補充水分喔。當然，每個國家的醫療習慣不同，生病還是要聽醫生的話喔！
+
+🍦 **西方感冒喉嚨痛時，醫生竟然會建議吃冰棒 (Popsicle)？**  
+在台灣，感冒發燒時長輩通常會叮嚀多喝溫開水或熱薑湯。但在美國和歐洲，如果小朋友扁桃腺發炎或喉嚨嚴重腫痛吞不下東西，小兒科醫生有時會建議吃純果汁冰棒！因為低溫可以麻痺神經、減輕發炎灼熱感，同時補充水分與糖分。這就是不同文化間有趣的健康照護差異呢！
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知：AI 虛擬醫生助理
-現在科技超發達，如果你有智慧型手錶 (Smartwatch)，它就可以隨時幫你量心跳、測血氧。未來的社會裡，我們的手機裡可能都會有一個「AI 健康助理 (AI Health Assistant)」。當你對著手機咳嗽，或是告訴它 "I have a stomachache."，AI 就能馬上分析你的症狀，告訴你 "You should go see a doctor." 甚至幫你預約最近的診所。結合英文與科技，未來的醫療照護會變得更酷、更方便！
+## 🚀 +10% 現代素養前瞻新知
+
+🤖 **智慧手錶與 AI 虛擬醫生助理 (AI Health Assistants)**  
+隨著物聯網科技的進步，現在的智慧手錶 (Smartwatch) 能夠 24 小時偵測心率、血氧濃度與體溫變化。
+
+未來當你感到身體不適時，手機裡的 AI 醫療助理能根據你的生理數據與英文語音對話進行初步評估：
+- 🗣️ You: *"I have a $\textcolor{#e91e63}{\textbf{headache}}$ and my body temperature is $38.5^\circ\text{C}$."*
+- 🤖 AI: *"Your data indicates a possible flu. You $\textcolor{#4caf50}{\textbf{should rest}}$ and I have booked an appointment with Dr. Chen at 10:00 AM."*
+
+掌握扎實的健康英文詞彙，未來你就能與全球最頂尖的 AI 智慧醫療無縫對接！

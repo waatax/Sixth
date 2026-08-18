@@ -1,169 +1,214 @@
 # 📌 單元標題與學習目標
-**Unit 1: Daily Routines & Time Management (日常生活與時間表達)**
+
+**Unit 1: Daily Routines & Time Management (日常生活作息與時間表達)**
 *(108課綱對應指標：◎ 聽 1-III-1, 1-III-8 / ◎ 說 2-III-1, 2-III-7 / ◎ 讀 3-III-1 / ◎ 寫 4-III-1)*
 
-**學習目標：**
-在這堂課結束後，你將能夠流利地用英文說出現在的精確「時間」，並使用正確的「頻率副詞」與「時間介系詞」來描述自己或朋友的「日常生活作息」！
+**🎯 學習目標：**
+1. 掌握英美母語者常用的「鐘點表達法」，熟練運用 $\textcolor{#e91e63}{\textbf{half past}}$、$\textcolor{#2196f3}{\textbf{quarter past}}$ 與 $\textcolor{#ff9800}{\textbf{quarter to}}$ 精準報時。
+2. 徹底搞懂時間三大介系詞 $\textcolor{#4caf50}{\textbf{at}}$、$\textcolor{#2196f3}{\textbf{on}}$、$\textcolor{#e91e63}{\textbf{in}}$ 的使用範圍與「倒金字塔法則」。
+3. 熟練掌握 6 大頻率副詞（$\textcolor{#e91e63}{\textbf{always}}$ 至 $\textcolor{#9c27b0}{\textbf{never}}$）與「$\textcolor{#ff5722}{\textbf{Be後動前}}$」黃金位置法則。
+4. 能自信運用問答句型 $\textcolor{#00bcd4}{\textbf{What time do you... ?}}$ 描述自己與他人的全日作息時間表。
 
 ---
 
-# 🎯 學習導引：為什麼要學這個？
+## 🎯 學習導引：為什麼要學這個？
 
-你有沒有發現，我們每天的生活都跟「時間」賽跑？早上 7 點被媽媽叫起床、8 點趕著進校門、下午 4 點鐘期待著下課鐘聲響起、晚上有時候還要去補習班。如果你交到了一個外國朋友，或者在線上玩遊戲時遇到外國隊友，你要怎麼跟他們說：「我通常晚上 8 點上線，但禮拜二不行」呢？
-學會日常作息和時間表達，不僅能幫你安排好自己的行程，還能讓你輕鬆和全世界的朋友分享你的生活節奏！快來一起成為「時間管理大師」吧！
+⏰ 你有沒有遇過這樣的生活情境？
+早上 7:00 鬧鐘響起，媽媽在門外大喊：「快起床！快遲到了！」；下午 4:00 放學鐘聲響起，你跟同學約好：「我們 4:30 在球場見！」；晚上在線上玩遊戲時，外國隊友問你："What time do you usually go online?"
 
----
-
-# 🔑 核心觀念 1：精準報時法 (Telling Time)
-
-要描述時間，除了直接念數字 (例如 7:30 念 seven thirty)，在日常生活中外國人更常使用「半 (half)」跟「一刻鐘 (quarter，也就是 15 分鐘)」來表達喔！
-
-**定義與公式：**
-- $\text{... o'clock}$：整點（例如 7:00 ➡️ seven o'clock）
-- $\text{quarter past ...}$：某點過了一刻/15分（例如 7:15 ➡️ a quarter past seven）
-- $\text{half past ...}$：某點半/30分（例如 7:30 ➡️ half past seven）
-- $\text{quarter to ...}$：差一刻/15分就到某點（例如 7:45 ➡️ a quarter to eight，意思是差 15 分鐘就 8 點囉！）
-
-🏠 **生活應用例子：**
-1. **看電影時間：** "The movie starts at half past two."（電影在兩點半開始，趕快買爆米花！）
-2. **趕火車：** "Hurry up! The train leaves at a quarter to five!"（快點！火車四點四十五分就要開了！）
-3. **下課鐘響：** "We usually go home at four o'clock."（我們通常四點整放學回家。）
+如果你只會說 "Seven thirty"，那在日常對話中可能只能表達一半的意思！英美人士在生活中更習慣說 "half past seven" 或 "a quarter to eight"。學會精確的時間表達法、時間介系詞與頻率副詞，你就能清晰規劃自己的行程、流利向外國朋友介紹自己的生活日常，甚至成為效率滿分的「**時間管理大師**」！
 
 ---
 
-# 🔑 核心觀念 2：時間的超級好朋友——介系詞 in, on, at
+## 🔑 核心觀念 1：英美時鐘視覺化報時法 (Telling Time)
 
-在英文裡，不同的時間長度，要搭配不同的介系詞。這可是連大人都很容易搞混的秘密武器喔！
+除了直接念出阿拉伯數字（如 8:15 念 *eight fifteen*），母語人士最愛使用的「時鐘分割法」是以 30 分鐘為分界線：
 
-**定義與公式：**
-- $\text{at} + \text{特定時刻 / 短暫時間}$
-- $\text{on} + \text{特定的一天 / 日期 / 星期幾}$
-- $\text{in} + \text{月份 / 年份 / 早中晚（較長的時間）}$
+```text
+                     【 12 】 o'clock (整點)
+                        ▲
+                        │
+       (差幾分到)        │        (過了幾分)
+        quarter TO      │      quarter PAST
+         【 9 】 ◄──────┼──────► 【 3 】 (過15分)
+        (差15分到)      │
+                        │
+                        ▼
+                     【 6 】 half past (過30分/半)
+```
 
-📊 **時間介系詞比較表格：**
+### 🕒 四大經典報時黃金公式
 
-| 介系詞 | 時間長度 / 範圍 | 搭配字詞範例 | 生活例句 |
-| :---: | :--- | :--- | :--- |
-| **at** | 極短 / 精確時刻 | at 7:00, at noon (中午), at night | I wake up **at** 6:30. (我六點半起床) |
-| **on** | 中等 / 一天、特定日 | on Monday, on May 5th, on my birthday | We have PE class **on** Tuesday. (我們星期二有體育課) |
-| **in** | 最長 / 月份、早中晚 | in the morning, in summer, in 2024 | I do my homework **in** the afternoon. (我下午寫功課) |
+| 類型 | 時間點範例 | 英文表達公式 | 母語者標準說法 |
+| :--- | :--- | :--- | :--- |
+| **整點** | 7:00 | $\textcolor{#2196f3}{\textbf{整點數字}} + \textcolor{#e91e63}{\textbf{o'clock}}$ | It's $\textcolor{#e91e63}{\textbf{seven o'clock}}$. |
+| **過 15 分鐘** | 7:15 | $\textcolor{#4caf50}{\textbf{a quarter past}} + \textcolor{#2196f3}{\textbf{點鐘}}$ | It's $\textcolor{#4caf50}{\textbf{a quarter past seven}}$. |
+| **過 30 分鐘 (半)** | 7:30 | $\textcolor{#ff9800}{\textbf{half past}} + \textcolor{#2196f3}{\textbf{點鐘}}$ | It's $\textcolor{#ff9800}{\textbf{half past seven}}$. |
+| **差 15 分到 (45分)** | 7:45 | $\textcolor{#e91e63}{\textbf{a quarter to}} + \textcolor{#9c27b0}{\textbf{下一個點鐘}}$ | It's $\textcolor{#e91e63}{\textbf{a quarter to eight}}$. (差1刻到8點) |
 
-🏠 **生活應用例子：**
-1. **生日派對：** "My birthday party is **on** Sunday. Can you come?"（我的生日派對在星期天，你能來嗎？）
-2. **倒垃圾時間：** "The garbage truck comes **at** 8:00 **in** the evening."（垃圾車在晚上八點來。）
-3. **暑假出遊：** "We go to Kenting **in** July."（我們在七月去墾丁。）
+> 💡 **超重要提醒**：7:45 是差 15 分鐘「到 8 點」，所以要用 $\textcolor{#e91e63}{\textbf{a quarter to eight}}$，千萬不要寫成 seven 喔！
 
----
-
-# 🔑 核心觀念 3：日常生活動詞大集合 (Daily Routines)
-
-我們每天做的事情，英文該怎麼說呢？搭配時間介系詞，我們就能造出完整的句子囉！
-
-**重點單字片語：**
-- wake up (起床) / brush teeth (刷牙) / have breakfast (吃早餐)
-- go to school (上學) / do homework (寫功課) / take a shower (洗澡) / go to bed (睡覺)
-
-**句型公式：**
-$\text{What time do you } + \text{動作} + \text{?}$
-$\text{I } + \text{動作} + \text{ at } + \text{時間}.$
-
-🗣️ **情境對話 (Dialogue)：**
-**Kevin:** What time do you usually wake up, Amy?
-**Amy:** I usually wake up at half past six. Then I have breakfast at seven o'clock.
-**Kevin:** Wow, that's early! What time do you go to bed?
-**Amy:** I take a shower at nine o'clock and go to bed at a quarter to ten (9:45). 
-**Kevin:** No wonder you are never late for school!
-
-🏠 **生活應用例子：**
-1. **早上打仗：** "I wake up at 6:00, brush my teeth, and run to catch the bus!"（我六點起床，刷完牙，然後狂奔去搭公車！）
-2. **夜貓子：** "My brother does his homework at 10:00 and goes to bed at midnight."（我哥哥十點才寫功課，半夜才睡覺。）
+### 🏠 生活實戰例句
+1. 🎬 **看電影**："The movie starts at $\textcolor{#ff9800}{\textbf{half past two}}$." (電影兩點半開始，快買爆米花！)
+2. 🚆 **趕火車**："Hurry! The train arrives at $\textcolor{#e91e63}{\textbf{a quarter to five}}$!" (快點！火車四點四十五分就要進站了！)
+3. 🔔 **放學時間**："We pack our schoolbags at $\textcolor{#2196f3}{\textbf{four o'clock}}$." (我們四點整收拾書包準備放學。)
 
 ---
 
-# 🔑 核心觀念 4：頻率副詞階梯 (Frequency Adverbs)
+## 🔑 核心觀念 2：時間介系詞「倒金字塔法則」(at / on / in)
 
-你想表達「我『總是』遲到」跟「我『偶爾』遲到」，意思可是差很多喔！這時候就需要「頻率副詞」來幫忙。
+時間長短不同，搭配的介系詞也大不相同！請記住這個由大到小的「**倒金字塔漏斗**」：
 
-**定義與公式：**
-表示動作發生的頻率。重點口訣：**「Be後動前」**（放在 Be 動詞後面，一般動詞前面）。
-$\text{主詞} + \text{頻率副詞} + \text{一般動詞} + \dots$
+```text
+ ┌──────────────────────────────────────────────────────────┐
+ │  ▼▼▼  IN (範圍最大最長)  ▼▼▼                             │
+ │  年份、季節、月份、世紀、早中晚                            │
+ │  in 2024 / in summer / in May / in the morning           │
+ └────────────────────────────┬─────────────────────────────┘
+                              │
+       ┌──────────────────────┴──────────────────────┐
+       │  ▼▼  ON (中等範圍：特定的一天)  ▼▼          │
+       │  星期幾、特定日期、紀念日、特定某天早晚     │
+       │  on Monday / on July 4th / on my birthday   │
+       │  on Sunday morning                          │
+       └──────────────────────┬──────────────────────┘
+                              │
+             ┌────────────────┴────────────────┐
+             │  ▼  AT (極小精準點 / 極短時刻)  │
+             │  幾點幾分、中午、午夜、特定時刻 │
+             │  at 7:30 / at noon / at night   │
+             └─────────────────────────────────┘
+```
 
-📊 **頻率副詞階梯表：**
+### 📊 時間介系詞全方位對照表
 
-| 頻率 | 英文 | 中文意思 | 記憶小幫手 | 例句 |
+| 介系詞 | 時間維度 | 核心用法規律 | 經典搭配字詞 | 實戰生活例句 |
 | :---: | :---: | :--- | :--- | :--- |
-| **100%** | **always** | 總是 | 每天都會做 | I **always** brush my teeth. |
-| **80%** | **usually** | 通常 | 一週做 5-6 天 | He **usually** walks to school. |
-| **60%** | **often** | 經常 | 一週做 4 天左右 | We **often** play basketball. |
-| **30%** | **sometimes** | 有時候 | 一週做 2-3 天 | She **sometimes** eats noodles. |
-| **10%** | **seldom** | 很少 | 幾乎不做，久久一次 | I **seldom** drink cola. |
-| **0%** | **never** | 從不 | 絕對不做！ | They **never** go to bed late. |
-
-🏠 **生活應用例子：**
-1. **挑食兒童：** "I never eat green peppers. Yuck!"（我從不吃青椒。噁！）
-2. **手搖飲愛好者：** "She usually drinks bubble tea on Friday."（她通常在星期五喝珍珠奶茶。）
-3. **假日的耍廢：** "We sometimes watch TV all afternoon."（我們有時候會整個下午都在看電視。）
+| $\textcolor{#e91e63}{\textbf{at}}$ | **精確時刻點** | 鐘點、特定瞬間、節慶期間 | $\textcolor{#e91e63}{\textbf{at}}$ 6:30, $\textcolor{#e91e63}{\textbf{at}}$ noon, $\textcolor{#e91e63}{\textbf{at}}$ night, $\textcolor{#e91e63}{\textbf{at}}$ midnight | I usually wake up $\textcolor{#e91e63}{\textbf{at}}$ 6:45. (我在 6:45 起床。) |
+| $\textcolor{#2196f3}{\textbf{on}}$ | **特定的一天** | 星期、具體日期、節日當天 | $\textcolor{#2196f3}{\textbf{on}}$ Tuesday, $\textcolor{#2196f3}{\textbf{on}}$ May 12th, $\textcolor{#2196f3}{\textbf{on}}$ Friday night | We have English class $\textcolor{#2196f3}{\textbf{on}}$ Thursday. (我們週四有英文課。) |
+| $\textcolor{#4caf50}{\textbf{in}}$ | **較長的時間區段**| 早中晚、月份、季節、年份 | $\textcolor{#4caf50}{\textbf{in}}$ the morning, $\textcolor{#4caf50}{\textbf{in}}$ July, $\textcolor{#4caf50}{\textbf{in}}$ winter, $\textcolor{#4caf50}{\textbf{in}}$ 2025 | It often rains here $\textcolor{#4caf50}{\textbf{in}}$ spring. (這裡春天常下雨。) |
 
 ---
 
-# 🧠 迷思大破解
+## 🔑 核心觀念 3：日常生活動作動詞庫 (Daily Routine Actions)
 
-❌ **迷思 1：** 早上是 "in the morning"，所以星期一早上是 "in Monday morning"？
-✅ **正確觀念：** **"on Monday morning"**！只要有說出「星期幾」或「特定日期」，老大就是 "on"！
-- ❌ I have a math test in Tuesday morning.
-- ✅ I have a math test **on** Tuesday morning.
+把時間與每天的動作結合，就能寫出一篇生動的一日作息！
 
-❌ **迷思 2：** 早中晚都是 in (in the morning, in the afternoon, in the evening)，所以晚上也是 in the night？
-✅ **正確觀念：** 晚上是一個特例，必須用 **"at night"**！這是英文的習慣用法喔。
-- ❌ I read books in night.
-- ✅ I read books **at** night.
+```text
+ 🌅 早上 (Morning)         🏫 中午/下午 (Afternoon)      🌙 晚上/夜間 (Night)
+ ├─ wake up (醒來)          ├─ eat lunch (吃午餐)        ├─ eat dinner (吃晚餐)
+ ├─ brush teeth (刷牙)      ├─ clean the classroom (打掃)├─ do homework (寫作業)
+ ├─ wash face (洗臉)        ├─ play sports (運動打球)    ├─ take a shower (洗澡)
+ └─ eat breakfast (吃早餐)  └─ go home (放學回家)        └─ go to bed (上床睡覺)
+```
 
-❌ **迷思 3：** 頻率副詞亂放位置，"I play usually basketball."？
-✅ **正確觀念：** 記住口訣「Be後動前」！play 是一般動詞，所以 usually 要放在 play 前面。
-- ❌ I play usually basketball.
-- ✅ I **usually play** basketball.
+### 🗣️ 問答核心句型公式
+- ❓ **詢問他人作息**：$$\textcolor{#00bcd4}{\textbf{What time do you}} + \textcolor{#2196f3}{\textbf{動作動詞}} + \textcolor{#00bcd4}{\textbf{?}}$$
+- 💬 **回答自己作息**：$$\textcolor{#00bcd4}{\textbf{I}} + \textcolor{#2196f3}{\textbf{動作動詞}} + \textcolor{#e91e63}{\textbf{ at }} + \textcolor{#ff9800}{\textbf{時間點}}.$$
 
----
-
-# 📊 本單元重點速查整理表格
-
-| 學習項目 | 重點精華與公式 | 舉例說明 |
-| :--- | :--- | :--- |
-| **報時法** | 15分: quarter past / 30分: half past / 差15分: quarter to | 8:15 ➡️ a quarter past eight / 8:45 ➡️ a quarter to nine |
-| **時間介系詞** | at (時刻) / on (日期、星期) / in (月份、早中晚) | at 6:00 / on Sunday / in July / at night (特例) |
-| **日常動詞** | What time do you...? / I ... at (時間). | I take a shower at 8:00. |
-| **頻率副詞** | always > usually > often > sometimes > seldom > never | (位置：Be後動前) I am always happy. / I always smile. |
+### 💬 情境對話實戰 (Role Play)
+> 👦 **Leo**: What time do you usually $\textcolor{#2196f3}{\textbf{wake up}}$ on weekdays, Mia?  
+> 👧 **Mia**: I usually wake up $\textcolor{#e91e63}{\textbf{at half past six}}$. Then I brush my teeth and eat breakfast at seven o'clock.  
+> 👦 **Leo**: That's early! What time do you $\textcolor{#2196f3}{\textbf{go to bed}}$?  
+> 👧 **Mia**: I take a shower at nine and go to bed $\textcolor{#e91e63}{\textbf{at a quarter to ten}}$ (9:45).  
+> 👦 **Leo**: No wonder you are never late for school!
 
 ---
 
-# ✏️ 隨堂自我小練習
+## 🔑 核心觀念 4：頻率副詞階梯與「Be後動前」位置密碼
 
-請根據上面學過的內容，填入正確的答案吧！（答案在最下面喔，不要偷看！）
+頻率副詞用來表達「事情發生的頻繁程度」，就像一把從 $100\%$ 到 $0\%$ 的尺：
 
-1. I go to the library ________ Sundays. (填入介系詞)
-2. Hurry up! The train leaves at a ________ to ten. (現在是 9:45，差一刻鐘)
-3. My sister ________ (經常) plays mobile games ________ night. (填入頻率副詞與介系詞)
-4. 重組句子：( do / usually / you / what time / wake up / ? )
-   ________________________________________________
+```text
+ ┌──────────┬─────────────────────────────┬───────────┐
+ │ 頻率數值 │ 頻率副詞 (Frequency Adverb) │ 中文含義  │
+ ├──────────┼─────────────────────────────┼───────────┤
+ │  100%    │  ★★★★★ always               │ 總是/必定 │
+ │   80%    │  ★★★★☆ usually              │ 通常      │
+ │   60%    │  ★★★☆☆ often                │ 經常/常常 │
+ │   30%    │  ★★☆☆☆ sometimes            │ 有時候    │
+ │   10%    │  ★☆☆☆☆ seldom               │ 很少/難得 │
+ │    0%    │  ☆☆☆☆☆ never                │ 從不/絕不 │
+ └──────────┴─────────────────────────────┴───────────┘
+```
 
-> **💡 練習題解答：**
-> 1. **on** (因為 Sunday 是星期幾)
-> 2. **quarter** (差一刻鐘到十點)
-> 3. **often / at** (經常是 often，at night 是特例固定用法)
-> 4. **What time do you usually wake up?** (頻率副詞 usually 放在一般動詞 wake up 前面喔！)
+### 🌟 萬用擺放位置口訣：$\textcolor{#ff5722}{\textbf{【Be後 動前 助動後】}}$
+
+$$\text{規則 1：一般動詞「前面」 } \longrightarrow \text{主詞} + \textcolor{#e91e63}{\textbf{頻率副詞}} + \textcolor{#2196f3}{\textbf{一般動詞}}$$
+$$\text{例：I } \textcolor{#e91e63}{\textbf{always}} \text{ } \textcolor{#2196f3}{\textbf{eat}} \text{ breakfast at 7:00.}$$
+
+$$\text{規則 2：Be 動詞「後面」 } \longrightarrow \text{主詞} + \textcolor{#2196f3}{\textbf{am / is / are}} + \textcolor{#e91e63}{\textbf{頻率副詞}}$$
+$$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}{\textbf{never}} \text{ late for school.}$$
 
 ---
 
-# 🌍 你知道嗎？
+## 🧠 迷思大破解
 
-你知道在台灣我們常說現在是「下午兩點」，所以寫 2:00 PM。但是很多歐洲國家（像是德國、法國）在日常生活中是非常習慣使用 **「24小時制」 (24-hour clock)** 的喔！
-所以如果你跟一個德國朋友約下午兩點喝下午茶，他可能會跟你說："Let's meet at 14:00 (fourteen o'clock)." 剛開始聽到的時候，大腦可能要稍微減去 12 換算一下呢！
+❌ **迷思 1**：早上是 in the morning，所以星期一早上寫成 in Monday morning？  
+✅ **正確觀念**：只要出現「星期」或「具體某一天」，最大主管就是 $\textcolor{#2196f3}{\textbf{on}}$！  
+- ❌ I have a piano lesson *in Monday morning*.  
+- ✅ I have a piano lesson $\textcolor{#2196f3}{\textbf{on Monday morning}}$.
+
+❌ **迷思 2**：早中晚都用 in，所以「在夜晚」是 in the night？  
+✅ **正確觀念**：夜晚是特例，母語人士固定使用 $\textcolor{#e91e63}{\textbf{at night}}$！  
+- ❌ I read storybooks *in night*.  
+- ✅ I read storybooks $\textcolor{#e91e63}{\textbf{at night}}$.
+
+❌ **迷思 3**：頻率副詞直接照中文順序放在動詞後面？"I do always my homework."  
+✅ **正確觀念**：緊記「$\textcolor{#ff5722}{\textbf{Be後動前}}$」！do 是一般動詞，always 必須在 do 前面！  
+- ❌ I do *always* my homework.  
+- ✅ I $\textcolor{#e91e63}{\textbf{always}} \text{ } \textcolor{#2196f3}{\textbf{do}}$ my homework.
 
 ---
 
-# 🚀 +10% 現代素養前瞻新知
+## 📊 本單元重點速查整理表格
 
-**【AI 時代的時間管理大師】**
-現代人生活越來越忙碌，你知道現在很多人會用語音助理（像是 Siri, Google Assistant）來幫忙安排 Daily Routine 嗎？
-你可以試著對你的平板或手機說："Hey Siri, wake me up at a quarter to seven tomorrow morning." (嘿 Siri，明早 6:45 叫我起床。) 或 "Set a timer for half an hour for my homework." (幫我的功課設定半小時的計時器。) 
-學會這些英文時間表達，你就能直接用英文遙控最強大的 AI 科技助手，是不是超酷的呢！
+| 學習項目 | 關鍵概念公式 | 經典速記範例 | 避坑提醒 |
+| :--- | :--- | :--- | :--- |
+| **報時系統** | $\text{quarter past} (15分) / \text{half past} (30分) / \text{quarter to} (差15分)$ | $8:15 \rightarrow \text{a quarter past eight}$<br>$8:45 \rightarrow \text{a quarter to nine}$ | quarter to 後面接「下一個小時」 |
+| **時間介系詞** | $\textcolor{#e91e63}{\textbf{at}}$ (時刻) / $\textcolor{#2196f3}{\textbf{on}}$ (某日) / $\textcolor{#4caf50}{\textbf{in}}$ (月份、年月、早中晚) | $\text{at 7:00, on Friday, in July}$ | 特例：$\text{at night, on Friday morning}$ |
+| **日常動詞句型** | $\text{What time do you... ? / I... at (時間).}$ | $\text{I brush my teeth at 7:10.}$ | 動作片語動詞須用原形 |
+| **頻率副詞** | $\text{always(100\%) } > \text{usually(80\%) } > \text{often(60\%) } > \text{sometimes(30\%) } > \text{seldom(10\%) } > \text{never(0\%)}$ | $\text{He usually walks to school.}$ | 牢記位置：$\textcolor{#ff5722}{\textbf{Be後動前}}$ |
+
+---
+
+## ✏️ 隨堂自我小練習
+
+1. **（介系詞填空）** We usually have a big picnic in the park ________ Saturday afternoon.
+2. **（報時表達）** Look at the clock! It is 10:45. That means it is a ________ to ________.
+3. **（頻率副詞位置）** 重組句子：( never / my brother / late / is / for school )  
+   👉 ___________________________________________________________
+4. **（問答句型）**  
+   A: ________ ________ do you do your homework?  
+   B: I do my homework ________ half past seven ________ the evening.
+5. **（改錯題）** 找出錯誤並修正：*She drinks seldom cold water in winter.*  
+   👉 ___________________________________________________________
+
+<details>
+<summary>💡 點我看詳細解答與解析</summary>
+
+1. **on**（因為有 Saturday，特定的一天優先用 on）。
+2. **quarter / eleven**（10:45 是差一刻到 11 點，所以填 quarter 與 eleven）。
+3. **My brother is never late for school.**（never 是頻率副詞，遇到 Be 動詞 is 必須放在 Be 動詞後面）。
+4. **What time / at / in**（詢問時刻用 What time；半點用 at；早中晚用 in the evening）。
+5. 修正為：**She seldom drinks cold water in winter.**（drinks 是一般動詞，頻率副詞 seldom 應放在一般動詞前面）。
+</details>
+
+---
+
+## 🌍 你知道嗎？
+
+🕰️ **為什麼英國大笨鐘 (Big Ben) 報時要先敲小鐘？**  
+在英國倫敦的大笨鐘，每到整點時，並不是直接敲響沉重的整點大鐘，而是會先播放一段優美的 4 節鐘聲旋律（稱為西敏寺鐘聲 Westminster Quarters）。在 15 分鐘時響 1 節、30 分鐘響 2 節、45 分鐘響 3 節，整點響完 4 節後才開始敲大鐘報時。這樣以前的人們就算在房間裡不用看錶，光聽旋律節奏就能知道現在是「幾刻鐘」喔！
+
+---
+
+## 🚀 +10% 現代素養前瞻新知
+
+📱 **用英語給 AI 智慧管家設定生活作息！**  
+在現代智慧家庭中，很多人會使用 Apple Siri、Google Assistant 或 Amazon Alexa 來管理 Daily Routine。試著用今天學到的語法對語音助理下指令吧：
+- *"Hey Google, set an alarm for $\textcolor{#e91e63}{\textbf{half past six}}$ tomorrow morning."*（明早 6:30 叫我起床。）
+- *"Siri, remind me to do my homework $\textcolor{#2196f3}{\textbf{at five o'clock in the afternoon}}$."*（下午 5:00 提醒我寫功課。）
+- *"Alexa, what do I $\textcolor{#4caf50}{\textbf{usually}}$ do $\textcolor{#2196f3}{\textbf{on Wednesday afternoons}}$?"*（我週三下午通常有什麼行程？）
+
+學好日常英文，你不只能跟世界各國的朋友交流，還能直接操控全球最新的 AI 科技助理！

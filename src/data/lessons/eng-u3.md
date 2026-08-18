@@ -1,164 +1,194 @@
 # 📌 單元標題與學習目標
-**Unit 3: Places & Asking for Directions (地點與問路指路)**
+
+**Unit 3: Places & Asking for Directions (城市探索與問路指路指南)**  
 *(108課綱對應指標：◎ 聽 1-III-4, 1-III-10 / ◎ 說 2-III-3, 2-III-9 / ◎ 讀 3-III-3 / ◎ 寫 4-III-3)*
 
-**學習目標：**
-在這堂課結束後，你將能熟悉城市中各種常見「地點」的英文名稱，並且能自信地使用「地方介系詞」與「指路用語」，用英文畫出一張清晰的尋寶地圖，幫助迷路的外國遊客找到目的地！
+**🎯 學習目標：**
+1. 熟練掌握 12 個城市常見公共設施與生活機能建築物的英文名稱。
+2. 靈活運用 5 大地方空間介系詞（$\textcolor{#e91e63}{\textbf{next to}}$、$\textcolor{#2196f3}{\textbf{between}}$、$\textcolor{#4caf50}{\textbf{across from}}$、$\textcolor{#ff9800}{\textbf{on the corner of}}$）。
+3. 熟練掌握祈使句問路與指路核心句型（$\textcolor{#00bcd4}{\textbf{How can I get to... ?}}$、$\textcolor{#e91e63}{\textbf{Go straight}}$、$\textcolor{#2196f3}{\textbf{Turn left / right}}$）。
+4. 能看懂 ASCII 城市街區地圖，流利地為外國遊客指引正確路徑。
 
 ---
 
-# 🎯 學習導引：為什麼要學這個？
+## 🎯 學習導引：為什麼要學這個？
 
-你有過在西門町或台北101附近，突然被背著大背包的外國背包客攔下來，用英文問路的經驗嗎？
-「Excuse me, where is the train station?」當他們焦急地看著你，如果你只會用手指比著遠方說「This way, that way」，那就太可惜了！學會各種地點名詞和如何指引方向（直走、左轉、在你的右手邊），你就能化身成為超專業的「在地國民外交小尖兵」，用流利的英文幫台灣做最棒的觀光宣傳！
+🗺️ 想像一下：你走在台北 101 或西門町商圈，突然有一位背著大登山包的外國背包客神色慌張地走向你：  
+*"Excuse me, I'm lost. Where is the nearest MRT station?"*
 
----
-
-# 🔑 核心觀念 1：城市尋寶單字大全 (Place Vocabulary)
-
-要幫人指路，首先要知道那些建築物的英文怎麼說！這些是你走在台灣街道上最常見的地點：
-
-- **公共設施：** post office (郵局)、hospital (醫院)、library (圖書館)、park (公園)、museum (博物館)
-- **交通與治安：** train station (火車站)、police station (警察局)、fire station (消防局)
-- **生活機能：** convenience store (便利商店)、bank (銀行)、bookstore (書店)、restaurant (餐廳)
-
-🏠 **生活應用例子：**
-1. **領零用錢：** "I need to go to the **bank** to get some money."（我需要去銀行領點錢。）
-2. **借書充實自己：** "There are many interesting books in the **library**."（圖書館裡有很多有趣的書。）
-3. **台灣人的最愛：** "You can buy drinks and snacks at the **convenience store** 24/7."（你可以24小時在便利商店買到飲料跟零食。）
+這時候，如果你只能一邊搖頭一邊指著遠方說 *"This way, that way"*，是不是覺得好可惜？  
+只要學會城市建築單字、空間介系詞與「直走、轉彎」的指路句型，你就能化身自信優雅的「**在地英語外交小尖兵**」，用流利的英語為外國旅人指點迷津，甚至在自己出國旅遊時也能輕鬆暢行無阻！
 
 ---
 
-# 🔑 核心觀念 2：超實用地方介系詞 (Prepositions of Place)
+## 🔑 核心觀念 1：城市設施單字庫 (City Places & Landmarks)
 
-單字背熟了，接下來要說明這些建築物的「相對位置」。
-
-**定義與重點片語：**
-- $\text{next to ...}$：在...旁邊
-- $\text{between A and B}$：在 A 和 B 的中間
-- $\text{across from ...}$：在...的對面 (中間通常隔著一條馬路)
-- $\text{in front of ...}$ / $\text{behind ...}$：在...的前面 / 在...的後面
-- $\text{on the corner of ...}$：在...的轉角處
-
-📊 **地方介系詞圖解比較表：**
-
-| 介系詞片語 | 空間相對關係概念 | 生活情境例句 |
-| :--- | :--- | :--- |
-| **next to** | 緊挨著，就在隔壁 | The bank is **next to** the post office. (銀行在郵局旁邊。) |
-| **between ... and ...** | 夾心餅乾，左右各有一個 | The park is **between** the library **and** the museum. (公園在圖書館和博物館中間。) |
-| **across from** | 面對面，過馬路就到 | The restaurant is **across from** the train station. (餐廳在火車站對面。) |
-| **on the corner of** | 兩條街交叉的角角 | The bookstore is **on the corner of** Apple Street and Sun Road. (書店在蘋果街與太陽路的轉角。) |
-
----
-
-# 🔑 核心觀念 3：問路與指路秘笈 (Asking & Giving Directions)
-
-準備好要開口對話了嗎？掌握這幾個萬用句型，再也不怕外國人問路！
-
-**問路句型 (Asking)：**
-1. $\text{Excuse me, where is the } + \text{地點} + \text{?}$（不好意思，請問...在哪裡？）
-2. $\text{Excuse me, how can I get to the } + \text{地點} + \text{?}$（不好意思，我該如何前往...？）
-
-**指路句型 (Giving Directions) - 祈使句：**
-- Go straight. (直走。) / Walk two blocks. (走兩個街區/路口。)
-- Turn left / Turn right at the corner. (在轉角左轉/右轉。)
-- It's on your left / right. (它就在你的左手邊/右手邊。)
-
-🗣️ **情境對話 (Direction Dialogue)：**
-**Tourist:** **Excuse me, how can I get to the museum?** I'm lost. (不好意思，請問博物館怎麼走？我迷路了。)
-**You:** No problem! **Go straight** for two blocks, and **turn right** at the bank. (沒問題！直走兩個路口，然後在銀行右轉。)
-**Tourist:** Turn right at the bank? (在銀行右轉嗎？)
-**You:** Yes. Then walk down the street. The museum is **on your left**. It's **across from** the park. (是的。然後順著路走。博物館就在你的左手邊，在公園的對面。)
-**Tourist:** Thank you so much! You are very helpful! (太感謝你了！你幫了大忙！)
-
----
-
-# 🔑 核心觀念 4：序數與轉彎 (Ordinal Numbers)
-
-有時候直走太遠，我們需要告訴對方在「第幾個」路口轉彎，這時候就需要用到「序數」(表示順序的數字) 囉！
-
-**重點單字：**
-- first (第一), second (第二), third (第三)
-
-**句型應用：**
-- Turn left at the **first** corner. (在第一個轉角左轉。)
-- Take the **second** right. (在第二個路口右轉。)
-
----
-
-# 🗺️ ASCII 尋寶小地圖挑戰
-
-請看著這張簡易地圖，想像你現在站在 `[You]` 的位置，面朝北方(上)。
+我們把城市裡的建築物依照生活功能分類，牢記以下高頻核心單字：
 
 ```text
-              (North)
-[ Park ]      |   | [ Post Office ]
-[ Library ]   | S | [ Bank ]
---------------+ T +----------------
- (Apple Rd.)  | R |
-[ Museum ]    | E | [ Restaurant ]
-[ You ] ▲     | E | [ Police Station ]
-              | T | 
+ ┌─────────────────────────────────────────────────────────────┐
+ │                     🏙️ 城市建築物大探索                    │
+ ├─────────────────────────┬───────────────────────────────────┤
+ │ 🏛️ 公共與藝文設施       │ 🏥 醫療與安全守護                 │
+ │ - library (圖書館)       │ - hospital (醫院)                 │
+ │ - museum (博物館)       │ - police station (警察局)         │
+ │ - post office (郵局)    │ - fire station (消防局)           │
+ ├─────────────────────────┼───────────────────────────────────┤
+ │ 🏪 生活與金融機能       │ 🚆 交通與休閒娛樂                 │
+ │ - convenience store     │ - train / MRT station (捷運/火車站)│
+ │   (便利商店 24小時)     │ - park (公園)                     │
+ │ - bookstore (書店)      │ - restaurant (餐廳)               │
+ │ - bank (銀行)           │ - supermarket (超級市場)          │
+ └─────────────────────────┴───────────────────────────────────┘
 ```
-如果外國人問你："Where is the Bank?"
-你可以看著地圖回答："Go straight. It's on your right, next to the Post Office." (直走。它在你的右手邊，郵局的旁邊。)
 
 ---
 
-# 🧠 迷思大破解
+## 🔑 核心觀念 2：空間幾何圖解——5 大地方介系詞 (Prepositions of Place)
 
-❌ **迷思 1：** 叫別人直走，英文說 "Go straightly."？
-✅ **正確觀念：** straight 這個字本身就可以當副詞，不需要加 ly 喔！"straightly" 是錯誤的說法！
-- ❌ Go **straightly** and turn left.
-- ✅ Go **straight** and turn left.
+要精準指出建築物的位置，空間介系詞就像 GPS 座標一樣不可或缺！
 
-❌ **迷思 2：** 在轉角處是 "in the corner" 還是 "on the corner"？
-✅ **正確觀念：** 如果是街道外面開放的轉角，我們習慣用 **"on the corner"**；"in the corner" 通常是指室內房間裡面的角落（例如在牆角罰站）。
-- ❌ The bank is **in** the corner of the street.
-- ✅ The bank is **on** the corner of the street.
+```text
+ 1.【 next to 】(在...緊鄰隔壁)        2.【 between A and B 】(在兩者中間夾心)
+   ┌─────────┐ ┌─────────┐              ┌─────────┐ ┌─────────┐ ┌─────────┐
+   │ Bank    │ │ Post    │              │ Library │ │  PARK   │ │ Museum  │
+   │         │ │ Office  │              │   [A]   │ │ 【目標】│ │   [B]   │
+   └─────────┘ └─────────┘              └─────────┘ └─────────┘ └─────────┘
+  The bank is NEXT TO the post office.     The park is BETWEEN the library AND museum.
 
----
+ 3.【 across from 】(在...正對面隔著馬路) 4.【 on the corner of 】(在兩條路交會轉角)
+   ┌─────────────────────┐                   Apple Street
+   │ Restaurant          │               ═════════════════════╦══════════
+   └─────────────────────┘                                    ║
+   ════════  Main Street  ════════                            ║ Sun Road
+   ┌─────────────────────┐               ┌─────────────────┐  ║
+   │ Train Station       │               │ Bookstore 【角】│  ║
+   └─────────────────────┘               └─────────────────┘  ║
+  The restaurant is ACROSS FROM the station. The bookstore is ON THE CORNER OF Apple & Sun.
+```
 
-# 📊 本單元重點速查整理表格
+### 📊 地方介系詞對照與生活例句
 
-| 實用功能 | 關鍵句型與片語 | 備註說明 |
+| 介系詞片語 | 空間方位意義 | 實戰生活造句 |
 | :--- | :--- | :--- |
-| **禮貌開場** | **Excuse me**, ... | 問路前一定要加，才有禮貌！ |
-| **詢問地點** | **Where is** the + 地點? / **How can I get to** the + 地點? | how can I get to 有詢問交通方式/路線的意味。 |
-| **指引方向** | **Go straight.** / **Turn left/right** at... | 動詞放在句首，形成祈使句。 |
-| **描述位置** | **next to** (旁邊) / **between A and B** (中間) / **across from** (對面) | 運用相對位置讓對方更容易找到目標。 |
+| $\textcolor{#e91e63}{\textbf{next to}}$ | 緊挨在旁邊（無障礙物隔開） | The bakery is $\textcolor{#e91e63}{\textbf{next to}}$ the bookstore. (烘焙坊在書店隔壁。) |
+| $\textcolor{#2196f3}{\textbf{between ... and ...}}$ | 夾在 A 與 B 的正中間 | The clinic is $\textcolor{#2196f3}{\textbf{between}}$ the bank $\textcolor{#2196f3}{\textbf{and}}$ the cafe. |
+| $\textcolor{#4caf50}{\textbf{across from}}$ | 正對面（中間隔著一條街道/馬路） | The hotel is $\textcolor{#4caf50}{\textbf{across from}}$ the central park. |
+| $\textcolor{#ff9800}{\textbf{on the corner of}}$ | 位於兩條路十字交會的轉角處 | The 7-Eleven is $\textcolor{#ff9800}{\textbf{on the corner of}}$ First St. and Peace Rd. |
+| $\textcolor{#9c27b0}{\textbf{in front of / behind}}$ | 在...的前方 / 在...的後方 | There is a big fountain $\textcolor{#9c27b0}{\textbf{in front of}}$ the museum. |
 
 ---
 
-# ✏️ 隨堂自我小練習
+## 🔑 核心觀念 3：問路與指路實戰指南 (Asking & Giving Directions)
 
-請根據上面學過的內容，填入正確的單字或片語完成句子！
+### ❓ 禮貌問路句型 (Asking for Directions)
+問路前一定要先說 $\textcolor{#e91e63}{\textbf{Excuse me}}$（不好意思打擾一下），這是國際禮儀！
+1. $$\textcolor{#00bcd4}{\textbf{Excuse me, where is the}} + \textcolor{#2196f3}{\textbf{地點}} + \textcolor{#00bcd4}{\textbf{?}}$$
+2. $$\textcolor{#00bcd4}{\textbf{Excuse me, how can I get to the}} + \textcolor{#2196f3}{\textbf{地點}} + \textcolor{#00bcd4}{\textbf{?}}$$
 
-1. A: Excuse me, ________ can I get to the train station? 
-   B: Go ________, and it's on your left.
-2. The convenience store is ________ the bank and the bookstore. (在...兩者之間)
-3. 翻譯句子：在第一個轉角右轉。
-   ________ ________ at the first corner.
-4. The police station is ________ ________ the park. (警察局在公園的對面)
-
-> **💡 練習題解答：**
-> 1. **how / straight** (問路萬用句型，直走是不加 ly 的 straight)
-> 2. **between** (看到後面有 A and B，前面就是配 between)
-> 3. **Turn right** (祈使句動詞原形開頭)
-> 4. **across from** (對面的片語)
+### 🧭 清楚指路指令句型 (Giving Directions - 祈使句)
+- $\textcolor{#4caf50}{\textbf{Go straight}}$ for one / two blocks. (直走一個/兩個街區。)
+- $\textcolor{#ff9800}{\textbf{Turn left / right}}$ at the first corner. (在第一個轉角左轉/右轉。)
+- $\textcolor{#e91e63}{\textbf{It is on your left / right}}$. (它就在你的左手邊/右手邊。)
+- $\textcolor{#9c27b0}{\textbf{You can't miss it!}}$ (你一定不會錯過的！/ 很好找的！)
 
 ---
 
-# 🌍 你知道嗎？
+## 🗺️ ASCII 實戰地圖導航挑戰
 
-在台灣，我們的地址通常是「某某市某某區某某路 X 號」。但是在歐美很多國家，他們找路的方式是看「Block (街區)」。
-一個 Block 就是被四條街道圍起來的一個方形區塊。所以當外國人說 "Walk three blocks." (走三個街區)，意思就是叫你往前走，跨越三個十字路口喔！這跟台灣人習慣說「過三個紅綠燈」的概念非常像呢！
+```text
+                           【 北 North 】
+   [ Library ]         │            │    [ Post Office ]
+   [ (圖書館) ]        │  Broadway  │    [   (郵局)    ]
+   ────────────────────┘  Street    └──────────────────────
+       ◀═══  Apple Road (蘋果路)  ═══►
+   ────────────────────┐            ┌──────────────────────
+   [ Museum ]          │            │    [ Bank ]
+   [ (博物館) ]        │            │    [ (銀行) ]
+                       │            │
+   [ You ▲ ]           │            │    [ Restaurant ]
+   (你目前位置)        │            │    [   (餐廳)   ]
+                           【 南 South 】
+```
+
+### 🗣️ 真實情境指路對話 (Role Play)
+> 🧳 **Tourist**: $\textcolor{#e91e63}{\textbf{Excuse me, how can I get to the Post Office?}}$ I need to buy some stamps.  
+> 🧒 **You**: No problem! $\textcolor{#4caf50}{\textbf{Go straight}}$ along Broadway Street. Cross Apple Road.  
+> 🧳 **Tourist**: Cross Apple Road, and then?  
+> 🧒 **You**: The Post Office is $\textcolor{#ff9800}{\textbf{on your right}}$, $\textcolor{#4caf50}{\textbf{across from}}$ the Library. $\textcolor{#9c27b0}{\textbf{You can't miss it!}}$  
+> 🧳 **Tourist**: Thank you so much for your help! You are wonderful!  
+> 🧒 **You**: You're very welcome! Have a great trip!
 
 ---
 
-# 🚀 +10% 現代素養前瞻新知
+## 🧠 迷思大破解
 
-**【GPS 與地圖導航的運作秘密】**
-現在我們迷路時，常常直接打開手機的 Google Maps，它會用語音告訴你："In 100 meters, turn left." (100公尺後左轉)。
-你知道嗎？這是因為天上有好幾顆「GPS (全球定位系統) 衛星」正在向你的手機發送訊號。手機接收到訊號後，經過複雜的數學計算（三角定位），就能精準知道你站在哪裡！結合 AI 演算法，地圖甚至還能預測哪條路會塞車，幫你規劃出最快的路線。
-雖然有高科技導航很方便，但學會自己看實體地圖和開口用英文問路，依然是出國探險必備的超棒生存技能喔！
+❌ **迷思 1**：直走說成 "Go straightly."？  
+✅ **正確觀念**：$\textcolor{#4caf50}{\textbf{straight}}$ 本身就是副詞，千萬不能加 ly！"straightly" 是不存在的字！  
+- ❌ Go *straightly* and turn left.  
+- ✅ $\textcolor{#4caf50}{\textbf{Go straight}}$ and turn left.
+
+❌ **迷思 2**：在轉角處用 "in the corner" 還是 "on the corner"？  
+✅ **正確觀念**：馬路上的開放十字路口轉角用 $\textcolor{#ff9800}{\textbf{on the corner}}$；房間內的室內死角（如牆角）才用 $\text{in the corner}$。  
+- ❌ The bank is *in the corner* of the street.  
+- ✅ The bank is $\textcolor{#ff9800}{\textbf{on the corner}}$ of the street.
+
+❌ **迷思 3**：左轉說成 "Turn to left."？  
+✅ **正確觀念**：轉彎直接說 $\textcolor{#ff9800}{\textbf{Turn left}}$ 或 $\textcolor{#ff9800}{\textbf{Turn right}}$，中間不加介系詞 to！
+
+---
+
+## 📊 本單元重點速查整理表格
+
+| 功能分類 | 核心句型與片語 | 中文意義 | 必備實用情境 |
+| :--- | :--- | :--- | :--- |
+| **禮貌開場** | $\textcolor{#e91e63}{\textbf{Excuse me...}}$ | 不好意思打擾一下 | 詢問陌生人時必備 |
+| **問路首選** | $\textcolor{#00bcd4}{\textbf{How can I get to the... ?}}$ | 我該如何抵達...？ | 詢問詳細路徑方向 |
+| **指引直行** | $\textcolor{#4caf50}{\textbf{Go straight for ... blocks.}}$ | 直走...個街區 | 沿著當前街道前進 |
+| **指引轉彎** | $\textcolor{#ff9800}{\textbf{Turn left / right at...}}$ | 在...向左/向右轉 | 在特定路口或轉角改變方向 |
+| **告知方位** | $\textcolor{#e91e63}{\textbf{It's on your left / right.}}$ | 它在你的左/右手邊 | 目標物具體出現位置 |
+| **信心結語** | $\textcolor{#9c27b0}{\textbf{You can't miss it!}}$ | 你絕對找得到！ | 給予問路者安心感 |
+
+---
+
+## ✏️ 隨堂自我小練習
+
+1. **（地方介系詞）** The new bookstore is located ________ the bank and the coffee shop.
+2. **（祈使句指路）** A: Excuse me, where is the MRT station?  
+   B: ________ ________ (直走) and ________ ________ (向右轉) at the second corner.
+3. **（看地圖作答）** 根據上方 ASCII 地圖，從 [You] 的位置出發，博物館 (Museum) 位於你的什麼方位？  
+   👉 The museum is ________ ________ ________ (在你的左手邊).
+4. **（整句翻譯）** 不好意思，請問圖書館在火車站的對面嗎？  
+   👉 ___________________________________________________________
+5. **（改錯題）** 找出錯誤並修正：*Excuse me, can you tell me where is the police station?*  
+   👉 ___________________________________________________________
+
+<details>
+<summary>💡 點我看詳細解答與解析</summary>
+
+1. **between**（後方出現 the bank AND the coffee shop，兩者之間必用 between）。
+2. **Go straight / turn right**（祈使句開頭動詞使用原形）。
+3. **on your left**（在你的左手邊固定用法為 on your left）。
+4. **Excuse me, is the library across from the train station?**（對面使用 across from）。
+5. 修正為：**Excuse me, where the police station is?** 或更常見的 **Excuse me, where is the police station?**（直接問句語序為 Where is the... ?）。
+</details>
+
+---
+
+## 🌍 你知道嗎？
+
+🧱 **什麼是西方城市規劃中的「Block (街區)」？**  
+在美國（如紐約曼哈頓），整座城市的道路大多以方格棋盤式設計。兩條橫向街道與兩條縱向街道所圍成的正方形區域就稱為一個 **Block**。  
+因此當美國人跟你說：*"Walk two blocks and turn left."*，意思就是「往前走過兩個十字路口後左轉」！這就跟台灣人習慣說「過兩個紅綠燈」是一模一樣的意思喔！
+
+---
+
+## 🚀 +10% 現代素養前瞻新知
+
+🛰️ **Google Maps 導航背後的英文語音指令秘密！**  
+當你使用手機地圖導航時，試著把語音切換成「英文發音」，你會發現導航系統全部都在使用今天學到的句型：
+- *"In 200 meters, $\textcolor{#ff9800}{\textbf{turn right}}$ onto Main Street."* (200公尺後右轉進入主街。)
+- *"$\textcolor{#4caf50}{\textbf{Go straight}}$ through the roundabout, then take the $\textcolor{#2196f3}{\textbf{second exit}}$."* (直行通過圓環，從第二個出口出去。)
+- *"Your destination is $\textcolor{#e91e63}{\textbf{on your left}}$."* (您的目的地就在您的左側。)
+
+下次全家開車出遊時，不妨請爸媽把導航切換成英文模式，來一場沉浸式的英語聽力實戰練習吧！

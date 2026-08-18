@@ -1,139 +1,199 @@
-# 📌 單元標題與學習目標：Unit 5: Festivals, Holidays & World Cultures (節慶、假日與世界文化)
+# 📌 單元標題與學習目標
 
-**108 課綱核心素養：**
-- 英-E-B1：具備理解及使用英語基本字詞與句型的能力，並能應用於簡易的日常生活溝通中。
-- 英-E-C3：具備認識國內外主要節慶習俗及風土民情的基本能力，並培養尊重不同文化的態度。
-- 多元文化教育：認識並尊重不同文化的節慶活動，培養全球視野。
+**Unit 5: Festivals, Holidays & World Cultures (世界節慶巡禮與多元文化)**  
+*(108課綱對應指標：◎ 聽 1-III-5, 1-III-7 / ◎ 說 2-III-5 / ◎ 讀 3-III-5 / ◎ 寫 4-III-5)*
 
-**學習目標：**
-在這堂課中，我們將學習如何用英文介紹台灣的傳統節慶（如農曆新年、端午節），並認識西方的重大節慶（如萬聖節、感恩節）。同時，學會正確使用介系詞（in / on）來表達日期，並能寫出一張充滿祝福的節慶賀卡！
+**🎯 學習目標：**
+1. 熟練運用英語介紹台灣 4 大傳統民俗節慶（$\textcolor{#e91e63}{\textbf{Lunar New Year}}$、$\textcolor{#2196f3}{\textbf{Dragon Boat Festival}}$、$\textcolor{#ff9800}{\textbf{Mid-Autumn Festival}}$、$\textcolor{#4caf50}{\textbf{Lantern Festival}}$）與代表性習俗。
+2. 深入理解西方 4 大重要節慶（$\textcolor{#9c27b0}{\textbf{Halloween}}$、$\textcolor{#e91e63}{\textbf{Thanksgiving}}$、$\textcolor{#2196f3}{\textbf{Christmas}}$、$\textcolor{#4caf50}{\textbf{Easter}}$）之文化背景與象徵意涵。
+3. 掌握節慶日期時間介系詞 $\textcolor{#4caf50}{\textbf{in}}$、$\textcolor{#2196f3}{\textbf{on}}$、$\textcolor{#e91e63}{\textbf{at}}$ 的精確語法規則。
+4. 學會撰寫格式完整、寓意溫馨的英文節慶祝賀卡片 (Greeting Card)。
 
 ---
 
 ## 🎯 學習導引：為什麼要學這個？
-🏠 **生活情境：**
-想像你在網路上交了一個美國的筆友，或者學校來了外籍交換學生。十月的時候，他興奮地跟你分享萬聖節 (Halloween) 要去 "Trick or treat"（不給糖就搗蛋），這時如果你能用英文跟他分享台灣的端午節 (Dragon Boat Festival) 也有很酷的「賽龍舟」和好吃的「粽子」，那該有多酷啊！學習節慶英文，不僅是學單字，更是打開一扇「向世界介紹台灣，也讓世界走進台灣」的文化大門。有了這些單字，下次遇到外國人，你就能當最棒的文化外交小尖兵了！
+
+🏮 想像一下：你的學校來了一位來自美國的交換學生，十月底時他興奮地戴著南瓜面具跟你說：*"Trick or treat! What do you do on Halloween?"*  
+接著他好奇地問你：*"What is your favorite festival in Taiwan?"*
+
+如果你只會回答 *"Moon festival, eat cake"*, 那多麼可惜！如果你能用流暢的英語向他介紹：  
+*"During the Dragon Boat Festival, we eat delicious zongzi and row dragon boats with thrilling drumbeats!"*  
+學會節慶與文化英語，你就是最棒的「**國際文化交流大使**」，能自信向世界展現台灣的美好，也熱情擁抱全球多元文化！
 
 ---
 
-## 🔑 核心觀念 1：台灣傳統節慶 (Taiwan Festivals)
-台灣有許多熱鬧的傳統節慶，每個節慶都有專屬的美食和活動。學會這些英文，就能輕鬆把台灣介紹給外國朋友。
+## 🔑 核心觀念 1：台灣傳統節慶全攻略 (Taiwanese Festivals)
 
-📊 **台灣三大節慶單字與習俗：**
+```text
+ ┌─────────────────────────────────────────────────────────────┐
+ │                   🏮 台灣傳統節慶四季巡禮                   │
+ ├─────────────────────────┬───────────────────────────────────┤
+ │ 🌸 春季 (Spring)        │ ☀️ 夏季 (Summer)                  │
+ │ 🧧 Lunar New Year       │ 🚣 Dragon Boat Festival (端午節)   │
+ │   - red envelopes (紅包)│   - zongzi / rice dumplings (粽子)│
+ │   - reunion dinner(團圓)│   - dragon boat race (賽龍舟)     │
+ │ 🏮 Lantern Festival     │   - stand eggs at noon (立蛋)     │
+ │   - carry lanterns (提燈)│                                   │
+ ├─────────────────────────┼───────────────────────────────────┤
+ │ 🍂 秋季 (Autumn)        │ ❄️ 冬季 (Winter)                  │
+ │ 🌕 Mid-Autumn Festival  │ 🥣 Winter Solstice (冬至)         │
+ │   - moon cakes (月餅)   │   - eat tangyuan (吃湯圓)         │
+ │   - BBQ outdoors (烤肉) │   - family togetherness (全家團聚)│
+ │   - pomelo hats (柚子帽)│                                   │
+ └─────────────────────────┴───────────────────────────────────┘
+```
 
-| 節慶名稱 (English) | 節慶名稱 (中文) | 關鍵單字與習俗 (Activities & Food) |
-| :--- | :--- | :--- |
-| **Chinese New Year** | 農曆新年 | **red envelope** (紅包), **firecrackers** (鞭炮), **reunion dinner** (團圓飯) |
-| **Dragon Boat Festival** | 端午節 | **zongzi** / rice dumpling (粽子), **dragon boat race** (龍舟賽) |
-| **Mid-Autumn Festival** | 中秋節 | **moon cakes** (月餅), **BBQ** (烤肉), **pomelo hats** (柚子帽) |
+### 📊 台灣四大節慶核心單字與句型
 
-🏠 **生活小例子：**
-1. 我最喜歡過 **Chinese New Year** 了，因為可以領到很多 **red envelopes** (紅包)！
-2. 每年的 **Mid-Autumn Festival**，我們全家人都會在院子裡吃 **BBQ** (烤肉) 和 **moon cakes**。
-
----
-
-## 🔑 核心觀念 2：西方知名節慶 (Western Festivals)
-西方國家也有非常多有趣的節慶，有些在台灣也越來越受歡迎囉！
-
-📊 **西方四大節慶單字與習俗：**
-
-| 節慶名稱 (English) | 節慶名稱 (中文) | 關鍵單字與習俗 (Activities & Food) |
-| :--- | :--- | :--- |
-| **Halloween** | 萬聖節 (10/31) | **trick or treat** (不給糖就搗蛋), **jack-o'-lantern** (南瓜燈), **costume** (變裝服) |
-| **Thanksgiving** | 感恩節 (11月) | **turkey** (火雞), **pumpkin pie** (南瓜派), **gratitude** (感恩/感激) |
-| **Christmas** | 聖誕節 (12/25) | **Santa Claus** (聖誕老人), **Christmas tree** (聖誕樹), **gifts** (禮物) |
-| **Easter** | 復活節 (春季) | **Easter eggs** (復活節彩蛋), **Easter bunny** (復活節兔子) |
-
-🏠 **生活小例子：**
-1. 萬聖節時，我要穿上吸血鬼的 **costume** (服裝)，去跟鄰居玩 **trick or treat**！
-2. **Thanksgiving** 是一個與家人團聚，並且表達 **gratitude** (感恩) 的重要日子。
+| 節慶英文名稱 | 節慶中文 | 關鍵特色美食與活動 | 經典英文介紹句 |
+| :--- | :--- | :--- | :--- |
+| $\textcolor{#e91e63}{\textbf{Lunar New Year}}$ | 農曆新年 | $\text{red envelopes, reunion dinner}$ | Children get $\textcolor{#e91e63}{\textbf{red envelopes}}$ with lucky money. |
+| $\textcolor{#4caf50}{\textbf{Lantern Festival}}$ | 元宵節 | $\text{sky lanterns, riddles, tangyuan}$ | We release $\textcolor{#4caf50}{\textbf{sky lanterns}}$ into the night sky. |
+| $\textcolor{#2196f3}{\textbf{Dragon Boat Festival}}$ | 端午節 | $\text{zongzi, dragon boat races}$ | People row fast in $\textcolor{#2196f3}{\textbf{dragon boat races}}$. |
+| $\textcolor{#ff9800}{\textbf{Mid-Autumn Festival}}$ | 中秋節 | $\text{moon cakes, pomelos, BBQ}$ | Families gather to gaze at the full moon and eat $\textcolor{#ff9800}{\textbf{moon cakes}}$. |
 
 ---
 
-## 🔑 核心觀念 3：時間介系詞 in vs. on (Date Expressions)
-在表達節慶是在「哪一個月」或「哪一天」時，介系詞的選擇超級重要！這是英文考試的常客喔。
+## 🔑 核心觀念 2：西方代表性節慶全覽 (Western Festivals)
 
-- **in + 月份 / 年份：** 表達「大範圍」的時間。
-  - 例：in May (在五月), in 2024 (在2024年)
-- **on + 特定日期 / 星期 / 節日當天：** 表達「精準的一天」。
-  - 例：on May 5th (在五月五日), on Monday (在星期一), on Christmas Day (在聖誕節當天)
+西方節慶融合了宗教歷史、感恩收穫與歡樂歡聚的文化精髓：
 
-💡 **句型：** 
-[節日] is celebrated **in/on** [時間].
-(某節日是在某個時間被慶祝的。)
+```text
+ ┌─────────────────────────────────────────────────────────────┐
+ │                   🎃 西方經典節慶文化地圖                   │
+ ├─────────────────────────┬───────────────────────────────────┤
+ │ 🐰 Easter (復活節・春天) │ 🎃 Halloween (萬聖節・10/31)      │
+ │ - hunt Easter eggs (彩蛋│ - trick or treat (不給糖就搗蛋)   │
+ │ - Easter bunny (復活節兔│ - wear scary costumes (變裝)      │
+ │ - symbol of new life    │ - carve jack-o'-lanterns (南瓜燈) │
+ ├─────────────────────────┼───────────────────────────────────┤
+ │ 🦃 Thanksgiving (感恩節) │ 🎄 Christmas (聖誕節・12/25)      │
+ │ - roast turkey (烤火雞) │ - Santa Claus (聖誕老人)          │
+ │ - pumpkin pie (南瓜派)  │ - decorate Christmas tree (聖誕樹)│
+ │ - express gratitude(感恩│ - exchange gifts (交換禮物)       │
+ └─────────────────────────┴───────────────────────────────────┘
+```
 
-🏠 **生活小例子：**
-1. Christmas is celebrated **in** December. (聖誕節在十二月。)
-2. Christmas is celebrated **on** December 25th. (聖誕節在十二月二十五日。) -> *注意：有了明確的日子，就要換成 on！*
+### 📊 西方節慶重點對照表
+
+| 節慶英文名稱 | 慶祝時間 | 節慶核心意義 | 關鍵詞彙 |
+| :--- | :--- | :--- | :--- |
+| $\textcolor{#9c27b0}{\textbf{Halloween}}$ | $\textcolor{#2196f3}{\textbf{on October 31st}}$ | 變裝狂歡、驅除厄運 | $\text{costumes, trick or treat, jack-o'-lantern}$ |
+| $\textcolor{#e91e63}{\textbf{Thanksgiving}}$ | 11月第四個週四 | 感謝收成、家庭團聚 | $\text{roast turkey, pumpkin pie, gratitude}$ |
+| $\textcolor{#2196f3}{\textbf{Christmas}}$ | $\textcolor{#2196f3}{\textbf{on December 25th}}$ | 傳遞愛與和平、分享禮物 | $\text{Santa Claus, Christmas stockings, gifts}$ |
+| $\textcolor{#4caf50}{\textbf{Easter}}$ | 每年三/四月春分後 | 慶祝重生、迎接春天 | $\text{Easter eggs, Easter bunny, chocolate}$ |
 
 ---
 
-## 🔑 核心觀念 4：文化尊重與節慶卡片撰寫 (Cultural Respect & Greeting Cards)
-世界上有很多不同的文化 (cultures)，我們應該保持 **respect** (尊重) 的態度，學習去 **celebrate** (慶祝) 多元性。
-寫一張簡單的節慶卡片 (greeting card) 也是表達友好的好方法！
+## 🔑 核心觀念 3：節慶時間介系詞黃金法則 (in / on / at)
 
-📝 **節慶賀卡寫作範例 (Greeting Card Example)：**
-> Dear Tom,
-> Happy Chinese New Year! 
-> I hope you get a lot of **red envelopes** and enjoy the yummy **reunion dinner**.
-> Best wishes,
-> Kevin
+表達節慶時間時，介系詞的選擇取決於時間的「精準度」：
+
+```text
+  ┌──────────────────────────────────────────────────────────┐
+  │ 1. IN + 單純月份 / 年份 ────────────────► in December    │
+  │ 2. ON + 具體日期 / 某節日當天 ──────────► on December 25th│
+  │                                      ► on Christmas Day  │
+  │ 3. AT + 節慶假期期間 ───────────────────► at Christmas    │
+  │                                      ► at Lunar New Year │
+  └──────────────────────────────────────────────────────────┘
+```
+
+### 💡 核心語法公式對比
+- $\textcolor{#4caf50}{\textbf{in}} + \text{月份}$：*Halloween is celebrated $\textcolor{#4caf50}{\textbf{in}}$ October.*
+- $\textcolor{#2196f3}{\textbf{on}} + \text{明確日期}$：*Halloween is celebrated $\textcolor{#2196f3}{\textbf{on}}$ October 31st.*
+- $\textcolor{#2196f3}{\textbf{on}} + \text{節日 + Day}$：*We exchange gifts $\textcolor{#2196f3}{\textbf{on}}$ Christmas Day.*
+- $\textcolor{#e91e63}{\textbf{at}} + \text{節慶總稱}$：*We eat big meals $\textcolor{#e91e63}{\textbf{at}}$ Thanksgiving.*
+
+---
+
+## 🔑 核心觀念 4：手寫溫馨英文節慶卡片 (Greeting Card Writing)
+
+一張標準且誠摯的節慶賀卡包含四個部分：
+
+```text
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 💌 稱謂 (Salutation):                                        │
+ │    Dear Emma,                                               │
+ │                                                             │
+ │ 🎉 節日祝賀 (Greeting):                                     │
+ │    Merry Christmas and Happy New Year!                      │
+ │                                                             │
+ │ 💖 誠摯祝福 (Heartfelt Wishes):                             │
+ │    I hope your holiday is filled with warmth, laughter, and │
+ │    lots of delicious treats! Thank you for being my best    │
+ │    friend this year.                                        │
+ │                                                             │
+ │ ✍️ 署名 (Sign-off):                                         │
+ │    Warm regards, / Best wishes,                             │
+ │    Leo                                                      │
+ └─────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## 🧠 迷思大破解
-抓出關於時間介系詞的常見小蟲蟲 (Bugs)！
 
-1. **看到節慶名稱就一律用 on？**
-   - ❌ **錯誤寫法：** We eat moon cakes **on** Mid-Autumn Festival.
-   - ✅ **正確寫法：** We eat moon cakes **at** Mid-Autumn Festival. (如果指整個節慶期間通常用 at)，但如果是指特定的「那一天」，會說 **on** Mid-Autumn Festival **Day**。
-   - 💡 **不過國小階段更常考的是：** 看到單純的月份用 **in**，有日期出現（例如 10/31）絕對用 **on**！
+❌ **迷思 1**：看到節慶一律用 on？"We eat turkey on Thanksgiving."  
+✅ **正確觀念**：如果單指整個感恩節假期，母語者常用 $\textcolor{#e91e63}{\textbf{at Thanksgiving}}$；但若加上 Day（特定那一天），則使用 $\textcolor{#2196f3}{\textbf{on Thanksgiving Day}}$。
 
-2. **Thanksgiving 總是同一天？**
-   - ❌ **錯誤想法：** 每個節慶都有固定的日期，像聖誕節就是 12/25。
-   - ✅ **正確觀念：** 很多節慶是算「星期幾」的喔！比如美國的 Thanksgiving (感恩節) 是在十一月的「第四個星期四」，所以每年的日期都不一樣。台灣的農曆節慶（端午、中秋）也是看農曆，所以國曆日期每年都在變！
+❌ **迷思 2**：所有西方節慶的國曆日期都是固定的？  
+✅ **正確觀念**：聖誕節 (12/25) 與萬聖節 (10/31) 日期固定；但 **Thanksgiving**（美國為 11 月第四個星期四）與 **Easter**（每年春分月圓後的第一個星期日）每年的國曆日期都不同！
 
 ---
 
 ## 📊 本單元重點速查整理表格
 
-| 節慶分類 | 節慶名稱 (英文) | 搭配介系詞 (in / on) 範例 | 代表性物品/食物 |
+| 節慶名稱 (English) | 所屬文化 | 推薦介系詞搭配 | 代表性文化象徵符號 |
 | :--- | :--- | :--- | :--- |
-| **Taiwan** | Chinese New Year | falls **in** January or February | red envelope |
-| **Taiwan** | Dragon Boat Festival | celebrated **in** May or June | zongzi, dragon boat |
-| **Western** | Halloween | celebrated **on** October 31st | jack-o'-lantern, costume |
-| **Western** | Christmas | celebrated **on** December 25th | Santa Claus, tree, gifts |
+| $\textcolor{#e91e63}{\textbf{Lunar New Year}}$ | 東亞/台灣 | $\text{in January/February, at Lunar New Year}$ | $\text{Red envelopes, Dragon dance}$ |
+| $\textcolor{#2196f3}{\textbf{Dragon Boat Festival}}$ | 台灣傳統 | $\text{in May/June, on the 5th day of the 5th lunar month}$ | $\text{Zongzi, Dragon boat}$ |
+| $\textcolor{#ff9800}{\textbf{Mid-Autumn Festival}}$ | 台灣傳統 | $\text{in September/October, at Mid-Autumn Festival}$ | $\text{Moon cakes, Full moon, BBQ}$ |
+| $\textcolor{#9c27b0}{\textbf{Halloween}}$ | 西方文化 | $\text{on October 31st}$ | $\text{Jack-o'-lantern, Costumes}$ |
+| $\textcolor{#2196f3}{\textbf{Christmas}}$ | 西方文化 | $\text{on December 25th, at Christmas}$ | $\text{Christmas tree, Santa Claus}$ |
 
 ---
 
 ## ✏️ 隨堂自我小練習
-快來測試一下自己是不是節慶小達人！
 
-1. **選擇題：** We celebrate Teacher's Day _______ September 28th.
-   (A) in (B) on (C) at
-2. **單字題：** At Halloween, kids often say "_______ or treat!" to get candy.
-3. **配對題：** 請把以下習俗跟節慶配對：
-   (A) dragon boat race  (B) moon cakes  (C) turkey
-   1. Mid-Autumn Festival ➔ [   ]
-   2. Thanksgiving ➔ [   ]
-   3. Dragon Boat Festival ➔ [   ]
-4. **翻譯題：** 農曆新年時，小孩們會拿到紅包。(用 red envelopes)
+1. **（介系詞選擇）** Christmas is celebrated ________ December 25th every year.  
+   (A) in  (B) on  (C) at  (D) to
+2. **（民俗單字填空）** During the Mid-Autumn Festival, Taiwanese people love to eat sweet ________ ________ (月餅) and wear ________ (柚子) hats.
+3. **（活動配對）** 請將活動與對應的節慶配對：  
+   (1) trick or treat ──► [ ________ ]  
+   (2) row dragon boats ──► [ ________ ]  
+   (3) roast turkey ──► [ ________ ]  
+   *(A) Thanksgiving  (B) Halloween  (C) Dragon Boat Festival*
+4. **（整句翻譯）** 孩子們在萬聖節穿上酷炫的變裝服去要糖果。  
+   👉 ___________________________________________________________
+5. **（賀卡句子重組）** ( a joyful / wish you / New Year / I / Lunar / ! )  
+   👉 ___________________________________________________________
 
 <details>
-<summary>👀 點我看解答</summary>
-1. (B) on (因為有 28th 這個明確的日期)
-2. trick
-3. 1➔(B), 2➔(C), 3➔(A)
-4. Kids get red envelopes at Chinese New Year. 
+<summary>💡 點我看詳細解答與解析</summary>
+
+1. **(B) on**（因為有具體日期 December 25th，優先使用 on）。
+2. **moon cakes / pomelo**（中秋節兩大經典代表美食）。
+3. **(1) $\rightarrow$ (B) Halloween ; (2) $\rightarrow$ (C) Dragon Boat Festival ; (3) $\rightarrow$ (A) Thanksgiving**。
+4. **Kids wear cool costumes and go trick-or-treating on Halloween.**
+5. **I wish you a joyful Lunar New Year!**（卡片常用祝福句型）。
 </details>
 
 ---
 
 ## 🌍 你知道嗎？
-在西方國家，聖誕節是最重要的節日之一。但你知道嗎？在南半球的「澳洲 (Australia)」和「紐西蘭 (New Zealand)」，因為季節跟我們北半球剛好相反，所以他們的 12 月是「夏天」！因此，澳洲的聖誕老人可能不會穿著厚厚的紅大衣在雪地裡坐雪橇，他們有時候會穿著短褲，在沙灘上衝浪慶祝聖誕節呢！超級特別吧！
+
+🏄 **在南半球澳洲，聖誕老人竟然穿著海灘褲衝浪？**  
+當我們在台灣或歐美過著冷颼颼、飄著雪的白雪聖誕節 (White Christmas) 時，位在南半球的澳洲 (Australia) 正處於炎熱的盛夏！因此在雪梨的沙灘上，你會看到戴著聖誕帽、穿著紅色泳褲、踩著衝浪板的聖誕老人！澳洲家庭在聖誕節當天最受歡迎的大餐不是熱騰騰的烤火雞，而是清涼的海鮮冷盤與戶外沙灘烤肉呢！
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知：永續環保節慶 (Sustainable Festivals)
-我們在慶祝節慶時，也開始融入「SDGs (聯合國永續發展目標)」。例如：台灣在過年放鞭炮 (firecrackers) 雖然熱鬧，但會造成空氣污染，所以現在很多地方改用「電子環保鞭炮」；萬聖節的變裝服 (costumes) 也不一定要買全新的，可以用家裡的舊衣服和紙箱來 DIY，不僅發揮創意，還能減少地球的負擔。讓我們一起過個好玩又環保的節日吧！
+## 🚀 +10% 現代素養前瞻新知
+
+🌱 **SDGs 綠色節慶新風潮 (Sustainable & Eco-friendly Festivals)**  
+傳統節慶在帶來歡樂的同時，也可能產生碳排放與塑膠垃圾。現在全球正興起「**永續綠色節慶 (Sustainable Festivals)**」：
+- 🧨 **台灣過年**：使用「電子環保鞭炮」與「手機數位紅包 (E-red envelopes)」，減少空污與紙張消耗。
+- 🎃 **萬聖節**：倡導以家中舊紙箱、舊衣物「DIY 環保變裝 (Eco-costumes)」，取代一次性塑膠道具。
+- 🎋 **放天燈**：研發可完全生物分解的「環保水溶天燈紙」，守護山林生態。
+
+身為地球村的小公民，讓我們在傳承美麗文化的同時，也用智慧守護地球！

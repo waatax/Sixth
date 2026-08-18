@@ -1,158 +1,226 @@
 # 📌 單元標題與學習目標
-**Unit 2: Past Tense Stories & Adventures (過去式故事與冒險)**
+
+**Unit 2: Past Tense Stories & Adventures (過去式故事與冒險歷險記)**  
 *(108課綱對應指標：◎ 聽 1-III-3, 1-III-9 / ◎ 說 2-III-2, 2-III-8 / ◎ 讀 3-III-2 / ◎ 寫 4-III-2)*
 
-**學習目標：**
-在這堂課結束後，你將能夠運用「過去式 (Past Tense)」的規則與不規則動詞變化，精彩地用英文講述昨天發生的趣事、上週末的冒險故事，並且正確使用過去式的否定與疑問句型！
+**🎯 學習目標：**
+1. 掌握過去式 (Simple Past Tense) 的核心概念與時間軸定位。
+2. 熟練規則動詞 4 大「變身規則」與發音規律（/t/、/d/、/ɪd/）。
+3. 熟記國小高年級必備 30 個超高頻「不規則動詞」分類記憶法。
+4. 掌握助動詞 $\textcolor{#e91e63}{\textbf{Did}}$ / $\textcolor{#e91e63}{\textbf{didn't}}$ 的「能量吸收法則」——動詞務必還原為「$\textcolor{#2196f3}{\textbf{原形動詞}}$」！
 
 ---
 
-# 🎯 學習導引：為什麼要學這個？
+## 🎯 學習導引：為什麼要學這個？
 
-想像一下，你週末去遊樂園玩了超恐怖的雲霄飛車，星期一到學校時，你迫不及待想跟好朋友炫耀：「我昨天玩了那個超刺激的設施！我還吃了一支超大的棉花糖！」
-但是等等...如果你用現在式說 "I eat cotton candy."，聽起來就像你「每天」都在吃棉花糖！想要生動地分享「已經發生過的事情」，我們就必須召喚英文裡的時光機——**過去式 (Past Tense)**！學會了它，你就能成為一個超級會說故事的人！
+🎢 想像一下：星期一早上進到教室，你迫不及待想跟好朋友分享昨天的超刺激經歷：  
+「我昨天去遊樂園玩了雲霄飛車！我還吃了一大支棉花糖、看了一場煙火秀！」
 
----
+如果這時候你用現在式說 *"I eat cotton candy."*，聽起來就像你「每天都在吃棉花糖」！想要精準生動地描述「**在過去某個特定時間點已經發生且結束的事**」，我們就必須搭乘英文裡的時光機——**過去式 (Past Tense)**！
 
-# 🔑 核心觀念 1：動詞的變身魔法 (Regular Past Tense Rules)
-
-大部分的動詞想要回到過去，只需要穿上特別的外衣（字尾加上 ed），這叫做「規則動詞」。不過，穿外衣的規定有四種喔！
-
-**定義與公式：**
-1. **一般動詞** $\Rightarrow$ 直接加 **-ed** (例如：play ➡️ played)
-2. **字尾已有 e** $\Rightarrow$ 只要加 **-d** (例如：love ➡️ loved)
-3. **子音+短母音+子音** $\Rightarrow$ 重複字尾再加 **-ed** (例如：stop ➡️ stopped)
-4. **子音+y** $\Rightarrow$ 去 **y** 加上 **-ied** (例如：study ➡️ studied)
-
-🏠 **生活應用例子：**
-1. **打球日常：** "I **played** basketball with my friends yesterday."（我昨天跟朋友打籃球。）
-2. **努力念書：** "She **studied** hard for the math test last night."（她昨晚為了數學考試很認真讀書。）
-3. **急煞車：** "The bus **stopped** suddenly!"（公車突然停了下來！）
+```text
+ ◀──【 過去 Past 】─────────────【 現在 Present 】─────────────【 未來 Future 】──►
+       yesterday                     today                      tomorrow
+       last night                    now                        next week
+       two days ago
+  ★ 動作已發生並結束 ★           ★ 現在習慣或狀態 ★          ★ 尚未發生的事 ★
+   I ate an apple.              I eat an apple.             I will eat an apple.
+```
 
 ---
 
-# 🔑 核心觀念 2：30 個高頻不規則動詞大補帖 (Irregular Verbs)
+## 🔑 核心觀念 1：規則動詞 4 大變身魔法 (Regular Verbs)
 
-有些調皮的動詞不遵守加 ed 的規則，它們回到過去時，會完全變成另一個字！這叫做「不規則動詞」。這 30 個是你小學階段必背的超級 VIP，把它們當成寶可夢一樣收集起來吧！
+大部分動詞回到過去時，只要在字尾穿上「-ed」外衣。但根據動詞字尾的長相不同，共有 4 種規則：
 
-📊 **30 高頻不規則動詞變化表：**
+```text
+  ┌──────────────────────────────────────────────────────────────┐
+  │                 動詞字尾變身規則決策樹                       │
+  ├──────────────────────────────────────────────────────────────┤
+  │ 1. 一般動詞 ─────────────► 直接加 -ed (play ➔ played)         │
+  │ 2. 字尾已有 e ───────────► 只要加 -d  (like ➔ liked)          │
+  │ 3. 子音 + 短母音 + 子音 ──► 重複字尾加 -ed (stop ➔ stopped)   │
+  │ 4. 子音 + y ─────────────► 去 y 加 -ied (study ➔ studied)     │
+  └──────────────────────────────────────────────────────────────┘
+```
 
-| 原形動詞 (現在) | 過去式變身 | 中文意思 | | 原形動詞 (現在) | 過去式變身 | 中文意思 |
-| :--- | :--- | :--- | :---| :--- | :--- | :--- |
-| **1. go** | **went** | 去 | | **16. find** | **found** | 找到 |
-| **2. see** | **saw** | 看見 | | **17. run** | **ran** | 跑 |
-| **3. eat** | **ate** | 吃 | | **18. read** | **read** (唸red) | 閱讀 |
-| **4. have** | **had** | 有 / 吃 | | **19. write** | **wrote** | 寫 |
-| **5. do** | **did** | 做 | | **20. speak** | **spoke** | 說 / 講 |
-| **6. make** | **made** | 製作 | | **21. teach** | **taught** | 教導 |
-| **7. buy** | **bought** | 買 | | **22. catch** | **caught** | 抓 / 接 |
-| **8. take** | **took** | 拿 / 搭乘 | | **23. bring** | **brought** | 帶來 |
-| **9. come** | **came** | 來 | | **24. swim** | **swam** | 游泳 |
-| **10. get** | **got** | 得到 / 變得 | | **25. sing** | **sang** | 唱歌 |
-| **11. give** | **gave** | 給 | | **26. sit** | **sat** | 坐 |
-| **12. know** | **knew** | 知道 | | **27. stand** | **stood** | 站 |
-| **13. think** | **thought** | 想 / 認為 | | **28. wear** | **wore** | 穿戴 |
-| **14. say** | **said** | 說 | | **29. sleep** | **slept** | 睡覺 |
-| **15. tell** | **told** | 告訴 | | **30. draw** | **drew** | 畫畫 |
+### 📊 規則動詞 4 大變身全覽表
 
-> 💡 **小秘訣：** 有發現 *catch* 跟 *teach* 過去式長得很像嗎？(caught / taught)，把類似發音的字整理在一起背，速度會快兩倍喔！
+| 規則種類 | 適用條件 | 變身公式 | 經典動詞範例 | 生活例句 |
+| :--- | :--- | :--- | :--- | :--- |
+| **規則 1** | 一般動詞 | 直接 $+\textcolor{#e91e63}{\textbf{-ed}}$ | $\text{clean} \rightarrow \textcolor{#e91e63}{\textbf{cleaned}}$<br>$\text{watch} \rightarrow \textcolor{#e91e63}{\textbf{watched}}$ | I $\textcolor{#e91e63}{\textbf{watched}}$ TV with my dad yesterday. |
+| **規則 2** | 字尾已有 $\text{e}$ | 只要 $+\textcolor{#2196f3}{\textbf{-d}}$ | $\text{live} \rightarrow \textcolor{#2196f3}{\textbf{lived}}$<br>$\text{dance} \rightarrow \textcolor{#2196f3}{\textbf{danced}}$ | We $\textcolor{#2196f3}{\textbf{danced}}$ happily at the party. |
+| **規則 3** | 單音節・短母音+子音 | 重複字尾 $+\textcolor{#ff9800}{\textbf{-ed}}$ | $\text{stop} \rightarrow \textcolor{#ff9800}{\textbf{stopped}}$<br>$\text{plan} \rightarrow \textcolor{#ff9800}{\textbf{planned}}$ | The bus $\textcolor{#ff9800}{\textbf{stopped}}$ in front of the park. |
+| **規則 4** | 子音 $+\text{y}$ | 去 $\text{y} +\textcolor{#9c27b0}{\textbf{-ied}}$ | $\text{study} \rightarrow \textcolor{#9c27b0}{\textbf{studied}}$<br>$\text{cry} \rightarrow \textcolor{#9c27b0}{\textbf{cried}}$ | She $\textcolor{#9c27b0}{\textbf{studied}}$ hard for the English test. |
 
----
-
-# 🔑 核心觀念 3：過去式的否定與疑問句 (Negative & Questions)
-
-當我們要說「我沒有...」或問別人「你昨天有...嗎？」的時候，原本的動詞沒辦法自己形成否定或疑問，需要請到過去式的超級英雄助手 **"did"** 或 **"didn't"** (did not) 來幫忙！
-
-**定義與公式：**
-- 否定句：$\text{主詞} + \text{didn't} + \text{動詞原形}$ (因為 didn't 已經表現出過去式了，後面的動詞要打回原形！)
-- 疑問句：$\text{Did} + \text{主詞} + \text{動詞原形} + \text{?}$
-
-🗣️ **情境對話 (Did Question Dialogue)：**
-**Mom:** **Did** you **finish** your homework? (你有寫完功課嗎？)
-**Leo:** Yes, I **did**. I **finished** it an hour ago. (有，我一小時前寫完了。)
-**Mom:** But I **didn't see** your math workbook. Where is it? (但我沒看到你的數學作業簿。在哪裡？)
-**Leo:** Oh no! I **left** it at school! (喔不！我把它忘在學校了！)
-
-🏠 **生活應用例子：**
-1. **忘記帶東西：** "I **didn't bring** my umbrella, so I got wet."（我沒帶傘，所以我淋濕了。）
-2. **打探八卦：** "**Did** you **see** that cool dog in the park?"（你有看到公園那隻超酷的狗嗎？）
-3. **美食錯過：** "We **didn't eat** breakfast because we woke up late."（我們沒吃早餐，因為我們晚起了。）
+> ⚠️ **特別注意**：如果是「母音 + y」（如 play, enjoy），直接加 ed 即可（played, enjoyed），千萬不能去 y 喔！
 
 ---
 
-# 🔑 核心觀念 4：過去式時間標記 (Time Markers)
+## 🔑 核心觀念 2：30 個高頻不規則動詞分組大補帖 (Irregular Verbs)
 
-就像警探辦案需要時間線索，過去式的句子最後，通常會放上「時間標記」，讓大家清楚知道這件事是什麼時候發生的。
+有些動詞非常調皮，回到過去時會徹底變身！我們把它們依照「聲音韻律」分成四大家族，背誦效率倍增：
 
-**常見的時間標記：**
-- yesterday (昨天), yesterday morning (昨天早上)
-- last night (昨晚), last week (上週), last month (上個月), last year (去年)
-- ~ ago (在...之前)：two days ago (兩天前), five minutes ago (五分鐘前)
-- in + 過去的年份：in 2023
+### 🎯 家族 A：母音變身組 (Vowel Change)
+| 現在式 (Base) | 過去式 (Past) | 中文 | 現在式 (Base) | 過去式 (Past) | 中文 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1. $\text{eat}$ | $\textcolor{#e91e63}{\textbf{ate}}$ | 吃 | 6. $\text{give}$ | $\textcolor{#e91e63}{\textbf{gave}}$ | 給予 |
+| 2. $\text{see}$ | $\textcolor{#e91e63}{\textbf{saw}}$ | 看見 | 7. $\text{come}$ | $\textcolor{#e91e63}{\textbf{came}}$ | 來 |
+| 3. $\text{run}$ | $\textcolor{#e91e63}{\textbf{ran}}$ | 跑 | 8. $\text{become}$ | $\textcolor{#e91e63}{\textbf{became}}$ | 變成 |
+| 4. $\text{sing}$ | $\textcolor{#e91e63}{\textbf{sang}}$ | 唱歌 | 9. $\text{sit}$ | $\textcolor{#e91e63}{\textbf{sat}}$ | 坐 |
+| 5. $\text{swim}$ | $\textcolor{#e91e63}{\textbf{swam}}$ | 游泳 | 10. $\text{drink}$ | $\textcolor{#e91e63}{\textbf{drank}}$ | 喝 |
+
+### 🎯 家族 B：特殊 -ought / -aught 組
+| 現在式 (Base) | 過去式 (Past) | 中文 | 現在式 (Base) | 過去式 (Past) | 中文 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 11. $\text{buy}$ | $\textcolor{#2196f3}{\textbf{bought}}$ | 買 | 14. $\text{catch}$ | $\textcolor{#2196f3}{\textbf{caught}}$ | 抓/接 |
+| 12. $\text{bring}$ | $\textcolor{#2196f3}{\textbf{brought}}$ | 帶來 | 15. $\text{teach}$ | $\textcolor{#2196f3}{\textbf{taught}}$ | 教導 |
+| 13. $\text{think}$ | $\textcolor{#2196f3}{\textbf{thought}}$ | 想/認為 | | | |
+
+### 🎯 家族 C：字尾改 -d / -t 組
+| 現在式 (Base) | 過去式 (Past) | 中文 | 現在式 (Base) | 過去式 (Past) | 中文 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 16. $\text{make}$ | $\textcolor{#4caf50}{\textbf{made}}$ | 製作 | 21. $\text{sleep}$ | $\textcolor{#4caf50}{\textbf{slept}}$ | 睡覺 |
+| 17. $\text{have / has}$ | $\textcolor{#4caf50}{\textbf{had}}$ | 有/吃 | 22. $\text{feel}$ | $\textcolor{#4caf50}{\textbf{felt}}$ | 感覺 |
+| 18. $\text{tell}$ | $\textcolor{#4caf50}{\textbf{told}}$ | 告訴 | 23. $\text{leave}$ | $\textcolor{#4caf50}{\textbf{left}}$ | 離開/遺留 |
+| 19. $\text{sell}$ | $\textcolor{#4caf50}{\textbf{sold}}$ | 販賣 | 24. $\text{build}$ | $\textcolor{#4caf50}{\textbf{built}}$ | 建造 |
+| 20. $\text{hear}$ | $\textcolor{#4caf50}{\textbf{heard}}$ | 聽見 | 25. $\text{spend}$ | $\textcolor{#4caf50}{\textbf{spent}}$ | 花費 |
+
+### 🎯 家族 D：完全變形與不變組
+| 現在式 (Base) | 過去式 (Past) | 中文 | 現在式 (Base) | 過去式 (Past) | 中文 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 26. $\text{go}$ | $\textcolor{#ff9800}{\textbf{went}}$ | 去 | 29. $\text{write}$ | $\textcolor{#ff9800}{\textbf{wrote}}$ | 寫 |
+| 27. $\text{do / does}$ | $\textcolor{#ff9800}{\textbf{did}}$ | 做 | 30. $\text{read}$ | $\textcolor{#ff9800}{\textbf{read}}$ (發音/rɛd/) | 閱讀 |
+| 28. $\text{take}$ | $\textcolor{#ff9800}{\textbf{took}}$ | 拿/搭乘 | | | |
 
 ---
 
-# 📖 閱讀小挑戰：My Amazing Weekend (我的奇妙週末)
-來看看這篇 80 字的小故事，找找看裡面有幾個過去式動詞！
+## 🔑 核心觀念 3：否定句與疑問句——助動詞 Did 的「吸力法則」
 
-> Last weekend, my family and I **went** to the beach. The weather **was** perfect. I **swam** in the sea and my brother **built** a huge sandcastle. Suddenly, we **saw** a cute little crab. My brother **tried** to catch it, but it **ran** away very fast! We **laughed** out loud. Later, we **ate** delicious seafood at a restaurant near the beach. I **had** a great time. It **was** the best weekend ever!
+當遇到否定句或疑問句時，一般動詞無法自己變身，必須請出時光英雄助動詞 $\textcolor{#e91e63}{\textbf{Did}}$ 來助陣！
+
+```text
+ 🦸‍♂️ 助動詞 DID 就像強力吸塵器：
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 【Did / Didn't】 已經把「過去式標記」完全吸走了！             │
+ │                                                             │
+ │ 後面跟著的動詞 ────────► 必須立刻打回【原形動詞 (V)】！      │
+ └─────────────────────────────────────────────────────────────┘
+```
+
+### 📝 核心句型公式
+1. **肯定句**：$$\text{主詞} + \textcolor{#4caf50}{\textbf{過去式動詞 (V-ed / 變形)}} + \text{過去時間.}$$
+   - *I $\textcolor{#4caf50}{\textbf{went}}$ to the zoo yesterday.*
+2. **否定句**：$$\text{主詞} + \textcolor{#e91e63}{\textbf{didn't (did not)}} + \textcolor{#2196f3}{\textbf{原形動詞 (V)}} + \text{過去時間.}$$
+   - *I $\textcolor{#e91e63}{\textbf{didn't}}$ $\textcolor{#2196f3}{\textbf{go}}$ to the zoo yesterday.* (❌ 不能寫 didn't went)
+3. **疑問句**：$$\textcolor{#e91e63}{\textbf{Did}} + \text{主詞} + \textcolor{#2196f3}{\textbf{原形動詞 (V)}} + \text{過去時間?}$$
+   - *$\textcolor{#e91e63}{\textbf{Did}}$ you $\textcolor{#2196f3}{\textbf{go}}$ to the zoo yesterday?*
+   - 👉 肯定回答：*Yes, I $\textcolor{#e91e63}{\textbf{did}}$.*
+   - 👉 否定回答：*No, I $\textcolor{#e91e63}{\textbf{didn't}}$.*
+
+### 💬 情境對話 (Did Question Dialogue)
+> 👩 **Mom**: Leo, $\textcolor{#e91e63}{\textbf{did}}$ you $\textcolor{#2196f3}{\textbf{finish}}$ your math homework?  
+> 👦 **Leo**: Yes, I $\textcolor{#e91e63}{\textbf{did}}$. I $\textcolor{#4caf50}{\textbf{finished}}$ it before dinner!  
+> 👩 **Mom**: Great! But I $\textcolor{#e91e63}{\textbf{didn't}}$ $\textcolor{#2196f3}{\textbf{see}}$ your workbook on the desk.  
+> 👦 **Leo**: Oops! I $\textcolor{#4caf50}{\textbf{left}}$ it in my classroom locker!
 
 ---
 
-# 🧠 迷思大破解
+## 🔑 核心觀念 4：過去式專屬「時間標記線索」(Time Markers)
 
-❌ **迷思 1：** 疑問句加了 Did 之後，後面的動詞還要加 ed！"Did you played games?"
-✅ **正確觀念：** 錯！🦸‍♂️ 助動詞 Did 就像吸塵器，已經把過去式的能量吸走了，後面的動詞必須是「原形動詞」！
-- ❌ Did you **played** games yesterday?
-- ✅ Did you **play** games yesterday?
+就像名偵探柯南辦案需要線索，看到以下這些時間詞，就要立刻提高警覺使用過去式：
 
-❌ **迷思 2：** 否定句用 "I not went to school."
-✅ **正確觀念：** 過去式的否定必須請出助動詞 didn't，並且動詞也要恢復原形。
-- ❌ I **not went** to school.
-- ✅ I **didn't go** to school.
+```text
+ ┌──────────────────────────────────────────────────────────────┐
+ │                    過去式專屬時間副詞標籤                    │
+ ├──────────────────────────────────────────────────────────────┤
+ │ 🏷️ yesterday (昨天) / yesterday morning (昨天早上)            │
+ │ 🏷️ last night (昨晚) / last week (上週) / last year (去年)   │
+ │ 🏷️ ... ago (在...之前)：three hours ago / two days ago       │
+ │ 🏷️ in + 過去年份：in 2020 / in 2023                          │
+ │ 🏷️ just now (剛才) / at that time (在那時候)                 │
+ └──────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-# 📊 本單元重點速查整理表格
+## 📖 閱讀小挑戰：My Amazing Beach Adventure (海灘大冒險)
 
-| 句型種類 | 句型結構公式 | 例句示範 | 注意事項 |
+仔細閱讀以下短文，算算看裡面出現了幾個過去式動詞！
+
+> Last Saturday, my family and I $\textcolor{#4caf50}{\textbf{went}}$ to the beach. The sunshine $\textcolor{#4caf50}{\textbf{was}}$ warm and bright. I $\textcolor{#4caf50}{\textbf{swam}}$ in the cool blue sea, and my little sister $\textcolor{#4caf50}{\textbf{built}}$ a giant sandcastle. Suddenly, we $\textcolor{#4caf50}{\textbf{saw}}$ a tiny red crab crawl across the sand. My sister $\textcolor{#4caf50}{\textbf{tried}}$ to touch it, but it $\textcolor{#4caf50}{\textbf{ran}}$ away into a shell! We all $\textcolor{#4caf50}{\textbf{laughed}}$ happily. Later, we $\textcolor{#4caf50}{\textbf{ate}}$ delicious grilled fish. I $\textcolor{#4caf50}{\textbf{had}}$ a wonderful time. It $\textcolor{#4caf50}{\textbf{was}}$ truly the best weekend ever!
+
+---
+
+## 🧠 迷思大破解
+
+❌ **迷思 1**：問句有 Did，後面的動詞還要加 ed？"Did you played soccer?"  
+✅ **正確觀念**：助動詞 Did 已經吸收了過去時態，主要動詞一定要恢復「原形」！  
+- ❌ Did you *played* soccer yesterday?  
+- ✅ $\textcolor{#e91e63}{\textbf{Did}}$ you $\textcolor{#2196f3}{\textbf{play}}$ soccer yesterday?
+
+❌ **迷思 2**：否定句直接加 not："I not bought the book."  
+✅ **正確觀念**：一般動詞過去式否定句，務必請出 $\textcolor{#e91e63}{\textbf{didn't}}$ 搭配 $\textcolor{#2196f3}{\textbf{原形動詞}}$！  
+- ❌ I *not bought* the book.  
+- ✅ I $\textcolor{#e91e63}{\textbf{didn't}}$ $\textcolor{#2196f3}{\textbf{buy}}$ the book.
+
+❌ **迷思 3**：read 的過去式拼法不同？  
+✅ **正確觀念**：read 的現在式與過去式「拼法完全相同 (read)」，但「發音不同」！現在式發長母音 /rid/，過去式發短母音 /rɛd/（聽起來像紅色的 red）。
+
+---
+
+## 📊 本單元重點速查整理表格
+
+| 句型結構 | 語法公式 | 實戰範例 | 核心口訣 |
 | :--- | :--- | :--- | :--- |
-| **肯定句 (規則)** | 主詞 + V-ed + 過去時間 | I **watched** TV last night. | 注意 y 去掉變 ied 等拼字規則。 |
-| **肯定句 (不規則)** | 主詞 + 過去式動詞 + 過去時間| She **went** to the zoo yesterday. | 30個常考不規則動詞必須背熟！ |
-| **否定句** | 主詞 + **didn't** + **動詞原形** | They **didn't do** their homework. | didn't 後面絕對不加 ed。 |
-| **疑問句** | **Did** + 主詞 + **動詞原形** + ? | **Did** you **eat** the cake? | 回答：Yes, I did. / No, I didn't. |
+| **肯定句 (規則)** | $\text{主詞} + \textcolor{#4caf50}{\textbf{V-ed}} + \text{過去時間}$ | We $\textcolor{#4caf50}{\textbf{played}}$ games last night. | 留意去 y 加 ied 與重複字尾 |
+| **肯定句 (不規則)** | $\text{主詞} + \textcolor{#4caf50}{\textbf{不規則變形}} + \text{過去時間}$ | She $\textcolor{#4caf50}{\textbf{bought}}$ a new bike yesterday. | 30 高頻字分組牢記 |
+| **否定句** | $\text{主詞} + \textcolor{#e91e63}{\textbf{didn't}} + \textcolor{#2196f3}{\textbf{V原形}}$ | He $\textcolor{#e91e63}{\textbf{didn't}}$ $\textcolor{#2196f3}{\textbf{eat}}$ breakfast today. | didn't 出現，動詞打回原形 |
+| **疑問句** | $\textcolor{#e91e63}{\textbf{Did}} + \text{主詞} + \textcolor{#2196f3}{\textbf{V原形}} + ?$ | $\textcolor{#e91e63}{\textbf{Did}}$ they $\textcolor{#2196f3}{\textbf{see}}$ the movie? | Did 帶頭，動詞原形不加 ed |
 
 ---
 
-# ✏️ 隨堂自我小練習
+## ✏️ 隨堂自我小練習
 
-試著把括號裡的動詞，變成正確的過去式型態填入空格中吧！
+1. **（動詞變形）** Yesterday, my uncle ________ (buy) a birthday cake and ________ (bring) it home.
+2. **（規則動詞）** The loud thunder frightened the dog, so it ________ (cry) and ________ (stop) moving.
+3. **（否定句轉換）** 將句子改成過去式否定句：*Andy ate all the cookies an hour ago.*  
+   👉 Andy ___________________________________________________.
+4. **（疑問句造句）** 依提示造出疑問句：( you / see / that big bird / in the park / last Sunday / ? )  
+   👉 ___________________________________________________________
+5. **（情境選擇題）**  
+   A: Did you ________ your lost keys?  
+   B: Yes, I ________ them under the sofa.  
+   (A) found / find  (B) find / found  (C) find / find  (D) found / found
 
-1. We ________ (buy) a lot of snacks at the night market last night.
-2. The baby ________ (cry) loudly five minutes ago.
-3. ________ you ________ (see) my glasses? I can't find them.
-4. I ________ (not / sleep) well last night because of the noise.
-5. She ________ (think) the math test was easy, but she ________ (get) a bad grade.
+<details>
+<summary>💡 點我看詳細解答與解析</summary>
 
-> **💡 練習題解答：**
-> 1. **bought** (buy 的不規則過去式，夜市買零食必備字)
-> 2. **cried** (子音+y，去y加ied)
-> 3. **Did / see** (疑問句開頭用 Did，後面的動詞要用「原形動詞」see)
-> 4. **didn't sleep** (否定句用 didn't，後面恢復原形動詞 sleep)
-> 5. **thought / got** (兩者都是不規則變化喔！)
+1. **bought / brought**（兩者皆為不規則動詞變形）。
+2. **cried / stopped**（cry 子音+y去y加ied；stop 重複字尾加ed）。
+3. **didn't eat all the cookies an hour ago**（否定句使用 didn't 後接原形動詞 eat）。
+4. **Did you see that big bird in the park last Sunday?**（Did 開頭，動詞用原形 see）。
+5. **(B)**（問句有 Did 後面用原形動詞 find；答句肯定句用過去式 found）。
+</details>
 
 ---
 
-# 🌍 你知道嗎？
+## 🌍 你知道嗎？
 
-語言是活的！有些動詞在英國和美國，過去式的長相會不一樣喔！
-例如「學習 learn」，在美國通常把它當規則動詞，寫作 "learn**ed**"。但是在英國，很多人喜歡把它當不規則動詞，寫作 "learn**t**"。同樣的字還有 "dream" (dreamed / dreamt) 跟 "spell" (spelled / spelt)。不管哪一種，外國人都能聽得懂啦！
+🇬🇧 🇺🇸 **英國與美國在過去式拼字上的趣味差異！**  
+在英文演變過程中，有些字在英國 (UK) 和美國 (US) 的過去式習慣不同：
+- 「學習 learn」：美式常當規則動詞寫作 $\text{learn}\textcolor{#e91e63}{\textbf{ed}}$；英式喜愛寫作 $\text{learn}\textcolor{#2196f3}{\textbf{t}}$。
+- 「做夢 dream」：美式 $\text{dream}\textcolor{#e91e63}{\textbf{ed}}$ vs 英式 $\text{dream}\textcolor{#2196f3}{\textbf{t}}$。
+- 「燃燒 burn」：美式 $\text{burn}\textcolor{#e91e63}{\textbf{ed}}$ vs 英式 $\text{burn}\textcolor{#2196f3}{\textbf{t}}$。  
+兩者在國際交流中都是完全正確且通用的喔！
 
 ---
 
-# 🚀 +10% 現代素養前瞻新知
+## 🚀 +10% 現代素養前瞻新知
 
-**【數位足跡 (Digital Footprints) 也是一種過去式】**
-我們學的過去式是用來說故事，而在網路世界裡，你按過的每一個讚、搜尋過的每一部 YouTube 影片，都會在網路上留下紀錄，這被稱為「數位足跡」。
-就算你在現實中說 "I **didn't watch** the video," (我沒有看那部影片)，但網路的伺服器可是誠實地記錄了 "User **watched** the video at 8:00 PM yesterday." 
-所以在使用網路時，記得要為自己留在網路上的「過去式行為」負責任，做個聰明安全的數位公民喔！
+👣 **數位足跡 (Digital Footprint) —— 網路世界裡的「永久過去式」！**  
+我們學過去式是為了記錄生活中的故事。但在今日的網際網路中，你的每一次點閱、發文、按讚與搜尋，都會被伺服器記錄為「**數位足跡 (Digital Footprint)**」。
+
+就算你在現實中說：*"I $\textcolor{#e91e63}{\textbf{didn't send}}$ that mean message."* (我沒有發送那條刻薄的訊息)，網路資料庫依舊精確記錄著：*"User $\textcolor{#4caf50}{\textbf{sent}}$ the message at 20:15 yesterday."*
+
+因此，身為現代數位公民，我們要對自己在網路上留下的每一個「過去式行為」負責，學會保護隱私、尊重他人，留下健康正向的數位足跡！
