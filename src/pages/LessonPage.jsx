@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import { ArrowLeft, CheckCircle2, Image as ImageIcon, Sparkles, BookOpen, ExternalLink, Compass } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Image as ImageIcon, Sparkles, ExternalLink, Share2, Check } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import './LessonPage.css';
 
@@ -52,6 +52,8 @@ const LessonPage = () => {
   const navigate = useNavigate();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [copied, setCopied] = useState(false);
 
   // Find unit metadata and subject
   let currentUnit = null;
@@ -67,6 +69,20 @@ const LessonPage = () => {
 
   const subjectIllustration = currentSubject ? subjectImages[currentSubject.id] : null;
 
+  // Track scroll reading progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const progress = Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100));
+        setScrollProgress(progress);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     const fetchMarkdown = async () => {
       setLoading(true);
@@ -75,66 +91,116 @@ const LessonPage = () => {
         try {
           const mdContent = await mdModules[path]();
           setContent(mdContent);
-        } catch (error) {
+        } catch (_err) {
           setContent('# 糟糕！無法載入教學內容\n\n內容檔案可能遺失或正在建置中。');
         }
       } else {
         setContent(`# 🚧 教學內容建置中\n\n目前此單元 (${unitId}) 的深度教學內容尚未開放，敬請期待後續更新！\n\n您可以先返回單元列表，或直接進行重點測驗。`);
       }
       setLoading(false);
+      window.scrollTo(0, 0);
     };
 
     fetchMarkdown();
   }, [unitId]);
 
+  const handleShare = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   if (!currentUnit) {
     return (
       <div className="container py-12 text-center">
-        <h2>找不到此單元資料</h2>
+        <h2 className="h2">找不到此單元資料</h2>
         <button className="btn-primary mt-4" onClick={() => navigate('/')}>返回八大學習領域</button>
       </div>
     );
   }
 
   return (
-    <div className="lesson-page-wrapper max-w-3xl mx-auto py-6">
-      {/* Top Breadcrumb Navigation */}
-      <div className="flex justify-between items-center flex-wrap gap-3 mb-4">
+    <div className="lesson-page-wrapper max-w-3xl mx-auto py-4">
+      {/* Top Reading Scroll Progress Bar */}
+      <div
+        className="reading-progress-bar"
+        style={{ width: `${scrollProgress}%` }}
+        aria-hidden="true"
+      />
+
+      {/* Top Navigation & Fast Reading Control Bar */}
+      <div
+        className="card mb-4 flex justify-between items-center flex-wrap gap-3"
+        style={{
+          padding: '12px 18px',
+          backgroundColor: 'var(--bg-secondary)',
+          border: '1px solid var(--border-light)'
+        }}
+      >
         <button 
           className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors" 
-          style={{ color: 'var(--text-secondary)' }} 
           onClick={() => navigate(-1)}
         >
           <ArrowLeft size={16} /> 返回單元列表
         </button>
 
-        <div className="flex items-center gap-2">
+        {/* Center Badges */}
+        <div className="flex items-center gap-2 flex-wrap">
           {currentSubject && (
-            <span className="badge" style={{ backgroundColor: `${currentSubject.color}15`, color: currentSubject.color, fontWeight: 700 }}>
+            <span
+              className="badge"
+              style={{
+                backgroundColor: `${currentSubject.color}20`,
+                color: currentSubject.color,
+                fontWeight: 700
+              }}
+            >
               {currentSubject.name}
             </span>
           )}
-          <span className="badge" style={{ backgroundColor: 'hsl(150, 60%, 95%)', color: 'hsl(150, 60%, 35%)', fontWeight: 600 }}>
-            ✨ +10% 現代素養新知
+          <span className="badge badge-success">
+            ✨ +10% 現代素養
           </span>
+        </div>
+
+        {/* Right Action: Share */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={handleShare}
+            className="btn-outline"
+            style={{ padding: '6px 12px', minHeight: '34px', fontSize: '0.8rem' }}
+            title="複製此單元連結分享"
+          >
+            {copied ? <Check size={14} style={{ color: 'var(--accent-success)' }} /> : <Share2 size={14} />}
+            <span>{copied ? '已複製' : '分享單元'}</span>
+          </button>
         </div>
       </div>
 
       {/* Featured Educational Illustration Banner */}
       {subjectIllustration && (
-        <div className="card mb-6" style={{ padding: '16px', overflow: 'hidden', backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-light)' }}>
+        <div
+          className="card mb-6"
+          style={{
+            padding: '16px',
+            overflow: 'hidden',
+            backgroundColor: 'var(--bg-secondary)',
+            border: '1px solid var(--border-light)'
+          }}
+        >
           <div className="flex items-center justify-between mb-2 text-sm">
             <span style={{ color: 'var(--accent-primary)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px' }}>
               <ImageIcon size={17} />
               {subjectIllustration.title}
             </span>
-            <span className="text-sm text-secondary" style={{ fontSize: '0.8rem' }}>專屬圖解輔助</span>
+            <span className="badge badge-accent">專屬圖解輔助</span>
           </div>
           <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--border-light)' }}>
             <img 
               src={subjectIllustration.src} 
               alt={subjectIllustration.title} 
               style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '340px', objectFit: 'cover' }} 
+              loading="lazy"
             />
           </div>
         </div>
@@ -144,40 +210,77 @@ const LessonPage = () => {
       {loading ? (
         <div className="card text-center py-12">
           <Sparkles className="animate-spin mb-2 mx-auto text-primary" size={32} />
-          <p>載入深度圖解教學內容中...</p>
+          <p className="text-secondary">載入深度圖解教學內容中...</p>
         </div>
       ) : (
-        <div className="card markdown-body" style={{ padding: '36px', boxShadow: 'var(--shadow-sm)' }}>
-          <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>
+        <div
+          className="card markdown-body animate-fade-in"
+          style={{
+            padding: '36px',
+            boxShadow: 'var(--shadow-sm)',
+            backgroundColor: 'var(--bg-secondary)'
+          }}
+        >
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm, remarkMath]}
+            rehypePlugins={[rehypeKatex]}
+            components={{
+              table: ({ _node, ...props }) => (
+                <div className="lesson-table-container">
+                  <table {...props} />
+                </div>
+              )
+            }}
+          >
             {content}
           </ReactMarkdown>
         </div>
       )}
 
       {/* Bottom Action Footer */}
-      <div className="card mt-8 flex justify-between items-center flex-wrap gap-4" style={{ padding: '20px 24px', backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-light)' }}>
+      <div
+        className="card mt-8 flex justify-between items-center flex-wrap gap-4"
+        style={{
+          padding: '24px',
+          backgroundColor: 'var(--bg-secondary)',
+          border: '1px solid var(--border-light)',
+          borderTop: '4px solid var(--accent-success)'
+        }}
+      >
         <div>
-          <div style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--text-primary)' }}>單元觀念已掌握？</div>
-          <div className="text-sm text-secondary">立即透過互動測驗檢驗學習成效，並查看詳細解析！</div>
+          <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
+            🎯 本單元核心概念已融會貫通？
+          </div>
+          <div className="text-sm text-secondary" style={{ marginTop: '4px' }}>
+            立即透過即時互動測驗檢驗學習成效，並獲取名師詳解與 +50 XP 經驗值！
+          </div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <a 
-            href={currentUnit.videoUrl} 
-            target="_blank" 
-            rel="noreferrer" 
-            className="btn-outline text-sm flex items-center gap-1"
-            style={{ padding: '9px 16px', color: 'var(--text-secondary)' }}
-            title="點擊前往均一教育平台"
-          >
-            <span>📺 均一影音輔助</span>
-            <ExternalLink size={14} />
-          </a>
+        <div className="flex items-center gap-3 flex-wrap">
+          {currentUnit.videoUrl && (
+            <a 
+              href={currentUnit.videoUrl} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="btn-outline text-sm flex items-center gap-1"
+              style={{ padding: '10px 18px' }}
+              title="前往均一教育平台觀看相關教學影音"
+            >
+              <span>📺 均一影音輔助</span>
+              <ExternalLink size={14} />
+            </a>
+          )}
 
           <button 
             className="btn-primary flex items-center gap-2" 
             onClick={() => navigate(`/quiz/${unitId}`)}
-            style={{ padding: '10px 24px', fontSize: '0.95rem', backgroundColor: 'hsl(150, 60%, 40%)', borderColor: 'hsl(150, 60%, 40%)' }}
+            style={{
+              padding: '10px 24px',
+              fontSize: '1rem',
+              backgroundColor: 'var(--accent-success)',
+              borderColor: 'var(--accent-success)',
+              color: 'white'
+            }}
           >
             <CheckCircle2 size={18} /> 進入觀念重點測驗 →
           </button>

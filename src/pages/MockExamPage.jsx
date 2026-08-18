@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Timer, CheckCircle2, XCircle, Trophy, RotateCcw, ArrowLeft, Zap, FileText } from 'lucide-react';
+import { Timer, CheckCircle2, XCircle, Trophy, RotateCcw, ArrowLeft, FileText } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { playSound } from '../utils/soundEffects';
@@ -72,21 +72,34 @@ const MockExamPage = () => {
 
   return (
     <div className="flex flex-col gap-6 py-4 max-w-3xl mx-auto">
-      <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors" style={{ color: 'var(--text-secondary)' }}>
+      <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
         <ArrowLeft size={16} /> 返回首頁
       </Link>
 
       {!examStarted ? (
-        <div className="card text-center py-12 flex flex-col items-center gap-6" style={{ backgroundColor: 'var(--bg-secondary)', padding: '48px' }}>
-          <div style={{ backgroundColor: 'hsl(215, 80%, 95%)', padding: '20px', borderRadius: '50%', color: 'var(--accent-primary)' }}>
-            <FileText size={48} />
+        <div
+          className="card text-center py-12 flex flex-col items-center gap-6"
+          style={{ backgroundColor: 'var(--bg-secondary)', padding: '48px 24px' }}
+        >
+          <div
+            style={{
+              backgroundColor: 'var(--accent-soft)',
+              padding: '22px',
+              borderRadius: '50%',
+              color: 'var(--accent-primary)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            <FileText size={52} />
           </div>
 
           <div>
-            <span className="badge mb-2" style={{ backgroundColor: 'hsl(215, 80%, 95%)', color: 'var(--accent-primary)', padding: '6px 14px', borderRadius: '999px', fontWeight: 700 }}>
+            <span className="badge badge-accent mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
               ⏱️ 考前實戰模擬測驗
             </span>
-            <h1 className="h1 mb-3" style={{ fontSize: '2.4rem' }}>
+            <h1 className="h1 mb-3" style={{ fontSize: 'calc(2.2rem * var(--font-scale))' }}>
               六年級全科目定時模擬會考
             </h1>
             <p className="text-secondary max-w-lg mx-auto text-sm" style={{ lineHeight: 1.8 }}>
@@ -94,33 +107,46 @@ const MockExamPage = () => {
             </p>
           </div>
 
-          <div className="flex gap-4 items-center" style={{ backgroundColor: 'var(--bg-tertiary)', padding: '12px 24px', borderRadius: 'var(--radius-lg)' }}>
-            <div className="flex items-center gap-2 text-sm">
+          <div className="flex gap-4 items-center flex-wrap justify-center p-3 rounded-lg" style={{ backgroundColor: 'var(--bg-tertiary)' }}>
+            <div className="flex items-center gap-2 text-sm font-semibold">
               <Timer size={18} style={{ color: 'var(--accent-primary)' }} />
               <span>測驗時間：10 分鐘</span>
             </div>
-            <span>|</span>
-            <div className="text-sm">題目數量：10 題單選</div>
-            <span>|</span>
-            <div className="text-sm" style={{ color: 'hsl(150, 60%, 35%)', fontWeight: 600 }}>獎勵：+100 XP</div>
+            <span className="text-tertiary">|</span>
+            <div className="text-sm font-semibold">題目數量：10 題單選</div>
+            <span className="text-tertiary">|</span>
+            <div className="text-sm" style={{ color: 'var(--accent-success)', fontWeight: 700 }}>獎勵：+100 XP</div>
           </div>
 
           <button 
             className="btn-primary"
-            style={{ padding: '12px 36px', fontSize: '1.1rem', borderRadius: 'var(--radius-lg)' }}
+            style={{ padding: '14px 40px', fontSize: '1.1rem', borderRadius: 'var(--radius-lg)' }}
             onClick={startExam}
           >
             🔥 立即開始計時模擬測驗
           </button>
         </div>
       ) : examFinished ? (
-        <div className="card flex flex-col items-center text-center gap-6 py-10" style={{ padding: '36px', borderTop: '6px solid var(--accent-primary)' }}>
-          <Trophy size={48} style={{ color: 'hsl(40, 95%, 45%)' }} />
+        <div
+          className="card flex flex-col items-center text-center gap-6 py-10"
+          style={{ padding: '36px 24px', borderTop: '6px solid var(--accent-primary)' }}
+        >
+          <div
+            style={{
+              backgroundColor: 'var(--accent-warning-soft)',
+              padding: '18px',
+              borderRadius: '50%',
+              color: 'var(--accent-warning)'
+            }}
+          >
+            <Trophy size={50} />
+          </div>
+
           <div>
-            <span className="badge mb-2" style={{ backgroundColor: 'hsl(150, 60%, 95%)', color: 'hsl(150, 60%, 35%)', fontWeight: 700 }}>
+            <span className="badge badge-success mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
               🎉 模擬考完成！學習經驗值 +100 XP
             </span>
-            <h2 className="h2" style={{ fontSize: '2.5rem', margin: '8px 0' }}>
+            <h2 className="h1" style={{ margin: '8px 0', fontSize: 'calc(2.2rem * var(--font-scale))' }}>
               總成績：{Math.round((correctCount / examQuestions.length) * 100)} 分
             </h2>
             <p className="text-secondary text-sm">
@@ -130,22 +156,32 @@ const MockExamPage = () => {
 
           {/* Review Sheet */}
           <div className="w-full text-left mt-4">
-            <h4 className="text-sm font-bold mb-3">📋 試卷逐題檢核與解析：</h4>
+            <h4 className="h4 mb-3" style={{ fontSize: '1rem' }}>📋 試卷逐題檢核與解析：</h4>
             <div className="flex flex-col gap-3">
               {examQuestions.map((q, i) => {
                 const userAns = answers[i];
                 const isCorrect = userAns === q.answerIndex;
                 return (
-                  <div key={i} style={{ padding: '14px 18px', backgroundColor: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)', borderLeft: isCorrect ? '4px solid var(--accent-success)' : '4px solid var(--accent-error)' }}>
-                    <div className="flex items-center gap-2 font-bold text-sm mb-1">
+                  <div
+                    key={i}
+                    style={{
+                      padding: '14px 18px',
+                      backgroundColor: 'var(--bg-tertiary)',
+                      borderRadius: 'var(--radius-md)',
+                      borderLeft: isCorrect ? '4px solid var(--accent-success)' : '4px solid var(--accent-error)',
+                      border: '1px solid var(--border-light)',
+                      borderLeftWidth: '4px'
+                    }}
+                  >
+                    <div className="flex items-center gap-2 font-bold text-sm mb-1" style={{ color: 'var(--text-primary)' }}>
                       <span>第 {i + 1} 題：{q.question}</span>
                       {isCorrect ? <CheckCircle2 size={16} style={{ color: 'var(--accent-success)' }} /> : <XCircle size={16} style={{ color: 'var(--accent-error)' }} />}
                     </div>
                     <div className="text-xs text-secondary mt-1">
-                      <strong>你的答案：</strong> {userAns !== undefined ? q.options[userAns] : '未作答'} | <strong>正確答案：</strong> {q.options[q.answerIndex]}
+                      <strong>你的答案：</strong> {userAns !== undefined ? q.options[userAns] : '未作答'} | <strong style={{ color: 'var(--accent-success-text)' }}>正確答案：</strong> {q.options[q.answerIndex]}
                     </div>
-                    <div className="text-xs text-secondary mt-1">
-                      <strong>解析：</strong> {q.explanation}
+                    <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.6 }}>
+                      <strong>觀念名師解析：</strong> {q.explanation}
                     </div>
                   </div>
                 );
@@ -153,7 +189,7 @@ const MockExamPage = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-4 mt-4 flex-wrap justify-center">
             <button className="btn-primary" onClick={startExam}>
               <RotateCcw size={16} /> 再測驗一次
             </button>
@@ -164,17 +200,23 @@ const MockExamPage = () => {
         </div>
       ) : (
         /* Exam In Progress */
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5">
           {/* Top Timer Bar */}
-          <div className="card flex justify-between items-center" style={{ padding: '16px 24px', backgroundColor: 'var(--bg-secondary)' }}>
+          <div className="card flex justify-between items-center" style={{ padding: '16px 20px' }}>
             <div className="flex items-center gap-2">
-              <span className="badge" style={{ backgroundColor: 'var(--accent-primary)', color: 'white' }}>
+              <span className="badge badge-accent">
                 題目 {currentIdx + 1} / {examQuestions.length}
               </span>
-              <span className="text-sm font-bold">小六全科綜合模擬考</span>
+              <span className="text-sm font-bold" style={{ color: 'var(--text-primary)' }}>小六全科綜合模擬考</span>
             </div>
 
-            <div className="flex items-center gap-2 font-bold" style={{ color: timeLeft < 120 ? 'var(--accent-error)' : 'var(--accent-primary)', fontSize: '1.1rem' }}>
+            <div
+              className="flex items-center gap-1.5 font-bold"
+              style={{
+                color: timeLeft < 120 ? 'var(--accent-error)' : 'var(--accent-primary)',
+                fontSize: '1.15rem'
+              }}
+            >
               <Timer size={20} />
               <span>{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span>
             </div>
@@ -183,7 +225,7 @@ const MockExamPage = () => {
           {/* Question Box */}
           {examQuestions[currentIdx] && (
             <div className="card flex flex-col gap-6" style={{ padding: '32px' }}>
-              <h2 className="h3" style={{ fontSize: '1.35rem', lineHeight: 1.5 }}>
+              <h2 className="h3" style={{ fontSize: 'calc(1.3rem * var(--font-scale))', lineHeight: 1.55 }}>
                 {currentIdx + 1}. {examQuestions[currentIdx].question}
               </h2>
 
@@ -198,31 +240,32 @@ const MockExamPage = () => {
                         textAlign: 'left',
                         padding: '16px 20px',
                         borderColor: isSelected ? 'var(--accent-primary)' : 'var(--border-strong)',
-                        backgroundColor: isSelected ? 'hsl(215, 85%, 96%)' : 'var(--bg-secondary)',
-                        color: isSelected ? 'var(--accent-primary)' : 'var(--text-primary)',
-                        fontWeight: isSelected ? 600 : 400
+                        backgroundColor: isSelected ? 'var(--accent-soft)' : 'var(--bg-secondary)',
+                        color: isSelected ? 'var(--accent-text)' : 'var(--text-primary)',
+                        fontWeight: isSelected ? 700 : 400,
+                        fontSize: 'calc(0.98rem * var(--font-scale))'
                       }}
                       onClick={() => handleSelectAnswer(optIdx)}
                     >
                       <span>{opt}</span>
-                      {isSelected && <CheckCircle2 size={18} />}
+                      {isSelected && <CheckCircle2 size={18} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} />}
                     </button>
                   );
                 })}
               </div>
 
               {/* Navigation Grid */}
-              <div className="flex justify-between items-center pt-4 border-t" style={{ borderTop: '1px solid var(--border-light)' }}>
+              <div className="flex justify-between items-center pt-4 border-t flex-wrap gap-3" style={{ borderTop: '1px solid var(--border-light)' }}>
                 <button 
                   className="btn-outline text-sm" 
                   disabled={currentIdx === 0}
-                  style={{ opacity: currentIdx === 0 ? 0.4 : 1 }}
+                  style={{ opacity: currentIdx === 0 ? 0.35 : 1 }}
                   onClick={() => setCurrentIdx(c => c - 1)}
                 >
                   ← 上一題
                 </button>
 
-                <div className="flex gap-2">
+                <div className="flex gap-1.5 flex-wrap">
                   {examQuestions.map((_, i) => (
                     <button
                       key={i}
@@ -232,9 +275,10 @@ const MockExamPage = () => {
                         height: '32px',
                         borderRadius: '50%',
                         fontSize: '0.85rem',
-                        fontWeight: 600,
-                        backgroundColor: currentIdx === i ? 'var(--accent-primary)' : answers[i] !== undefined ? 'hsl(150, 60%, 90%)' : 'var(--bg-tertiary)',
-                        color: currentIdx === i ? 'white' : answers[i] !== undefined ? 'hsl(150, 60%, 30%)' : 'var(--text-secondary)'
+                        fontWeight: 700,
+                        backgroundColor: currentIdx === i ? 'var(--accent-primary)' : answers[i] !== undefined ? 'var(--accent-success-soft)' : 'var(--bg-tertiary)',
+                        color: currentIdx === i ? 'var(--text-inverse)' : answers[i] !== undefined ? 'var(--accent-success-text)' : 'var(--text-secondary)',
+                        border: currentIdx === i ? '2px solid var(--accent-primary)' : '1px solid var(--border-light)'
                       }}
                     >
                       {i + 1}
@@ -249,7 +293,7 @@ const MockExamPage = () => {
                 ) : (
                   <button 
                     className="btn-primary text-sm" 
-                    style={{ backgroundColor: 'hsl(150, 60%, 40%)', borderColor: 'hsl(150, 60%, 40%)' }}
+                    style={{ backgroundColor: 'var(--accent-success)', borderColor: 'var(--accent-success)' }}
                     onClick={finishExam}
                   >
                     交卷計分

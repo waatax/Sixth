@@ -1,109 +1,271 @@
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, HelpCircle, Globe, GraduationCap, Zap, Timer, Bookmark } from 'lucide-react';
+import { BookOpen, HelpCircle, Globe, GraduationCap, Zap, Timer, Bookmark, Menu, X, Sun, Moon, Eye, Type, Volume2, VolumeX, Sparkles } from 'lucide-react';
 import GamificationWidget from '../common/GamificationWidget';
+import EyeCareToolbar from '../common/EyeCareToolbar';
+import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
   const location = useLocation();
+  const { theme, setTheme, fontSize, FONT_SIZES, increaseFontSize, decreaseFontSize } = useTheme();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Close mobile drawer when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  const navLinks = [
+    { path: '/', label: '八大學習領域', icon: BookOpen },
+    { path: '/flashcards', label: '速記翻翻卡', icon: Zap },
+    { path: '/mock-exam', label: '計時模擬考', icon: Timer },
+    { path: '/mistakes', label: '錯題筆記本', icon: Bookmark },
+    { path: '/question-bank', label: '段考題庫', icon: HelpCircle },
+    { path: '/resources', label: '全臺教育資源', icon: Globe },
+    { path: '/prep', label: '升國中先修', icon: GraduationCap },
+  ];
 
   return (
-    <header className="header" style={{ borderBottom: '1px solid var(--border-light)', padding: '12px 0', marginBottom: '20px', backgroundColor: 'var(--bg-secondary)', position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(8px)' }}>
-      <div className="container flex justify-between items-center flex-wrap gap-3">
-        {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-2" style={{ color: 'var(--accent-primary)', textDecoration: 'none' }}>
-          <div style={{ backgroundColor: 'hsl(215, 80%, 95%)', padding: '6px', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <BookOpen size={22} />
-          </div>
-          <div>
-            <span className="h3" style={{ margin: 0, fontSize: '1.2rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>小六學習護照</span>
-            <span style={{ fontSize: '0.72rem', color: 'var(--text-tertiary)', display: 'block', lineHeight: 1 }}>108課綱・全科自主學習</span>
-          </div>
-        </Link>
+    <>
+      <header
+        className="header"
+        style={{
+          borderBottom: '1px solid var(--border-light)',
+          backgroundColor: 'var(--bg-backdrop)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          position: 'sticky',
+          top: 0,
+          zIndex: 100,
+          transition: 'background-color var(--transition-normal), border-color var(--transition-normal)'
+        }}
+      >
+        <div className="container flex justify-between items-center py-2" style={{ minHeight: 'var(--header-height)' }}>
+          {/* Left Brand Logo */}
+          <Link to="/" className="flex items-center gap-3 select-none" style={{ textDecoration: 'none' }}>
+            <div
+              style={{
+                backgroundColor: 'var(--accent-soft)',
+                color: 'var(--accent-primary)',
+                padding: '8px',
+                borderRadius: 'var(--radius-md)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: 'var(--shadow-sm)'
+              }}
+            >
+              <BookOpen size={24} />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span
+                  style={{
+                    margin: 0,
+                    fontSize: 'calc(1.15rem * var(--font-scale))',
+                    fontWeight: 800,
+                    color: 'var(--text-primary)',
+                    letterSpacing: '-0.02em',
+                    display: 'block',
+                    lineHeight: 1.2
+                  }}
+                >
+                  小六學習護照
+                </span>
+                <span className="badge badge-accent" style={{ fontSize: '0.7rem', padding: '2px 6px' }}>
+                  108課綱
+                </span>
+              </div>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'block', marginTop: '2px' }}>
+                國小六年級・全科目自主學習平台
+              </span>
+            </div>
+          </Link>
 
-        {/* Center Navigation Links */}
-        <nav className="flex gap-4 items-center flex-wrap" style={{ fontSize: '0.88rem' }}>
-          <Link 
-            to="/" 
-            style={{ 
-              fontWeight: location.pathname === '/' ? 700 : 500,
-              color: location.pathname === '/' ? 'var(--accent-primary)' : 'var(--text-secondary)'
-            }}
-          >
-            八大學習領域
-          </Link>
-          <Link 
-            to="/flashcards" 
-            className="flex items-center gap-1"
-            style={{ 
-              fontWeight: location.pathname === '/flashcards' ? 700 : 500,
-              color: location.pathname === '/flashcards' ? 'var(--accent-primary)' : 'var(--text-secondary)'
-            }}
-          >
-            <Zap size={15} />
-            速記翻翻卡
-          </Link>
-          <Link 
-            to="/mock-exam" 
-            className="flex items-center gap-1"
-            style={{ 
-              fontWeight: location.pathname === '/mock-exam' ? 700 : 500,
-              color: location.pathname === '/mock-exam' ? 'var(--accent-primary)' : 'var(--text-secondary)'
-            }}
-          >
-            <Timer size={15} />
-            計時模擬考
-          </Link>
-          <Link 
-            to="/mistakes" 
-            className="flex items-center gap-1"
-            style={{ 
-              fontWeight: location.pathname === '/mistakes' ? 700 : 500,
-              color: location.pathname === '/mistakes' ? 'var(--accent-primary)' : 'var(--text-secondary)'
-            }}
-          >
-            <Bookmark size={15} />
-            錯題本
-          </Link>
-          <Link 
-            to="/question-bank" 
-            className="flex items-center gap-1"
-            style={{ 
-              fontWeight: location.pathname === '/question-bank' ? 700 : 500,
-              color: location.pathname === '/question-bank' ? 'var(--accent-primary)' : 'var(--text-secondary)'
-            }}
-          >
-            <HelpCircle size={15} />
-            段考題庫
-          </Link>
-          <Link 
-            to="/resources" 
-            className="flex items-center gap-1"
-            style={{ 
-              fontWeight: location.pathname === '/resources' ? 700 : 500,
-              color: location.pathname === '/resources' ? 'var(--accent-primary)' : 'var(--text-secondary)'
-            }}
-          >
-            <Globe size={15} />
-            全臺教育資源
-          </Link>
-          <Link 
-            to="/prep" 
-            className="flex items-center gap-1"
-            style={{ 
-              fontWeight: location.pathname === '/prep' ? 700 : 500,
-              color: location.pathname === '/prep' ? 'var(--accent-primary)' : 'var(--text-secondary)'
-            }}
-          >
-            <GraduationCap size={15} />
-            升國中先修
-          </Link>
-        </nav>
+          {/* Desktop Navigation Links (Hidden on mobile < 1024px) */}
+          <nav className="desktop-nav items-center gap-1" style={{ display: 'none' }}>
+            {navLinks.map((item) => {
+              const Icon = item.icon;
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className="flex items-center gap-1.5"
+                  style={{
+                    padding: '8px 12px',
+                    borderRadius: 'var(--radius-md)',
+                    fontWeight: isActive ? 700 : 500,
+                    fontSize: 'calc(0.88rem * var(--font-scale))',
+                    color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                    backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent',
+                    transition: 'all var(--transition-fast)'
+                  }}
+                >
+                  <Icon size={16} />
+                  <span>{item.label}</span>
+                </Link>
+              );
+            })}
+          </nav>
 
-        {/* Right Gamification Widget */}
-        <div style={{ position: 'relative' }}>
-          <GamificationWidget />
+          {/* Right Area: EyeCare Controls + Gamification Widget + Mobile Hamburger */}
+          <div className="flex items-center gap-3">
+            {/* Inline Desktop EyeCare Toolbar */}
+            <div className="desktop-controls" style={{ display: 'none' }}>
+              <EyeCareToolbar isCompact={true} />
+            </div>
+
+            {/* Gamification XP Pill */}
+            <GamificationWidget />
+
+            {/* Mobile Hamburger Button (Visible on <= 1024px) */}
+            <button
+              className="mobile-hamburger-btn flex items-center justify-center"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: 'var(--bg-tertiary)',
+                color: 'var(--text-primary)',
+                border: '1px solid var(--border-light)'
+              }}
+              aria-label={mobileMenuOpen ? '關閉選單' : '開啟選單'}
+            >
+              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* Mobile Drawer Menu & Overlay */}
+      {mobileMenuOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 999,
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            backdropFilter: 'blur(4px)',
+            display: 'flex',
+            justifyContent: 'flex-end'
+          }}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div
+            className="animate-fade-in"
+            style={{
+              width: '85%',
+              maxWidth: '340px',
+              height: '100%',
+              backgroundColor: 'var(--bg-secondary)',
+              borderLeft: '1px solid var(--border-light)',
+              padding: '24px 20px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              overflowY: 'auto'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div>
+              {/* Drawer Header */}
+              <div className="flex justify-between items-center pb-4 mb-4 border-b" style={{ borderBottom: '1px solid var(--border-light)' }}>
+                <div className="flex items-center gap-2">
+                  <BookOpen size={20} style={{ color: 'var(--accent-primary)' }} />
+                  <span style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text-primary)' }}>選單導航</span>
+                </div>
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{ padding: '6px', color: 'var(--text-tertiary)' }}
+                  aria-label="關閉選單"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              {/* Eye-Care Quick Switch in Mobile Drawer */}
+              <div className="p-3 mb-4 rounded-lg" style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)' }}>
+                <div className="text-xs font-bold text-secondary mb-2">👁️ 視覺護眼與字級：</div>
+                <div className="grid gap-2 mb-3" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+                  <button
+                    onClick={() => setTheme('light')}
+                    className="btn-pill justify-center"
+                    style={{ backgroundColor: theme === 'light' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'light' ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+                  >
+                    ☀️ 淨柔
+                  </button>
+                  <button
+                    onClick={() => setTheme('sepia')}
+                    className="btn-pill justify-center"
+                    style={{ backgroundColor: theme === 'sepia' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'sepia' ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+                  >
+                    🌿 暖陽
+                  </button>
+                  <button
+                    onClick={() => setTheme('dark')}
+                    className="btn-pill justify-center"
+                    style={{ backgroundColor: theme === 'dark' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'dark' ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+                  >
+                    🌙 夜讀
+                  </button>
+                </div>
+
+                <div className="flex justify-between items-center text-xs">
+                  <span className="text-secondary font-bold">字級：{FONT_SIZES[fontSize]?.label}</span>
+                  <div className="flex gap-2">
+                    <button className="btn-outline" style={{ padding: '4px 10px', minHeight: '32px' }} onClick={decreaseFontSize} disabled={fontSize === 'sm'}>A-</button>
+                    <button className="btn-primary" style={{ padding: '4px 10px', minHeight: '32px' }} onClick={increaseFontSize} disabled={fontSize === 'xl'}>A+</button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Items */}
+              <div className="flex flex-col gap-1">
+                {navLinks.map((item) => {
+                  const Icon = item.icon;
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="flex items-center gap-3"
+                      style={{
+                        padding: '12px 16px',
+                        borderRadius: 'var(--radius-md)',
+                        fontWeight: isActive ? 700 : 500,
+                        fontSize: '1rem',
+                        color: isActive ? 'var(--accent-primary)' : 'var(--text-primary)',
+                        backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent'
+                      }}
+                    >
+                      <Icon size={18} />
+                      <span>{item.label}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Drawer Footer info */}
+            <div className="pt-4 border-t text-xs text-secondary text-center" style={{ borderTop: '1px solid var(--border-light)' }}>
+              教育部 108 課綱自主學習平台<br />
+              <span style={{ color: 'var(--text-tertiary)', fontSize: '0.75rem' }}>適配直式、橫式、手機與平板</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Responsive media query styling rules for navigation */}
+      <style>{`
+        @media (min-width: 1024px) {
+          .desktop-nav { display: flex !important; }
+          .desktop-controls { display: flex !important; }
+          .mobile-hamburger-btn { display: none !important; }
+        }
+      `}</style>
+    </>
   );
 };
 

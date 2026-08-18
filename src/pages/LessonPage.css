@@ -1,39 +1,77 @@
+/* Lesson Page Typography & Eye-Care Reading Styling */
+
+.lesson-page-wrapper {
+  transition: all var(--transition-normal);
+}
+
+.lesson-page-wrapper .markdown-body {
+  font-size: calc(1.05rem * var(--font-scale));
+  line-height: 1.85;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
 .lesson-page-wrapper .markdown-body h1 {
-  font-size: 2.25rem;
+  font-size: calc(2rem * var(--font-scale));
+  font-weight: 800;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--accent-primary);
   border-bottom: 2px solid var(--border-light);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  letter-spacing: -0.02em;
 }
 
 .lesson-page-wrapper .markdown-body h2 {
-  font-size: 1.6rem;
-  margin-top: 2rem;
+  font-size: calc(1.5rem * var(--font-scale));
+  font-weight: 700;
+  margin-top: 2.25rem;
   margin-bottom: 1rem;
   color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 4px solid var(--accent-primary);
+  padding-left: 12px;
 }
 
 .lesson-page-wrapper .markdown-body h3 {
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
+  font-size: calc(1.2rem * var(--font-scale));
+  font-weight: 600;
+  margin-top: 1.75rem;
   margin-bottom: 0.75rem;
   color: var(--accent-hover);
 }
 
+.lesson-page-wrapper .markdown-body h4 {
+  font-size: calc(1.05rem * var(--font-scale));
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
 .lesson-page-wrapper .markdown-body p {
-  margin-bottom: 1rem;
-  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  line-height: 1.85;
+}
+
+.lesson-page-wrapper .markdown-body strong {
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .lesson-page-wrapper .markdown-body ul, 
 .lesson-page-wrapper .markdown-body ol {
-  margin-bottom: 1rem;
-  padding-left: 2rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.75rem;
 }
 
 .lesson-page-wrapper .markdown-body li {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
+  margin-bottom: 0.6rem;
+  line-height: 1.75;
+  color: var(--text-primary);
 }
 
 .lesson-page-wrapper .markdown-body ul {
@@ -47,71 +85,83 @@
 .lesson-page-wrapper .markdown-body blockquote {
   border-left: 4px solid var(--accent-primary);
   background-color: var(--bg-tertiary);
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1.75rem 0;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   color: var(--text-secondary);
+  font-style: normal;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--accent-primary);
 }
 
 .lesson-page-wrapper .markdown-body hr {
   border: none;
   border-top: 1px solid var(--border-light);
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .lesson-page-wrapper .markdown-body pre {
-  background-color: hsl(220, 25%, 15%);
-  color: hsl(210, 30%, 95%);
-  padding: 1.25rem;
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  padding: 1.25rem 1.5rem;
   border-radius: var(--radius-md);
   overflow-x: auto;
-  margin-bottom: 1.25rem;
+  margin: 1.5rem 0;
   border: 1px solid var(--border-strong);
-  font-family: 'Fira Code', Consolas, Monaco, monospace;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-family: var(--font-mono);
+  font-size: calc(0.92rem * var(--font-scale));
+  line-height: 1.6;
 }
 
 .lesson-page-wrapper .markdown-body code {
-  font-family: 'Fira Code', Consolas, Monaco, monospace;
+  font-family: var(--font-mono);
 }
 
 /* Inline code */
 .lesson-page-wrapper .markdown-body p code,
-.lesson-page-wrapper .markdown-body li code {
-  background-color: var(--bg-tertiary);
+.lesson-page-wrapper .markdown-body li code,
+.lesson-page-wrapper .markdown-body table code {
+  background-color: var(--accent-soft);
   padding: 0.2rem 0.5rem;
-  border-radius: var(--radius-sm);
-  color: var(--accent-primary);
+  border-radius: var(--radius-xs);
+  color: var(--accent-text);
   font-weight: 600;
+  font-size: 0.9em;
+  border: 1px solid var(--border-light);
 }
 
-/* Tables styling */
+/* Responsive Table Wrapper */
+.lesson-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--bg-secondary);
+}
+
 .lesson-page-wrapper .markdown-body table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
-  background-color: var(--bg-secondary);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
+  text-align: left;
+  font-size: calc(0.95rem * var(--font-scale));
 }
 
 .lesson-page-wrapper .markdown-body th {
   background-color: var(--bg-tertiary);
   color: var(--text-primary);
-  font-weight: 600;
-  padding: 12px 16px;
-  text-align: left;
+  font-weight: 700;
+  padding: 14px 18px;
   border-bottom: 2px solid var(--border-light);
+  white-space: nowrap;
 }
 
 .lesson-page-wrapper .markdown-body td {
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-bottom: 1px solid var(--border-light);
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .lesson-page-wrapper .markdown-body tr:last-child td {
@@ -119,5 +169,25 @@
 }
 
 .lesson-page-wrapper .markdown-body tr:hover td {
-  background-color: hsl(210, 20%, 98%);
+  background-color: var(--bg-tertiary);
+}
+
+/* Responsive adjustments for Lesson Page */
+@media (max-width: 768px) {
+  .lesson-page-wrapper .markdown-body {
+    font-size: calc(1rem * var(--font-scale));
+  }
+
+  .lesson-page-wrapper .markdown-body h1 {
+    font-size: calc(1.6rem * var(--font-scale));
+  }
+
+  .lesson-page-wrapper .markdown-body h2 {
+    font-size: calc(1.3rem * var(--font-scale));
+  }
+
+  .lesson-page-wrapper .markdown-body th,
+  .lesson-page-wrapper .markdown-body td {
+    padding: 10px 12px;
+  }
 }
