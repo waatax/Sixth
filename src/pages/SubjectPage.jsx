@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
-import { PlayCircle, CheckCircle2, BookOpen, ArrowLeft, Compass, ArrowRight, Star, Clock, ShieldCheck, Flame, Zap } from 'lucide-react';
+import { PlayCircle, CheckCircle2, BookOpen, ArrowLeft, Compass, ArrowRight, Star, Clock, ShieldCheck, Flame, Zap, Volume2, Headphones } from 'lucide-react';
+import { speechEngine } from '../utils/speechHelper';
 
 const SubjectPage = () => {
   const { subjectId } = useParams();
@@ -140,6 +141,55 @@ const SubjectPage = () => {
           </span>
         </div>
       </div>
+
+      {/* 🎧 English Audio Warm-up Widget */}
+      {subjectId === 'english' && (
+        <div 
+          className="card animate-fade-in p-4"
+          style={{
+            background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.06) 0%, rgba(16, 185, 129, 0.05) 100%)',
+            border: '1.5px solid var(--accent-primary)',
+            borderRadius: 'var(--radius-xl)'
+          }}
+        >
+          <div className="flex justify-between items-center flex-wrap gap-2 mb-3">
+            <div className="flex items-center gap-2 font-bold" style={{ color: 'var(--accent-primary)', fontSize: '0.95rem' }}>
+              <Headphones size={18} />
+              <span>🎧 全新功能：所有英文單元均支援「原音朗讀」與「點擊發音練習」！</span>
+            </div>
+            <span className="badge badge-success text-xs">美式母語標準發音</span>
+          </div>
+          <p className="text-xs text-secondary mb-3">
+            快速暖身：點擊下方高頻日常問候句，立即測試你的瀏覽器語音發音：
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { en: "Good morning! How are you today?", zh: "早安！今天好嗎？" },
+              { en: "Excuse me, where is the library?", zh: "請問圖書館在哪？" },
+              { en: "What time do you usually wake up?", zh: "你通常幾點起床？" },
+              { en: "Practice makes perfect!", zh: "熟能生巧！" }
+            ].map((phrase, idx) => (
+              <button
+                key={idx}
+                onClick={() => speechEngine.speak(phrase.en)}
+                className="btn-outline flex items-center gap-1.5"
+                style={{
+                  padding: '6px 12px',
+                  borderRadius: 'var(--radius-full)',
+                  fontSize: '0.8rem',
+                  backgroundColor: 'var(--bg-secondary)',
+                  borderColor: 'var(--border-strong)',
+                  color: 'var(--text-primary)'
+                }}
+                title={`點擊聆聽: "${phrase.en}" (${phrase.zh})`}
+              >
+                <Volume2 size={13} style={{ color: 'var(--accent-primary)' }} />
+                <span className="font-semibold">{phrase.en}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Unit Cards List */}
       <div className="units-list flex flex-col gap-5 mt-1">

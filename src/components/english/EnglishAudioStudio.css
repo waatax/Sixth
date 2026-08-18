@@ -1,0 +1,475 @@
+/* English Audio Studio & Pronunciation Component Styles */
+
+.english-audio-studio {
+  background: linear-gradient(145deg, var(--bg-secondary) 0%, rgba(37, 99, 235, 0.04) 100%);
+  border: 2px solid var(--accent-primary);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.studio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px dashed var(--border-light);
+  margin-bottom: 20px;
+}
+
+.studio-title-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  font-size: 0.88rem;
+}
+
+/* Audio Player Main Card */
+.audio-player-deck {
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  margin-bottom: 20px;
+}
+
+.player-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.playback-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-audio-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-audio-play:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+.btn-audio-play.active {
+  background: var(--accent-success);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.btn-audio-stop {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-audio-stop:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.speed-selector-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-secondary);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+}
+
+.speed-btn {
+  background: transparent;
+  border: none;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.speed-btn.active {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+/* Sound Wave Animation */
+.sound-wave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+}
+
+.sound-wave-bar {
+  width: 3px;
+  height: 100%;
+  background-color: var(--accent-primary);
+  border-radius: 2px;
+  animation: soundWave 1.2s ease-in-out infinite alternate;
+}
+
+.sound-wave-bar:nth-child(1) { animation-delay: 0.0s; height: 35%; }
+.sound-wave-bar:nth-child(2) { animation-delay: 0.2s; height: 85%; }
+.sound-wave-bar:nth-child(3) { animation-delay: 0.4s; height: 100%; }
+.sound-wave-bar:nth-child(4) { animation-delay: 0.1s; height: 60%; }
+.sound-wave-bar:nth-child(5) { animation-delay: 0.3s; height: 40%; }
+
+@keyframes soundWave {
+  0% { transform: scaleY(0.3); }
+  100% { transform: scaleY(1); }
+}
+
+/* Passage Display */
+.reading-passage-box {
+  margin-top: 14px;
+  padding: 14px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.passage-paragraph-item {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.passage-paragraph-item:hover {
+  background: var(--accent-soft);
+}
+
+.passage-paragraph-item.active-speaking {
+  background: rgba(37, 99, 235, 0.12);
+  border-left: 4px solid var(--accent-primary);
+}
+
+.passage-en-text {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.passage-zh-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+/* Studio Tabs */
+.studio-tabs-bar {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1.5px solid var(--border-light);
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+}
+
+.studio-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: 1.5px solid transparent;
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.studio-tab-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.studio-tab-btn.active {
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+/* Vocabulary Cards Grid */
+.vocab-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.vocab-card {
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.vocab-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.vocab-card.active-speaking {
+  border-color: var(--accent-primary);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.vocab-header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.vocab-word-text {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.vocab-ipa-tag {
+  font-family: 'Menlo', 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.vocab-meaning-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.vocab-example-box {
+  background: var(--bg-tertiary);
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  margin-bottom: 10px;
+}
+
+.vocab-example-en {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.vocab-example-zh {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  margin-top: 2px;
+}
+
+.vocab-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-speak-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-speak-icon:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+.btn-speak-icon.slow {
+  background: var(--accent-warning-soft);
+  color: var(--accent-warning-text);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.btn-speak-icon.slow:hover {
+  background: #f59e0b;
+  color: #ffffff;
+}
+
+/* Dialogue Chat Bubbles */
+.dialogue-chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dialogue-item-bubble {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.dialogue-avatar {
+  font-size: 1.8rem;
+  background: var(--bg-tertiary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1.5px solid var(--border-light);
+}
+
+.dialogue-content-box {
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-light);
+  border-radius: 16px;
+  border-top-left-radius: 4px;
+  padding: 12px 18px;
+  flex: 1;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.dialogue-content-box.active-speaking {
+  border-color: var(--accent-primary);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.dialogue-speaker-name {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  margin-bottom: 4px;
+}
+
+.dialogue-en-text {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.dialogue-zh-text {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Sentence Pattern Cards */
+.pattern-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pattern-card-item {
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pattern-formula-tag {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.pattern-example-line {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: 3px;
+}
+
+/* Global In-Markdown Pronounce Inline Button */
+.inline-pronounce-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent-primary);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: var(--radius-full);
+  padding: 1px 7px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 3px;
+  vertical-align: middle;
+  transition: all 0.15s;
+}
+
+.inline-pronounce-btn:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+.inline-pronounce-btn.speaking {
+  background: var(--accent-success);
+  color: #ffffff;
+  border-color: var(--accent-success);
+}

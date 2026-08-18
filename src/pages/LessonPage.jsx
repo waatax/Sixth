@@ -22,9 +22,13 @@ import {
   ChevronUp,
   Smile,
   ShieldCheck,
-  Award
+  Award,
+  Volume2,
+  Headphones
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
+import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
+import { speechEngine } from '../utils/speechHelper';
 import './LessonPage.css';
 
 // Vite dynamic import for raw markdown files
@@ -40,6 +44,49 @@ const LessonPage = () => {
   const [copiedCodeId, setCopiedCodeId] = useState(null);
   const [highlightMode, setHighlightMode] = useState(true);
   const [quickSummaryOpen, setQuickSummaryOpen] = useState(true);
+  const [selectedTextBubble, setSelectedTextBubble] = useState(null);
+
+  // Helper to extract English sentences from mixed strings
+  const extractEnglish = (text) => {
+    if (!text || typeof text !== 'string') return '';
+    // Find quotes first e.g. "The movie starts at half past two."
+    const quoteMatch = text.match(/"([^"]+)"/);
+    if (quoteMatch && /[a-zA-Z]/.test(quoteMatch[1])) {
+      return quoteMatch[1];
+    }
+    // Match English phrases (letters, spaces, punctuation)
+    const engMatches = text.match(/[A-Za-z0-9\s',.?!:;/-]{4,}/g);
+    if (engMatches && engMatches.length > 0) {
+      return engMatches.join(' ').trim();
+    }
+    return text;
+  };
+
+  // Listen for text selection inside markdown content
+  useEffect(() => {
+    const handleMouseUp = () => {
+      const selection = window.getSelection();
+      const text = selection?.toString()?.trim();
+      if (text && text.length >= 2 && /[a-zA-Z]/.test(text)) {
+        try {
+          const range = selection.getRangeAt(0);
+          const rect = range.getBoundingClientRect();
+          setSelectedTextBubble({
+            text,
+            top: rect.top + window.scrollY - 44,
+            left: Math.max(10, rect.left + window.scrollX + rect.width / 2 - 80)
+          });
+        } catch (e) {
+          setSelectedTextBubble(null);
+        }
+      } else {
+        setSelectedTextBubble(null);
+      }
+    };
+
+    document.addEventListener('mouseup', handleMouseUp);
+    return () => document.removeEventListener('mouseup', handleMouseUp);
+  }, []);
 
   // Find unit metadata and subject
   let currentUnit = null;
@@ -250,6 +297,11 @@ const LessonPage = () => {
         </div>
       )}
 
+      {/* 🎧 English Audio Studio for English Lessons */}
+      {(currentSubject?.id === 'english' || unitId.startsWith('eng-')) && (
+        <EnglishAudioStudio unitId={unitId} />
+      )}
+
       {/* Main Core Generated Lesson Content */}
       {loading ? (
         <div className="card text-center py-12">
@@ -267,6 +319,20 @@ const LessonPage = () => {
             border: '1.5px solid var(--border-light)'
           }}
         >
+          {(currentSubject?.id === 'english' || unitId.startsWith('eng-')) && (
+            <div 
+              className="flex items-center gap-2 mb-4 p-3 rounded-lg text-xs font-semibold"
+              style={{
+                backgroundColor: 'rgba(37, 99, 235, 0.08)',
+                border: '1px solid rgba(37, 99, 235, 0.2)',
+                color: 'var(--accent-primary)'
+              }}
+            >
+              <Volume2 size={16} />
+              <span>💡 英語學習小秘訣：課文中包含的英文單字與例句皆可點選，或利用上方「語音工作台」進行跟讀！</span>
+            </div>
+          )}
+
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex]}
@@ -276,13 +342,93 @@ const LessonPage = () => {
                   <table {...props} />
                 </div>
               ),
+              td: ({ node, children, ...props }) => {
+                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
+                const text = String(children);
+                const hasEng = isEnglish && /[a-zA-Z]{2,}/.test(text);
+
+                return (
+                  <td {...props}>
+                    {children}
+                    {hasEng && (
+                      <span 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speechEngine.speak(extractEnglish(text));
+                        }}
+                        className="cursor-pointer ml-1.5 inline-flex items-center opacity-60 hover:opacity-100 transition-opacity"
+                        title="🔊 點擊聆聽此格英文發音"
+                      >
+                        <Volume2 size={12} style={{ color: 'var(--accent-primary)', verticalAlign: 'middle' }} />
+                      </span>
+                    )}
+                  </td>
+                );
+              },
+              li: ({ node, children, ...props }) => {
+                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
+                const rawText = Array.isArray(children) ? children.map(c => typeof c === 'string' ? c : '').join(' ') : String(children);
+                const engSentence = isEnglish ? extractEnglish(rawText) : '';
+                const hasValidEng = engSentence && engSentence.length >= 3 && /[a-zA-Z]/.test(engSentence);
+
+                return (
+                  <li {...props}>
+                    <span>{children}</span>
+                    {hasValidEng && (
+                      <button
+                        onClick={() => speechEngine.speak(engSentence)}
+                        className="inline-pronounce-btn"
+                        style={{ marginLeft: '6px' }}
+                        title={`🔊 點擊聆聽例句: "${engSentence}"`}
+                      >
+                        <Volume2 size={11} />
+                        <span>聽例句</span>
+                      </button>
+                    )}
+                  </li>
+                );
+              },
+              em: ({ node, children, ...props }) => {
+                const text = String(children);
+                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-')) && /[a-zA-Z]{2,}/.test(text);
+
+                return (
+                  <em 
+                    className={isEnglish ? 'cursor-pointer hover:text-primary transition-colors' : ''}
+                    onClick={() => {
+                      if (isEnglish) speechEngine.speak(text);
+                    }}
+                    title={isEnglish ? `🔊 點擊聆聽發音: "${text}"` : undefined}
+                    {...props}
+                  >
+                    {children}
+                    {isEnglish && (
+                      <Volume2 size={11} style={{ display: 'inline', marginLeft: '2px', opacity: 0.7, verticalAlign: 'middle' }} />
+                    )}
+                  </em>
+                );
+              },
               code: ({ node, inline, className, children, ...props }) => {
                 const textContent = String(children).replace(/\n$/, '');
 
                 if (inline) {
+                  const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-')) && /^[a-zA-Z0-9\s',.?!/-]+$/.test(textContent.trim());
+
                   return (
-                    <code className="inline-code-pill" {...props}>
+                    <code 
+                      className={`inline-code-pill ${isEnglish ? 'cursor-pointer hover:opacity-80' : ''}`}
+                      onClick={() => {
+                        if (isEnglish) {
+                          speechEngine.speak(textContent);
+                        }
+                      }}
+                      title={isEnglish ? `🔊 點擊聆聽英文發音: "${textContent}"` : undefined}
+                      {...props}
+                    >
                       {children}
+                      {isEnglish && (
+                        <Volume2 size={11} style={{ display: 'inline', marginLeft: '4px', verticalAlign: 'middle', opacity: 0.7 }} />
+                      )}
                     </code>
                   );
                 }
@@ -324,6 +470,40 @@ const LessonPage = () => {
           >
             {content}
           </ReactMarkdown>
+
+          {/* Floating Selection Audio Tooltip */}
+          {selectedTextBubble && (
+            <div
+              style={{
+                position: 'absolute',
+                top: `${selectedTextBubble.top}px`,
+                left: `${selectedTextBubble.left}px`,
+                zIndex: 9999
+              }}
+              className="animate-fade-in"
+            >
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  speechEngine.speak(selectedTextBubble.text);
+                }}
+                className="btn-primary flex items-center gap-1 text-xs"
+                style={{
+                  padding: '6px 12px',
+                  borderRadius: 'var(--radius-full)',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.25)',
+                  fontSize: '0.78rem',
+                  fontWeight: 700,
+                  backgroundColor: 'var(--accent-primary)',
+                  color: '#ffffff'
+                }}
+                title="朗讀所選取的英文單字或句子"
+              >
+                <Volume2 size={13} />
+                <span>🔊 朗讀所選: "{selectedTextBubble.text.length > 18 ? selectedTextBubble.text.slice(0, 18) + '...' : selectedTextBubble.text}"</span>
+              </button>
+            </div>
+          )}
         </div>
       )}
 

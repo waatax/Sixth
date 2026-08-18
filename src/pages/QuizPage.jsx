@@ -4,6 +4,7 @@ import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, Rota
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { playSound, toggleMute, getMuteState } from '../utils/soundEffects';
+import { speechEngine } from '../utils/speechHelper';
 
 const QuizPage = () => {
   const { unitId } = useParams();
@@ -185,7 +186,19 @@ const QuizPage = () => {
                   }}
                 >
                   <div className="flex items-center justify-between gap-2 font-bold mb-1.5" style={{ color: 'var(--text-primary)' }}>
-                    <span>第 {idx + 1} 題：{q.question}</span>
+                    <div className="flex items-center gap-2">
+                      <span>第 {idx + 1} 題：{q.question}</span>
+                      {unitId?.startsWith('eng-') && (
+                        <button
+                          className="btn-outline p-1 rounded inline-flex items-center"
+                          style={{ minHeight: 'auto', padding: '2px 6px', fontSize: '0.72rem' }}
+                          onClick={() => speechEngine.speak(q.question)}
+                          title="朗讀題目"
+                        >
+                          <Volume2 size={12} />
+                        </button>
+                      )}
+                    </div>
                     {ans?.correct ? (
                       <CheckCircle2 size={18} style={{ color: 'var(--accent-success)', flexShrink: 0 }} />
                     ) : (
@@ -262,9 +275,30 @@ const QuizPage = () => {
         </div>
 
         {/* Question Title */}
-        <h2 className="h3" style={{ fontSize: 'calc(1.3rem * var(--font-scale))', lineHeight: 1.55 }}>
-          {currentQ + 1}. {question.question}
-        </h2>
+        <div className="flex justify-between items-start gap-3">
+          <h2 className="h3" style={{ fontSize: 'calc(1.3rem * var(--font-scale))', lineHeight: 1.55, flex: 1 }}>
+            {currentQ + 1}. {question.question}
+          </h2>
+          {unitId?.startsWith('eng-') && (
+            <button
+              className="btn-outline flex items-center gap-1 text-xs"
+              style={{
+                padding: '6px 12px',
+                borderRadius: 'var(--radius-full)',
+                flexShrink: 0,
+                backgroundColor: 'var(--accent-soft)',
+                borderColor: 'var(--accent-primary)',
+                color: 'var(--accent-primary)',
+                fontWeight: 700
+              }}
+              onClick={() => speechEngine.speak(question.question)}
+              title="點擊朗讀此英文題目"
+            >
+              <Volume2 size={14} />
+              <span>🔊 聽題目</span>
+            </button>
+          )}
+        </div>
 
         {/* Options */}
         <div className="flex flex-col gap-3">
@@ -313,7 +347,21 @@ const QuizPage = () => {
                 }}
                 onClick={() => handleSelect(i)}
               >
-                <span>{opt}</span>
+                <div className="flex items-center gap-2" style={{ flex: 1 }}>
+                  <span>{opt}</span>
+                  {unitId?.startsWith('eng-') && (
+                    <span
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        speechEngine.speak(opt);
+                      }}
+                      className="p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer inline-flex items-center"
+                      title="朗讀此選項"
+                    >
+                      <Volume2 size={13} style={{ opacity: 0.7, color: 'var(--accent-primary)' }} />
+                    </span>
+                  )}
+                </div>
                 {showResult && isAnswer && <CheckCircle2 size={20} style={{ color: 'var(--accent-success)', flexShrink: 0 }} />}
                 {showResult && isUserSelected && !isAnswer && <XCircle size={20} style={{ color: 'var(--accent-error)', flexShrink: 0 }} />}
               </button>

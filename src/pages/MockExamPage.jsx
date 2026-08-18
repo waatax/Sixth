@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Timer, CheckCircle2, XCircle, Trophy, RotateCcw, ArrowLeft, FileText } from 'lucide-react';
+import { Timer, CheckCircle2, XCircle, Trophy, RotateCcw, ArrowLeft, FileText, Volume2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { playSound } from '../utils/soundEffects';
+import { speechEngine } from '../utils/speechHelper';
 
 const MockExamPage = () => {
   const [examStarted, setExamStarted] = useState(false);

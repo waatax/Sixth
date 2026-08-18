@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Trash2, CheckCircle2, Sparkles, Heart, HelpCircle, ShieldCheck, Trophy, Smile } from 'lucide-react';
+import { ArrowLeft, Trash2, CheckCircle2, Sparkles, Heart, HelpCircle, ShieldCheck, Trophy, Smile, Volume2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { playSound } from '../utils/soundEffects';
+import { speechEngine } from '../utils/speechHelper';
 
 const MistakesPage = () => {
   const [mistakes, setMistakes] = useState([]);
@@ -183,8 +184,28 @@ const MistakesPage = () => {
                 </span>
               </div>
 
-              <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.6 }}>
-                {item.question}
+              <div className="flex justify-between items-start gap-3">
+                <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.6, flex: 1 }}>
+                  {item.question}
+                </div>
+                {item.unitId?.startsWith('eng-') && (
+                  <button
+                    className="btn-outline flex items-center gap-1 text-xs"
+                    style={{
+                      padding: '4px 10px',
+                      borderRadius: 'var(--radius-full)',
+                      flexShrink: 0,
+                      backgroundColor: 'var(--accent-soft)',
+                      color: 'var(--accent-primary)',
+                      fontWeight: 700
+                    }}
+                    onClick={() => speechEngine.speak(item.question)}
+                    title="聆聽英文題目發音"
+                  >
+                    <Volume2 size={13} />
+                    <span>🔊 聽題目</span>
+                  </button>
+                )}
               </div>
 
               {/* Options */}
@@ -203,7 +224,18 @@ const MistakesPage = () => {
                           fontWeight: isCorrect ? 700 : 500
                         }}
                       >
-                        <span>{opt}</span>
+                        <div className="flex items-center gap-2">
+                          <span>{opt}</span>
+                          {item.unitId?.startsWith('eng-') && (
+                            <span 
+                              className="cursor-pointer p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-700"
+                              onClick={() => speechEngine.speak(opt)}
+                              title="朗讀此選項"
+                            >
+                              <Volume2 size={12} style={{ opacity: 0.7, color: 'var(--accent-primary)' }} />
+                            </span>
+                          )}
+                        </div>
                         {isCorrect && (
                           <span className="badge badge-success text-xs font-bold">
                             ✓ 正確答案

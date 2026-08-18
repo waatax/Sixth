@@ -92,21 +92,51 @@ export const flashcardsData = {
   english: [
     {
       id: 'e1',
-      front: 'Common Irregular Past Tense: go, see, eat, have',
-      back: '• go ➔ went\n• see ➔ saw\n• eat ➔ ate\n• have ➔ had',
+      front: 'Common Irregular Past Tense: go, see, eat, have, buy',
+      back: '• go ➔ went\n• see ➔ saw\n• eat ➔ ate\n• have ➔ had\n• buy ➔ bought',
       tag: 'Past Tense'
     },
     {
       id: 'e2',
-      front: 'Time Prepositions: at / in / on usage',
-      back: '• at: 具體鐘點 (at 7:00)\n• in: 早中晚/月份 (in the morning, in July)\n• on: 星期與具體日期 (on Sunday, on Oct 10)',
+      front: 'Time Prepositions: at / in / on usage rules',
+      back: '• at: 具體鐘點 (at 7:30, at noon)\n• in: 早中晚/月份/年份 (in July, in 2026)\n• on: 星期與具體某天 (on Monday, on my birthday)',
       tag: 'Prepositions'
     },
     {
       id: 'e3',
-      front: 'Polite way to ask for directions?',
-      back: 'Excuse me, how do I get to the [place]?',
-      tag: 'Conversation'
+      front: 'Telling Time: half past vs. quarter to',
+      back: '• half past seven = 7:30 (過半小時)\n• a quarter to eight = 7:45 (差15分到8點)\n• a quarter past seven = 7:15 (過15分)',
+      tag: 'Telling Time'
+    },
+    {
+      id: 'e4',
+      front: 'Polite way to ask for and give directions',
+      back: '• 問路: Excuse me, how can I get to the library?\n• 指路: Go straight for two blocks and turn left.',
+      tag: 'Directions'
+    },
+    {
+      id: 'e5',
+      front: 'Symptoms with "-ache" suffix & Clinic dialog',
+      back: '• headache (頭痛), stomachache (胃痛), toothache (牙痛)\n• 句型: What\'s the matter? ➔ I have a headache.\n• 建議: You should take medicine and rest.',
+      tag: 'Health & Clinic'
+    },
+    {
+      id: 'e6',
+      front: 'Taiwan & World Festivals in English',
+      back: '• Lunar New Year (春節): red envelopes\n• Dragon Boat Festival (端午節): rice dumplings\n• Mid-Autumn Festival (中秋節): moon cakes\n• Halloween (萬聖節): trick or treat',
+      tag: 'Festivals & Culture'
+    },
+    {
+      id: 'e7',
+      front: 'Reading Skills: Skimming vs. Scanning',
+      back: '• Skimming (略讀): 快速掌握大意與主旨 (Overview)\n• Scanning (掃讀): 精準搜尋特定人名、年代與數字 (Details)',
+      tag: 'Reading Skills'
+    },
+    {
+      id: 'e8',
+      front: 'Prefixes & Suffixes word-building',
+      back: '• un- (not): unhappy, unable\n• re- (again): replay, rewrite\n• -ful (full of): wonderful, helpful\n• -less (without): careless, hopeless',
+      tag: 'Word Building'
     }
   ]
 };

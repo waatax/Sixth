@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { flashcardsData } from '../data/flashcardsData';
-import { RotateCw, CheckCircle2, ChevronLeft, ChevronRight, ArrowLeft, Zap, Sparkles, Trophy, RotateCcw } from 'lucide-react';
+import { RotateCw, CheckCircle2, ChevronLeft, ChevronRight, ArrowLeft, Zap, Sparkles, Trophy, RotateCcw, Volume2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { playSound } from '../utils/soundEffects';
+import { speechEngine } from '../utils/speechHelper';
 
 const FlashcardsPage = () => {
   const [currentSubject, setCurrentSubject] = useState('math');
@@ -223,6 +224,30 @@ const FlashcardsPage = () => {
               >
                 {isFlipped ? currentCard.back : currentCard.front}
               </div>
+
+              {currentSubject === 'english' && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const textToSpeak = isFlipped ? currentCard.back : currentCard.front;
+                    speechEngine.speak(textToSpeak);
+                  }}
+                  className="btn-outline mt-3 flex items-center gap-1.5"
+                  style={{
+                    padding: '6px 14px',
+                    borderRadius: 'var(--radius-full)',
+                    fontSize: '0.82rem',
+                    backgroundColor: 'var(--accent-soft)',
+                    borderColor: 'var(--accent-primary)',
+                    color: 'var(--accent-primary)',
+                    fontWeight: 700
+                  }}
+                  title="點擊聆聽這張英文閃卡的發音"
+                >
+                  <Volume2 size={15} />
+                  <span>🔊 聆聽英文發音</span>
+                </button>
+              )}
             </div>
 
             {/* Bottom Hint */}
