@@ -4,7 +4,21 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import { ArrowLeft, CheckCircle2, Image as ImageIcon, Sparkles, ExternalLink, Share2, Check } from 'lucide-react';
+import { 
+  ArrowLeft, 
+  CheckCircle2, 
+  Image as ImageIcon, 
+  Sparkles, 
+  ExternalLink, 
+  Share2, 
+  Check, 
+  BookOpen, 
+  Lightbulb, 
+  Copy, 
+  Eye, 
+  Flame,
+  Bookmark
+} from 'lucide-react';
 import { coursesData } from '../data/courses';
 import './LessonPage.css';
 
@@ -15,35 +29,35 @@ const mdModules = import.meta.glob('../data/lessons/*.md', { query: '?raw', impo
 const subjectImages = {
   math: {
     src: './images/math_visual.jpg',
-    title: '【圖解一】立體幾何展開・分數切割圓餅・坐標軸與精準測量'
+    title: '【圖解】立體幾何展開・分數切割圓餅・坐標軸與精準測量'
   },
   science: {
     src: './images/science_visual.jpg',
-    title: '【圖解一】氣象鋒面預報・電磁鐵電路・槓桿天平與生態循環'
+    title: '【圖解】氣象鋒面預報・電磁鐵電路・槓桿天平與生態循環'
   },
   mandarin: {
     src: './images/social_visual.jpg',
-    title: '【圖解一】古典文言書卷・修辭結構圖解與邏輯思維'
+    title: '【圖解】古典文言書卷・修辭結構圖解與邏輯思維'
   },
   social: {
     src: './images/social_visual.jpg',
-    title: '【圖解一】臺灣民主投票・多元族群文化傳承與SDGs永續目標'
+    title: '【圖解】臺灣民主投票・多元族群文化傳承與SDGs永續目標'
   },
   english: {
     src: './images/english_arts_visual.jpg',
-    title: '【圖解一】日常作息情境・時態圖解與世界節慶對話'
+    title: '【圖解】日常作息情境・時態圖解與世界節慶對話'
   },
   arts: {
     src: './images/english_arts_visual.jpg',
-    title: '【圖解一】色彩調色盤環・五線譜樂理與設計思考五步驟'
+    title: '【圖解】色彩調色盤環・五線譜樂理與設計思考五步驟'
   },
   health_pe: {
     src: './images/english_arts_visual.jpg',
-    title: '【圖解一】CPR+AED急救口訣・運動體適能與我的餐盤'
+    title: '【圖解】CPR+AED急救口訣・運動體適能與我的餐盤'
   },
   integrative: {
     src: './images/english_arts_visual.jpg',
-    title: '【圖解一】時間管理四象限・多元智能與自主學習成長地圖'
+    title: '【圖解】時間管理四象限・多元智能與自主學習成長地圖'
   }
 };
 
@@ -54,6 +68,8 @@ const LessonPage = () => {
   const [loading, setLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [copiedCodeId, setCopiedCodeId] = useState(null);
+  const [highlightMode, setHighlightMode] = useState(true);
 
   // Find unit metadata and subject
   let currentUnit = null;
@@ -110,6 +126,12 @@ const LessonPage = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleCopyDiagram = (codeText, id) => {
+    navigator.clipboard.writeText(codeText);
+    setCopiedCodeId(id);
+    setTimeout(() => setCopiedCodeId(null), 2000);
+  };
+
   if (!currentUnit) {
     return (
       <div className="container py-12 text-center">
@@ -120,7 +142,7 @@ const LessonPage = () => {
   }
 
   return (
-    <div className="lesson-page-wrapper max-w-3xl mx-auto py-4">
+    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''}`}>
       {/* Top Reading Scroll Progress Bar */}
       <div
         className="reading-progress-bar"
@@ -128,7 +150,7 @@ const LessonPage = () => {
         aria-hidden="true"
       />
 
-      {/* Top Navigation & Fast Reading Control Bar */}
+      {/* Top Navigation & Control Bar */}
       <div
         className="card mb-4 flex justify-between items-center flex-wrap gap-3"
         style={{
@@ -158,13 +180,34 @@ const LessonPage = () => {
               {currentSubject.name}
             </span>
           )}
+          <span className="badge badge-accent flex items-center gap-1">
+            <Flame size={13} />
+            高頻考點精講
+          </span>
           <span className="badge badge-success">
             ✨ +10% 現代素養
           </span>
         </div>
 
-        {/* Right Action: Share */}
+        {/* Right Actions: Highlight Mode & Share */}
         <div className="flex items-center gap-2">
+          <button
+            onClick={() => setHighlightMode(!highlightMode)}
+            className={`btn-outline ${highlightMode ? 'active-highlight-btn' : ''}`}
+            style={{ 
+              padding: '6px 12px', 
+              minHeight: '34px', 
+              fontSize: '0.8rem',
+              borderColor: highlightMode ? 'var(--accent-primary)' : 'var(--border-light)',
+              backgroundColor: highlightMode ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
+              color: highlightMode ? 'var(--accent-primary)' : 'var(--text-secondary)'
+            }}
+            title="切換關鍵公式與重點色彩高亮"
+          >
+            <Lightbulb size={14} style={{ color: highlightMode ? '#f59e0b' : 'inherit' }} />
+            <span>{highlightMode ? '重點高亮：開啟' : '重點高亮：一般'}</span>
+          </button>
+
           <button
             onClick={handleShare}
             className="btn-outline"
@@ -176,6 +219,42 @@ const LessonPage = () => {
           </button>
         </div>
       </div>
+
+      {/* Unit Overview & Key Concepts Quick Card */}
+      {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
+        <div 
+          className="card mb-4" 
+          style={{ 
+            padding: '16px 20px', 
+            background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(16, 185, 129, 0.04) 100%)',
+            border: '1px solid var(--border-light)',
+            borderLeft: '4px solid var(--accent-primary)'
+          }}
+        >
+          <div className="flex items-center gap-2 mb-2 text-sm" style={{ fontWeight: 700, color: 'var(--accent-primary)' }}>
+            <Bookmark size={16} />
+            <span>🎯 本單元核心考點與學習關鍵字</span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {currentUnit.keyConcepts.map((concept, idx) => (
+              <span 
+                key={idx} 
+                className="badge" 
+                style={{ 
+                  backgroundColor: 'var(--bg-secondary)', 
+                  border: '1px solid var(--border-light)',
+                  color: 'var(--text-primary)',
+                  fontWeight: 600,
+                  fontSize: '0.82rem',
+                  padding: '4px 10px'
+                }}
+              >
+                ✨ {concept}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Featured Educational Illustration Banner */}
       {subjectIllustration && (
@@ -229,7 +308,58 @@ const LessonPage = () => {
                 <div className="lesson-table-container">
                   <table {...props} />
                 </div>
-              )
+              ),
+              code: ({ node, inline, className, children, ...props }) => {
+                const textContent = String(children).replace(/\n$/, '');
+                const isDiagram = textContent.includes('─') || 
+                                  textContent.includes('│') || 
+                                  textContent.includes('┌') || 
+                                  textContent.includes('▼') || 
+                                  textContent.includes('【') ||
+                                  textContent.includes('──') ||
+                                  textContent.includes('|');
+
+                if (inline) {
+                  return (
+                    <code className="inline-code-pill" {...props}>
+                      {children}
+                    </code>
+                  );
+                }
+
+                return (
+                  <div className="visual-diagram-card my-5">
+                    <div className="diagram-header flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-xs font-bold" style={{ color: 'var(--accent-primary)' }}>
+                        <BookOpen size={14} />
+                        <span>🎨 視覺概念模型與圖解架構 (Visual Diagram)</span>
+                      </div>
+                      <button
+                        onClick={() => handleCopyDiagram(textContent, textContent.slice(0, 15))}
+                        className="diagram-copy-btn text-xs flex items-center gap-1"
+                        title="複製圖解內容"
+                      >
+                        {copiedCodeId === textContent.slice(0, 15) ? (
+                          <>
+                            <Check size={12} style={{ color: 'var(--accent-success)' }} />
+                            <span>已複製</span>
+                          </>
+                        ) : (
+                          <>
+                            <Copy size={12} />
+                            <span>複製圖解</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
+                    <pre className="diagram-pre">
+                      <code className={className} {...props}>
+                        {children}
+                      </code>
+                    </pre>
+                  </div>
+                );
+              }
             }}
           >
             {content}
