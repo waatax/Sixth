@@ -40,7 +40,7 @@ const HomePage = () => {
         }}
       >
         <div className="flex justify-between items-start flex-wrap gap-4">
-          <div style={{ maxWidth: '680px' }}>
+          <div style={{ maxWidth: '800px' }}>
             <div className="flex items-center gap-2 mb-2 flex-wrap">
               <span className="badge badge-accent" style={{ padding: '4px 12px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
                 ✨ 108 課綱・小六無壓力自主學習護照
@@ -57,23 +57,6 @@ const HomePage = () => {
               不用死背硬記，每個單元都配備了 <strong style={{ color: 'var(--accent-primary)' }}>「視覺概念圖解」</strong> 與 <strong style={{ color: 'var(--accent-warning-text)' }}>「段考必考關鍵字」</strong>。即使基礎不好，也能看懂算理、輕鬆拿下高分！
             </p>
           </div>
-
-          {/* Version Selector Filter directly at top */}
-          <div className="flex flex-col gap-2 card p-3" style={{ borderRadius: 'var(--radius-lg)', backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-light)' }}>
-            <span style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--text-secondary)' }}>學校版本：</span>
-            <div className="flex gap-1.5">
-              {coursesData.versions.map(version => (
-                <button
-                  key={version}
-                  className={`btn-pill ${selectedVersion === version ? 'active' : ''}`}
-                  onClick={() => setSelectedVersion(version)}
-                  style={{ fontSize: '0.8rem', padding: '4px 12px' }}
-                >
-                  {version}
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 
@@ -83,19 +66,57 @@ const HomePage = () => {
       {/* ☀️ Daily 3-Minute Micro-Quests Card */}
       <DailyQuestCard />
 
-      {/* 8 Major Learning Areas Grid with Category Filters */}
+      {/* 8 Major Learning Areas Grid with Category Filters & Inline Version Selector */}
       <section className="mt-1">
         <div className="flex justify-between items-center flex-wrap gap-3 mb-4">
-          <div>
-            <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.35rem * var(--font-scale))' }}>
-              📖 探索八大學習領域
-            </h2>
-            <p className="text-xs text-secondary" style={{ marginTop: '3px' }}>
-              點選任一學科，按照「基礎 ➔ 進階」闖關地圖進行探索
-            </p>
+          {/* Left: Title + Compact Inline Version Selector */}
+          <div className="flex items-center gap-3 flex-wrap">
+            <div>
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.35rem * var(--font-scale))', whiteSpace: 'nowrap' }}>
+                  📖 探索八大學習領域
+                </h2>
+
+                {/* Compact Single-line Version Selector */}
+                <div 
+                  className="inline-flex items-center gap-1 p-1 rounded-full"
+                  style={{
+                    backgroundColor: 'var(--bg-secondary)',
+                    border: '1px solid var(--border-strong)',
+                    fontSize: '0.78rem',
+                    boxShadow: 'var(--shadow-sm)'
+                  }}
+                >
+                  <span style={{ color: 'var(--text-secondary)', fontWeight: 700, paddingLeft: '8px', paddingRight: '2px', fontSize: '0.74rem', whiteSpace: 'nowrap' }}>
+                    版本：
+                  </span>
+                  <div className="flex gap-1">
+                    {coursesData.versions.map(version => (
+                      <button
+                        key={version}
+                        className={`btn-pill ${selectedVersion === version ? 'active' : ''}`}
+                        onClick={() => setSelectedVersion(version)}
+                        style={{
+                          fontSize: '0.74rem',
+                          padding: '3px 9px',
+                          minHeight: '24px',
+                          lineHeight: 1,
+                          borderRadius: 'var(--radius-full)'
+                        }}
+                      >
+                        {version}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-secondary" style={{ marginTop: '4px', margin: 0 }}>
+                點選任一學科，按照「基礎 ➔ 進階」闖關地圖進行探索
+              </p>
+            </div>
           </div>
 
-          {/* Category Filter Tabs */}
+          {/* Right: Category Filter Tabs */}
           <div className="flex gap-2 flex-wrap">
             {categories.map(cat => (
               <button
