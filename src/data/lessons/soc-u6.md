@@ -23,6 +23,7 @@
 ---
 
 ## 🔑 核心觀念 1：聯合國 17 項 SDGs 與 5P 分類架構
+![圖解說明](./images/soc_u6_concept1.jpg)
 
 聯合國在 2015 年宣布了《2030 永續發展議程》，訂定 $\textcolor{#2196f3}{\textbf{17 項永續發展目標 (SDGs)}}$，其核心精神為「$\textcolor{#e91e63}{\textbf{不遺落任何人 (Leave No One Behind)}}$」。
 
@@ -56,6 +57,7 @@
 ---
 
 ## 🔑 核心觀念 2：氣候變遷與「2050 淨零排放 (Net Zero)」
+![圖解說明](./images/soc_u6_concept2.jpg)
 
 ### 🌡️ 溫室效應與全球暖化
 人類大量燃燒煤炭、石油、天然氣，排放巨量二氧化碳 ($\text{CO}_2$) 與甲烷 ($\text{CH}_4$) 等溫室氣體，使大氣層如同蓋上過厚的毛毯，阻擋地表熱量散逸回太空。
@@ -79,6 +81,7 @@ $$\textcolor{#d32f2f}{\textbf{人為溫室氣體排放量}} - \textcolor{#4caf50
 ---
 
 ## 🔑 核心觀念 3：碳足跡 (Carbon Footprint) 與低碳生活實踐
+![圖解說明](./images/soc_u6_concept3.jpg)
 
 「$\textcolor{#e91e63}{\textbf{碳足跡}}$」是指一項產品或活動，在完整的「$\textcolor{#2196f3}{\textbf{生命週期}}$」中所產生的溫室氣體排放總量（換算為二氧化碳當量）。
 
@@ -105,6 +108,7 @@ $$\textcolor{#d32f2f}{\textbf{人為溫室氣體排放量}} - \textcolor{#4caf50
 ---
 
 ## 🔑 核心觀念 4：小學生引領的「公民綠色行動力」
+![圖解說明](./images/soc_u6_concept4.jpg)
 
 ```text
                     【 環保綠色生活「4R 原則」 】

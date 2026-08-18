@@ -22,6 +22,8 @@
 
 ## 🔑 核心觀念 1：英美時鐘視覺化報時法 (Telling Time)
 
+![圖解說明](./images/eng_u1_concept1.jpg)
+
 除了直接念出阿拉伯數字（如 8:15 念 *eight fifteen*），母語人士最愛使用的「時鐘分割法」是以 30 分鐘為分界線：
 
 ```text

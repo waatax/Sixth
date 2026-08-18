@@ -30,42 +30,6 @@ import './LessonPage.css';
 // Vite dynamic import for raw markdown files
 const mdModules = import.meta.glob('../data/lessons/*.md', { query: '?raw', import: 'default' });
 
-// Subject to illustration mapping
-const subjectImages = {
-  math: {
-    src: './images/math_visual.jpg',
-    title: '【圖解】立體幾何展開・分數切割圓餅・坐標軸與精準測量'
-  },
-  science: {
-    src: './images/science_visual.jpg',
-    title: '【圖解】氣象鋒面預報・電磁鐵電路・槓桿天平與生態循環'
-  },
-  mandarin: {
-    src: './images/social_visual.jpg',
-    title: '【圖解】古典文言書卷・修辭結構圖解與邏輯思維'
-  },
-  social: {
-    src: './images/social_visual.jpg',
-    title: '【圖解】臺灣民主投票・多元族群文化傳承與SDGs永續目標'
-  },
-  english: {
-    src: './images/english_arts_visual.jpg',
-    title: '【圖解】日常作息情境・時態圖解與世界節慶對話'
-  },
-  arts: {
-    src: './images/english_arts_visual.jpg',
-    title: '【圖解】色彩調色盤環・五線譜樂理與設計思考五步驟'
-  },
-  health_pe: {
-    src: './images/english_arts_visual.jpg',
-    title: '【圖解】CPR+AED急救口訣・運動體適能與我的餐盤'
-  },
-  integrative: {
-    src: './images/english_arts_visual.jpg',
-    title: '【圖解】時間管理四象限・多元智能與自主學習成長地圖'
-  }
-};
-
 const LessonPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
@@ -88,8 +52,6 @@ const LessonPage = () => {
       break;
     }
   }
-
-  const subjectIllustration = currentSubject ? subjectImages[currentSubject.id] : null;
 
   // Track scroll reading progress
   useEffect(() => {
@@ -285,36 +247,6 @@ const LessonPage = () => {
               </div>
             </div>
           )}
-        </div>
-      )}
-
-      {/* Featured Educational Illustration Banner */}
-      {subjectIllustration && (
-        <div
-          className="card mb-6"
-          style={{
-            padding: '16px',
-            overflow: 'hidden',
-            backgroundColor: 'var(--bg-secondary)',
-            border: '1.5px solid var(--border-light)',
-            borderRadius: 'var(--radius-lg)'
-          }}
-        >
-          <div className="flex items-center justify-between mb-2 text-sm">
-            <span style={{ color: 'var(--accent-primary)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <ImageIcon size={17} />
-              {subjectIllustration.title}
-            </span>
-            <span className="badge badge-accent">專屬圖解輔助</span>
-          </div>
-          <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--border-light)' }}>
-            <img 
-              src={subjectIllustration.src} 
-              alt={subjectIllustration.title} 
-              style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '340px', objectFit: 'cover' }} 
-              loading="lazy"
-            />
-          </div>
         </div>
       )}
 

@@ -6,7 +6,6 @@ import GuidedStartWizard from '../components/common/GuidedStartWizard';
 import DailyQuestCard from '../components/common/DailyQuestCard';
 
 const HomePage = () => {
-  const [selectedVersion, setSelectedVersion] = useState(coursesData.versions[0]);
   const [categoryFilter, setCategoryFilter] = useState('all');
 
   const categories = [
@@ -60,8 +59,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* 🧭 Guided Start Wizard: "不知從何開始？" Psychological Anchor */}
-      <GuidedStartWizard />
+
 
       {/* ☀️ Daily 3-Minute Micro-Quests Card */}
       <DailyQuestCard />
@@ -77,38 +75,7 @@ const HomePage = () => {
                   📖 探索八大學習領域
                 </h2>
 
-                {/* Compact Single-line Version Selector */}
-                <div 
-                  className="inline-flex items-center gap-1 p-1 rounded-full"
-                  style={{
-                    backgroundColor: 'var(--bg-secondary)',
-                    border: '1px solid var(--border-strong)',
-                    fontSize: '0.78rem',
-                    boxShadow: 'var(--shadow-sm)'
-                  }}
-                >
-                  <span style={{ color: 'var(--text-secondary)', fontWeight: 700, paddingLeft: '8px', paddingRight: '2px', fontSize: '0.74rem', whiteSpace: 'nowrap' }}>
-                    版本：
-                  </span>
-                  <div className="flex gap-1">
-                    {coursesData.versions.map(version => (
-                      <button
-                        key={version}
-                        className={`btn-pill ${selectedVersion === version ? 'active' : ''}`}
-                        onClick={() => setSelectedVersion(version)}
-                        style={{
-                          fontSize: '0.74rem',
-                          padding: '3px 9px',
-                          minHeight: '24px',
-                          lineHeight: 1,
-                          borderRadius: 'var(--radius-full)'
-                        }}
-                      >
-                        {version}
-                      </button>
-                    ))}
-                  </div>
-                </div>
+
               </div>
               <p className="text-xs text-secondary" style={{ marginTop: '4px', margin: 0 }}>
                 點選任一學科，按照「基礎 ➔ 進階」闖關地圖進行探索
@@ -277,6 +244,9 @@ const HomePage = () => {
           })}
         </div>
       </section>
+
+      {/* 🧭 Guided Start Wizard: "不知從何開始？" Psychological Anchor */}
+      <GuidedStartWizard />
 
       {/* ⚡ Autonomous Learning Tools Hub */}
       <section className="mt-4">

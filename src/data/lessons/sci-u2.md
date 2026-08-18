@@ -56,6 +56,8 @@
 
 ## 🔑 核心觀念 2：飽和溶液與影響溶解的魔法因素
 
+![飽和溶液與溶解度](./images/saturation_solubility_zh.jpg)
+
 在一杯固定量的水中持續加入砂糖並攪拌，一開始糖會迅速溶解；但加到一定程度後，無論怎麼攪拌，底部依然會殘留未溶解的糖粒。此時水溶液已經「吃飽了」，達到了$\textcolor{#e91e63}{\textbf{飽和狀態}}$，稱為$\textcolor{#e91e63}{\textbf{飽和溶液}}$。
 
 ```text
@@ -91,6 +93,8 @@
 
 ## 🔑 核心觀念 3：水溶液的導電性——電解質與離子快遞員
 
+![電解質與導電性](./images/electrolytes_conductivity_zh.jpg)
+
 利用簡易檢驗電路（電池、電線、小燈泡或發光二極體 LED），將電極兩端浸入不同水溶液中，會觀察到神奇的差異：
 
 ```text
@@ -121,6 +125,8 @@
 ---
 
 ## 🔑 核心觀念 4：酸性、鹼性與中性——酸鹼世界的七彩光譜
+
+![酸鹼指示劑](./images/acid_base_indicators_zh.jpg)
 
 水溶液依據化學性質可劃分為$\textcolor{#e91e63}{\textbf{酸性}}$、$\textcolor{#4caf50}{\textbf{中性}}$與$\textcolor{#2196f3}{\textbf{鹼性}}$三大陣營：
 
@@ -161,6 +167,8 @@ $$\text{pH 數值範圍：} 0 \le \text{pH} \le 14$$
 ---
 
 ## 🔑 核心觀念 5：酸鹼中和反應——神奇的化學調和
+
+![酸鹼中和反應](./images/acid_base_neutralization_zh.jpg)
 
 當酸性溶液與鹼性溶液混合時，酸中的氫離子 ($\text{H}^+$) 與鹼中的氫氧根離子 ($\text{OH}^-$) 會結合生成水 ($\text{H}_2\text{O}$)，並產生鹽類與熱量。這種化學反應稱為$\textcolor{#e91e63}{\textbf{酸鹼中和 (Neutralization)}}$：
 

@@ -31,6 +31,8 @@
 
 ## 🔑 核心觀念 1：槓桿原理——給我一個支點
 
+![圖解說明](./images/sci_u6_concept1.png)
+
 $\textcolor{#e91e63}{\textbf{槓桿 (Lever)}}$ 是一根能在固定點周圍自由轉動的硬桿。在任何槓桿操作中，必定存在三個核心點與兩個關鍵力臂：
 
 ```text
@@ -64,6 +66,8 @@ $$\textcolor{#2196f3}{\textbf{施力}} \times \textcolor{#ff9800}{\textbf{施力
 
 ## 🔑 核心觀念 2：三類槓桿大解密——誰在中間？
 
+![圖解說明](./images/sci_u6_concept2.png)
+
 依據「$\textcolor{#e91e63}{\textbf{支點}}$、$\textcolor{#9c27b0}{\textbf{抗力點}}$、$\textcolor{#2196f3}{\textbf{施力點}}$」三者相對位置的不同，槓桿精準劃分為三大類別：
 
 ```text
@@ -88,6 +92,8 @@ $$\textcolor{#2196f3}{\textbf{施力}} \times \textcolor{#ff9800}{\textbf{施力
 ---
 
 ## 🔑 核心觀念 3：滑輪與輪軸——旋轉的槓桿
+
+![圖解說明](./images/sci_u6_concept3.png)
 
 ### 🔄 滑輪系統：定滑輪 vs 動滑輪
 
@@ -123,6 +129,8 @@ $$\textcolor{#2196f3}{\textbf{輪軸平衡公式：}} \text{施力} \times \text
 
 ## 🔑 核心觀念 4：斜面與螺旋——平緩的幾何魔法
 
+![圖解說明](./images/sci_u6_concept4.png)
+
 ### 📐 斜面 (Inclined Plane)
 將重物沿著傾斜的斜面推上去，所需的推力遠小於垂直直接搬起物品的重力。
 
@@ -146,6 +154,8 @@ $$\textcolor{#2196f3}{\textbf{斜面省力規律：}} \text{斜面長度 } L \te
 ---
 
 ## 🔑 核心觀念 5：宇宙終極鐵則——功的守恆定律
+
+![圖解說明](./images/sci_u6_concept5.png)
 
 在不考慮摩擦阻力的理想狀態下，任何簡單機械都必須嚴格遵守熱力學與力學的黃金法則：
 

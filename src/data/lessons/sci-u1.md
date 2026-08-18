@@ -29,6 +29,8 @@
 
 ## 🔑 核心觀念 1：大氣中的水循環——水的百變分身
 
+![大氣中的水循環](./images/water_cycle_states.jpg)
+
 地球上的水在太陽照射下，透過$\textcolor{#e91e63}{\textbf{蒸發}}$、$\textcolor{#2196f3}{\textbf{凝結}}$、$\textcolor{#9c27b0}{\textbf{凝華}}$、$\textcolor{#4caf50}{\textbf{降水}}$不斷循環。大氣中的水氣遇冷時，會依據「$\textcolor{#ff9800}{\textbf{形成的高度}}$」與「$\textcolor{#ff9800}{\textbf{環境溫度}}$」變身成不同的形態：
 
 ```text
@@ -67,6 +69,8 @@
 
 ## 🔑 核心觀念 2：氣壓與風——大氣的推手
 
+![高低氣壓與天氣](./images/high_low_pressure.jpg)
+
 空氣具有質量與重量！地球表面單位面積所承受的空氣柱重量稱為$\textcolor{#e91e63}{\textbf{大氣壓力 (Atmospheric Pressure)}}$，常用單位為$\textcolor{#2196f3}{\textbf{百帕 (hPa)}}$。
 
 1. $\textcolor{#2196f3}{\textbf{高氣壓 (H, High Pressure)}}$：
@@ -99,6 +103,8 @@
 
 ## 🔑 核心觀念 3：鋒面系統——冷暖氣團的交鋒戰場
 
+![鋒面系統：冷鋒與暖鋒](./images/fronts_weather.jpg)
+
 當大範圍性質（溫度、濕度）均勻的空氣塊（稱為$\textcolor{#2196f3}{\textbf{氣團}}$）相遇時，交界處形成的過渡帶稱為$\textcolor{#e91e63}{\textbf{鋒面 (Front)}}$。臺灣位於亞熱帶交界，氣候深受冷暖氣團交替影響：
 
 ```text
@@ -122,6 +128,8 @@
 ---
 
 ## 🔑 核心觀念 4：颱風的結構與防災智慧
+
+![颱風結構與防災](./images/typhoon_structure.jpg)
 
 $\textcolor{#e91e63}{\textbf{颱風 (Typhoon)}}$ 是生成於熱帶溫暖洋面（水溫 $\ge 26.5^\circ\text{C}$）上的強烈熱帶低氣壓系統。北半球颱風以$\textcolor{#2196f3}{\textbf{逆時針方向}}$向中心旋轉匯聚。
 

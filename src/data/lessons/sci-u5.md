@@ -30,6 +30,8 @@
 
 ## 🔑 核心觀念 1：熱傳導——微觀粒子的接力賽
 
+![圖解說明](/images/sci_u5_concept1.jpg)
+
 $\textcolor{#e91e63}{\textbf{熱傳導 (Thermal Conduction)}}$ 是$\textcolor{#e91e63}{\textbf{固體}}$中最主要的熱傳遞方式。當固體的一端受熱時，該處微觀粒子吸收能量後開始劇烈振動，並撞擊相鄰粒子，將熱動能像大隊接力般一棒傳一棒地傳遞到整塊物體。
 
 $$\textcolor{#e91e63}{\textbf{熱傳遞方向鐵則：}} \text{熱量永遠由 } \textcolor{#e91e63}{\textbf{高溫處}} \longrightarrow \textcolor{#2196f3}{\textbf{低溫處}} \text{ 自發流動}$$
