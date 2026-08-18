@@ -27,6 +27,8 @@
 
 ## 🔑 核心觀念 1：質數、合數與質因數分解
 
+![圖解說明](./images/math_u1_concept1.jpg)
+
 ### 1. 什麼是因數與倍數？
 如果整數 $A \div B = C$ 且 $\textcolor{#d32f2f}{\textbf{沒有餘數}}$（即整除），我們就說：
 - $B$ 和 $C$ 是 $A$ 的 $\textcolor{#2196f3}{\textbf{因數}}$。
@@ -68,6 +70,8 @@
 ---
 
 ## 🔑 核心觀念 2：公因數、最大公因數 (GCD) 與互質
+
+![圖解說明](./images/math_u1_concept2.jpg)
 
 - $\textcolor{#2196f3}{\textbf{公因數}}$：兩個或多個整數共同擁有的因數。
 - $\textcolor{#e91e63}{\textbf{最大公因數 (GCD, Greatest Common Divisor)}}$：所有公因數中數值最大的一個。
