@@ -7,7 +7,16 @@ class SpeechEngine {
     this.currentUtterance = null;
     this.activeId = null;
     this.isPlaying = false;
-    this.rate = 1.0;
+    
+    // Load persisted speed or default 1.0
+    let savedRate = 1.0;
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = localStorage.getItem('sixth_speech_rate');
+        if (stored) savedRate = parseFloat(stored) || 1.0;
+      } catch (e) {}
+    }
+    this.rate = savedRate;
     this.listeners = new Set();
     this.voices = [];
 
@@ -176,6 +185,11 @@ class SpeechEngine {
 
   setRate(newRate) {
     this.rate = newRate;
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('sixth_speech_rate', String(newRate));
+      } catch (e) {}
+    }
     this.notifyListeners();
   }
 
@@ -193,3 +207,71 @@ class SpeechEngine {
 }
 
 export const speechEngine = new SpeechEngine();
+
+// Recursive extractor for Markdown/Rehype/KaTeX AST node content
+export function extractTextFromNode(node) {
+  if (!node) return '';
+  if (typeof node === 'string') return node;
+  if (node.value) {
+    let val = node.value;
+    val = val.replace(/\\textcolor\{[^}]*\}\{([^}]*)\}/g, '$1');
+    val = val.replace(/\\textbf\{([^}]*)\}/g, '$1');
+    val = val.replace(/\\text\{([^}]*)\}/g, '$1');
+    val = val.replace(/\$+/g, '');
+    return val;
+  }
+  if (node.children && Array.isArray(node.children)) {
+    return node.children.map(extractTextFromNode).join('');
+  }
+  return '';
+}
+
+// Smart English sentence / word extractor from mixed English/Chinese strings
+export function extractEnglishSentence(fullText) {
+  if (!fullText || typeof fullText !== 'string') return '';
+
+  // Clean LaTeX math tags
+  let cleaned = fullText
+    .replace(/\$\\[a-zA-Z]+\{[^}]*\}\{([^}]*)\}\$/g, '$1')
+    .replace(/\\textcolor\{[^}]*\}\{([^}]*)\}/g, '$1')
+    .replace(/\\textbf\{([^}]*)\}/g, '$1')
+    .replace(/\\text\{([^}]*)\}/g, '$1')
+    .replace(/\\rightarrow/g, ' to ')
+    .replace(/➔|→/g, ' to ')
+    .replace(/\$[^$]*\$/g, '')
+    .replace(/\$+/g, '')
+    .trim();
+
+  // 1. Quoted English sentence: e.g. "The movie starts at half past two."
+  const quoteMatch = cleaned.match(/["“]([^"”]+)["”]/);
+  if (quoteMatch && /[a-zA-Z]{2,}/.test(quoteMatch[1])) {
+    return quoteMatch[1].trim();
+  }
+
+  // 2. Dialogue format: e.g. "Leo: What time do you usually wake up?"
+  const dialogueMatch = cleaned.match(/^(?:[A-Za-z]+|[^\s\w]+)\s*[:：]\s*([A-Za-z0-9\s',.?!:;/-]+)/);
+  if (dialogueMatch && /[a-zA-Z]{2,}/.test(dialogueMatch[1])) {
+    return dialogueMatch[1].trim();
+  }
+
+  // 3. Sentence before Chinese parentheses: e.g. "It's a quarter to eight. (差1刻到8點)"
+  const beforeParenMatch = cleaned.match(/^([A-Za-z0-9\s',.?!:;/-]+?)(?:\s*[\(（][\u4e00-\u9fa5a-zA-Z0-9\s/，。！？、：]*[\)）]|$)/);
+  if (beforeParenMatch && /[a-zA-Z]{2,}/.test(beforeParenMatch[1])) {
+    const candidate = beforeParenMatch[1].trim();
+    if (candidate.length >= 2 && /[a-zA-Z]/.test(candidate)) {
+      return candidate;
+    }
+  }
+
+  // 4. Fallback extract English word sequences
+  const engMatches = cleaned.match(/[A-Za-z0-9',.?!/-]{2,}(?:\s+[A-Za-z0-9',.?!/-]+)*/g);
+  if (engMatches && engMatches.length > 0) {
+    const valid = engMatches.filter(m => /[a-zA-Z]/.test(m));
+    if (valid.length > 0) {
+      return valid[0].trim();
+    }
+  }
+
+  return '';
+}
+

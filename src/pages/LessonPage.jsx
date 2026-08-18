@@ -24,11 +24,12 @@ import {
   ShieldCheck,
   Award,
   Volume2,
-  Headphones
+  Headphones,
+  Square
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
-import { speechEngine } from '../utils/speechHelper';
+import { speechEngine, extractTextFromNode, extractEnglishSentence } from '../utils/speechHelper';
 import './LessonPage.css';
 
 // Vite dynamic import for raw markdown files
@@ -45,22 +46,17 @@ const LessonPage = () => {
   const [highlightMode, setHighlightMode] = useState(true);
   const [quickSummaryOpen, setQuickSummaryOpen] = useState(true);
   const [selectedTextBubble, setSelectedTextBubble] = useState(null);
+  const [speechRate, setSpeechRate] = useState(speechEngine.rate || 1.0);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  // Helper to extract English sentences from mixed strings
-  const extractEnglish = (text) => {
-    if (!text || typeof text !== 'string') return '';
-    // Find quotes first e.g. "The movie starts at half past two."
-    const quoteMatch = text.match(/"([^"]+)"/);
-    if (quoteMatch && /[a-zA-Z]/.test(quoteMatch[1])) {
-      return quoteMatch[1];
-    }
-    // Match English phrases (letters, spaces, punctuation)
-    const engMatches = text.match(/[A-Za-z0-9\s',.?!:;/-]{4,}/g);
-    if (engMatches && engMatches.length > 0) {
-      return engMatches.join(' ').trim();
-    }
-    return text;
-  };
+  // Subscribe to speechEngine state
+  useEffect(() => {
+    const unsub = speechEngine.subscribe((state) => {
+      setIsPlaying(state.isPlaying);
+      setSpeechRate(state.rate);
+    });
+    return unsub;
+  }, []);
 
   // Listen for text selection inside markdown content
   useEffect(() => {
@@ -299,7 +295,51 @@ const LessonPage = () => {
 
       {/* 🎧 English Audio Studio for English Lessons */}
       {(currentSubject?.id === 'english' || unitId.startsWith('eng-')) && (
-        <EnglishAudioStudio unitId={unitId} />
+        <>
+          {/* Top Sticky Quick Speed Bar */}
+          <div className="english-speed-sticky-bar animate-fade-in">
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className="speed-badge-pill">
+                <Volume2 size={16} />
+                <span>英文朗讀語速設定：</span>
+              </span>
+              <div className="speed-selector-group">
+                {[
+                  { label: '🐢 0.75x 慢速跟讀', val: 0.75 },
+                  { label: '🎯 1.0x 標準美式', val: 1.0 },
+                  { label: '🚀 1.25x 挑戰進階', val: 1.25 },
+                  { label: '⚡ 1.5x 快速聽力', val: 1.5 }
+                ].map(s => (
+                  <button
+                    key={s.val}
+                    className={`speed-btn ${speechRate === s.val ? 'active' : ''}`}
+                    onClick={() => {
+                      setSpeechRate(s.val);
+                      speechEngine.setRate(s.val);
+                    }}
+                    title={`將全站英文發音速度設為 ${s.val}x`}
+                  >
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              {isPlaying && (
+                <button className="btn-audio-stop" onClick={() => speechEngine.stop()}>
+                  <Square size={12} style={{ fill: 'currentColor' }} />
+                  <span>停止朗讀</span>
+                </button>
+              )}
+              <span className="text-xs text-secondary hidden sm:inline">
+                💡 點擊課文內任何例句、單字或表格 🔊 皆以此語速播放
+              </span>
+            </div>
+          </div>
+
+          <EnglishAudioStudio unitId={unitId} />
+        </>
       )}
 
       {/* Main Core Generated Lesson Content */}
@@ -329,7 +369,7 @@ const LessonPage = () => {
               }}
             >
               <Volume2 size={16} />
-              <span>💡 英語學習小秘訣：課文中包含的英文單字與例句皆可點選，或利用上方「語音工作台」進行跟讀！</span>
+              <span>💡 英語全篇語音指南：課文中所有表格、例句、對話與粗體字皆附有「🔊 聽發音」按鈕，劃詞亦可即時聆聽！</span>
             </div>
           )}
 
@@ -344,48 +384,89 @@ const LessonPage = () => {
               ),
               td: ({ node, children, ...props }) => {
                 const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
-                const text = String(children);
-                const hasEng = isEnglish && /[a-zA-Z]{2,}/.test(text);
+                if (!isEnglish) return <td {...props}>{children}</td>;
+
+                const rawText = extractTextFromNode(node);
+                const engSentence = extractEnglishSentence(rawText);
 
                 return (
                   <td {...props}>
                     {children}
-                    {hasEng && (
-                      <span 
+                    {engSentence && (
+                      <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          speechEngine.speak(extractEnglish(text));
+                          speechEngine.speak(engSentence);
                         }}
-                        className="cursor-pointer ml-1.5 inline-flex items-center opacity-60 hover:opacity-100 transition-opacity"
-                        title="🔊 點擊聆聽此格英文發音"
+                        className="table-speech-trigger"
+                        title={`🔊 點擊聆聽此格英文發音: "${engSentence}"`}
                       >
-                        <Volume2 size={12} style={{ color: 'var(--accent-primary)', verticalAlign: 'middle' }} />
-                      </span>
+                        <Volume2 size={12} />
+                      </button>
                     )}
                   </td>
                 );
               },
               li: ({ node, children, ...props }) => {
                 const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
-                const rawText = Array.isArray(children) ? children.map(c => typeof c === 'string' ? c : '').join(' ') : String(children);
-                const engSentence = isEnglish ? extractEnglish(rawText) : '';
-                const hasValidEng = engSentence && engSentence.length >= 3 && /[a-zA-Z]/.test(engSentence);
+                if (!isEnglish) return <li {...props}>{children}</li>;
+
+                const rawText = extractTextFromNode(node);
+                const engSentence = extractEnglishSentence(rawText);
 
                 return (
                   <li {...props}>
                     <span>{children}</span>
-                    {hasValidEng && (
+                    {engSentence && (
                       <button
-                        onClick={() => speechEngine.speak(engSentence)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speechEngine.speak(engSentence);
+                        }}
                         className="inline-pronounce-btn"
-                        style={{ marginLeft: '6px' }}
-                        title={`🔊 點擊聆聽例句: "${engSentence}"`}
+                        style={{ marginLeft: '8px' }}
+                        title={`🔊 點擊聆聽此例句發音: "${engSentence}"`}
                       >
                         <Volume2 size={11} />
                         <span>聽例句</span>
                       </button>
                     )}
                   </li>
+                );
+              },
+              blockquote: ({ node, children, ...props }) => {
+                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
+                if (!isEnglish) return <blockquote {...props}>{children}</blockquote>;
+
+                const rawText = extractTextFromNode(node);
+                const engSentence = extractEnglishSentence(rawText);
+
+                return (
+                  <blockquote className="dialogue-bubble-quote" {...props}>
+                    <div style={{ flex: 1 }}>{children}</div>
+                    {engSentence && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speechEngine.speak(engSentence);
+                        }}
+                        className="btn-outline flex items-center gap-1 text-xs"
+                        style={{
+                          padding: '4px 10px',
+                          borderRadius: 'var(--radius-full)',
+                          flexShrink: 0,
+                          backgroundColor: 'var(--accent-soft)',
+                          borderColor: 'var(--accent-primary)',
+                          color: 'var(--accent-primary)',
+                          fontWeight: 700
+                        }}
+                        title={`🔊 點擊聆聽此段對話: "${engSentence}"`}
+                      >
+                        <Volume2 size={13} />
+                        <span>🔊 聽對話</span>
+                      </button>
+                    )}
+                  </blockquote>
                 );
               },
               em: ({ node, children, ...props }) => {

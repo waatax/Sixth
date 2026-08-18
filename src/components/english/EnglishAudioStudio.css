@@ -454,22 +454,93 @@
   color: var(--accent-primary);
   border: 1px solid rgba(37, 99, 235, 0.25);
   border-radius: var(--radius-full);
-  padding: 1px 7px;
-  font-size: 0.78rem;
+  padding: 2px 8px;
+  font-size: 0.76rem;
   font-weight: 700;
   cursor: pointer;
-  margin: 0 3px;
+  margin: 0 4px;
   vertical-align: middle;
-  transition: all 0.15s;
+  transition: all 0.15s ease;
+  line-height: 1.2;
 }
 
 .inline-pronounce-btn:hover {
   background: var(--accent-primary);
   color: #ffffff;
+  transform: scale(1.04);
 }
 
 .inline-pronounce-btn.speaking {
   background: var(--accent-success);
   color: #ffffff;
   border-color: var(--accent-success);
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
 }
+
+/* Small Speaker Icon inside Table Cells and lists */
+.table-speech-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent-primary);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  cursor: pointer;
+  margin-left: 6px;
+  vertical-align: middle;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.table-speech-trigger:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+.table-speech-trigger.speaking {
+  background: var(--accent-success);
+  color: #ffffff;
+  border-color: var(--accent-success);
+  animation: pulse 1s infinite;
+}
+
+/* Sticky Quick Speed Bar for English Lessons */
+.english-speed-sticky-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.08);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.speed-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.dialogue-bubble-quote {
+  background: rgba(37, 99, 235, 0.04);
+  border-left: 4px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+

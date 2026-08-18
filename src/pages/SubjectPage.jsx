@@ -155,9 +155,30 @@ const SubjectPage = () => {
           <div className="flex justify-between items-center flex-wrap gap-2 mb-3">
             <div className="flex items-center gap-2 font-bold" style={{ color: 'var(--accent-primary)', fontSize: '0.95rem' }}>
               <Headphones size={18} />
-              <span>🎧 全新功能：所有英文單元均支援「原音朗讀」與「點擊發音練習」！</span>
+              <span>🎧 全新功能：所有英文單元均支援「原音朗讀」、「點擊發音練習」與「語速調節」！</span>
             </div>
-            <span className="badge badge-success text-xs">美式母語標準發音</span>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-secondary font-bold">設定朗讀速度:</span>
+              <div className="flex items-center gap-1 bg-white dark:bg-slate-800 p-1 rounded-full border">
+                {[
+                  { label: '🐢 0.75x', val: 0.75 },
+                  { label: '🎯 1.0x', val: 1.0 },
+                  { label: '🚀 1.25x', val: 1.25 }
+                ].map(s => (
+                  <button
+                    key={s.val}
+                    onClick={() => speechEngine.setRate(s.val)}
+                    className="px-2 py-0.5 text-xs font-bold rounded-full hover:bg-blue-100 dark:hover:bg-slate-700"
+                    style={{
+                      backgroundColor: speechEngine.rate === s.val ? 'var(--accent-primary)' : 'transparent',
+                      color: speechEngine.rate === s.val ? '#ffffff' : 'inherit'
+                    }}
+                  >
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
           <p className="text-xs text-secondary mb-3">
             快速暖身：點擊下方高頻日常問候句，立即測試你的瀏覽器語音發音：
@@ -240,9 +261,29 @@ const SubjectPage = () => {
                       </span>
                     </div>
 
-                    <h2 className="h3" style={{ margin: 0, fontSize: '1.25rem', color: 'var(--text-primary)' }}>
-                      {unit.title}
-                    </h2>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h2 className="h3" style={{ margin: 0, fontSize: '1.25rem', color: 'var(--text-primary)' }}>
+                        {unit.title}
+                      </h2>
+                      {subjectId === 'english' && (
+                        <button
+                          onClick={() => speechEngine.speak(unit.title)}
+                          className="btn-outline inline-flex items-center gap-1 text-xs"
+                          style={{
+                            padding: '3px 9px',
+                            borderRadius: 'var(--radius-full)',
+                            backgroundColor: 'var(--accent-soft)',
+                            color: 'var(--accent-primary)',
+                            borderColor: 'var(--accent-primary)',
+                            fontWeight: 700
+                          }}
+                          title={`🔊 聆聽本單元英文標題發音: "${unit.title}"`}
+                        >
+                          <Volume2 size={12} />
+                          <span>聽標題發音</span>
+                        </button>
+                      )}
+                    </div>
 
                     <p className="text-sm text-secondary" style={{ marginTop: '8px', lineHeight: 1.65 }}>
                       {unit.description}
