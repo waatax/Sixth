@@ -97,10 +97,10 @@ const MockExamPage = () => {
 
           <div>
             <span className="badge badge-accent mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-              ⏱️ 考前實戰模擬測驗
+              ⏱️ 考前實戰・計時模擬測驗
             </span>
             <h1 className="h1 mb-3" style={{ fontSize: 'calc(2.2rem * var(--font-scale))' }}>
-              六年級全科目定時模擬會考
+              計時模擬 (Timed Mock Exam)
             </h1>
             <p className="text-secondary max-w-lg mx-auto text-sm" style={{ lineHeight: 1.8 }}>
               系統將從八大學習領域題庫中隨機抽取 <strong>10 題核心素養模擬題</strong>，限時 <strong>10 分鐘</strong>。檢測你的全科綜合應考實力！

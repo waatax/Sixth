@@ -24,11 +24,13 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4 text-xs text-secondary flex-wrap">
-            <Link to="/" style={{ color: 'var(--text-secondary)' }}>八大學習領域</Link>
-            <Link to="/flashcards" style={{ color: 'var(--text-secondary)' }}>速記翻翻卡</Link>
-            <Link to="/mock-exam" style={{ color: 'var(--text-secondary)' }}>計時模擬考</Link>
-            <Link to="/mistakes" style={{ color: 'var(--text-secondary)' }}>錯題筆記本</Link>
-            <Link to="/resources" style={{ color: 'var(--text-secondary)' }}>全臺教育資源</Link>
+            <Link to="/" style={{ color: 'var(--text-secondary)' }}>學習領域</Link>
+            <Link to="/flashcards" style={{ color: 'var(--text-secondary)' }}>速記閃卡</Link>
+            <Link to="/mock-exam" style={{ color: 'var(--text-secondary)' }}>計時模擬</Link>
+            <Link to="/mistakes" style={{ color: 'var(--text-secondary)' }}>錯題筆記</Link>
+            <Link to="/question-bank" style={{ color: 'var(--text-secondary)' }}>段考題庫</Link>
+            <Link to="/resources" style={{ color: 'var(--text-secondary)' }}>教育資源</Link>
+            <Link to="/prep" style={{ color: 'var(--text-secondary)' }}>國中先修</Link>
           </div>
         </div>
 

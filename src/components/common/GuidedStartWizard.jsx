@@ -56,9 +56,9 @@ const GuidedStartWizard = () => {
       };
     } else if (goalKey === 'quick_5min') {
       planObj = {
-        title: '5 分鐘速記充電計劃：考前高頻精華翻翻卡',
-        desc: '時間不多沒關係！翻閱 5 張核心公式與必考名詞卡，大腦立即進入高效率複習狀態！',
-        actionText: '開啟 3 秒翻翻卡複習',
+        title: '5 分鐘充電計劃：考前高頻精華速記閃卡',
+        desc: '時間不多沒關係！翻閱 5 張核心公式與必考名詞閃卡，大腦立即進入高效率複習狀態！',
+        actionText: '開啟 3 秒速記閃卡複習',
         link: '/flashcards',
         badge: '⚡ 5分鐘極速微學習',
         xpReward: 40,
@@ -76,11 +76,11 @@ const GuidedStartWizard = () => {
       };
     } else {
       planObj = {
-        title: '全科段考總體檢：10 分鐘全科綜合評量',
+        title: '全科段考總體檢：10 分鐘全科計時模擬',
         desc: '想知道自己哪裡已經很強、哪裡需要稍微補強？做一次 10 題診斷，系統為你整理專屬錯題筆記！',
-        actionText: '開始 10 題綜合診斷考',
+        actionText: '開始 10 分鐘計時模擬',
         link: '/mock-exam',
-        badge: '🏆 全科實戰檢測',
+        badge: '🏆 全科計時模擬',
         xpReward: 100,
         subId: 'all'
       };
@@ -284,7 +284,7 @@ const GuidedStartWizard = () => {
                     我只有 5 分鐘碎片時間
                   </div>
                   <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
-                    隨手翻閱 5 張高頻公式與專有名詞卡，零壓力快速複習。
+                    隨手翻閱 5 張高頻公式與專有名詞閃卡，零壓力快速複習。
                   </div>
                 </div>
               </button>
@@ -323,10 +323,10 @@ const GuidedStartWizard = () => {
                 <div style={{ fontSize: '1.6rem' }}>🎯</div>
                 <div>
                   <div style={{ fontWeight: 700, fontSize: '0.96rem', color: 'var(--text-primary)' }}>
-                    我要進行段考總體檢
+                    我要進行計時模擬體檢
                   </div>
                   <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
-                    10 題全科精華測驗，快速找出弱點盲點並自動存入錯題本。
+                    10 題全科精華測驗，快速找出弱點盲點並自動存入錯題筆記。
                   </div>
                 </div>
               </button>

@@ -16,13 +16,13 @@ const Header = () => {
   }, [location.pathname]);
 
   const navLinks = [
-    { path: '/', label: '八大學習領域', icon: BookOpen },
-    { path: '/flashcards', label: '速記翻翻卡', icon: Zap },
-    { path: '/mock-exam', label: '計時模擬考', icon: Timer },
-    { path: '/mistakes', label: '錯題筆記本', icon: Bookmark },
+    { path: '/', label: '學習領域', icon: BookOpen },
+    { path: '/flashcards', label: '速記閃卡', icon: Zap },
+    { path: '/mock-exam', label: '計時模擬', icon: Timer },
+    { path: '/mistakes', label: '錯題筆記', icon: Bookmark },
     { path: '/question-bank', label: '段考題庫', icon: HelpCircle },
-    { path: '/resources', label: '全臺教育資源', icon: Globe },
-    { path: '/prep', label: '升國中先修', icon: GraduationCap },
+    { path: '/resources', label: '教育資源', icon: Globe },
+    { path: '/prep', label: '國中先修', icon: GraduationCap },
   ];
 
   return (
@@ -40,14 +40,14 @@ const Header = () => {
           transition: 'background-color var(--transition-normal), border-color var(--transition-normal)'
         }}
       >
-        <div className="container flex justify-between items-center py-2" style={{ minHeight: 'var(--header-height)' }}>
+        <div className="container flex justify-between items-center py-2" style={{ minHeight: 'var(--header-height)', gap: '12px' }}>
           {/* Left Brand Logo */}
-          <Link to="/" className="flex items-center gap-3 select-none" style={{ textDecoration: 'none' }}>
+          <Link to="/" className="flex items-center gap-2.5 select-none" style={{ textDecoration: 'none', flexShrink: 0 }}>
             <div
               style={{
                 backgroundColor: 'var(--accent-soft)',
                 color: 'var(--accent-primary)',
-                padding: '8px',
+                padding: '7px',
                 borderRadius: 'var(--radius-md)',
                 display: 'flex',
                 alignItems: 'center',
@@ -55,35 +55,43 @@ const Header = () => {
                 boxShadow: 'var(--shadow-sm)'
               }}
             >
-              <BookOpen size={24} />
+              <BookOpen size={22} />
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <span
                   style={{
                     margin: 0,
-                    fontSize: 'calc(1.15rem * var(--font-scale))',
+                    fontSize: 'calc(1.1rem * var(--font-scale))',
                     fontWeight: 800,
                     color: 'var(--text-primary)',
                     letterSpacing: '-0.02em',
                     display: 'block',
-                    lineHeight: 1.2
+                    lineHeight: 1.2,
+                    whiteSpace: 'nowrap'
                   }}
                 >
                   小六學習護照
                 </span>
-                <span className="badge badge-accent" style={{ fontSize: '0.7rem', padding: '2px 6px' }}>
+                <span className="badge badge-accent" style={{ fontSize: '0.68rem', padding: '1px 5px', whiteSpace: 'nowrap' }}>
                   108課綱
                 </span>
               </div>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'block', marginTop: '2px' }}>
-                國小六年級・全科目自主學習平台
+              <span style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', display: 'block', marginTop: '1px', whiteSpace: 'nowrap' }}>
+                全科目自主學習平台
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links (Hidden on mobile < 1024px) */}
-          <nav className="desktop-nav items-center gap-1" style={{ display: 'none' }}>
+          <nav 
+            className="desktop-nav items-center" 
+            style={{ 
+              display: 'none',
+              gap: '4px',
+              flexShrink: 0
+            }}
+          >
             {navLinks.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -93,24 +101,27 @@ const Header = () => {
                   to={item.path}
                   className="flex items-center gap-1.5"
                   style={{
-                    padding: '8px 12px',
+                    padding: '7px 10px',
                     borderRadius: 'var(--radius-md)',
-                    fontWeight: isActive ? 700 : 500,
-                    fontSize: 'calc(0.88rem * var(--font-scale))',
+                    fontWeight: isActive ? 700 : 600,
+                    fontSize: 'calc(0.86rem * var(--font-scale))',
                     color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
                     backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent',
-                    transition: 'all var(--transition-fast)'
+                    transition: 'all var(--transition-fast)',
+                    whiteSpace: 'nowrap',
+                    flexShrink: 0,
+                    textDecoration: 'none'
                   }}
                 >
-                  <Icon size={16} />
-                  <span>{item.label}</span>
+                  <Icon size={15} style={{ flexShrink: 0 }} />
+                  <span style={{ whiteSpace: 'nowrap' }}>{item.label}</span>
                 </Link>
               );
             })}
           </nav>
 
           {/* Right Area: EyeCare Controls + Gamification Widget + Mobile Hamburger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2" style={{ flexShrink: 0 }}>
             {/* Inline Desktop EyeCare Toolbar */}
             <div className="desktop-controls" style={{ display: 'none' }}>
               <EyeCareToolbar isCompact={true} />
@@ -124,8 +135,8 @@ const Header = () => {
               className="mobile-hamburger-btn flex items-center justify-center"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{
-                width: '40px',
-                height: '40px',
+                width: '38px',
+                height: '38px',
                 borderRadius: 'var(--radius-md)',
                 backgroundColor: 'var(--bg-tertiary)',
                 color: 'var(--text-primary)',
@@ -133,7 +144,7 @@ const Header = () => {
               }}
               aria-label={mobileMenuOpen ? '關閉選單' : '開啟選單'}
             >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -237,7 +248,8 @@ const Header = () => {
                         fontWeight: isActive ? 700 : 500,
                         fontSize: '1rem',
                         color: isActive ? 'var(--accent-primary)' : 'var(--text-primary)',
-                        backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent'
+                        backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent',
+                        whiteSpace: 'nowrap'
                       }}
                     >
                       <Icon size={18} />
@@ -259,7 +271,7 @@ const Header = () => {
 
       {/* Responsive media query styling rules for navigation */}
       <style>{`
-        @media (min-width: 1024px) {
+        @media (min-width: 1080px) {
           .desktop-nav { display: flex !important; }
           .desktop-controls { display: flex !important; }
           .mobile-hamburger-btn { display: none !important; }

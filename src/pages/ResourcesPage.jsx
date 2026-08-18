@@ -19,10 +19,10 @@ const ResourcesPage = () => {
       {/* Header Banner */}
       <div className="text-center max-w-2xl mx-auto">
         <span className="badge badge-accent mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-          🌐 全國小學六年級數位教育資源總覽
+          🌐 全國小學數位教育資源總覽
         </span>
         <h1 className="h1 mb-2">
-          全臺教育資源導航與學習地圖
+          教育資源 (Educational Resources)
         </h1>
         <p className="text-secondary" style={{ lineHeight: 1.7 }}>
           深度整合<strong>教育部因材網、Cool English、三大出版社數位網、均一、PaGamO、PhET 科學模擬與升國中先修</strong>，陪伴學童快樂探索知識！

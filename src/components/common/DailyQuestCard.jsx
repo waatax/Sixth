@@ -8,7 +8,7 @@ const DailyQuestCard = () => {
   const todayStr = new Date().toISOString().slice(0, 10);
   const [quests, setQuests] = useState([
     { id: 'q1', text: '📖 閱讀 1 個圖解觀念（3分鐘）', link: '/lesson/math-u1', done: false, xp: 30 },
-    { id: 'q2', text: '⚡ 翻閱 3 張考前速記翻翻卡', link: '/flashcards', done: false, xp: 30 },
+    { id: 'q2', text: '⚡ 翻閱 3 張考前速記閃卡', link: '/flashcards', done: false, xp: 30 },
     { id: 'q3', text: '🎯 完成 1 組觀念小測驗', link: '/quiz/math-u1', done: false, xp: 40 }
   ]);
   const [claimed, setClaimed] = useState(false);

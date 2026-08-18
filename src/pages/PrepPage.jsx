@@ -20,10 +20,10 @@ const PrepPage = () => {
         }}
       >
         <span className="badge badge-accent mb-2" style={{ padding: '4px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-          🎓 升國中關鍵學力銜接專區
+          🎓 國中先修・關鍵學力銜接專區
         </span>
         <h1 className="h1 mb-2">
-          小六升國一・核心觀念超前部署
+          國中先修 (Prep Courses)
         </h1>
         <p className="text-secondary max-w-xl mx-auto text-sm" style={{ lineHeight: 1.7 }}>
           彙整各大名師資優銜接精華，提早掌握國一數學負數代數、理化實驗與長文本素養題型！

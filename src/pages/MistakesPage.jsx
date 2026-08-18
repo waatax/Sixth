@@ -86,10 +86,10 @@ const MistakesPage = () => {
       >
         <div className="inline-flex items-center gap-1.5 badge badge-success mb-2" style={{ fontWeight: 700, padding: '4px 14px', borderRadius: 'var(--radius-full)' }}>
           <Sparkles size={14} />
-          <span>成長型思維・專屬觀念加強庫</span>
+          <span>成長型思維・錯題筆記</span>
         </div>
         <h1 className="h1 mb-2" style={{ fontSize: 'calc(1.75rem * var(--font-scale))' }}>
-          錯題不是失敗，而是最棒的進步秘密！
+          錯題筆記 (Mistakes Notebook)
         </h1>
         <p className="text-secondary text-sm max-w-lg mx-auto" style={{ lineHeight: 1.7 }}>
           在測驗中答錯的題目會自動保存在這裡。只要弄懂並點擊「<strong style={{ color: 'var(--accent-success-text)' }}>我已完全搞懂</strong>」，就能獲得 <strong style={{ color: 'var(--accent-primary)' }}>+20 XP</strong> 並消滅盲點！

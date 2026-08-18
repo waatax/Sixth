@@ -125,13 +125,13 @@ const FlashcardsPage = () => {
       {/* Header */}
       <div className="text-center">
         <span className="badge badge-warning mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-          ⚡ 考前 3 分鐘・高頻公式與關鍵觀念速記卡
+          ⚡ 考前 3 分鐘・高頻公式與關鍵觀念速記閃卡
         </span>
         <h1 className="h1 mb-2" style={{ fontSize: 'calc(1.8rem * var(--font-scale))' }}>
-          知識記憶翻翻卡 (Flashcards)
+          速記閃卡 (Flashcards)
         </h1>
         <p className="text-secondary text-sm" style={{ lineHeight: 1.6 }}>
-          點擊卡片或按「空白鍵」翻看背面詳解，按「左右箭頭」切換卡片！
+          點擊卡片或按「空白鍵」翻看背面詳解，按「左右箭頭」切換閃卡！
         </p>
       </div>
 
@@ -141,25 +141,25 @@ const FlashcardsPage = () => {
           className={`btn-pill ${currentSubject === 'math' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('math'); setCardIndex(0); setIsFlipped(false); }}
         >
-          🧮 數學公式 ({flashcardsData.math.length})
+          🧮 數學閃卡 ({flashcardsData.math.length})
         </button>
         <button
           className={`btn-pill ${currentSubject === 'science' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('science'); setCardIndex(0); setIsFlipped(false); }}
         >
-          🔬 自然觀念 ({flashcardsData.science.length})
+          🔬 自然閃卡 ({flashcardsData.science.length})
         </button>
         <button
           className={`btn-pill ${currentSubject === 'mandarin' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('mandarin'); setCardIndex(0); setIsFlipped(false); }}
         >
-          📖 國語重點 ({flashcardsData.mandarin.length})
+          📖 國語閃卡 ({flashcardsData.mandarin.length})
         </button>
         <button
           className={`btn-pill ${currentSubject === 'english' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('english'); setCardIndex(0); setIsFlipped(false); }}
         >
-          🇬🇧 英語句型 ({flashcardsData.english.length})
+          🇬🇧 英語閃卡 ({flashcardsData.english.length})
         </button>
       </div>
 

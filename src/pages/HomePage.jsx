@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
-import { Zap, Timer, Globe, Bookmark, ArrowRight, Sparkles, Compass, CheckCircle2, ShieldCheck, Smile } from 'lucide-react';
+import { Zap, Timer, Globe, Bookmark, ArrowRight, Sparkles, Compass, CheckCircle2, ShieldCheck, Smile, GraduationCap } from 'lucide-react';
 import GuidedStartWizard from '../components/common/GuidedStartWizard';
 import DailyQuestCard from '../components/common/DailyQuestCard';
 
@@ -10,7 +10,7 @@ const HomePage = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
 
   const categories = [
-    { id: 'all', label: '全部八大領域 (8)', icon: '📚' },
+    { id: 'all', label: '全部八大學科 (8)', icon: '📚' },
     { id: 'core', label: '核心基石 (國・數・自・社)', icon: '🌱' },
     { id: 'literacy', label: '素養探索 (英・藝・體・綜)', icon: '🌟' }
   ];
@@ -128,10 +128,9 @@ const HomePage = () => {
                 className="card card-hoverable flex flex-col justify-between gap-4" 
                 style={{ 
                   padding: '24px', 
-                  borderTop: `5px solid ${subject.color}`,
                   borderRadius: 'var(--radius-xl)',
                   backgroundColor: 'var(--bg-secondary)',
-                  border: '1px solid var(--border-light)',
+                  border: '1.5px solid var(--border-light)',
                   borderTop: `5px solid ${subject.color}`
                 }}
               >
@@ -185,7 +184,7 @@ const HomePage = () => {
         <div
           className="grid"
           style={{
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
             gap: '16px'
           }}
         >
@@ -213,7 +212,7 @@ const HomePage = () => {
               <Zap size={24} />
             </div>
             <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>考前速記翻翻卡</div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>速記閃卡</div>
               <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
                 公式、專有名詞與核心句型 3 秒快速複習
               </div>
@@ -244,7 +243,7 @@ const HomePage = () => {
               <Timer size={24} />
             </div>
             <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>全科計時模擬考</div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>計時模擬</div>
               <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
                 10 分鐘 10 題實戰綜合測驗與即時解析
               </div>
@@ -275,7 +274,7 @@ const HomePage = () => {
               <Bookmark size={24} />
             </div>
             <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>個人化錯題筆記本</div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>錯題筆記</div>
               <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
                 自動收錄弱點題目，隨時一鍵搞懂消滅
               </div>
@@ -306,9 +305,40 @@ const HomePage = () => {
               <Globe size={24} />
             </div>
             <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>全臺教育資源地圖</div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>教育資源</div>
               <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
                 因材網、Cool English、PaGamO 整合導航
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            to="/prep"
+            className="card card-hoverable flex items-start gap-3.5"
+            style={{ 
+              padding: '20px', 
+              borderLeft: '4px solid var(--accent-purple)',
+              borderRadius: 'var(--radius-lg)',
+              backgroundColor: 'var(--bg-secondary)'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'var(--accent-purple-soft)',
+                color: 'var(--accent-purple)',
+                padding: '12px',
+                borderRadius: 'var(--radius-md)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <GraduationCap size={24} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>國中先修</div>
+              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
+                國一數學負數代數與理化銜接精華
               </div>
             </div>
           </Link>
