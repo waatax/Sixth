@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Trash2, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Trash2, CheckCircle2, Sparkles, Heart, HelpCircle, ShieldCheck, Trophy, Smile } from 'lucide-react';
+import confetti from 'canvas-confetti';
 import { playSound } from '../utils/soundEffects';
 
 const MistakesPage = () => {
@@ -28,7 +29,24 @@ const MistakesPage = () => {
     const updated = mistakes.filter((_, i) => i !== index);
     setMistakes(updated);
     localStorage.setItem('sixth_student_mistakes', JSON.stringify(updated));
-    playSound('correct');
+    
+    // Growth-mindset reward
+    playSound('levelup');
+    confetti({
+      particleCount: 50,
+      spread: 50,
+      origin: { y: 0.6 }
+    });
+
+    // Add XP to user stats
+    try {
+      const savedStats = localStorage.getItem('sixth_student_stats');
+      if (savedStats) {
+        const parsed = JSON.parse(savedStats);
+        parsed.xp = (parsed.xp || 0) + 20;
+        localStorage.setItem('sixth_student_stats', JSON.stringify(parsed));
+      }
+    } catch (e) {}
   };
 
   // Filtered list
@@ -55,23 +73,26 @@ const MistakesPage = () => {
         )}
       </div>
 
-      {/* Header Banner */}
+      {/* Header Banner with Growth Mindset Psychology */}
       <div
-        className="card text-center py-8"
+        className="card text-center py-8 px-6"
         style={{
           backgroundColor: 'var(--bg-secondary)',
-          border: '1px solid var(--border-light)',
-          borderTop: '5px solid var(--accent-error)'
+          border: '1.5px solid var(--border-light)',
+          borderTop: '5px solid var(--accent-success)',
+          borderRadius: 'var(--radius-xl)',
+          boxShadow: 'var(--shadow-sm)'
         }}
       >
-        <span className="badge badge-error mb-2" style={{ fontWeight: 700, padding: '4px 14px', borderRadius: 'var(--radius-full)' }}>
-          📖 智慧個人化錯題本
-        </span>
-        <h1 className="h1 mb-2">
-          錯題複習與觀念盲點消滅
+        <div className="inline-flex items-center gap-1.5 badge badge-success mb-2" style={{ fontWeight: 700, padding: '4px 14px', borderRadius: 'var(--radius-full)' }}>
+          <Sparkles size={14} />
+          <span>成長型思維・專屬觀念加強庫</span>
+        </div>
+        <h1 className="h1 mb-2" style={{ fontSize: 'calc(1.75rem * var(--font-scale))' }}>
+          錯題不是失敗，而是最棒的進步秘密！
         </h1>
         <p className="text-secondary text-sm max-w-lg mx-auto" style={{ lineHeight: 1.7 }}>
-          在單元測驗中答錯的題目會自動收錄在此。弄懂不會的觀念，就是進步最快的方法！
+          在測驗中答錯的題目會自動保存在這裡。只要弄懂並點擊「<strong style={{ color: 'var(--accent-success-text)' }}>我已完全搞懂</strong>」，就能獲得 <strong style={{ color: 'var(--accent-primary)' }}>+20 XP</strong> 並消滅盲點！
         </p>
       </div>
 
@@ -91,8 +112,8 @@ const MistakesPage = () => {
             🧮 數學
           </button>
           <button
-            className={`btn-pill ${filterSubject === 'science' ? 'active' : ''}`}
-            onClick={() => setFilterSubject('science')}
+            className={`btn-pill ${filterSubject === 'sci' ? 'active' : ''}`}
+            onClick={() => setFilterSubject('sci')}
           >
             🔬 自然
           </button>
@@ -106,7 +127,7 @@ const MistakesPage = () => {
             className={`btn-pill ${filterSubject === 'soc' ? 'active' : ''}`}
             onClick={() => setFilterSubject('soc')}
           >
-            🌏 社會
+            🌍 社會
           </button>
           <button
             className={`btn-pill ${filterSubject === 'eng' ? 'active' : ''}`}
@@ -118,95 +139,129 @@ const MistakesPage = () => {
       )}
 
       {/* Mistakes List */}
-      {mistakes.length === 0 ? (
-        <div className="card text-center py-16 flex flex-col items-center gap-4">
-          <div
-            style={{
-              backgroundColor: 'var(--accent-success-soft)',
-              color: 'var(--accent-success)',
-              padding: '22px',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            <CheckCircle2 size={52} />
+      <div className="flex flex-col gap-5">
+        {filteredMistakes.length === 0 ? (
+          <div className="card text-center py-14" style={{ backgroundColor: 'var(--bg-secondary)', borderRadius: 'var(--radius-xl)' }}>
+            <div style={{ fontSize: '3rem', marginBottom: '12px' }}>🎉</div>
+            <h3 className="h3 mb-2" style={{ color: 'var(--text-primary)' }}>
+              太厲害了！目前沒有待複習的錯題！
+            </h3>
+            <p className="text-secondary text-sm max-w-md mx-auto" style={{ lineHeight: 1.6 }}>
+              你的觀念掌握非常扎實！可以前往做一回「全科計時模擬考」挑戰滿分，或到「速記翻翻卡」複習關鍵公式！
+            </p>
+            <div className="flex justify-center gap-3 mt-5 flex-wrap">
+              <Link to="/mock-exam" className="btn-primary text-sm" style={{ padding: '8px 20px' }}>
+                前往模擬考挑戰
+              </Link>
+              <Link to="/flashcards" className="btn-outline text-sm" style={{ padding: '8px 20px' }}>
+                翻翻卡速記複習
+              </Link>
+            </div>
           </div>
-          <h3 className="h3" style={{ margin: 0 }}>太棒了！目前沒有任何待消滅的錯題！</h3>
-          <p className="text-sm text-secondary max-w-md">
-            當你在「單元重點測驗」或「模擬考」答錯時，題目將自動收錄於此，助你考前精準複習。
-          </p>
-          <Link to="/" className="btn-primary mt-2">
-            前往八大學習領域探索
-          </Link>
-        </div>
-      ) : (
-        <div className="flex flex-col gap-5">
-          <div className="flex justify-between items-center text-sm font-bold text-secondary">
-            <span>待複習題目：共 {filteredMistakes.length} 題</span>
-            <span>熟記後點擊「我已徹底搞懂」即可消滅錯題！</span>
-          </div>
-
-          {filteredMistakes.map((m, idx) => (
+        ) : (
+          filteredMistakes.map((item, idx) => (
             <div
               key={idx}
-              className="card flex flex-col gap-4 animate-fade-in"
-              style={{ padding: '24px', borderLeft: '5px solid var(--accent-error)' }}
+              className="card animate-fade-in flex flex-col gap-4"
+              style={{
+                backgroundColor: 'var(--bg-secondary)',
+                border: '1.5px solid var(--border-light)',
+                borderRadius: 'var(--radius-xl)',
+                padding: '24px',
+                boxShadow: 'var(--shadow-sm)'
+              }}
             >
               <div className="flex justify-between items-start flex-wrap gap-2">
-                <span className="badge badge-accent">
-                  單元代號：{m.unitId}
+                <div className="flex items-center gap-2">
+                  <span className="badge badge-accent font-bold">
+                    📌 弱點加強 #{idx + 1}
+                  </span>
+                  <span className="text-xs text-tertiary">單元代碼：{item.unitId}</span>
+                </div>
+                <span className="badge" style={{ backgroundColor: 'var(--accent-warning-soft)', color: 'var(--accent-warning-text)', fontWeight: 700 }}>
+                  搞懂獲 +20 XP
                 </span>
-                <button 
-                  className="btn-outline flex items-center gap-1.5 text-xs" 
-                  style={{ color: 'var(--accent-success-text)', borderColor: 'var(--accent-success)', padding: '6px 14px' }}
-                  onClick={() => handleRemoveSingle(idx)}
+              </div>
+
+              <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.6 }}>
+                {item.question}
+              </div>
+
+              {/* Options */}
+              {item.options && (
+                <div className="flex flex-col gap-2">
+                  {item.options.map((opt, optIdx) => {
+                    const isCorrect = optIdx === item.answerIndex;
+                    return (
+                      <div
+                        key={optIdx}
+                        className="p-3 rounded-lg flex items-center justify-between text-sm"
+                        style={{
+                          backgroundColor: isCorrect ? 'var(--accent-success-soft)' : 'var(--bg-tertiary)',
+                          border: isCorrect ? '1.5px solid var(--accent-success)' : '1px solid var(--border-light)',
+                          color: isCorrect ? 'var(--accent-success-text)' : 'var(--text-secondary)',
+                          fontWeight: isCorrect ? 700 : 500
+                        }}
+                      >
+                        <span>{opt}</span>
+                        {isCorrect && (
+                          <span className="badge badge-success text-xs font-bold">
+                            ✓ 正確答案
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Detailed Explanation */}
+              {item.explanation && (
+                <div
+                  style={{
+                    backgroundColor: 'var(--bg-tertiary)',
+                    padding: '14px 18px',
+                    borderRadius: 'var(--radius-md)',
+                    borderLeft: '4px solid var(--accent-primary)',
+                    fontSize: '0.9rem',
+                    lineHeight: 1.65,
+                    color: 'var(--text-primary)'
+                  }}
                 >
-                  <CheckCircle2 size={16} /> 我已徹底搞懂 (消滅此題)
+                  <strong style={{ color: 'var(--accent-primary)' }}>💡 名師觀念精解：</strong>
+                  <div style={{ marginTop: '4px' }}>{item.explanation}</div>
+                </div>
+              )}
+
+              {/* Action Buttons */}
+              <div className="flex justify-between items-center pt-3 border-t flex-wrap gap-2" style={{ borderTop: '1px solid var(--border-light)' }}>
+                <Link
+                  to={`/lesson/${item.unitId}`}
+                  className="text-xs font-bold text-secondary hover:text-primary flex items-center gap-1"
+                >
+                  📖 重新閱讀本課圖解教學
+                </Link>
+
+                <button
+                  onClick={() => handleRemoveSingle(idx)}
+                  className="btn-primary text-xs flex items-center gap-1.5"
+                  style={{
+                    backgroundColor: 'var(--accent-success)',
+                    borderColor: 'var(--accent-success)',
+                    padding: '8px 18px',
+                    color: 'white',
+                    fontWeight: 700,
+                    borderRadius: 'var(--radius-md)'
+                  }}
+                >
+                  <CheckCircle2 size={16} />
+                  <span>我已完全弄懂！消滅錯題 (+20 XP)</span>
                 </button>
               </div>
-
-              <h3 className="h3" style={{ fontSize: 'calc(1.15rem * var(--font-scale))', margin: 0 }}>
-                {idx + 1}. {m.question}
-              </h3>
-
-              <div className="flex flex-col gap-2">
-                {m.options.map((opt, optI) => (
-                  <div
-                    key={optI}
-                    style={{
-                      padding: '12px 18px',
-                      borderRadius: 'var(--radius-sm)',
-                      fontSize: '0.92rem',
-                      backgroundColor: optI === m.answerIndex ? 'var(--accent-success-soft)' : 'var(--bg-tertiary)',
-                      color: optI === m.answerIndex ? 'var(--accent-success-text)' : 'var(--text-secondary)',
-                      fontWeight: optI === m.answerIndex ? 700 : 400,
-                      border: optI === m.answerIndex ? '1px solid var(--accent-success)' : '1px solid var(--border-light)'
-                    }}
-                  >
-                    <span>{opt}</span> {optI === m.answerIndex && ' ✔ (正確解答)'}
-                  </div>
-                ))}
-              </div>
-
-              <div
-                style={{
-                  backgroundColor: 'var(--bg-tertiary)',
-                  padding: '16px 18px',
-                  borderRadius: 'var(--radius-md)',
-                  border: '1px solid var(--border-light)'
-                }}
-              >
-                <strong style={{ color: 'var(--text-primary)', fontSize: '0.9rem' }}>💡 觀念名師詳解：</strong>
-                <p className="text-sm text-secondary" style={{ marginTop: '4px', lineHeight: 1.65 }}>
-                  {m.explanation}
-                </p>
-              </div>
             </div>
-          ))}
-        </div>
-      )}
+          ))
+        )}
+      </div>
     </div>
   );
 };

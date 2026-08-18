@@ -1,16 +1,29 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { flashcardsData } from '../data/flashcardsData';
-import { RotateCw, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { RotateCw, CheckCircle2, ChevronLeft, ChevronRight, ArrowLeft, Zap, Sparkles, Trophy, RotateCcw } from 'lucide-react';
+import confetti from 'canvas-confetti';
 import { playSound } from '../utils/soundEffects';
 
 const FlashcardsPage = () => {
   const [currentSubject, setCurrentSubject] = useState('math');
   const [cardIndex, setCardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [masteredCount, setMasteredCount] = useState(0);
+  const [masteredIds, setMasteredIds] = useState([]);
 
   const cards = flashcardsData[currentSubject] || [];
-  const currentCard = cards[cardIndex];
+  const currentCard = cards[cardIndex] || cards[0];
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(`sixth_mastered_cards_${currentSubject}`);
+      if (saved) {
+        setMasteredIds(JSON.parse(saved));
+      } else {
+        setMasteredIds([]);
+      }
+    } catch (e) {}
+  }, [currentSubject]);
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
@@ -30,9 +43,40 @@ const FlashcardsPage = () => {
   };
 
   const handleMastered = () => {
-    setMasteredCount(c => c + 1);
-    playSound('correct');
+    if (!currentCard) return;
+    if (!masteredIds.includes(currentCard.id)) {
+      const updated = [...masteredIds, currentCard.id];
+      setMasteredIds(updated);
+      localStorage.setItem(`sixth_mastered_cards_${currentSubject}`, JSON.stringify(updated));
+
+      // XP reward
+      try {
+        const savedStats = localStorage.getItem('sixth_student_stats');
+        if (savedStats) {
+          const parsed = JSON.parse(savedStats);
+          parsed.xp = (parsed.xp || 0) + 10;
+          localStorage.setItem('sixth_student_stats', JSON.stringify(parsed));
+        }
+      } catch (e) {}
+
+      playSound('correct');
+
+      if (updated.length === cards.length) {
+        confetti({ particleCount: 80, spread: 70, origin: { y: 0.6 } });
+        playSound('levelup');
+      }
+    } else {
+      playSound('click');
+    }
     handleNext();
+  };
+
+  const handleResetSubject = () => {
+    localStorage.removeItem(`sixth_mastered_cards_${currentSubject}`);
+    setMasteredIds([]);
+    setCardIndex(0);
+    setIsFlipped(false);
+    playSound('click');
   };
 
   // Keyboard navigation
@@ -57,18 +101,37 @@ const FlashcardsPage = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [cards.length]);
 
+  const isCurrentMastered = currentCard && masteredIds.includes(currentCard.id);
+  const masteryPercent = cards.length > 0 ? Math.round((masteredIds.length / cards.length) * 100) : 0;
+
   return (
     <div className="flex flex-col gap-6 py-4 max-w-2xl mx-auto">
+      {/* Top Navigation */}
+      <div className="flex justify-between items-center">
+        <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
+          <ArrowLeft size={16} /> 返回課程首頁
+        </Link>
+        {masteredIds.length > 0 && (
+          <button 
+            onClick={handleResetSubject}
+            className="text-xs text-secondary hover:text-primary flex items-center gap-1"
+          >
+            <RotateCcw size={12} />
+            <span>重置熟練度</span>
+          </button>
+        )}
+      </div>
+
       {/* Header */}
       <div className="text-center">
         <span className="badge badge-warning mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
           ⚡ 考前 3 分鐘・高頻公式與關鍵觀念速記卡
         </span>
-        <h1 className="h1 mb-2">
+        <h1 className="h1 mb-2" style={{ fontSize: 'calc(1.8rem * var(--font-scale))' }}>
           知識記憶翻翻卡 (Flashcards)
         </h1>
         <p className="text-secondary text-sm" style={{ lineHeight: 1.6 }}>
-          點擊卡片或按「空白鍵 / 左右箭頭」即可快速翻看公式詳解與核心解析！
+          點擊卡片或按「空白鍵」翻看背面詳解，按「左右箭頭」切換卡片！
         </p>
       </div>
 
@@ -78,101 +141,126 @@ const FlashcardsPage = () => {
           className={`btn-pill ${currentSubject === 'math' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('math'); setCardIndex(0); setIsFlipped(false); }}
         >
-          🧮 數學公式卡 ({flashcardsData.math.length})
+          🧮 數學公式 ({flashcardsData.math.length})
         </button>
         <button
           className={`btn-pill ${currentSubject === 'science' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('science'); setCardIndex(0); setIsFlipped(false); }}
         >
-          🔬 自然觀念卡 ({flashcardsData.science.length})
+          🔬 自然觀念 ({flashcardsData.science.length})
         </button>
         <button
           className={`btn-pill ${currentSubject === 'mandarin' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('mandarin'); setCardIndex(0); setIsFlipped(false); }}
         >
-          📖 國語重點卡 ({flashcardsData.mandarin.length})
+          📖 國語重點 ({flashcardsData.mandarin.length})
         </button>
         <button
           className={`btn-pill ${currentSubject === 'english' ? 'active' : ''}`}
           onClick={() => { setCurrentSubject('english'); setCardIndex(0); setIsFlipped(false); }}
         >
-          🇬🇧 英語句型卡 ({flashcardsData.english.length})
+          🇬🇧 英語句型 ({flashcardsData.english.length})
         </button>
       </div>
 
-      {/* Flashcard Box */}
-      {cards.length > 0 && currentCard && (
-        <div className="flex flex-col items-center gap-5">
-          <div className="flex justify-between items-center w-full text-sm text-secondary px-2">
-            <span>卡片進度：<strong>{cardIndex + 1}</strong> / {cards.length}</span>
-            <span className="badge badge-accent">標籤：{currentCard.tag}</span>
-            <span style={{ color: 'var(--accent-success)', fontWeight: 700 }}>已熟記：{masteredCount} 次</span>
-          </div>
+      {/* Mastery Progress Bar */}
+      <div className="card p-3" style={{ backgroundColor: 'var(--bg-secondary)', borderRadius: 'var(--radius-lg)' }}>
+        <div className="flex justify-between text-xs mb-1.5 font-bold" style={{ color: 'var(--text-secondary)' }}>
+          <span>熟練進度：已掌握 {masteredIds.length} / {cards.length} 張 ({masteryPercent}%)</span>
+          <span style={{ color: masteryPercent === 100 ? 'var(--accent-success)' : 'var(--accent-warning-text)' }}>
+            {masteryPercent === 100 ? '🎉 全部熟練掌握！' : '⭐ 每掌握 1 張獲 +10 XP'}
+          </span>
+        </div>
+        <div style={{ height: '6px', backgroundColor: 'var(--bg-tertiary)', borderRadius: 'var(--radius-full)', overflow: 'hidden' }}>
+          <div 
+            style={{ 
+              width: `${masteryPercent}%`, 
+              height: '100%', 
+              backgroundColor: masteryPercent === 100 ? 'var(--accent-success)' : 'var(--accent-warning)',
+              borderRadius: 'var(--radius-full)',
+              transition: 'width 0.3s ease'
+            }} 
+          />
+        </div>
+      </div>
 
-          {/* Interactive Flip Card */}
+      {/* The Flashcard */}
+      {currentCard && (
+        <div className="flex flex-col items-center gap-4">
           <div
+            className="card cursor-pointer select-none animate-fade-in w-full text-center flex flex-col justify-between"
             onClick={handleFlip}
-            className="card flex flex-col items-center justify-center text-center cursor-pointer select-none"
             style={{
-              width: '100%',
-              minHeight: '280px',
-              padding: '36px 28px',
-              backgroundColor: isFlipped ? 'var(--accent-soft)' : 'var(--bg-secondary)',
-              border: isFlipped ? '2px solid var(--accent-primary)' : '1px solid var(--border-strong)',
-              boxShadow: 'var(--shadow-md)',
+              minHeight: '260px',
+              padding: '32px 28px',
               borderRadius: 'var(--radius-xl)',
-              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+              backgroundColor: isFlipped ? 'var(--bg-secondary)' : 'var(--bg-tertiary)',
+              border: isFlipped ? '2px solid var(--accent-primary)' : '1.5px solid var(--border-light)',
+              boxShadow: 'var(--shadow-md)',
+              transition: 'all var(--transition-normal)'
             }}
-            role="button"
-            tabIndex={0}
-            aria-label="點擊翻面卡片"
           >
-            <div
-              className="badge mb-4"
-              style={{
-                backgroundColor: isFlipped ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
-                color: isFlipped ? 'var(--text-inverse)' : 'var(--text-secondary)',
-                fontWeight: 700,
-                padding: '4px 12px'
-              }}
-            >
-              {isFlipped ? '✨ 正確解答與重點詳解' : '❓ 點擊卡片翻看答案'}
+            {/* Top Indicator */}
+            <div className="flex justify-between items-center text-xs text-secondary mb-2">
+              <span className="badge" style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-light)', fontWeight: 700 }}>
+                {currentCard.tag}
+              </span>
+              <span className="font-bold">
+                第 {cardIndex + 1} / {cards.length} 張 {isCurrentMastered && '✅ 已掌握'}
+              </span>
             </div>
 
-            <div
-              style={{
-                fontSize: isFlipped ? 'calc(1.2rem * var(--font-scale))' : 'calc(1.45rem * var(--font-scale))',
-                fontWeight: 700,
-                color: 'var(--text-primary)',
-                whiteSpace: 'pre-line',
-                lineHeight: 1.7
-              }}
-            >
-              {isFlipped ? currentCard.back : currentCard.front}
+            {/* Main Content */}
+            <div className="py-6 flex flex-col items-center justify-center" style={{ flex: 1 }}>
+              <div 
+                style={{ 
+                  fontSize: isFlipped ? '1.15rem' : '1.35rem', 
+                  fontWeight: 700, 
+                  color: isFlipped ? 'var(--accent-primary)' : 'var(--text-primary)',
+                  lineHeight: 1.6,
+                  whiteSpace: 'pre-line'
+                }}
+              >
+                {isFlipped ? currentCard.back : currentCard.front}
+              </div>
             </div>
 
-            <div className="flex items-center gap-1 text-xs text-secondary mt-6" style={{ opacity: 0.75 }}>
-              <RotateCw size={14} />
-              <span>點擊或按空白鍵翻面</span>
+            {/* Bottom Hint */}
+            <div className="flex justify-center items-center gap-1.5 text-xs text-tertiary mt-2">
+              <RotateCw size={13} />
+              <span>點擊卡片翻面查看 {isFlipped ? '題目' : '答案與公式'}</span>
             </div>
           </div>
 
-          {/* Bottom Navigation Controls */}
+          {/* Controls */}
           <div className="flex justify-between items-center w-full gap-3 flex-wrap">
-            <button className="btn-outline flex items-center gap-1.5" onClick={handlePrev}>
-              <ChevronLeft size={18} /> 上一張
-            </button>
-
-            <button 
-              className="btn-primary flex items-center gap-2" 
-              style={{ backgroundColor: 'var(--accent-success)', borderColor: 'var(--accent-success)' }}
-              onClick={handleMastered}
+            <button
+              onClick={handlePrev}
+              className="btn-outline flex items-center gap-1"
+              style={{ padding: '10px 18px' }}
             >
-              <CheckCircle2 size={18} /> 我已經熟記了 (+10 XP)
+              <ChevronLeft size={16} /> 上一張
             </button>
 
-            <button className="btn-outline flex items-center gap-1.5" onClick={handleNext}>
-              下一張 <ChevronRight size={18} />
+            <button
+              onClick={handleMastered}
+              className="btn-primary flex items-center gap-2 font-bold"
+              style={{ 
+                padding: '10px 24px', 
+                backgroundColor: isCurrentMastered ? 'var(--accent-success)' : 'var(--accent-warning)',
+                borderColor: isCurrentMastered ? 'var(--accent-success)' : 'var(--accent-warning)'
+              }}
+            >
+              <CheckCircle2 size={18} />
+              <span>{isCurrentMastered ? '已掌握 (再看下一張)' : '我記住了！(+10 XP)'}</span>
+            </button>
+
+            <button
+              onClick={handleNext}
+              className="btn-outline flex items-center gap-1"
+              style={{ padding: '10px 18px' }}
+            >
+              下一張 <ChevronRight size={16} />
             </button>
           </div>
         </div>

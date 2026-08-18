@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { playSound, toggleMute, getMuteState } from '../utils/soundEffects';
@@ -31,6 +31,7 @@ const QuizPage = () => {
   const handleSubmit = () => {
     if (selectedOption === null) return;
     
+    const question = questions[currentQ];
     const isCorrect = selectedOption === question.answerIndex;
     if (isCorrect) {
       setScore(s => s + 1);
@@ -75,6 +76,13 @@ const QuizPage = () => {
         const currentStats = saved ? JSON.parse(saved) : { xp: 100, completedUnits: 0, streak: 1, badges: ['數學小博士', '氣象小偵探'] };
         currentStats.xp += 50;
         currentStats.completedUnits += 1;
+        
+        // Track completed unit id
+        if (!currentStats.completedUnitIds) currentStats.completedUnitIds = [];
+        if (!currentStats.completedUnitIds.includes(unitId)) {
+          currentStats.completedUnitIds.push(unitId);
+        }
+
         localStorage.setItem('sixth_student_stats', JSON.stringify(currentStats));
       } catch (e) {}
 
@@ -123,7 +131,11 @@ const QuizPage = () => {
         style={{
           borderTop: '6px solid var(--accent-primary)',
           backgroundColor: 'var(--bg-secondary)',
-          padding: '36px 28px'
+          borderRadius: 'var(--radius-xl)',
+          border: '1.5px solid var(--border-light)',
+          borderTop: '6px solid var(--accent-primary)',
+          padding: '36px 28px',
+          boxShadow: 'var(--shadow-md)'
         }}
       >
         <div
@@ -148,7 +160,7 @@ const QuizPage = () => {
             觀念檢核得分：{percentage} 分
           </h2>
           <p className="text-secondary text-sm" style={{ lineHeight: 1.7 }}>
-            共 {questions.length} 題，答對 {score} 題。{percentage >= 80 ? '🌟 太厲害了！你已徹底掌握本單元核心素養！' : '💪 繼續加油！錯題已自動收錄至「錯題筆記本」，方便考前隨時複習！'}
+            共 {questions.length} 題，答對 {score} 題。{percentage >= 80 ? '🌟 太厲害了！你已徹底掌握本單元核心素養！' : '💪 答錯的題目已自動幫你收錄至「錯題筆記本」，搞懂它就是最大的進步！'}
           </p>
         </div>
 
@@ -167,9 +179,8 @@ const QuizPage = () => {
                     padding: '14px 18px',
                     backgroundColor: 'var(--bg-tertiary)',
                     borderRadius: 'var(--radius-md)',
-                    borderLeft: ans?.correct ? '4px solid var(--accent-success)' : '4px solid var(--accent-error)',
                     border: '1px solid var(--border-light)',
-                    borderLeftWidth: '4px',
+                    borderLeft: ans?.correct ? '4px solid var(--accent-success)' : '4px solid var(--accent-error)',
                     fontSize: '0.9rem'
                   }}
                 >
@@ -229,13 +240,13 @@ const QuizPage = () => {
         </button>
       </div>
 
-      <div className="card flex flex-col gap-6" style={{ padding: '32px' }}>
+      <div className="card flex flex-col gap-6" style={{ padding: '32px', borderRadius: 'var(--radius-xl)', border: '1.5px solid var(--border-light)', backgroundColor: 'var(--bg-secondary)' }}>
         {/* Progress Header */}
         <div className="flex justify-between items-center text-sm" style={{ color: 'var(--text-secondary)' }}>
           <span className="badge badge-accent" style={{ fontWeight: 700 }}>
             ✏️ 單元重點測驗・觀念驗收
           </span>
-          <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>題目：{currentQ + 1} / {questions.length}</span>
+          <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>第 {currentQ + 1} / {questions.length} 題</span>
         </div>
 
         {/* Progress Bar */}
@@ -310,7 +321,7 @@ const QuizPage = () => {
           })}
         </div>
 
-        {/* Explanation Card when submitted */}
+        {/* Growth Mindset Explanation Banner when submitted */}
         {showResult && (
           <div 
             className="animate-fade-in"
@@ -318,16 +329,26 @@ const QuizPage = () => {
               padding: '18px 20px', 
               backgroundColor: 'var(--bg-tertiary)', 
               borderRadius: 'var(--radius-md)', 
-              borderLeft: '4px solid var(--accent-primary)',
+              borderLeft: selectedOption === question.answerIndex ? '4px solid var(--accent-success)' : '4px solid var(--accent-warning)',
               border: '1px solid var(--border-light)',
               borderLeftWidth: '4px'
             }}
           >
-            <p style={{ fontWeight: 700, marginBottom: '6px', color: 'var(--text-primary)', fontSize: '0.95rem' }}>
-              💡 觀念名師詳解：
-            </p>
-            <p className="text-sm text-secondary" style={{ lineHeight: 1.7 }}>
-              {question.explanation}
+            <div className="flex items-center gap-1.5 font-bold mb-1.5" style={{ fontSize: '0.95rem', color: selectedOption === question.answerIndex ? 'var(--accent-success-text)' : 'var(--accent-warning-text)' }}>
+              {selectedOption === question.answerIndex ? (
+                <>
+                  <Sparkles size={16} />
+                  <span>太棒了！觀念精準無誤！</span>
+                </>
+              ) : (
+                <>
+                  <Heart size={16} />
+                  <span>沒關係！這題很容易踩陷阱，已幫你存入錯題本！</span>
+                </>
+              )}
+            </div>
+            <p className="text-sm text-secondary" style={{ lineHeight: 1.7, margin: 0 }}>
+              <strong style={{ color: 'var(--text-primary)' }}>名師解題觀念：</strong> {question.explanation}
             </p>
           </div>
         )}
@@ -342,7 +363,8 @@ const QuizPage = () => {
               style={{
                 opacity: selectedOption === null ? 0.4 : 1,
                 padding: '12px 28px',
-                fontSize: '1rem'
+                fontSize: '1rem',
+                borderRadius: 'var(--radius-md)'
               }}
             >
               確認送出答案
@@ -354,7 +376,8 @@ const QuizPage = () => {
               style={{
                 padding: '12px 28px',
                 fontSize: '1rem',
-                backgroundColor: 'var(--accent-primary)'
+                backgroundColor: 'var(--accent-primary)',
+                borderRadius: 'var(--radius-md)'
               }}
             >
               {isLastQuestion ? '查看測驗總成績與詳解 →' : '下一題 →'}

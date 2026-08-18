@@ -17,7 +17,12 @@ import {
   Copy, 
   Eye, 
   Flame,
-  Bookmark
+  Bookmark,
+  ChevronDown,
+  ChevronUp,
+  Smile,
+  ShieldCheck,
+  Award
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import './LessonPage.css';
@@ -70,6 +75,7 @@ const LessonPage = () => {
   const [copied, setCopied] = useState(false);
   const [copiedCodeId, setCopiedCodeId] = useState(null);
   const [highlightMode, setHighlightMode] = useState(true);
+  const [quickSummaryOpen, setQuickSummaryOpen] = useState(true);
 
   // Find unit metadata and subject
   let currentUnit = null;
@@ -150,13 +156,14 @@ const LessonPage = () => {
         aria-hidden="true"
       />
 
-      {/* Top Navigation & Control Bar */}
+      {/* Top Navigation & Fast Control Bar */}
       <div
         className="card mb-4 flex justify-between items-center flex-wrap gap-3"
         style={{
           padding: '12px 18px',
           backgroundColor: 'var(--bg-secondary)',
-          border: '1px solid var(--border-light)'
+          border: '1.5px solid var(--border-light)',
+          borderRadius: 'var(--radius-lg)'
         }}
       >
         <button 
@@ -182,7 +189,7 @@ const LessonPage = () => {
           )}
           <span className="badge badge-accent flex items-center gap-1">
             <Flame size={13} />
-            高頻考點精講
+            段考常考圖解
           </span>
           <span className="badge badge-success">
             ✨ +10% 現代素養
@@ -198,14 +205,14 @@ const LessonPage = () => {
               padding: '6px 12px', 
               minHeight: '34px', 
               fontSize: '0.8rem',
-              borderColor: highlightMode ? 'var(--accent-primary)' : 'var(--border-light)',
-              backgroundColor: highlightMode ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
-              color: highlightMode ? 'var(--accent-primary)' : 'var(--text-secondary)'
+              borderColor: highlightMode ? 'var(--accent-warning)' : 'var(--border-light)',
+              backgroundColor: highlightMode ? 'var(--accent-warning-soft)' : 'transparent',
+              color: highlightMode ? 'var(--accent-warning-text)' : 'var(--text-secondary)'
             }}
             title="切換關鍵公式與重點色彩高亮"
           >
             <Lightbulb size={14} style={{ color: highlightMode ? '#f59e0b' : 'inherit' }} />
-            <span>{highlightMode ? '重點高亮：開啟' : '重點高亮：一般'}</span>
+            <span>{highlightMode ? '重點螢光筆：已開啟' : '重點螢光筆：關閉'}</span>
           </button>
 
           <button
@@ -220,39 +227,64 @@ const LessonPage = () => {
         </div>
       </div>
 
-      {/* Unit Overview & Key Concepts Quick Card */}
+      {/* 🎯 30-Second Scaffolding Quick Concepts Card */}
       {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
         <div 
-          className="card mb-4" 
+          className="card mb-5 overflow-hidden" 
           style={{ 
-            padding: '16px 20px', 
-            background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(16, 185, 129, 0.04) 100%)',
-            border: '1px solid var(--border-light)',
-            borderLeft: '4px solid var(--accent-primary)'
+            padding: '0',
+            borderRadius: 'var(--radius-lg)',
+            border: '1.5px solid var(--border-light)',
+            backgroundColor: 'var(--bg-secondary)',
+            boxShadow: 'var(--shadow-sm)'
           }}
         >
-          <div className="flex items-center gap-2 mb-2 text-sm" style={{ fontWeight: 700, color: 'var(--accent-primary)' }}>
-            <Bookmark size={16} />
-            <span>🎯 本單元核心考點與學習關鍵字</span>
+          <div 
+            onClick={() => setQuickSummaryOpen(!quickSummaryOpen)}
+            className="flex justify-between items-center cursor-pointer select-none"
+            style={{
+              padding: '12px 18px',
+              backgroundColor: 'var(--bg-tertiary)',
+              borderBottom: quickSummaryOpen ? '1px solid var(--border-light)' : 'none'
+            }}
+          >
+            <div className="flex items-center gap-2 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
+              <Smile size={16} style={{ color: 'var(--accent-primary)' }} />
+              <span>💡 30 秒安心導讀・核心考點精華速覽</span>
+              <span className="badge badge-success" style={{ fontSize: '0.7rem' }}>零基礎必看</span>
+            </div>
+            <div className="flex items-center gap-1 text-xs text-secondary">
+              <span>{quickSummaryOpen ? '收合' : '展開'}</span>
+              {quickSummaryOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </div>
           </div>
-          <div className="flex flex-wrap gap-2">
-            {currentUnit.keyConcepts.map((concept, idx) => (
-              <span 
-                key={idx} 
-                className="badge" 
-                style={{ 
-                  backgroundColor: 'var(--bg-secondary)', 
-                  border: '1px solid var(--border-light)',
-                  color: 'var(--text-primary)',
-                  fontWeight: 600,
-                  fontSize: '0.82rem',
-                  padding: '4px 10px'
-                }}
-              >
-                ✨ {concept}
-              </span>
-            ))}
-          </div>
+
+          {quickSummaryOpen && (
+            <div style={{ padding: '16px 20px', background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(16, 185, 129, 0.03) 100%)' }}>
+              <p className="text-xs text-secondary mb-2.5">
+                只要掌握這幾個核心關鍵詞，段考題就能迎刃而解！點選下方圖解教學即可深入閱讀：
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {currentUnit.keyConcepts.map((concept, idx) => (
+                  <span 
+                    key={idx} 
+                    className="badge" 
+                    style={{ 
+                      backgroundColor: 'var(--bg-secondary)', 
+                      border: '1px solid var(--border-strong)',
+                      color: 'var(--text-primary)',
+                      fontWeight: 700,
+                      fontSize: '0.82rem',
+                      padding: '5px 12px',
+                      boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
+                    }}
+                  >
+                    ⭐ {concept}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -264,7 +296,8 @@ const LessonPage = () => {
             padding: '16px',
             overflow: 'hidden',
             backgroundColor: 'var(--bg-secondary)',
-            border: '1px solid var(--border-light)'
+            border: '1.5px solid var(--border-light)',
+            borderRadius: 'var(--radius-lg)'
           }}
         >
           <div className="flex items-center justify-between mb-2 text-sm">
@@ -297,7 +330,9 @@ const LessonPage = () => {
           style={{
             padding: '36px',
             boxShadow: 'var(--shadow-sm)',
-            backgroundColor: 'var(--bg-secondary)'
+            backgroundColor: 'var(--bg-secondary)',
+            borderRadius: 'var(--radius-xl)',
+            border: '1.5px solid var(--border-light)'
           }}
         >
           <ReactMarkdown
@@ -311,13 +346,6 @@ const LessonPage = () => {
               ),
               code: ({ node, inline, className, children, ...props }) => {
                 const textContent = String(children).replace(/\n$/, '');
-                const isDiagram = textContent.includes('─') || 
-                                  textContent.includes('│') || 
-                                  textContent.includes('┌') || 
-                                  textContent.includes('▼') || 
-                                  textContent.includes('【') ||
-                                  textContent.includes('──') ||
-                                  textContent.includes('|');
 
                 if (inline) {
                   return (
@@ -332,7 +360,7 @@ const LessonPage = () => {
                     <div className="diagram-header flex items-center justify-between">
                       <div className="flex items-center gap-2 text-xs font-bold" style={{ color: 'var(--accent-primary)' }}>
                         <BookOpen size={14} />
-                        <span>🎨 視覺概念模型與圖解架構 (Visual Diagram)</span>
+                        <span>🎨 視覺概念模型與圖解架構 (Visual Concept Diagram)</span>
                       </div>
                       <button
                         onClick={() => handleCopyDiagram(textContent, textContent.slice(0, 15))}
@@ -367,22 +395,25 @@ const LessonPage = () => {
         </div>
       )}
 
-      {/* Bottom Action Footer */}
+      {/* Bottom Action Footer: Growth-Mindset Celebration Card */}
       <div
         className="card mt-8 flex justify-between items-center flex-wrap gap-4"
         style={{
-          padding: '24px',
+          padding: '24px 28px',
           backgroundColor: 'var(--bg-secondary)',
-          border: '1px solid var(--border-light)',
-          borderTop: '4px solid var(--accent-success)'
+          border: '1.5px solid var(--border-light)',
+          borderTop: '4px solid var(--accent-success)',
+          borderRadius: 'var(--radius-xl)',
+          boxShadow: 'var(--shadow-sm)'
         }}
       >
         <div>
-          <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
-            🎯 本單元核心概念已融會貫通？
+          <div className="flex items-center gap-2" style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text-primary)' }}>
+            <Award size={20} style={{ color: 'var(--accent-success)' }} />
+            <span>🎉 本課核心觀念已融會貫通！</span>
           </div>
-          <div className="text-sm text-secondary" style={{ marginTop: '4px' }}>
-            立即透過即時互動測驗檢驗學習成效，並獲取名師詳解與 +50 XP 經驗值！
+          <div className="text-sm text-secondary" style={{ marginTop: '4px', lineHeight: 1.6 }}>
+            太棒了！只要花 2 分鐘做 3 道隨堂小測驗，就能賺取 <strong style={{ color: 'var(--accent-success-text)' }}>+50 XP 經驗值</strong> 並解鎖榮譽勳章！
           </div>
         </div>
 
@@ -393,7 +424,7 @@ const LessonPage = () => {
               target="_blank" 
               rel="noreferrer" 
               className="btn-outline text-sm flex items-center gap-1"
-              style={{ padding: '10px 18px' }}
+              style={{ padding: '10px 18px', borderRadius: 'var(--radius-md)' }}
               title="前往均一教育平台觀看相關教學影音"
             >
               <span>📺 均一影音輔助</span>
@@ -405,14 +436,17 @@ const LessonPage = () => {
             className="btn-primary flex items-center gap-2" 
             onClick={() => navigate(`/quiz/${unitId}`)}
             style={{
-              padding: '10px 24px',
+              padding: '12px 26px',
               fontSize: '1rem',
+              fontWeight: 700,
               backgroundColor: 'var(--accent-success)',
               borderColor: 'var(--accent-success)',
-              color: 'white'
+              color: 'white',
+              borderRadius: 'var(--radius-md)',
+              boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)'
             }}
           >
-            <CheckCircle2 size={18} /> 進入觀念重點測驗 →
+            <CheckCircle2 size={18} /> 進入觀念小測驗 (+50 XP) →
           </button>
         </div>
       </div>
