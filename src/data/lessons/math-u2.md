@@ -26,6 +26,8 @@
 
 ## 🔑 核心觀念 1：分數除以整數——平分的幾何意義
 
+![圖解說明](./images/math_u2_concept1.jpg)
+
 ### 1. 概念與核心公式
 分數除以整數，代表「把一個分數平均分成更多等份」，也就是 $\textcolor{#e91e63}{\textbf{分母乘上該整數（切得更細）}}$，或者 $\textcolor{#2196f3}{\textbf{分子直接除以該整數（若能整除）}}$：
 
@@ -56,6 +58,8 @@ $$ \frac{6}{7} \div 3 = \frac{6 \div 3}{7} = \textcolor{#2196f3}{\textbf{\frac{2
 
 ## 🔑 核心觀念 2：分數除以分數——為什麼要「顛倒相乘」？
 
+![圖解說明](./images/math_u2_concept2.jpg)
+
 ### 1. 什麼是「倒數 (Reciprocal)」？
 如果兩個數相乘的結果等於 $\textcolor{#d32f2f}{\textbf{1}}$，我們就稱這兩個數「$\textcolor{#e91e63}{\textbf{互為倒數}}$」：
 - 正整數 $3$ 的倒數是 $\textcolor{#2196f3}{\textbf{\frac{1}{3}}}$（因為 $3 \times \frac{1}{3} = 1$）。
@@ -79,6 +83,8 @@ $$ \frac{4}{5} \div \frac{2}{3} = \frac{4}{5} \times \frac{3}{2} = \frac{\overse
 ---
 
 ## 🔑 核心觀念 3：帶分數除法——「化假分數」為先
+
+![圖解說明](./images/math_u2_concept3.jpg)
 
 遇到帶分數時，$\textcolor{#d32f2f}{\textbf{絕對不能把整數與整數相除、分數與分數相除！}}$
 標準解題三部曲：

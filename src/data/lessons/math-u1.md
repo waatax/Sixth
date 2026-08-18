@@ -97,6 +97,8 @@
 
 ## 🔑 核心觀念 3：公倍數與最小公倍數 (LCM)
 
+![圖解說明](./images/math_u1_concept3.jpg)
+
 - $\textcolor{#2196f3}{\textbf{公倍數}}$：兩個或多個整數共同擁有的倍數（公倍數有無限多個！）。
 - $\textcolor{#e91e63}{\textbf{最小公倍數 (LCM, Least Common Multiple)}}$：所有正公倍數中最小的一個。
   - 例如：
@@ -115,6 +117,8 @@
 ---
 
 ## 🔑 核心觀念 4：解題神兵利器——短除法大作戰
+
+![圖解說明](./images/math_u1_concept4.jpg)
 
 短除法是快速求出兩數（或三數）GCD 與 LCM 的標準利器！
 
@@ -167,6 +171,8 @@
 ---
 
 ## 🔑 核心觀念 5：生活應用題判斷法——GCD 還是 LCM？
+
+![圖解說明](./images/math_u1_concept5.jpg)
 
 ### 📊 應用題解題決策指引表
 
