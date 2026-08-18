@@ -42,29 +42,46 @@ const Header = () => {
       >
         <div className="container flex justify-between items-center py-2" style={{ minHeight: 'var(--header-height)', gap: '12px' }}>
           {/* Left Brand Logo */}
-          <Link to="/" className="flex items-center gap-2.5 select-none" style={{ textDecoration: 'none', flexShrink: 0 }}>
+          <Link to="/" className="flex items-center gap-3 select-none" style={{ textDecoration: 'none', flexShrink: 0 }}>
             <div
               style={{
-                backgroundColor: 'var(--accent-soft)',
-                color: 'var(--accent-primary)',
-                padding: '7px',
-                borderRadius: 'var(--radius-md)',
+                background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)',
+                color: 'white',
+                width: '42px',
+                height: '42px',
+                borderRadius: '13px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: 'var(--shadow-sm)'
+                boxShadow: '0 4px 12px rgba(99, 102, 241, 0.35)',
+                position: 'relative',
+                fontSize: '1.35rem',
+                flexShrink: 0
               }}
             >
-              <BookOpen size={22} />
+              <span>🎓</span>
+              <span 
+                style={{
+                  position: 'absolute',
+                  bottom: '-2px',
+                  right: '-3px',
+                  fontSize: '0.8rem',
+                  filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))'
+                }}
+              >
+                ✨
+              </span>
             </div>
             <div>
               <div className="flex items-center gap-1.5">
                 <span
                   style={{
                     margin: 0,
-                    fontSize: 'calc(1.1rem * var(--font-scale))',
-                    fontWeight: 800,
-                    color: 'var(--text-primary)',
+                    fontSize: 'calc(1.15rem * var(--font-scale))',
+                    fontWeight: 900,
+                    background: 'linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-purple) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
                     letterSpacing: '-0.02em',
                     display: 'block',
                     lineHeight: 1.2,
@@ -73,12 +90,12 @@ const Header = () => {
                 >
                   小六學習護照
                 </span>
-                <span className="badge badge-accent" style={{ fontSize: '0.68rem', padding: '1px 5px', whiteSpace: 'nowrap' }}>
-                  108課綱
+                <span className="badge badge-accent" style={{ fontSize: '0.68rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
+                  108課綱 🌱
                 </span>
               </div>
               <span style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', display: 'block', marginTop: '1px', whiteSpace: 'nowrap' }}>
-                全科目自主學習平台
+                全科目圖解自主學習平台
               </span>
             </div>
           </Link>

@@ -61,18 +61,42 @@ const SubjectPage = () => {
         }}
       >
         <div className="flex justify-between items-start flex-wrap gap-4">
-          <div>
-            <div className="flex items-center gap-3 mb-2 flex-wrap">
-              <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.8rem * var(--font-scale))' }}>
-                {subject.name}
-              </h1>
-              <span className="badge" style={{ backgroundColor: `${subject.color}20`, color: subject.color, fontWeight: 700 }}>
-                108 課綱完整深度教程
-              </span>
+          <div className="flex items-start gap-4" style={{ flex: 1, minWidth: '280px' }}>
+            {/* Cute Mascot Avatar */}
+            <div 
+              style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '18px',
+                backgroundColor: `${subject.color}15`,
+                border: `2px solid ${subject.color}35`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '2rem',
+                boxShadow: `0 4px 14px ${subject.color}25`,
+                flexShrink: 0
+              }}
+            >
+              {subject.emoji}
             </div>
-            <p className="text-secondary" style={{ fontSize: 'calc(1rem * var(--font-scale))', lineHeight: 1.7, maxWidth: '720px' }}>
-              {subject.desc}
-            </p>
+
+            <div>
+              <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
+                <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.8rem * var(--font-scale))' }}>
+                  {subject.name}
+                </h1>
+                <span className="badge" style={{ backgroundColor: `${subject.color}20`, color: subject.color, fontWeight: 800, fontSize: '0.78rem' }}>
+                  🐾 {subject.mascot}
+                </span>
+                <span className="badge badge-success" style={{ fontWeight: 700, fontSize: '0.75rem' }}>
+                  ✨ {subject.badge}
+                </span>
+              </div>
+              <p className="text-secondary" style={{ fontSize: 'calc(0.98rem * var(--font-scale))', lineHeight: 1.65, maxWidth: '720px', margin: 0 }}>
+                {subject.desc}
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col items-end gap-2">

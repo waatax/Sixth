@@ -1,13 +1,93 @@
 export const coursesData = {
   subjects: [
-    { id: 'math', name: '🧮 數學領域', icon: 'Calculator', color: 'hsl(215, 80%, 50%)', desc: '數與量、代數關係、幾何圖形、生活應用題' },
-    { id: 'science', name: '🔬 自然科學領域', icon: 'Microscope', color: 'hsl(150, 60%, 40%)', desc: '物質與能量、地球與環境、簡單機械、生態保育' },
-    { id: 'mandarin', name: '📖 國語文領域', icon: 'BookOpen', color: 'hsl(25, 85%, 50%)', desc: '閱讀理解策略、寫作修辭、文言寓言、口語表達' },
-    { id: 'social', name: '🌍 社會領域', icon: 'Globe', color: 'hsl(280, 65%, 50%)', desc: '臺灣民主發展、多元文化、產業經濟、全球化SDGs' },
-    { id: 'english', name: '🇬🇧 英語文領域', icon: 'Languages', color: 'hsl(190, 85%, 40%)', desc: 'Daily Routines, Past Tense, Directions, Phonics' },
-    { id: 'arts', name: '🎨 藝術領域', icon: 'Palette', color: 'hsl(340, 75%, 55%)', desc: '視覺藝術、音樂欣賞與實作、表演藝術、設計思考' },
-    { id: 'health_pe', name: '💪 健康與體育', icon: 'Activity', color: 'hsl(10, 80%, 50%)', desc: '青春期發育、飲食營養、急救CPR防護、體適能' },
-    { id: 'integrative', name: '🌱 綜合活動領域', icon: 'Compass', color: 'hsl(165, 70%, 40%)', desc: '時間金錢管理、人際溝通、生涯探索、社會公民實踐' }
+    { 
+      id: 'math', 
+      name: '🧮 數學領域', 
+      shortName: '數學',
+      icon: 'Calculator', 
+      emoji: '🧮',
+      mascot: '數理小精靈',
+      badge: '算理圖解・秒破難題',
+      color: 'hsl(215, 85%, 52%)', 
+      desc: '數與量、代數關係、幾何圖形、生活應用題' 
+    },
+    { 
+      id: 'science', 
+      name: '🔬 自然科學領域', 
+      shortName: '自然',
+      icon: 'Microscope', 
+      emoji: '🔬',
+      mascot: '探索小博士',
+      badge: '現象透視・實驗探究',
+      color: 'hsl(152, 70%, 42%)', 
+      desc: '物質與能量、地球與環境、簡單機械、生態保育' 
+    },
+    { 
+      id: 'mandarin', 
+      name: '📖 國語文領域', 
+      shortName: '國語',
+      icon: 'BookOpen', 
+      emoji: '📖',
+      mascot: '文學妙筆仙',
+      badge: '閱讀解碼・高分寫作',
+      color: 'hsl(25, 90%, 52%)', 
+      desc: '閱讀理解策略、寫作修辭、文言寓言、口語表達' 
+    },
+    { 
+      id: 'social', 
+      name: '🌍 社會領域', 
+      shortName: '社會',
+      icon: 'Globe', 
+      emoji: '🌍',
+      mascot: '環球小領航',
+      badge: '歷史地理・公民素養',
+      color: 'hsl(275, 75%, 55%)', 
+      desc: '臺灣民主發展、多元文化、產業經濟、全球化SDGs' 
+    },
+    { 
+      id: 'english', 
+      name: '🇬🇧 英語文領域', 
+      shortName: '英語',
+      icon: 'Languages', 
+      emoji: '🇬🇧',
+      mascot: '雙語小萌星',
+      badge: '生活對話・秒懂文法',
+      color: 'hsl(192, 88%, 45%)', 
+      desc: 'Daily Routines, Past Tense, Directions, Phonics' 
+    },
+    { 
+      id: 'arts', 
+      name: '🎨 藝術領域', 
+      shortName: '藝術',
+      icon: 'Palette', 
+      emoji: '🎨',
+      mascot: '美感小創客',
+      badge: '五感美學・創意舞台',
+      color: 'hsl(340, 82%, 58%)', 
+      desc: '視覺藝術、音樂欣賞與實作、表演藝術、設計思考' 
+    },
+    { 
+      id: 'health_pe', 
+      name: '💪 健康與體育', 
+      shortName: '健體',
+      icon: 'Activity', 
+      emoji: '💪',
+      mascot: '活力小鐵人',
+      badge: '青春成長・急救防護',
+      color: 'hsl(12, 85%, 54%)', 
+      desc: '青春期發育、飲食營養、急救CPR防護、體適能' 
+    },
+    { 
+      id: 'integrative', 
+      name: '🌱 綜合活動領域', 
+      shortName: '綜合',
+      icon: 'Compass', 
+      emoji: '🌱',
+      mascot: '成長領航員',
+      badge: '自律時間・人際高EQ',
+      color: 'hsl(168, 75%, 42%)', 
+      desc: '時間金錢管理、人際溝通、生涯探索、社會公民實踐' 
+    }
   ],
   versions: ['康軒版', '南一版', '翰林版'],
   units: {

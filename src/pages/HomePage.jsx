@@ -146,46 +146,131 @@ const HomePage = () => {
               <Link 
                 to={`/subject/${subject.id}`} 
                 key={subject.id} 
-                className="card card-hoverable flex flex-col justify-between gap-4" 
+                className="card card-hoverable flex flex-col justify-between" 
                 style={{ 
                   padding: '24px', 
-                  borderRadius: 'var(--radius-xl)',
+                  borderRadius: '24px',
                   backgroundColor: 'var(--bg-secondary)',
                   border: '1.5px solid var(--border-light)',
-                  borderTop: `5px solid ${subject.color}`
+                  borderTop: `6px solid ${subject.color}`,
+                  background: `linear-gradient(145deg, var(--bg-secondary) 0%, ${subject.color}0a 100%)`,
+                  boxShadow: 'var(--shadow-sm)',
+                  transition: 'all 0.25s ease',
+                  textDecoration: 'none',
+                  position: 'relative',
+                  overflow: 'hidden'
                 }}
               >
+                {/* Cute Watermark in Top Right */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    top: '-12px',
+                    right: '-10px',
+                    fontSize: '4.5rem',
+                    opacity: 0.08,
+                    userSelect: 'none',
+                    pointerEvents: 'none'
+                  }}
+                >
+                  {subject.emoji}
+                </div>
+
                 <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span
-                      className="badge"
+                  {/* Top Header: Cute Mascot Avatar + Badges */}
+                  <div className="flex justify-between items-start mb-3.5">
+                    {/* Cute Mascot Avatar with soft glow */}
+                    <div 
                       style={{
+                        width: '52px',
+                        height: '52px',
+                        borderRadius: '16px',
                         backgroundColor: `${subject.color}15`,
-                        color: subject.color,
-                        fontWeight: 700,
-                        fontSize: '0.78rem'
+                        border: `2px solid ${subject.color}35`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '1.8rem',
+                        boxShadow: `0 4px 12px ${subject.color}20`,
+                        flexShrink: 0
                       }}
                     >
-                      {unitCount} 個圖解單元
-                    </span>
-                    <span className="text-xs text-tertiary">108課綱・{selectedVersion}</span>
+                      {subject.emoji}
+                    </div>
+
+                    {/* Cute Tag Pills */}
+                    <div className="flex flex-col items-end gap-1">
+                      <span
+                        className="badge"
+                        style={{
+                          backgroundColor: `${subject.color}18`,
+                          color: subject.color,
+                          fontWeight: 800,
+                          fontSize: '0.76rem',
+                          padding: '3px 8px',
+                          borderRadius: 'var(--radius-full)'
+                        }}
+                      >
+                        🐾 {subject.mascot}
+                      </span>
+                      <span className="text-xs text-tertiary" style={{ fontSize: '0.72rem' }}>
+                        收錄 {unitCount} 關圖解
+                      </span>
+                    </div>
                   </div>
 
-                  <h3 className="h3" style={{ marginTop: '8px', color: 'var(--text-primary)', fontSize: '1.2rem' }}>
+                  {/* Subject Title */}
+                  <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.25rem', fontWeight: 800 }}>
                     {subject.name}
                   </h3>
 
-                  <p className="text-sm text-secondary" style={{ marginTop: '8px', lineHeight: 1.65 }}>
+                  {/* Cute Slogan Badge */}
+                  <div className="mt-2">
+                    <span 
+                      className="badge" 
+                      style={{ 
+                        backgroundColor: 'var(--bg-tertiary)', 
+                        color: 'var(--text-secondary)',
+                        fontSize: '0.74rem',
+                        fontWeight: 700,
+                        padding: '2px 8px',
+                        border: '1px solid var(--border-light)'
+                      }}
+                    >
+                      ✨ {subject.badge}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-sm text-secondary" style={{ marginTop: '10px', lineHeight: 1.6, fontSize: '0.86rem' }}>
                     {subject.desc}
                   </p>
                 </div>
 
+                {/* Action Footer */}
                 <div
-                  className="flex items-center justify-between pt-3 border-t text-sm font-bold"
-                  style={{ borderTop: '1px solid var(--border-light)', color: subject.color }}
+                  className="flex items-center justify-between pt-3.5 mt-3 border-t text-sm font-bold"
+                  style={{ 
+                    borderTop: '1px solid var(--border-light)', 
+                    color: subject.color 
+                  }}
                 >
-                  <span>進入關卡與圖解單元</span>
-                  <ArrowRight size={16} />
+                  <span className="flex items-center gap-1">
+                    <span>🚀 進入闖關探索</span>
+                  </span>
+                  <div 
+                    style={{
+                      width: '28px',
+                      height: '28px',
+                      borderRadius: '50%',
+                      backgroundColor: `${subject.color}15`,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <ArrowRight size={15} />
+                  </div>
                 </div>
               </Link>
             );
