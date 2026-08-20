@@ -86,7 +86,7 @@ const GamificationWidget = () => {
             <div className="flex justify-between items-center mb-3">
               <div className="flex items-center gap-2">
                 <span style={{ fontSize: '1.2rem' }}>🎓</span>
-                <h4 style={{ margin: 0, fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-primary)' }}>我的小六學習護照</h4>
+                <h4 style={{ margin: 0, fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-primary)' }}>我的最強小六</h4>
               </div>
               <button
                 style={{ padding: '4px', color: 'var(--text-tertiary)', cursor: 'pointer' }}

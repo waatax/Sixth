@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, HelpCircle, Globe, GraduationCap, Zap, Timer, Bookmark, Menu, X, Sun, Moon, Eye, Type, Volume2, VolumeX, Sparkles } from 'lucide-react';
+import { BookOpen, HelpCircle, Globe, GraduationCap, Zap, Timer, Menu, X, Sun, Moon, Eye, Type, Volume2, VolumeX, Sparkles } from 'lucide-react';
 import GamificationWidget from '../common/GamificationWidget';
 import EyeCareToolbar from '../common/EyeCareToolbar';
 import { useTheme } from '../../context/ThemeContext';
@@ -19,8 +19,7 @@ const Header = () => {
     { path: '/', label: '學習領域', icon: BookOpen },
     { path: '/flashcards', label: '速記閃卡', icon: Zap },
     { path: '/mock-exam', label: '計時模擬', icon: Timer },
-    { path: '/mistakes', label: '錯題筆記', icon: Bookmark },
-    { path: '/question-bank', label: '段考題庫', icon: HelpCircle },
+    { path: '/question-bank', label: '模擬測驗', icon: HelpCircle },
     { path: '/resources', label: '教育資源', icon: Globe },
     { path: '/prep', label: '國中先修', icon: GraduationCap },
   ];
@@ -88,7 +87,7 @@ const Header = () => {
                     whiteSpace: 'nowrap'
                   }}
                 >
-                  小六學習護照
+                  最強小六
                 </span>
                 <span className="badge badge-accent" style={{ fontSize: '0.68rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
                   108課綱 🌱

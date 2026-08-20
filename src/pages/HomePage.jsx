@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
-import { Zap, Timer, Globe, Bookmark, ArrowRight, Sparkles, Compass, CheckCircle2, ShieldCheck, Smile, GraduationCap, Award } from 'lucide-react';
+import { Zap, Timer, Globe, ArrowRight, Sparkles, Compass, CheckCircle2, ShieldCheck, Smile, GraduationCap, Award } from 'lucide-react';
 import GuidedStartWizard from '../components/common/GuidedStartWizard';
 import DailyQuestCard from '../components/common/DailyQuestCard';
 
@@ -326,36 +326,7 @@ const HomePage = () => {
             </div>
           </Link>
 
-          <Link
-            to="/mistakes"
-            className="card card-hoverable flex items-start gap-3.5"
-            style={{ 
-              padding: '20px', 
-              borderLeft: '4px solid var(--accent-error)',
-              borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-error-soft)',
-                color: 'var(--accent-error)',
-                padding: '12px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Bookmark size={24} />
-            </div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>錯題筆記</div>
-              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
-                自動收錄弱點題目，隨時一鍵搞懂消滅
-              </div>
-            </div>
-          </Link>
+
 
           <Link
             to="/resources"

@@ -161,7 +161,7 @@ const QuizPage = () => {
             觀念檢核得分：{percentage} 分
           </h2>
           <p className="text-secondary text-sm" style={{ lineHeight: 1.7 }}>
-            共 {questions.length} 題，答對 {score} 題。{percentage >= 80 ? '🌟 太厲害了！你已徹底掌握本單元核心素養！' : '💪 答錯的題目已自動幫你收錄至「錯題筆記」，搞懂它就是最大的進步！'}
+            共 {questions.length} 題，答對 {score} 題。{percentage >= 80 ? '🌟 太厲害了！你已徹底掌握本單元核心素養！' : '💪 繼續努力！搞懂錯題就是最大的進步！'}
           </p>
         </div>
 
@@ -222,9 +222,7 @@ const QuizPage = () => {
           <button className="btn-outline flex items-center gap-2 text-sm" onClick={handleRestart}>
             <RotateCcw size={16} /> 重新挑戰一次
           </button>
-          <Link to="/mistakes" className="btn-outline flex items-center gap-2 text-sm" style={{ color: 'var(--accent-primary)', borderColor: 'var(--accent-primary)' }}>
-            📖 查看錯題筆記
-          </Link>
+
           <button className="btn-primary flex items-center gap-2 text-sm" onClick={() => navigate(-1)}>
             回到單元列表 →
           </button>
@@ -391,7 +389,7 @@ const QuizPage = () => {
               ) : (
                 <>
                   <Heart size={16} />
-                  <span>沒關係！這題很容易踩陷阱，已幫你存入錯題筆記！</span>
+                  <span>沒關係！這題很容易踩陷阱，看解析釐清觀念！</span>
                 </>
               )}
             </div>

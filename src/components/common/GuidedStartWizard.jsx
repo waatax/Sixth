@@ -77,7 +77,7 @@ const GuidedStartWizard = () => {
     } else {
       planObj = {
         title: '全科段考總體檢：10 分鐘全科計時模擬',
-        desc: '想知道自己哪裡已經很強、哪裡需要稍微補強？做一次 10 題診斷，系統為你整理專屬錯題筆記！',
+        desc: '想知道自己哪裡已經很強、哪裡需要稍微補強？做一次 10 題診斷，快速找出弱點！',
         actionText: '開始 10 分鐘計時模擬',
         link: '/mock-exam',
         badge: '🏆 全科計時模擬',
@@ -326,7 +326,7 @@ const GuidedStartWizard = () => {
                     我要進行計時模擬體檢
                   </div>
                   <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
-                    10 題全科精華測驗，快速找出弱點盲點並自動存入錯題筆記。
+                    10 題全科精華測驗，快速找出弱點盲點並加以擊破。
                   </div>
                 </div>
               </button>

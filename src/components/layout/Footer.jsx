@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex justify-between items-center flex-wrap gap-4 text-sm">
           <div className="flex items-center gap-2">
             <BookOpen size={16} style={{ color: 'var(--accent-primary)' }} />
-            <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>小六學習護照</span>
+            <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>最強小六</span>
             <span className="text-tertiary">|</span>
             <span>教育部 108 課綱・八大學習領域深度自主學習平台</span>
           </div>
@@ -27,8 +27,7 @@ const Footer = () => {
             <Link to="/" style={{ color: 'var(--text-secondary)' }}>學習領域</Link>
             <Link to="/flashcards" style={{ color: 'var(--text-secondary)' }}>速記閃卡</Link>
             <Link to="/mock-exam" style={{ color: 'var(--text-secondary)' }}>計時模擬</Link>
-            <Link to="/mistakes" style={{ color: 'var(--text-secondary)' }}>錯題筆記</Link>
-            <Link to="/question-bank" style={{ color: 'var(--text-secondary)' }}>段考題庫</Link>
+            <Link to="/question-bank" style={{ color: 'var(--text-secondary)' }}>模擬測驗</Link>
             <Link to="/resources" style={{ color: 'var(--text-secondary)' }}>教育資源</Link>
             <Link to="/prep" style={{ color: 'var(--text-secondary)' }}>國中先修</Link>
           </div>
