@@ -49,6 +49,25 @@
 | **典型考題** | *What is the main idea of this article?* | *What time did Tom arrive? / How much is it?* |
 | **生活實踐** | 翻看報紙頭條、瀏覽網頁大標題決定要不要讀 | 查火車時刻表、在通訊錄找朋友電話 |
 
+### 🌟 完整範例
+
+1. **Skimming (略讀抓主旨)**：當你在書店挑選故事書時，快速翻閱書背的介紹和第一章的前幾句，馬上就知道這是不是你喜歡的魔法冒險故事。
+*(When you choose a storybook in a bookstore, you quickly read the back cover and the first few sentences of chapter one to know if it's a magic adventure story you like.)*
+2. **Scanning (掃讀找細節)**：當老師問：「這篇文章裡的大象有多重？」你不用從頭讀到尾，只要讓眼睛像雷達一樣快速尋找「大寫的 Elephant」或「數字 (重量)」。
+*(When the teacher asks, "How heavy is the elephant in the article?", you just use your eyes like a radar to search for the word "Elephant" or "numbers".)*
+3. **完美組合 (Perfect Combo)**：先略讀 (Skim) 電影時刻表的大標題找到「超級英雄電影」，再掃讀 (Scan) 尋找下午「3:30」的場次。
+*(First skim the movie schedule's title for "Superhero Movie", then scan for the "3:30 PM" showtime.)*
+
+### 💬 情境對話練習
+
+> Leo: I have a lot of books to read for my homework. What should I do? (我有好多書要讀來寫作業。我該怎麼辦？)
+
+> Bella: You can use skimming! Just read the titles and the first sentence of each paragraph. (你可以用略讀！只要讀標題和每段的第一句話就好。)
+
+> Leo: Oh, that's fast! But what if I need to find a specific date? (喔，那很快！但如果我需要找一個特定的日期呢？)
+
+> Bella: Then use scanning. Look closely only for numbers like 1999 or 2023. (那就用掃讀。只要仔細尋找像 1999 或 2023 這樣的數字。)
+
 ---
 
 ## 🔑 核心觀念 2：單字萬能拆解器——字首與字尾 (Prefixes & Suffixes)
@@ -84,6 +103,27 @@
 | $\textcolor{#ff9800}{\textbf{Suffix}}$ | $\textcolor{#ff9800}{\textbf{-er / -or}}$ | 做某動作的人 (person) | $\text{teach} \rightarrow \text{teach}\textcolor{#ff9800}{\textbf{er}}\text{ (教師)}$ ; $\text{act} \rightarrow \text{act}\textcolor{#ff9800}{\textbf{or}}\text{ (演員)}$ |
 | $\textcolor{#ff9800}{\textbf{Suffix}}$ | $\textcolor{#ff9800}{\textbf{-ly}}$ | ...的樣子 (副詞/形容詞) | $\text{quick} \rightarrow \text{quick}\textcolor{#ff9800}{\textbf{ly}}\text{ (快速地)}$ ; $\text{friend} \rightarrow \text{friend}\textcolor{#ff9800}{\textbf{ly}}\text{ (友好的)}$ |
 
+### 🌟 完整範例
+
+1. **un- (不、相反)**：把 `happy` (快樂) 加上 `un-`，變成 `unhappy` (不快樂)。
+*(My dog is unhappy because he can't go out to play. 我的狗狗很不快樂，因為他不能出去玩。)*
+2. **re- (重新、再次)**：把 `build` (建造) 加上 `re-`，變成 `rebuild` (重建)。
+*(The kids rebuild their sandcastle after the wave washed it away. 孩子們在海浪沖毀沙堡後重新把它建起來。)*
+3. **-ful (充滿...的)**：把 `color` (顏色) 加上 `-ful`，變成 `colorful` (色彩繽紛的)。
+*(The butterfly has beautiful and colorful wings. 這隻蝴蝶有著美麗且色彩繽紛的翅膀。)*
+4. **-er (做某動作的人)**：把 `play` (玩、打球) 加上 `-er`，變成 `player` (玩家、球員)。
+*(He is the best basketball player in our school. 他是我們學校最棒的籃球員。)*
+
+### 💬 情境對話練習
+
+> Sam: I don't know the word "rewrite". It looks so long! (我不認識 "rewrite" 這個字。它看起來好長！)
+
+> Tina: Don't worry! Let's break it down. "write" means 寫, and "re-" means 再一次. (別擔心！我們把它拆開來。"write" 是寫，而 "re-" 是再一次。)
+
+> Sam: Ah! Does it mean to write something again? (啊！它的意思是把東西重寫一次嗎？)
+
+> Tina: You got it! You are a very careful reader. (你答對了！你是一個非常細心 (careful) 的讀者。)
+
 ---
 
 ## 🔑 核心觀念 3：上下文線索推理法 (Context Clues)
@@ -96,6 +136,25 @@
    👉 看到 *Unlike talkative (不像多話的哥哥)*，推論 taciturn 意思是「沉默寡言的」。
 3. 🍎 **舉例線索 (Example)**：*Mammals, such as dogs, whales, and humans, feed their babies milk.*  
    👉 看到 dogs, whales, humans，推論 mammals 是「哺乳動物」。
+
+### 🌟 完整範例
+
+1. **利用「定義」來推理**：*A **habitat**, the natural home of an animal, is very important.*
+*(看到 "the natural home of an animal" 動物的自然家園，就知道 habitat 是指「棲息地」。)*
+2. **利用「對比」來推理**：*The elephant is **enormous**, but the mouse is very tiny.*
+*(看到 "but" (但是) 和 "tiny" (微小)，就能推論出 enormous 是「巨大的」。)*
+3. **利用「舉例」來推理**：*You should eat more **citrus fruits**, such as oranges and lemons.*
+*(看到 "such as oranges and lemons" 像是橘子和檸檬，可以推斷 citrus fruits 是一種「柑橘類水果」。)*
+
+### 💬 情境對話練習
+
+> Max: What does "exhausted" mean? I don't have a dictionary. ("exhausted" 是什麼意思？我沒有字典。)
+
+> Lily: Read the whole sentence! "After running for two hours, Tom was exhausted." (把整句讀完！「在跑了兩個小時後，Tom 感到 exhausted。」)
+
+> Max: Well, after running for two hours, he must be very tired. (嗯，跑了兩小時後，他一定非常累。)
+
+> Lily: Exactly! So "exhausted" means very tired. See? You solved the puzzle! (沒錯！所以 "exhausted" 就是非常累的意思。看吧？你解開謎題了！)
 
 ---
 
@@ -116,6 +175,25 @@
  │ - Because... (因為)     │ - Therefore, / So, (因此/所以)    │
  └─────────────────────────┴───────────────────────────────────┘
 ```
+
+### 🌟 完整範例
+
+1. **順序 (First / Next / Finally)**：*First*, crack the eggs. *Next*, mix them well. *Finally*, cook them in the pan.
+*(「首先」打蛋，「接著」攪拌均勻，「最後」放進平底鍋煮。這告訴我們做炒蛋的正確步驟！)*
+2. **轉折 (But / However)**：I wanted to play outside. *However*, it started to rain heavily.
+*(我想要去外面玩。「然而」，天空開始下起大雨。轉折詞暗示接下來發生的事和原來的計畫不一樣！)*
+3. **因果 (Because / So / Therefore)**：The road is closed *because* there was a car accident.
+*(這條路被封閉了，「因為」發生了車禍。轉折詞告訴我們事情發生的原因。)*
+
+### 💬 情境對話練習
+
+> Anna: How do I make a paper plane? (我要怎麼摺紙飛機？)
+
+> Ben: First, fold the paper in half. Next, fold the corners down. (首先，把紙對摺。接著，把角落往下摺。)
+
+> Anna: It looks great! But it can't fly very far. (它看起來很棒！但是它飛不遠。)
+
+> Ben: That is because the paper is too heavy! Therefore, we should use lighter paper. (那是因為紙太重了！因此，我們應該用輕一點的紙。)
 
 ---
 

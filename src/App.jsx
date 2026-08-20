@@ -10,6 +10,7 @@ import PrepPage from './pages/PrepPage';
 import FlashcardsPage from './pages/FlashcardsPage';
 import MockExamPage from './pages/MockExamPage';
 import MistakesPage from './pages/MistakesPage';
+import GeptPage from './pages/GeptPage';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="flashcards" element={<FlashcardsPage />} />
         <Route path="mock-exam" element={<MockExamPage />} />
         <Route path="mistakes" element={<MistakesPage />} />
+        <Route path="gept" element={<GeptPage />} />
       </Route>
     </Routes>
   );

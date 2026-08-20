@@ -55,6 +55,26 @@
 
 > ⚠️ **特別注意**：如果是「母音 + y」（如 play, enjoy），直接加 ed 即可（played, enjoyed），千萬不能去 y 喔！
 
+### 🌟 完整範例
+
+1. **play (玩) ➔ played**
+   *I **played** basketball with my friends after school yesterday.* 
+   (我昨天放學後和朋友一起打籃球了。)
+2. **live (居住) ➔ lived**
+   *My grandparents **lived** in Tainan ten years ago.*
+   (我祖父母十年前住在台南。)
+3. **study (學習) ➔ studied**
+   *Eric **studied** hard for the math test last night, so he got 100!*
+   (艾瑞克昨晚很努力讀數學，所以他考了100分！)
+
+### 💬 情境對話練習
+
+> Emma: What did you do last weekend? (你上個週末做了什麼？)
+
+> Tom: I visited my grandma and we baked some delicious cookies! (我去拜訪了我的奶奶，我們還烤了一些好吃的餅乾！)
+
+> Emma: Wow, that sounds great! I just stayed home and watched a movie. (哇，聽起來好棒！我只有待在家裡看電影。)
+
 ---
 
 ## 🔑 核心觀念 2：30 個高頻不規則動詞分組大補帖 (Irregular Verbs)
@@ -93,6 +113,26 @@
 | 27. $\text{do / does}$ | $\textcolor{#ff9800}{\textbf{did}}$ | 做 | 30. $\text{read}$ | $\textcolor{#ff9800}{\textbf{read}}$ (發音/rɛd/) | 閱讀 |
 | 28. $\text{take}$ | $\textcolor{#ff9800}{\textbf{took}}$ | 拿/搭乘 | | | |
 
+### 🌟 完整範例
+
+1. **eat (吃) ➔ ate**
+   *We **ate** a big pizza for dinner yesterday.*
+   (我們昨天晚餐吃了一個大披薩。)
+2. **buy (買) ➔ bought**
+   *Mom **bought** me a new jacket for my birthday!*
+   (媽媽買了一件新外套給我當生日禮物！)
+3. **go (去) ➔ went**
+   *The students **went** to the science museum last Friday.*
+   (學生們上週五去了科學博物館。)
+
+### 💬 情境對話練習
+
+> Kevin: Hey, I saw you at the park yesterday. (嘿，我昨天在公園看到你喔。)
+
+> Lucy: Really? Yes, I went there with my dog. We ran around for an hour! (真的嗎？對啊，我和我的狗一起去那邊。我們跑了一個小時！)
+
+> Kevin: Haha! I thought it was you, but you left so fast. (哈哈！我以為是你，但你離開得太快了。)
+
 ---
 
 ## 🔑 核心觀念 3：否定句與疑問句——助動詞 Did 的「吸力法則」
@@ -118,11 +158,29 @@
    - 👉 肯定回答：*Yes, I $\textcolor{#e91e63}{\textbf{did}}$.*
    - 👉 否定回答：*No, I $\textcolor{#e91e63}{\textbf{didn't}}$.*
 
-### 💬 情境對話 (Did Question Dialogue)
-> 👩 **Mom**: Leo, $\textcolor{#e91e63}{\textbf{did}}$ you $\textcolor{#2196f3}{\textbf{finish}}$ your math homework?  
-> 👦 **Leo**: Yes, I $\textcolor{#e91e63}{\textbf{did}}$. I $\textcolor{#4caf50}{\textbf{finished}}$ it before dinner!  
-> 👩 **Mom**: Great! But I $\textcolor{#e91e63}{\textbf{didn't}}$ $\textcolor{#2196f3}{\textbf{see}}$ your workbook on the desk.  
-> 👦 **Leo**: Oops! I $\textcolor{#4caf50}{\textbf{left}}$ it in my classroom locker!
+### 🌟 完整範例
+
+1. **肯定句與否定句對比**
+   *I **liked** the movie, but my brother **didn't like** it.*
+   (我喜歡這部電影，但我弟弟不喜歡。)
+2. **問句與簡答**
+   *— **Did** you **have** a good time at the party?*
+   *(你在派對上玩得開心嗎？)*
+   *— Yes, we **did**. We played a lot of games!*
+   *(對啊，我們玩得很開心。我們玩了很多遊戲！)*
+3. **沒有發生的事情**
+   *It rained a lot, so we **didn't go** to the beach yesterday.*
+   (昨天雨下很大，所以我們沒有去海灘。)
+
+### 💬 情境對話練習
+
+> Mom: Leo, did you finish your math homework? (Leo，你寫完數學作業了嗎？)
+
+> Leo: Yes, I did. I finished it before dinner! (是的，我寫完了。我在晚餐前就寫完了！)
+
+> Mom: Great! But I didn't see your workbook on the desk. (太棒了！但我沒有在書桌上看到你的作業簿。)
+
+> Leo: Oops! I didn't bring it home. I left it in my classroom locker! (哎呀！我沒有把它帶回家。我把它留在教室置物櫃了！)
 
 ---
 
@@ -141,6 +199,26 @@
  │ 🏷️ just now (剛才) / at that time (在那時候)                 │
  └──────────────────────────────────────────────────────────────┘
 ```
+
+### 🌟 完整範例
+
+1. **last night (昨晚)**
+   *My baby sister cried loudly **last night**.*
+   (我的小妹妹昨晚哭得很大聲。)
+2. **two days ago (兩天前)**
+   *I finished reading this comic book **two days ago**.*
+   (我兩天前就把這本漫畫書看完了。)
+3. **in 2021 (在2021年)**
+   *Mr. Chen became our teacher **in 2021**.*
+   (陳老師在2021年成為我們的老師。)
+
+### 💬 情境對話練習
+
+> Alan: Where were you yesterday morning? (你昨天早上在哪裡？)
+
+> Bella: I was at the library. I borrowed some great books! (我在圖書館。我借了一些很棒的書！)
+
+> Alan: Cool! I went to a new bookstore last week. It was amazing! (酷喔！我上週去了一家新書店。那裡超棒的！)
 
 ---
 

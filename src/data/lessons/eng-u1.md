@@ -50,10 +50,20 @@
 
 > 💡 **超重要提醒**：7:45 是差 15 分鐘「到 8 點」，所以要用 $\textcolor{#e91e63}{\textbf{a quarter to eight}}$，千萬不要寫成 seven 喔！
 
-### 🏠 生活實戰例句
-1. 🎬 **看電影**："The movie starts at $\textcolor{#ff9800}{\textbf{half past two}}$." (電影兩點半開始，快買爆米花！)
-2. 🚆 **趕火車**："Hurry! The train arrives at $\textcolor{#e91e63}{\textbf{a quarter to five}}$!" (快點！火車四點四十五分就要進站了！)
-3. 🔔 **放學時間**："We pack our schoolbags at $\textcolor{#2196f3}{\textbf{four o'clock}}$." (我們四點整收拾書包準備放學。)
+### 🌟 完整範例
+
+1. 🎬 **看電影**：The movie starts at $\textcolor{#ff9800}{\textbf{half past two}}$. (電影兩點半開始，快買爆米花！)
+2. 🚆 **趕火車**：Hurry! The train arrives at $\textcolor{#e91e63}{\textbf{a quarter to five}}$! (快點！火車四點四十五分就要進站了！)
+3. 🔔 **放學時間**：We pack our schoolbags at $\textcolor{#2196f3}{\textbf{four o'clock}}$. (我們四點整收拾書包準備放學。)
+4. 🍽️ **吃晚餐**：Mom is cooking dinner. We will eat at $\textcolor{#4caf50}{\textbf{a quarter past six}}$. (媽媽在煮晚餐。我們六點十五分要吃飯。)
+
+### 💬 情境對話練習
+
+> Jack: What time is the basketball game? (籃球比賽是幾點？)
+
+> Ryan: It starts at a quarter past four. (四點十五分開始。)
+
+> Jack: Oh no! It's already half past four! We are late! (噢不！已經四點半了！我們遲到了！)
 
 ---
 
@@ -90,6 +100,22 @@
 | $\textcolor{#2196f3}{\textbf{on}}$ | **特定的一天** | 星期、具體日期、節日當天 | $\textcolor{#2196f3}{\textbf{on}}$ Tuesday, $\textcolor{#2196f3}{\textbf{on}}$ May 12th, $\textcolor{#2196f3}{\textbf{on}}$ Friday night | We have English class $\textcolor{#2196f3}{\textbf{on}}$ Thursday. (我們週四有英文課。) |
 | $\textcolor{#4caf50}{\textbf{in}}$ | **較長的時間區段**| 早中晚、月份、季節、年份 | $\textcolor{#4caf50}{\textbf{in}}$ the morning, $\textcolor{#4caf50}{\textbf{in}}$ July, $\textcolor{#4caf50}{\textbf{in}}$ winter, $\textcolor{#4caf50}{\textbf{in}}$ 2025 | It often rains here $\textcolor{#4caf50}{\textbf{in}}$ spring. (這裡春天常下雨。) |
 
+### 🌟 完整範例
+
+1. 🎂 **慶祝生日**：My birthday is $\textcolor{#2196f3}{\textbf{on}}$ October 15th. We will have a party. (我的生日在十月十五日。我們要辦一場派對。)
+2. ❄️ **期待下雪**：It always snows in Canada $\textcolor{#4caf50}{\textbf{in}}$ winter. (在加拿大，冬天總是會下雪。)
+3. 👻 **萬聖節**：Kids go trick-or-treating $\textcolor{#e91e63}{\textbf{at}}$ night $\textcolor{#2196f3}{\textbf{on}}$ Halloween. (孩子們在萬聖節當天的晚上會去玩不給糖就搗蛋。)
+
+### 💬 情境對話練習
+
+> Emma: When is the school trip? (學校的戶外教學是什麼時候？)
+
+> Lisa: It is in November. (是在十一月喔。)
+
+> Emma: Cool! Which day exactly? (酷耶！確切是哪一天呢？)
+
+> Lisa: It is on Friday, November 12th. We have to be at school at seven o'clock in the morning. (是十一月十二日星期五。我們早上七點就必須到學校。)
+
 ---
 
 ## 🔑 核心觀念 3：日常生活動作動詞庫 (Daily Routine Actions)
@@ -108,12 +134,23 @@
 - ❓ **詢問他人作息**：$$\textcolor{#00bcd4}{\textbf{What time do you}} + \textcolor{#2196f3}{\textbf{動作動詞}} + \textcolor{#00bcd4}{\textbf{?}}$$
 - 💬 **回答自己作息**：$$\textcolor{#00bcd4}{\textbf{I}} + \textcolor{#2196f3}{\textbf{動作動詞}} + \textcolor{#e91e63}{\textbf{ at }} + \textcolor{#ff9800}{\textbf{時間點}}.$$
 
-### 💬 情境對話實戰 (Role Play)
-> 👦 **Leo**: What time do you usually $\textcolor{#2196f3}{\textbf{wake up}}$ on weekdays, Mia?  
-> 👧 **Mia**: I usually wake up $\textcolor{#e91e63}{\textbf{at half past six}}$. Then I brush my teeth and eat breakfast at seven o'clock.  
-> 👦 **Leo**: That's early! What time do you $\textcolor{#2196f3}{\textbf{go to bed}}$?  
-> 👧 **Mia**: I take a shower at nine and go to bed $\textcolor{#e91e63}{\textbf{at a quarter to ten}}$ (9:45).  
-> 👦 **Leo**: No wonder you are never late for school!
+### 🌟 完整範例
+
+1. ☀️ **早晨日常**：I wake up early, wash my face, and eat a healthy breakfast. (我早早起床，洗完臉，然後吃一頓健康的早餐。)
+2. 🏫 **校園生活**：We eat lunch with friends and clean the classroom in the afternoon. (我們下午和朋友一起吃午餐，並打掃教室。)
+3. 🌙 **睡前習慣**：My sister takes a shower, reads a book, and goes to bed at half past nine. (我妹妹洗完澡，看了一本書，然後在九點半上床睡覺。)
+
+### 💬 情境對話練習
+
+> Leo: What time do you usually wake up on weekdays, Mia? (Mia，你平日通常幾點起床？)
+
+> Mia: I usually wake up at half past six. Then I brush my teeth and eat breakfast at seven o'clock. (我通常六點半起床。然後我七點整刷牙跟吃早餐。)
+
+> Leo: That's early! What time do you go to bed? (好早喔！那你幾點上床睡覺？)
+
+> Mia: I take a shower at nine and go to bed at a quarter to ten. (我九點洗澡，然後九點四十五分上床睡覺。)
+
+> Leo: No wonder you are never late for school! (難怪你上學從來不遲到！)
 
 ---
 
@@ -141,6 +178,22 @@ $$\text{例：I } \textcolor{#e91e63}{\textbf{always}} \text{ } \textcolor{#2196
 
 $$\text{規則 2：Be 動詞「後面」 } \longrightarrow \text{主詞} + \textcolor{#2196f3}{\textbf{am / is / are}} + \textcolor{#e91e63}{\textbf{頻率副詞}}$$
 $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}{\textbf{never}} \text{ late for school.}$$
+
+### 🌟 完整範例
+
+1. 📖 **勤奮好學**：Andy $\textcolor{#e91e63}{\textbf{always}}$ $\textcolor{#2196f3}{\textbf{does}}$ his homework after school. He $\textcolor{#2196f3}{\textbf{is}}$ $\textcolor{#e91e63}{\textbf{always}}$ a good student. (Andy 放學後總是會寫功課。他一直都是個好學生。)
+2. 🎮 **偶爾放鬆**：I $\textcolor{#e91e63}{\textbf{sometimes}}$ $\textcolor{#2196f3}{\textbf{play}}$ video games with my brother on weekends. (我週末有時候會和哥哥一起玩電動。)
+3. 🥦 **挑食習慣**：Tina hates vegetables. She $\textcolor{#e91e63}{\textbf{never}}$ $\textcolor{#2196f3}{\textbf{eats}}$ carrots! (Tina 討厭蔬菜。她從來不吃胡蘿蔔！)
+
+### 💬 情境對話練習
+
+> Mom: Peter, you are often late for English class! (Peter，你上英文課經常遲到！)
+
+> Peter: I am sorry, Mom. I usually miss the bus. (對不起，媽媽。我通常都會錯過公車。)
+
+> Mom: You should always go to bed early! (你應該總是早點上床睡覺才對！)
+
+> Peter: I know. I promise I will never sleep late again. (我知道了。我保證以後絕對不會再晚睡了。)
 
 ---
 

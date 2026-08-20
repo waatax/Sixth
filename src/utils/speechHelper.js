@@ -57,6 +57,29 @@ class SpeechEngine {
     return englishVoices[0];
   }
 
+  getBestChineseVoice() {
+    if (!this.voices || this.voices.length === 0) {
+      this.loadVoices();
+    }
+    const chineseVoices = this.voices.filter(v => v.lang.startsWith('zh'));
+    if (chineseVoices.length === 0) return null;
+
+    const preferred = chineseVoices.find(v => 
+      v.name.includes('Google') || 
+      v.name.includes('Taiwan') ||
+      v.name.includes('Yunjian') ||
+      v.name.includes('Xiaoxiao')
+    );
+
+    if (preferred) return preferred;
+    
+    const twVoice = chineseVoices.find(v => v.lang === 'zh-TW');
+    if (twVoice) return twVoice;
+
+    return chineseVoices[0];
+  }
+
+
   subscribe(listener) {
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
@@ -112,7 +135,7 @@ class SpeechEngine {
     utterance.pitch = pitch;
     utterance.lang = lang;
 
-    const voice = this.getBestEnglishVoice();
+    const voice = lang.startsWith('zh') ? this.getBestChineseVoice() : this.getBestEnglishVoice();
     if (voice) {
       utterance.voice = voice;
     }

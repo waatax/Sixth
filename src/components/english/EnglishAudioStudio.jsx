@@ -26,7 +26,12 @@ const EnglishAudioStudio = ({ unitId }) => {
   const [speechRate, setSpeechRate] = useState(1.0);
   const [currentParagraphIndex, setCurrentParagraphIndex] = useState(0);
   const [continuousPlaying, setContinuousPlaying] = useState(false);
-  const continuousRef = useRef(false);
+  const [playbackMode, setPlaybackMode] = useState('en-only'); // 'en-only' | 'en-zh'
+  const playbackModeRef = useRef('en-only');
+
+  useEffect(() => {
+    playbackModeRef.current = playbackMode;
+  }, [playbackMode]);
 
   useEffect(() => {
     continuousRef.current = continuousPlaying;
@@ -58,7 +63,7 @@ const EnglishAudioStudio = ({ unitId }) => {
   };
 
   // Play single item
-  const handlePlayItem = (text, id, rate = speechRate) => {
+  const handlePlayItem = (text, id, rate = speechRate, lang = 'en-US') => {
     setContinuousPlaying(false);
     if (activeSpeechId === id && isPlaying) {
       speechEngine.stop();
@@ -66,15 +71,14 @@ const EnglishAudioStudio = ({ unitId }) => {
       speechEngine.speak(text, {
         id,
         rate,
-        onEnd: () => {
-          // done
-        }
+        lang,
+        onEnd: () => {}
       });
     }
   };
 
   // Play passage paragraph-by-paragraph continuously
-  const playParagraph = (index, rate = speechRate) => {
+  const playParagraph = (index, rate = speechRate, step = 'en') => {
     if (!audioData.readAloudPassage || !audioData.readAloudPassage.paragraphs) return;
     const paragraphs = audioData.readAloudPassage.paragraphs;
     if (index >= paragraphs.length) {
@@ -85,25 +89,48 @@ const EnglishAudioStudio = ({ unitId }) => {
 
     const currentP = paragraphs[index];
     setCurrentParagraphIndex(index);
-
-    speechEngine.speak(currentP.text, {
-      id: currentP.id,
-      rate,
-      onEnd: () => {
-        if (continuousRef.current && index + 1 < paragraphs.length) {
-          setTimeout(() => {
-            if (continuousRef.current) {
-              playParagraph(index + 1, rate);
+    
+    if (step === 'en') {
+      speechEngine.speak(currentP.text, {
+        id: currentP.id,
+        rate,
+        lang: 'en-US',
+        onEnd: () => {
+          if (!continuousRef.current) return;
+          if (playbackModeRef.current === 'en-zh' && currentP.zh) {
+            setTimeout(() => {
+              if (continuousRef.current) playParagraph(index, rate, 'zh');
+            }, 300);
+          } else {
+            if (index + 1 < paragraphs.length) {
+              setTimeout(() => {
+                if (continuousRef.current) playParagraph(index + 1, rate, 'en');
+              }, 600);
+            } else {
+              setContinuousPlaying(false);
             }
-          }, 600);
-        } else {
-          setContinuousPlaying(false);
-        }
-      },
-      onError: () => {
-        setContinuousPlaying(false);
-      }
-    });
+          }
+        },
+        onError: () => setContinuousPlaying(false)
+      });
+    } else if (step === 'zh') {
+      speechEngine.speak(currentP.zh, {
+        id: currentP.id + '-zh',
+        rate,
+        lang: 'zh-TW',
+        onEnd: () => {
+          if (!continuousRef.current) return;
+          if (index + 1 < paragraphs.length) {
+            setTimeout(() => {
+              if (continuousRef.current) playParagraph(index + 1, rate, 'en');
+            }, 600);
+          } else {
+            setContinuousPlaying(false);
+          }
+        },
+        onError: () => setContinuousPlaying(false)
+      });
+    }
   };
 
   const handleToggleContinuousPassage = () => {
@@ -111,12 +138,12 @@ const EnglishAudioStudio = ({ unitId }) => {
       handleStopAll();
     } else {
       setContinuousPlaying(true);
-      playParagraph(0, speechRate);
+      playParagraph(0, speechRate, 'en');
     }
   };
 
   // Play entire dialogue continuously
-  const playDialogueLine = (index, rate = speechRate) => {
+  const playDialogueLine = (index, rate = speechRate, step = 'en') => {
     const lines = audioData.dialogues;
     if (!lines || index >= lines.length) {
       setContinuousPlaying(false);
@@ -125,24 +152,47 @@ const EnglishAudioStudio = ({ unitId }) => {
     const line = lines[index];
     const lineId = `dlg-${index}`;
 
-    speechEngine.speak(line.en, {
-      id: lineId,
-      rate,
-      onEnd: () => {
-        if (continuousRef.current && index + 1 < lines.length) {
-          setTimeout(() => {
-            if (continuousRef.current) {
-              playDialogueLine(index + 1, rate);
+    if (step === 'en') {
+      speechEngine.speak(line.en, {
+        id: lineId,
+        rate,
+        lang: 'en-US',
+        onEnd: () => {
+          if (!continuousRef.current) return;
+          if (playbackModeRef.current === 'en-zh' && line.zh) {
+            setTimeout(() => {
+              if (continuousRef.current) playDialogueLine(index, rate, 'zh');
+            }, 300);
+          } else {
+            if (index + 1 < lines.length) {
+              setTimeout(() => {
+                if (continuousRef.current) playDialogueLine(index + 1, rate, 'en');
+              }, 800);
+            } else {
+              setContinuousPlaying(false);
             }
-          }, 800);
-        } else {
-          setContinuousPlaying(false);
-        }
-      },
-      onError: () => {
-        setContinuousPlaying(false);
-      }
-    });
+          }
+        },
+        onError: () => setContinuousPlaying(false)
+      });
+    } else if (step === 'zh') {
+      speechEngine.speak(line.zh, {
+        id: lineId + '-zh',
+        rate,
+        lang: 'zh-TW',
+        onEnd: () => {
+          if (!continuousRef.current) return;
+          if (index + 1 < lines.length) {
+            setTimeout(() => {
+              if (continuousRef.current) playDialogueLine(index + 1, rate, 'en');
+            }, 800);
+          } else {
+            setContinuousPlaying(false);
+          }
+        },
+        onError: () => setContinuousPlaying(false)
+      });
+    }
   };
 
   const handleToggleContinuousDialogue = () => {
@@ -150,7 +200,7 @@ const EnglishAudioStudio = ({ unitId }) => {
       handleStopAll();
     } else {
       setContinuousPlaying(true);
-      playDialogueLine(0, speechRate);
+      playDialogueLine(0, speechRate, 'en');
     }
   };
 
@@ -170,6 +220,23 @@ const EnglishAudioStudio = ({ unitId }) => {
 
         {/* Global Playback & Rate Controls */}
         <div className="flex items-center gap-3 flex-wrap">
+          <div className="speed-selector-group">
+            <span className="text-xs px-2 text-secondary font-bold">模式:</span>
+            <button 
+              className={`speed-btn ${playbackMode === 'en-only' ? 'active' : ''}`}
+              onClick={() => { setPlaybackMode('en-only'); handleStopAll(); }}
+              title="純英文播放"
+            >
+              純英文
+            </button>
+            <button 
+              className={`speed-btn ${playbackMode === 'en-zh' ? 'active' : ''}`}
+              onClick={() => { setPlaybackMode('en-zh'); handleStopAll(); }}
+              title="一句英文一句中文播放"
+            >
+              中英對照
+            </button>
+          </div>
           <div className="speed-selector-group">
             <span className="text-xs px-2 text-secondary font-bold">語速:</span>
             <button 

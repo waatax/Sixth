@@ -15,13 +15,13 @@
 
 🏥 想像一下：如果你和家人到國外自由行，在異國街頭突然覺得肚子絞痛難耐，或者發高燒全身無力。當你走進當地的診所或急診室，醫生關切地問你：*"What's the matter with you?"*
 
-如果你只會摸著肚子發出呻吟，醫生將很難在第一時間判斷你的病情！學會精確表達身體部位、常見病痛（如 $\textcolor{#e91e63}{\textbf{headache}}$、$\textcolor{#2196f3}{\textbf{sore throat}}$）以及看懂各類食物營養成分，就像隨身攜帶了「**出國雙語醫療與健康防護罩**」，無論何時何地都能照顧好自己與家人！
+如果你只會摸著肚子發出呻吟，醫生將很難在第一時間判斷你的病情！學會精確表達身體部位、常見病痛（如 $\textcolor{#e91e63}{\textbf{headache}}$、$\textcolor{#2196f3}{\textbf{sore throat}}$）以及看懂各類食物營養成分，就像隨身攜帶了「**出國雙語醫療與健康防護罩**」，無論何時何地都能照顧好自己與家人！跟著我們一起，把這些超實用的單字句型打包帶走吧！✨
 
 ---
 
 ## 🔑 核心觀念 1：人體部位全覽與特殊複數 (Body Parts)
 
-從頭頂到腳趾，讓我們逐一清點人體的重要部位：
+從頭頂到腳趾，讓我們逐一清點人體的重要部位。記得觀察哪些單字有神奇的變化喔！
 
 ```text
                      【 👤 人體部位透視圖 】
@@ -51,11 +51,32 @@
 | $\text{stomach}$ | 胃、腹部 | $\text{stomachs}$ (字尾加 s，發 /k/) | 吃太飽會脹起來的消化器官 |
 | $\text{foot}$ | 腳掌、足部 | $\textcolor{#2196f3}{\textbf{feet}}$ **(不規則！)** | $\text{oo} \rightarrow \text{ee}$，一雙腳用 feet |
 
+### 🌟 完整範例
+
+來看看這些身體部位怎麼放在句子裡，跟著唸唸看，加深印象吧！
+
+1. **Brush your teeth carefully every night.** (每天晚上都要仔細刷牙喔。)
+2. **My grandfather's feet are very big.** (我爺爺的腳很大。)
+3. **I carry my heavy backpack on my shoulders.** (我把沉重的背包背在肩膀上。)
+4. **Close your eyes and make a wish!** (閉上你的雙眼，許個願吧！)
+
+### 💬 情境對話練習
+
+來一場角色扮演！大聲唸出對話，感受一下在生活中的實際應用！
+
+> 👦 Tom: Ouch! I hurt my knee while playing basketball. (哎呀！我打籃球時弄傷膝蓋了。)
+
+> 👩 Mom: Let me see. We need to put some ice on it. (讓我看看。我們需要冰敷一下。)
+
+> 👦 Tom: It hurts when I move my leg. (我動腿的時候好痛喔。)
+
+> 👩 Mom: Don't worry, you just need to rest your feet for a few days. (別擔心，你只需要讓雙腳休息幾天。)
+
 ---
 
 ## 🔑 核心觀念 2：病痛症狀拆解與醫病對話 (Symptoms & Clinic Dialogue)
 
-在英文中，很多疼痛單字是由「$\textcolor{#2196f3}{\textbf{身體部位}} + \textcolor{#e91e63}{\textbf{-ache (疼痛)}}$」組合而成（-ache 發音為 /eɪk/）：
+在英文中，很多疼痛單字是由「$\textcolor{#2196f3}{\textbf{身體部位}} + \textcolor{#e91e63}{\textbf{-ache (疼痛)}}$」組合而成（-ache 發音為 /eɪk/），就像玩積木一樣簡單：
 
 ```text
  ┌─────────────────────────────────────────────────────────────┐
@@ -75,18 +96,34 @@
 - $\textcolor{#9c27b0}{\textbf{have a cough}}$：咳嗽
 - $\textcolor{#4caf50}{\textbf{catch a cold / have the flu}}$：感冒 / 得流行性感冒
 
-### 💬 診所實戰醫病對話 (Doctor & Patient Dialogue)
-> 👨‍⚕️ **Doctor**: Hello, Peter. $\textcolor{#00bcd4}{\textbf{What's the matter with you?}}$ (你怎麼了？哪裡不舒服？)  
-> 👦 **Peter**: I feel awful, Doctor. $\textcolor{#e91e63}{\textbf{I have a high fever}}$ and a $\textcolor{#2196f3}{\textbf{terrible sore throat}}$.  
-> 👨‍⚕️ **Doctor**: Open your mouth and say "Ahhh". Yes, your throat is red. You $\textcolor{#ff9800}{\textbf{caught a cold}}$.  
-> 👦 **Peter**: What $\textcolor{#4caf50}{\textbf{should I do}}$?  
-> 👨‍⚕️ **Doctor**: You $\textcolor{#4caf50}{\textbf{should drink plenty of warm water}}$ and take this medicine.
+### 🌟 完整範例
+
+學會表達症狀，才能讓別人知道你哪裡不舒服！
+
+1. **I can't eat ice cream because I have a bad toothache.** (我不能吃冰淇淋，因為我牙齒痛得厲害。)
+2. **Mary has a runny nose and a sore throat. She caught a cold.** (瑪麗流鼻水又喉嚨痛。她感冒了。)
+3. **Dad went to the hospital because he had a high fever.** (爸爸發高燒，所以他去醫院了。)
+4. **Don't talk too loudly, I have a headache.** (不要講話太大聲，我頭好痛。)
+
+### 💬 情境對話練習
+
+想像你現在在診所裡，醫生問診時你要怎麼回答呢？
+
+> 👨‍⚕️ Doctor: Hello, Peter. What's the matter with you? (哈囉，彼得。你怎麼了？哪裡不舒服？)
+
+> 👦 Peter: I feel awful, Doctor. I have a high fever and a terrible sore throat. (醫生，我覺得好難受。我發高燒，喉嚨也非常痛。)
+
+> 👨‍⚕️ Doctor: Open your mouth and say "Ahhh". Yes, your throat is red. You caught a cold. (張開嘴巴說「啊」。沒錯，你的喉嚨很紅。你感冒了。)
+
+> 👦 Peter: What should I do? (我該怎麼辦？)
+
+> 👨‍⚕️ Doctor: You should drink plenty of warm water and take this medicine. (你應該多喝溫開水，並把這個藥吃掉。)
 
 ---
 
 ## 🔑 核心觀念 3：健康建議指令——助動詞 should / shouldn't
 
-給予病人或朋友健康建議時，使用助動詞 $\textcolor{#4caf50}{\textbf{should (應該)}}$ 與 $\textcolor{#e91e63}{\textbf{shouldn't (不應該)}}$：
+當家人朋友生病時，我們要怎麼給予關心和建議呢？使用助動詞 $\textcolor{#4caf50}{\textbf{should (應該)}}$ 與 $\textcolor{#e91e63}{\textbf{shouldn't (不應該)}}$ 來幫忙：
 
 $$\text{肯定句：主詞} + \textcolor{#4caf50}{\textbf{should}} + \textcolor{#00bcd4}{\textbf{動詞原形 (V)}}.$$
 $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcolor{#00bcd4}{\textbf{動詞原形 (V)}}.$$
@@ -100,11 +137,32 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 | **sore throat** (喉嚨痛) | $\textcolor{#4caf50}{\textbf{drink warm water}}$ (喝溫開水) | $\textcolor{#e91e63}{\textbf{drink ice water or soda}}$ (喝冰水或汽水) |
 | **stomachache** (肚子痛) | $\textcolor{#4caf50}{\textbf{eat light and soft food}}$ (吃清淡食物) | $\textcolor{#e91e63}{\textbf{eat spicy or fried food}}$ (吃辛辣油炸物) |
 
+### 🌟 完整範例
+
+試著把 should 和 shouldn't 運用在句型中，當個貼心的小幫手！
+
+1. **You should go to bed early if you have a headache.** (如果你頭痛，你應該早點上床睡覺。)
+2. **We shouldn't eat too much candy, or we will get a toothache.** (我們不應該吃太多糖果，否則我們會牙痛。)
+3. **It is cold outside. You should wear a warm jacket.** (外面很冷。你應該穿件保暖的外套。)
+4. **He has a fever. He shouldn't go swimming today.** (他發燒了。他今天不應該去游泳。)
+
+### 💬 情境對話練習
+
+如果你看到妹妹不舒服，試著給她一些建議吧！
+
+> 👧 Lisa: Ouch! My tooth hurts so much! (哎呀！我的牙齒好痛喔！)
+
+> 🧑 Dad: Oh no! You have a bad toothache. You should see a dentist right away. (噢不！你牙齒痛得厲害。你應該馬上看牙醫。)
+
+> 👧 Lisa: But I am afraid of the dentist. (可是我怕看牙醫。)
+
+> 🧑 Dad: Don't worry, the doctor is very nice. And you shouldn't eat so much chocolate next time! (別擔心，醫生很好心的。而且你下次不應該吃那麼多巧克力了！)
+
 ---
 
 ## 🔑 核心觀念 4：六大類食物營養金字塔 (The 6 Food Groups)
 
-要維持免疫力、長高長壯，每天必須從六大類食物攝取均衡營養：
+要維持無敵的免疫力、長高長壯，每天必須從六大類食物攝取均衡營養！跟著圖表，看看你今天吃對了嗎？
 
 ```text
                          /\
@@ -132,6 +190,29 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 | $\textcolor{#4caf50}{\textbf{Vegetables}}$ | 蔬菜類 | broccoli (花椰菜), spinach (菠菜), carrots (胡蘿蔔) | 膳食纖維促進腸道健康蠕動 |
 | $\textcolor{#e91e63}{\textbf{Fruits}}$ | 水果類 | apples (蘋果), oranges (柳橙), guavas (芭樂) | 豐富維他命 C，增強抵抗力 |
 | $\textcolor{#9c27b0}{\textbf{Fats, Oils & Nuts}}$ | 油脂與堅果種子 | olive oil (橄欖油), walnuts (核桃), almonds (杏仁) | 提供必需脂肪酸與脂溶性維生素 |
+
+### 🌟 完整範例
+
+認識這些食物的英文，下次去超市就可以教爸爸媽媽怎麼挑選健康的食材囉！
+
+1. **Milk and cheese are dairy products. They are good for your teeth and bones.** (牛奶和起司是乳製品。它們對你的牙齒和骨骼很好。)
+2. **We should eat more fresh vegetables and fruits every day.** (我們每天應該吃更多新鮮的蔬菜和水果。)
+3. **Chicken and fish belong to the protein foods group.** (雞肉和魚肉屬於豆魚蛋肉類。)
+4. **Whole grains like brown rice give us energy to play and study.** (像糙米這樣的全穀雜糧能給我們活力去玩耍和學習。)
+
+### 💬 情境對話練習
+
+來看看我們家今天的晚餐，該怎麼搭配最健康！
+
+> 👦 Kevin: Mom, can I have some fried chicken and french fries for dinner? (媽，晚餐我可以吃炸雞和薯條嗎？)
+
+> 👩 Mom: You shouldn't eat fried food every day. It's not healthy. (你不應該每天吃油炸食物。那不健康。)
+
+> 👦 Kevin: Then what should we eat tonight? (那我們今晚應該吃什麼？)
+
+> 👩 Mom: We should eat some vegetables and whole grains. How about a nice salad and brown rice? (我們應該吃些蔬菜和全穀雜糧。來份好吃的沙拉和糙米飯怎麼樣？)
+
+> 👦 Kevin: Sounds great! Let's eat a balanced diet! (聽起來很棒！讓我們吃得均衡營養吧！)
 
 ---
 

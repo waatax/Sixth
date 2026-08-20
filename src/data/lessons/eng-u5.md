@@ -52,6 +52,20 @@
 | $\textcolor{#2196f3}{\textbf{Dragon Boat Festival}}$ | 端午節 | $\text{zongzi, dragon boat races}$ | People row fast in $\textcolor{#2196f3}{\textbf{dragon boat races}}$. |
 | $\textcolor{#ff9800}{\textbf{Mid-Autumn Festival}}$ | 中秋節 | $\text{moon cakes, pomelos, BBQ}$ | Families gather to gaze at the full moon and eat $\textcolor{#ff9800}{\textbf{moon cakes}}$. |
 
+### 🌟 完整範例
+
+1. During the Dragon Boat Festival, my family watches the dragon boat races by the river. (端午節時，我們全家會在河邊看划龍舟比賽。)
+2. We love to eat delicious moon cakes and barbecue outdoors on the Mid-Autumn Festival. (我們喜歡在中秋節吃美味的月餅並在戶外烤肉。)
+3. At the Lantern Festival, people write their wishes on sky lanterns and release them into the sky. (元宵節時，人們把願望寫在天燈上，然後把它們放到天空中。)
+
+### 💬 情境對話練習
+
+> Kevin: What is your favorite traditional festival in Taiwan? (你在台灣最喜歡的傳統節慶是什麼？)
+
+> Bella: I like the Lunar New Year the most because I can get red envelopes! (我最喜歡農曆新年，因為我可以拿紅包！)
+
+> Kevin: That sounds great! I love the Mid-Autumn Festival because the pomelos are so sweet. (聽起來很棒！我喜歡中秋節，因為柚子好甜。)
+
 ---
 
 ## 🔑 核心觀念 2：西方代表性節慶全覽 (Western Festivals)
@@ -83,6 +97,20 @@
 | $\textcolor{#2196f3}{\textbf{Christmas}}$ | $\textcolor{#2196f3}{\textbf{on December 25th}}$ | 傳遞愛與和平、分享禮物 | $\text{Santa Claus, Christmas stockings, gifts}$ |
 | $\textcolor{#4caf50}{\textbf{Easter}}$ | 每年三/四月春分後 | 慶祝重生、迎接春天 | $\text{Easter eggs, Easter bunny, chocolate}$ |
 
+### 🌟 完整範例
+
+1. Children wear scary costumes and go trick-or-treating on Halloween. (孩子們在萬聖節穿上嚇人的變裝服去玩不給糖就搗蛋。)
+2. On Thanksgiving, families share a big feast of roast turkey and sweet pumpkin pie. (感恩節當天，家人們會分享一頓有烤火雞和甜南瓜派的大餐。)
+3. We decorate the Christmas tree with colorful lights and wait for Santa Claus. (我們用彩燈裝飾聖誕樹，並等待聖誕老人的到來。)
+
+### 💬 情境對話練習
+
+> Alex: What do you usually do on Easter? (你通常在復活節做什麼？)
+
+> Mia: We paint beautiful Easter eggs and have an egg hunt in the garden! (我們會畫美麗的復活節彩蛋，還會在花園裡尋找彩蛋！)
+
+> Alex: Wow, that sounds like a lot of fun. Can I join you next year? (哇，聽起來真好玩。明年我可以加入你們嗎？)
+
 ---
 
 ## 🔑 核心觀念 3：節慶時間介系詞黃金法則 (in / on / at)
@@ -104,6 +132,22 @@
 - $\textcolor{#2196f3}{\textbf{on}} + \text{明確日期}$：*Halloween is celebrated $\textcolor{#2196f3}{\textbf{on}}$ October 31st.*
 - $\textcolor{#2196f3}{\textbf{on}} + \text{節日 + Day}$：*We exchange gifts $\textcolor{#2196f3}{\textbf{on}}$ Christmas Day.*
 - $\textcolor{#e91e63}{\textbf{at}} + \text{節慶總稱}$：*We eat big meals $\textcolor{#e91e63}{\textbf{at}}$ Thanksgiving.*
+
+### 🌟 完整範例
+
+1. My birthday is in October, so I always celebrate it with a Halloween party. (我的生日在十月，所以我總是用萬聖節派對來慶祝。)
+2. My grandparents will come visit us on New Year's Eve. (我的爺爺奶奶將在除夕夜來看我們。)
+3. We have a lot of fun together at Christmas. (我們在聖誕節期間玩得很開心。)
+
+### 💬 情境對話練習
+
+> Teacher: When do we celebrate Teacher's Day in Taiwan? (我們在台灣什麼時候慶祝教師節？)
+
+> Sam: We celebrate it on September 28th! (我們在九月二十八日慶祝！)
+
+> Teacher: Excellent! Do you know what month Thanksgiving is in? (太棒了！你知道感恩節在幾月嗎？)
+
+> Sam: It is in November! (它在十一月！)
 
 ---
 
@@ -129,6 +173,22 @@
  │    Leo                                                      │
  └─────────────────────────────────────────────────────────────┘
 ```
+
+### 🌟 完整範例
+
+1. "Dear Mom and Dad, Happy Thanksgiving! Thank you for your love and care. Best wishes, Lily." (親愛的爸爸媽媽，感恩節快樂！謝謝你們的愛與照顧。致上最誠摯的祝福，莉莉。)
+2. "Dear Uncle John, Merry Christmas! I hope you get wonderful gifts this year. Warm regards, Tom." (親愛的約翰叔叔，聖誕快樂！希望你今年收到很棒的禮物。溫暖的問候，湯姆。)
+3. "Dear Teacher Mary, Happy New Year! Thank you for teaching me so much. Yours, Eric." (親愛的瑪麗老師，新年快樂！謝謝您教導我這麼多。你的學生，艾瑞克。)
+
+### 💬 情境對話練習
+
+> Jenny: I want to write a Christmas card to my friend in the USA, but I don't know how to start. (我想寫一張聖誕卡片給美國的朋友，但我不知道怎麼開頭。)
+
+> Danny: You can start with "Dear" and their name, like "Dear Sarah." (你可以用「Dear」加上他們的名字開頭，像「Dear Sarah」。)
+
+> Jenny: Good idea! And how should I sign off at the bottom? (好主意！那我最後該怎麼署名呢？)
+
+> Danny: You can write "Best wishes" before you sign your name. (你可以在簽名前寫上「Best wishes」。)
 
 ---
 

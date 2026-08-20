@@ -156,6 +156,17 @@ export const resourcesData = {
       tags: ['密度計算', '元素符號', '實驗安全守則', '探究實作'],
       url: '#/prep',
       tips: '提早背誦前 20 號元素週期表（氫氦鋰鈹硼、碳氮氧氟氖...），國中理化事半功倍！'
+    },
+    {
+      id: 'gept-prep',
+      category: 'transition',
+      title: '全民英檢 (GEPT) 五級課綱與英語聽力練習',
+      badge: 'GEPT・聽讀說寫',
+      color: 'hsl(192, 88%, 45%)',
+      desc: '涵蓋初級(A2)至優級(C2)完整課綱，並提供原生美語發音的朗讀與對話練習，作為英語延伸目標。',
+      tags: ['GEPT', '全民英檢', 'CEFR', '語音播放'],
+      url: '#/gept',
+      tips: '小六程度建議先從「初級 (Elementary)」開始，搭配短文朗讀增強語感。'
     }
   ]
 };

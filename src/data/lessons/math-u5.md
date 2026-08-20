@@ -49,6 +49,8 @@ $$ \textcolor{#e91e63}{\textbf{\pi = \frac{\text{圓周長}}{\text{直徑}} \app
 
 ## 🔑 核心觀念 2：圓周長計算公式
 
+![圖解說明](./images/math_u5_concept2.jpg)
+
 根據圓周率定義，只要知道「直徑」或「半徑」，就能輕鬆求出圓周長：
 
 ```text
@@ -81,6 +83,8 @@ $$ C = 5 \times 2 \times 3.14 = 10 \times 3.14 = \textcolor{#2196f3}{\textbf{31.
 
 ## 🔑 核心觀念 3：扇形弧長與圓心角比例
 
+![圖解說明](./images/math_u5_concept3.jpg)
+
 **扇形**是由兩條半徑和一段圓弧所圍成的圖形：
 - 一個完整圓的圓心角是 $\textcolor{#e91e63}{\textbf{360^\circ}}$。
 - 圓心角為 $\theta$ 的扇形，佔整個圓的比例為 $\textcolor{#2196f3}{\textbf{\frac{\theta}{360^\circ}}}$。
@@ -101,6 +105,8 @@ $$ \textcolor{#e91e63}{\textbf{\text{扇形弧長} = \text{直徑} \times 3.14 \
 ---
 
 ## 🔑 核心觀念 4：經典段考陷阱——「弧長」vs「扇形周長」
+
+![圖解說明](./images/math_u5_concept4.jpg)
 
 這是高年級數學考試中 $\textcolor{#d32f2f}{\textbf{最常被扣分的魔鬼陷阱}}$！
 

@@ -36,11 +36,25 @@
  ├─────────────────────────┼───────────────────────────────────┤
  │ 🏪 生活與金融機能       │ 🚆 交通與休閒娛樂                 │
  │ - convenience store     │ - train / MRT station (捷運/火車站)│
- │   (便利商店 24小時)     │ - park (公園)                     │
- │ - bookstore (書店)      │ - restaurant (餐廳)               │
- │ - bank (銀行)           │ - supermarket (超級市場)          │
+ │   (便利商店 24小時)     │ - bookstore (書店)                │
+ │ - bank (銀行)           │ - restaurant (餐廳)               │
+ │ - supermarket (超級市場)│ - park (公園)                     │
  └─────────────────────────┴───────────────────────────────────┘
 ```
+
+### 🌟 完整範例
+1. I borrow many interesting comic books from the **library** every weekend. (我每個週末都會從圖書館借很多有趣的漫畫書。)
+2. My mom often goes to the **supermarket** to buy fresh fruits and vegetables. (我媽媽常常去超級市場買新鮮的水果和蔬菜。)
+3. We are going to the **convenience store** to buy some cold drinks after PE class. (體育課後我們正要去便利商店買些冷飲。)
+
+### 💬 情境對話練習
+> Kevin: Let's go to the museum! They have a big dinosaur exhibition today. (我們去博物館吧！他們今天有大型恐龍展。)
+
+> Anna: That sounds super cool! Is the museum near the MRT station? (聽起來超級酷！博物館在捷運站附近嗎？)
+
+> Kevin: Yes, it is. We can walk there in just five minutes. (是的。我們只要走路五分鐘就能到了。)
+
+> Anna: Perfect! Let's invite Leo to join us. (太完美了！我們邀請 Leo 一起去吧。)
 
 ---
 
@@ -77,6 +91,20 @@
 | $\textcolor{#ff9800}{\textbf{on the corner of}}$ | 位於兩條路十字交會的轉角處 | The 7-Eleven is $\textcolor{#ff9800}{\textbf{on the corner of}}$ First St. and Peace Rd. |
 | $\textcolor{#9c27b0}{\textbf{in front of / behind}}$ | 在...的前方 / 在...的後方 | There is a big fountain $\textcolor{#9c27b0}{\textbf{in front of}}$ the museum. |
 
+### 🌟 完整範例
+1. The new movie theater is **next to** the famous Italian restaurant. (新開的電影院在那間有名的義大利餐廳隔壁。)
+2. Look! The cute little dog is sleeping **between** the two big trees. (看！那隻可愛的小狗睡在兩棵大樹中間。)
+3. The bus stop is **across from** our school, so it's very convenient for students. (公車站牌就在我們學校正對面，所以對學生來說非常方便。)
+
+### 💬 情境對話練習
+> Emma: Excuse me. Where is the nearest bank? I need to get some money. (不好意思。請問最近的銀行在哪裡？我需要領些錢。)
+
+> Police Officer: Oh, it's on the corner of Apple Street and Sun Road. (喔，它就在蘋果街和太陽路的轉角處。)
+
+> Emma: Is it next to the bookstore? (它在書店隔壁嗎？)
+
+> Police Officer: No, it's across from the bookstore. You can't miss it! (不是喔，它在書店的正對面。你一定找得到的！)
+
 ---
 
 ## 🔑 核心觀念 3：問路與指路實戰指南 (Asking & Giving Directions)
@@ -91,6 +119,20 @@
 - $\textcolor{#ff9800}{\textbf{Turn left / right}}$ at the first corner. (在第一個轉角左轉/右轉。)
 - $\textcolor{#e91e63}{\textbf{It is on your left / right}}$. (它就在你的左手邊/右手邊。)
 - $\textcolor{#9c27b0}{\textbf{You can't miss it!}}$ (你一定不會錯過的！/ 很好找的！)
+
+### 🌟 完整範例
+1. **Excuse me, how can I get to the** train station? (不好意思，請問我該怎麼去火車站呢？)
+2. **Go straight** for three blocks and **turn left** at the second corner. (直走三個街區，然後在第二個轉角處左轉。)
+3. Walk along this road. The beautiful park will be **on your right**. (沿著這條路走。那座美麗的公園就會在你的右手邊。)
+
+### 💬 情境對話練習
+> Leo: Excuse me, where is the hospital? My friend is feeling sick. (不好意思，請問醫院在哪裡？我的朋友覺得不舒服。)
+
+> Sarah: Don't worry! Go straight and turn right at the first corner. (別擔心！直走然後在第一個轉角右轉。)
+
+> Leo: Thank you so much! Is it far from here? (非常感謝你！它離這裡很遠嗎？)
+
+> Sarah: Not at all. It's on your left, right next to the police station. (一點也不。它就在你的左手邊，剛好在警察局隔壁。)
 
 ---
 
@@ -113,10 +155,15 @@
 
 ### 🗣️ 真實情境指路對話 (Role Play)
 > 🧳 **Tourist**: $\textcolor{#e91e63}{\textbf{Excuse me, how can I get to the Post Office?}}$ I need to buy some stamps.  
+
 > 🧒 **You**: No problem! $\textcolor{#4caf50}{\textbf{Go straight}}$ along Broadway Street. Cross Apple Road.  
+
 > 🧳 **Tourist**: Cross Apple Road, and then?  
+
 > 🧒 **You**: The Post Office is $\textcolor{#ff9800}{\textbf{on your right}}$, $\textcolor{#4caf50}{\textbf{across from}}$ the Library. $\textcolor{#9c27b0}{\textbf{You can't miss it!}}$  
+
 > 🧳 **Tourist**: Thank you so much for your help! You are wonderful!  
+
 > 🧒 **You**: You're very welcome! Have a great trip!
 
 ---
