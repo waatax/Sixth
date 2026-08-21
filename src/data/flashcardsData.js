@@ -2,141 +2,325 @@ export const flashcardsData = {
   math: [
     {
       id: 'm1',
-      front: '圓周長計算公式？',
-      back: '圓周長 = 直徑 × 3.14 (或 2 × 半徑 × 3.14)',
-      tag: '幾何公式'
+      front: '最大公因數 (GCD) 與最小公倍數 (LCM) 短除法計算法則？',
+      back: '• GCD（最大公因數）：只將【左邊質因數直列】相乘。\n• LCM（最小公倍數）：將【左邊直列 × 底下橫列】呈 L 型全部相乘。',
+      tag: '因數倍數'
     },
     {
       id: 'm2',
-      front: '圓面積計算公式？',
-      back: '圓面積 = 半徑 × 半徑 × 3.14',
-      tag: '幾何公式'
+      front: '分數除法的「顛倒相乘」算理規則？',
+      back: '除以一個分數，等於乘以該分數的「倒數」！\n公式：a/b ÷ c/d = a/b × d/c\n(計算帶分數時，務必先化為假分數再計算)',
+      tag: '分數除法'
     },
     {
       id: 'm3',
-      front: '柱體體積的通用公式？',
-      back: '柱體體積 = 底面積 × 柱高',
-      tag: '柱體計算'
+      front: '小數除法「餘數」的小數點位置如何判斷？',
+      back: '• 商的小數點：對齊「移動後的新小數點」\n• 餘數的小數點：務必對齊「被除數原來的小數點」位置！',
+      tag: '小數除法'
     },
     {
       id: 'm4',
-      front: '速率三要素關係公式？',
-      back: '• 速率 = 距離 ÷ 時間\n• 距離 = 速率 × 時間\n• 時間 = 距離 ÷ 速率',
-      tag: '速率問題'
-    },
-    {
-      id: 'm5',
-      front: '比值如何計算？',
-      back: '比值 = 前項 ÷ 後項 (例：3 : 2 的比值為 3 ÷ 2 = 1.5)',
+      front: '比與比值的定義與計算公式？',
+      back: '• 比的符號：a : b (a 為前項，b 為後項且 b ≠ 0)\n• 比值 = 前項 ÷ 後項 = a / b\n• 等比性質：前項與後項同乘或同除以同一個不為 0 的數，比值不變。',
       tag: '比與比值'
     },
     {
+      id: 'm5',
+      front: '圓周長與扇形弧長計算公式？',
+      back: '• 圓周長 = 直徑 × 3.14 = 2 × 半徑 × 3.14\n• 扇形弧長 = 直徑 × 3.14 × (圓心角 / 360°)\n• 扇形周長 = 扇形弧長 + (半徑 × 2)',
+      tag: '幾何周長'
+    },
+    {
       id: 'm6',
-      front: '放大圖與縮圖的面積變化規則？',
-      back: '若長度放大為 n 倍，則面積會放大為 n² 倍！',
+      front: '圓面積與扇形面積計算公式？',
+      back: '• 圓面積 = 半徑 × 半徑 × 3.14 (A = π r²)\n• 扇形面積 = 半徑 × 半徑 × 3.14 × (圓心角 / 360°)',
+      tag: '幾何面積'
+    },
+    {
+      id: 'm7',
+      front: '速率三大基本公式與平均速率陷阱？',
+      back: '• 速率 = 距離 ÷ 時間\n• 距離 = 速率 × 時間\n• 時間 = 距離 ÷ 速率\n⚠️ 平均速率 = 全程總距離 ÷ 全程總時間 (絕不可直接將時速相加除以 2！)',
+      tag: '速率問題'
+    },
+    {
+      id: 'm8',
+      front: '柱體體積與表面積計算通用公式？',
+      back: '• 柱體體積 = 底面積 × 柱高\n• 柱體表面積 = (底面積 × 2) + 側面積\n• 側面積 = 底面周長 × 柱高',
+      tag: '柱體幾何'
+    },
+    {
+      id: 'm9',
+      front: '放大圖與縮圖的長度 vs 面積倍數關係？',
+      back: '• 對應角：大小完全不變！\n• 對應邊（長度）：放大為 n 倍\n• 圖形面積：會放大為 n² 倍！(例：邊長放大 3 倍，面積放大 9 倍)',
       tag: '比例尺'
+    },
+    {
+      id: 'm10',
+      front: '基準量與比較量三大互換公式？',
+      back: '• 比值（倍數）= 比較量 ÷ 基準量\n• 比較量 = 基準量 × 比值\n• 基準量 = 比較量 ÷ 比值\n(口訣：「的」字前面常為基準量設為 1，母子和乘 (1+比值)，母子差乘 (1-比值))',
+      tag: '怎樣解題'
     }
   ],
+
   science: [
     {
       id: 's1',
-      front: '熱的三種傳播方式各為何？',
-      back: '1. 熱傳導（固體介質）\n2. 熱對流（液體與氣體流動）\n3. 熱輻射（不需介質，電磁波）',
-      tag: '熱學原理'
+      front: '高氣壓 vs 低氣壓的天氣特徵比較？',
+      back: '• 高氣壓 (H)：空氣由高空下沉，氣壓高，水氣不易凝結，天氣【晴朗穩定】。\n• 低氣壓 (L)：空氣向上對流上升，氣壓低，水氣凝結成雲，易出現【陰雨天氣】。',
+      tag: '氣象天氣'
     },
     {
       id: 's2',
-      front: '槓桿平衡條件公式？',
-      back: '施力 × 施力臂 = 抗力 × 抗力臂\n(施力臂 > 抗力臂時為省力槓桿)',
-      tag: '簡單機械'
+      front: '酸鹼水溶液檢驗口訣與電解質定義？',
+      back: '• 石蕊試紙口訣：【酸紅鹼藍】（酸性使藍變紅，鹼性使紅變藍，中性不變色）\n• 電解質：溶於水能解離出正負離子並導電的化合物（如食鹽、檸檬酸、小蘇打；純水、砂糖、酒精非電解質）。',
+      tag: '水溶液與酸鹼'
     },
     {
       id: 's3',
-      front: '定滑輪與動滑輪的功用差異？',
-      back: '• 定滑輪：改變施力方向，不省力\n• 動滑輪：省力 1/2，但需拉 2 倍距離',
-      tag: '滑輪應用'
+      front: '電磁鐵磁力增強的三大方法？',
+      back: '1. 增加線圈纏繞圈數（圈數越多，磁力越強）\n2. 增加串聯電池數量（電流越大，磁力越強）\n3. 內部放入鐵芯（引導並聚集磁力線）',
+      tag: '電與磁'
     },
     {
       id: 's4',
-      front: '鐵生鏽的三個必備條件？',
-      back: '1. 鐵金屬\n2. 水分（水氣）\n3. 氧氣（空氣）',
-      tag: '物質變化'
+      front: '地表三大類岩石之成因與經典代表？',
+      back: '1. 火成岩：岩漿冷卻凝固（安山岩、玄武岩、花岡岩）\n2. 沉積岩：碎屑泥沙堆積膠結（頁岩、砂岩、石灰岩，常含化石）\n3. 變質岩：高溫高壓質變（大理岩、板岩、片麻岩）',
+      tag: '地球科學'
     },
     {
       id: 's5',
-      front: '三大岩石分類及其成因？',
-      back: '1. 火成岩（岩漿冷卻）\n2. 沉積岩（泥沙堆積膠結）\n3. 變質岩（高溫高壓變質）',
-      tag: '地球科學'
+      front: '熱的三種傳播方式各為何？',
+      back: '1. 熱傳導：固體粒子碰撞傳遞（金屬良導體；木頭/空氣不良導體）\n2. 熱對流：流體（液體與氣體）熱升冷降循環\n3. 熱輻射：電磁波直接傳播，不需介質（太陽光、紅外線烤箱）',
+      tag: '熱學原理'
+    },
+    {
+      id: 's6',
+      front: '槓桿平衡條件與三類槓桿辨別？',
+      back: '• 槓桿平衡：施力 × 施力臂 = 抗力 × 抗力臂\n• 第一類（支點在中間）：天平、剪刀、翹翹板\n• 第二類（抗力點在中間）：開瓶器、獨輪車、裁紙刀【必省力】\n• 第三類（施力點在中間）：筷子、鑷子、掃帚【費力但省距離】',
+      tag: '簡單機械'
+    },
+    {
+      id: 's7',
+      front: '鐵生鏽的三大條件與防鏽防腐原理？',
+      back: '• 鐵生鏽必備：鐵金屬 + 水分（水氣）+ 氧氣（空氣）\n• 防鏽工法：隔絕水與氧氣（塗油漆、鍍鋅鍍錫、塗黃油、製成不鏽鋼合金）\n• 食品保存原理：破壞微生物繁殖條件（低溫冷凍、真空包裝、脫水乾燥、醃漬高糖高鹽）',
+      tag: '物質變化'
+    },
+    {
+      id: 's8',
+      front: '生態系角色分工與食物鏈箭頭方向？',
+      back: '• 生產者（自營製造養分）➔ 初級消費者（草食）➔ 次級/高級消費者（肉食）\n• 分解者：細菌黴菌分解遺體回歸大自然無機物\n⚠️ 食物鏈箭頭指向【捕食者/能量流向】（例：草 ➔ 蝗蟲 ➔ 青蛙 ➔ 蛇 ➔ 老鷹）',
+      tag: '生態保育'
     }
   ],
+
   mandarin: [
     {
       id: 'c1',
-      front: '「六何法 (5W1H)」指的是哪六個要素？',
-      back: '何人 (Who)、何時 (When)、何地 (Where)、何事 (What)、何因 (Why)、如何 (How)',
+      front: '閱讀理解「六何法 (5W1H)」指的是哪六個要素？',
+      back: '• 何人 (Who)：主角與關鍵人物\n• 何時 (When)：故事發生的時間背景\n• 何地 (Where)：事件發生的空間地點\n• 何事 (What)：發生的事件與核心情節\n• 何因 (Why)：事件發生的起因與動機\n• 如何 (How)：處理過程與最終結果',
       tag: '閱讀策略'
     },
     {
       id: 'c2',
-      front: '議論文的三大核心結構要素？',
-      back: '1. 論點（核心主張）\n2. 論據（事實依據/數據/名言）\n3. 論證（邏輯推理過程）',
-      tag: '議論文'
+      front: '記敘文四大結構「起承轉合」之核心功能？',
+      back: '• 起：開門見山或交代背景人事時地物\n• 承：順接開頭，展開事件詳細經過\n• 轉：情節出現轉折、波折或衝突高潮\n• 合：總結全文，抒發真情實感或昇華主題',
+      tag: '寫作架構'
     },
     {
       id: 'c3',
-      front: '近體詩（絕句與律詩）押韻規則？',
-      back: '偶數句（第2、4句，律詩加第6、8句）必定押韻，首句可押可不押。',
+      front: '說明文方法 vs 議論文三要素？',
+      back: '• 說明文常見方法：列數字、作比較、舉例子、打比方、分類別\n• 議論文三大核心：\n  1. 論點（作者的核心主張）\n  2. 論據（支持主張的事實/數據/名言）\n  3. 論證（運用邏輯推理將論據與論點相連）',
+      tag: '文體解析'
+    },
+    {
+      id: 'c4',
+      front: '修辭辨析：明喻、暗喻、借喻之區別？',
+      back: '• 明喻：本體、喻體、比喻詞（像、彷彿、如）皆出現（例：月亮像銀盤）\n• 暗喻：比喻詞改為「是、成、為」（例：書籍是進步的階梯）\n• 借喻：省略本體與比喻詞，直接以喻體代替本體（例：把掌聲獻給台上的綠葉）',
+      tag: '修辭技巧'
+    },
+    {
+      id: 'c5',
+      front: '近體詩（絕句與律詩）格律規則？',
+      back: '• 絕句 4 句；律詩 8 句（分首聯、頷聯、頸聯、尾聯）\n• 押韻：偶數句（第2、4句，律詩加第6、8句）必押平聲韻，首句可押可不押，奇數句不押\n• 對仗：律詩的【頷聯（3,4句）】與【頸聯（5,6句）】必須嚴格對仗！',
       tag: '古典詩詞'
+    },
+    {
+      id: 'c6',
+      front: '口語發表「燈塔原則」與「三明治回饋法」？',
+      back: '• 燈塔原則：眼神如燈塔旋轉光芒，均勻掃視全場左中右聽眾，每次停留 2~3 秒\n• 三明治回饋法：肯定優點 ➔ 提出 1~2 點具體可改進建議 ➔ 再次鼓勵肯定',
+      tag: '口語表達'
     }
   ],
+
+  social: [
+    {
+      id: 'so1',
+      front: '臺灣民主發展兩大關鍵歷史年代？',
+      back: '• 西元 1987 年（民國 76 年）：宣告解除戒嚴，開放黨禁、報禁，邁向民主轉型。\n• 西元 1996 年（民國 85 年）：舉行中華民國歷史上首次【總統公民直接選舉】。',
+      tag: '民主憲政'
+    },
+    {
+      id: 'so2',
+      front: '我國中央政府「五院」體制與職權制衡？',
+      back: '• 行政院：最高行政機關，向立法院負責並提出施政報告\n• 立法院：最高立法機關，審查法律案與預算案，行使質詢權\n• 司法院：掌理民刑事審判與憲法法庭釋憲\n• 考試院：掌理公務人員考選、任免與退休\n• 監察院：行使彈劾、糾舉與審計權',
+      tag: '政府組織'
+    },
+    {
+      id: 'so3',
+      front: '臺灣法定原住民族共有幾族？代表祭典有哪些？',
+      back: '• 目前官方認定共有【16 個法定原住民族】\n• 經典祭儀：阿美族（豐年祭）、賽夏族（巴斯達隘矮靈祭）、達悟族（飛魚祭/大船下水）、布農族（打耳祭/八部合音）、鄒族（瑪雅斯比戰祭）、排灣/魯凱（百步蛇陶壺文化）',
+      tag: '多元族群'
+    },
+    {
+      id: 'so4',
+      front: '戰後土地改革三部曲之年代與政策名稱？',
+      back: '1. 1949 年：三七五減租（地租上限 37.5%）\n2. 1951 年：公地放領（國有公地低利分期賣給佃農）\n3. 1953 年：耕者有其田（徵收地主多餘土地賣給佃農，以實物債券與四大公營事業股票補償）',
+      tag: '經濟發展'
+    },
+    {
+      id: 'so5',
+      front: '聯合國《兒童權利公約 (CRC)》四大核心原則與兒少專線？',
+      back: '• CRC 四大核心原則：\n  1. 生存權  2. 受保護權  3. 發展權  4. 參與權\n• 兒少關鍵專線：110報案、113保護、165反詐騙、1953教育部反霸凌專線',
+      tag: '人權與法律'
+    },
+    {
+      id: 'so6',
+      front: '聯合國 SDGs 永續發展目標共有幾項？',
+      back: '• 聯合國 2015 年通過【17 項永續發展目標 (SDGs)】，涵蓋消滅貧窮、優質教育、性別平權、淨水衛生、氣候行動與陸地海洋保育。\n• 臺灣正積極落實 2050 淨零碳排與綠色公民行動！',
+      tag: '全球化與永續'
+    }
+  ],
+
   english: [
     {
       id: 'e1',
-      front: 'Common Irregular Past Tense: go, see, eat, have, buy',
-      back: '• go ➔ went\n• see ➔ saw\n• eat ➔ ate\n• have ➔ had\n• buy ➔ bought',
+      front: 'Common Irregular Past Tense Verbs (高頻不規則過去式)',
+      back: '• go ➔ went\n• see ➔ saw\n• eat ➔ ate\n• have/has ➔ had\n• buy ➔ bought\n• take ➔ took\n• write ➔ wrote\n• give ➔ gave',
       tag: 'Past Tense'
     },
     {
       id: 'e2',
-      front: 'Time Prepositions: at / in / on usage rules',
-      back: '• at: 具體鐘點 (at 7:30, at noon)\n• in: 早中晚/月份/年份 (in July, in 2026)\n• on: 星期與具體某天 (on Monday, on my birthday)',
+      front: 'Time Prepositions: at / in / on usage rules (時間介系詞用法)',
+      back: '• at: 具體鐘點與特殊時刻 (at 7:30, at noon, at night)\n• in: 早中晚/月份/季節/年份 (in the morning, in July, in summer, in 2026)\n• on: 星期與具體某一天 (on Monday, on October 10th, on my birthday)',
       tag: 'Prepositions'
     },
     {
       id: 'e3',
-      front: 'Telling Time: half past vs. quarter to',
-      back: '• half past seven = 7:30 (過半小時)\n• a quarter to eight = 7:45 (差15分到8點)\n• a quarter past seven = 7:15 (過15分)',
+      front: 'Telling Time: half past vs. quarter to / past (時間英文表達)',
+      back: '• half past seven = 7:30 (過半小時)\n• a quarter to eight = 7:45 (差一刻八點)\n• a quarter past seven = 7:15 (過一刻)',
       tag: 'Telling Time'
     },
     {
       id: 'e4',
-      front: 'Polite way to ask for and give directions',
-      back: '• 問路: Excuse me, how can I get to the library?\n• 指路: Go straight for two blocks and turn left.',
+      front: 'Polite Direction Phrases (禮貌問路與指路實用句型)',
+      back: '• 問路: Excuse me, how do I get to the library?\n• 指路: Go straight for two blocks and turn left/right. It is next to the post office.',
       tag: 'Directions'
     },
     {
       id: 'e5',
-      front: 'Symptoms with "-ache" suffix & Clinic dialog',
-      back: '• headache (頭痛), stomachache (胃痛), toothache (牙痛)\n• 句型: What\'s the matter? ➔ I have a headache.\n• 建議: You should take medicine and rest.',
+      front: 'Health Symptoms & Clinic Dialog (-ache 與身體症狀看診)',
+      back: '• headache (頭痛), stomachache (胃痛), toothache (牙痛), sore throat (喉嚨痛), fever (發燒)\n• 句型: What\'s the matter? ➔ I have a headache.\n• 建議: You should drink warm water and take a rest.',
       tag: 'Health & Clinic'
     },
     {
       id: 'e6',
-      front: 'Taiwan & World Festivals in English',
-      back: '• Lunar New Year (春節): red envelopes\n• Dragon Boat Festival (端午節): rice dumplings\n• Mid-Autumn Festival (中秋節): moon cakes\n• Halloween (萬聖節): trick or treat',
+      front: 'Taiwan & Western Festivals in English (中西節慶英語對照)',
+      back: '• Lunar New Year (春節): red envelopes, dragon dance\n• Dragon Boat Festival (端午節): rice dumplings (zongzi)\n• Mid-Autumn Festival (中秋節): moon cakes, pomelo\n• Halloween (萬聖節): Trick or treat, jack-o\'-lantern\n• Christmas (聖誕節): Christmas tree, exchange gifts',
       tag: 'Festivals & Culture'
     },
     {
       id: 'e7',
-      front: 'Reading Skills: Skimming vs. Scanning',
-      back: '• Skimming (略讀): 快速掌握大意與主旨 (Overview)\n• Scanning (掃讀): 精準搜尋特定人名、年代與數字 (Details)',
+      front: 'Reading Strategies: Skimming vs. Scanning (閱讀策略)',
+      back: '• Skimming (略讀): 快速瀏覽標題、首尾段掌握文章大意主旨 (Main Idea)\n• Scanning (掃讀): 精準搜尋特定人名、地名、日期與數字細節 (Specific Details)',
       tag: 'Reading Skills'
     },
     {
       id: 'e8',
-      front: 'Prefixes & Suffixes word-building',
-      back: '• un- (not): unhappy, unable\n• re- (again): replay, rewrite\n• -ful (full of): wonderful, helpful\n• -less (without): careless, hopeless',
+      front: 'Word Building: Prefixes & Suffixes (字首字尾構詞法)',
+      back: '• un- (not): unhappy, unkind\n• re- (again): rewrite, replay\n• -ful (full of, 形容詞): helpful, wonderful\n• -less (without, 形容詞): hopeless, careless\n• -ly (副詞): quickly, happily',
       tag: 'Word Building'
+    }
+  ],
+
+  arts: [
+    {
+      id: 'a1',
+      front: '視覺藝術色彩三要素與色相環？',
+      back: '• 色相 (Hue)：色彩的相貌名稱（紅、黃、藍等）\n• 明度 (Value/Lightness)：色彩的明暗深淺程度（加白變亮，加黑變暗）\n• 彩度 (Chroma/Saturation)：色彩的純度與鮮豔度（純色彩度最高，調灰降低）',
+      tag: '視覺藝術'
+    },
+    {
+      id: 'a2',
+      front: '五線譜 4/4 拍與 3/4 拍記號含義？',
+      back: '• 4/4 拍：以「四分音符」為一拍，每小節有「四拍」（強、弱、次強、弱律動）\n• 3/4 拍：以「四分音符」為一拍，每小節有「三拍」（強、弱、弱圓舞曲律動）',
+      tag: '音樂素養'
+    },
+    {
+      id: 'a3',
+      front: '戲劇經典三幕劇架構？',
+      back: '• 第一幕：開端 (Setup) ── 介紹主角性格、背景世界觀與觸發事件\n• 第二幕：衝突高潮 (Confrontation/Climax) ── 主角面臨重大障礙與考驗\n• 第三幕：結局 (Resolution) ── 衝突化解、獲得成長並圓滿收尾',
+      tag: '表演藝術'
+    },
+    {
+      id: 'a4',
+      front: '設計思考 (Design Thinking) 五大步驟 (EDIPT)？',
+      back: '1. Empathize (同理心)：深入觀察使用者真實需求\n2. Define (定義問題)：明確聚焦核心痛點\n3. Ideate (創意發想)：腦力激盪提出多元解方\n4. Prototype (製作原型)：快速打造簡易實體模型\n5. Test (測試驗證)：收集使用者回饋並持續迭代優化',
+      tag: '設計思考'
+    }
+  ],
+
+  health_pe: [
+    {
+      id: 'p1',
+      front: '青春期第二性徵生理變化與自我接納？',
+      back: '• 生理變化：生長衝刺（身高體重突增）、男生變聲與長喉結、女生乳房發育與初經來潮、皮脂腺分泌旺盛\n• 正向心理：破除外貌焦慮，每個人發育步調不同；尊重身體自主權，建立堅定界線。',
+      tag: '青春成長'
+    },
+    {
+      id: 'p2',
+      front: '衛福部國健署「我的餐盤」六大健康口訣？',
+      back: '1. 每天早晚一杯奶\n2. 每餐水果拳頭大\n3. 菜比水果多一點\n4. 飯跟蔬菜一樣多\n5. 豆魚蛋肉一掌心\n6. 堅果種子一茶匙',
+      tag: '飲食營養'
+    },
+    {
+      id: 'p3',
+      front: 'CPR+AED 急救「叫叫CD」與按壓核心準則？',
+      back: '• 叫（檢查意識）➔ 叫（大聲呼救並指定專人撥打 119 與拿 AED）➔ C（胸外按壓 CPR）➔ D（使用電擊器 AED）\n• 按壓品質：位置兩乳頭連線中央胸骨處、深度至少 5 公分、速率 100~120 次/分鐘、按壓間胸壁完全回彈。',
+      tag: '急救安全'
+    },
+    {
+      id: 'p4',
+      front: '急性運動傷害防護 PRICE 原則？',
+      back: '• P (Protect 保護)：固定患處避免二次傷害\n• R (Rest 休息)：停止運動立即休息\n• I (Ice 冰敷)：每次 15~20 分鐘減緩紅腫疼痛\n• C (Compression 壓迫)：以彈性繃帶適度包紮加壓\n• E (Elevation 抬高)：將受傷部位抬高於心臟減少組織腫脹',
+      tag: '運動防護'
+    }
+  ],
+
+  integrative: [
+    {
+      id: 'i1',
+      front: '時間管理四象限法與六三一存錢法？',
+      back: '• 時間四象限：優先打底【第二象限：重要但不緊急】（如長期複習、鍛鍊身體），能預防危機發生！\n• 六三一儲蓄法則：\n  - 60%：必要日常生活開銷\n  - 30%：長期儲蓄與自主學習投資\n  - 10%：緊急風險與愛心備用金',
+      tag: '時間與金錢管理'
+    },
+    {
+      id: 'i2',
+      front: '高EQ溝通「我訊息 (I-Message)」四步驟？',
+      back: '1. 客觀事實：「當你...的時候」（描述事實不帶情緒批判）\n2. 真實感受：「我覺得很...」（表達自身真實心情）\n3. 解釋原因：「因為這會讓我...」（說明客觀影響）\n4. 具體期待：「我希望我們下次可以...」（提出建設性方案）',
+      tag: '人際溝通'
+    },
+    {
+      id: 'i3',
+      front: '迦納八大多元智能與費曼學習法？',
+      back: '• 八大多元智能：語文、邏輯數學、空間、肢體動覺、音樂、人際、內省、自然觀察\n• 費曼學習法四大步驟：\n  1. 選擇要學習的概念 ➔ 2. 假裝教給一個小學生（用大白話解釋）➔ 3. 發現卡關回頭查書補強 ➔ 4. 精簡譬喻並融會貫通',
+      tag: '生涯與自主學習'
+    },
+    {
+      id: 'i4',
+      front: '服務學習 (Service Learning) 四部曲？',
+      back: '1. 準備 (Preparation)：調查社區/校園真實需求並制定服務企劃\n2. 行動 (Action)：親身投入志工服務實踐\n3. 反思 (Reflection)：省思服務過程中的收穫與挑戰\n4. 慶賀 (Celebration)：分享成果並表揚肯定同儕付出',
+      tag: '社會公民服務'
     }
   ]
 };
+

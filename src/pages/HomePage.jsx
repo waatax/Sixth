@@ -326,7 +326,67 @@ const HomePage = () => {
             </div>
           </Link>
 
+          <Link
+            to="/mistakes"
+            className="card card-hoverable flex items-start gap-3.5"
+            style={{ 
+              padding: '20px', 
+              borderLeft: '4px solid var(--accent-error)',
+              borderRadius: 'var(--radius-lg)',
+              backgroundColor: 'var(--bg-secondary)'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'var(--accent-error-soft)',
+                color: 'var(--accent-error)',
+                padding: '12px',
+                borderRadius: 'var(--radius-md)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <CheckCircle2 size={24} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>錯題本</div>
+              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
+                自動收錄易錯陷阱題，智能複習消滅弱點
+              </div>
+            </div>
+          </Link>
 
+          <Link
+            to="/question-bank"
+            className="card card-hoverable flex items-start gap-3.5"
+            style={{ 
+              padding: '20px', 
+              borderLeft: '4px solid var(--accent-warning-text)',
+              borderRadius: 'var(--radius-lg)',
+              backgroundColor: 'var(--bg-secondary)'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'var(--accent-warning-soft)',
+                color: 'var(--accent-warning-text)',
+                padding: '12px',
+                borderRadius: 'var(--radius-md)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Compass size={24} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>試卷庫</div>
+              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
+                全國中小學段考精選考卷與考古題庫
+              </div>
+            </div>
+          </Link>
 
           <Link
             to="/resources"

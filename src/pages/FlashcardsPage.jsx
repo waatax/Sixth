@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { flashcardsData } from '../data/flashcardsData';
 import { geptAudioData } from '../data/geptAudioData';
 import { geptData } from '../data/geptData';
+import { coursesData } from '../data/courses';
 import { RotateCw, CheckCircle2, ChevronLeft, ChevronRight, ArrowLeft, Volume2, RotateCcw, Play, Square, Shuffle, ListOrdered } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { playSound } from '../utils/soundEffects';
@@ -311,30 +312,18 @@ const FlashcardsPage = () => {
         >
           🔤 GEPT 核心字彙 
         </button>
-        <button
-          className={`btn-pill ${currentSubject === 'math' ? 'active' : ''}`}
-          onClick={() => { setCurrentSubject('math'); setIsContinuousPlay(false); }}
-        >
-          🧮 數學 ({flashcardsData.math.length})
-        </button>
-        <button
-          className={`btn-pill ${currentSubject === 'science' ? 'active' : ''}`}
-          onClick={() => { setCurrentSubject('science'); setIsContinuousPlay(false); }}
-        >
-          🔬 自然 ({flashcardsData.science.length})
-        </button>
-        <button
-          className={`btn-pill ${currentSubject === 'mandarin' ? 'active' : ''}`}
-          onClick={() => { setCurrentSubject('mandarin'); setIsContinuousPlay(false); }}
-        >
-          📖 國語 ({flashcardsData.mandarin.length})
-        </button>
-        <button
-          className={`btn-pill ${currentSubject === 'english' ? 'active' : ''}`}
-          onClick={() => { setCurrentSubject('english'); setIsContinuousPlay(false); }}
-        >
-          🇬🇧 綜合英語 ({flashcardsData.english.length})
-        </button>
+        {coursesData.subjects.map(sub => {
+          const count = flashcardsData[sub.id]?.length || 0;
+          return (
+            <button
+              key={sub.id}
+              className={`btn-pill ${currentSubject === sub.id ? 'active' : ''}`}
+              onClick={() => { setCurrentSubject(sub.id); setIsContinuousPlay(false); }}
+            >
+              {sub.emoji} {sub.shortName} ({count})
+            </button>
+          );
+        })}
       </div>
 
       {/* GEPT Level Selector */}

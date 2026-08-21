@@ -41,41 +41,20 @@ const QuizPage = () => {
       playSound('wrong');
     }
 
-    // Save mistake to localStorage mistake notebook if wrong
-    if (!isCorrect) {
-      try {
-        const savedMistakes = localStorage.getItem('sixth_student_mistakes');
-        const mistakeList = savedMistakes ? JSON.parse(savedMistakes) : [];
-        const existingIdx = mistakeList.findIndex(m => m.unitId === unitId && m.questionId === question.id);
-        const mistakeItem = {
-          unitId,
-          questionId: question.id,
-          question: question.question,
-          options: question.options,
-          answerIndex: question.answerIndex,
-          explanation: question.explanation,
-          timestamp: new Date().toISOString()
-        };
-        if (existingIdx >= 0) {
-          mistakeList[existingIdx] = mistakeItem;
-        } else {
-          mistakeList.unshift(mistakeItem);
-        }
-        localStorage.setItem('sixth_student_mistakes', JSON.stringify(mistakeList));
-      } catch (e) {}
-    }
-
     setUserAnswers(prev => [...prev, { qIndex: currentQ, selected: selectedOption, correct: isCorrect }]);
     setShowResult(true);
   };
 
   const handleNext = () => {
     if (isLastQuestion) {
-      // Award XP in localStorage
+      // Award XP in localStorage based on score
+      const finalScore = score + (selectedOption === questions[currentQ].answerIndex ? 1 : 0);
+      const xpEarned = (finalScore * 20) + (finalScore === questions.length ? 50 : 0); // 20 per correct, 50 bonus for perfect
+
       try {
         const saved = localStorage.getItem('sixth_student_stats');
         const currentStats = saved ? JSON.parse(saved) : { xp: 100, completedUnits: 0, streak: 1, badges: ['數學小博士', '氣象小偵探'] };
-        currentStats.xp += 50;
+        currentStats.xp += xpEarned;
         currentStats.completedUnits += 1;
         
         // Track completed unit id
@@ -90,9 +69,10 @@ const QuizPage = () => {
       // Trigger celebratory confetti & levelup sound
       playSound('levelup');
       confetti({
-        particleCount: 80,
-        spread: 70,
-        origin: { y: 0.6 }
+        particleCount: 120,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ['#10b981', '#3b82f6', '#f59e0b', '#ec4899', '#8b5cf6']
       });
 
       setCurrentQ(questions.length); 
@@ -126,6 +106,7 @@ const QuizPage = () => {
   // Final Celebration & Score Screen
   if (currentQ >= questions.length) {
     const percentage = Math.round((score / questions.length) * 100);
+    const xpEarned = (score * 20) + (score === questions.length ? 50 : 0);
     return (
       <div
         className="card flex flex-col items-center text-center gap-6 py-10 max-w-xl mx-auto mt-4"
@@ -134,7 +115,6 @@ const QuizPage = () => {
           backgroundColor: 'var(--bg-secondary)',
           borderRadius: 'var(--radius-xl)',
           border: '1.5px solid var(--border-light)',
-          borderTop: '6px solid var(--accent-primary)',
           padding: '36px 28px',
           boxShadow: 'var(--shadow-md)'
         }}
@@ -155,7 +135,7 @@ const QuizPage = () => {
 
         <div>
           <span className="badge badge-success mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-            🎉 測驗完成！學習經驗值 +50 XP
+            🎉 測驗完成！學習經驗值 +{xpEarned} XP
           </span>
           <h2 className="h1" style={{ margin: '8px 0', fontSize: 'calc(2.2rem * var(--font-scale))' }}>
             觀念檢核得分：{percentage} 分

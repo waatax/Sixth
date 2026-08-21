@@ -140,11 +140,11 @@ const PrepPage = () => {
           <div className="card">
             <h2 className="h3 flex items-center gap-2 mb-3" style={{ color: 'var(--accent-success)' }}>
               <BookOpen size={22} />
-              2. 常見前 20 號元素符號速記表
+              2. 國中必備常見重要元素符號速記表
             </h2>
-            <p className="text-sm text-secondary mb-3">提早認識化學語言，銜接國二理化輕鬆無負擔：</p>
+            <p className="text-sm text-secondary mb-3">提早認識前 20 號典型元素與生活重要金屬，銜接國二理化化學式輕鬆無負擔：</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' }}>
-              {['H 氫 (Hydrogen)', 'He 氦 (Helium)', 'C 碳 (Carbon)', 'N 氮 (Nitrogen)', 'O 氧 (Oxygen)', 'Na 鈉 (Sodium)', 'Fe 鐵 (Iron)', 'Cu 銅 (Copper)'].map((elem, i) => (
+              {['H 氫 (1)', 'He 氦 (2)', 'C 碳 (6)', 'N 氮 (7)', 'O 氧 (8)', 'Na 鈉 (11)', 'Mg 鎂 (12)', 'Al 鋁 (13)', 'Cl 氯 (17)', 'Ca 鈣 (20)', 'Fe 鐵 (Iron)', 'Cu 銅 (Copper)'].map((elem, i) => (
                 <div
                   key={i}
                   className="p-2.5 rounded text-center text-sm font-semibold"

@@ -56,6 +56,30 @@ const MockExamPage = () => {
     setExamFinished(true);
     playSound('levelup');
     confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+
+    try {
+      const existingMistakes = JSON.parse(localStorage.getItem('sixth_student_mistakes') || '[]');
+      const newMistakes = [];
+      examQuestions.forEach((q, idx) => {
+        if (answers[idx] !== q.answerIndex) {
+          const alreadyExists = existingMistakes.some(m => m.question === q.question);
+          if (!alreadyExists) {
+            newMistakes.push({
+              ...q,
+              userWrongAnswer: answers[idx] !== undefined ? q.options[answers[idx]] : '未作答',
+              date: new Date().toISOString().slice(0, 10)
+            });
+          }
+        }
+      });
+      if (newMistakes.length > 0) {
+        localStorage.setItem('sixth_student_mistakes', JSON.stringify([...existingMistakes, ...newMistakes]));
+      }
+
+      const stats = JSON.parse(localStorage.getItem('sixth_student_stats') || '{"xp":0,"level":1}');
+      stats.xp = (stats.xp || 0) + 100;
+      localStorage.setItem('sixth_student_stats', JSON.stringify(stats));
+    } catch (e) {}
   };
 
   const minutes = Math.floor(timeLeft / 60);
@@ -194,6 +218,11 @@ const MockExamPage = () => {
             <button className="btn-primary" onClick={startExam}>
               <RotateCcw size={16} /> 再測驗一次
             </button>
+            {correctCount < examQuestions.length && (
+              <Link to="/mistakes" className="btn-accent flex items-center gap-1.5">
+                <CheckCircle2 size={16} /> 前往錯題本複習
+              </Link>
+            )}
             <Link to="/" className="btn-outline">
               返回課程首頁
             </Link>

@@ -778,11 +778,11 @@ export const geptAudioData = {
       },
       {
         "id": "gept-av5",
-        "word": "ambiguous",
-        "ipa": "/æmˈbɪɡjuəs/",
-        "meaning": "模稜兩可的",
-        "example": "His ambiguous statement left everyone wondering about his true intentions.",
-        "exampleZh": "他模稜兩可的陳述讓大家都在猜測他的真實意圖。"
+        "word": "scrutinize",
+        "ipa": "/ˈskruːtənaɪz/",
+        "meaning": "仔細檢查；詳細審視",
+        "example": "Scientists must carefully scrutinize the experimental evidence before publishing.",
+        "exampleZh": "科學家在發表論文前必須仔細審查實驗證據。"
       },
       {
         "id": "gept-av6",

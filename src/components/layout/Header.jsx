@@ -19,7 +19,9 @@ const Header = () => {
     { path: '/', label: '學習領域', icon: BookOpen },
     { path: '/flashcards', label: '速記閃卡', icon: Zap },
     { path: '/mock-exam', label: '計時模擬', icon: Timer },
-    { path: '/question-bank', label: '模擬測驗', icon: HelpCircle },
+    { path: '/mistakes', label: '錯題本', icon: CheckCircle2 },
+    { path: '/question-bank', label: '試卷庫', icon: HelpCircle },
+    { path: '/gept', label: '全民英檢', icon: Sparkles },
     { path: '/resources', label: '教育資源', icon: Globe },
     { path: '/prep', label: '國中先修', icon: GraduationCap },
   ];
@@ -91,6 +93,9 @@ const Header = () => {
                 </span>
                 <span className="badge badge-accent" style={{ fontSize: '0.68rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
                   108課綱 🌱
+                </span>
+                <span className="badge badge-success" style={{ fontSize: '0.65rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
+                  v2.0 旗艦版
                 </span>
               </div>
               <span style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', display: 'block', marginTop: '1px', whiteSpace: 'nowrap' }}>

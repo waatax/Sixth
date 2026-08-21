@@ -493,6 +493,27 @@ export const coursesData = {
       source: '雙語教育資源網精選',
       type: 'pdf',
       subject: 'english'
+    },
+    {
+      id: 'qb-8',
+      title: '112學年度 藝術領域 期末學力評量（色彩學、五線譜與戲劇賞析）',
+      source: '教育部藝術教育資源庫',
+      type: 'pdf',
+      subject: 'arts'
+    },
+    {
+      id: 'qb-9',
+      title: '112學年度 健康與體育 知識總結評量（飲食營養、急救防護與體適能）',
+      source: '國民健康署與體育署教案精選',
+      type: 'pdf',
+      subject: 'health_pe'
+    },
+    {
+      id: 'qb-10',
+      title: '112學年度 綜合活動 素養實踐評量（時間金錢管理、溝通EQ與生涯探索）',
+      source: '國教院素養導向評量庫',
+      type: 'pdf',
+      subject: 'integrative'
     }
   ]
 };

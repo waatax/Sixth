@@ -27,16 +27,18 @@ const Footer = () => {
             <Link to="/" style={{ color: 'var(--text-secondary)' }}>學習領域</Link>
             <Link to="/flashcards" style={{ color: 'var(--text-secondary)' }}>速記閃卡</Link>
             <Link to="/mock-exam" style={{ color: 'var(--text-secondary)' }}>計時模擬</Link>
-            <Link to="/question-bank" style={{ color: 'var(--text-secondary)' }}>模擬測驗</Link>
+            <Link to="/mistakes" style={{ color: 'var(--text-secondary)' }}>錯題本</Link>
+            <Link to="/question-bank" style={{ color: 'var(--text-secondary)' }}>試卷庫</Link>
+            <Link to="/gept" style={{ color: 'var(--text-secondary)' }}>全民英檢</Link>
             <Link to="/resources" style={{ color: 'var(--text-secondary)' }}>教育資源</Link>
             <Link to="/prep" style={{ color: 'var(--text-secondary)' }}>國中先修</Link>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="flex justify-between items-center text-xs text-tertiary pt-3 border-t" style={{ borderTop: '1px solid var(--border-light)' }}>
-          <p>© 2026 國小六年級 108 課綱學習平台 (Eye-Care Ergonomics Edition)</p>
-          <p>整合 均一教育平台、因材網 與 開放試題庫</p>
+        <div className="flex justify-between items-center text-xs text-tertiary pt-3 border-t flex-wrap gap-2" style={{ borderTop: '1px solid var(--border-light)' }}>
+          <p>© 2026 最強小六 108 課綱學習平台 (v2.0 教科書旗艦版)</p>
+          <p>深度整合 均一教育平台、教育部因材網、Cool English 與 全國開放試題庫</p>
         </div>
       </div>
     </footer>

@@ -136,6 +136,24 @@ const MistakesPage = () => {
           >
             🇬🇧 英語
           </button>
+          <button
+            className={`btn-pill ${filterSubject === 'art' ? 'active' : ''}`}
+            onClick={() => setFilterSubject('art')}
+          >
+            🎨 藝術
+          </button>
+          <button
+            className={`btn-pill ${filterSubject === 'pe' ? 'active' : ''}`}
+            onClick={() => setFilterSubject('pe')}
+          >
+            💪 健體
+          </button>
+          <button
+            className={`btn-pill ${filterSubject === 'comp' ? 'active' : ''}`}
+            onClick={() => setFilterSubject('comp')}
+          >
+            🌱 綜合
+          </button>
         </div>
       )}
 
