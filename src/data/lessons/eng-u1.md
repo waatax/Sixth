@@ -52,18 +52,18 @@
 
 ### 🌟 完整範例
 
-1. 🎬 **看電影**：The movie starts at $\textcolor{#ff9800}{\textbf{half past two}}$. (電影兩點半開始，快買爆米花！)
-2. 🚆 **趕火車**：Hurry! The train arrives at $\textcolor{#e91e63}{\textbf{a quarter to five}}$! (快點！火車四點四十五分就要進站了！)
-3. 🔔 **放學時間**：We pack our schoolbags at $\textcolor{#2196f3}{\textbf{four o'clock}}$. (我們四點整收拾書包準備放學。)
-4. 🍽️ **吃晚餐**：Mom is cooking dinner. We will eat at $\textcolor{#4caf50}{\textbf{a quarter past six}}$. (媽媽在煮晚餐。我們六點十五分要吃飯。)
+1. 🎬 **看電影**：`The movie starts at half past two.` (電影兩點半開始，快買爆米花！)
+2. 🚆 **趕火車**：`Hurry! The train arrives at a quarter to five!` (快點！火車四點四十五分就要進站了！)
+3. 🔔 **放學時間**：`We pack our schoolbags at four o'clock.` (我們四點整收拾書包準備放學。)
+4. 🍽️ **吃晚餐**：`Mom is cooking dinner. We will eat at a quarter past six.` (媽媽在煮晚餐。我們六點十五分要吃飯。)
 
 ### 💬 情境對話練習
 
-> Jack: What time is the basketball game? (籃球比賽是幾點？)
-
-> Ryan: It starts at a quarter past four. (四點十五分開始。)
-
-> Jack: Oh no! It's already half past four! We are late! (噢不！已經四點半了！我們遲到了！)
+> Jack: `What time is the basketball game?` (籃球比賽是幾點？)
+>
+> Ryan: `It starts at a quarter past four.` (四點十五分開始。)
+>
+> Jack: `Oh no! It's already half past four! We are late!` (噢不！已經四點半了！我們遲到了！)
 
 ---
 
@@ -199,20 +199,20 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 ## 🧠 迷思大破解
 
-❌ **迷思 1**：早上是 in the morning，所以星期一早上寫成 in Monday morning？  
-✅ **正確觀念**：只要出現「星期」或「具體某一天」，最大主管就是 $\textcolor{#2196f3}{\textbf{on}}$！  
-- ❌ I have a piano lesson *in Monday morning*.  
-- ✅ I have a piano lesson $\textcolor{#2196f3}{\textbf{on Monday morning}}$.
+> 🧑‍🏫 **迷思 1**：早上是 `in the morning`，所以星期一早上寫成 `in Monday morning`？  
+> ✅ **正確觀念**：只要出現「星期」或「具體某一天」，最大主管就是 $\textcolor{#2196f3}{\textbf{on}}$！  
+> - ❌ `I have a piano lesson in Monday morning.`  
+> - ✅ `I have a piano lesson on Monday morning.`
 
-❌ **迷思 2**：早中晚都用 in，所以「在夜晚」是 in the night？  
-✅ **正確觀念**：夜晚是特例，母語人士固定使用 $\textcolor{#e91e63}{\textbf{at night}}$！  
-- ❌ I read storybooks *in night*.  
-- ✅ I read storybooks $\textcolor{#e91e63}{\textbf{at night}}$.
+> 🧑‍🏫 **迷思 2**：早中晚都用 `in`，所以「在夜晚」是 `in the night`？  
+> ✅ **正確觀念**：夜晚是特例，母語人士固定使用 $\textcolor{#e91e63}{\textbf{at night}}$！  
+> - ❌ `I read storybooks in night.`  
+> - ✅ `I read storybooks at night.`
 
-❌ **迷思 3**：頻率副詞直接照中文順序放在動詞後面？"I do always my homework."  
-✅ **正確觀念**：緊記「$\textcolor{#ff5722}{\textbf{Be後動前}}$」！do 是一般動詞，always 必須在 do 前面！  
-- ❌ I do *always* my homework.  
-- ✅ I $\textcolor{#e91e63}{\textbf{always}} \text{ } \textcolor{#2196f3}{\textbf{do}}$ my homework.
+> 🧑‍🏫 **迷思 3**：頻率副詞直接照中文順序放在動詞後面？`I do always my homework.`  
+> ✅ **正確觀念**：緊記「$\textcolor{#ff5722}{\textbf{Be後動前}}$」！`do` 是一般動詞，`always` 必須在 `do` 前面！  
+> - ❌ `I do always my homework.`  
+> - ✅ `I always do my homework.`
 
 ---
 
@@ -267,3 +267,11 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 - *"Alexa, what do I $\textcolor{#4caf50}{\textbf{usually}}$ do $\textcolor{#2196f3}{\textbf{on Wednesday afternoons}}$?"*（我週三下午通常有什麼行程？）
 
 學好日常英文，你不只能跟世界各國的朋友交流，還能直接操控全球最新的 AI 科技助理！
+
+---
+
+> 🧠 **隨堂動動腦 (Brain Challenge)**
+> 現在是下午 3:45。請試著用今天學到的「鐘點報時法」與「倒金字塔法則」，大聲說出這句話的英文：
+> 「我總是在下午 3:45 打籃球。」
+> 提示：注意頻率副詞位置與 `a quarter to` 的用法！
+> 準備好挑戰了嗎？點擊下方的按鈕，進入觀念小測驗驗收你的學習成果！
