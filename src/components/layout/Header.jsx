@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, HelpCircle, Globe, GraduationCap, Zap, Timer, Menu, X, Sun, Moon, Eye, Type, Volume2, VolumeX, Sparkles } from 'lucide-react';
+import { BookOpen, HelpCircle, Globe, GraduationCap, Zap, Timer, Menu, X, Sun, Moon, Eye, Type, Volume2, VolumeX, Sparkles, CheckCircle2 } from 'lucide-react';
 import GamificationWidget from '../common/GamificationWidget';
 import EyeCareToolbar from '../common/EyeCareToolbar';
 import { useTheme } from '../../context/ThemeContext';

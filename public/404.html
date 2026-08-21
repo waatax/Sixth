@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=/Sixth/">
+    <title>最強小六 - 重新導向中</title>
+    <script>
+      var pathname = window.location.pathname;
+      var basePath = '/Sixth';
+      if (pathname.startsWith(basePath)) {
+        var subpath = pathname.slice(basePath.length);
+        if (subpath.startsWith('/')) subpath = subpath.slice(1);
+        if (subpath && !subpath.startsWith('#')) {
+          window.location.replace(basePath + '/#/' + subpath + window.location.search + window.location.hash);
+        } else {
+          window.location.replace(basePath + '/' + window.location.search + window.location.hash);
+        }
+      } else {
+        window.location.replace('/Sixth/');
+      }
+    </script>
+  </head>
+  <body>
+    <p>正在為您導向至 <a href="/Sixth/">最強小六 首頁</a>...</p>
+  </body>
+</html>

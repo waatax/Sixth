@@ -28,6 +28,7 @@ const EnglishAudioStudio = ({ unitId }) => {
   const [continuousPlaying, setContinuousPlaying] = useState(false);
   const [playbackMode, setPlaybackMode] = useState('en-only'); // 'en-only' | 'en-zh'
   const playbackModeRef = useRef('en-only');
+  const continuousRef = useRef(false);
 
   useEffect(() => {
     playbackModeRef.current = playbackMode;
