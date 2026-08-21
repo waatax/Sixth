@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import confetti from 'canvas-confetti';
 import { 
   ArrowLeft, 
   CheckCircle2, 
@@ -16,7 +17,7 @@ import {
   Lightbulb, 
   Copy, 
   Eye, 
-  Flame,
+  Timer,
   Bookmark,
   ChevronDown,
   ChevronUp,
@@ -87,14 +88,24 @@ const LessonPage = () => {
   // Find unit metadata and subject
   let currentUnit = null;
   let currentSubject = null;
+  let unitIndex = -1;
+  let prevUnit = null;
+  let nextUnit = null;
+  
   for (const subjectId in coursesData.units) {
-    const unit = coursesData.units[subjectId].find(u => u.id === unitId);
-    if (unit) {
-      currentUnit = unit;
+    const unitsList = coursesData.units[subjectId];
+    unitIndex = unitsList.findIndex(u => u.id === unitId);
+    if (unitIndex !== -1) {
+      currentUnit = unitsList[unitIndex];
       currentSubject = coursesData.subjects.find(s => s.id === subjectId);
+      prevUnit = unitIndex > 0 ? unitsList[unitIndex - 1] : null;
+      nextUnit = unitIndex < unitsList.length - 1 ? unitsList[unitIndex + 1] : null;
       break;
     }
   }
+
+  const [hasCelebrated, setHasCelebrated] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   // Track scroll reading progress
   useEffect(() => {
@@ -103,12 +114,30 @@ const LessonPage = () => {
       if (totalHeight > 0) {
         const progress = Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100));
         setScrollProgress(progress);
+        
+        // Optimization 3: Show Back to Top
+        if (window.scrollY > 400) {
+          setShowBackToTop(true);
+        } else {
+          setShowBackToTop(false);
+        }
+
+        // Optimization 2: Confetti at bottom
+        if (progress >= 99 && !hasCelebrated) {
+          setHasCelebrated(true);
+          confetti({
+            particleCount: 80,
+            spread: 70,
+            origin: { y: 0.9 },
+            colors: ['#10b981', '#3b82f6', '#f59e0b', '#ec4899']
+          });
+        }
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [hasCelebrated]);
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -152,6 +181,10 @@ const LessonPage = () => {
     );
   }
 
+  // Optimization 6: Read time estimation
+  const wordCount = content.length || 1000;
+  const readTimeMin = Math.max(1, Math.ceil(wordCount / 400));
+
   return (
     <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''}`}>
       {/* Top Reading Scroll Progress Bar */}
@@ -160,6 +193,36 @@ const LessonPage = () => {
         style={{ width: `${scrollProgress}%` }}
         aria-hidden="true"
       />
+
+      {/* Optimization 3: Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{
+            position: 'fixed',
+            bottom: '24px',
+            right: '24px',
+            width: '48px',
+            height: '48px',
+            borderRadius: '50%',
+            backgroundColor: 'var(--accent-primary)',
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            zIndex: 100,
+            cursor: 'pointer',
+            border: 'none',
+            transition: 'transform 0.2s, opacity 0.2s',
+            opacity: showBackToTop ? 1 : 0,
+            transform: showBackToTop ? 'scale(1)' : 'scale(0.8)'
+          }}
+          title="回到最上方"
+        >
+          <ChevronUp size={24} />
+        </button>
+      )}
 
       {/* Top Navigation & Fast Control Bar */}
       <div
@@ -193,12 +256,24 @@ const LessonPage = () => {
             </span>
           )}
           <span className="badge badge-accent flex items-center gap-1">
-            <Flame size={13} />
-            段考常考圖解
+            <Timer size={13} />
+            預估閱讀 {readTimeMin} 分鐘
           </span>
-          <span className="badge badge-success">
-            ✨ +10% 現代素養
-          </span>
+          <button 
+            className="badge badge-success cursor-pointer hover:opacity-80 transition-opacity"
+            onClick={() => {
+              const key = `bookmark_${unitId}`;
+              if (localStorage.getItem(key)) {
+                localStorage.removeItem(key);
+                alert('已取消收藏！');
+              } else {
+                localStorage.setItem(key, 'true');
+                alert('🎉 單元已加入收藏！');
+              }
+            }}
+          >
+            ⭐ 收藏重點
+          </button>
         </div>
 
         {/* Right Actions: Highlight Mode & Share */}
@@ -642,6 +717,40 @@ const LessonPage = () => {
             <CheckCircle2 size={18} /> 進入觀念小測驗 (+50 XP) →
           </button>
         </div>
+      </div>
+
+      {/* Optimization 5: Next/Prev Unit Navigation */}
+      <div className="flex justify-between items-center mt-6 pt-6 border-t border-light">
+        {prevUnit ? (
+          <button
+            onClick={() => navigate(`/lesson/${prevUnit.id}`)}
+            className="btn-outline flex items-center gap-2"
+          >
+            <ArrowLeft size={16} /> 
+            <div className="text-left">
+              <div className="text-xs text-tertiary">上一單元</div>
+              <div className="font-bold text-sm">{prevUnit.title}</div>
+            </div>
+          </button>
+        ) : (
+          <div></div>
+        )}
+        
+        {nextUnit ? (
+          <button
+            onClick={() => navigate(`/lesson/${nextUnit.id}`)}
+            className="btn-primary flex items-center gap-2 bg-accent-soft text-accent-primary hover:bg-accent-primary hover:text-white"
+            style={{ backgroundColor: 'var(--accent-soft)', color: 'var(--accent-primary)', border: 'none' }}
+          >
+            <div className="text-right">
+              <div className="text-xs opacity-80">下一單元</div>
+              <div className="font-bold text-sm">{nextUnit.title}</div>
+            </div>
+            <ArrowLeft size={16} style={{ transform: 'rotate(180deg)' }} />
+          </button>
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );
