@@ -506,5 +506,154 @@ export const geptData = {
         { tip: '注意事項', detail: '優級測驗較為特殊，通常需先取得高級合格證明，由學校或團體委託辦理' }
       ]
     }
+  ],
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 📊 各大國際英檢能力對照表 (CEFR / GEPT / TOEIC / TOEFL / IELTS / Cambridge)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  comparisonTable: [
+    {
+      cefr: 'A2 (基礎級)',
+      gept: '初級 (Elementary)',
+      toeic: '225 - 545 分',
+      toefl: 'TOEFL Junior / Primary',
+      ielts: '3.0 - 3.5 分',
+      cambridge: 'KET (Key)',
+      ability: '能理解日常基礎用語，進行簡單直接的問答與社交溝通。'
+    },
+    {
+      cefr: 'B1 (進階級)',
+      gept: '中級 (Intermediate)',
+      toeic: '550 - 780 分 (綠色證書)',
+      toefl: 'TOEFL iBT 42 - 71 分',
+      ielts: '4.0 - 5.0 分',
+      cambridge: 'PET (Preliminary)',
+      ability: '能就工作、學校及休閒等熟悉主題處理日常溝通與撰寫基本短文。'
+    },
+    {
+      cefr: 'B2 (高階級)',
+      gept: '中高級 (High-Intermediate)',
+      toeic: '785 - 940 分 (藍色證書)',
+      toefl: 'TOEFL iBT 72 - 94 分',
+      ielts: '5.5 - 6.5 分',
+      cambridge: 'FCE (First)',
+      ability: '能理解複雜文本核心概念，流暢自然地與母語者即時互動與深入討論。'
+    },
+    {
+      cefr: 'C1 (流利級)',
+      gept: '高級 (Advanced)',
+      toeic: '945 - 990 分 (金色證書)',
+      toefl: 'TOEFL iBT 95 - 113 分',
+      ielts: '7.0 - 8.0 分',
+      cambridge: 'CAE (Advanced)',
+      ability: '能理解長篇艱深文本，在學術、專業社交場合靈活運用英語表達複雜論述。'
+    },
+    {
+      cefr: 'C2 (精通級)',
+      gept: '優級 (Superior)',
+      toeic: '990 滿分 (全項精通)',
+      toefl: 'TOEFL iBT 114 - 120 分',
+      ielts: '8.5 - 9.0 分',
+      cambridge: 'CPE (Proficiency)',
+      ability: '輕鬆理解任何聽讀資訊，即席表達極為精確細膩，達母語高階知識分子水準。'
+    }
+  ],
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🌐 各大英檢權威官方網站與精選自學學習資源
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  officialResources: [
+    {
+      name: 'LTTC 全民英檢官方網站 (GEPT)',
+      org: '財團法人語言訓練測驗中心',
+      url: 'https://www.lttc.ntu.edu.tw/gept.htm',
+      desc: '官方報名簡章、考試日期日程表、歷屆題型示範與成績查詢。',
+      badge: '官方入口'
+    },
+    {
+      name: '全民英檢官方單字庫 (Word List)',
+      org: 'LTTC 研發中心',
+      url: 'https://www.lttc.ntu.edu.tw/geptwordlist.htm',
+      desc: '教育部核定全民英檢初級至中高級各級別官方字彙表與參考標準。',
+      badge: '必備字庫'
+    },
+    {
+      name: '教育部 Cool English 酷英網',
+      org: '教育部國民及學前教育署',
+      url: 'https://www.coolenglish.edu.tw/',
+      desc: '免費中小學英語自主學習平台，提供英檢專區、聽力、口說、閱讀遊戲化練習。',
+      badge: '官方免費'
+    },
+    {
+      name: 'TOEIC 臺灣官方網站',
+      org: '忠欣股份有限公司 / ETS',
+      url: 'https://www.toeic.com.tw/',
+      desc: '全球商務與升學常用之多益測驗官方報名、測驗指南與證書申請。',
+      badge: '國際認證'
+    },
+    {
+      name: 'IELTS 雅思官方考試中心',
+      org: 'British Council 英國文化協會',
+      url: 'https://www.britishcouncil.org.tw/exam/ielts',
+      desc: '全球留學與移民最具權威之英語能力評估測驗官方資源與模擬題庫。',
+      badge: '留學必備'
+    },
+    {
+      name: 'BBC Learning English',
+      org: 'British Broadcasting Corporation',
+      url: 'https://www.bbc.co.uk/learningenglish',
+      desc: '英國廣播公司提供全球學習者的免費新聞英語、文法、發音、6分鐘英語單元。',
+      badge: '國際名校'
+    },
+    {
+      name: 'VoiceTube 看影片學英語',
+      org: 'VoiceTube 台灣',
+      url: 'https://tw.voicetube.com/',
+      desc: '豐富的中英雙字幕影片、生活會話與聽力訓練，配合情境快速記憶單字。',
+      badge: '影音情境'
+    }
+  ],
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 💡 聽說讀寫四項全方位高分備考策略
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  examStrategies: [
+    {
+      skill: '聽力測驗 (Listening)',
+      icon: '🎧',
+      tips: [
+        { title: '審題搶先看選項', detail: '在廣播播放 Directions 與題目間隔時，先快速掃描圖片與選項關鍵字，預測可能聽到的情境。' },
+        { title: '掌握疑問詞與時態', detail: '聽問答題時，第一時間鎖定「Who/Where/When/Why/How」與「過去/現在/未來」時態。' },
+        { title: '注意轉折信號詞', detail: '對話中出現 but, however, actually, in fact 等轉折詞時，後面往往才是真正的核心答案！' }
+      ]
+    },
+    {
+      skill: '閱讀測驗 (Reading)',
+      icon: '📖',
+      tips: [
+        { title: '嚴格控管作答配速', detail: '初級閱讀35分鐘35題，單選題每題不超過30秒，留充裕時間給長篇閱讀理解與圖表題。' },
+        { title: '略讀 (Skimming) 抓主旨', detail: '閱讀短文先讀首段第一句與末段結論，迅速掌握文章大意再對照題目定位細節。' },
+        { title: '克漏字重上下文邏輯', detail: '先看空格前後詞性與介系詞搭配，若為連接詞需判斷前後句是因果、轉折還是遞進關係。' }
+      ]
+    },
+    {
+      skill: '寫作測驗 (Writing)',
+      icon: '✍️',
+      tips: [
+        { title: '句型精準優於艱澀', detail: '初級單句改寫與看圖寫作，重點是人稱、單複數、時態與拼字零失誤，不需強用生僻字。' },
+        { title: '三段式清晰結構', detail: '中級引導寫作遵循「主題句(Topic) ➔ 支持細節(Support) ➔ 總結(Conclusion)」三段架構。' },
+        { title: '善用轉折連接詞', detail: '適度運用 In addition, Therefore, However, For example 增強文章邏輯流暢度。' }
+      ]
+    },
+    {
+      skill: '口說測驗 (Speaking)',
+      icon: '🗣️',
+      tips: [
+        { title: '發音清晰語調自然', detail: '朗讀短文注意逗號停頓、句尾降調、問句升調，避免過快而導致咬字不清。' },
+        { title: '回答務求完整句', detail: '簡答題切忌只回答 Yes/No 或單一單字，盡量延伸 2-3 句補充原因或個人經驗。' },
+        { title: '看圖敘述依序展開', detail: '看圖題按照「時間、地點、人物外貌、動作、心情/後續推測」的順序邏輯描述。' }
+      ]
+    }
   ]
 };
+

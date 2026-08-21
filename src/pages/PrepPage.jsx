@@ -1,16 +1,124 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, BookOpen, Award, Zap, Compass } from 'lucide-react';
+import { 
+  ArrowLeft, Award, Zap, 
+  CheckCircle2, XCircle, RotateCcw, Sparkles, 
+  Lightbulb, GraduationCap 
+} from 'lucide-react';
+import confetti from 'canvas-confetti';
+import { prepData } from '../data/prepData';
+import { playSound } from '../utils/soundEffects';
 
 const PrepPage = () => {
   const [activeTab, setActiveTab] = useState('math');
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [quizFinished, setQuizFinished] = useState(false);
+  const [quizAnswers, setQuizAnswers] = useState({});
+  const [currentQuizIdx, setCurrentQuizIdx] = useState(0);
+
+  const startQuiz = () => {
+    setQuizAnswers({});
+    setCurrentQuizIdx(0);
+    setQuizStarted(true);
+    setQuizFinished(false);
+    playSound('click');
+  };
+
+  const handleSelectQuizOption = (optIdx) => {
+    setQuizAnswers(prev => ({ ...prev, [currentQuizIdx]: optIdx }));
+    playSound('click');
+  };
+
+  const finishQuiz = () => {
+    setQuizFinished(true);
+    playSound('levelup');
+    confetti({ particleCount: 90, spread: 70, origin: { y: 0.6 } });
+
+    try {
+      const stats = JSON.parse(localStorage.getItem('sixth_student_stats') || '{"xp":0,"level":1}');
+      stats.xp = (stats.xp || 0) + 120;
+      localStorage.setItem('sixth_student_stats', JSON.stringify(stats));
+    } catch (e) {}
+  };
+
+  const questions = prepData.quizQuestions;
+  let correctCount = 0;
+  if (quizFinished) {
+    questions.forEach((q, idx) => {
+      if (quizAnswers[idx] === q.answerIndex) correctCount += 1;
+    });
+  }
+
+  const renderSubjectContent = (items, accentColor) => (
+    <div className="flex flex-col gap-6 animate-fade-in">
+      {items.map((item) => (
+        <div key={item.id} className="card shadow-sm" style={{ borderLeft: `4px solid ${accentColor}` }}>
+          <div className="flex justify-between items-start mb-3 flex-wrap gap-2">
+            <h2 className="h3 flex items-center gap-2" style={{ color: accentColor, margin: 0 }}>
+              <Zap size={20} />
+              {item.title}
+            </h2>
+            <span className="badge" style={{ backgroundColor: `${accentColor}18`, color: accentColor, fontWeight: 700 }}>
+              {item.badge}
+            </span>
+          </div>
+
+          <p className="text-secondary text-sm mb-4 font-medium" style={{ lineHeight: 1.7 }}>
+            {item.summary}
+          </p>
+
+          {/* Core Concepts */}
+          <div className="space-y-4 mb-4">
+            {item.concepts.map((c, i) => (
+              <div key={i} className="p-3.5 rounded-lg" style={{ backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-light)' }}>
+                <h4 className="text-sm font-bold text-primary mb-1.5">{c.name}</h4>
+                <p className="text-xs text-secondary leading-relaxed whitespace-pre-line">{c.content}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Formula Box if any */}
+          {item.formulaBox && (
+            <div className="p-4 rounded-xl mb-4" style={{ backgroundColor: `${accentColor}10`, border: `1px solid ${accentColor}30` }}>
+              <div className="font-bold text-xs mb-2 flex items-center gap-1.5" style={{ color: accentColor }}>
+                <Sparkles size={14} /> {item.formulaBox.title}
+              </div>
+              <ul className="space-y-1 text-xs text-secondary font-mono">
+                {item.formulaBox.lines.map((line, idx) => (
+                  <li key={idx}>{line}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Example if any */}
+          {item.example && (
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700">
+              <div className="font-bold text-xs text-primary mb-2 flex items-center gap-1.5">
+                <Lightbulb size={14} className="text-amber-500" /> {item.example.question}
+              </div>
+              <div className="space-y-1 text-xs text-secondary font-mono">
+                {item.example.steps.map((step, idx) => (
+                  <div key={idx} className={idx === item.example.steps.length - 1 ? 'font-bold text-emerald-600 dark:text-emerald-400 mt-1' : ''}>
+                    {step}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
 
   return (
-    <div className="flex flex-col gap-6 py-4 max-w-4xl mx-auto">
+    <div className="flex flex-col gap-6 py-4 max-w-4xl mx-auto pb-16">
+      {/* Back Link */}
       <Link to="/resources" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
         <ArrowLeft size={16} /> 返回教育資源導航
       </Link>
 
+      {/* Hero Card */}
       <div
         className="card text-center py-8"
         style={{
@@ -20,13 +128,13 @@ const PrepPage = () => {
         }}
       >
         <span className="badge badge-accent mb-2" style={{ padding: '4px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-          🎓 國中先修・關鍵學力銜接專區
+          🎓 國中先修・關鍵學力銜接旗艦專區
         </span>
         <h1 className="h1 mb-2">
-          國中先修 (Prep Courses)
+          國中先修課程 (Junior High Prep)
         </h1>
         <p className="text-secondary max-w-xl mx-auto text-sm" style={{ lineHeight: 1.7 }}>
-          彙整各大名師資優銜接精華，提早掌握國一數學負數代數、理化實驗與長文本素養題型！
+          彙整 108 課綱國一各科名師精華：數學代數負數、理化密度實驗、國文六書韻文、英語五大句型、社會史地與會考素養！
         </p>
       </div>
 
@@ -36,121 +144,72 @@ const PrepPage = () => {
           className={`btn-pill ${activeTab === 'math' ? 'active' : ''}`}
           onClick={() => setActiveTab('math')}
         >
-          🧮 國一數學代數銜接
+          🧮 國一數學代數
         </button>
         <button
           className={`btn-pill ${activeTab === 'science' ? 'active' : ''}`}
           onClick={() => setActiveTab('science')}
         >
-          🔬 國中自然理化先修
+          🔬 自然理化與生物
+        </button>
+        <button
+          className={`btn-pill ${activeTab === 'chinese' ? 'active' : ''}`}
+          onClick={() => setActiveTab('chinese')}
+        >
+          📚 國文六書與韻文
+        </button>
+        <button
+          className={`btn-pill ${activeTab === 'english' ? 'active' : ''}`}
+          onClick={() => setActiveTab('english')}
+        >
+          🔤 英語句型與時態
+        </button>
+        <button
+          className={`btn-pill ${activeTab === 'social' ? 'active' : ''}`}
+          onClick={() => setActiveTab('social')}
+        >
+          🌏 社會史地與公民
         </button>
         <button
           className={`btn-pill ${activeTab === 'strategy' ? 'active' : ''}`}
           onClick={() => setActiveTab('strategy')}
         >
-          💡 108 課綱素養解題心法
+          💡 會考素養解題心法
+        </button>
+        <button
+          className={`btn-pill ${activeTab === 'quiz' ? 'active' : ''}`}
+          onClick={() => setActiveTab('quiz')}
+          style={{ borderColor: 'var(--accent-success)', color: activeTab === 'quiz' ? 'white' : 'var(--accent-success)' }}
+        >
+          ✍️ 先修自我闖關測驗
         </button>
       </div>
 
-      {/* Math Transition Section */}
-      {activeTab === 'math' && (
+      {/* Tab Contents */}
+      {activeTab === 'math' && renderSubjectContent(prepData.math, 'var(--accent-primary)')}
+      {activeTab === 'science' && renderSubjectContent(prepData.science, 'var(--accent-success)')}
+      {activeTab === 'chinese' && renderSubjectContent(prepData.chinese, 'var(--accent-warning)')}
+      {activeTab === 'english' && renderSubjectContent(prepData.english, 'var(--accent-purple)')}
+      {activeTab === 'social' && renderSubjectContent(prepData.social, '#0284c7')}
+
+      {/* Strategy Section */}
+      {activeTab === 'strategy' && (
         <div className="flex flex-col gap-5 animate-fade-in">
-          <div className="card">
-            <h2 className="h3 flex items-center gap-2 mb-3" style={{ color: 'var(--accent-primary)' }}>
-              <Zap size={22} />
-              1. 負數與數線四則運算規則
+          <div className="card" style={{ borderLeft: '4px solid var(--accent-purple)' }}>
+            <h2 className="h3 flex items-center gap-2 mb-4" style={{ color: 'var(--accent-purple)' }}>
+              <Award size={22} />
+              108 課綱國中會考素養解題四大核心心法
             </h2>
-            <p className="text-sm text-secondary mb-4" style={{ lineHeight: 1.7 }}>
-              國小數學數字都在 0 以上（正數），國一第一單元將引進「負數 $(-)$」與「數線上的相反數」！
-            </p>
-
-            <div
-              style={{
-                backgroundColor: 'var(--bg-tertiary)',
-                padding: '18px',
-                borderRadius: 'var(--radius-md)',
-                fontFamily: 'var(--font-mono)',
-                fontSize: 'calc(0.92rem * var(--font-scale))',
-                lineHeight: 1.8,
-                border: '1px solid var(--border-light)'
-              }}
-            >
-              <div style={{ color: 'var(--text-primary)', fontWeight: 700 }}>★ 正負號運算口訣：</div>
-              <div className="text-secondary">• 正正得正：(+3) × (+2) = +6</div>
-              <div style={{ color: 'var(--accent-error-text)', fontWeight: 700 }}>• 負負得正：(-3) × (-2) = +6  （※ 國小生最容易出錯的關鍵！）</div>
-              <div className="text-secondary">• 正負得負：(+3) × (-2) = -6</div>
-              <div className="text-secondary">• 負正得負：(-3) × (+2) = -6</div>
-            </div>
-          </div>
-
-          <div className="card">
-            <h2 className="h3 flex items-center gap-2 mb-3" style={{ color: 'var(--accent-primary)' }}>
-              <Compass size={22} />
-              2. 一元一次方程式與「等量公理」
-            </h2>
-            <p className="text-sm text-secondary mb-3" style={{ lineHeight: 1.7 }}>
-              告別國小的倒推法，學會使用未知數 $x$ 搭配「等號兩邊同加、同減、同乘、同除」的等量公理。
-            </p>
-
-            <div
-              style={{
-                backgroundColor: 'var(--bg-tertiary)',
-                padding: '18px',
-                borderRadius: 'var(--radius-md)',
-                fontSize: 'calc(0.92rem * var(--font-scale))',
-                lineHeight: 1.8,
-                border: '1px solid var(--border-light)'
-              }}
-            >
-              <div style={{ fontWeight: 700, color: 'var(--text-primary)' }}>範例題：解方程式 3x + 5 = 20</div>
-              <div className="text-secondary">步驟 1：等號兩邊同時減 5 ➔ 3x = 20 - 5 = 15</div>
-              <div className="text-secondary">步驟 2：等號兩邊同時除以 3 ➔ x = 15 ÷ 3 = 5</div>
-              <div style={{ color: 'var(--accent-success-text)', fontWeight: 700, marginTop: '4px' }}>✔ 驗算：3 × 5 + 5 = 20 (正確！)</div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Science Transition Section */}
-      {activeTab === 'science' && (
-        <div className="flex flex-col gap-5 animate-fade-in">
-          <div className="card">
-            <h2 className="h3 flex items-center gap-2 mb-3" style={{ color: 'var(--accent-success)' }}>
-              <Zap size={22} />
-              1. 密度計算公式 D = M / V
-            </h2>
-            <p className="text-sm text-secondary mb-3" style={{ lineHeight: 1.7 }}>
-              國中理化第一個定量計算重點：<strong>密度 (Density) = 質量 (Mass) ÷ 體積 (Volume)</strong>。
-            </p>
-            <div
-              style={{
-                backgroundColor: 'var(--bg-tertiary)',
-                padding: '18px',
-                borderRadius: 'var(--radius-md)',
-                fontSize: 'calc(0.92rem * var(--font-scale))',
-                lineHeight: 1.75,
-                border: '1px solid var(--border-light)'
-              }}
-            >
-              <div className="text-secondary">• 水的密度常溫下為 1 g/cm³。</div>
-              <div className="text-secondary">• 密度大於水（如鐵塊 7.8 g/cm³）會下沉；密度小於水（如木塊、冰塊 0.92 g/cm³）會浮在水面上！</div>
-            </div>
-          </div>
-
-          <div className="card">
-            <h2 className="h3 flex items-center gap-2 mb-3" style={{ color: 'var(--accent-success)' }}>
-              <BookOpen size={22} />
-              2. 國中必備常見重要元素符號速記表
-            </h2>
-            <p className="text-sm text-secondary mb-3">提早認識前 20 號典型元素與生活重要金屬，銜接國二理化化學式輕鬆無負擔：</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' }}>
-              {['H 氫 (1)', 'He 氦 (2)', 'C 碳 (6)', 'N 氮 (7)', 'O 氧 (8)', 'Na 鈉 (11)', 'Mg 鎂 (12)', 'Al 鋁 (13)', 'Cl 氯 (17)', 'Ca 鈣 (20)', 'Fe 鐵 (Iron)', 'Cu 銅 (Copper)'].map((elem, i) => (
-                <div
-                  key={i}
-                  className="p-2.5 rounded text-center text-sm font-semibold"
-                  style={{ backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-light)', color: 'var(--text-primary)' }}
-                >
-                  {elem}
+            <div className="grid grid-cols-1 gap-4">
+              {prepData.strategies.map((st, idx) => (
+                <div key={idx} className="p-4 rounded-xl" style={{ backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-light)' }}>
+                  <h3 className="font-bold text-sm text-primary mb-2 flex items-center gap-2">
+                    <Sparkles size={16} className="text-purple-500" />
+                    {st.title}
+                  </h3>
+                  <p className="text-xs text-secondary leading-relaxed whitespace-pre-line">
+                    {st.detail}
+                  </p>
                 </div>
               ))}
             </div>
@@ -158,29 +217,159 @@ const PrepPage = () => {
         </div>
       )}
 
-      {/* Strategy Section */}
-      {activeTab === 'strategy' && (
-        <div className="flex flex-col gap-5 animate-fade-in">
-          <div className="card">
-            <h2 className="h3 flex items-center gap-2 mb-3" style={{ color: 'var(--accent-purple)' }}>
-              <Award size={22} />
-              108 課綱素養長文本解題三部曲
-            </h2>
-            <div className="flex flex-col gap-4 text-sm text-secondary" style={{ lineHeight: 1.8 }}>
-              <div style={{ padding: '14px 18px', backgroundColor: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
-                <strong style={{ color: 'var(--text-primary)' }}>步驟一：先看題目問什麼（逆向搜尋法）</strong>
-                <div>先閱讀題幹的最後一句話與選項，帶著問題去文章中尋找關鍵字，省時又不易被冗長文字迷惑。</div>
+      {/* Quiz Section */}
+      {activeTab === 'quiz' && (
+        <div className="animate-fade-in">
+          {!quizStarted ? (
+            <div className="card text-center py-10 flex flex-col items-center gap-5">
+              <div className="w-16 h-16 rounded-full flex items-center justify-center bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400">
+                <GraduationCap size={36} />
               </div>
-              <div style={{ padding: '14px 18px', backgroundColor: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
-                <strong style={{ color: 'var(--text-primary)' }}>步驟二：圖表判讀三秒看「標題、橫軸、縱軸」</strong>
-                <div>遇到折線圖、長條圖或圓形圖，第一時間確認 X 軸與 Y 軸的單位與代表變數，再看趨勢最高/最低點。</div>
+              <div>
+                <h2 className="text-2xl font-bold text-primary mb-2">國中先修全科自我檢測挑戰</h2>
+                <p className="text-sm text-secondary max-w-md mx-auto">
+                  精選數學、理化、生物、國文、英文與社會 20 題先修核心題，檢驗你的國中銜接實力！
+                </p>
               </div>
-              <div style={{ padding: '14px 18px', backgroundColor: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
-                <strong style={{ color: 'var(--text-primary)' }}>步驟三：區分「科學事實」與「主觀推論」</strong>
-                <div>有實驗數據證明的才是事實；「作者認為、可能」屬於推論或觀點，作答時切勿過度腦補！</div>
+              <div className="flex items-center gap-3 text-xs text-secondary font-medium">
+                <span className="badge badge-accent">共 20 題選擇題</span>
+                <span>•</span>
+                <span>即時回饋與詳解</span>
+                <span>•</span>
+                <span className="text-emerald-600 font-bold">獎勵：+120 XP</span>
               </div>
+              <button className="btn-primary px-8 py-3 rounded-xl font-bold text-base" onClick={startQuiz}>
+                🚀 開始先修闖關檢測
+              </button>
             </div>
-          </div>
+          ) : quizFinished ? (
+            <div className="card flex flex-col items-center text-center gap-6 py-8" style={{ borderTop: '6px solid var(--accent-success)' }}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center bg-amber-100 text-amber-600">
+                <Award size={36} />
+              </div>
+              <div>
+                <span className="badge badge-success mb-2 font-bold">🎉 先修檢測完成！+120 XP</span>
+                <h2 className="text-3xl font-black text-primary my-2">
+                  總得分：{Math.round((correctCount / questions.length) * 100)} 分
+                </h2>
+                <p className="text-sm text-secondary">
+                  共 20 題，答對 {correctCount} 題，答錯 {questions.length - correctCount} 題。
+                </p>
+              </div>
+
+              {/* Review Sheet */}
+              <div className="w-full text-left mt-2 space-y-3">
+                <h4 className="font-bold text-sm text-primary">📋 逐題檢討與名師解析：</h4>
+                {questions.map((q, i) => {
+                  const userAns = quizAnswers[i];
+                  const isCorrect = userAns === q.answerIndex;
+                  return (
+                    <div
+                      key={i}
+                      className="p-4 rounded-xl border text-xs"
+                      style={{
+                        backgroundColor: 'var(--bg-tertiary)',
+                        borderLeft: isCorrect ? '4px solid var(--accent-success)' : '4px solid var(--accent-error)',
+                        borderColor: 'var(--border-light)'
+                      }}
+                    >
+                      <div className="flex items-center justify-between font-bold text-sm mb-1 text-primary">
+                        <span>第 {i + 1} 題 ({q.subject})：{q.question}</span>
+                        {isCorrect ? <CheckCircle2 size={16} className="text-emerald-500" /> : <XCircle size={16} className="text-rose-500" />}
+                      </div>
+                      <div className="text-secondary my-1">
+                        <strong>你的答案：</strong> {userAns !== undefined ? q.options[userAns] : '未作答'} | <strong className="text-emerald-600">正確答案：</strong> {q.options[q.answerIndex]}
+                      </div>
+                      <div className="text-secondary leading-relaxed bg-white/50 dark:bg-black/20 p-2 rounded mt-1">
+                        💡 <strong>解析：</strong> {q.explanation}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <button className="btn-primary mt-4" onClick={startQuiz}>
+                <RotateCcw size={16} /> 再測驗一次
+              </button>
+            </div>
+          ) : (
+            /* Quiz Active */
+            <div className="space-y-4">
+              <div className="card flex justify-between items-center py-3 px-5">
+                <span className="badge badge-accent font-bold">
+                  題目 {currentQuizIdx + 1} / {questions.length} [{questions[currentQuizIdx].subject}]
+                </span>
+                <span className="text-xs text-secondary font-medium">國中先修實戰快測</span>
+              </div>
+
+              {questions[currentQuizIdx] && (
+                <div className="card p-6 space-y-5">
+                  <h3 className="text-lg font-bold text-primary leading-snug">
+                    {currentQuizIdx + 1}. {questions[currentQuizIdx].question}
+                  </h3>
+
+                  <div className="space-y-2.5">
+                    {questions[currentQuizIdx].options.map((opt, optIdx) => {
+                      const isSelected = quizAnswers[currentQuizIdx] === optIdx;
+                      return (
+                        <button
+                          key={optIdx}
+                          className="w-full text-left p-3.5 rounded-xl border flex items-center justify-between text-sm transition-all"
+                          style={{
+                            borderColor: isSelected ? 'var(--accent-primary)' : 'var(--border-strong)',
+                            backgroundColor: isSelected ? 'var(--accent-soft)' : 'var(--bg-secondary)',
+                            fontWeight: isSelected ? 700 : 400,
+                            color: isSelected ? 'var(--accent-text)' : 'var(--text-primary)'
+                          }}
+                          onClick={() => handleSelectQuizOption(optIdx)}
+                        >
+                          <span>{String.fromCharCode(65 + optIdx)}. {opt}</span>
+                          {isSelected && <CheckCircle2 size={16} className="text-primary" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Navigation Footer */}
+                  <div className="flex justify-between items-center pt-4 border-t border-gray-100 flex-wrap gap-2">
+                    <button
+                      className="btn-outline text-xs px-3 py-1.5"
+                      disabled={currentQuizIdx === 0}
+                      onClick={() => setCurrentQuizIdx(c => c - 1)}
+                    >
+                      ← 上一題
+                    </button>
+
+                    <div className="flex gap-1 flex-wrap">
+                      {questions.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setCurrentQuizIdx(i)}
+                          className="w-7 h-7 rounded-full text-xs font-bold transition-all"
+                          style={{
+                            backgroundColor: currentQuizIdx === i ? 'var(--accent-primary)' : quizAnswers[i] !== undefined ? 'var(--accent-success-soft)' : 'var(--bg-tertiary)',
+                            color: currentQuizIdx === i ? 'var(--text-inverse)' : quizAnswers[i] !== undefined ? 'var(--accent-success-text)' : 'var(--text-secondary)'
+                          }}
+                        >
+                          {i + 1}
+                        </button>
+                      ))}
+                    </div>
+
+                    {currentQuizIdx < questions.length - 1 ? (
+                      <button className="btn-primary text-xs px-3 py-1.5" onClick={() => setCurrentQuizIdx(c => c + 1)}>
+                        下一題 →
+                      </button>
+                    ) : (
+                      <button className="btn-primary text-xs px-4 py-1.5" style={{ backgroundColor: 'var(--accent-success)' }} onClick={finishQuiz}>
+                        交卷計分
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>
