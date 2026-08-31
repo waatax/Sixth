@@ -445,75 +445,248 @@ export const coursesData = {
     ]
   },
   questionBanks: [
+    // 🧮 數學領域
     {
-      id: 'qb-1',
-      title: '112學年度 第一學期 數學科 第一次段考（最大公因數、分數除法）',
-      source: '中小學題庫網精選 (新北市國小)',
+      id: 'qb-m1',
+      title: '113學年度 六年級上學期 數學科 第一次段考（最大公因數、分數除法）',
+      source: '國家教育研究院題庫網精選 (新北市國小)',
       type: 'pdf',
-      subject: 'math'
+      subject: 'math',
+      term: '上學期第一次段考',
+      version: '康軒 / 翰林 / 南一通用',
+      difficulty: '適中',
+      qCount: 20,
+      topics: ['質因數分解與短除法', '分數除以整數與分數', '容量分裝應用題', '互質判別']
     },
     {
-      id: 'qb-2',
-      title: '112學年度 第二學期 數學科 期末考（圓面積、柱體體積、速率）',
-      source: '中小學題庫網精選 (臺北市國小)',
+      id: 'qb-m2',
+      title: '113學年度 六年級上學期 數學科 第二次段考（小數除法、比與比值、圓周長）',
+      source: '臺北市各國小段考精選',
       type: 'pdf',
-      subject: 'math'
+      subject: 'math',
+      term: '上學期第二次段考',
+      version: '教育部審定版',
+      difficulty: '進階',
+      qCount: 20,
+      topics: ['除數小數點移位與餘數', '最簡整數比與比值', '圓周長與扇形弧長', '跑道滾動距離']
     },
     {
-      id: 'qb-3',
-      title: '112學年度 第一學期 自然科學 第一次段考（天氣變化、水溶液）',
-      source: '各校公開段考試題庫',
+      id: 'qb-m3',
+      title: '113學年度 六年級上學期 數學科 期末定期評量（圓面積、柱體體積、速率）',
+      source: '全國中小學公開試卷網 (臺中市國小)',
       type: 'pdf',
-      subject: 'science'
+      subject: 'math',
+      term: '上學期期末考',
+      version: '三大版本綜合',
+      difficulty: '高分挑戰',
+      qCount: 25,
+      topics: ['鋪色複合圖形面積', '角柱圓柱體積與展開圖', '時速/分速/秒速換算', '相向相遇與追趕問題']
     },
     {
-      id: 'qb-4',
-      title: '112學年度 第二學期 自然科學 期末考（簡單機械、防鏽防腐、生態）',
-      source: '各校公開試題精選',
+      id: 'qb-m4',
+      title: '113學年度 六年級下學期 數學科 畢業考總複習（比例尺、基準量比較量、怎樣解題）',
+      source: '高雄市國小學力檢測試卷庫',
       type: 'pdf',
-      subject: 'science'
+      subject: 'math',
+      term: '下學期期末/畢業考',
+      version: '108課綱會考銜接',
+      difficulty: '素養導向',
+      qCount: 25,
+      topics: ['地圖比例尺與面積倍數', '折扣加成與母子和差', '雞兔同籠與間隔問題', '生活統計圖表']
+    },
+
+    // 🔬 自然科學領域
+    {
+      id: 'qb-s1',
+      title: '113學年度 六年級上學期 自然科學 第一次段考（天氣變化、水溶液性質與酸鹼）',
+      source: '新北市國小公開段考題庫',
+      type: 'pdf',
+      subject: 'science',
+      term: '上學期第一次段考',
+      version: '康軒 / 翰林',
+      difficulty: '適中',
+      qCount: 20,
+      topics: ['高低氣壓與水循環', '冷鋒、滯留鋒與梅雨', '石蕊試紙與天然指示劑', '電解質水溶液導電性']
     },
     {
-      id: 'qb-5',
-      title: '112學年度 第一學期 國語文 第一次評量（閱讀理解、修辭成語）',
-      source: '全國中小學試卷網',
+      id: 'qb-s2',
+      title: '113學年度 六年級上學期 自然科學 期末定期評量（電與磁、變動的大地、熱的傳播）',
+      source: '臺北市國小自然科領域輔導團',
       type: 'pdf',
-      subject: 'mandarin'
+      subject: 'science',
+      term: '上學期期末考',
+      version: '南一 / 康軒',
+      difficulty: '進階',
+      qCount: 25,
+      topics: ['電流磁效應與電磁鐵', '三大岩類與河流作用', '熱傳導、熱對流與熱輻射', '保溫瓶防散熱原理']
     },
     {
-      id: 'qb-6',
-      title: '112學年度 第一學期 社會科 第一次段考（臺灣民主、多元族群）',
-      source: '各校公開試題庫',
+      id: 'qb-s3',
+      title: '113學年度 六年級下學期 自然科學 期末總結評量（簡單機械、防鏽防腐與生態系）',
+      source: '教育部國教署自然探究評量庫',
       type: 'pdf',
-      subject: 'social'
+      subject: 'science',
+      term: '下學期期末/畢業考',
+      version: '108課綱素養專題',
+      difficulty: '素養導向',
+      qCount: 25,
+      topics: ['槓桿原理三要素與滑輪輪軸', '鐵生鏽條件與食品防腐保存', '食物鏈、食物網與分解者', '生物放大作用與臺灣生態']
+    },
+
+    // 📖 國語文領域
+    {
+      id: 'qb-c1',
+      title: '113學年度 六年級上學期 國語文 第一次評量（閱讀理解策略、記敘文寫作）',
+      source: '全國中小學試卷精選 (臺北市國小)',
+      type: 'pdf',
+      subject: 'mandarin',
+      term: '上學期第一次段考',
+      version: '康軒 / 翰林',
+      difficulty: '適中',
+      qCount: 20,
+      topics: ['事實與觀點區分', '六何法 (5W1H) 分析', '起承轉合情節轉折', '人物心理與外貌描寫']
     },
     {
-      id: 'qb-7',
-      title: '112學年度 第二學期 英語文 期末評量（Past Tense & Reading）',
-      source: '雙語教育資源網精選',
+      id: 'qb-c2',
+      title: '113學年度 六年級上學期 國語文 期末定期評量（說明文與議論文、修辭成語）',
+      source: '新北市國教學力檢測評量庫',
       type: 'pdf',
-      subject: 'english'
+      subject: 'mandarin',
+      term: '上學期期末考',
+      version: '南一 / 翰林',
+      difficulty: '進階',
+      qCount: 25,
+      topics: ['議論文三要素 (論點論據論證)', '說明文總分總與說明方法', '擬人、誇飾、排比、詰問修辭', '高頻成語語境理解']
     },
     {
-      id: 'qb-8',
-      title: '112學年度 藝術領域 期末學力評量（色彩學、五線譜與戲劇賞析）',
-      source: '教育部藝術教育資源庫',
+      id: 'qb-c3',
+      title: '113學年度 六年級下學期 國語文 畢業總結評量（古詩寓言鑑賞、口語表達簡報）',
+      source: '國家教育研究院語文素養庫',
       type: 'pdf',
-      subject: 'arts'
+      subject: 'mandarin',
+      term: '下學期期末/畢業考',
+      version: '108課綱素養鑑賞',
+      difficulty: '高分挑戰',
+      qCount: 25,
+      topics: ['近體詩五絕七絕格律', '文言寓言處世哲理', '燈塔原則與台風眼神', '三明治正向回饋溝通']
+    },
+
+    // 🌍 社會領域
+    {
+      id: 'qb-so1',
+      title: '113學年度 六年級上學期 社會科 第一次段考（臺灣民主之路、政府組織五權分立）',
+      source: '各校公開段考試題庫 (桃園市國小)',
+      type: 'pdf',
+      subject: 'social',
+      term: '上學期第一次段考',
+      version: '康軒 / 翰林',
+      difficulty: '適中',
+      qCount: 20,
+      topics: ['1987解嚴與1996總統直選', '五院職權與制衡分立', '憲法四大基本權利', '法治精神與公民參與']
     },
     {
-      id: 'qb-9',
-      title: '112學年度 健康與體育 知識總結評量（飲食營養、急救防護與體適能）',
-      source: '國民健康署與體育署教案精選',
+      id: 'qb-so2',
+      title: '113學年度 六年級上學期 社會科 期末定期評量（多元族群文化、經濟發展與產業）',
+      source: '臺北市社會領域素養試題庫',
       type: 'pdf',
-      subject: 'health_pe'
+      subject: 'social',
+      term: '上學期期末考',
+      version: '南一 / 康軒',
+      difficulty: '進階',
+      qCount: 25,
+      topics: ['16個法定原住民族文化', '少子高齡化與新住民共融', '十大建設與高科技矽盾', '綠色能源與永續轉型']
     },
     {
-      id: 'qb-10',
-      title: '112學年度 綜合活動 素養實踐評量（時間金錢管理、溝通EQ與生涯探索）',
-      source: '國教院素養導向評量庫',
+      id: 'qb-so3',
+      title: '113學年度 六年級下學期 社會科 畢業學力評量（全球化國際組織、兒少人權、SDGs）',
+      source: '全國公立小學期末試題庫',
       type: 'pdf',
-      subject: 'integrative'
+      subject: 'social',
+      term: '下學期期末/畢業考',
+      version: '108課綱公民實踐',
+      difficulty: '素養導向',
+      qCount: 25,
+      topics: ['UN、WHO、WTO國際組織', '兒童權利公約CRC四大原則', '智慧財產權與反霸凌1953', '聯合國SDGs 17項指標與減碳']
+    },
+
+    // 🇬🇧 英語文領域
+    {
+      id: 'qb-e1',
+      title: '113學年度 六年級上學期 英語文 第一次評量（Daily Routines, Time Prepositions & Frequency）',
+      source: '雙語教育資源網精選 (臺北市國小)',
+      type: 'pdf',
+      subject: 'english',
+      term: '上學期第一次段考',
+      version: '雙語課綱審定版',
+      difficulty: '適中',
+      qCount: 20,
+      topics: ['What time is it & Quarter/Half', 'Prepositions: at, in, on', 'Daily routine action verbs', 'Frequency adverbs rules']
+    },
+    {
+      id: 'qb-e2',
+      title: '113學年度 六年級上學期 英語文 期末定期評量（Past Tense Stories, Directions & Places）',
+      source: '全國雙語小學段考題庫',
+      type: 'pdf',
+      subject: 'english',
+      term: '上學期期末考',
+      version: '108課綱英語生活溝通',
+      difficulty: '進階',
+      qCount: 25,
+      topics: ['Regular & Irregular past tense', 'Negative didn\'t + base verb', 'Excuse me, asking for directions', 'Prepositions of place']
+    },
+    {
+      id: 'qb-e3',
+      title: '113學年度 六年級下學期 英語文 畢業學力評量（Health Care, World Festivals & Reading Skills）',
+      source: '教育部英語素養評量庫',
+      type: 'pdf',
+      subject: 'english',
+      term: '下學期期末/畢業考',
+      version: 'GEPT初級銜接',
+      difficulty: '高分挑戰',
+      qCount: 25,
+      topics: ['Symptoms with -ache & Doctor visit', 'Taiwanese & Western festivals', 'Skimming & Scanning strategies', 'Context clues & Suffixes']
+    },
+
+    // 🎨 藝術領域
+    {
+      id: 'qb-a1',
+      title: '113學年度 藝術領域 學力綜合評量（色彩學、五線譜音符、三幕劇、設計思考）',
+      source: '教育部藝術教育資源庫精選',
+      type: 'pdf',
+      subject: 'arts',
+      term: '全學年綜合評量',
+      version: '藝術與人文素養',
+      difficulty: '素養導向',
+      qCount: 20,
+      topics: ['色彩三要素與互補色對比', '五線譜拍號與管弦樂編制', '三幕劇結構與默劇肢體', '設計思考五步驟與通用設計']
+    },
+
+    // 💪 健康與體育領域
+    {
+      id: 'qb-p1',
+      title: '113學年度 健康與體育 知識總結評量（青春期身心、我的餐盤、CPR+AED急救、體適能）',
+      source: '國民健康署與體育署教案庫',
+      type: 'pdf',
+      subject: 'health_pe',
+      term: '全學年綜合評量',
+      version: '健康素養與運動生活',
+      difficulty: '生活實用',
+      qCount: 20,
+      topics: ['青春期保養與身體自主權', '我的餐盤六口訣與營養標示', 'CPR+AED叫叫CD急救口訣', '扭傷PRICE原則與健康體適能']
+    },
+
+    // 🌱 綜合活動領域
+    {
+      id: 'qb-i1',
+      title: '113學年度 綜合活動 素養實踐評量（時間金錢管理、高EQ溝通、筆記法、志工服務）',
+      source: '國教院綜合活動素養導向題庫',
+      type: 'pdf',
+      subject: 'integrative',
+      term: '全學年綜合評量',
+      version: '生活自律與生涯實踐',
+      difficulty: '素養導向',
+      qCount: 20,
+      topics: ['時間四象限與六三一儲蓄', '我訊息公式與情緒紅綠燈', '迦納多元智能與康乃爾筆記', '服務學習四部曲與公民行動']
     }
   ]
 };

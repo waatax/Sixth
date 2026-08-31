@@ -1,6 +1,26 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, HelpCircle, Globe, GraduationCap, Zap, Timer, Menu, X, Sun, Moon, Eye, Type, Volume2, VolumeX, Sparkles, CheckCircle2 } from 'lucide-react';
+import { 
+  BookOpen, 
+  HelpCircle, 
+  Globe, 
+  GraduationCap, 
+  Zap, 
+  Timer, 
+  Menu, 
+  X, 
+  Sun, 
+  Moon, 
+  Eye, 
+  Type, 
+  Volume2, 
+  VolumeX, 
+  Sparkles, 
+  CheckCircle2,
+  Swords,
+  ShoppingBag,
+  Layers
+} from 'lucide-react';
 import GamificationWidget from '../common/GamificationWidget';
 import EyeCareToolbar from '../common/EyeCareToolbar';
 import { useTheme } from '../../context/ThemeContext';
@@ -17,13 +37,14 @@ const Header = () => {
 
   const navLinks = [
     { path: '/', label: '學習領域', icon: BookOpen },
+    { path: '/boss-battle', label: '魔王城堡', icon: Swords, badge: 'HOT' },
+    { path: '/memory-game', label: '記憶翻牌', icon: Layers, badge: 'NEW' },
+    { path: '/shop', label: '星光商城', icon: ShoppingBag },
     { path: '/flashcards', label: '速記閃卡', icon: Zap },
     { path: '/mock-exam', label: '計時模擬', icon: Timer },
     { path: '/mistakes', label: '錯題本', icon: CheckCircle2 },
-    { path: '/question-bank', label: '試卷庫', icon: HelpCircle },
     { path: '/gept', label: '全民英檢', icon: Sparkles },
-    { path: '/resources', label: '教育資源', icon: Globe },
-    { path: '/prep', label: '國中先修', icon: GraduationCap },
+    { path: '/prep', label: '國中先修', icon: GraduationCap }
   ];
 
   return (
@@ -92,24 +113,21 @@ const Header = () => {
                   最強小六
                 </span>
                 <span className="badge badge-accent" style={{ fontSize: '0.68rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
-                  108課綱 🌱
-                </span>
-                <span className="badge badge-success" style={{ fontSize: '0.65rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
-                  v2.0 旗艦版
+                  2026 旗艦版 🌱
                 </span>
               </div>
               <span style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', display: 'block', marginTop: '1px', whiteSpace: 'nowrap' }}>
-                全科目圖解自主學習平台
+                遊戲化全科自主學習護照
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation Links (Hidden on mobile < 1024px) */}
+          {/* Desktop Navigation Links */}
           <nav 
             className="desktop-nav items-center" 
             style={{ 
               display: 'none',
-              gap: '4px',
+              gap: '3px',
               flexShrink: 0
             }}
           >
@@ -120,12 +138,12 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="flex items-center gap-1.5"
+                  className="flex items-center gap-1.5 relative"
                   style={{
-                    padding: '7px 10px',
+                    padding: '6px 9px',
                     borderRadius: 'var(--radius-md)',
-                    fontWeight: isActive ? 700 : 600,
-                    fontSize: 'calc(0.86rem * var(--font-scale))',
+                    fontWeight: isActive ? 800 : 600,
+                    fontSize: 'calc(0.84rem * var(--font-scale))',
                     color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
                     backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent',
                     transition: 'all var(--transition-fast)',
@@ -134,8 +152,23 @@ const Header = () => {
                     textDecoration: 'none'
                   }}
                 >
-                  <Icon size={15} style={{ flexShrink: 0 }} />
+                  <Icon size={14} style={{ flexShrink: 0 }} />
                   <span style={{ whiteSpace: 'nowrap' }}>{item.label}</span>
+                  {item.badge && (
+                    <span 
+                      style={{
+                        fontSize: '9px',
+                        padding: '1px 4px',
+                        borderRadius: '4px',
+                        fontWeight: 900,
+                        backgroundColor: item.badge === 'HOT' ? '#ef4444' : '#10b981',
+                        color: '#ffffff',
+                        lineHeight: 1
+                      }}
+                    >
+                      {item.badge}
+                    </span>
+                  )}
                 </Link>
               );
             })}
@@ -143,15 +176,14 @@ const Header = () => {
 
           {/* Right Area: EyeCare Controls + Gamification Widget + Mobile Hamburger */}
           <div className="flex items-center gap-2" style={{ flexShrink: 0 }}>
-            {/* Inline Desktop EyeCare Toolbar */}
             <div className="desktop-controls" style={{ display: 'none' }}>
               <EyeCareToolbar isCompact={true} />
             </div>
 
-            {/* Gamification XP Pill */}
+            {/* Gamification XP & Pet Pill */}
             <GamificationWidget />
 
-            {/* Mobile Hamburger Button (Visible on <= 1024px) */}
+            {/* Mobile Hamburger Button */}
             <button
               className="mobile-hamburger-btn flex items-center justify-center"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -262,28 +294,44 @@ const Header = () => {
                     <Link
                       key={item.path}
                       to={item.path}
-                      className="flex items-center gap-3"
+                      className="flex items-center justify-between"
                       style={{
                         padding: '12px 16px',
                         borderRadius: 'var(--radius-md)',
                         fontWeight: isActive ? 700 : 500,
-                        fontSize: '1rem',
+                        fontSize: '0.96rem',
                         color: isActive ? 'var(--accent-primary)' : 'var(--text-primary)',
                         backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent',
                         whiteSpace: 'nowrap'
                       }}
                     >
-                      <Icon size={18} />
-                      <span>{item.label}</span>
+                      <div className="flex items-center gap-3">
+                        <Icon size={18} />
+                        <span>{item.label}</span>
+                      </div>
+                      {item.badge && (
+                        <span 
+                          style={{
+                            fontSize: '9px',
+                            padding: '2px 6px',
+                            borderRadius: '4px',
+                            fontWeight: 900,
+                            backgroundColor: item.badge === 'HOT' ? '#ef4444' : '#10b981',
+                            color: '#ffffff'
+                          }}
+                        >
+                          {item.badge}
+                        </span>
+                      )}
                     </Link>
                   );
                 })}
               </div>
             </div>
 
-            {/* Drawer Footer info */}
+            {/* Drawer Footer */}
             <div className="pt-4 border-t text-xs text-secondary text-center" style={{ borderTop: '1px solid var(--border-light)' }}>
-              教育部 108 課綱自主學習平台<br />
+              2026 新學期・108 課綱遊戲化自主學習平台<br />
               <span style={{ color: 'var(--text-tertiary)', fontSize: '0.75rem' }}>適配直式、橫式、手機與平板</span>
             </div>
           </div>
@@ -292,7 +340,7 @@ const Header = () => {
 
       {/* Responsive media query styling rules for navigation */}
       <style>{`
-        @media (min-width: 1080px) {
+        @media (min-width: 1160px) {
           .desktop-nav { display: flex !important; }
           .desktop-controls { display: flex !important; }
           .mobile-hamburger-btn { display: none !important; }

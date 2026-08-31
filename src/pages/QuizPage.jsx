@@ -1,20 +1,28 @@
 import { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { playSound, toggleMute, getMuteState } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
+import { useGamification } from '../context/GamificationContext';
+import ComboFlameIndicator from '../components/gamification/ComboFlameIndicator';
 
 const QuizPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
+  const { recordQuizResult, inventory, consumeItem } = useGamification();
+
+
   const [currentQ, setCurrentQ] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [muted, setMuted] = useState(getMuteState());
+  const [combo, setCombo] = useState(0);
+  const [disabledOptions, setDisabledOptions] = useState([]);
+  const [quizSummary, setQuizSummary] = useState(null);
 
   const questions = quizData[unitId] || [];
 
@@ -24,7 +32,7 @@ const QuizPage = () => {
   };
 
   const handleSelect = (index) => {
-    if (showResult) return;
+    if (showResult || disabledOptions.includes(index)) return;
     setSelectedOption(index);
     playSound('click');
   };
@@ -35,9 +43,13 @@ const QuizPage = () => {
     const question = questions[currentQ];
     const isCorrect = selectedOption === question.answerIndex;
     if (isCorrect) {
+      const nextCombo = combo + 1;
+      setCombo(nextCombo);
       setScore(s => s + 1);
-      playSound('correct');
+      if (nextCombo >= 3) playSound('combo', nextCombo);
+      else playSound('correct');
     } else {
+      setCombo(0);
       playSound('wrong');
     }
 
@@ -47,26 +59,33 @@ const QuizPage = () => {
 
   const handleNext = () => {
     if (isLastQuestion) {
-      // Award XP in localStorage based on score
       const finalScore = score + (selectedOption === questions[currentQ].answerIndex ? 1 : 0);
-      const xpEarned = (finalScore * 20) + (finalScore === questions.length ? 50 : 0); // 20 per correct, 50 bonus for perfect
+      const result = recordQuizResult(unitId, finalScore, questions.length);
+      setQuizSummary(result);
 
+      // Save mistake record if any
       try {
-        const saved = localStorage.getItem('sixth_student_stats');
-        const currentStats = saved ? JSON.parse(saved) : { xp: 100, completedUnits: 0, streak: 1, badges: ['數學小博士', '氣象小偵探'] };
-        currentStats.xp += xpEarned;
-        currentStats.completedUnits += 1;
-        
-        // Track completed unit id
-        if (!currentStats.completedUnitIds) currentStats.completedUnitIds = [];
-        if (!currentStats.completedUnitIds.includes(unitId)) {
-          currentStats.completedUnitIds.push(unitId);
+        const existingMistakes = JSON.parse(localStorage.getItem('sixth_student_mistakes') || '[]');
+        const newMistakes = [];
+        questions.forEach((q, idx) => {
+          const ans = userAnswers[idx] || (idx === currentQ ? { selected: selectedOption, correct: selectedOption === q.answerIndex } : null);
+          if (ans && !ans.correct) {
+            const alreadyExists = existingMistakes.some(m => m.question === q.question);
+            if (!alreadyExists) {
+              newMistakes.push({
+                ...q,
+                unitId,
+                userWrongAnswer: ans.selected !== null ? q.options[ans.selected] : '未作答',
+                date: new Date().toISOString().slice(0, 10)
+              });
+            }
+          }
+        });
+        if (newMistakes.length > 0) {
+          localStorage.setItem('sixth_student_mistakes', JSON.stringify([...existingMistakes, ...newMistakes]));
         }
-
-        localStorage.setItem('sixth_student_stats', JSON.stringify(currentStats));
       } catch (e) {}
 
-      // Trigger celebratory confetti & levelup sound
       playSound('levelup');
       confetti({
         particleCount: 120,
@@ -80,7 +99,21 @@ const QuizPage = () => {
       setCurrentQ(c => c + 1);
       setSelectedOption(null);
       setShowResult(false);
+      setDisabledOptions([]);
     }
+  };
+
+  const handleUse5050 = () => {
+    if ((inventory.hint_5050 || 0) <= 0) {
+      alert('背包中沒有 50:50 提示卡了！可至星光商城購買！');
+      return;
+    }
+    const q = questions[currentQ];
+    const wrongIndices = q.options.map((_, i) => i).filter(i => i !== q.answerIndex);
+    const twoWrongs = wrongIndices.slice(0, 2);
+    setDisabledOptions(twoWrongs);
+    consumeItem('hint_5050');
+    playSound('coin');
   };
 
   const handleRestart = () => {
@@ -89,6 +122,9 @@ const QuizPage = () => {
     setShowResult(false);
     setScore(0);
     setUserAnswers([]);
+    setCombo(0);
+    setDisabledOptions([]);
+    setQuizSummary(null);
   };
 
   if (questions.length === 0) {
@@ -103,13 +139,16 @@ const QuizPage = () => {
   const question = questions[currentQ];
   const isLastQuestion = currentQ === questions.length - 1;
 
-  // Final Celebration & Score Screen
+  // Final Celebration Screen
   if (currentQ >= questions.length) {
     const percentage = Math.round((score / questions.length) * 100);
-    const xpEarned = (score * 20) + (score === questions.length ? 50 : 0);
+    const stars = quizSummary?.stars || (percentage >= 90 ? 3 : percentage >= 60 ? 2 : 1);
+    const coinsEarned = quizSummary?.earnedCoins || stars * 15;
+    const xpEarned = quizSummary?.earnedXp || (score * 20);
+
     return (
       <div
-        className="card flex flex-col items-center text-center gap-6 py-10 max-w-xl mx-auto mt-4"
+        className="card flex flex-col items-center text-center gap-6 py-10 max-w-xl mx-auto mt-4 animate-fade-in"
         style={{
           borderTop: '6px solid var(--accent-primary)',
           backgroundColor: 'var(--bg-secondary)',
@@ -134,8 +173,12 @@ const QuizPage = () => {
         </div>
 
         <div>
+          <div className="flex items-center justify-center gap-1.5 text-2xl my-1">
+            {'⭐'.repeat(stars)}
+            {'☆'.repeat(3 - stars)}
+          </div>
           <span className="badge badge-success mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-            🎉 測驗完成！學習經驗值 +{xpEarned} XP
+            🎉 測驗完成！評分：{stars} 顆星！
           </span>
           <h2 className="h1" style={{ margin: '8px 0', fontSize: 'calc(2.2rem * var(--font-scale))' }}>
             觀念檢核得分：{percentage} 分
@@ -143,6 +186,18 @@ const QuizPage = () => {
           <p className="text-secondary text-sm" style={{ lineHeight: 1.7 }}>
             共 {questions.length} 題，答對 {score} 題。{percentage >= 80 ? '🌟 太厲害了！你已徹底掌握本單元核心素養！' : '💪 繼續努力！搞懂錯題就是最大的進步！'}
           </p>
+        </div>
+
+        {/* Rewards Earned Pill */}
+        <div className="flex gap-3 justify-center w-full">
+          <div className="p-3 rounded-xl text-center flex-1" style={{ backgroundColor: 'var(--bg-tertiary)' }}>
+            <div className="text-xs text-secondary">經驗值</div>
+            <div className="font-bold text-base text-blue-500">+{xpEarned} XP</div>
+          </div>
+          <div className="p-3 rounded-xl text-center flex-1" style={{ backgroundColor: 'var(--bg-tertiary)' }}>
+            <div className="text-xs text-secondary">星光金幣</div>
+            <div className="font-bold text-base text-amber-500">+{coinsEarned} 🪙</div>
+          </div>
         </div>
 
         {/* Mistakes Review List */}
@@ -200,7 +255,7 @@ const QuizPage = () => {
         {/* Action Buttons */}
         <div className="flex gap-3 mt-4 flex-wrap justify-center w-full">
           <button className="btn-outline flex items-center gap-2 text-sm" onClick={handleRestart}>
-            <RotateCcw size={16} /> 重新挑戰一次
+            <RotateCcw size={16} /> 重新挑戰刷滿 3 星
           </button>
 
           <button className="btn-primary flex items-center gap-2 text-sm" onClick={() => navigate(-1)}>
@@ -221,23 +276,43 @@ const QuizPage = () => {
           <ArrowLeft size={16} /> 返回單元列表
         </button>
 
-        <button 
-          onClick={handleMuteToggle}
-          className="btn-pill"
-          title={muted ? '開啟音效' : '靜音'}
-        >
-          {muted ? <VolumeX size={15} /> : <Volume2 size={15} />}
-          <span>{muted ? '靜音' : '音效開啟'}</span>
-        </button>
+        <div className="flex items-center gap-3">
+          <ComboFlameIndicator comboCount={combo} />
+
+          <button 
+            onClick={handleMuteToggle}
+            className="btn-pill"
+            title={muted ? '開啟音效' : '靜音'}
+          >
+            {muted ? <VolumeX size={15} /> : <Volume2 size={15} />}
+            <span>{muted ? '靜音' : '音效開啟'}</span>
+          </button>
+        </div>
       </div>
 
       <div className="card flex flex-col gap-6" style={{ padding: '32px', borderRadius: 'var(--radius-xl)', border: '1.5px solid var(--border-light)', backgroundColor: 'var(--bg-secondary)' }}>
-        {/* Progress Header */}
+        {/* Progress Header & 50:50 Lifeline */}
         <div className="flex justify-between items-center text-sm" style={{ color: 'var(--text-secondary)' }}>
           <span className="badge badge-accent" style={{ fontWeight: 700 }}>
             ✏️ 單元重點測驗・觀念驗收
           </span>
-          <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>第 {currentQ + 1} / {questions.length} 題</span>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleUse5050}
+              className="btn-outline flex items-center gap-1 text-xs py-1 px-3 font-bold"
+              style={{
+                backgroundColor: 'var(--accent-warning-soft)',
+                borderColor: 'var(--accent-warning)',
+                color: 'var(--accent-warning-text)'
+              }}
+              title="消耗 1 張 50:50 提示卡排除 2 個錯誤選項"
+            >
+              <HelpCircle size={14} />
+              <span>50:50 排除卡 ({inventory.hint_5050 || 0})</span>
+            </button>
+            <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>第 {currentQ + 1} / {questions.length} 題</span>
+          </div>
         </div>
 
         {/* Progress Bar */}
@@ -283,6 +358,7 @@ const QuizPage = () => {
           {question.options.map((opt, i) => {
             const isAnswer = i === question.answerIndex;
             const isUserSelected = i === selectedOption;
+            const isDisabled = disabledOptions.includes(i);
 
             let bgColor = 'var(--bg-secondary)';
             let borderColor = 'var(--border-strong)';
@@ -311,7 +387,8 @@ const QuizPage = () => {
             return (
               <button
                 key={i}
-                className="btn-outline flex justify-between items-center"
+                disabled={isDisabled}
+                className="btn-outline flex justify-between items-center transition-all"
                 style={{
                   textAlign: 'left',
                   padding: '16px 20px',
@@ -321,7 +398,10 @@ const QuizPage = () => {
                   borderColor: borderColor,
                   color: textColor,
                   fontWeight: fontWeight,
-                  lineHeight: 1.5
+                  lineHeight: 1.5,
+                  opacity: isDisabled ? 0.35 : 1,
+                  textDecoration: isDisabled ? 'line-through' : 'none',
+                  cursor: isDisabled ? 'not-allowed' : 'pointer'
                 }}
                 onClick={() => handleSelect(i)}
               >

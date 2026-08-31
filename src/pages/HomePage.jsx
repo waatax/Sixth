@@ -1,12 +1,45 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
-import { Zap, Timer, Globe, ArrowRight, Sparkles, Compass, CheckCircle2, ShieldCheck, Smile, GraduationCap, Award } from 'lucide-react';
+import { 
+  Zap, 
+  Timer, 
+  Globe, 
+  ArrowRight, 
+  Sparkles, 
+  Compass, 
+  CheckCircle2, 
+  ShieldCheck, 
+  Smile, 
+  GraduationCap, 
+  Award,
+  Swords,
+  ShoppingBag,
+  Layers,
+  Gift,
+  Heart,
+  Flame
+} from 'lucide-react';
 import GuidedStartWizard from '../components/common/GuidedStartWizard';
 import DailyQuestCard from '../components/common/DailyQuestCard';
+import DailyLuckyWheel from '../components/gamification/DailyLuckyWheel';
+import PetSanctuaryModal from '../components/gamification/PetSanctuaryModal';
+import { useGamification } from '../context/GamificationContext';
 
 const HomePage = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
+  const [isWheelOpen, setIsWheelOpen] = useState(false);
+  const [isSanctuaryOpen, setIsSanctuaryOpen] = useState(false);
+
+  const { 
+    coins, 
+    gems, 
+    level, 
+    currentTitle, 
+    activePetTemplate, 
+    currentPetStats, 
+    unitStars 
+  } = useGamification();
 
   const categories = [
     { id: 'all', label: '全部八大學科 (8)', icon: '📚' },
@@ -25,65 +58,217 @@ const HomePage = () => {
     return true;
   });
 
+  const currentEvolution = activePetTemplate?.evolutions.slice().reverse().find(e => (currentPetStats?.level || 1) >= e.minLevel) || activePetTemplate?.evolutions[0];
+
   return (
-    <div className="flex flex-col gap-6 py-2">
-      {/* Friendly Reassurance Top Banner */}
+    <div className="flex flex-col gap-6 py-2 pb-16">
+      {/* 2026 New Semester Hero Banner */}
       <div 
         className="card"
         style={{
           padding: '24px 28px',
           borderRadius: 'var(--radius-xl)',
-          background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(37, 99, 235, 0.05) 100%)',
+          background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(37, 99, 235, 0.06) 50%, rgba(236, 72, 153, 0.05) 100%)',
           border: '1.5px solid var(--border-light)',
           boxShadow: 'var(--shadow-sm)'
         }}
       >
-        <div className="flex justify-between items-start flex-wrap gap-4">
-          <div style={{ maxWidth: '800px' }}>
+        <div className="flex justify-between items-center flex-wrap gap-4">
+          <div style={{ maxWidth: '720px' }}>
             <div className="flex items-center gap-2 mb-2 flex-wrap">
-              <span className="badge badge-accent" style={{ padding: '4px 12px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
-                ✨ 108 課綱・小六無壓力自主學習護照
+              <span className="badge badge-accent" style={{ padding: '4px 12px', borderRadius: 'var(--radius-full)', fontWeight: 800 }}>
+                ✨ 2026 新學期啟航・沉浸式自主學習護照
               </span>
               <span className="badge badge-success flex items-center gap-1 font-bold">
                 <ShieldCheck size={13} />
-                圖解導讀・零門檻起步
+                108 課綱全科圖解・零壓力通關
               </span>
             </div>
-            <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.8rem * var(--font-scale))', letterSpacing: '-0.02em' }}>
-              放輕鬆，我們一步一步把觀念學會！
+            <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.85rem * var(--font-scale))', letterSpacing: '-0.02em' }}>
+              歡迎回來，{currentTitle}！一起展開知識大冒險！
             </h1>
-            <p className="text-secondary" style={{ marginTop: '8px', fontSize: 'calc(0.98rem * var(--font-scale))', lineHeight: 1.65 }}>
-              不用死背硬記，每個單元都配備了 <strong style={{ color: 'var(--accent-primary)' }}>「視覺概念圖解」</strong> 與 <strong style={{ color: 'var(--accent-warning-text)' }}>「段考必考關鍵字」</strong>。即使基礎不好，也能看懂算理、輕鬆拿下高分！
+            <p className="text-secondary" style={{ marginTop: '8px', fontSize: 'calc(0.96rem * var(--font-scale))', lineHeight: 1.65 }}>
+              每個單元都配備了 <strong style={{ color: 'var(--accent-primary)' }}>「視覺概念圖解」</strong>、<strong style={{ color: 'var(--accent-warning-text)' }}>「魔王城堡挑戰」</strong> 與 <strong style={{ color: '#ec4899' }}>「守護神獸養成」</strong>。在遊戲中自然掌握算理與核心素養！
             </p>
+          </div>
+
+          {/* Quick Lucky Wheel & Pet Sanctuary Action Box */}
+          <div className="flex flex-col gap-2.5 sm:items-end w-full sm:w-auto">
+            <button
+              onClick={() => setIsWheelOpen(true)}
+              className="btn-primary flex items-center justify-center gap-2"
+              style={{
+                padding: '10px 20px',
+                borderRadius: 'var(--radius-lg)',
+                backgroundColor: 'var(--accent-warning)',
+                borderColor: 'var(--accent-warning)',
+                color: '#000000',
+                fontWeight: 800,
+                boxShadow: '0 4px 14px rgba(245, 158, 11, 0.3)'
+              }}
+            >
+              <span>🎡 每日星光幸運轉盤 (免費領獎)</span>
+            </button>
+
+            <button
+              onClick={() => setIsSanctuaryOpen(true)}
+              className="btn-outline flex items-center justify-center gap-2 text-xs font-bold"
+              style={{
+                padding: '8px 16px',
+                borderRadius: 'var(--radius-lg)',
+                backgroundColor: 'var(--bg-secondary)'
+              }}
+            >
+              <span>{currentEvolution?.emoji || '🦊'} 守護神獸殿堂 ({activePetTemplate?.name.split(' ')[0]} Lv.{currentPetStats?.level})</span>
+            </button>
           </div>
         </div>
       </div>
 
-
-
       {/* ☀️ Daily 3-Minute Micro-Quests Card */}
       <DailyQuestCard />
 
-      {/* 8 Major Learning Areas Grid with Category Filters & Inline Version Selector */}
-      <section className="mt-1">
-        <div className="flex justify-between items-center flex-wrap gap-3 mb-4">
-          {/* Left: Title + Compact Inline Version Selector */}
-          <div className="flex items-center gap-3 flex-wrap">
-            <div>
-              <div className="flex items-center gap-2.5 flex-wrap">
-                <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.35rem * var(--font-scale))', whiteSpace: 'nowrap' }}>
-                  📖 探索八大學習領域
-                </h2>
+      {/* 🏰 Gamified Arena & Tools Showcase Grid (魔王城堡、記憶翻牌、星光商城) */}
+      <section>
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-2">
+            <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.25rem * var(--font-scale))' }}>
+              🎮 沉浸式遊戲化學習殿堂
+            </h2>
+            <span className="badge badge-accent font-bold">2026 旗艦新功能</span>
+          </div>
+        </div>
 
-
-              </div>
-              <p className="text-xs text-secondary" style={{ marginTop: '4px', margin: 0 }}>
-                點選任一學科，按照「基礎 ➔ 進階」闖關地圖進行探索
-              </p>
+        <div
+          className="grid gap-3"
+          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}
+        >
+          <Link
+            to="/boss-battle"
+            className="card card-hoverable flex items-start gap-3.5 p-4"
+            style={{
+              borderRadius: 'var(--radius-xl)',
+              backgroundColor: 'var(--bg-secondary)',
+              border: '1.5px solid var(--border-light)',
+              borderLeft: '5px solid #ec4899',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(236, 72, 153, 0.05) 100%)',
+              textDecoration: 'none'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'rgba(236, 72, 153, 0.15)',
+                color: '#ec4899',
+                padding: '12px',
+                borderRadius: 'var(--radius-lg)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0
+              }}
+            >
+              <Swords size={24} />
             </div>
+            <div>
+              <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
+                <span>魔王城堡挑戰</span>
+                <span className="badge badge-error text-[10px] font-bold">HOT</span>
+              </div>
+              <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.5 }}>
+                極速答題魔法雷擊！消滅四大守護魔王奪取水晶
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            to="/memory-game"
+            className="card card-hoverable flex items-start gap-3.5 p-4"
+            style={{
+              borderRadius: 'var(--radius-xl)',
+              backgroundColor: 'var(--bg-secondary)',
+              border: '1.5px solid var(--border-light)',
+              borderLeft: '5px solid #3b82f6',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(59, 130, 246, 0.05) 100%)',
+              textDecoration: 'none'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'rgba(59, 130, 246, 0.15)',
+                color: '#3b82f6',
+                padding: '12px',
+                borderRadius: 'var(--radius-lg)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0
+              }}
+            >
+              <Layers size={24} />
+            </div>
+            <div>
+              <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
+                <span>記憶翻牌對決</span>
+                <span className="badge badge-success text-[10px] font-bold">NEW</span>
+              </div>
+              <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.5 }}>
+                公式、成語與GEPT字彙連擊翻牌快速配對
+              </div>
+            </div>
+          </Link>
+
+          <Link
+            to="/shop"
+            className="card card-hoverable flex items-start gap-3.5 p-4"
+            style={{
+              borderRadius: 'var(--radius-xl)',
+              backgroundColor: 'var(--bg-secondary)',
+              border: '1.5px solid var(--border-light)',
+              borderLeft: '5px solid #f59e0b',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(245, 158, 11, 0.05) 100%)',
+              textDecoration: 'none'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'rgba(245, 158, 11, 0.15)',
+                color: '#f59e0b',
+                padding: '12px',
+                borderRadius: 'var(--radius-lg)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0
+              }}
+            >
+              <ShoppingBag size={24} />
+            </div>
+            <div>
+              <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
+                <span>星光道具商城</span>
+                <span className="badge text-[10px] font-bold text-amber-600 bg-amber-100">🪙 {coins}</span>
+              </div>
+              <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.5 }}>
+                兌換雙倍經驗卡、50:50提示卡與神獸美食
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* 8 Major Learning Areas Grid with Category Filters & Star Badges */}
+      <section className="mt-2">
+        <div className="flex justify-between items-center flex-wrap gap-3 mb-4">
+          <div>
+            <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.35rem * var(--font-scale))', whiteSpace: 'nowrap' }}>
+              📖 探索八大學習領域・冒險闖關地圖
+            </h2>
+            <p className="text-xs text-secondary" style={{ marginTop: '4px', margin: 0 }}>
+              每個單元完成測驗皆可獲得 1~3 顆星級評分、經驗值與星光金幣！
+            </p>
           </div>
 
-          {/* Right: Category Filter Tabs */}
+          {/* Category Filter Tabs */}
           <div className="flex gap-2 flex-wrap">
             {categories.map(cat => (
               <button
@@ -108,7 +293,16 @@ const HomePage = () => {
           }}
         >
           {filteredSubjects.map(subject => {
-            const unitCount = (coursesData.units[subject.id] || []).length;
+            const units = coursesData.units[subject.id] || [];
+            const unitCount = units.length;
+            
+            // Calculate total stars earned in this subject
+            let subjectStars = 0;
+            units.forEach(u => {
+              subjectStars += (unitStars[u.id] || 0);
+            });
+            const maxSubjectStars = unitCount * 3;
+
             return (
               <Link 
                 to={`/subject/${subject.id}`} 
@@ -144,9 +338,8 @@ const HomePage = () => {
                 </div>
 
                 <div>
-                  {/* Top Header: Cute Mascot Avatar + Badges */}
+                  {/* Top Header: Mascot Avatar + Badges */}
                   <div className="flex justify-between items-start mb-3.5">
-                    {/* Cute Mascot Avatar with soft glow */}
                     <div 
                       style={{
                         width: '52px',
@@ -165,7 +358,6 @@ const HomePage = () => {
                       {subject.emoji}
                     </div>
 
-                    {/* Cute Tag Pills */}
                     <div className="flex flex-col items-end gap-1">
                       <span
                         className="badge"
@@ -180,8 +372,8 @@ const HomePage = () => {
                       >
                         🐾 {subject.mascot}
                       </span>
-                      <span className="text-xs text-tertiary" style={{ fontSize: '0.72rem' }}>
-                        收錄 {unitCount} 關圖解
+                      <span className="text-xs font-bold text-amber-500 flex items-center gap-0.5" style={{ fontSize: '0.72rem' }}>
+                        ⭐ {subjectStars} / {maxSubjectStars} 星
                       </span>
                     </div>
                   </div>
@@ -191,7 +383,7 @@ const HomePage = () => {
                     {subject.name}
                   </h3>
 
-                  {/* Cute Slogan Badge */}
+                  {/* Slogan Badge */}
                   <div className="mt-2">
                     <span 
                       className="badge" 
@@ -223,7 +415,7 @@ const HomePage = () => {
                   }}
                 >
                   <span className="flex items-center gap-1">
-                    <span>🚀 進入闖關探索</span>
+                    <span>🚀 進入闖關地圖 ({unitCount} 關)</span>
                   </span>
                   <div 
                     style={{
@@ -245,16 +437,16 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 🧭 Guided Start Wizard: "不知從何開始？" Psychological Anchor */}
+      {/* 🧭 Guided Start Wizard Anchor */}
       <GuidedStartWizard />
 
-      {/* ⚡ Autonomous Learning Tools Hub */}
+      {/* ⚡ Fast Review & Exam Tools Hub */}
       <section className="mt-4">
         <div className="flex items-center gap-2 mb-3">
           <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.25rem * var(--font-scale))' }}>
             ⚡ 快速充電與考前利器
           </h2>
-          <span className="badge badge-accent">零壓力輔助</span>
+          <span className="badge badge-accent">全方位輔助</span>
         </div>
 
         <div
@@ -271,7 +463,8 @@ const HomePage = () => {
               padding: '20px', 
               borderLeft: '4px solid var(--accent-warning)',
               borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
+              backgroundColor: 'var(--bg-secondary)',
+              textDecoration: 'none'
             }}
           >
             <div
@@ -302,7 +495,8 @@ const HomePage = () => {
               padding: '20px', 
               borderLeft: '4px solid var(--accent-primary)',
               borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
+              backgroundColor: 'var(--bg-secondary)',
+              textDecoration: 'none'
             }}
           >
             <div
@@ -333,7 +527,8 @@ const HomePage = () => {
               padding: '20px', 
               borderLeft: '4px solid var(--accent-error)',
               borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
+              backgroundColor: 'var(--bg-secondary)',
+              textDecoration: 'none'
             }}
           >
             <div
@@ -358,106 +553,14 @@ const HomePage = () => {
           </Link>
 
           <Link
-            to="/question-bank"
-            className="card card-hoverable flex items-start gap-3.5"
-            style={{ 
-              padding: '20px', 
-              borderLeft: '4px solid var(--accent-warning-text)',
-              borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-warning-soft)',
-                color: 'var(--accent-warning-text)',
-                padding: '12px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Compass size={24} />
-            </div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>試卷庫</div>
-              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
-                全國中小學段考精選考卷與考古題庫
-              </div>
-            </div>
-          </Link>
-
-          <Link
-            to="/resources"
-            className="card card-hoverable flex items-start gap-3.5"
-            style={{ 
-              padding: '20px', 
-              borderLeft: '4px solid var(--accent-success)',
-              borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-success-soft)',
-                color: 'var(--accent-success)',
-                padding: '12px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Globe size={24} />
-            </div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>教育資源</div>
-              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
-                因材網、Cool English、PaGamO 整合導航
-              </div>
-            </div>
-          </Link>
-
-          <Link
-            to="/prep"
-            className="card card-hoverable flex items-start gap-3.5"
-            style={{ 
-              padding: '20px', 
-              borderLeft: '4px solid var(--accent-purple)',
-              borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-purple-soft)',
-                color: 'var(--accent-purple)',
-                padding: '12px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <GraduationCap size={24} />
-            </div>
-            <div>
-              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>國中先修</div>
-              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
-                國一數學負數代數與理化銜接精華
-              </div>
-            </div>
-          </Link>
-
-          <Link
             to="/gept"
             className="card card-hoverable flex items-start gap-3.5"
             style={{ 
               padding: '20px', 
               borderLeft: '4px solid hsl(192, 88%, 45%)',
               borderRadius: 'var(--radius-lg)',
-              backgroundColor: 'var(--bg-secondary)'
+              backgroundColor: 'var(--bg-secondary)',
+              textDecoration: 'none'
             }}
           >
             <div
@@ -480,8 +583,52 @@ const HomePage = () => {
               </div>
             </div>
           </Link>
+
+          <Link
+            to="/prep"
+            className="card card-hoverable flex items-start gap-3.5"
+            style={{ 
+              padding: '20px', 
+              borderLeft: '4px solid var(--accent-purple)',
+              borderRadius: 'var(--radius-lg)',
+              backgroundColor: 'var(--bg-secondary)',
+              textDecoration: 'none'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'var(--accent-purple-soft)',
+                color: 'var(--accent-purple)',
+                padding: '12px',
+                borderRadius: 'var(--radius-md)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <GraduationCap size={24} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)' }}>國中先修</div>
+              <div className="text-xs text-secondary" style={{ marginTop: '4px', lineHeight: 1.5 }}>
+                國一數學負數代數與理化銜接精華
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
+
+      {/* Lucky Wheel Modal */}
+      <DailyLuckyWheel
+        isOpen={isWheelOpen}
+        onClose={() => setIsWheelOpen(false)}
+      />
+
+      {/* Sanctuary Modal */}
+      <PetSanctuaryModal
+        isOpen={isSanctuaryOpen}
+        onClose={() => setIsSanctuaryOpen(false)}
+      />
     </div>
   );
 };

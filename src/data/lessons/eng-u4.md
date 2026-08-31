@@ -39,40 +39,14 @@
                           ( Foot ) ───── 腳 (複數 feet)
 ```
 
-### 📊 核心身體部位單字與複數變化表
+### 📊 本單元核心考點與重點公式速查表
 
-| 部位單字 | 中文意義 | 單複數規則 | 記憶聯想法 / 語音重點 |
+| 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
-| $\text{head}$ | 頭 | $\text{heads}$ (規則加 s) | 戴帽子 (hat) 的地方 |
-| $\text{eye / ear}$ | 眼睛 / 耳朵 | $\text{eyes / ears}$ | 人有一對雙眼雙耳 |
-| $\text{tooth}$ | 牙齒 | $\textcolor{#e91e63}{\textbf{teeth}}$ **(不規則！)** | $\text{oo} \rightarrow \text{ee}$，兩顆以上換成 teeth |
-| $\text{throat}$ | 喉嚨 | $\text{throats}$ | 發音包含 /θ/ 咬舌音 |
-| $\text{shoulder}$ | 肩膀 | $\text{shoulders}$ | 經典兒歌：*Head, shoulders, knees and toes!* |
-| $\text{stomach}$ | 胃、腹部 | $\text{stomachs}$ (字尾加 s，發 /k/) | 吃太飽會脹起來的消化器官 |
-| $\text{foot}$ | 腳掌、足部 | $\textcolor{#2196f3}{\textbf{feet}}$ **(不規則！)** | $\text{oo} \rightarrow \text{ee}$，一雙腳用 feet |
-
-### 🌟 完整範例
-
-來看看這些身體部位怎麼放在句子裡，跟著唸唸看，加深印象吧！
-
-1. **Brush your teeth carefully every night.** (每天晚上都要仔細刷牙喔。)
-2. **My grandfather's feet are very big.** (我爺爺的腳很大。)
-3. **I carry my heavy backpack on my shoulders.** (我把沉重的背包背在肩膀上。)
-4. **Close your eyes and make a wish!** (閉上你的雙眼，許個願吧！)
-
-### 💬 情境對話練習
-
-來一場角色扮演！大聲唸出對話，感受一下在生活中的實際應用！
-
-> 👦 Tom: Ouch! I hurt my knee while playing basketball. (哎呀！我打籃球時弄傷膝蓋了。)
-
-> 👩 Mom: Let me see. We need to put some ice on it. (讓我看看。我們需要冰敷一下。)
-
-> 👦 Tom: It hurts when I move my leg. (我動腿的時候好痛喔。)
-
-> 👩 Mom: Don't worry, you just need to rest your feet for a few days. (別擔心，你只需要讓雙腳休息幾天。)
-
----
+| $\textcolor{#e91e63}{\textbf{身體不適症狀表達}}$ | **主詞 ＋ have / has ＋ a [symptom]**<br>部位＋ache：headache (頭痛), toothache (牙痛), stomachache (胃痛)<br>其他症狀：a cold (感冒), a fever (發燒), a sore throat (喉嚨痛), a runny nose (流鼻水) | **「身體部位加 ache 變痛，喉嚨發炎叫 sore throat」** | ⚠️ 主詞為 He/She 時要用 **has**（*He has a fever.*）；sore 是形容詞，不能寫成 *throatache* |
+| $\textcolor{#2196f3}{\textbf{醫生看診實用對話}}$ | Q: **What's wrong?** / What's the matter with you?<br>A: *I have a headache and a fever.*<br>醫囑：*You should take some medicine and get plenty of rest.* | **「問病情用 What's wrong，給建議用 You should ＋ 原型動詞」** | 💡 助動詞 *should*（應該）後面必定接**原型動詞**（*take, drink, stay*） |
+| $\textcolor{#ff9800}{\textbf{健康建議常用片語}}$ | **take medicine** (吃藥), **drink more water** (多喝水), **get enough sleep** (充足睡眠), **stay in bed** (臥床休息) | **「吃藥用 take 不用 eat，喝水 drink 多休息」** | 💥 **中式英文大陷阱**：吃藥是 **take medicine**，絕對不能說 *eat medicine*！ |
+| $\textcolor{#2e7d32}{\textbf{飲食營養單字分類}}$ | fruits (水果), vegetables (蔬菜), grains (全穀雜糧), proteins/meat (蛋白質肉類), dairy (乳製品) | **「均衡飲食少油鹽，天天五蔬果最健康」** | 💡 英語日常表達：*An apple a day keeps the doctor away.*（一天一蘋果，醫生遠離我） |
 
 ## 🔑 核心觀念 2：病痛症狀拆解與醫病對話 (Symptoms & Clinic Dialogue)
 
@@ -213,6 +187,20 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 > 👩 Mom: We should eat some vegetables and whole grains. How about a nice salad and brown rice? (我們應該吃些蔬菜和全穀雜糧。來份好吃的沙拉和糙米飯怎麼樣？)
 
 > 👦 Kevin: Sounds great! Let's eat a balanced diet! (聽起來很棒！讓我們吃得均衡營養吧！)
+
+---
+
+## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
+
+### 📝 範例 1：【Expressing Health Symptoms (-ache)】
+- 📌 **Question**: Match the symptoms with the correct English vocabulary:
+  (1) 牙痛 (2) 頭痛 (3) 喉嚨痛 (4) 肚子痛
+- 📐 **Step-by-step Solution**:
+  (1) toothache (2) headache (3) sore throat (4) stomachache
+
+### 📝 範例 2：【Giving Health Advice with "Should"】
+- 📌 **Question**: Complete the advice for a friend with a high fever: "You ______ go to see a doctor and ______ drink plenty of warm water."
+- 📐 **Step-by-step Solution**: "You **should** go to see a doctor and **should** drink plenty of warm water."
 
 ---
 

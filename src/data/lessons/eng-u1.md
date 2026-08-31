@@ -92,31 +92,14 @@
              └─────────────────────────────────┘
 ```
 
-### 📊 時間介系詞全方位對照表
+### 📊 本單元核心考點與重點公式速查表
 
-| 介系詞 | 時間維度 | 核心用法規律 | 經典搭配字詞 | 實戰生活例句 |
-| :---: | :---: | :--- | :--- | :--- |
-| $\textcolor{#e91e63}{\textbf{at}}$ | **精確時刻點** | 鐘點、特定瞬間、節慶期間 | $\textcolor{#e91e63}{\textbf{at}}$ 6:30, $\textcolor{#e91e63}{\textbf{at}}$ noon, $\textcolor{#e91e63}{\textbf{at}}$ night, $\textcolor{#e91e63}{\textbf{at}}$ midnight | I usually wake up $\textcolor{#e91e63}{\textbf{at}}$ 6:45. (我在 6:45 起床。) |
-| $\textcolor{#2196f3}{\textbf{on}}$ | **特定的一天** | 星期、具體日期、節日當天 | $\textcolor{#2196f3}{\textbf{on}}$ Tuesday, $\textcolor{#2196f3}{\textbf{on}}$ May 12th, $\textcolor{#2196f3}{\textbf{on}}$ Friday night | We have English class $\textcolor{#2196f3}{\textbf{on}}$ Thursday. (我們週四有英文課。) |
-| $\textcolor{#4caf50}{\textbf{in}}$ | **較長的時間區段**| 早中晚、月份、季節、年份 | $\textcolor{#4caf50}{\textbf{in}}$ the morning, $\textcolor{#4caf50}{\textbf{in}}$ July, $\textcolor{#4caf50}{\textbf{in}}$ winter, $\textcolor{#4caf50}{\textbf{in}}$ 2025 | It often rains here $\textcolor{#4caf50}{\textbf{in}}$ spring. (這裡春天常下雨。) |
-
-### 🌟 完整範例
-
-1. 🎂 **慶祝生日**：My birthday is $\textcolor{#2196f3}{\textbf{on}}$ October 15th. We will have a party. (我的生日在十月十五日。我們要辦一場派對。)
-2. ❄️ **期待下雪**：It always snows in Canada $\textcolor{#4caf50}{\textbf{in}}$ winter. (在加拿大，冬天總是會下雪。)
-3. 👻 **萬聖節**：Kids go trick-or-treating $\textcolor{#e91e63}{\textbf{at}}$ night $\textcolor{#2196f3}{\textbf{on}}$ Halloween. (孩子們在萬聖節當天的晚上會去玩不給糖就搗蛋。)
-
-### 💬 情境對話練習
-
-> Emma: When is the school trip? (學校的戶外教學是什麼時候？)
-
-> Lisa: It is in November. (是在十一月喔。)
-
-> Emma: Cool! Which day exactly? (酷耶！確切是哪一天呢？)
-
-> Lisa: It is on Friday, November 12th. We have to be at school at seven o'clock in the morning. (是十一月十二日星期五。我們早上七點就必須到學校。)
-
----
+| 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
+| :--- | :--- | :--- | :--- |
+| $\textcolor{#e91e63}{\textbf{詢問與回答時間}}$ | Q: **What time is it?** / What time do you...?<br>A: **It's [hour]:[minute].**<br>半點：*It's half past seven.* (7:30)<br>一刻：*It's a quarter past/to eight.* | **「小數點分在後，half 是半點，quarter 是 15 分」** | ❌ 誤把 *quarter to 8* 當成 8:15（*to* 是差幾分到，*a quarter to 8* 是 7:45！） |
+| $\textcolor{#2196f3}{\textbf{時間介系詞黃金三法則}}$ | **at**：精確鐘點 (*at 7:00, at noon, at night*)<br>**in**：較長時段 (*in the morning/afternoon, in July, in 2026*)<br>**on**：特定某一天 (*on Monday, on May 5th, on my birthday*) | **「at 抓點鐘、in 抓時段月年、on 抓特定某一天」** | 💥 **段考超高頻考點**：*on Friday morning*（雖然有 morning，但前面有星期，必須用 **on**！） |
+| $\textcolor{#ff9800}{\textbf{頻率副詞位置與比例}}$ | always (100%) $>$ usually (80%) $>$ often (60%) $>$ sometimes (40%) $>$ seldom (20%) $>$ never (0%)<br>位置：**「be動詞/助動詞之後，一般動詞之前」** | **「be 後動前（放在 be 動詞後面，一般動詞前面）」**<br>*He is **always** happy.* / *I **often** play soccer.* | ⚠️ *seldom* 和 *never* 本身帶有否定意義，句子中不可再加 *don't* 或 *not* |
+| $\textcolor{#2e7d32}{\textbf{第三人稱單數動詞變化}}$ | 主詞為 He / She / It / 單數名詞時，現在式一般動詞需加 **-s / -es / -ies** | **「三單主詞動詞加 s，遇到助動詞打回原型」**<br>*She brushes her teeth every day.* | 💥 當句子有 *Does* 或 *doesn't* 助動詞時，後面的動詞必須**還原為原型動詞**！ |
 
 ## 🔑 核心觀念 3：日常生活動作動詞庫 (Daily Routine Actions)
 
@@ -194,6 +177,26 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 > Mom: You should always go to bed early! (你應該總是早點上床睡覺才對！)
 
 > Peter: I know. I promise I will never sleep late again. (我知道了。我保證以後絕對不會再晚睡了。)
+
+---
+
+## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
+
+### 📝 範例 1：【Prepositions of Time: at / on / in】
+- 📌 **Question**: Fill in the blanks with "at", "on", or "in":
+  (1) The movie starts ______ 7:30 PM.
+  (2) We don't go to school ______ Sundays.
+  (3) My birthday is ______ October.
+- 💡 **Key Concept**: 
+  - **at** + specific clock time (at 7:30)
+  - **on** + days and specific dates (on Sundays, on May 5th)
+  - **in** + months, years, seasons, parts of day (in October, in 2026, in the morning)
+- 📐 **Step-by-step Solution**: (1) **at**; (2) **on**; (3) **in**.
+
+### 📝 範例 2：【Frequency Adverbs Position】
+- 📌 **Question**: Rewrite the sentence by putting "always" in the correct position: "David is late for school."
+- 💡 **Key Concept**: Rule: Frequency adverbs go **after BE verbs**, but **before action verbs**.
+- 📐 **Step-by-step Solution**: "David is **always** late for school."
 
 ---
 

@@ -81,31 +81,14 @@
   The restaurant is ACROSS FROM the station. The bookstore is ON THE CORNER OF Apple & Sun.
 ```
 
-### 📊 地方介系詞對照與生活例句
+### 📊 本單元核心考點與重點公式速查表
 
-| 介系詞片語 | 空間方位意義 | 實戰生活造句 |
-| :--- | :--- | :--- |
-| $\textcolor{#e91e63}{\textbf{next to}}$ | 緊挨在旁邊（無障礙物隔開） | The bakery is $\textcolor{#e91e63}{\textbf{next to}}$ the bookstore. (烘焙坊在書店隔壁。) |
-| $\textcolor{#2196f3}{\textbf{between ... and ...}}$ | 夾在 A 與 B 的正中間 | The clinic is $\textcolor{#2196f3}{\textbf{between}}$ the bank $\textcolor{#2196f3}{\textbf{and}}$ the cafe. |
-| $\textcolor{#4caf50}{\textbf{across from}}$ | 正對面（中間隔著一條街道/馬路） | The hotel is $\textcolor{#4caf50}{\textbf{across from}}$ the central park. |
-| $\textcolor{#ff9800}{\textbf{on the corner of}}$ | 位於兩條路十字交會的轉角處 | The 7-Eleven is $\textcolor{#ff9800}{\textbf{on the corner of}}$ First St. and Peace Rd. |
-| $\textcolor{#9c27b0}{\textbf{in front of / behind}}$ | 在...的前方 / 在...的後方 | There is a big fountain $\textcolor{#9c27b0}{\textbf{in front of}}$ the museum. |
-
-### 🌟 完整範例
-1. The new movie theater is **next to** the famous Italian restaurant. (新開的電影院在那間有名的義大利餐廳隔壁。)
-2. Look! The cute little dog is sleeping **between** the two big trees. (看！那隻可愛的小狗睡在兩棵大樹中間。)
-3. The bus stop is **across from** our school, so it's very convenient for students. (公車站牌就在我們學校正對面，所以對學生來說非常方便。)
-
-### 💬 情境對話練習
-> Emma: Excuse me. Where is the nearest bank? I need to get some money. (不好意思。請問最近的銀行在哪裡？我需要領些錢。)
-
-> Police Officer: Oh, it's on the corner of Apple Street and Sun Road. (喔，它就在蘋果街和太陽路的轉角處。)
-
-> Emma: Is it next to the bookstore? (它在書店隔壁嗎？)
-
-> Police Officer: No, it's across from the bookstore. You can't miss it! (不是喔，它在書店的正對面。你一定找得到的！)
-
----
+| 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
+| :--- | :--- | :--- | :--- |
+| $\textcolor{#e91e63}{\textbf{禮貌問路三大核心句型}}$ | 1. **Excuse me, how do I get to the [place]?**<br>2. **Where is the nearest [place]?**<br>3. **Can you tell me the way to the [place]?** | **「問路先說 Excuse me，How do I get to 禮貌佳」** | 💡 問路開頭務必先說 *Excuse me*（不好意思），展現良好英語社交禮儀 |
+| $\textcolor{#2196f3}{\textbf{指路核心方向指令}}$ | **Go straight** (for 2 blocks) 直走<br>**Turn left / Turn right** at the corner/light 向左/右轉<br>**Cross the street** 過馬路<br>**It's on your left / right.** 它在你的左/右側 | **「Go straight 直直走，Turn left/right 轉個彎，on your left 就看見」** | ⚠️ *Turn left* 不加 to（不可說 *turn to left*）；但在第幾條街轉要用介系詞 *on* |
+| $\textcolor{#ff9800}{\textbf{方位介系詞辨析}}$ | **next to**：在...隔壁（相鄰）<br>**across from**：在...正對面（隔著馬路）<br>**between A and B**：在 A 和 B 的中間<br>**on the corner of**：在...街角轉角處 | **「next to 是隔壁鄰居，across from 隔街對望，between 夾在兩者間」** | 💥 **介系詞搭配**：*between* 必定搭配 **and**（*between the bank and the park*） |
+| $\textcolor{#2e7d32}{\textbf{地圖問答常用場所單字}}$ | library (圖書館), post office (郵局), supermarket (超市), hospital (醫院), train station (火車站) | **「辨識地標關鍵字，指路地圖不迷路」** | 💡 描述位置時常用定冠詞 **the**，例如 *The bookstore is across from the school.* |
 
 ## 🔑 核心觀念 3：問路與指路實戰指南 (Asking & Giving Directions)
 
@@ -165,6 +148,19 @@
 > 🧳 **Tourist**: Thank you so much for your help! You are wonderful!  
 
 > 🧒 **You**: You're very welcome! Have a great trip!
+
+---
+
+## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
+
+### 📝 範例 1：【Polite Asking for Directions】
+- 📌 **Question**: How to ask politely for the way to the post office?
+- 💡 **Key Phrase**: "Excuse me, how do I get to...?" or "Could you tell me the way to...?"
+- 📐 **Step-by-step Solution**: "Excuse me, could you please tell me how to get to the post office?"
+
+### 📝 範例 2：【Giving Clear Directions & Map Reading】
+- 📌 **Question**: Give directions based on a map: Start at Main Street, walk two blocks, turn left at the bookstore, and destination is next to the bank.
+- 📐 **Step-by-step Solution**: "Go straight along Main Street for two blocks. Turn left at the bookstore. The museum is on your right, right next to the bank."
 
 ---
 

@@ -40,35 +40,14 @@
  └──────────────────────────────┴──────────────────────────────┘
 ```
 
-### 📊 略讀與掃讀全方位策略對照
+### 📊 本單元核心考點與重點公式速查表
 
-| 策略維度 | $\textcolor{#e91e63}{\textbf{Skimming (略讀)}}$ | $\textcolor{#2196f3}{\textbf{Scanning (掃讀)}}$ |
-| :--- | :--- | :--- |
-| **閱讀速度** | 極快（每分鐘 300~500 字） | 極快（跳躍式視線移動） |
-| **注目焦點** | 標題 (Title)、首尾段 (First/Last paragraph)、各段主題句 (Topic sentence) | 數字 (Numbers)、專有名詞大寫 (Proper nouns)、符號 |
-| **典型考題** | *What is the main idea of this article?* | *What time did Tom arrive? / How much is it?* |
-| **生活實踐** | 翻看報紙頭條、瀏覽網頁大標題決定要不要讀 | 查火車時刻表、在通訊錄找朋友電話 |
-
-### 🌟 完整範例
-
-1. **Skimming (略讀抓主旨)**：當你在書店挑選故事書時，快速翻閱書背的介紹和第一章的前幾句，馬上就知道這是不是你喜歡的魔法冒險故事。
-*(When you choose a storybook in a bookstore, you quickly read the back cover and the first few sentences of chapter one to know if it's a magic adventure story you like.)*
-2. **Scanning (掃讀找細節)**：當老師問：「這篇文章裡的大象有多重？」你不用從頭讀到尾，只要讓眼睛像雷達一樣快速尋找「大寫的 Elephant」或「數字 (重量)」。
-*(When the teacher asks, "How heavy is the elephant in the article?", you just use your eyes like a radar to search for the word "Elephant" or "numbers".)*
-3. **完美組合 (Perfect Combo)**：先略讀 (Skim) 電影時刻表的大標題找到「超級英雄電影」，再掃讀 (Scan) 尋找下午「3:30」的場次。
-*(First skim the movie schedule's title for "Superhero Movie", then scan for the "3:30 PM" showtime.)*
-
-### 💬 情境對話練習
-
-> Leo: I have a lot of books to read for my homework. What should I do? (我有好多書要讀來寫作業。我該怎麼辦？)
-
-> Bella: You can use skimming! Just read the titles and the first sentence of each paragraph. (你可以用略讀！只要讀標題和每段的第一句話就好。)
-
-> Leo: Oh, that's fast! But what if I need to find a specific date? (喔，那很快！但如果我需要找一個特定的日期呢？)
-
-> Bella: Then use scanning. Look closely only for numbers like 1999 or 2023. (那就用掃讀。只要仔細尋找像 1999 或 2023 這樣的數字。)
-
----
+| 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
+| :--- | :--- | :--- | :--- |
+| $\textcolor{#e91e63}{\textbf{Skimming 略讀找主旨}}$ | 快速瀏覽標題、各段首句 (Topic Sentence) 與末句 $\rightarrow$ 掌握文章大意 (Main Idea) | **「標題首末句掃一遍，快速抓出文章大意」** | ❌ 略讀時切忌逐字查字典！應在 30 秒內快速掌握文章主題與核心觀點 |
+| $\textcolor{#2196f3}{\textbf{Scanning 掃讀搜細節}}$ | 帶著題目關鍵字（人名、地名、年代、數字）$\rightarrow$ 如雷達般在文章中快速定位搜尋 | **「帶關鍵字搜文章，雷達鎖定定點答」** | 💡 回答 *When, Where, How many* 等細節題時，直接用 Scanning 掃描數字與專有名詞 |
+| $\textcolor{#ff9800}{\textbf{常見字根字首字尾}}$ | **字首**：un- (不), re- (再), dis- (相反)<br>**字尾**：-ful (充滿), -less (沒有), -ly (副詞), -tion (名詞) | **「字首改字義，字尾變詞性」**<br>*happy $\rightarrow$ unhappy / care $\rightarrow$ careful / play $\rightarrow$ player* | 💡 遇到生字不要慌，先拆解字首字尾推測詞義（如 *hopeless* ＝ 失去希望的） |
+| $\textcolor{#2e7d32}{\textbf{上下文線索 (Context Clues)}}$ | 利用生字前後的「同義詞、反義詞 (but, however)、例證 (such as, for example)」推敲字義 | **「前後線索找對比，生字也能秒解碼」** | ⚠️ 注意轉折詞 *but, however, although*，後面的語氣往往與前文相反 |
 
 ## 🔑 核心觀念 2：單字萬能拆解器——字首與字尾 (Prefixes & Suffixes)
 
@@ -204,6 +183,25 @@
 > On a scorching summer afternoon, a thirsty crow flew across the forest in search of water. **However**, all the ponds had dried up. He felt completely **hopeless**. Suddenly, he spotted a tall glass jar on the grass. He looked inside and saw some fresh water at the bottom!
 > 
 > The crow tried to stick his beak into the jar, but the neck was far too narrow. **Then**, the clever bird had a wonderful idea. He picked up small pebbles one by one and dropped them into the jar. Slowly, the water level rose up to the brim. **Finally**, the crow drank the water and flew away happily.
+
+---
+
+## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
+
+### 📝 範例 1：【Reading Strategy: Skimming vs Scanning】
+- 📌 **Question**: Which reading skill should you use when:
+  (1) You want to know the main topic of a new story within 30 seconds?
+  (2) You want to find the flight departure time "14:20" on a timetable?
+- 📐 **Step-by-step Solution**:
+  (1) **Skimming** (略讀主旨大意)
+  (2) **Scanning** (掃讀特定關鍵數據)
+
+### 📝 範例 2：【Word Building with Prefixes & Suffixes】
+- 📌 **Question**: Identify the base word, prefix, and meaning:
+  (1) "unfriendly" (2) "carefully"
+- 📐 **Step-by-step Solution**:
+  (1) Prefix: un- (not) + Base: friend + Suffix: -ly (adj) = 不友善的。
+  (2) Base: care + Suffix: -ful (adj) + Suffix: -ly (adv) = 小心地。
 
 ---
 

@@ -1,25 +1,14 @@
-import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import { PlayCircle, CheckCircle2, BookOpen, ArrowLeft, Compass, ArrowRight, Star, Clock, ShieldCheck, Flame, Zap, Volume2, Headphones } from 'lucide-react';
 import { speechEngine } from '../utils/speechHelper';
+import { useGamification } from '../context/GamificationContext';
 
 const SubjectPage = () => {
   const { subjectId } = useParams();
+  const { unitStars } = useGamification();
   const subject = coursesData.subjects.find(s => s.id === subjectId);
   const units = coursesData.units[subjectId] || [];
-  const [completedUnits, setCompletedUnits] = useState([]);
-
-  useEffect(() => {
-    try {
-      const savedStats = localStorage.getItem('sixth_student_stats');
-      if (savedStats) {
-        const parsed = JSON.parse(savedStats);
-        // If we store completed unit ids, load them, otherwise dummy tracker
-        setCompletedUnits(parsed.completedUnitIds || ['math-u1', 'sci-u1']);
-      }
-    } catch (e) {}
-  }, []);
 
   if (!subject) return (
     <div className="container py-12 text-center">
@@ -41,7 +30,7 @@ const SubjectPage = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 py-3">
+    <div className="flex flex-col gap-6 py-3 pb-16">
       {/* Top Breadcrumb */}
       <div>
         <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
@@ -54,7 +43,6 @@ const SubjectPage = () => {
         className="card" 
         style={{ 
           padding: '28px', 
-          borderLeft: `6px solid ${subject.color}`, 
           backgroundColor: 'var(--bg-secondary)',
           borderRadius: 'var(--radius-xl)',
           border: '1.5px solid var(--border-light)',
@@ -125,7 +113,7 @@ const SubjectPage = () => {
       >
         <div className="flex items-center gap-2 font-bold" style={{ color: 'var(--text-primary)' }}>
           <span style={{ fontSize: '1.1rem' }}>🗺️</span>
-          <span>零基礎闖關指南：</span>
+          <span>闖關地圖任務順序：</span>
         </div>
         <div className="flex items-center gap-2 text-secondary flex-wrap text-xs md:text-sm">
           <span className="badge" style={{ backgroundColor: 'var(--accent-soft)', color: 'var(--accent-primary)', fontWeight: 700 }}>
@@ -133,11 +121,11 @@ const SubjectPage = () => {
           </span>
           <span>➔</span>
           <span className="badge" style={{ backgroundColor: 'var(--accent-success-soft)', color: 'var(--accent-success)', fontWeight: 700 }}>
-            ② 做 3 題隨堂測驗
+            ② 做 3 題隨堂測驗獲 3 星評級
           </span>
           <span>➔</span>
           <span className="badge" style={{ backgroundColor: 'var(--accent-warning-soft)', color: 'var(--accent-warning-text)', fontWeight: 700 }}>
-            ③ 錯題自動存入筆記
+            ③ 賺金幣培育守護神獸
           </span>
         </div>
       </div>
@@ -155,7 +143,7 @@ const SubjectPage = () => {
           <div className="flex justify-between items-center flex-wrap gap-2 mb-3">
             <div className="flex items-center gap-2 font-bold" style={{ color: 'var(--accent-primary)', fontSize: '0.95rem' }}>
               <Headphones size={18} />
-              <span>🎧 全新功能：所有英文單元均支援「原音朗讀」、「點擊發音練習」與「語速調節」！</span>
+              <span>🎧 雙語朗讀空間：所有英文單元均支援「原音朗讀」、「點擊發音練習」與「語速調節」！</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-xs text-secondary font-bold">設定朗讀速度:</span>
@@ -221,7 +209,8 @@ const SubjectPage = () => {
         ) : (
           units.map((unit, index) => {
             const tier = getTierInfo(index, units.length);
-            const isCompleted = completedUnits.includes(unit.id);
+            const stars = unitStars[unit.id] || 0;
+            const isCompleted = stars > 0;
 
             return (
               <div
@@ -231,7 +220,8 @@ const SubjectPage = () => {
                   padding: '24px', 
                   borderRadius: 'var(--radius-xl)',
                   backgroundColor: 'var(--bg-secondary)',
-                  border: '1.5px solid var(--border-light)'
+                  border: isCompleted ? '1.5px solid rgba(16, 185, 129, 0.4)' : '1.5px solid var(--border-light)',
+                  boxShadow: 'var(--shadow-sm)'
                 }}
               >
                 {/* Unit Header & Badges */}
@@ -293,13 +283,18 @@ const SubjectPage = () => {
                   {/* Completion Star Badge */}
                   <div>
                     {isCompleted ? (
-                      <span className="badge badge-success flex items-center gap-1 font-bold">
-                        <Star size={13} style={{ fill: 'currentColor' }} />
-                        已完成學習
-                      </span>
+                      <div className="flex flex-col items-end gap-1">
+                        <div className="text-amber-500 font-black text-base tracking-wider">
+                          {'⭐'.repeat(stars)}
+                          {'☆'.repeat(3 - stars)}
+                        </div>
+                        <span className="badge badge-success text-[11px] font-bold">
+                          {stars === 3 ? '🏆 完美 3 星通關' : '✅ 已通關'}
+                        </span>
+                      </div>
                     ) : (
                       <span className="badge" style={{ backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-tertiary)' }}>
-                        🌱 探索解鎖中
+                        🌱 待挑戰 (未通關)
                       </span>
                     )}
                   </div>

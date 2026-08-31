@@ -43,30 +43,14 @@
  └─────────────────────────┴───────────────────────────────────┘
 ```
 
-### 📊 台灣四大節慶核心單字與句型
+### 📊 本單元核心考點與重點公式速查表
 
-| 節慶英文名稱 | 節慶中文 | 關鍵特色美食與活動 | 經典英文介紹句 |
+| 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
-| $\textcolor{#e91e63}{\textbf{Lunar New Year}}$ | 農曆新年 | $\text{red envelopes, reunion dinner}$ | Children get $\textcolor{#e91e63}{\textbf{red envelopes}}$ with lucky money. |
-| $\textcolor{#4caf50}{\textbf{Lantern Festival}}$ | 元宵節 | $\text{sky lanterns, riddles, tangyuan}$ | We release $\textcolor{#4caf50}{\textbf{sky lanterns}}$ into the night sky. |
-| $\textcolor{#2196f3}{\textbf{Dragon Boat Festival}}$ | 端午節 | $\text{zongzi, dragon boat races}$ | People row fast in $\textcolor{#2196f3}{\textbf{dragon boat races}}$. |
-| $\textcolor{#ff9800}{\textbf{Mid-Autumn Festival}}$ | 中秋節 | $\text{moon cakes, pomelos, BBQ}$ | Families gather to gaze at the full moon and eat $\textcolor{#ff9800}{\textbf{moon cakes}}$. |
-
-### 🌟 完整範例
-
-1. During the Dragon Boat Festival, my family watches the dragon boat races by the river. (端午節時，我們全家會在河邊看划龍舟比賽。)
-2. We love to eat delicious moon cakes and barbecue outdoors on the Mid-Autumn Festival. (我們喜歡在中秋節吃美味的月餅並在戶外烤肉。)
-3. At the Lantern Festival, people write their wishes on sky lanterns and release them into the sky. (元宵節時，人們把願望寫在天燈上，然後把它們放到天空中。)
-
-### 💬 情境對話練習
-
-> Kevin: What is your favorite traditional festival in Taiwan? (你在台灣最喜歡的傳統節慶是什麼？)
-
-> Bella: I like the Lunar New Year the most because I can get red envelopes! (我最喜歡農曆新年，因為我可以拿紅包！)
-
-> Kevin: That sounds great! I love the Mid-Autumn Festival because the pomelos are so sweet. (聽起來很棒！我喜歡中秋節，因為柚子好甜。)
-
----
+| $\textcolor{#e91e63}{\textbf{臺灣傳統節慶英語}}$ | **Lunar New Year** (春節, red envelopes, reunion dinner)<br>**Dragon Boat Festival** (端午節, rice dumplings / zongzi, dragon boat races)<br>**Moon / Mid-Autumn Festival** (中秋節, mooncakes, pomelos, barbecuing) | **「春節紅包年夜飯，端午粽子划龍舟，中秋賞月吃月餅」** | 💡 農曆節慶通常依據農曆陰曆計算，日期每年國曆不同，英文常加 *Lunar* |
+| $\textcolor{#2196f3}{\textbf{西方重要節慶英語}}$ | **Halloween** (萬聖夜 Oct 31, "Trick or treat", pumpkin lanterns)<br>**Thanksgiving** (感恩節 11月第四個星期四, turkey, family gathering)<br>**Christmas** (聖誕節 Dec 25, Christmas tree, gifts, Santa Claus) | **「萬聖不給糖就搗蛋，感恩吃火雞，聖誕送禮許心願」** | ⚠️ *Halloween* 的著名口號是 *"Trick or treat!"*；*Christmas Eve* 指 12 月 24 日平安夜 |
+| $\textcolor{#ff9800}{\textbf{節慶時間介系詞規律}}$ | 僅指月份/年份 $\rightarrow$ **in** (*in December, in 2026*)<br>特定具體日期 $\rightarrow$ **on** (*on October 31st, on Christmas Day*)<br>節慶假日期間 $\rightarrow$ **at** (*at Christmas*) | **「月份用 in，特定某天用 on，假期用 at」** | 💥 比較：*in October*（在十月）vs *on October 31st*（在十月三十一日） |
+| $\textcolor{#2e7d32}{\textbf{跨文化尊重與表達}}$ | 祝賀語：*Happy Lunar New Year!* / *Merry Christmas!* / *Happy Holidays!* | **「多元文化同欣賞，溫馨祝福傳世界」** | 💡 面對不同宗教與文化背景朋友，可使用包容性高的 *Happy Holidays!* 致上祝福 |
 
 ## 🔑 核心觀念 2：西方代表性節慶全覽 (Western Festivals)
 
@@ -189,6 +173,21 @@
 > Jenny: Good idea! And how should I sign off at the bottom? (好主意！那我最後該怎麼署名呢？)
 
 > Danny: You can write "Best wishes" before you sign your name. (你可以在簽名前寫上「Best wishes」。)
+
+---
+
+## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
+
+### 📝 範例 1：【Festivals & Cultural Vocabulary Comparison】
+- 📌 **Question**: Pair the festivals with their traditional foods and activities:
+  (1) Mid-Autumn Festival (2) Dragon Boat Festival (3) Halloween (4) Christmas
+  [A] Rice dumplings & dragon boat races [B] Mooncakes & pomelo hats [C] Trick-or-treating in costumes [D] Decorating Christmas trees & exchanging gifts
+- 📐 **Step-by-step Solution**: (1)-[B], (2)-[A], (3)-[C], (4)-[D].
+
+### 📝 範例 2：【Dates and Celebrations Prepositions】
+- 📌 **Question**: Fill in the blank: "Halloween is celebrated ______ October 31st every year."
+- 💡 **Key Concept**: Specific calendar dates use the preposition **on**.
+- 📐 **Step-by-step Solution**: "Halloween is celebrated **on** October 31st every year."
 
 ---
 

@@ -56,17 +56,15 @@ $$ \textcolor{#e91e63}{\textbf{\text{圓面積} = \text{半徑} \times \text{半
 ### 🌟 扇形面積公式
 $$ \textcolor{#e91e63}{\textbf{\text{扇形面積} = \text{半徑} \times \text{半徑} \times 3.14 \times \frac{\text{圓心角}}{360^\circ}}} $$
 
-### 📊 常見圓心角扇形面積速查表
+### 📊 本單元核心考點與重點公式速查表
 
-| 圓心角 ($\theta$) | 佔整圓比例 | 扇形面積公式簡化 | 範例：半徑 $6\text{ cm}$ |
+| 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
-| **$180^\circ$ (半圓)** | $\textcolor{#e91e63}{\textbf{\frac{1}{2}}}$ | $r \times r \times 3.14 \times \frac{1}{2}$ | $6 \times 6 \times 3.14 \times \frac{1}{2} = \mathbf{56.52\text{ cm}^2}$ |
-| **$120^\circ$** | $\textcolor{#2196f3}{\textbf{\frac{1}{3}}}$ | $r \times r \times 3.14 \times \frac{1}{3}$ | $6 \times 6 \times 3.14 \times \frac{1}{3} = \mathbf{37.68\text{ cm}^2}$ |
-| **$90^\circ$ (四分之一圓)**| $\textcolor{#2e7d32}{\textbf{\frac{1}{4}}}$ | $r \times r \times 3.14 \times \frac{1}{4}$ | $6 \times 6 \times 3.14 \times \frac{1}{4} = \mathbf{28.26\text{ cm}^2}$ |
-| **$60^\circ$** | $\textcolor{#ff9800}{\textbf{\frac{1}{6}}}$ | $r \times r \times 3.14 \times \frac{1}{6}$ | $6 \times 6 \times 3.14 \times \frac{1}{6} = \mathbf{18.84\text{ cm}^2}$ |
-| **$45^\circ$** | $\textcolor{#9c27b0}{\textbf{\frac{1}{8}}}$ | $r \times r \times 3.14 \times \frac{1}{8}$ | $6 \times 6 \times 3.14 \times \frac{1}{8} = \mathbf{14.13\text{ cm}^2}$ |
-
----
+| $\textcolor{#e91e63}{\textbf{圓面積公式}}$ | 圓面積 $=$ 半徑 $\times$ 半徑 $\times 3.14$<br>$\text{Area} = r^2 \times \pi \approx r \times r \times 3.14$ | **「圓面積＝半徑乘半徑乘 3.14」**<br>（將圓切成無限扇形拼成長方形，長＝半圓周，寬＝半徑） | 💥 誤用「直徑」去乘直徑乘 3.14！若題目給直徑，第一步務必先除以 2 算出半徑！ |
+| $\textcolor{#2196f3}{\textbf{扇形面積公式}}$ | 扇形面積 $=$ 圓面積 $\times \frac{\text{圓心角}}{360^\circ} = r \times r \times 3.14 \times \frac{\theta}{360^\circ}$ | **「整圓面積乘比例，就是扇形面積」** | ⚠️ 扇形面積只需算面，不需像周長那樣加 $2r$ |
+| $\textcolor{#ff9800}{\textbf{圓環（甜甜圈）面積}}$ | 圓環面積 $=$ 大圓面積 $-$ 小圓面積<br>$= (R \times R - r \times r) \times 3.14$ | **「大圓減小圓，提 3.14 快速算」** | 💡 巧算技巧：先算 $(R^2 - r^2)$，最後再統一乘以 $3.14$，減少計算筆誤！ |
+| $\textcolor{#2e7d32}{\textbf{複合鋪色面積 (切割/填補)}}$ | 鋪色面積 $=$ 外圍總面積 $-$ 空白未鋪色面積<br>（例如：正方形 $-$ 內切圓、外接圓 $-$ 內接正方形） | **「割補加減法，大塊減去空白塊」** | 💡 常見模型：葉形（兩扇形相交）面積 $= 2 \times$ 扇形 $-$ 正方形 $= 0.57 \times r^2$ |
+| $\textcolor{#9c27b0}{\textbf{半徑倍數與面積倍數}}$ | 若半徑變為 $k$ 倍 $\Rightarrow$ 圓周長變為 $k$ 倍，**圓面積變為 $k^2$ 倍** | **「長度變 $k$ 倍，面積變 $k$ 的平方倍」** | ⚠️ 半徑變 2 倍，面積變 $2 \times 2 = 4$ 倍；半徑變 3 倍，面積變 9 倍！ |
 
 ## 🔑 核心觀念 3：複合鋪色陰影面積四大解題神技
 
@@ -89,6 +87,26 @@ $$ \textcolor{#e91e63}{\textbf{\text{扇形面積} = \text{半徑} \times \text{
 | **2. 分割相加法** | 操場跑道兩端半圓加中間長方形 | $\text{總面積} = \text{長方形} + \text{整圓}$ | 兩端半圓拼成一個完整的圓 |
 | **3. 旋轉平移拼補法**| 太極圖案、分散碎塊陰影 | 將對稱分散的小塊剪下，填補到空白處湊成規則圖形 | 兩塊不規則碎塊拼成一個半圓 |
 | **4. 重疊容斥法 (葉片)**| 兩個 $\frac{1}{4}$ 圓重疊產生的葉片陰影 | $\text{葉片面積} = (\frac{1}{4}\text{圓} + \frac{1}{4}\text{圓}) - \text{正方形}$ | $\textcolor{#2196f3}{\textbf{\text{葉片} = r^2 \times 3.14 \times \frac{1}{2} - r^2}}$ |
+
+---
+
+## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
+
+### 📝 範例 1：【扇形面積計算】
+- 📌 **題目情境**：半徑 $12$ 公分、圓心角 $90^\circ$ 的扇形，其面積是多少平方公分？
+- 💡 **思考關鍵**：扇形面積 $=$ 完整圓面積（半徑 $	imes$ 半徑 $	imes 3.14$）$	imes rac{	ext{圓心角}}{360^\circ}$。
+- 📐 **詳盡步驟**：
+  1. 完整圓面積 $= 12 	imes 12 	imes 3.14 = 144 	imes 3.14 = 452.16	ext{ 平方公分}$。
+  2. $90^\circ$ 扇形比例 $= rac{90}{360} = rac{1}{4}$。
+  3. 扇形面積 $= 452.16 	imes rac{1}{4} = \mathbf{113.04	ext{ 平方公分}}$。
+
+### 📝 範例 2：【複合圖形鋪色面積（切割扣除法）】
+- 📌 **題目情境**：在邊長 $10$ 公分的正方形紙片中，剪下一個最大的圓形，請問剪完後正方形四個角落剩下的鋪色面積是多少？
+- 💡 **思考關鍵**：最大圓的直徑等於正方形邊長 $10$ 公分（半徑為 $5$ 公分）。鋪色面積 $=$ 正方形面積 $-$ 圓面積。
+- 📐 **詳盡步驟**：
+  1. 正方形面積 $= 10 	imes 10 = 100	ext{ 平方公分}$。
+  2. 圓面積 $= 5 	imes 5 	imes 3.14 = 25 	imes 3.14 = 78.5	ext{ 平方公分}$。
+  3. 鋪色剩餘面積 $= 100 - 78.5 = \mathbf{21.5	ext{ 平方公分}}$。
 
 ---
 

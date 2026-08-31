@@ -240,38 +240,137 @@
   margin: 2.25rem 0;
 }
 
-/* Responsive Table Wrapper */
+/* Dynamic Section Jump Navigation Bar */
+.lesson-section-nav-card {
+  transition: all var(--transition-normal);
+}
+
+.lesson-section-nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.section-nav-pill:hover {
+  background-color: var(--accent-soft);
+  border-color: var(--accent-primary);
+  color: var(--accent-text);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.15);
+}
+
+.section-nav-pill.highlight-summary-pill {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.08) 100%);
+  border-color: rgba(245, 158, 11, 0.45);
+  color: #b45309;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .section-nav-pill.highlight-summary-pill {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(251, 191, 36, 0.1) 100%);
+  border-color: rgba(251, 191, 36, 0.5);
+  color: #fbbf24;
+}
+
+.section-nav-pill.highlight-summary-pill:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(245, 158, 11, 0.15) 100%);
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.2);
+}
+
+/* Enhanced Responsive Table Wrapper & Panel */
 .lesson-table-container {
   width: 100%;
-  overflow-x: auto;
-  margin: 1.75rem 0;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-light);
+  margin: 2rem 0;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--border-strong);
   box-shadow: var(--shadow-sm);
   background-color: var(--bg-secondary);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.lesson-table-container:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent-primary);
+}
+
+.table-top-indicator {
+  background-color: var(--bg-tertiary);
+  border-bottom: 1.5px solid var(--border-light);
+  padding: 10px 16px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.table-top-badge {
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.table-copy-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-strong);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.table-copy-btn:hover {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  border-color: var(--accent-primary);
+}
+
+.table-scroll-inner {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .lesson-page-wrapper .markdown-body table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: calc(0.95rem * var(--font-scale));
+  font-size: calc(0.94rem * var(--font-scale));
 }
 
 .lesson-page-wrapper .markdown-body th {
-  background: linear-gradient(180deg, var(--bg-tertiary) 0%, rgba(0, 0, 0, 0.02) 100%);
+  background: linear-gradient(180deg, var(--bg-tertiary) 0%, rgba(0, 0, 0, 0.03) 100%);
   color: var(--text-primary);
-  font-weight: 700;
+  font-weight: 800;
   padding: 14px 18px;
   border-bottom: 2px solid var(--border-strong);
   white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
 .lesson-page-wrapper .markdown-body td {
-  padding: 14px 18px;
+  padding: 13px 18px;
   border-bottom: 1px solid var(--border-light);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.65;
+  vertical-align: middle;
 }
 
 .lesson-page-wrapper .markdown-body tr:last-child td {
@@ -279,11 +378,37 @@
 }
 
 .lesson-page-wrapper .markdown-body tr:nth-child(even) td {
-  background-color: rgba(0, 0, 0, 0.015);
+  background-color: rgba(0, 0, 0, 0.018);
+}
+
+[data-theme='dark'] .lesson-page-wrapper .markdown-body tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 .lesson-page-wrapper .markdown-body tr:hover td {
-  background-color: var(--bg-tertiary);
+  background-color: var(--accent-soft);
+}
+
+/* Table Speech trigger button for English */
+.table-speech-trigger {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 3px 6px;
+  margin-left: 6px;
+  color: var(--accent-primary);
+  cursor: pointer;
+  opacity: 0.75;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.table-speech-trigger:hover {
+  opacity: 1;
+  background-color: var(--accent-soft);
+  transform: scale(1.1);
 }
 
 /* Responsive adjustments for Lesson Page */
@@ -293,11 +418,11 @@
   }
 
   .lesson-page-wrapper .markdown-body h1 {
-    font-size: calc(1.5rem * var(--font-scale));
+    font-size: calc(1.45rem * var(--font-scale));
   }
 
   .lesson-page-wrapper .markdown-body h2 {
-    font-size: calc(1.25rem * var(--font-scale));
+    font-size: calc(1.2rem * var(--font-scale));
   }
 
   .lesson-page-wrapper .markdown-body th,
@@ -305,3 +430,4 @@
     padding: 10px 12px;
   }
 }
+

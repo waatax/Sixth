@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -26,7 +26,10 @@ import {
   Award,
   Volume2,
   Headphones,
-  Square
+  Square,
+  ListChecks,
+  Table as TableIcon,
+  Zap
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
@@ -36,6 +39,15 @@ import './LessonPage.css';
 // Vite dynamic import for raw markdown files
 const mdModules = import.meta.glob('../data/lessons/*.md', { query: '?raw', import: 'default' });
 
+// Helper to generate slug for H2 headings
+const createSlug = (text) => {
+  return String(text)
+    .replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .toLowerCase();
+};
+
 const LessonPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
@@ -44,6 +56,7 @@ const LessonPage = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [copiedCodeId, setCopiedCodeId] = useState(null);
+  const [copiedTableId, setCopiedTableId] = useState(null);
   const [highlightMode, setHighlightMode] = useState(true);
   const [quickSummaryOpen, setQuickSummaryOpen] = useState(true);
   const [selectedTextBubble, setSelectedTextBubble] = useState(null);
@@ -181,6 +194,63 @@ const LessonPage = () => {
     );
   }
 
+  // Extract all H2 sections from markdown content
+  const sections = useMemo(() => {
+    if (!content) return [];
+    const lines = content.split('\n');
+    const list = [];
+    lines.forEach(line => {
+      if (line.startsWith('## ')) {
+        const title = line.replace('## ', '').trim();
+        const id = createSlug(title);
+        let icon = '📌';
+        let shortLabel = title;
+        if (title.includes('導引') || title.includes('情境') || title.includes('為什麼')) {
+          icon = '🎯'; shortLabel = '學習導引';
+        } else if (title.includes('觀念')) {
+          icon = '🔑'; 
+          const clean = title.replace(/^🔑\s*/, '').replace(/核心觀念\s*\d*[:：]?\s*/, '');
+          shortLabel = clean.length > 8 ? clean.slice(0, 7) + '..' : clean;
+        } else if (title.includes('範例') || title.includes('例題') || title.includes('考題')) {
+          icon = '📝'; shortLabel = '經典例題講解';
+        } else if (title.includes('重點') || title.includes('速查') || title.includes('整理') || title.includes('表格') || title.includes('公式')) {
+          icon = '📊'; shortLabel = '重點速查表';
+        } else if (title.includes('迷思')) {
+          icon = '🧠'; shortLabel = '迷思破解';
+        } else if (title.includes('練習') || title.includes('測驗') || title.includes('隨堂')) {
+          icon = '✏️'; shortLabel = '隨堂測驗';
+        } else if (title.includes('素養') || title.includes('前瞻') || title.includes('你知道嗎') || title.includes('新知')) {
+          icon = '🚀'; shortLabel = '素養前瞻';
+        }
+        list.push({ title, id, icon, shortLabel });
+      }
+    });
+    return list;
+  }, [content]);
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const yOffset = -70;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+  const scrollToSummaryTable = () => {
+    const summarySec = sections.find(s => s.title.includes('重點') || s.title.includes('速查') || s.title.includes('整理') || s.title.includes('表格') || s.title.includes('公式'));
+    if (summarySec) {
+      scrollToSection(summarySec.id);
+    } else {
+      const tableEl = document.querySelector('.lesson-table-container');
+      if (tableEl) {
+        const yOffset = -80;
+        const y = tableEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  };
+
   // Optimization 6: Read time estimation
   const wordCount = content.length || 1000;
   const readTimeMin = Math.max(1, Math.ceil(wordCount / 400));
@@ -260,6 +330,20 @@ const LessonPage = () => {
             預估閱讀 {readTimeMin} 分鐘
           </span>
           <button 
+            className="badge cursor-pointer hover:opacity-90 transition-all flex items-center gap-1"
+            style={{ 
+              backgroundColor: 'rgba(245, 158, 11, 0.15)', 
+              color: '#d97706',
+              border: '1px solid rgba(245, 158, 11, 0.3)',
+              fontWeight: 700
+            }}
+            onClick={scrollToSummaryTable}
+            title="一鍵直達本單元核心重點與公式速查表格"
+          >
+            <Zap size={13} style={{ fill: '#d97706' }} />
+            <span>📊 考前速查直達</span>
+          </button>
+          <button 
             className="badge badge-success cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => {
               const key = `bookmark_${unitId}`;
@@ -310,7 +394,7 @@ const LessonPage = () => {
       {/* 🎯 30-Second Scaffolding Quick Concepts Card */}
       {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
         <div 
-          className="card mb-5 overflow-hidden" 
+          className="card mb-3 overflow-hidden" 
           style={{ 
             padding: '0',
             borderRadius: 'var(--radius-lg)',
@@ -365,6 +449,44 @@ const LessonPage = () => {
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* 🧭 Dynamic Section Jump Navigation Bar */}
+      {sections.length > 0 && (
+        <div 
+          className="card mb-5 lesson-section-nav-card"
+          style={{
+            padding: '12px 16px',
+            backgroundColor: 'var(--bg-secondary)',
+            borderRadius: 'var(--radius-lg)',
+            border: '1.5px solid var(--border-light)',
+            boxShadow: 'var(--shadow-sm)'
+          }}
+        >
+          <div className="flex items-center justify-between gap-2 mb-2">
+            <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--text-primary)' }}>
+              <ListChecks size={15} style={{ color: 'var(--accent-primary)' }} />
+              <span>📑 單元章節快速導航・點擊直達重點板塊：</span>
+            </div>
+            <span className="text-xs text-tertiary hidden sm:inline">共 {sections.length} 個主要板塊</span>
+          </div>
+          <div className="lesson-section-nav-pills flex flex-wrap gap-1.5">
+            {sections.map((sec, idx) => {
+              const isSummary = sec.shortLabel.includes('重點') || sec.shortLabel.includes('速查') || sec.title.includes('表格') || sec.title.includes('公式');
+              return (
+                <button
+                  key={idx}
+                  className={`section-nav-pill ${isSummary ? 'highlight-summary-pill' : ''}`}
+                  onClick={() => scrollToSection(sec.id)}
+                  title={`點擊直達：${sec.title}`}
+                >
+                  <span className="pill-icon">{sec.icon}</span>
+                  <span className="pill-text">{sec.shortLabel}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
 
@@ -452,11 +574,54 @@ const LessonPage = () => {
             remarkPlugins={[remarkGfm, remarkMath]}
             rehypePlugins={[rehypeKatex]}
             components={{
-              table: ({ _node, ...props }) => (
-                <div className="lesson-table-container">
-                  <table {...props} />
-                </div>
-              ),
+              h2: ({ node, children, ...props }) => {
+                const rawText = extractTextFromNode(node) || String(children);
+                const slug = createSlug(rawText);
+                return (
+                  <h2 id={slug} className="lesson-section-h2" {...props}>
+                    {children}
+                  </h2>
+                );
+              },
+              table: ({ node, ...props }) => {
+                const rawText = extractTextFromNode(node) || '';
+                const tableId = rawText.slice(0, 15);
+                return (
+                  <div className="lesson-table-container">
+                    <div className="table-top-indicator flex justify-between items-center">
+                      <span className="table-top-badge flex items-center gap-1.5">
+                        <TableIcon size={13} style={{ color: 'var(--accent-primary)' }} />
+                        <span>📊 重點歸納與公式對照表 (Key Knowledge & Formulas)</span>
+                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="table-scroll-hint hidden sm:inline text-xs text-secondary">
+                          💡 考前必背精華
+                        </span>
+                        <button
+                          onClick={() => handleCopyDiagram(rawText, tableId)}
+                          className="table-copy-btn text-xs flex items-center gap-1"
+                          title="複製表格內容"
+                        >
+                          {copiedCodeId === tableId ? (
+                            <>
+                              <Check size={12} style={{ color: 'var(--accent-success)' }} />
+                              <span>已複製</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy size={12} />
+                              <span>複製表格</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                    <div className="table-scroll-inner">
+                      <table {...props} />
+                    </div>
+                  </div>
+                );
+              },
               td: ({ node, children, ...props }) => {
                 const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
                 if (!isEnglish) return <td {...props}>{children}</td>;

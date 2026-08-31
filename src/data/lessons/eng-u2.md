@@ -44,38 +44,14 @@
   └──────────────────────────────────────────────────────────────┘
 ```
 
-### 📊 規則動詞 4 大變身全覽表
+### 📊 本單元核心考點與重點公式速查表
 
-| 規則種類 | 適用條件 | 變身公式 | 經典動詞範例 | 生活例句 |
-| :--- | :--- | :--- | :--- | :--- |
-| **規則 1** | 一般動詞 | 直接 $+\textcolor{#e91e63}{\textbf{-ed}}$ | $\text{clean} \rightarrow \textcolor{#e91e63}{\textbf{cleaned}}$<br>$\text{watch} \rightarrow \textcolor{#e91e63}{\textbf{watched}}$ | I $\textcolor{#e91e63}{\textbf{watched}}$ TV with my dad yesterday. |
-| **規則 2** | 字尾已有 $\text{e}$ | 只要 $+\textcolor{#2196f3}{\textbf{-d}}$ | $\text{live} \rightarrow \textcolor{#2196f3}{\textbf{lived}}$<br>$\text{dance} \rightarrow \textcolor{#2196f3}{\textbf{danced}}$ | We $\textcolor{#2196f3}{\textbf{danced}}$ happily at the party. |
-| **規則 3** | 單音節・短母音+子音 | 重複字尾 $+\textcolor{#ff9800}{\textbf{-ed}}$ | $\text{stop} \rightarrow \textcolor{#ff9800}{\textbf{stopped}}$<br>$\text{plan} \rightarrow \textcolor{#ff9800}{\textbf{planned}}$ | The bus $\textcolor{#ff9800}{\textbf{stopped}}$ in front of the park. |
-| **規則 4** | 子音 $+\text{y}$ | 去 $\text{y} +\textcolor{#9c27b0}{\textbf{-ied}}$ | $\text{study} \rightarrow \textcolor{#9c27b0}{\textbf{studied}}$<br>$\text{cry} \rightarrow \textcolor{#9c27b0}{\textbf{cried}}$ | She $\textcolor{#9c27b0}{\textbf{studied}}$ hard for the English test. |
-
-> ⚠️ **特別注意**：如果是「母音 + y」（如 play, enjoy），直接加 ed 即可（played, enjoyed），千萬不能去 y 喔！
-
-### 🌟 完整範例
-
-1. **play (玩) ➔ played**
-   *I **played** basketball with my friends after school yesterday.* 
-   (我昨天放學後和朋友一起打籃球了。)
-2. **live (居住) ➔ lived**
-   *My grandparents **lived** in Tainan ten years ago.*
-   (我祖父母十年前住在台南。)
-3. **study (學習) ➔ studied**
-   *Eric **studied** hard for the math test last night, so he got 100!*
-   (艾瑞克昨晚很努力讀數學，所以他考了100分！)
-
-### 💬 情境對話練習
-
-> Emma: What did you do last weekend? (你上個週末做了什麼？)
-
-> Tom: I visited my grandma and we baked some delicious cookies! (我去拜訪了我的奶奶，我們還烤了一些好吃的餅乾！)
-
-> Emma: Wow, that sounds great! I just stayed home and watched a movie. (哇，聽起來好棒！我只有待在家裡看電影。)
-
----
+| 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
+| :--- | :--- | :--- | :--- |
+| $\textcolor{#e91e63}{\textbf{規則動詞過去式 (+ed)}}$ | 1. 一般動詞直接加 `-ed` (*play $\rightarrow$ played*)<br>2. 字尾為 e 加 `-d` (*live $\rightarrow$ lived*)<br>3. 短母音＋單子音：重複字尾加 `-ed` (*stop $\rightarrow$ stopped*)<br>4. 子音＋y：去 y 改 `-ied` (*study $\rightarrow$ studied*) | **「直加 ed、字尾 e 加 d、子音加 y 改 ied、短母單子雙寫加 ed」** | ❌ 誤把 *play* 去 y 改 ied（play 的 y 前面是母音 a，直接加 ed $\rightarrow$ *played*） |
+| $\textcolor{#2196f3}{\textbf{高頻不規則過去式}}$ | go $\rightarrow$ **went**, see $\rightarrow$ **saw**, eat $\rightarrow$ **ate**, have $\rightarrow$ **had**, buy $\rightarrow$ **bought**, do $\rightarrow$ **did**, take $\rightarrow$ **took**, read $\rightarrow$ **read** (發音 /red/) | **「不規則動詞需熟背，時間副詞 yesterday/last 露玄機」** | ⚠️ *read* 的過去式拼法不變但發音變為 /rɛd/；*cut, put, hurt* 三態同形 |
+| $\textcolor{#ff9800}{\textbf{過去式否定句結構}}$ | **主詞 ＋ didn't (did not) ＋ 原型動詞 (V)**<br>例如：*We didn't go to school yesterday.* | **「遇到 didn't 照妖鏡，動詞立刻現原型」** | 💥 **段考頭號殺手**：寫了 *didn't* 之後，後面動詞又寫成過去式（❌ *didn't went* $\rightarrow$ ✅ *didn't go*） |
+| $\textcolor{#2e7d32}{\textbf{過去式疑問句與問答}}$ | Q: **Did ＋ 主詞 ＋ 原型動詞...?**<br>A: *Yes, 主詞 ＋ did.* / *No, 主詞 ＋ didn't.* | **「Did 你開頭問過去，動詞原型答用 did」**<br>Q: *Did you see a movie?* A: *Yes, I did.* | ⚠️ 簡答句只能用代名詞與 did/didn't；詳答句肯定時動詞需改過去式 (*Yes, I saw a movie.*) |
 
 ## 🔑 核心觀念 2：30 個高頻不規則動詞分組大補帖 (Irregular Verbs)
 
@@ -227,6 +203,22 @@
 仔細閱讀以下短文，算算看裡面出現了幾個過去式動詞！
 
 > Last Saturday, my family and I $\textcolor{#4caf50}{\textbf{went}}$ to the beach. The sunshine $\textcolor{#4caf50}{\textbf{was}}$ warm and bright. I $\textcolor{#4caf50}{\textbf{swam}}$ in the cool blue sea, and my little sister $\textcolor{#4caf50}{\textbf{built}}$ a giant sandcastle. Suddenly, we $\textcolor{#4caf50}{\textbf{saw}}$ a tiny red crab crawl across the sand. My sister $\textcolor{#4caf50}{\textbf{tried}}$ to touch it, but it $\textcolor{#4caf50}{\textbf{ran}}$ away into a shell! We all $\textcolor{#4caf50}{\textbf{laughed}}$ happily. Later, we $\textcolor{#4caf50}{\textbf{ate}}$ delicious grilled fish. I $\textcolor{#4caf50}{\textbf{had}}$ a wonderful time. It $\textcolor{#4caf50}{\textbf{was}}$ truly the best weekend ever!
+
+---
+
+## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
+
+### 📝 範例 1：【Past Tense Questions & Negative Sentences】
+- 📌 **Question**: Change the sentence into a past question and a negative sentence: "She went to the library yesterday."
+- 💡 **Key Concept**: In questions and negative sentences with "did / didn't", the main verb returns to **base form (V)**!
+- 📐 **Step-by-step Solution**:
+  - Question: "**Did** she **go** to the library yesterday?"
+  - Negative: "She **didn't go** to the library yesterday."
+- ⚠️ **Common Mistake**: Writing "Didn't went" is incorrect! Always use "didn't go".
+
+### 📝 範例 2：【Common Irregular Verbs in Storytelling】
+- 📌 **Question**: Complete the story with the past forms: "Last Sunday, we (1. see) ______ a movie, (2. eat) ______ popcorn, and (3. have) ______ a great time."
+- 📐 **Step-by-step Solution**: (1) **saw**; (2) **ate**; (3) **had**.
 
 ---
 
