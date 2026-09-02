@@ -37,8 +37,10 @@ const Header = () => {
 
   const navLinks = [
     { path: '/', label: '學習領域', icon: BookOpen },
+    { path: '/shorts', label: '知識短影音', icon: Zap, badge: 'NEW' },
+    { path: '/labs', label: '互動實驗', icon: Sparkles, badge: 'HOT' },
     { path: '/boss-battle', label: '魔王城堡', icon: Swords, badge: 'HOT' },
-    { path: '/memory-game', label: '記憶翻牌', icon: Layers, badge: 'NEW' },
+    { path: '/memory-game', label: '記憶翻牌', icon: Layers },
     { path: '/shop', label: '星光商城', icon: ShoppingBag },
     { path: '/flashcards', label: '速記閃卡', icon: Zap },
     { path: '/mock-exam', label: '計時模擬', icon: Timer },

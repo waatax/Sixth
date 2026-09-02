@@ -278,7 +278,7 @@ export function extractEnglishSentence(fullText) {
   }
 
   // 3. Sentence before Chinese parentheses: e.g. "It's a quarter to eight. (差1刻到8點)"
-  const beforeParenMatch = cleaned.match(/^([A-Za-z0-9\s',.?!:;/-]+?)(?:\s*[\(（][\u4e00-\u9fa5a-zA-Z0-9\s/，。！？、：]*[\)）]|$)/);
+  const beforeParenMatch = cleaned.match(/^([A-Za-z0-9\s',.?!:;/-]+?)(?:\s*[(（][\u4e00-\u9fa5a-zA-Z0-9\s/，。！？、：]*[)）]|$)/);
   if (beforeParenMatch && /[a-zA-Z]{2,}/.test(beforeParenMatch[1])) {
     const candidate = beforeParenMatch[1].trim();
     if (candidate.length >= 2 && /[a-zA-Z]/.test(candidate)) {

@@ -185,15 +185,6 @@ const LessonPage = () => {
     setTimeout(() => setCopiedCodeId(null), 2000);
   };
 
-  if (!currentUnit) {
-    return (
-      <div className="container py-12 text-center">
-        <h2 className="h2">找不到此單元資料</h2>
-        <button className="btn-primary mt-4" onClick={() => navigate('/')}>返回八大學習領域</button>
-      </div>
-    );
-  }
-
   // Extract all H2 sections from markdown content
   const sections = useMemo(() => {
     if (!content) return [];
@@ -254,6 +245,15 @@ const LessonPage = () => {
   // Optimization 6: Read time estimation
   const wordCount = content.length || 1000;
   const readTimeMin = Math.max(1, Math.ceil(wordCount / 400));
+
+  if (!currentUnit) {
+    return (
+      <div className="container py-12 text-center">
+        <h2 className="h2">找不到此單元資料</h2>
+        <button className="btn-primary mt-4" onClick={() => navigate('/')}>返回八大學習領域</button>
+      </div>
+    );
+  }
 
   return (
     <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''}`}>

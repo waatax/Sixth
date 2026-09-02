@@ -24,12 +24,14 @@ import GuidedStartWizard from '../components/common/GuidedStartWizard';
 import DailyQuestCard from '../components/common/DailyQuestCard';
 import DailyLuckyWheel from '../components/gamification/DailyLuckyWheel';
 import PetSanctuaryModal from '../components/gamification/PetSanctuaryModal';
+import GachaLootModal from '../components/gamification/GachaLootModal';
 import { useGamification } from '../context/GamificationContext';
 
 const HomePage = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [isWheelOpen, setIsWheelOpen] = useState(false);
   const [isSanctuaryOpen, setIsSanctuaryOpen] = useState(false);
+  const [isGachaOpen, setIsGachaOpen] = useState(false);
 
   const { 
     coins, 
@@ -92,34 +94,77 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Quick Lucky Wheel & Pet Sanctuary Action Box */}
-          <div className="flex flex-col gap-2.5 sm:items-end w-full sm:w-auto">
-            <button
-              onClick={() => setIsWheelOpen(true)}
-              className="btn-primary flex items-center justify-center gap-2"
+          {/* Quick Lucky Wheel, Gacha, Shorts & Pet Sanctuary Action Box */}
+          <div className="flex flex-wrap gap-2 sm:justify-end w-full sm:w-auto">
+            <Link
+              to="/shorts"
+              className="btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
               style={{
-                padding: '10px 20px',
+                padding: '9px 16px',
                 borderRadius: 'var(--radius-lg)',
-                backgroundColor: 'var(--accent-warning)',
-                borderColor: 'var(--accent-warning)',
-                color: '#000000',
-                fontWeight: 800,
-                boxShadow: '0 4px 14px rgba(245, 158, 11, 0.3)'
+                backgroundColor: '#ec4899',
+                borderColor: '#ec4899',
+                color: '#ffffff',
+                boxShadow: '0 4px 14px rgba(236, 72, 153, 0.35)',
+                textDecoration: 'none'
               }}
             >
-              <span>🎡 每日星光幸運轉盤 (免費領獎)</span>
+              <span>📱 知識短影音 (Reels)</span>
+            </Link>
+
+            <Link
+              to="/labs"
+              className="btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
+              style={{
+                padding: '9px 16px',
+                borderRadius: 'var(--radius-lg)',
+                backgroundColor: '#10b981',
+                borderColor: '#10b981',
+                color: '#ffffff',
+                boxShadow: '0 4px 14px rgba(16, 185, 129, 0.35)',
+                textDecoration: 'none'
+              }}
+            >
+              <span>🔬 互動實驗室 (Labs)</span>
+            </Link>
+
+            <button
+              onClick={() => setIsGachaOpen(true)}
+              className="btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
+              style={{
+                padding: '9px 16px',
+                borderRadius: 'var(--radius-lg)',
+                backgroundColor: '#f59e0b',
+                borderColor: '#f59e0b',
+                color: '#000000',
+                boxShadow: '0 4px 14px rgba(245, 158, 11, 0.35)'
+              }}
+            >
+              <span>🎁 神獸轉蛋機</span>
             </button>
 
             <button
-              onClick={() => setIsSanctuaryOpen(true)}
-              className="btn-outline flex items-center justify-center gap-2 text-xs font-bold"
+              onClick={() => setIsWheelOpen(true)}
+              className="btn-outline flex items-center justify-center gap-1.5 text-xs font-bold"
               style={{
-                padding: '8px 16px',
+                padding: '8px 14px',
                 borderRadius: 'var(--radius-lg)',
                 backgroundColor: 'var(--bg-secondary)'
               }}
             >
-              <span>{currentEvolution?.emoji || '🦊'} 守護神獸殿堂 ({activePetTemplate?.name.split(' ')[0]} Lv.{currentPetStats?.level})</span>
+              <span>🎡 幸運轉盤</span>
+            </button>
+
+            <button
+              onClick={() => setIsSanctuaryOpen(true)}
+              className="btn-outline flex items-center justify-center gap-1.5 text-xs font-bold"
+              style={{
+                padding: '8px 14px',
+                borderRadius: 'var(--radius-lg)',
+                backgroundColor: 'var(--bg-secondary)'
+              }}
+            >
+              <span>{currentEvolution?.emoji || '🦊'} 守護神獸 (Lv.{currentPetStats?.level})</span>
             </button>
           </div>
         </div>
@@ -128,7 +173,7 @@ const HomePage = () => {
       {/* ☀️ Daily 3-Minute Micro-Quests Card */}
       <DailyQuestCard />
 
-      {/* 🏰 Gamified Arena & Tools Showcase Grid (魔王城堡、記憶翻牌、星光商城) */}
+      {/* 🏰 Gamified Arena & Tools Showcase Grid (短影音、實驗室、魔王城堡、記憶翻牌、星光商城、轉蛋) */}
       <section>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
@@ -141,17 +186,18 @@ const HomePage = () => {
 
         <div
           className="grid gap-3"
-          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}
+          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))' }}
         >
+          {/* Card 1: Shorts Reels */}
           <Link
-            to="/boss-battle"
+            to="/shorts"
             className="card card-hoverable flex items-start gap-3.5 p-4"
             style={{
               borderRadius: 'var(--radius-xl)',
               backgroundColor: 'var(--bg-secondary)',
               border: '1.5px solid var(--border-light)',
               borderLeft: '5px solid #ec4899',
-              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(236, 72, 153, 0.05) 100%)',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(236, 72, 153, 0.08) 100%)',
               textDecoration: 'none'
             }}
           >
@@ -167,19 +213,96 @@ const HomePage = () => {
                 flexShrink: 0
               }}
             >
+              <Zap size={24} />
+            </div>
+            <div>
+              <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
+                <span>知識短影音</span>
+                <span className="badge badge-error text-[10px] font-bold">HOT</span>
+              </div>
+              <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.5 }}>
+                TikTok 直式全螢幕！30秒微學習+突擊快答
+              </div>
+            </div>
+          </Link>
+
+          {/* Card 2: Interactive Labs */}
+          <Link
+            to="/labs"
+            className="card card-hoverable flex items-start gap-3.5 p-4"
+            style={{
+              borderRadius: 'var(--radius-xl)',
+              backgroundColor: 'var(--bg-secondary)',
+              border: '1.5px solid var(--border-light)',
+              borderLeft: '5px solid #10b981',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(16, 185, 129, 0.08) 100%)',
+              textDecoration: 'none'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                color: '#10b981',
+                padding: '12px',
+                borderRadius: 'var(--radius-lg)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0
+              }}
+            >
+              <Sparkles size={24} />
+            </div>
+            <div>
+              <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
+                <span>互動探究實驗</span>
+                <span className="badge badge-success text-[10px] font-bold">PhET</span>
+              </div>
+              <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.5 }}>
+                圓面積切割、槓桿天平、酸鹼變色動態模擬
+              </div>
+            </div>
+          </Link>
+
+          {/* Card 3: Boss Castle */}
+          <Link
+            to="/boss-battle"
+            className="card card-hoverable flex items-start gap-3.5 p-4"
+            style={{
+              borderRadius: 'var(--radius-xl)',
+              backgroundColor: 'var(--bg-secondary)',
+              border: '1.5px solid var(--border-light)',
+              borderLeft: '5px solid #8b5cf6',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(139, 92, 246, 0.08) 100%)',
+              textDecoration: 'none'
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: 'rgba(139, 92, 246, 0.15)',
+                color: '#8b5cf6',
+                padding: '12px',
+                borderRadius: 'var(--radius-lg)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0
+              }}
+            >
               <Swords size={24} />
             </div>
             <div>
               <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
                 <span>魔王城堡挑戰</span>
-                <span className="badge badge-error text-[10px] font-bold">HOT</span>
+                <span className="badge text-[10px] font-bold text-purple-600 bg-purple-100">RPG</span>
               </div>
               <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.5 }}>
-                極速答題魔法雷擊！消滅四大守護魔王奪取水晶
+                極速答題魔法雷擊！消滅四大守護魔王奪水晶
               </div>
             </div>
           </Link>
 
+          {/* Card 4: Memory Game */}
           <Link
             to="/memory-game"
             className="card card-hoverable flex items-start gap-3.5 p-4"
@@ -188,7 +311,7 @@ const HomePage = () => {
               backgroundColor: 'var(--bg-secondary)',
               border: '1.5px solid var(--border-light)',
               borderLeft: '5px solid #3b82f6',
-              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(59, 130, 246, 0.05) 100%)',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(59, 130, 246, 0.08) 100%)',
               textDecoration: 'none'
             }}
           >
@@ -217,6 +340,7 @@ const HomePage = () => {
             </div>
           </Link>
 
+          {/* Card 5: Shop */}
           <Link
             to="/shop"
             className="card card-hoverable flex items-start gap-3.5 p-4"
@@ -225,7 +349,7 @@ const HomePage = () => {
               backgroundColor: 'var(--bg-secondary)',
               border: '1.5px solid var(--border-light)',
               borderLeft: '5px solid #f59e0b',
-              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(245, 158, 11, 0.05) 100%)',
+              background: 'linear-gradient(135deg, var(--bg-secondary) 0%, rgba(245, 158, 11, 0.08) 100%)',
               textDecoration: 'none'
             }}
           >
@@ -628,6 +752,12 @@ const HomePage = () => {
       <PetSanctuaryModal
         isOpen={isSanctuaryOpen}
         onClose={() => setIsSanctuaryOpen(false)}
+      />
+
+      {/* Gacha Loot Modal */}
+      <GachaLootModal
+        isOpen={isGachaOpen}
+        onClose={() => setIsGachaOpen(false)}
       />
     </div>
   );

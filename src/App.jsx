@@ -14,6 +14,8 @@ import GeptPage from './pages/GeptPage';
 import BossBattlePage from './pages/BossBattlePage';
 import MemoryGamePage from './pages/MemoryGamePage';
 import ShopPage from './pages/ShopPage';
+import ShortsReelsPage from './pages/ShortsReelsPage';
+import InteractiveLabsPage from './pages/InteractiveLabsPage';
 import { GamificationProvider } from './context/GamificationContext';
 import PetCompanionWidget from './components/gamification/PetCompanionWidget';
 import './App.css';
@@ -37,6 +39,8 @@ function App() {
           <Route path="boss-battle" element={<BossBattlePage />} />
           <Route path="memory-game" element={<MemoryGamePage />} />
           <Route path="shop" element={<ShopPage />} />
+          <Route path="shorts" element={<ShortsReelsPage />} />
+          <Route path="labs" element={<InteractiveLabsPage />} />
         </Route>
       </Routes>
       <PetCompanionWidget />
