@@ -15,6 +15,8 @@ const PrepPage = () => {
   const [quizFinished, setQuizFinished] = useState(false);
   const [quizAnswers, setQuizAnswers] = useState({});
   const [currentQuizIdx, setCurrentQuizIdx] = useState(0);
+  const [openExamples, setOpenExamples] = useState({});
+  const [copiedFormulaId, setCopiedFormulaId] = useState(null);
 
   const startQuiz = () => {
     setQuizAnswers({});
@@ -80,8 +82,22 @@ const PrepPage = () => {
           {/* Formula Box if any */}
           {item.formulaBox && (
             <div className="p-4 rounded-xl mb-4" style={{ backgroundColor: `${accentColor}10`, border: `1px solid ${accentColor}30` }}>
-              <div className="font-bold text-xs mb-2 flex items-center gap-1.5" style={{ color: accentColor }}>
-                <Sparkles size={14} /> {item.formulaBox.title}
+              <div className="flex justify-between items-center mb-2">
+                <div className="font-bold text-xs flex items-center gap-1.5" style={{ color: accentColor }}>
+                  <Sparkles size={14} /> {item.formulaBox.title}
+                </div>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(item.formulaBox.lines.join('\n'));
+                    setCopiedFormulaId(item.id);
+                    playSound('click');
+                    setTimeout(() => setCopiedFormulaId(null), 2000);
+                  }}
+                  className="btn-outline text-[11px] py-0.5 px-2 rounded flex items-center gap-1"
+                  style={{ borderColor: `${accentColor}40`, color: accentColor }}
+                >
+                  {copiedFormulaId === item.id ? <span>已複製</span> : <span>複製公式</span>}
+                </button>
               </div>
               <ul className="space-y-1 text-xs text-secondary font-mono">
                 {item.formulaBox.lines.map((line, idx) => (
@@ -91,19 +107,45 @@ const PrepPage = () => {
             </div>
           )}
 
-          {/* Example if any */}
+          {/* Example with Interactive Step-by-Step Toggle */}
           {item.example && (
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700">
-              <div className="font-bold text-xs text-primary mb-2 flex items-center gap-1.5">
-                <Lightbulb size={14} className="text-amber-500" /> {item.example.question}
+              <div className="flex justify-between items-start gap-2">
+                <div className="font-bold text-xs text-primary mb-2 flex items-center gap-1.5 flex-1">
+                  <Lightbulb size={14} className="text-amber-500 flex-shrink-0" />
+                  <span>{item.example.question}</span>
+                </div>
+                <button
+                  onClick={() => {
+                    setOpenExamples(prev => ({ ...prev, [item.id]: !prev[item.id] }));
+                    playSound('click');
+                  }}
+                  className="btn-outline text-[11px] py-0.5 px-2.5 rounded-full font-bold flex items-center gap-1 flex-shrink-0"
+                  style={{
+                    borderColor: openExamples[item.id] ? 'var(--accent-success)' : 'var(--accent-primary)',
+                    color: openExamples[item.id] ? 'var(--accent-success)' : 'var(--accent-primary)'
+                  }}
+                >
+                  {openExamples[item.id] ? '收合解析' : '💡 展開名師步驟'}
+                </button>
               </div>
-              <div className="space-y-1 text-xs text-secondary font-mono">
-                {item.example.steps.map((step, idx) => (
-                  <div key={idx} className={idx === item.example.steps.length - 1 ? 'font-bold text-emerald-600 dark:text-emerald-400 mt-1' : ''}>
-                    {step}
+
+              {openExamples[item.id] ? (
+                <div className="space-y-1.5 text-xs text-secondary font-mono mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-700 animate-fade-in">
+                  <div className="text-[11px] font-bold text-amber-600 dark:text-amber-400 mb-1">
+                    解題推導步驟：
                   </div>
-                ))}
-              </div>
+                  {item.example.steps.map((step, idx) => (
+                    <div key={idx} className={idx === item.example.steps.length - 1 ? 'font-bold text-emerald-600 dark:text-emerald-400 mt-1' : ''}>
+                      {step}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-[11px] text-tertiary mt-1">
+                  先嘗試自己動筆推導，完成後點擊右上角「展開名師步驟」核對！
+                </div>
+              )}
             </div>
           )}
         </div>

@@ -29,11 +29,26 @@ import {
   Square,
   ListChecks,
   Table as TableIcon,
-  Zap
+  Zap,
+  ZoomIn,
+  Maximize2,
+  Minimize2,
+  CheckSquare,
+  PenTool,
+  HelpCircle,
+  RotateCcw
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
 import { speechEngine, extractTextFromNode, extractEnglishSentence } from '../utils/speechHelper';
+import { useTheme } from '../context/ThemeContext';
+import { useGamification } from '../context/GamificationContext';
+import { playSound } from '../utils/soundEffects';
+import LessonLightboxModal from '../components/lesson/LessonLightboxModal';
+import LessonNotebookDrawer from '../components/lesson/LessonNotebookDrawer';
+import LessonQuickFlashcardsModal from '../components/lesson/LessonQuickFlashcardsModal';
+import InteractiveMisconceptionCard from '../components/lesson/InteractiveMisconceptionCard';
+import InteractiveAnswerToggle from '../components/lesson/InteractiveAnswerToggle';
 import './LessonPage.css';
 
 // Vite dynamic import for raw markdown files
@@ -51,6 +66,9 @@ const createSlug = (text) => {
 const LessonPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
+  const { fontSize, increaseFontSize, decreaseFontSize, focusMode, setFocusMode } = useTheme();
+  const { addCoins, addXp } = useGamification();
+
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -62,6 +80,25 @@ const LessonPage = () => {
   const [selectedTextBubble, setSelectedTextBubble] = useState(null);
   const [speechRate, setSpeechRate] = useState(speechEngine.rate || 1.0);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  // New Interactive Modals & Features State
+  const [lightboxImage, setLightboxImage] = useState(null);
+  const [isNotebookOpen, setIsNotebookOpen] = useState(false);
+  const [isFlashcardsOpen, setIsFlashcardsOpen] = useState(false);
+  const [hasBookmarked, setHasBookmarked] = useState(false);
+
+  // Concept Checklist state persisted in localStorage
+  const [masteredConcepts, setMasteredConcepts] = useState([]);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(`sixth_mastered_concepts_${unitId}`);
+      setMasteredConcepts(saved ? JSON.parse(saved) : []);
+      setHasBookmarked(!!localStorage.getItem(`bookmark_${unitId}`));
+    } catch (e) {
+      setMasteredConcepts([]);
+    }
+  }, [unitId]);
 
   // Subscribe to speechEngine state
   useEffect(() => {
@@ -77,7 +114,7 @@ const LessonPage = () => {
     const handleMouseUp = () => {
       const selection = window.getSelection();
       const text = selection?.toString()?.trim();
-      if (text && text.length >= 2 && /[a-zA-Z]/.test(text)) {
+      if (text && text.length >= 2) {
         try {
           const range = selection.getRangeAt(0);
           const rect = range.getBoundingClientRect();
@@ -128,14 +165,12 @@ const LessonPage = () => {
         const progress = Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100));
         setScrollProgress(progress);
         
-        // Optimization 3: Show Back to Top
         if (window.scrollY > 400) {
           setShowBackToTop(true);
         } else {
           setShowBackToTop(false);
         }
 
-        // Optimization 2: Confetti at bottom
         if (progress >= 99 && !hasCelebrated) {
           setHasCelebrated(true);
           confetti({
@@ -176,13 +211,66 @@ const LessonPage = () => {
   const handleShare = () => {
     navigator.clipboard.writeText(window.location.href);
     setCopied(true);
+    playSound('click');
     setTimeout(() => setCopied(false), 2000);
   };
 
   const handleCopyDiagram = (codeText, id) => {
     navigator.clipboard.writeText(codeText);
     setCopiedCodeId(id);
+    playSound('click');
     setTimeout(() => setCopiedCodeId(null), 2000);
+  };
+
+  const handleToggleBookmark = () => {
+    const key = `bookmark_${unitId}`;
+    if (hasBookmarked) {
+      localStorage.removeItem(key);
+      setHasBookmarked(false);
+      playSound('click');
+    } else {
+      localStorage.setItem(key, 'true');
+      setHasBookmarked(true);
+      playSound('coin');
+      addCoins(5);
+    }
+  };
+
+  // Toggle Concept Mastery Checklist
+  const toggleConceptMastery = (concept) => {
+    setMasteredConcepts(prev => {
+      const next = prev.includes(concept) 
+        ? prev.filter(c => c !== concept)
+        : [...prev, concept];
+      try {
+        localStorage.setItem(`sixth_mastered_concepts_${unitId}`, JSON.stringify(next));
+      } catch (e) {}
+
+      if (!prev.includes(concept)) {
+        playSound('coin');
+        addCoins(5);
+        addXp(15, 'concept_check');
+        if (currentUnit.keyConcepts && next.length === currentUnit.keyConcepts.length) {
+          playSound('levelup');
+          confetti({ particleCount: 70, spread: 60, origin: { y: 0.7 } });
+        }
+      }
+      return next;
+    });
+  };
+
+  // Universal TTS Narration Handler
+  const toggleUniversalSpeech = () => {
+    if (isPlaying) {
+      speechEngine.stop();
+    } else {
+      const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
+      const lang = isEnglish ? 'en-US' : 'zh-TW';
+      // Speak unit title and key concepts
+      const conceptsText = currentUnit.keyConcepts ? currentUnit.keyConcepts.join('，') : '';
+      const textToSpeak = `${currentUnit.title}。本單元核心考點：${conceptsText}。`;
+      speechEngine.speak(textToSpeak, { lang });
+    }
   };
 
   // Extract all H2 sections from markdown content
@@ -207,7 +295,7 @@ const LessonPage = () => {
         } else if (title.includes('重點') || title.includes('速查') || title.includes('整理') || title.includes('表格') || title.includes('公式')) {
           icon = '📊'; shortLabel = '重點速查表';
         } else if (title.includes('迷思')) {
-          icon = '🧠'; shortLabel = '迷思破解';
+          icon = '🧠'; shortLabel = '迷思大破解';
         } else if (title.includes('練習') || title.includes('測驗') || title.includes('隨堂')) {
           icon = '✏️'; shortLabel = '隨堂測驗';
         } else if (title.includes('素養') || title.includes('前瞻') || title.includes('你知道嗎') || title.includes('新知')) {
@@ -242,9 +330,9 @@ const LessonPage = () => {
     }
   };
 
-  // Optimization 6: Read time estimation
   const wordCount = content.length || 1000;
   const readTimeMin = Math.max(1, Math.ceil(wordCount / 400));
+  const isEnglishSubject = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
 
   if (!currentUnit) {
     return (
@@ -256,7 +344,7 @@ const LessonPage = () => {
   }
 
   return (
-    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''}`}>
+    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''}`}>
       {/* Top Reading Scroll Progress Bar */}
       <div
         className="reading-progress-bar"
@@ -264,7 +352,32 @@ const LessonPage = () => {
         aria-hidden="true"
       />
 
-      {/* Optimization 3: Back to Top Button */}
+      {/* Lightbox Modal */}
+      <LessonLightboxModal
+        isOpen={!!lightboxImage}
+        imageSrc={lightboxImage?.src}
+        imageAlt={lightboxImage?.alt}
+        onClose={() => setLightboxImage(null)}
+      />
+
+      {/* Notebook Drawer */}
+      <LessonNotebookDrawer
+        isOpen={isNotebookOpen}
+        onClose={() => setIsNotebookOpen(false)}
+        unitId={unitId}
+        unitTitle={currentUnit.title}
+        subjectName={currentSubject?.name || ''}
+      />
+
+      {/* Quick Flashcards Modal */}
+      <LessonQuickFlashcardsModal
+        isOpen={isFlashcardsOpen}
+        onClose={() => setIsFlashcardsOpen(false)}
+        unit={currentUnit}
+        subjectName={currentSubject?.name || ''}
+      />
+
+      {/* Back to Top Button */}
       {showBackToTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -305,13 +418,13 @@ const LessonPage = () => {
         }}
       >
         <button 
-          className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors" 
+          className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors font-bold" 
           onClick={() => navigate(-1)}
         >
           <ArrowLeft size={16} /> 返回單元列表
         </button>
 
-        {/* Center Badges */}
+        {/* Center Badges & Quick Action Hub */}
         <div className="flex items-center gap-2 flex-wrap">
           {currentSubject && (
             <span
@@ -325,10 +438,12 @@ const LessonPage = () => {
               {currentSubject.name}
             </span>
           )}
+
           <span className="badge badge-accent flex items-center gap-1">
             <Timer size={13} />
-            預估閱讀 {readTimeMin} 分鐘
+            約 {readTimeMin} 分鐘
           </span>
+
           <button 
             className="badge cursor-pointer hover:opacity-90 transition-all flex items-center gap-1"
             style={{ 
@@ -341,57 +456,109 @@ const LessonPage = () => {
             title="一鍵直達本單元核心重點與公式速查表格"
           >
             <Zap size={13} style={{ fill: '#d97706' }} />
-            <span>📊 考前速查直達</span>
+            <span>📊 考前速查</span>
           </button>
-          <button 
-            className="badge badge-success cursor-pointer hover:opacity-80 transition-opacity"
-            onClick={() => {
-              const key = `bookmark_${unitId}`;
-              if (localStorage.getItem(key)) {
-                localStorage.removeItem(key);
-                alert('已取消收藏！');
-              } else {
-                localStorage.setItem(key, 'true');
-                alert('🎉 單元已加入收藏！');
-              }
+
+          {/* Quick Flashcards Button */}
+          <button
+            onClick={() => setIsFlashcardsOpen(true)}
+            className="badge cursor-pointer flex items-center gap-1"
+            style={{
+              backgroundColor: 'var(--accent-purple-soft)',
+              color: 'var(--accent-purple)',
+              border: '1px solid rgba(147, 51, 234, 0.3)',
+              fontWeight: 700
             }}
+            title="開啟考前速記翻牌卡"
           >
-            ⭐ 收藏重點
+            <span>🃏 速記卡</span>
+          </button>
+
+          {/* Notebook Drawer Button */}
+          <button
+            onClick={() => setIsNotebookOpen(true)}
+            className="badge cursor-pointer flex items-center gap-1"
+            style={{
+              backgroundColor: 'var(--accent-soft)',
+              color: 'var(--accent-primary)',
+              border: '1px solid rgba(37, 99, 235, 0.3)',
+              fontWeight: 700
+            }}
+            title="開啟隨堂個人便利貼筆記本"
+          >
+            <PenTool size={12} />
+            <span>📝 筆記</span>
+          </button>
+
+          {/* Bookmark Button */}
+          <button 
+            className={`badge cursor-pointer transition-all flex items-center gap-1 ${hasBookmarked ? 'badge-success' : 'badge-secondary'}`}
+            onClick={handleToggleBookmark}
+            title={hasBookmarked ? '點擊取消收藏' : '點擊收藏本單元重點'}
+          >
+            <Bookmark size={12} style={{ fill: hasBookmarked ? 'currentColor' : 'none' }} />
+            <span>{hasBookmarked ? '已收藏' : '收藏'}</span>
           </button>
         </div>
 
-        {/* Right Actions: Highlight Mode & Share */}
-        <div className="flex items-center gap-2">
+        {/* Right Actions: Font Size, Focus Mode, Highlight Mode & Share */}
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {/* Font scale buttons */}
+          <div className="flex items-center border border-slate-200 dark:border-slate-700 rounded-lg p-0.5 bg-tertiary">
+            <button
+              onClick={decreaseFontSize}
+              className="px-2 py-0.5 text-xs font-bold text-secondary hover:text-primary"
+              title="縮小字級"
+            >
+              A-
+            </button>
+            <span className="text-[10px] font-mono text-tertiary px-1">字級</span>
+            <button
+              onClick={increaseFontSize}
+              className="px-2 py-0.5 text-xs font-bold text-secondary hover:text-primary"
+              title="放大字級"
+            >
+              A+
+            </button>
+          </div>
+
+          {/* Focus mode toggle */}
+          <button
+            onClick={() => setFocusMode(!focusMode)}
+            className={`btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1 ${focusMode ? 'bg-blue-50 text-blue-600 border-blue-300' : ''}`}
+            title={focusMode ? '結束專注模式' : '開啟沉浸專注閱讀模式'}
+          >
+            {focusMode ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
+            <span className="hidden sm:inline">{focusMode ? '標準' : '專注'}</span>
+          </button>
+
           <button
             onClick={() => setHighlightMode(!highlightMode)}
             className={`btn-outline ${highlightMode ? 'active-highlight-btn' : ''}`}
             style={{ 
-              padding: '6px 12px', 
-              minHeight: '34px', 
-              fontSize: '0.8rem',
+              padding: '5px 10px', 
+              fontSize: '0.78rem',
               borderColor: highlightMode ? 'var(--accent-warning)' : 'var(--border-light)',
               backgroundColor: highlightMode ? 'var(--accent-warning-soft)' : 'transparent',
               color: highlightMode ? 'var(--accent-warning-text)' : 'var(--text-secondary)'
             }}
             title="切換關鍵公式與重點色彩高亮"
           >
-            <Lightbulb size={14} style={{ color: highlightMode ? '#f59e0b' : 'inherit' }} />
-            <span>{highlightMode ? '重點螢光筆：已開啟' : '重點螢光筆：關閉'}</span>
+            <Lightbulb size={13} style={{ color: highlightMode ? '#f59e0b' : 'inherit' }} />
+            <span className="hidden sm:inline">{highlightMode ? '螢光筆' : '螢光筆關'}</span>
           </button>
 
           <button
             onClick={handleShare}
-            className="btn-outline"
-            style={{ padding: '6px 12px', minHeight: '34px', fontSize: '0.8rem' }}
+            className="btn-outline p-1.5 rounded-lg text-xs"
             title="複製此單元連結分享"
           >
             {copied ? <Check size={14} style={{ color: 'var(--accent-success)' }} /> : <Share2 size={14} />}
-            <span>{copied ? '已複製' : '分享單元'}</span>
           </button>
         </div>
       </div>
 
-      {/* 🎯 30-Second Scaffolding Quick Concepts Card */}
+      {/* 🎯 30-Second Scaffolding Quick Concepts Card with Interactive Checklist */}
       {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
         <div 
           className="card mb-3 overflow-hidden" 
@@ -414,11 +581,13 @@ const LessonPage = () => {
           >
             <div className="flex items-center gap-2 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
               <Smile size={16} style={{ color: 'var(--accent-primary)' }} />
-              <span>💡 30 秒安心導讀・核心考點精華速覽</span>
+              <span>💡 30 秒安心導讀・核心考點自評打卡</span>
               <span className="badge badge-success" style={{ fontSize: '0.7rem' }}>零基礎必看</span>
             </div>
-            <div className="flex items-center gap-1 text-xs text-secondary">
-              <span>{quickSummaryOpen ? '收合' : '展開'}</span>
+            <div className="flex items-center gap-2 text-xs text-secondary">
+              <span className="font-bold text-emerald-600 dark:text-emerald-400">
+                已掌握 {masteredConcepts.length} / {currentUnit.keyConcepts.length}
+              </span>
               {quickSummaryOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </div>
           </div>
@@ -426,26 +595,24 @@ const LessonPage = () => {
           {quickSummaryOpen && (
             <div style={{ padding: '16px 20px', background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(16, 185, 129, 0.03) 100%)' }}>
               <p className="text-xs text-secondary mb-2.5">
-                只要掌握這幾個核心關鍵詞，段考題就能迎刃而解！點選下方圖解教學即可深入閱讀：
+                點擊下方考點即可<strong>打卡標記掌握</strong>！搞懂這幾個關鍵詞，段考題就能迎刃而解：
               </p>
               <div className="flex flex-wrap gap-2">
-                {currentUnit.keyConcepts.map((concept, idx) => (
-                  <span 
-                    key={idx} 
-                    className="badge" 
-                    style={{ 
-                      backgroundColor: 'var(--bg-secondary)', 
-                      border: '1px solid var(--border-strong)',
-                      color: 'var(--text-primary)',
-                      fontWeight: 700,
-                      fontSize: '0.82rem',
-                      padding: '5px 12px',
-                      boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
-                    }}
-                  >
-                    ⭐ {concept}
-                  </span>
-                ))}
+                {currentUnit.keyConcepts.map((concept, idx) => {
+                  const isMastered = masteredConcepts.includes(concept);
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => toggleConceptMastery(concept)}
+                      className={`concept-checklist-pill ${isMastered ? 'mastered' : ''}`}
+                      title={isMastered ? '已掌握此考點 (點擊取消)' : '點擊標記掌握 (+15 XP, +5 🪙)'}
+                    >
+                      {isMastered ? <CheckCircle2 size={14} style={{ color: 'var(--accent-success)' }} /> : <span>⭐</span>}
+                      <span>{concept}</span>
+                      {isMastered && <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400">已打卡</span>}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -490,10 +657,9 @@ const LessonPage = () => {
         </div>
       )}
 
-      {/* 🎧 English Audio Studio for English Lessons */}
-      {(currentSubject?.id === 'english' || unitId.startsWith('eng-')) && (
+      {/* 🎧 Universal Speech / Audio Companion Bar */}
+      {isEnglishSubject ? (
         <>
-          {/* Top Sticky Quick Speed Bar */}
           <div className="english-speed-sticky-bar animate-fade-in">
             <div className="flex items-center gap-3 flex-wrap">
               <span className="speed-badge-pill">
@@ -534,9 +700,47 @@ const LessonPage = () => {
               </span>
             </div>
           </div>
-
           <EnglishAudioStudio unitId={unitId} />
         </>
+      ) : (
+        /* Universal Companion for Math, Science, Mandarin, Social, Art, PE */
+        <div 
+          className="card mb-4 p-3 flex items-center justify-between flex-wrap gap-2 animate-fade-in"
+          style={{ 
+            backgroundColor: 'var(--bg-secondary)', 
+            border: '1.5px solid var(--border-light)',
+            borderRadius: 'var(--radius-lg)'
+          }}
+        >
+          <div className="flex items-center gap-2">
+            <span className="badge badge-accent flex items-center gap-1 font-bold text-xs">
+              <Headphones size={14} />
+              <span>🎙️ 全科學力語音伴讀</span>
+            </span>
+            <span className="text-xs text-secondary hidden md:inline">
+              支援臺灣國語發音，點擊右側即可聆聽本課導讀，劃選任一段落亦可發音
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleUniversalSpeech}
+              className="btn-primary text-xs py-1.5 px-3 flex items-center gap-1.5 rounded-lg font-bold"
+            >
+              {isPlaying ? (
+                <>
+                  <Square size={12} style={{ fill: 'white' }} />
+                  <span>停止朗讀</span>
+                </>
+              ) : (
+                <>
+                  <Volume2 size={14} />
+                  <span>🔊 語音導讀本課核心</span>
+                </>
+              )}
+            </button>
+          </div>
+        </div>
       )}
 
       {/* Main Core Generated Lesson Content */}
@@ -556,7 +760,7 @@ const LessonPage = () => {
             border: '1.5px solid var(--border-light)'
           }}
         >
-          {(currentSubject?.id === 'english' || unitId.startsWith('eng-')) && (
+          {isEnglishSubject && (
             <div 
               className="flex items-center gap-2 mb-4 p-3 rounded-lg text-xs font-semibold"
               style={{
@@ -578,9 +782,120 @@ const LessonPage = () => {
                 const rawText = extractTextFromNode(node) || String(children);
                 const slug = createSlug(rawText);
                 return (
-                  <h2 id={slug} className="lesson-section-h2" {...props}>
+                  <div className="flex items-center justify-between gap-2 lesson-section-h2-container">
+                    <h2 id={slug} className="lesson-section-h2" style={{ flex: 1 }} {...props}>
+                      {children}
+                    </h2>
+                    <button
+                      onClick={() => {
+                        const lang = isEnglishSubject ? 'en-US' : 'zh-TW';
+                        speechEngine.speak(rawText, { lang });
+                      }}
+                      className="btn-outline flex items-center gap-1 text-xs py-1 px-2.5 rounded-full"
+                      style={{ fontSize: '0.75rem', borderColor: 'var(--border-strong)', flexShrink: 0 }}
+                      title={`朗讀此章節標題：${rawText}`}
+                    >
+                      <Volume2 size={13} style={{ color: 'var(--accent-primary)' }} />
+                      <span className="hidden sm:inline">伴讀</span>
+                    </button>
+                  </div>
+                );
+              },
+              img: ({ node, src, alt, ...props }) => {
+                let normalizedSrc = src || '';
+                if (normalizedSrc.startsWith('./images/')) {
+                  normalizedSrc = normalizedSrc.replace('./images/', '/images/');
+                } else if (normalizedSrc.startsWith('images/')) {
+                  normalizedSrc = '/' + normalizedSrc;
+                }
+
+                return (
+                  <figure className="lesson-visual-figure">
+                    <div 
+                      className="lesson-visual-img-container"
+                      onClick={() => setLightboxImage({ src: normalizedSrc, alt: alt || '圖解' })}
+                      title="點擊開啟高清放大燈箱檢視"
+                    >
+                      <img 
+                        src={normalizedSrc} 
+                        alt={alt || '教學圖解'} 
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          const fallbackEl = e.target.nextSibling;
+                          if (fallbackEl) fallbackEl.style.display = 'flex';
+                        }}
+                        {...props} 
+                      />
+                      <div className="lesson-img-fallback-card" style={{ display: 'none' }}>
+                        <div style={{ fontSize: '2.5rem' }}>📐 🎨</div>
+                        <div className="font-bold text-xs" style={{ color: 'var(--accent-primary)' }}>
+                          視覺核心概念圖解：{alt || '知識結構'}
+                        </div>
+                        <div className="text-[11px] text-secondary">
+                          點擊開啟高清檢視
+                        </div>
+                      </div>
+                      <div className="lesson-visual-zoom-badge">
+                        <ZoomIn size={13} />
+                        <span>點擊放大檢視</span>
+                      </div>
+                    </div>
+                    {alt && (
+                      <figcaption className="lesson-visual-figcaption">
+                        <ImageIcon size={14} style={{ color: 'var(--accent-primary)' }} />
+                        <span>{alt}</span>
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              },
+              p: ({ node, children, ...props }) => {
+                const rawText = extractTextFromNode(node) || '';
+                
+                // 1. Detect interactive misconception block: ❌ ... ✅ ...
+                if (rawText.includes('❌') && (rawText.includes('迷思') || rawText.includes('錯誤觀念') || rawText.includes('正確觀念'))) {
+                  const parts = rawText.split(/✅\s*(?:\*\*正確觀念[:：]?\*\*[:：]?|正確觀念[:：]?)/);
+                  if (parts.length >= 2) {
+                    const mythText = parts[0].replace(/^❌\s*(?:\*\*迷思\s*\d*[:：]?\*\*[:：]?|迷思\s*\d*[:：]?)/, '').trim();
+                    const truthText = parts[1].trim();
+                    return (
+                      <InteractiveMisconceptionCard 
+                        mythText={mythText} 
+                        truthText={truthText} 
+                        isEnglish={isEnglishSubject}
+                      />
+                    );
+                  }
+                }
+
+                // 2. Detect answer and explanation spoiler block
+                const isAnswerOrExpl = (
+                  rawText.startsWith('**答案**') || 
+                  rawText.startsWith('**解答**') || 
+                  rawText.startsWith('答案：') || 
+                  rawText.startsWith('解答：') ||
+                  rawText.includes('**詳細解析**') ||
+                  rawText.includes('💡 【詳細解析與解答】')
+                );
+
+                if (isAnswerOrExpl) {
+                  return (
+                    <InteractiveAnswerToggle 
+                      rawText={rawText} 
+                      isEnglish={isEnglishSubject}
+                    >
+                      <p {...props}>{children}</p>
+                    </InteractiveAnswerToggle>
+                  );
+                }
+
+                return <p {...props}>{children}</p>;
+              },
+              details: ({ node, children, ...props }) => {
+                return (
+                  <details {...props} className="lesson-custom-details animate-fade-in">
                     {children}
-                  </h2>
+                  </details>
                 );
               },
               table: ({ node, ...props }) => {
@@ -623,8 +938,7 @@ const LessonPage = () => {
                 );
               },
               td: ({ node, children, ...props }) => {
-                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
-                if (!isEnglish) return <td {...props}>{children}</td>;
+                if (!isEnglishSubject) return <td {...props}>{children}</td>;
 
                 const rawText = extractTextFromNode(node);
                 const engSentence = extractEnglishSentence(rawText);
@@ -648,10 +962,21 @@ const LessonPage = () => {
                 );
               },
               li: ({ node, children, ...props }) => {
-                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
-                if (!isEnglish) return <li {...props}>{children}</li>;
-
                 const rawText = extractTextFromNode(node);
+                
+                // If this list item contains detailed explanation or answer, wrap in answer toggle
+                if (rawText.startsWith('**詳細解析**') || rawText.startsWith('**答案**') || rawText.startsWith('解答：')) {
+                  return (
+                    <li {...props} style={{ listStyle: 'none' }}>
+                      <InteractiveAnswerToggle rawText={rawText} isEnglish={isEnglishSubject}>
+                        <span>{children}</span>
+                      </InteractiveAnswerToggle>
+                    </li>
+                  );
+                }
+
+                if (!isEnglishSubject) return <li {...props}>{children}</li>;
+
                 const engSentence = extractEnglishSentence(rawText);
 
                 return (
@@ -675,16 +1000,13 @@ const LessonPage = () => {
                 );
               },
               blockquote: ({ node, children, ...props }) => {
-                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
-                if (!isEnglish) return <blockquote {...props}>{children}</blockquote>;
-
                 const rawText = extractTextFromNode(node);
                 const engSentence = extractEnglishSentence(rawText);
 
                 return (
                   <blockquote className="dialogue-bubble-quote" {...props}>
                     <div style={{ flex: 1 }}>{children}</div>
-                    {engSentence && (
+                    {isEnglishSubject && engSentence ? (
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
@@ -705,13 +1027,34 @@ const LessonPage = () => {
                         <Volume2 size={13} />
                         <span>🔊 聽對話</span>
                       </button>
+                    ) : (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          speechEngine.speak(rawText, { lang: 'zh-TW' });
+                        }}
+                        className="btn-outline flex items-center gap-1 text-xs"
+                        style={{
+                          padding: '4px 10px',
+                          borderRadius: 'var(--radius-full)',
+                          flexShrink: 0,
+                          backgroundColor: 'var(--accent-soft)',
+                          borderColor: 'var(--accent-primary)',
+                          color: 'var(--accent-primary)',
+                          fontWeight: 700
+                        }}
+                        title="🔊 聆聽老師叮嚀語音"
+                      >
+                        <Volume2 size={13} />
+                        <span>🔊 聽叮嚀</span>
+                      </button>
                     )}
                   </blockquote>
                 );
               },
               em: ({ node, children, ...props }) => {
                 const text = String(children);
-                const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-')) && /[a-zA-Z]{2,}/.test(text);
+                const isEnglish = isEnglishSubject && /[a-zA-Z]{2,}/.test(text);
 
                 return (
                   <em 
@@ -733,7 +1076,7 @@ const LessonPage = () => {
                 const textContent = String(children).replace(/\n$/, '');
 
                 if (inline) {
-                  const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-')) && /^[a-zA-Z0-9\s',.?!/-]+$/.test(textContent.trim());
+                  const isEnglish = isEnglishSubject && /^[a-zA-Z0-9\s',.?!/-]+$/.test(textContent.trim());
 
                   return (
                     <code 
@@ -806,7 +1149,8 @@ const LessonPage = () => {
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  speechEngine.speak(selectedTextBubble.text);
+                  const lang = /[a-zA-Z]{2,}/.test(selectedTextBubble.text) ? 'en-US' : 'zh-TW';
+                  speechEngine.speak(selectedTextBubble.text, { lang });
                 }}
                 className="btn-primary flex items-center gap-1 text-xs"
                 style={{
@@ -818,7 +1162,7 @@ const LessonPage = () => {
                   backgroundColor: 'var(--accent-primary)',
                   color: '#ffffff'
                 }}
-                title="朗讀所選取的英文單字或句子"
+                title="朗讀所選取的文字或句子"
               >
                 <Volume2 size={13} />
                 <span>🔊 朗讀所選: "{selectedTextBubble.text.length > 18 ? selectedTextBubble.text.slice(0, 18) + '...' : selectedTextBubble.text}"</span>
@@ -884,7 +1228,7 @@ const LessonPage = () => {
         </div>
       </div>
 
-      {/* Optimization 5: Next/Prev Unit Navigation */}
+      {/* Next/Prev Unit Navigation */}
       <div className="flex justify-between items-center mt-6 pt-6 border-t border-light">
         {prevUnit ? (
           <button

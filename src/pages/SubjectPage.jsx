@@ -1,14 +1,79 @@
+import { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
-import { PlayCircle, CheckCircle2, BookOpen, ArrowLeft, Compass, ArrowRight, Star, Clock, ShieldCheck, Flame, Zap, Volume2, Headphones } from 'lucide-react';
+import { 
+  PlayCircle, 
+  CheckCircle2, 
+  BookOpen, 
+  ArrowLeft, 
+  Compass, 
+  ArrowRight, 
+  Star, 
+  Clock, 
+  ShieldCheck, 
+  Flame, 
+  Zap, 
+  Volume2, 
+  Headphones,
+  Search,
+  X,
+  Trophy,
+  RotateCcw,
+  Sparkles
+} from 'lucide-react';
 import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 
 const SubjectPage = () => {
   const { subjectId } = useParams();
   const { unitStars } = useGamification();
+  const [selectedTier, setSelectedTier] = useState('all'); // 'all' | 'tier1' | 'tier2' | 'tier3'
+  const [searchQuery, setSearchQuery] = useState('');
+
   const subject = coursesData.subjects.find(s => s.id === subjectId);
   const units = coursesData.units[subjectId] || [];
+
+  // Helper for tier grouping
+  const getTierInfo = (index, total) => {
+    const ratio = index / total;
+    if (ratio < 0.35) {
+      return { id: 'tier1', label: '🌱 基礎加固・快速暖身', short: '基礎加固', color: 'var(--accent-success)', bg: 'var(--accent-success-soft)' };
+    } else if (ratio < 0.75) {
+      return { id: 'tier2', label: '🌿 核心觀念・段考必考', short: '核心必考', color: 'var(--accent-primary)', bg: 'var(--accent-soft)' };
+    } else {
+      return { id: 'tier3', label: '🌳 實戰整合・高分挑戰', short: '實戰高分', color: 'var(--accent-purple)', bg: 'var(--accent-purple-soft)' };
+    }
+  };
+
+  // Last studied unit
+  const lastStudiedUnitId = useMemo(() => {
+    try {
+      return localStorage.getItem(`sixth_last_studied_${subjectId}`);
+    } catch (e) {
+      return null;
+    }
+  }, [subjectId]);
+
+  const lastStudiedUnit = units.find(u => u.id === lastStudiedUnitId);
+
+  // Filtered units
+  const filteredUnits = useMemo(() => {
+    return units.map((u, idx) => ({ ...u, originalIndex: idx, tier: getTierInfo(idx, units.length) })).filter(u => {
+      const matchTier = selectedTier === 'all' || u.tier.id === selectedTier;
+      const q = searchQuery.trim().toLowerCase();
+      const matchSearch = !q || 
+        u.title.toLowerCase().includes(q) ||
+        u.description.toLowerCase().includes(q) ||
+        (u.keyConcepts && u.keyConcepts.some(c => c.toLowerCase().includes(q)));
+      return matchTier && matchSearch;
+    });
+  }, [units, selectedTier, searchQuery]);
+
+  // Overall Mastery stats
+  const totalStars = units.reduce((acc, u) => acc + (unitStars[u.id] || 0), 0);
+  const maxStars = units.length * 3;
+  const completedCount = units.filter(u => (unitStars[u.id] || 0) > 0).length;
+  const masteryPercent = maxStars > 0 ? Math.round((totalStars / maxStars) * 100) : 0;
 
   if (!subject) return (
     <div className="container py-12 text-center">
@@ -17,30 +82,25 @@ const SubjectPage = () => {
     </div>
   );
 
-  // Helper for tier grouping
-  const getTierInfo = (index, total) => {
-    const ratio = index / total;
-    if (ratio < 0.35) {
-      return { label: '🌱 基礎加固・快速暖身', color: 'var(--accent-success)', bg: 'var(--accent-success-soft)' };
-    } else if (ratio < 0.75) {
-      return { label: '🌿 核心觀念・段考必考', color: 'var(--accent-primary)', bg: 'var(--accent-soft)' };
-    } else {
-      return { label: '🌳 實戰整合・高分挑戰', color: 'var(--accent-purple)', bg: 'var(--accent-purple-soft)' };
-    }
+  const handleRecordLastStudied = (unitId) => {
+    try {
+      localStorage.setItem(`sixth_last_studied_${subjectId}`, unitId);
+      localStorage.setItem('sixth_last_unit', unitId);
+    } catch (e) {}
   };
 
   return (
-    <div className="flex flex-col gap-6 py-3 pb-16">
+    <div className="flex flex-col gap-6 py-3 pb-16 animate-fade-in">
       {/* Top Breadcrumb */}
       <div>
-        <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
+        <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors font-bold">
           <ArrowLeft size={16} /> 返回八大學習領域首頁
         </Link>
       </div>
 
       {/* Subject Header Banner */}
       <div 
-        className="card" 
+        className="card shadow-sm" 
         style={{ 
           padding: '28px', 
           backgroundColor: 'var(--bg-secondary)',
@@ -54,15 +114,15 @@ const SubjectPage = () => {
             {/* Cute Mascot Avatar */}
             <div 
               style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '18px',
+                width: '64px',
+                height: '64px',
+                borderRadius: '20px',
                 backgroundColor: `${subject.color}15`,
                 border: `2px solid ${subject.color}35`,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '2rem',
+                fontSize: '2.2rem',
                 boxShadow: `0 4px 14px ${subject.color}25`,
                 flexShrink: 0
               }}
@@ -97,6 +157,58 @@ const SubjectPage = () => {
               每課平均 3~5 分鐘零負擔
             </span>
           </div>
+        </div>
+      </div>
+
+      {/* 📊 Subject Mastery Dashboard */}
+      <div
+        className="card p-4 flex flex-col md:flex-row justify-between items-center gap-4"
+        style={{
+          backgroundColor: 'var(--bg-secondary)',
+          borderRadius: 'var(--radius-lg)',
+          border: '1.5px solid var(--border-light)'
+        }}
+      >
+        <div className="flex items-center gap-3 w-full md:w-auto">
+          <div
+            className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+            style={{ backgroundColor: 'var(--accent-warning-soft)', color: 'var(--accent-warning)' }}
+          >
+            <Trophy size={22} />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center justify-between gap-4 text-xs font-bold mb-1">
+              <span style={{ color: 'var(--text-primary)' }}>學科學力掌握進度：</span>
+              <span className="text-amber-500 font-extrabold">⭐ {totalStars} / {maxStars} 星 ({masteryPercent}%)</span>
+            </div>
+            <div style={{ height: '8px', backgroundColor: 'var(--bg-tertiary)', borderRadius: '4px', overflow: 'hidden', minWidth: '220px' }}>
+              <div 
+                style={{ 
+                  width: `${masteryPercent}%`, 
+                  height: '100%', 
+                  backgroundColor: masteryPercent === 100 ? 'var(--accent-success)' : 'var(--accent-warning)',
+                  borderRadius: '4px',
+                  transition: 'width 0.4s ease'
+                }} 
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 w-full md:w-auto justify-end flex-wrap">
+          <span className="text-xs text-secondary">
+            已通關 <strong>{completedCount}</strong> / {units.length} 單元
+          </span>
+          {lastStudiedUnit && (
+            <Link
+              to={`/lesson/${lastStudiedUnit.id}`}
+              className="btn-primary text-xs flex items-center gap-1.5 py-2 px-3.5"
+              style={{ backgroundColor: 'var(--accent-primary)', borderRadius: 'var(--radius-md)' }}
+            >
+              <Sparkles size={13} />
+              <span>繼續上次：{lastStudiedUnit.title}</span>
+            </Link>
+          )}
         </div>
       </div>
 
@@ -200,15 +312,66 @@ const SubjectPage = () => {
         </div>
       )}
 
+      {/* 🔍 Search & Tier Filter Bar */}
+      <div 
+        className="card p-3 flex flex-col md:flex-row justify-between items-center gap-3"
+        style={{ backgroundColor: 'var(--bg-secondary)', border: '1.5px solid var(--border-light)' }}
+      >
+        {/* Tier filter tabs */}
+        <div className="flex gap-1.5 flex-wrap w-full md:w-auto">
+          {[
+            { id: 'all', label: `全部單元 (${units.length})` },
+            { id: 'tier1', label: '🌱 基礎加固' },
+            { id: 'tier2', label: '🌿 核心必考' },
+            { id: 'tier3', label: '🌳 實戰高分' }
+          ].map(t => (
+            <button
+              key={t.id}
+              onClick={() => setSelectedTier(t.id)}
+              className={`btn-pill text-xs px-3 py-1.5 font-bold ${selectedTier === t.id ? 'active' : ''}`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Real-time search input */}
+        <div className="relative w-full md:w-72">
+          <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" />
+          <input
+            type="text"
+            placeholder="搜尋單元標題或核心考點..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="input-field pl-8 pr-8 py-1.5 text-xs w-full"
+            style={{ borderRadius: 'var(--radius-full)' }}
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-tertiary hover:text-primary"
+            >
+              <X size={13} />
+            </button>
+          )}
+        </div>
+      </div>
+
       {/* Unit Cards List */}
       <div className="units-list flex flex-col gap-5 mt-1">
-        {units.length === 0 ? (
+        {filteredUnits.length === 0 ? (
           <div className="card text-center py-12">
-            <p className="text-secondary">此科目尚無單元資料。</p>
+            <p className="text-secondary mb-2">沒有找到符合搜尋條件的單元。</p>
+            <button
+              onClick={() => { setSelectedTier('all'); setSearchQuery(''); }}
+              className="btn-outline text-xs mt-2"
+            >
+              清除搜尋條件
+            </button>
           </div>
         ) : (
-          units.map((unit, index) => {
-            const tier = getTierInfo(index, units.length);
+          filteredUnits.map((unit) => {
+            const tier = unit.tier;
             const stars = unitStars[unit.id] || 0;
             const isCompleted = stars > 0;
 
@@ -237,7 +400,7 @@ const SubjectPage = () => {
                           padding: '4px 10px'
                         }}
                       >
-                        第 {index + 1} 關
+                        第 {unit.originalIndex + 1} 關
                       </span>
                       <span 
                         className="badge" 
@@ -343,22 +506,24 @@ const SubjectPage = () => {
                   )}
 
                   {/* Primary Core Actions */}
-                  <div className="flex gap-3 flex-wrap">
+                  <div className="flex gap-3 flex-wrap ml-auto">
                     <Link 
                       to={`/quiz/${unit.id}`} 
-                      className="btn-outline flex items-center gap-2 text-sm" 
+                      className="btn-outline flex items-center gap-2 text-sm font-bold" 
                       style={{
                         padding: '8px 18px',
                         borderColor: 'var(--accent-success)',
                         color: 'var(--accent-success-text)'
                       }}
+                      onClick={() => handleRecordLastStudied(unit.id)}
                     >
                       <CheckCircle2 size={16} /> 觀念測驗 (+50 XP)
                     </Link>
                     <Link 
                       to={`/lesson/${unit.id}`} 
-                      className="btn-primary flex items-center gap-2 text-sm" 
+                      className="btn-primary flex items-center gap-2 text-sm font-bold" 
                       style={{ padding: '8px 22px' }}
+                      onClick={() => handleRecordLastStudied(unit.id)}
                     >
                       <BookOpen size={16} /> 進入圖解教學單元
                       <ArrowRight size={15} />

@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle, Keyboard } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { playSound, toggleMute, getMuteState } from '../utils/soundEffects';
@@ -126,6 +126,28 @@ const QuizPage = () => {
     setDisabledOptions([]);
     setQuizSummary(null);
   };
+
+  // Keyboard navigation & shortcuts (1-4 / A-D / Enter)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Don't trigger if finished
+      if (currentQ >= questions.length) return;
+
+      const key = e.key.toLowerCase();
+      if (!showResult) {
+        if (key === '1' || key === 'a') handleSelect(0);
+        else if (key === '2' || key === 'b') handleSelect(1);
+        else if (key === '3' || key === 'c') handleSelect(2);
+        else if (key === '4' || key === 'd') handleSelect(3);
+        else if (key === 'enter' && selectedOption !== null) handleSubmit();
+      } else {
+        if (key === 'enter') handleNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentQ, selectedOption, showResult, questions.length]);
 
   if (questions.length === 0) {
     return (
@@ -460,7 +482,12 @@ const QuizPage = () => {
         )}
 
         {/* Submit / Next Button */}
-        <div className="flex justify-end pt-4 border-t" style={{ borderTop: '1px solid var(--border-light)' }}>
+        <div className="flex justify-between items-center pt-4 border-t flex-wrap gap-2" style={{ borderTop: '1px solid var(--border-light)' }}>
+          <div className="text-xs text-secondary flex items-center gap-1.5 font-medium">
+            <Keyboard size={14} style={{ color: 'var(--accent-primary)' }} />
+            <span className="hidden sm:inline">鍵盤快捷：按 1~4 / A~D 選取，按 Enter 送出或下一題</span>
+          </div>
+
           {!showResult ? (
             <button 
               className="btn-primary" 
@@ -473,7 +500,7 @@ const QuizPage = () => {
                 borderRadius: 'var(--radius-md)'
               }}
             >
-              確認送出答案
+              確認送出答案 (Enter)
             </button>
           ) : (
             <button 
@@ -486,7 +513,7 @@ const QuizPage = () => {
                 borderRadius: 'var(--radius-md)'
               }}
             >
-              {isLastQuestion ? '查看測驗總成績與詳解 →' : '下一題 →'}
+              {isLastQuestion ? '查看測驗總成績與詳解 →' : '下一題 (Enter) →'}
             </button>
           )}
         </div>
