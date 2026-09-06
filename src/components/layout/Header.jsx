@@ -56,11 +56,11 @@ const Header = () => {
         style={{
           borderBottom: '1px solid var(--border-light)',
           backgroundColor: 'var(--bg-backdrop)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
+          backdropFilter: 'blur(24px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(24px) saturate(180%)',
           position: 'sticky',
           top: 0,
-          zIndex: 100,
+          zIndex: 90,
           transition: 'background-color var(--transition-normal), border-color var(--transition-normal)'
         }}
       >

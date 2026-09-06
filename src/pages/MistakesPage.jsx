@@ -17,7 +17,7 @@ import {
   RotateCcw
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { playSound } from '../utils/soundEffects';
+import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 
@@ -80,6 +80,12 @@ const MistakesPage = () => {
     if (isCorrect) {
       setSmashResult('hit');
       playSound('smash');
+      triggerHaptic('heavy');
+      dispatchDynamicIsland({
+        title: '🔨 弱點粉碎成功！',
+        subtitle: '粗心怪獸已擊潰 (+40 XP | +25 🪙)',
+        icon: '💥'
+      });
       addCoins(25);
       addXp(40, 'mistake_smashed');
       setSmashedCount(c => c + 1);
@@ -104,6 +110,7 @@ const MistakesPage = () => {
     } else {
       setSmashResult('miss');
       playSound('wrong');
+      triggerHaptic('error');
       setTimeout(() => {
         setSmashAnimation(false);
         setSmashResult(null);

@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import { shortsReelsData } from '../data/shortsData';
 import { speechEngine } from '../utils/speechHelper';
-import { playSound } from '../utils/soundEffects';
+import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { useGamification } from '../context/GamificationContext';
 import confetti from 'canvas-confetti';
 
@@ -128,6 +128,7 @@ const ShortsReelsPage = () => {
   const handleLike = (e) => {
     if (e) e.stopPropagation();
     playSound('heart_burst');
+    triggerHaptic('medium');
     const id = currentReel.id;
     setLikedReels(prev => ({
       ...prev,
@@ -154,6 +155,12 @@ const ShortsReelsPage = () => {
     const isCorrect = idx === currentReel.popQuiz.answerIndex;
     if (isCorrect) {
       playSound('levelup');
+      triggerHaptic('heavy');
+      dispatchDynamicIsland({
+        title: '🎯 5秒突擊快問答對！',
+        subtitle: '多巴胺金幣 +35 🪙 | 經驗 +60 XP',
+        icon: '⚡'
+      });
       addCoins(35);
       addXp(60, 'shorts_quiz');
       confetti({
@@ -164,6 +171,7 @@ const ShortsReelsPage = () => {
       });
     } else {
       playSound('wrong');
+      triggerHaptic('error');
     }
   };
 

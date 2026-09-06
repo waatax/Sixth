@@ -26,6 +26,7 @@ import DailyLuckyWheel from '../components/gamification/DailyLuckyWheel';
 import PetSanctuaryModal from '../components/gamification/PetSanctuaryModal';
 import GachaLootModal from '../components/gamification/GachaLootModal';
 import { useGamification } from '../context/GamificationContext';
+import { triggerHaptic, playSound, dispatchDynamicIsland } from '../utils/soundEffects';
 
 const HomePage = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
@@ -98,7 +99,11 @@ const HomePage = () => {
           <div className="flex flex-wrap gap-2 sm:justify-end w-full sm:w-auto">
             <Link
               to="/shorts"
-              className="btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
+              onClick={() => {
+                triggerHaptic('selection');
+                playSound('ios_tap');
+              }}
+              className="ios-pressable btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
               style={{
                 padding: '9px 16px',
                 borderRadius: 'var(--radius-lg)',
@@ -114,7 +119,11 @@ const HomePage = () => {
 
             <Link
               to="/labs"
-              className="btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
+              onClick={() => {
+                triggerHaptic('selection');
+                playSound('ios_tap');
+              }}
+              className="ios-pressable btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
               style={{
                 padding: '9px 16px',
                 borderRadius: 'var(--radius-lg)',
@@ -129,8 +138,13 @@ const HomePage = () => {
             </Link>
 
             <button
-              onClick={() => setIsGachaOpen(true)}
-              className="btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
+              onClick={() => {
+                setIsGachaOpen(true);
+                triggerHaptic('medium');
+                playSound('chest_open');
+                dispatchDynamicIsland({ title: '神獸轉蛋盲盒', subtitle: 'SSR 奇蹟光柱召喚中', icon: '🎁' });
+              }}
+              className="ios-pressable btn-primary flex items-center justify-center gap-1.5 text-xs font-black"
               style={{
                 padding: '9px 16px',
                 borderRadius: 'var(--radius-lg)',
@@ -144,8 +158,13 @@ const HomePage = () => {
             </button>
 
             <button
-              onClick={() => setIsWheelOpen(true)}
-              className="btn-outline flex items-center justify-center gap-1.5 text-xs font-bold"
+              onClick={() => {
+                setIsWheelOpen(true);
+                triggerHaptic('medium');
+                playSound('ios_tap');
+                dispatchDynamicIsland({ title: '每日幸運大轉盤', subtitle: '連勝每日補給', icon: '🎡' });
+              }}
+              className="ios-pressable btn-outline flex items-center justify-center gap-1.5 text-xs font-bold"
               style={{
                 padding: '8px 14px',
                 borderRadius: 'var(--radius-lg)',
@@ -156,8 +175,13 @@ const HomePage = () => {
             </button>
 
             <button
-              onClick={() => setIsSanctuaryOpen(true)}
-              className="btn-outline flex items-center justify-center gap-1.5 text-xs font-bold"
+              onClick={() => {
+                setIsSanctuaryOpen(true);
+                triggerHaptic('light');
+                playSound('pet_happy');
+                dispatchDynamicIsland({ title: '守護神獸庇護所', subtitle: '撫摸與餵食進化', icon: currentEvolution?.emoji || '🦊' });
+              }}
+              className="ios-pressable btn-outline flex items-center justify-center gap-1.5 text-xs font-bold"
               style={{
                 padding: '8px 14px',
                 borderRadius: 'var(--radius-lg)',
@@ -392,14 +416,17 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Category Filter Tabs */}
-          <div className="flex gap-2 flex-wrap">
+          {/* iOS Segmented Control */}
+          <div className="ios-segmented-control">
             {categories.map(cat => (
               <button
                 key={cat.id}
-                className={`btn-pill flex items-center gap-1.5 ${categoryFilter === cat.id ? 'active' : ''}`}
-                onClick={() => setCategoryFilter(cat.id)}
-                style={{ fontSize: '0.85rem', padding: '6px 14px' }}
+                className={`ios-segment-item ${categoryFilter === cat.id ? 'active' : ''}`}
+                onClick={() => {
+                  setCategoryFilter(cat.id);
+                  triggerHaptic('selection');
+                  playSound('ios_tap');
+                }}
               >
                 <span>{cat.icon}</span>
                 <span>{cat.label}</span>
@@ -431,7 +458,11 @@ const HomePage = () => {
               <Link 
                 to={`/subject/${subject.id}`} 
                 key={subject.id} 
-                className="card card-hoverable flex flex-col justify-between" 
+                onClick={() => {
+                  triggerHaptic('selection');
+                  playSound('ios_tap');
+                }}
+                className="ios-pressable ios-glass-card flex flex-col justify-between" 
                 style={{ 
                   padding: '24px', 
                   borderRadius: '24px',

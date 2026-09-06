@@ -5,7 +5,7 @@ import { useGamification } from '../context/GamificationContext';
 import { quizData } from '../data/quizData';
 import { prepData } from '../data/prepData';
 import confetti from 'canvas-confetti';
-import { playSound } from '../utils/soundEffects';
+import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 
 const BOSS_STAGES = [
   {
@@ -159,8 +159,13 @@ const BossBattlePage = () => {
 
       setLastDamage({ amount: baseDmg, isCrit, combo: newCombo });
       setAttackAnimation(true);
-      if (isCrit) playSound('critical');
-      else playSound('boss_hit');
+      if (isCrit) {
+        playSound('critical');
+        triggerHaptic('heavy');
+      } else {
+        playSound('boss_hit');
+        triggerHaptic('medium');
+      }
 
       const nextHp = Math.max(0, bossHp - baseDmg);
       setBossHp(nextHp);
@@ -173,6 +178,12 @@ const BossBattlePage = () => {
           const elapsedSec = selectedBoss.timeLimitSec - timeLeft;
           recordBossVictory(selectedBoss.id, elapsedSec, selectedBoss.reward);
           playSound('levelup');
+          triggerHaptic('heavy');
+          dispatchDynamicIsland({
+            title: `👑 成功討伐【${selectedBoss.name.split(' ')[1]}】！`,
+            subtitle: `獲得 +${selectedBoss.reward.xp} XP | +${selectedBoss.reward.coins} 🪙 | +${selectedBoss.reward.gems} 💎`,
+            icon: '⚔️'
+          });
           confetti({
             particleCount: 150,
             spread: 90,
@@ -191,6 +202,7 @@ const BossBattlePage = () => {
       // Wrong answer
       setCombo(0);
       playSound('wrong');
+      triggerHaptic('error');
       setLastDamage({ amount: 0, isMiss: true });
       setAttackAnimation(true);
       setTimeout(() => {

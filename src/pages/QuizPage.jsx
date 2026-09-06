@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle, Keyboard } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
-import { playSound, toggleMute, getMuteState } from '../utils/soundEffects';
+import { playSound, toggleMute, getMuteState, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 import ComboFlameIndicator from '../components/gamification/ComboFlameIndicator';
@@ -34,6 +34,7 @@ const QuizPage = () => {
   const handleSelect = (index) => {
     if (showResult || disabledOptions.includes(index)) return;
     setSelectedOption(index);
+    triggerHaptic('selection');
     playSound('click');
   };
 
@@ -46,11 +47,22 @@ const QuizPage = () => {
       const nextCombo = combo + 1;
       setCombo(nextCombo);
       setScore(s => s + 1);
-      if (nextCombo >= 3) playSound('combo', nextCombo);
-      else playSound('correct');
+      if (nextCombo >= 3) {
+        playSound('combo', nextCombo);
+        triggerHaptic('heavy');
+        dispatchDynamicIsland({
+          title: `🔥 ${nextCombo} 連擊狂暴達成！`,
+          subtitle: '多巴胺經驗加倍觸發',
+          icon: '🔥'
+        });
+      } else {
+        playSound('correct');
+        triggerHaptic('success');
+      }
     } else {
       setCombo(0);
       playSound('wrong');
+      triggerHaptic('error');
     }
 
     setUserAnswers(prev => [...prev, { qIndex: currentQ, selected: selectedOption, correct: isCorrect }]);
@@ -87,6 +99,12 @@ const QuizPage = () => {
       } catch (e) {}
 
       playSound('levelup');
+      triggerHaptic('heavy');
+      dispatchDynamicIsland({
+        title: `🏆 單元通關結算完成！`,
+        subtitle: `得分: ${finalScore} / ${questions.length} 題・評星已入庫`,
+        icon: '🎖️'
+      });
       confetti({
         particleCount: 120,
         spread: 80,

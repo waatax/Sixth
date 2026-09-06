@@ -14,7 +14,7 @@ import {
   Layers
 } from 'lucide-react';
 import { interactiveLabsList } from '../data/interactiveLabsData';
-import { playSound } from '../utils/soundEffects';
+import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { useGamification } from '../context/GamificationContext';
 import confetti from 'canvas-confetti';
 
@@ -63,13 +63,19 @@ const InteractiveLabsPage = () => {
     if (isBalanced && !hasBalancedCelebrated) {
       setHasBalancedCelebrated(true);
       playSound('levelup');
+      triggerHaptic('heavy');
+      dispatchDynamicIsland({
+        title: '⚖️ 槓桿力矩完美平衡！',
+        subtitle: `左力矩(${leftTorque}) = 右力矩(${rightTorque})・達成平衡`,
+        icon: '⚖️'
+      });
       addCoins(25);
       addXp(40, 'lab_balance');
       confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 } });
     } else if (!isBalanced) {
       setHasBalancedCelebrated(false);
     }
-  }, [isBalanced, hasBalancedCelebrated, addCoins, addXp]);
+  }, [isBalanced, hasBalancedCelebrated, leftTorque, rightTorque, addCoins, addXp]);
 
   // Speed Race Loop
   useEffect(() => {
@@ -80,6 +86,12 @@ const InteractiveLabsPage = () => {
           if (prev >= 100) {
             setIsRacing(false);
             playSound('levelup');
+            triggerHaptic('heavy');
+            dispatchDynamicIsland({
+              title: '🏃 跑道追趕模擬衝線！',
+              subtitle: `相遇成功・精準命中數學公式`,
+              icon: '🏆'
+            });
             confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 } });
             return 100;
           }
@@ -164,9 +176,10 @@ const InteractiveLabsPage = () => {
               key={lab.id}
               onClick={() => {
                 setSelectedLabId(lab.id);
+                triggerHaptic('selection');
                 playSound('lab_interact');
               }}
-              className="card p-3 flex flex-col items-center justify-center text-center transition-all cursor-pointer"
+              className="ios-pressable card p-3 flex flex-col items-center justify-center text-center transition-all cursor-pointer"
               style={{
                 borderRadius: 'var(--radius-lg)',
                 backgroundColor: isSelected ? 'var(--accent-soft)' : 'var(--bg-secondary)',
