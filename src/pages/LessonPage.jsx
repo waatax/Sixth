@@ -36,19 +36,25 @@ import {
   CheckSquare,
   PenTool,
   HelpCircle,
-  RotateCcw
+  RotateCcw,
+  Printer,
+  Heart,
+  Palette
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
 import { speechEngine, extractTextFromNode, extractEnglishSentence } from '../utils/speechHelper';
 import { useTheme } from '../context/ThemeContext';
 import { useGamification } from '../context/GamificationContext';
-import { playSound } from '../utils/soundEffects';
+import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import LessonLightboxModal from '../components/lesson/LessonLightboxModal';
 import LessonNotebookDrawer from '../components/lesson/LessonNotebookDrawer';
 import LessonQuickFlashcardsModal from '../components/lesson/LessonQuickFlashcardsModal';
 import InteractiveMisconceptionCard from '../components/lesson/InteractiveMisconceptionCard';
 import InteractiveAnswerToggle from '../components/lesson/InteractiveAnswerToggle';
+import LessonMiniLabWidget from '../components/lesson/LessonMiniLabWidget';
+import LessonCompanionPet from '../components/lesson/LessonCompanionPet';
+import LessonPulseCheck from '../components/lesson/LessonPulseCheck';
 import './LessonPage.css';
 
 // Vite dynamic import for raw markdown files
@@ -86,6 +92,19 @@ const LessonPage = () => {
   const [isNotebookOpen, setIsNotebookOpen] = useState(false);
   const [isFlashcardsOpen, setIsFlashcardsOpen] = useState(false);
   const [hasBookmarked, setHasBookmarked] = useState(false);
+
+  // 7x7 Eye-Care Reading Themes: 'normal' | 'sepia' | 'sage'
+  const [readingTheme, setReadingTheme] = useState(() => {
+    try {
+      return localStorage.getItem('sixth_reading_theme') || 'normal';
+    } catch (e) {
+      return 'normal';
+    }
+  });
+
+  // 7x7 Floating Heart Particles for Double-tap reactions
+  const [floatingHearts, setFloatingHearts] = useState([]);
+  const [hasNotifiedMidway, setHasNotifiedMidway] = useState(false);
 
   // Concept Checklist state persisted in localStorage
   const [masteredConcepts, setMasteredConcepts] = useState([]);
@@ -330,6 +349,77 @@ const LessonPage = () => {
     }
   };
 
+  // 7x7 Theme Switcher
+  const toggleReadingTheme = () => {
+    const themes = ['normal', 'sepia', 'sage'];
+    const nextIdx = (themes.indexOf(readingTheme) + 1) % themes.length;
+    const nextTheme = themes[nextIdx];
+    setReadingTheme(nextTheme);
+    try {
+      localStorage.setItem('sixth_reading_theme', nextTheme);
+    } catch (e) {}
+    playSound('click');
+    triggerHaptic('light');
+  };
+
+  // 7x7 Double-tap / double-click paragraph heart reaction
+  const handleParagraphDoubleClick = (e) => {
+    const x = e.clientX;
+    const y = e.clientY + window.scrollY;
+    const id = Date.now() + Math.random();
+    setFloatingHearts(prev => [...prev.slice(-8), { id, x, y }]);
+    playSound('coin');
+    triggerHaptic('light');
+    setTimeout(() => {
+      setFloatingHearts(prev => prev.filter(h => h.id !== id));
+    }, 1100);
+  };
+
+  // 7x7 Keyboard Navigation (J: next section, K: prev section, F: focus, P: print)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+      if (e.key === 'j' || e.key === 'J') {
+        if (sections.length > 0) {
+          const currentY = window.scrollY + 100;
+          const nextSec = sections.find(s => {
+            const el = document.getElementById(s.id);
+            return el && (el.getBoundingClientRect().top + window.pageYOffset) > currentY;
+          });
+          if (nextSec) scrollToSection(nextSec.id);
+        }
+      } else if (e.key === 'k' || e.key === 'K') {
+        if (sections.length > 0) {
+          const currentY = window.scrollY - 100;
+          const prevSec = sections.slice().reverse().find(s => {
+            const el = document.getElementById(s.id);
+            return el && (el.getBoundingClientRect().top + window.pageYOffset) < currentY;
+          });
+          if (prevSec) scrollToSection(prevSec.id);
+        }
+      } else if (e.key === 'f' || e.key === 'F') {
+        setFocusMode(prev => !prev);
+      } else if (e.key === 'p' || e.key === 'P') {
+        window.print();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [sections, setFocusMode]);
+
+  // 7x7 Mid-lesson 50% Reading Notification
+  useEffect(() => {
+    if (scrollProgress >= 50 && !hasNotifiedMidway) {
+      setHasNotifiedMidway(true);
+      dispatchDynamicIsland({
+        title: '📖 閱讀進度突破 50%！',
+        subtitle: '專注度破表・神獸為你加油',
+        icon: '🌟'
+      });
+    }
+  }, [scrollProgress, hasNotifiedMidway]);
+
   const wordCount = content.length || 1000;
   const readTimeMin = Math.max(1, Math.ceil(wordCount / 400));
   const isEnglishSubject = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
@@ -344,7 +434,18 @@ const LessonPage = () => {
   }
 
   return (
-    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''}`}>
+    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''} ${readingTheme !== 'normal' ? `theme-${readingTheme}` : ''}`}>
+      {/* 7x7 Floating Heart Particles */}
+      {floatingHearts.map(h => (
+        <div 
+          key={h.id} 
+          className="floating-heart-particle"
+          style={{ left: `${h.x}px`, top: `${h.y}px` }}
+        >
+          💖
+        </div>
+      ))}
+
       {/* Top Reading Scroll Progress Bar */}
       <div
         className="reading-progress-bar"
@@ -548,6 +649,28 @@ const LessonPage = () => {
             <span className="hidden sm:inline">{highlightMode ? '螢光筆' : '螢光筆關'}</span>
           </button>
 
+          {/* 7x7 Print Study Guide Button */}
+          <button
+            onClick={() => window.print()}
+            className="btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1"
+            title="列印或另存為潔淨 PDF 講義 (快捷鍵: P)"
+          >
+            <Printer size={13} />
+            <span className="hidden sm:inline">列印講義</span>
+          </button>
+
+          {/* 7x7 Reading Theme Switcher */}
+          <button
+            onClick={toggleReadingTheme}
+            className="btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1"
+            title={`切換閱讀護眼底色 (目前: ${readingTheme === 'normal' ? '標準' : readingTheme === 'sepia' ? '羊皮紙' : '護眼綠'})`}
+          >
+            <Palette size={13} />
+            <span className="hidden sm:inline">
+              {readingTheme === 'normal' ? '護眼' : readingTheme === 'sepia' ? '📜 羊皮紙' : '🌿 柔綠'}
+            </span>
+          </button>
+
           <button
             onClick={handleShare}
             className="btn-outline p-1.5 rounded-lg text-xs"
@@ -557,6 +680,14 @@ const LessonPage = () => {
           </button>
         </div>
       </div>
+
+      {/* 🐾 7x7 Interactive Companion Pet Motivation Widget */}
+      <LessonCompanionPet 
+        scrollProgress={scrollProgress}
+        masteredCount={masteredConcepts.length}
+        totalConcepts={currentUnit.keyConcepts?.length || 4}
+        subjectId={currentSubject?.id || ''}
+      />
 
       {/* 🎯 30-Second Scaffolding Quick Concepts Card with Interactive Checklist */}
       {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
@@ -656,6 +787,9 @@ const LessonPage = () => {
           </div>
         </div>
       )}
+
+      {/* 🔬 7x7 Embedded PhET Dynamic STEM Mini-Lab */}
+      <LessonMiniLabWidget unitId={unitId} subjectId={currentSubject?.id || ''} />
 
       {/* 🎧 Universal Speech / Audio Companion Bar */}
       {isEnglishSubject ? (
@@ -884,12 +1018,20 @@ const LessonPage = () => {
                       rawText={rawText} 
                       isEnglish={isEnglishSubject}
                     >
-                      <p {...props}>{children}</p>
+                      <p onDoubleClick={handleParagraphDoubleClick} title="💡 雙擊為此段落飄心點讚 ❤️" {...props}>{children}</p>
                     </InteractiveAnswerToggle>
                   );
                 }
 
-                return <p {...props}>{children}</p>;
+                return (
+                  <p 
+                    onDoubleClick={handleParagraphDoubleClick} 
+                    title="💡 雙擊為此段落飄心點讚 ❤️" 
+                    {...props}
+                  >
+                    {children}
+                  </p>
+                );
               },
               details: ({ node, children, ...props }) => {
                 return (
@@ -1171,6 +1313,13 @@ const LessonPage = () => {
           )}
         </div>
       )}
+
+      {/* ⚡ 7x7 5-Second Concept Pulse Check */}
+      <LessonPulseCheck 
+        unitId={unitId} 
+        unitTitle={currentUnit.title} 
+        keyConcepts={currentUnit.keyConcepts || []} 
+      />
 
       {/* Bottom Action Footer: Growth-Mindset Celebration Card */}
       <div

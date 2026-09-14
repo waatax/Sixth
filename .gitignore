@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ==============================================================================
+# Local Development & Private Artifacts (NEVER commit to public/GitHub Pages)
+# ==============================================================================
+Local/
+local/
+LOCAL/
+/Local/
+/local/
+/LOCAL/
+*.private.*
+*.secret.*
+Local-Record/
+local-record/
+
+# Local utility / data generator scripts
+*.py
+__pycache__/
+*.pyc
+

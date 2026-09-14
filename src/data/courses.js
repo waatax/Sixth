@@ -9,7 +9,8 @@ export const coursesData = {
       mascot: '數理小精靈',
       badge: '算理圖解・秒破難題',
       color: 'hsl(215, 85%, 52%)', 
-      desc: '數與量、代數關係、幾何圖形、生活應用題' 
+      desc: '數與量、代數關係、幾何圖形、生活應用題',
+      junyiHub: 'https://www.junyiacademy.org/topics/math-topic-elem'
     },
     { 
       id: 'science', 
@@ -20,7 +21,8 @@ export const coursesData = {
       mascot: '探索小博士',
       badge: '現象透視・實驗探究',
       color: 'hsl(152, 70%, 42%)', 
-      desc: '物質與能量、地球與環境、簡單機械、生態保育' 
+      desc: '物質與能量、地球與環境、簡單機械、生態保育',
+      junyiHub: 'https://www.junyiacademy.org/topics/ns-ele-high'
     },
     { 
       id: 'mandarin', 
@@ -31,7 +33,8 @@ export const coursesData = {
       mascot: '文學妙筆仙',
       badge: '閱讀解碼・高分寫作',
       color: 'hsl(25, 90%, 52%)', 
-      desc: '閱讀理解策略、寫作修辭、文言寓言、口語表達' 
+      desc: '閱讀理解策略、寫作修辭、文言寓言、口語表達',
+      junyiHub: 'https://www.junyiacademy.org/topics/ele-c'
     },
     { 
       id: 'social', 
@@ -42,7 +45,8 @@ export const coursesData = {
       mascot: '環球小領航',
       badge: '歷史地理・公民素養',
       color: 'hsl(275, 75%, 55%)', 
-      desc: '臺灣民主發展、多元文化、產業經濟、全球化SDGs' 
+      desc: '臺灣民主發展、多元文化、產業經濟、全球化SDGs',
+      junyiHub: 'https://www.junyiacademy.org/course-compare/k-social/k-s06'
     },
     { 
       id: 'english', 
@@ -53,7 +57,8 @@ export const coursesData = {
       mascot: '雙語小萌星',
       badge: '生活對話・秒懂文法',
       color: 'hsl(192, 88%, 45%)', 
-      desc: 'Daily Routines, Past Tense, Directions, Phonics' 
+      desc: 'Daily Routines, Past Tense, Directions, Phonics',
+      junyiHub: 'https://www.junyiacademy.org/topics/eng-elementary'
     },
     { 
       id: 'arts', 
@@ -161,6 +166,20 @@ export const coursesData = {
         description: '學會判斷「基準量（1倍數）」與「比較量」，解決折扣、加成、母子和差問題。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-math/k-m06',
         keyConcepts: ['比較量 ÷ 基準量 = 比值', '打折與加成計算', '母子和與母子差問題', '雞兔同籠與間隔問題']
+      },
+      {
+        id: 'math-u11',
+        title: '單元 11：等量公理與未知數方程',
+        description: '學習用未知數符號 (x, y) 列式，熟練等式平衡、等量公理與一元一次方程式求解。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-math/k-m06',
+        keyConcepts: ['用未知數符號列式', '等量加法與減法公理', '等量乘法與除法公理', '生活應用題解未知數']
+      },
+      {
+        id: 'math-u12',
+        title: '單元 12：統計圖表與圓形圖',
+        description: '掌握百分率圓形圖與圓心角換算，靈活判讀折線圖、長條圖與綜合統計數據。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-math/k-m06',
+        keyConcepts: ['百分率圓形圖判讀與繪製', '圓心角換算 (360° × 百分率)', '折線圖與長條圖比較', '生活大數據與統計判讀']
       }
     ],
     science: [
@@ -169,6 +188,7 @@ export const coursesData = {
         title: '單元 1：多變的天氣與氣象預報',
         description: '認識大氣中的水循環、高低氣壓、冷暖鋒面與颱風防災知識。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g6-01',
         keyConcepts: ['大氣中水氣的變化（雲、霧、雨、露、霜）', '高氣壓（晴朗）與低氣壓（陰雨）', '冷鋒、暖鋒與滯留鋒（梅雨）', '颱風結構與防颱安全措施']
       },
       {
@@ -176,6 +196,7 @@ export const coursesData = {
         title: '單元 2：水溶液的性質與酸鹼性',
         description: '探討物質的溶解、水溶液的導電性（電解質）與石蕊試紙酸鹼檢驗。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g5-06',
         keyConcepts: ['溶解度與飽和溶液', '電解質與水溶液導電性', '石蕊試紙與天然酸鹼指示劑', '酸鹼中和現象']
       },
       {
@@ -183,6 +204,7 @@ export const coursesData = {
         title: '單元 3：電與磁的奇妙世界',
         description: '探索磁鐵性質、地磁指北針、電流磁效應與電磁鐵的製作與生活應用。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g6-03',
         keyConcepts: ['磁場與指北針原理', '奧斯特實驗（電流產生磁場）', '電磁鐵磁力增強條件（線圈數、電流大小）', '馬達與電鈴的應用']
       },
       {
@@ -190,6 +212,7 @@ export const coursesData = {
         title: '單元 4：變動的大地與地表作用',
         description: '認識三大類岩石與礦物、流水侵蝕堆積作用與地震板塊運動防災。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g6-02',
         keyConcepts: ['三大岩類（火成岩、沉積岩、變質岩）', '礦物辨識特性', '流水的三大作用（侵蝕、搬運、堆積）', '地震板塊運動與防震演練']
       },
       {
@@ -197,13 +220,15 @@ export const coursesData = {
         title: '單元 5：熱的傳播與保溫原理',
         description: '理解熱傳導、熱對流與熱輻射三種熱傳播途徑，探索保溫瓶防熱傳播構造。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
-        keyConcepts: ['熱傳導（固體良導體與不良導體）', '熱對流（流體熱升冷降）', '熱輻射（不需介質）', '保溫瓶真空層與鍍銀反射設計']
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g6-04',
+        keyConcepts: ['熱傳導（固體良導體與不良導體）', '熱對流（流体熱升冷降）', '熱輻射（不需介質）', '保溫瓶真空層與鍍銀反射設計']
       },
       {
         id: 'sci-u6',
         title: '單元 6：巧妙的簡單機械',
         description: '學習槓桿原理三大要素、定滑輪與動滑輪、輪軸與斜面的省力與省距離規律。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g6-05',
         keyConcepts: ['槓桿原理（施力×施力臂 = 抗力×抗力臂）', '三類槓桿辨別與生活應用', '定滑輪（改方向）與動滑輪（省力1/2）', '輪軸與斜面省力規律']
       },
       {
@@ -211,6 +236,7 @@ export const coursesData = {
         title: '單元 7：物質的變化——防鏽與防腐',
         description: '探討鐵生鏽的三大條件與防鏽方法，學習微生物與食品保存的科學原理。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g6-06',
         keyConcepts: ['鐵生鏽條件（水+氧氣）', '防鏽方法（塗漆、鍍鋅、不鏽鋼）', '微生物生長條件', '食物保存（冷凍、脫水、醃漬、真空）']
       },
       {
@@ -218,7 +244,24 @@ export const coursesData = {
         title: '單元 8：生物與環境保育——地球村生態系',
         description: '認識生產者/消費者/分解者、食物鏈與食物網、臺灣豐富生態系與環境永續。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g6-07',
         keyConcepts: ['生態系組成角色', '食物鏈、食物網與能量金字塔', '臺灣四大生態系特徵', '生物多樣性與環境保護行動']
+      },
+      {
+        id: 'sci-u9',
+        title: '單元 9：奇妙的聲音世界與自製樂器',
+        description: '探討物體震動產生聲音、傳播介質、音調高低與音量大小，親手設計簡易樂器。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-g5-04',
+        keyConcepts: ['物體震動與傳播介質', '音調高低（頻率/弦長粗細緊度）', '音量大小（振幅/敲擊力道）', '回音、吸音與自製樂器']
+      },
+      {
+        id: 'sci-u10',
+        title: '單元 10：微觀世界與顯微鏡微生物探秘',
+        description: '掌握光學顯微鏡構造與正確操作步驟，觀察黴菌、酵母菌與生活發酵應用。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-nature/k-n06',
+        junyiTopicUrl: 'https://www.junyiacademy.org/topics/ns-ele-high',
+        keyConcepts: ['顯微鏡構造與操作七步驟', '玻片標本製作技巧', '黴菌與酵母菌發酵作用', '水滴中的微小生物與生活益害']
       }
     ],
     mandarin: [
@@ -263,6 +306,20 @@ export const coursesData = {
         description: '學習上台發表三要素、眼神與聲音表情，掌握吸睛簡報與同理傾聽技巧。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-chinese/k-c06',
         keyConcepts: ['燈塔原則眼神接觸與聲音投射', '肢體語言與自信站姿', '簡報 Less is More 視覺原則', '三明治正向回饋法']
+      },
+      {
+        id: 'man-u7',
+        title: '單元 7：應用文的智慧與生活實踐',
+        description: '精熟書信六大結構、信封直式橫式寫法、便條日記與畢業致詞演講稿寫作。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-chinese/k-c06',
+        keyConcepts: ['書信格式與提稱語祝道語', '直式與橫式信封收件人稱謂', '便條與留言條要素', '畢業致詞與自我介紹短講']
+      },
+      {
+        id: 'man-u8',
+        title: '單元 8：漢字造字之美與升中銜接國學常識',
+        description: '探索六書造字法則（象形/指事/會意/形聲）、易錯形近字多音字與文言虛詞入門。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-chinese/k-c06',
+        keyConcepts: ['六書造字法則特徵', '形近字與多音多義字辨析', '標點符號破折號與夾注號', '常見文言虛詞（之乎者也）入門']
       }
     ],
     social: [
@@ -307,6 +364,20 @@ export const coursesData = {
         description: '探索聯合國SDGs 17項指標，從食衣住行落實節能減碳與環境保育公民行動。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-social/k-s06',
         keyConcepts: ['聯合國SDGs 17大目標意涵', '氣候變遷與淨零減碳', '源頭減塑與在地綠色消費', '校園與社區環保倡議行動']
+      },
+      {
+        id: 'soc-u7',
+        title: '單元 7：地球村的世界地理與多元文明遺產',
+        description: '探索七大洲三大洋地形氣候、世界四大文明古國、世界主要宗教與文化遺產保護。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-social/k-s06',
+        keyConcepts: ['七大洲三大洋與氣候帶', '四大古文明與主要世界宗教', 'UNESCO 世界文化與自然遺產', '全球多元文化包容與尊重']
+      },
+      {
+        id: 'soc-u8',
+        title: '單元 8：科技浪潮、資訊倫理與未來社會',
+        description: '探討人工智慧與自動化衝擊、數位足跡與隱私保護、科技倫理與未來公民責任。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-social/k-s06',
+        keyConcepts: ['AI 人工智慧與就業生活變革', '大數據與數位足跡保護', 'Deepfake 深偽辨識與科技倫理', '未來世界公民素養與國際視野']
       }
     ],
     english: [
@@ -351,6 +422,20 @@ export const coursesData = {
         description: '掌握 Skimming 略讀與 Scanning 掃讀策略，利用上下文線索推敲英文生字。',
         videoUrl: 'https://www.junyiacademy.org/course-compare/k-english/k-e06',
         keyConcepts: ['Skimming for main idea', 'Scanning for specific details', 'Context clues for new vocabulary', 'Word suffixes (-tion, -ful, -ly)']
+      },
+      {
+        id: 'eng-u7',
+        title: 'Unit 7: Future Plans & Dream Careers',
+        description: '掌握未來式 will + V 與 be going to 句型，討論夢想職業與寒暑假精彩計畫。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-english/k-e06',
+        keyConcepts: ['Future tense: will & be going to', 'What are you going to do this summer?', 'Dream careers & job descriptions', 'Junior high goals & dreams']
+      },
+      {
+        id: 'eng-u8',
+        title: 'Unit 8: Comparisons & World Wonders',
+        description: '熟練形容詞比較級 (-er/more) 與最高級 (-est/most)，比較世界地標與自然奇景。',
+        videoUrl: 'https://www.junyiacademy.org/course-compare/k-english/k-e06',
+        keyConcepts: ['Comparative adjectives (-er, more)', 'Superlative adjectives (-est, the most)', 'Irregular adjectives (good/better/best)', 'Expressing opinions with reasons']
       }
     ],
     arts: [
@@ -381,6 +466,20 @@ export const coursesData = {
         description: '學習以人為本的設計思考五步驟，探討通用設計、公共指標系統與綠色包裝。',
         videoUrl: 'https://www.junyiacademy.org/',
         keyConcepts: ['設計思考五大步驟 (EDIPT)', '通用設計 (Universal Design) 友善原則', '公共視覺指標 (Pictogram) 特點', '綠色永續與形式跟隨功能']
+      },
+      {
+        id: 'art-u5',
+        title: '單元 5：數位藝術、定格動畫與多媒體創客',
+        description: '學習平板數位繪圖圖層技法、定格動畫分鏡腳本製作與聲音採集配樂剪輯。',
+        videoUrl: 'https://www.junyiacademy.org/',
+        keyConcepts: ['數位繪圖圖層與筆刷運用', '定格動畫製作五大流程', '角色製作與 FPS 影格率', '聲音音效採集與多媒體整合']
+      },
+      {
+        id: 'art-u6',
+        title: '單元 6：臺灣傳統民間工藝與世界偶戲巡禮',
+        description: '欣賞交趾陶、剪黏與藍染工藝，探索布袋戲生旦淨末丑操偶身段與世界偶戲藝術。',
+        videoUrl: 'https://www.junyiacademy.org/',
+        keyConcepts: ['臺灣傳統工藝（交趾陶/剪黏/藍染）', '布袋戲歷史與操偶身段', '角色行當（生旦淨末丑）特徵', '世界經典偶戲文化巡禮']
       }
     ],
     health_pe: [
@@ -411,6 +510,20 @@ export const coursesData = {
         description: '掌握健康體適能四大要素與鍛鍊方法，內化守規則、全力以赴的運動家品格。',
         videoUrl: 'https://www.junyiacademy.org/',
         keyConcepts: ['心肺耐力、肌力耐力、柔軟度、身體組成', '個人運動計畫設計要領', '運動家精神四大核心品格', '運動對大腦發育與情緒助益']
+      },
+      {
+        id: 'pe-u5',
+        title: '單元 5：球類戰術、團隊合作與運動安全競賽',
+        description: '精進籃球、排球與羽球核心技術，掌握攻守戰術、動態熱身與運動傷害防護。',
+        videoUrl: 'https://www.junyiacademy.org/',
+        keyConcepts: ['籃球運球上籃與區域防守', '排球托球接球與發球要領', '羽球擊球步法與戰術配合', '動態熱身與運動安全防護']
+      },
+      {
+        id: 'pe-u6',
+        title: '單元 6：心理健康、壓力調適與挫折復原力',
+        description: '認識高年級課業與同儕壓力源，學習正念深呼吸、成長心態與反霸凌求助支援。',
+        videoUrl: 'https://www.junyiacademy.org/',
+        keyConcepts: ['青少年壓力來源與身心覺察', '正念 4-7-8 呼吸放鬆法', '成長心態 (Growth Mindset) 建立', '霸凌類型辨識與求助管道']
       }
     ],
     integrative: [
@@ -441,6 +554,20 @@ export const coursesData = {
         description: '理解服務學習四部曲，從小做起參與校園志工、社區關懷與環境倡議實踐。',
         videoUrl: 'https://www.junyiacademy.org/',
         keyConcepts: ['服務學習四部曲 (準備、行動、反思、慶賀)', '少年公民社區與校園參與方案', '關懷弱勢與友善平權行動', '利他精神帶來的生命價值']
+      },
+      {
+        id: 'comp-u5',
+        title: '單元 5：媒體素養、數位辨識與健康上網指南',
+        description: '學會假新聞查核三步驟、識破演算法同溫層與標題黨、建立健康 3C 數位生活。',
+        videoUrl: 'https://www.junyiacademy.org/',
+        keyConcepts: ['假訊息查證三步驟', '演算法同溫層與過濾泡泡', '個人數位足跡與隱私防護', '20-20-20 護眼與數位排毒']
+      },
+      {
+        id: 'comp-u6',
+        title: '單元 6：戶外冒險、無痕山林與危機自主應變',
+        description: '實踐無痕山林 LNT 七大準則，熟練指北針地圖定向越野與野外求生 333 原則。',
+        videoUrl: 'https://www.junyiacademy.org/',
+        keyConcepts: ['戶外行前評估與裝備清單', '無痕山林 (LNT) 七大準則', '指北針與地圖定向越野技能', '野外迷路求生 333 原則與 STOP 法則']
       }
     ]
   },
