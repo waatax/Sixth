@@ -27,7 +27,7 @@ $\textcolor{#2e7d32}{\textbf{INd-III-2}}$ 探討微生物在食品發酵、醫�
 
 ## 🔑 核心觀念 1：複式光學顯微鏡構造與正確操作七步驟
 
-![圖解說明](./images/sci_u10_concept1.jpg)
+![圖解說明](./images/sci_u10_concept1.svg)
 
 ### 1. 顯微鏡兩大核心透鏡與放大倍率：
 - **目鏡（Eyepiece）**：靠近眼睛觀察的透鏡（長度越長，倍率通常越小）。
@@ -65,7 +65,7 @@ $$\textcolor{#2e7d32}{\textbf{\text{總放大倍率} = \text{目鏡倍率} \time
 
 ## 🔑 核心觀念 2：玻片製作技巧與成像倒立規律
 
-![圖解說明](./images/sci_u10_concept2.jpg)
+![圖解說明](./images/sci_u10_concept2.svg)
 
 ### 1. 臨時玻片製作三大訣竅：
 - **薄而透光**：標本必須切得極薄（單層細胞厚度），光線才能穿透。
@@ -86,7 +86,7 @@ $$\textcolor{#2e7d32}{\textbf{\text{總放大倍率} = \text{目鏡倍率} \time
 
 ## 🔑 核心觀念 3：黴菌、酵母菌與微生物的奇幻世界
 
-![圖解說明](./images/sci_u10_concept3.jpg)
+![圖解說明](./images/sci_u10_concept3.svg)
 
 ### 1. 黴菌 (Mold)：
 - 屬於真菌界多細胞微生物。

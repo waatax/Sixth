@@ -28,7 +28,7 @@ $\textcolor{#2e7d32}{\textbf{INe-III-3}}$ 認識噪音對人體身心的危害�
 
 ## 🔑 核心觀念 1：聲音的產生與傳播介質
 
-![圖解說明](./images/sci_u9_concept1.jpg)
+![圖解說明](./images/sci_u9_concept1.svg)
 
 ### 1. 聲音是怎麼產生的？
 - **唯一的必要條件**：$\textcolor{#e91e63}{\textbf{物體震動}}$！
@@ -58,7 +58,7 @@ $\textcolor{#2e7d32}{\textbf{INe-III-3}}$ 認識噪音對人體身心的危害�
 
 ## 🔑 核心觀念 2：聲音的三大要素（音調、音量、音色）
 
-![圖解說明](./images/sci_u9_concept2.jpg)
+![圖解說明](./images/sci_u9_concept2.svg)
 
 我們如何分辨世界上千變萬化的聲音？關鍵在於這三把尺：
 
@@ -94,7 +94,7 @@ $\textcolor{#2e7d32}{\textbf{INe-III-3}}$ 認識噪音對人體身心的危害�
 
 ## 🔑 核心觀念 3：回音、共鳴與自製樂器指南
 
-![圖解說明](./images/sci_u9_concept3.jpg)
+![圖解說明](./images/sci_u9_concept3.svg)
 
 ### 1. 回音（聲波的反射）：
 - 當聲波撞擊到堅硬平整的障礙物（如大理石牆面、峭壁）時，會像皮球一樣反射回來，形成「回音（Echo）」。

@@ -3,15 +3,34 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle, Keyboard } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
+import { coursesData } from '../data/courses';
 import { playSound, toggleMute, getMuteState, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 import ComboFlameIndicator from '../components/gamification/ComboFlameIndicator';
+import LessonCheatSheetModal from '../components/lesson/LessonCheatSheetModal';
 
 const QuizPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
   const { recordQuizResult, inventory, consumeItem } = useGamification();
+  const [showCheatSheet, setShowCheatSheet] = useState(false);
+
+  // Locate unit metadata for Cheat Sheet
+  let currentUnit = null;
+  let currentSubjectName = '';
+  for (const subject of coursesData.subjects) {
+    const found = coursesData.units[subject.id]?.find(u => u.id === unitId);
+    if (found) {
+      currentUnit = found;
+      currentSubjectName = subject.name;
+      break;
+    }
+  }
+  if (!currentUnit) {
+    currentUnit = { id: unitId, title: unitId };
+    currentSubjectName = '重點單元';
+  }
 
 
   const [currentQ, setCurrentQ] = useState(0);
@@ -187,17 +206,18 @@ const QuizPage = () => {
     const xpEarned = quizSummary?.earnedXp || (score * 20);
 
     return (
-      <div
-        className="card flex flex-col items-center text-center gap-6 py-10 max-w-xl mx-auto mt-4 animate-fade-in"
-        style={{
-          borderTop: '6px solid var(--accent-primary)',
-          backgroundColor: 'var(--bg-secondary)',
-          borderRadius: 'var(--radius-xl)',
-          border: '1.5px solid var(--border-light)',
-          padding: '36px 28px',
-          boxShadow: 'var(--shadow-md)'
-        }}
-      >
+      <>
+        <div
+          className="card flex flex-col items-center text-center gap-6 py-10 max-w-xl mx-auto mt-4 animate-fade-in"
+          style={{
+            borderTop: '6px solid var(--accent-primary)',
+            backgroundColor: 'var(--bg-secondary)',
+            borderRadius: 'var(--radius-xl)',
+            border: '1.5px solid var(--border-light)',
+            padding: '36px 28px',
+            boxShadow: 'var(--shadow-md)'
+          }}
+        >
         <div
           style={{
             backgroundColor: 'var(--accent-warning-soft)',
@@ -294,6 +314,17 @@ const QuizPage = () => {
 
         {/* Action Buttons */}
         <div className="flex gap-3 mt-4 flex-wrap justify-center w-full">
+          <button 
+            className="btn-outline flex items-center gap-2 text-sm font-bold text-amber-500 border-amber-400/60 hover:bg-amber-500/10" 
+            onClick={() => {
+              setShowCheatSheet(true);
+              playSound('pop');
+              triggerHaptic('selection');
+            }}
+          >
+            <Zap size={16} /> ⚡ 查閱本單元考前極速秘笈
+          </button>
+
           <button className="btn-outline flex items-center gap-2 text-sm" onClick={handleRestart}>
             <RotateCcw size={16} /> 重新挑戰刷滿 3 星
           </button>
@@ -303,8 +334,16 @@ const QuizPage = () => {
           </button>
         </div>
       </div>
-    );
-  }
+
+      <LessonCheatSheetModal
+        isOpen={showCheatSheet}
+        onClose={() => setShowCheatSheet(false)}
+        unit={currentUnit}
+        subjectName={currentSubjectName}
+      />
+    </>
+  );
+}
 
   return (
     <div className="max-w-2xl mx-auto mt-4 flex flex-col gap-5 py-2">
@@ -338,6 +377,22 @@ const QuizPage = () => {
           </span>
 
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => {
+                setShowCheatSheet(true);
+                playSound('pop');
+                triggerHaptic('selection');
+              }}
+              className="btn-outline flex items-center gap-1 text-xs py-1 px-3 font-bold text-amber-500"
+              style={{
+                backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                borderColor: 'rgba(245, 158, 11, 0.4)'
+              }}
+              title="查看考前極速秘笈"
+            >
+              <Zap size={14} />
+              <span>⚡ 極速秘笈</span>
+            </button>
             <button
               onClick={handleUse5050}
               className="btn-outline flex items-center gap-1 text-xs py-1 px-3 font-bold"
@@ -536,6 +591,14 @@ const QuizPage = () => {
           )}
         </div>
       </div>
+
+      {/* Quick Cheat Sheet Modal during Quiz */}
+      <LessonCheatSheetModal
+        isOpen={showCheatSheet}
+        onClose={() => setShowCheatSheet(false)}
+        unit={currentUnit}
+        subjectName={currentSubjectName}
+      />
     </div>
   );
 };

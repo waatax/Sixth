@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">設計思考 (Design Thinking EDIPT) 與通用設計生活美學</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 視 1-III-2：同理、定義、發想、原型、測試五大創新閉環</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">以人為本創新</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+      <!-- EDIPT 5 Steps -->
+      <rect x="0" y="0" width="140" height="200" rx="8" fill="#1e293b" stroke="#2563eb"/>
+      <text x="70" y="30" font-size="13" font-weight="800" fill="#60a5fa" text-anchor="middle">① 同理心</text>
+      <text x="70" y="50" font-size="11" font-weight="600" fill="#93c5fd" text-anchor="middle">Empathize</text>
+      <text x="70" y="85" font-size="11" fill="#cbd5e1" text-anchor="middle">換位思考</text>
+      <text x="70" y="105" font-size="11" fill="#cbd5e1" text-anchor="middle">深入觀察</text>
+      <text x="70" y="125" font-size="11" fill="#cbd5e1" text-anchor="middle">發掘使用者</text>
+      <text x="70" y="145" font-size="11" fill="#cbd5e1" text-anchor="middle">真實痛點</text>
+
+      <rect x="155" y="0" width="140" height="200" rx="8" fill="#1e293b" stroke="#10b981"/>
+      <text x="225" y="30" font-size="13" font-weight="800" fill="#34d399" text-anchor="middle">② 定義問題</text>
+      <text x="225" y="50" font-size="11" font-weight="600" fill="#6ee7b7" text-anchor="middle">Define</text>
+      <text x="225" y="85" font-size="11" fill="#cbd5e1" text-anchor="middle">收斂訊息</text>
+      <text x="225" y="105" font-size="11" fill="#cbd5e1" text-anchor="middle">界定關鍵</text>
+      <text x="225" y="125" font-size="11" fill="#cbd5e1" text-anchor="middle">撰寫清晰的</text>
+      <text x="225" y="145" font-size="11" fill="#cbd5e1" text-anchor="middle">問題陳述</text>
+
+      <rect x="310" y="0" width="140" height="200" rx="8" fill="#1e293b" stroke="#f59e0b"/>
+      <text x="380" y="30" font-size="13" font-weight="800" fill="#fbbf24" text-anchor="middle">③ 創意發想</text>
+      <text x="380" y="50" font-size="11" font-weight="600" fill="#fde68a" text-anchor="middle">Ideate</text>
+      <text x="380" y="85" font-size="11" fill="#cbd5e1" text-anchor="middle">腦力激盪</text>
+      <text x="380" y="105" font-size="11" fill="#cbd5e1" text-anchor="middle">不設限制</text>
+      <text x="380" y="125" font-size="11" fill="#cbd5e1" text-anchor="middle">發散思考</text>
+      <text x="380" y="145" font-size="11" fill="#cbd5e1" text-anchor="middle">追求點子量</text>
+
+      <rect x="465" y="0" width="140" height="200" rx="8" fill="#1e293b" stroke="#8b5cf6"/>
+      <text x="535" y="30" font-size="13" font-weight="800" fill="#c084fc" text-anchor="middle">④ 製作原型</text>
+      <text x="535" y="50" font-size="11" font-weight="600" fill="#e9d5ff" text-anchor="middle">Prototype</text>
+      <text x="535" y="85" font-size="11" fill="#cbd5e1" text-anchor="middle">快速實體化</text>
+      <text x="535" y="105" font-size="11" fill="#cbd5e1" text-anchor="middle">紙模草圖</text>
+      <text x="535" y="125" font-size="11" fill="#cbd5e1" text-anchor="middle">動手做出</text>
+      <text x="535" y="145" font-size="11" fill="#cbd5e1" text-anchor="middle">簡易雛形</text>
+
+      <rect x="620" y="0" width="140" height="200" rx="8" fill="#1e293b" stroke="#e11d48"/>
+      <text x="690" y="30" font-size="13" font-weight="800" fill="#fb7185" text-anchor="middle">⑤ 實際測試</text>
+      <text x="690" y="50" font-size="11" font-weight="600" fill="#fecdd3" text-anchor="middle">Test</text>
+      <text x="690" y="85" font-size="11" fill="#cbd5e1" text-anchor="middle">使用者試用</text>
+      <text x="690" y="105" font-size="11" fill="#cbd5e1" text-anchor="middle">收集回饋</text>
+      <text x="690" y="125" font-size="11" fill="#cbd5e1" text-anchor="middle">快速修正</text>
+      <text x="690" y="145" font-size="11" fill="#cbd5e1" text-anchor="middle">迭代進步</text>
+
+      <!-- Bottom: Universal Design -->
+      <rect x="0" y="215" width="760" height="110" rx="10" fill="#0f172a" stroke="#334155"/>
+      <text x="25" y="240" font-size="14" font-weight="800" fill="#38bdf8">♿ 通用設計 (Universal Design) 友善原則：</text>
+      <text x="25" y="265" font-size="12" fill="#cbd5e1">「不需要特別改造或專門設計，所有人（包含身障、長者、幼童、孕婦）都能公平、安全、自主使用。」</text>
+      <text x="25" y="290" font-size="12" fill="#fde68a">生活實例：無障礙低底盤公車、斜坡道、自動感應門、雙向拉鍊、公共廁所大圖示指標！</text>
+    
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>

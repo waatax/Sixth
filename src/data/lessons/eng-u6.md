@@ -1,5 +1,7 @@
 # 📌 單元標題與學習目標
 
+**課綱指標**：$\textcolor{#f59e0b}{\textbf{3-III-4 / 4-III-1}}$ 能掌握 Skimming（略讀抓主旨）與 Scanning（掃讀找細節）閱讀策略，並透過字尾變化 (-tion, -ful, -ly) 快速擴充英文生字庫。
+
 **Unit 6: Reading Comprehension & Phonics Mastery (閱讀理解力、字首字尾與語篇導航)**  
 *(108課綱對應指標：◎ 聽 1-III-1 / ◎ 說 2-III-1 / ◎ 讀 3-III-1, 3-III-6 / ◎ 寫 4-III-6)*
 
@@ -25,6 +27,9 @@
 ---
 
 ## 🔑 核心觀念 1：閱讀雙武器——Skimming vs. Scanning
+
+![圖解說明](./images/eng_u6_concept1.svg)
+
 
 ```text
  ┌─────────────────────────────────────────────────────────────┐

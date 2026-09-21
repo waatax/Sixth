@@ -27,7 +27,7 @@
 
 ## 🔑 核心觀念 1：小數除以整數——小數點直接往上對齊
 
-![圖解說明](./images/math_u3_concept1.jpg)
+![圖解說明](./images/math_u3_concept1.svg)
 
 ### 1. 計算心法
 當除數是 $\textcolor{#2e7d32}{\textbf{整數}}$ 時，直接依照一般整數直式除法進行除算，**商的小數點要直接垂直向上對齊被除數的小數點**！
@@ -64,7 +64,7 @@ $$ 0.56 \div 8 = \textcolor{#e91e63}{\textbf{0.07}} $$
 
 ## 🔑 核心觀念 2：小數除以小數——「移位魔法」讓除數變整數
 
-![圖解說明](./images/math_u3_concept2.jpg)
+![圖解說明](./images/math_u3_concept2.svg)
 
 ### 1. 移位原理（等值分數觀念）
 當除數含有小數時，我們無法背誦小數的乘法表。因此，解題的核心目標就是：$\textcolor{#e91e63}{\textbf{把除數變成整數}}$！
@@ -101,7 +101,7 @@ $$ 4.56 \div 1.2 = \textcolor{#e91e63}{\textbf{3.8}} $$
 
 ## 🔑 核心觀念 3：關鍵陷阱——餘數的小數點到底看哪裡？
 
-![圖解說明](./images/math_u3_concept3.jpg)
+![圖解說明](./images/math_u3_concept3.svg)
 
 這是全國段考與學力檢測中 $\textcolor{#d32f2f}{\textbf{失分率最高（超過 60% 學生曾在此犯錯）}}$ 的魔王考點！
 
@@ -143,7 +143,7 @@ $$ 0.3 \times 25 + 0.04 = 7.5 + 0.04 = \textcolor{#2e7d32}{\textbf{7.54 公尺}}
 
 ## 🔑 核心觀念 4：除不盡時的法寶——四捨五入求概數
 
-![圖解說明](./images/math_u3_concept4.jpg)
+![圖解說明](./images/math_u3_concept4.svg)
 
 當遇到除不盡（無限小數）或題目要求「取概數到指定位數」時，必須 $\textcolor{#e91e63}{\textbf{多算一位（指定位數的下一位）}}$，再依據 $\textcolor{#2196f3}{\textbf{「滿 5 進位，未滿 5 捨去」}}$ 的原則處理：
 

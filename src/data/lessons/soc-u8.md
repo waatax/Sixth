@@ -28,7 +28,7 @@ $\textcolor{#2e7d32}{\textbf{Cc-III-1}}$ 關懷科技發展帶來的數位落差
 
 ## 🔑 核心觀念 1：AI 科技革命與未來職場新面貌
 
-![圖解說明](./images/soc_u8_concept1.jpg)
+![圖解說明](./images/soc_u8_concept1.svg)
 
 ### 1. 人工智慧 (Artificial Intelligence, AI) 的躍進：
 - **傳統程式**：工程師必須一行一行寫下死板的規則指令（「如果 A，就做 B」）。
@@ -52,7 +52,7 @@ $\textcolor{#2e7d32}{\textbf{Cc-III-1}}$ 關懷科技發展帶來的數位落差
 
 ## 🔑 核心觀念 2：數位足跡、隱私防護與資訊倫理
 
-![圖解說明](./images/soc_u8_concept2.jpg)
+![圖解說明](./images/soc_u8_concept2.svg)
 
 ### 1. 什麼是數位足跡 (Digital Footprint)？
 當你在網路上點擊一個讚、搜尋一個關鍵字、看了一支短影音或打卡上傳照片，伺服器都會永久留下數據紀錄：
@@ -73,7 +73,7 @@ $\textcolor{#2e7d32}{\textbf{Cc-III-1}}$ 關懷科技發展帶來的數位落差
 
 ## 🔑 核心觀念 3：智慧財產權與學術誠信（生成式 AI 使用規範）
 
-![圖解說明](./images/soc_u8_concept3.jpg)
+![圖解說明](./images/soc_u8_concept3.svg)
 
 學校寫作業或科展時，能不能用 AI 幫忙？
 - ❌ **嚴重違規（剽竊與學術欺瞞）**：直接把作業題目丟給 AI，把 AI 生成的文字一字不改複製貼上，當成自己寫的報告提交。這屬於欺騙與剽竊行為！

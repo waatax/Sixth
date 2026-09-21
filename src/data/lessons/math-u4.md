@@ -26,7 +26,7 @@
 
 ## 🔑 核心觀念 1：認識「比」與「比值」
 
-![圖解說明](./images/math_u4_concept1.jpg)
+![圖解說明](./images/math_u4_concept1.svg)
 
 ### 1. 比的符號與各項名稱
 我們用「$a : b$」來表示 $a$ 和 $b$ 的比，讀作「$\textcolor{#e91e63}{\textbf{a 比 b}}$」：
@@ -56,7 +56,7 @@ $$ \textcolor{#e91e63}{\textbf{\text{比值} = \text{前項} \div \text{後項} 
 
 ## 🔑 核心觀念 2：等比性質與相等的比
 
-![圖解說明](./images/math_u4_concept2.jpg)
+![圖解說明](./images/math_u4_concept2.svg)
 
 如果兩個比的 $\textcolor{#e91e63}{\textbf{比值相同}}$，我們就稱這兩個比是「**相等的比**」，可以用等號連接組成**比例式**：
 $$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff \textcolor{#2196f3}{\textbf{a \times d = b \times c}} \quad \text{（外項乘積 = 內項乘積）} $$
@@ -76,7 +76,7 @@ $$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff \textcolor{#2196f3}{\textbf
 
 ## 🔑 核心觀念 3：化為「最簡整數比」四大題型攻防戰
 
-![圖解說明](./images/math_u4_concept3.jpg)
+![圖解說明](./images/math_u4_concept3.svg)
 
 **最簡整數比**的兩大嚴格要求：
 1. 前項和後項都必須是 $\textcolor{#e91e63}{\textbf{整數}}$。
@@ -95,7 +95,7 @@ $$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff \textcolor{#2196f3}{\textbf
 
 ## 🔑 核心觀念 4：比例分配生活應用題
 
-![圖解說明](./images/math_u4_concept4.jpg)
+![圖解說明](./images/math_u4_concept4.svg)
 
 ### 📝 範例 2：按比例分配巧克力
 老師把 $60$ 顆巧克力按照 $3 : 2$ 的比例分給小明和小華，請問小明和小華各分到幾顆？

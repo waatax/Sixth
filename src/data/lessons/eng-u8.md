@@ -33,7 +33,7 @@ In our daily lives, we are always comparing things:
 
 ## 🔑 核心觀念 1：形容詞比較級規則變化四大公式
 
-![圖解說明](./images/eng_u8_concept1.jpg)
+![圖解說明](./images/eng_u8_concept1.svg)
 
 比較兩者時，公式為：$\textcolor{#2196f3}{\textbf{A + be動詞 + 比較級 + than + B}}$
 
@@ -60,7 +60,7 @@ In our daily lives, we are always comparing things:
 
 ## 🔑 核心觀念 2：形容詞最高級與「the」的守護
 
-![圖解說明](./images/eng_u8_concept2.jpg)
+![圖解說明](./images/eng_u8_concept2.svg)
 
 當在「三個以上」的人、事、物或群體中評選第一名時，使用最高級！
 公式為：$\textcolor{#2e7d32}{\textbf{A + be動詞 + the + 最高級 + in / of + 範圍}}$
@@ -84,7 +84,7 @@ In our daily lives, we are always comparing things:
 
 ## 🔑 核心觀念 3：高頻不規則變化大本營 (Irregular Adjectives)
 
-![圖解說明](./images/eng_u8_concept3.jpg)
+![圖解說明](./images/eng_u8_concept3.svg)
 
 有些最重要的日常形容詞，比較級和最高級完全不按牌理出牌，必須死死焊在大腦裡：
 

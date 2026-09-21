@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">關鍵時刻急救與運動防護：CPR+AED「叫叫CD」與 PRICE 原則</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 健 3a-III-1：熟練心肺復甦術按壓深度頻率與扭傷處置</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">黃金救援4分鐘</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+      <!-- Left: CPR + AED Call Call C D -->
+      <rect x="0" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="20" y="26" font-size="15" font-weight="700" fill="#f8fafc">🚨 CPR+AED「叫叫CD」口訣</text>
+
+      <rect x="16" y="55" width="338" height="55" rx="8" fill="#0f172a" stroke="#3b82f6"/>
+      <text x="30" y="78" font-size="13" font-weight="800" fill="#60a5fa">叫 (Check)：拍肩呼叫，確認意識與呼吸</text>
+      <text x="30" y="97" font-size="11" fill="#cbd5e1">若無呼吸或僅有瀕死喘息，立即啟動急救。</text>
+
+      <rect x="16" y="118" width="338" height="55" rx="8" fill="#0f172a" stroke="#10b981"/>
+      <text x="30" y="141" font-size="13" font-weight="800" fill="#34d399">叫 (Call)：指定路人撥打 119，並拿 AED</text>
+      <text x="30" y="160" font-size="11" fill="#cbd5e1">明確指定對象：「那位穿紅衣服的先生請幫忙報案拿AED！」</text>
+
+      <rect x="16" y="181" width="338" height="65" rx="8" fill="#0f172a" stroke="#ef4444"/>
+      <text x="30" y="204" font-size="13" font-weight="800" fill="#f87171">C (Compress)：雙手重疊胸外按壓</text>
+      <text x="30" y="223" font-size="12" fill="#fca5a5">位置：兩乳頭連線正中央（胸骨下半段）</text>
+      <text x="30" y="238" font-size="11" fill="#cbd5e1">深度：至少 5 公分；速率：每分鐘 100~120 下</text>
+
+      <rect x="16" y="254" width="338" height="58" rx="8" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="30" y="277" font-size="13" font-weight="800" fill="#fbbf24">D (Defibrillate)：依語音操作 AED 電擊</text>
+      <text x="30" y="296" font-size="11" fill="#cbd5e1">開電源 ➔ 貼貼片 ➔ 聽分析離患者 ➔ 按下電擊鍵</text>
+
+      <!-- Right: PRICE for Sports Injury -->
+      <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">🩹 急性運動傷害 PRICE 處理原則</text>
+
+      <rect x="405" y="55" width="340" height="46" rx="6" fill="#0f172a" stroke="#3b82f6"/>
+      <text x="420" y="76" font-size="13" font-weight="800" fill="#60a5fa">P - Protect (保護)：使用護具固定傷處</text>
+      <text x="420" y="93" font-size="11" fill="#cbd5e1">防止二度受傷，停止比賽或活動。</text>
+
+      <rect x="405" y="108" width="340" height="46" rx="6" fill="#0f172a" stroke="#10b981"/>
+      <text x="420" y="129" font-size="13" font-weight="800" fill="#34d399">R - Rest (休息)：立即停止患部活動</text>
+      <text x="420" y="146" font-size="11" fill="#cbd5e1">切忌勉強運動，以免韌帶或肌肉撕裂惡化。</text>
+
+      <rect x="405" y="161" width="340" height="46" rx="6" fill="#0f172a" stroke="#06b6d4"/>
+      <text x="420" y="182" font-size="13" font-weight="800" fill="#38bdf8">I - Ice (冰敷)：降低微血管破裂出血</text>
+      <text x="420" y="199" font-size="11" fill="#cbd5e1">每次 15~20 分鐘，毛巾包裹冰塊防凍傷。</text>
+
+      <rect x="405" y="214" width="340" height="46" rx="6" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="420" y="235" font-size="13" font-weight="800" fill="#fbbf24">C - Compress (壓迫)：彈性繃帶適度加壓</text>
+      <text x="420" y="252" font-size="11" fill="#cbd5e1">減少患部腫脹，留意末梢血液循環。</text>
+
+      <rect x="405" y="267" width="340" height="46" rx="6" fill="#0f172a" stroke="#a855f7"/>
+      <text x="420" y="288" font-size="13" font-weight="800" fill="#c084fc">E - Elevate (抬高)：抬高患肢高於心臟</text>
+      <text x="420" y="305" font-size="11" fill="#cbd5e1">促進血液靜脈回流，有效消除患處水腫。</text>
+    
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>

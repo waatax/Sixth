@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">Daily Routines, Time Expressions & Prepositions (at / in / on)</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 1-III-2：掌握日常作息時間表達法與時間介系詞黃金搭配</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">Time & Prepositions</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+      <!-- Left: Clock expressions -->
+      <rect x="0" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="20" y="26" font-size="15" font-weight="700" fill="#f8fafc">⏰ English Clock Expressions (時間說法)</text>
+
+      <circle cx="95" cy="130" r="55" fill="#0f172a" stroke="#3b82f6" stroke-width="2.5"/>
+      <line x1="95" y1="130" x2="95" y2="90" stroke="#f43f5e" stroke-width="3"/>
+      <line x1="95" y1="130" x2="135" y2="130" stroke="#38bdf8" stroke-width="2.5"/>
+      <circle cx="95" cy="130" r="4" fill="#ffffff"/>
+      <text x="95" y="82" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">12</text>
+      <text x="142" y="134" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="95" y="180" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+      <text x="48" y="134" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+
+      <rect x="175" y="65" width="180" height="48" rx="6" fill="#0f172a" stroke="#3b82f6"/>
+      <text x="185" y="86" font-size="12" font-weight="700" fill="#60a5fa">It's 7:00</text>
+      <text x="185" y="103" font-size="11" fill="#cbd5e1">seven o'clock (整點)</text>
+
+      <rect x="175" y="120" width="180" height="48" rx="6" fill="#0f172a" stroke="#10b981"/>
+      <text x="185" y="141" font-size="12" font-weight="700" fill="#34d399">It's 7:15</text>
+      <text x="185" y="158" font-size="11" fill="#cbd5e1">a quarter past seven</text>
+
+      <rect x="175" y="175" width="180" height="48" rx="6" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="185" y="196" font-size="12" font-weight="700" fill="#fbbf24">It's 7:30</text>
+      <text x="185" y="213" font-size="11" fill="#cbd5e1">half past seven</text>
+
+      <rect x="175" y="230" width="180" height="48" rx="6" fill="#0f172a" stroke="#f43f5e"/>
+      <text x="185" y="251" font-size="12" font-weight="700" fill="#fb7185">It's 7:45</text>
+      <text x="185" y="268" font-size="11" fill="#cbd5e1">a quarter to eight</text>
+
+      <text x="185" y="305" font-size="11" fill="#94a3b8" text-anchor="middle">常用句型：What time do you wake up? ➔ I wake up at 6:30.</text>
+
+      <!-- Right: Prepositions at/in/on -->
+      <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">📍 時間介系詞金字塔 (at / on / in)</text>
+
+      <!-- Top: at -->
+      <polygon points="575,60 520,110 630,110" fill="#e11d48"/>
+      <text x="575" y="85" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">at (特定時刻)</text>
+      <text x="575" y="103" font-size="10" fill="#ffe4e6" text-anchor="middle">at 7:00, at noon, at night</text>
+
+      <!-- Middle: on -->
+      <polygon points="520,113 630,113 670,180 480,180" fill="#f59e0b"/>
+      <text x="575" y="142" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">on (特定日期 / 星期)</text>
+      <text x="575" y="165" font-size="11" fill="#fef3c7" text-anchor="middle">on Monday, on July 4th, on my birthday</text>
+
+      <!-- Bottom: in -->
+      <polygon points="480,183 670,183 720,260 430,260" fill="#2563eb"/>
+      <text x="575" y="215" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">in (較長的時間區間)</text>
+      <text x="575" y="240" font-size="11" fill="#dbeafe" text-anchor="middle">in the morning, in 2026, in summer, in May</text>
+
+      <rect x="405" y="270" width="340" height="45" rx="8" fill="#0f172a" stroke="#10b981"/>
+      <text x="575" y="297" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">記憶速訣：精確點用 at・特定日用 on・大區間用 in</text>
+    
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>

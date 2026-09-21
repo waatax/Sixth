@@ -461,6 +461,7 @@ export const EnglishTenseTimeMachine = () => {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 export const VirtualMicroscopeLab = () => {
   const [mag, setMag] = useState('low'); // 'low' (100X) | 'high' (400X)
+  const [specimen, setSpecimen] = useState('letter_p'); // 'letter_p' | 'onion' | 'paramecium'
   const [posX, setPosX] = useState(15); // slide position offsets
   const [posY, setPosY] = useState(15);
   const [focus, setFocus] = useState(85); // 0~100, 100 is sharpest
@@ -487,24 +488,50 @@ export const VirtualMicroscopeLab = () => {
           </div>
           <div>
             <h3 className="text-base font-bold text-primary">光學顯微鏡虛擬操作台</h3>
-            <p className="text-xs text-secondary">親身體驗「上下顛倒左右相反」與高低倍鏡光學特徵</p>
+            <p className="text-xs text-secondary">親身體驗 180° 倒立放大虛像（字母 p ➔ d）與高低倍鏡光學特徵</p>
           </div>
         </div>
 
-        {/* Magnification Switch */}
-        <div className="flex gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold">
-          <button
-            onClick={() => { setMag('low'); playSound('click'); }}
-            className={`px-3 py-1.5 rounded-lg transition-all ${mag === 'low' ? 'bg-emerald-600 text-white shadow-sm' : 'text-secondary hover:text-primary'}`}
-          >
-            低倍鏡 (100X)
-          </button>
-          <button
-            onClick={() => { setMag('high'); playSound('click'); }}
-            className={`px-3 py-1.5 rounded-lg transition-all ${mag === 'high' ? 'bg-emerald-600 text-white shadow-sm' : 'text-secondary hover:text-primary'}`}
-          >
-            高倍鏡 (400X)
-          </button>
+        {/* Specimen & Magnification Controls */}
+        <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex gap-1 p-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold">
+            <button
+              onClick={() => { setSpecimen('letter_p'); playSound('click'); }}
+              className={`px-2.5 py-1 rounded-lg transition-all ${specimen === 'letter_p' ? 'bg-amber-600 text-white shadow-sm' : 'text-secondary hover:text-primary'}`}
+              title="英文字母 p 標本（驗證 180° 倒立像變 d）"
+            >
+              字母「p」
+            </button>
+            <button
+              onClick={() => { setSpecimen('onion'); playSound('click'); }}
+              className={`px-2.5 py-1 rounded-lg transition-all ${specimen === 'onion' ? 'bg-emerald-600 text-white shadow-sm' : 'text-secondary hover:text-primary'}`}
+              title="洋蔥表皮細胞"
+            >
+              洋蔥表皮
+            </button>
+            <button
+              onClick={() => { setSpecimen('paramecium'); playSound('click'); }}
+              className={`px-2.5 py-1 rounded-lg transition-all ${specimen === 'paramecium' ? 'bg-blue-600 text-white shadow-sm' : 'text-secondary hover:text-primary'}`}
+              title="池塘草履蟲"
+            >
+              草履蟲
+            </button>
+          </div>
+
+          <div className="flex gap-1 p-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold">
+            <button
+              onClick={() => { setMag('low'); playSound('click'); }}
+              className={`px-3 py-1 rounded-lg transition-all ${mag === 'low' ? 'bg-emerald-600 text-white shadow-sm' : 'text-secondary hover:text-primary'}`}
+            >
+              低倍 (100X)
+            </button>
+            <button
+              onClick={() => { setMag('high'); playSound('click'); }}
+              className={`px-3 py-1 rounded-lg transition-all ${mag === 'high' ? 'bg-emerald-600 text-white shadow-sm' : 'text-secondary hover:text-primary'}`}
+            >
+              高倍 (400X)
+            </button>
+          </div>
         </div>
       </div>
 
@@ -512,40 +539,64 @@ export const VirtualMicroscopeLab = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
         {/* Eyepiece Circular Viewport */}
         <div className="flex flex-col items-center">
-          <div className="relative w-56 h-56 rounded-full overflow-hidden border-8 border-slate-800 dark:border-slate-700 shadow-inner bg-slate-900 flex items-center justify-center">
-            {/* Specimen Field */}
+          <div className="relative w-60 h-60 rounded-full overflow-hidden border-8 border-slate-800 dark:border-slate-700 shadow-inner bg-slate-900 flex items-center justify-center">
+            {/* Specimen Field with True 180deg Optical Inversion */}
             <div
               className="absolute transition-transform duration-200"
               style={{
-                transform: `translate(${viewX}px, ${viewY}px) scale(${mag === 'high' ? 2.5 : 1})`,
-                filter: `blur(${Math.max(0, (100 - focus) / 15)}px) brightness(${mag === 'high' ? brightness * 0.75 : brightness}%)`
+                transform: `translate(${viewX}px, ${viewY}px) scale(${mag === 'high' ? 2.5 : 1}) rotate(180deg)`,
+                filter: `blur(${Math.max(0, (100 - focus) / 14)}px) brightness(${mag === 'high' ? brightness * 0.72 : brightness}%)`
               }}
             >
-              {/* Onion Cell Grid Mockup */}
-              <div className="grid grid-cols-4 gap-1 w-64 h-64 p-4 border border-emerald-500/40 bg-emerald-950/20 rounded">
-                {Array.from({ length: 16 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="border border-emerald-400/60 rounded-sm p-1 flex items-center justify-center relative bg-emerald-800/20 text-[8px] text-emerald-300 font-mono"
-                  >
-                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-300/80 border border-emerald-200" />
-                    {i === 5 && <span className="absolute text-[9px] -top-1 font-bold text-amber-300">d</span>}
+              {specimen === 'letter_p' && (
+                <div className="w-48 h-48 flex items-center justify-center border border-dashed border-amber-500/40 bg-amber-950/20 rounded-xl">
+                  {/* The actual letter on slide is 'p', but rotating 180deg makes it look like 'd' */}
+                  <span className="text-6xl font-black font-serif text-amber-300 select-none">
+                    p
+                  </span>
+                </div>
+              )}
+
+              {specimen === 'onion' && (
+                <div className="grid grid-cols-4 gap-1 w-64 h-64 p-4 border border-emerald-500/40 bg-emerald-950/20 rounded">
+                  {Array.from({ length: 16 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="border border-emerald-400/60 rounded-sm p-1 flex items-center justify-center relative bg-emerald-800/20 text-[8px] text-emerald-300 font-mono"
+                    >
+                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-300/80 border border-emerald-200" />
+                      <span className="text-[7px] text-emerald-400 opacity-60 absolute bottom-0.5 right-1">{i + 1}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {specimen === 'paramecium' && (
+                <div className="w-48 h-48 flex items-center justify-center relative border border-blue-500/30 bg-blue-950/20 rounded-full">
+                  <div className="w-24 h-12 bg-teal-400/80 rounded-full border-2 border-teal-200 shadow-md flex items-center justify-center relative animate-pulse">
+                    <div className="w-4 h-4 rounded-full bg-teal-800/80 mr-4" title="大核" />
+                    <div className="w-2 h-2 rounded-full bg-amber-300 absolute left-2" title="伸縮泡" />
+                    <div className="w-2 h-2 rounded-full bg-amber-300 absolute right-2" title="伸縮泡" />
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
 
             {/* Crosshairs Overlay */}
-            <div className="pointer-events-none absolute w-full h-[1px] bg-red-500/30" />
-            <div className="pointer-events-none absolute h-full w-[1px] bg-red-500/30" />
+            <div className="pointer-events-none absolute w-full h-[1px] bg-red-500/35" />
+            <div className="pointer-events-none absolute h-full w-[1px] bg-red-500/35" />
           </div>
 
-          <div className="text-[11px] text-secondary mt-2 flex items-center gap-1">
+          <div className="text-[11px] text-secondary mt-2.5 flex items-center gap-1.5">
             <Eye size={13} />
-            <span>目鏡視野視角（倒立放大虛像）</span>
-            {isCentered && (
+            <span>目鏡視野（180° 倒立放大虛像）</span>
+            {isCentered ? (
               <span className="text-emerald-600 font-bold ml-1 flex items-center gap-0.5">
-                <CheckCircle2 size={12} /> 已居中！
+                <CheckCircle2 size={13} /> 標本已精準居中！
+              </span>
+            ) : (
+              <span className="text-amber-600 font-medium ml-1">
+                像偏在 {viewX > 5 ? '右' : viewX < -5 ? '左' : ''}{viewY < -5 ? '上' : viewY > 5 ? '下' : ''}方（請推動玻片調整）
               </span>
             )}
           </div>
@@ -555,8 +606,13 @@ export const VirtualMicroscopeLab = () => {
         <div className="space-y-4">
           {/* Movement Controller */}
           <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-            <div className="text-xs font-bold text-primary mb-2 flex items-center gap-1">
-              <Move size={14} className="text-emerald-600" /> 載玻片實體移動控制盤：
+            <div className="text-xs font-bold text-primary mb-2 flex items-center justify-between">
+              <span className="flex items-center gap-1">
+                <Move size={14} className="text-emerald-600" /> 載玻片實體移動控制盤：
+              </span>
+              <span className="text-[11px] text-secondary">
+                玻片位置: ({posX}, {posY})
+              </span>
             </div>
             <div className="flex flex-col items-center gap-1">
               <button
@@ -564,7 +620,7 @@ export const VirtualMicroscopeLab = () => {
                 className="btn-outline px-3 py-1 text-xs rounded-lg font-bold"
                 title="載玻片向上推"
               >
-                ▲ 玻片往上推 (像往下跑)
+                ▲ 玻片往上推 (視野物像往下)
               </button>
               <div className="flex gap-3">
                 <button
@@ -577,7 +633,7 @@ export const VirtualMicroscopeLab = () => {
                 <button
                   onClick={() => { setPosX(0); setPosY(0); playSound('click'); }}
                   className="btn-outline px-2 py-1 text-xs rounded-lg"
-                  title="復位"
+                  title="快速置中復位"
                 >
                   <RotateCcw size={12} />
                 </button>
@@ -594,7 +650,7 @@ export const VirtualMicroscopeLab = () => {
                 className="btn-outline px-3 py-1 text-xs rounded-lg font-bold"
                 title="載玻片向下推"
               >
-                ▼ 玻片往下推 (像往上跑)
+                ▼ 玻片往下推 (視野物像往上)
               </button>
             </div>
           </div>
@@ -603,7 +659,7 @@ export const VirtualMicroscopeLab = () => {
           <div className="space-y-2">
             <div>
               <div className="flex justify-between text-xs font-bold">
-                <span>調節輪調焦清晰度 (Fine Focus)：</span>
+                <span>調節輪調焦清晰度 (Focus)：</span>
                 <span className="font-mono text-emerald-600">{focus}%</span>
               </div>
               <input
@@ -617,7 +673,7 @@ export const VirtualMicroscopeLab = () => {
             </div>
             <div>
               <div className="flex justify-between text-xs font-bold">
-                <span>光圈亮度調節 (Aperture / Brightness)：</span>
+                <span>光圈與進光量調節 (Aperture)：</span>
                 <span className="font-mono text-emerald-600">{brightness}%</span>
               </div>
               <input
@@ -632,11 +688,12 @@ export const VirtualMicroscopeLab = () => {
           </div>
 
           {/* Golden Rule Memo */}
-          <div className="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-xs space-y-1">
-            <div className="font-bold text-emerald-800 dark:text-emerald-300">★ 國一段考必考兩大鐵律：</div>
+          <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-xs space-y-1.5">
+            <div className="font-bold text-emerald-800 dark:text-emerald-300">★ 國一段考必考光學兩大鐵律：</div>
             <p className="text-secondary leading-relaxed">
-              1. <strong>物在哪裡，往哪裡移：</strong>若洋蔥細胞偏在視野左方，將載玻片向「左方」推動即可移至中央！<br />
-              2. <strong>低倍換高倍：</strong>視野變【暗】、範圍變【小】、細胞數變【少】、細胞變【大】！高倍鏡下【只能調細調節輪】！
+              1. <strong>物在哪裡，玻片往哪裡推：</strong>例如物像偏在右上角，實物其實在左下角，若想將實物推向中央，載玻片必須直接朝「右上角」推動！<br />
+              2. <strong>倒立像規律：</strong>光學旋轉 180° 後，字母「p」在目鏡中會完全呈現「d」，字母「b」會呈現「q」！<br />
+              3. <strong>低倍換高倍【暗、小、少、大】：</strong>進光減少視野變【暗】、範圍變【小】、數目變【少】、細胞體積變【大】！高倍鏡下【只能轉細調節輪】！
             </p>
           </div>
         </div>

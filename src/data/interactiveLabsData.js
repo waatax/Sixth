@@ -53,5 +53,32 @@ export const interactiveLabsList = [
     subjectName: '數學領域',
     color: '#ec4899',
     emoji: '⏱️'
+  },
+  {
+    id: 'virtual-microscope',
+    title: '🔬 複式顯微鏡 180° 光學倒像虛擬實驗室',
+    subtitle: '親手驗證字母「p ➔ d」旋轉倒像、高低倍鏡視野四大光學特徵！',
+    subject: 'science',
+    subjectName: '自然科學',
+    color: '#059669',
+    emoji: '🔬'
+  },
+  {
+    id: 'number-line',
+    title: '📐 數線正負運算與絕對值走步機',
+    subtitle: '可視化相反數鏡像對稱、幾何距離 |A - B| 與正負向量走步！',
+    subject: 'math',
+    subjectName: '數學領域',
+    color: '#6366f1',
+    emoji: '📏'
+  },
+  {
+    id: 'english-tense',
+    title: '⏳ 英語動詞時態時光機',
+    subtitle: '自由切換主詞與動詞，動態演示現在、進行、過去、未來四時態！',
+    subject: 'english',
+    subjectName: '英語文領域',
+    color: '#d97706',
+    emoji: '⏳'
   }
 ];

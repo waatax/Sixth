@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">變動的大地：三大岩類循環與河流流水作用 (Rocks & River Erosion)</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 INc-III-5：火成岩、沉積岩、變質岩循環與上中下游作用</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">地表地質作用</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+      <!-- Left: Three Rock Types Cycle -->
+      <rect x="0" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="20" y="26" font-size="15" font-weight="700" fill="#f8fafc">🌋 三大岩類地質循環</text>
+
+      <!-- Igneous -->
+      <circle cx="90" cy="110" r="35" fill="#ef4444" fill-opacity="0.3" stroke="#f87171" stroke-width="2"/>
+      <text x="90" y="108" font-size="13" font-weight="800" fill="#fca5a5" text-anchor="middle">火成岩</text>
+      <text x="90" y="125" font-size="10" fill="#cbd5e1" text-anchor="middle">安山岩/玄武岩</text>
+
+      <!-- Sedimentary -->
+      <circle cx="280" cy="110" r="35" fill="#f59e0b" fill-opacity="0.3" stroke="#fbbf24" stroke-width="2"/>
+      <text x="280" y="108" font-size="13" font-weight="800" fill="#fde68a" text-anchor="middle">沉積岩</text>
+      <text x="280" y="125" font-size="10" fill="#cbd5e1" text-anchor="middle">頁岩/砂岩/石灰岩</text>
+
+      <!-- Metamorphic -->
+      <circle cx="185" cy="225" r="35" fill="#a855f7" fill-opacity="0.3" stroke="#c084fc" stroke-width="2"/>
+      <text x="185" y="223" font-size="13" font-weight="800" fill="#e9d5ff" text-anchor="middle">變質岩</text>
+      <text x="185" y="240" font-size="10" fill="#cbd5e1" text-anchor="middle">大理岩/板岩</text>
+
+      <text x="185" y="295" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle">岩石在地殼內經冷卻、風化沉積、高溫高壓不斷循環！</text>
+
+      <!-- Right: River 3 Actions -->
+      <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">🏞️ 流水三大作用 (上・中・下游)</text>
+
+      <rect x="405" y="55" width="340" height="75" rx="8" fill="#0f172a" stroke="#2563eb"/>
+      <text x="420" y="78" font-size="13" font-weight="800" fill="#60a5fa">上游：以「侵蝕作用」為主</text>
+      <text x="420" y="98" font-size="12" fill="#cbd5e1">河道狹窄、坡陡水急、巨石林立，常見 V 型谷、瀑布景觀。</text>
+
+      <rect x="405" y="140" width="340" height="75" rx="8" fill="#0f172a" stroke="#10b981"/>
+      <text x="420" y="163" font-size="13" font-weight="800" fill="#34d399">中游：以「搬運作用」為主</text>
+      <text x="420" y="183" font-size="12" fill="#cbd5e1">河面放寬、流速漸緩、石頭碰撞磨圓成鵝卵石，形成曲流。</text>
+
+      <rect x="405" y="225" width="340" height="75" rx="8" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="420" y="248" font-size="13" font-weight="800" fill="#fbbf24">下游出海口：以「堆積作用」為主</text>
+      <text x="420" y="268" font-size="12" fill="#cbd5e1">水流平緩無力，泥沙沉積形成沖積扇、三角洲與沙灘。</text>
+    
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>

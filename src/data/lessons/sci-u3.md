@@ -29,6 +29,9 @@
 
 ## 🔑 核心觀念 1：磁鐵的基本性質與磁力線
 
+![圖解說明](./images/sci_u3_concept1.svg)
+
+
 每塊磁鐵無論形狀為何（條形、蹄形、環形），都一定具有兩個磁性最強的端點，稱為$\textcolor{#e91e63}{\textbf{磁極}}$：**N 極 (North Pole，指北極)** 與 **S 極 (South Pole，指南極)**。
 
 ```text

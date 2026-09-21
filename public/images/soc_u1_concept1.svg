@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">臺灣民主發展歷程與五權分立制衡體系 (Five Powers Separation)</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 社 1a-III-1：行政、立法、司法、考試、監察五院互相制衡</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">民主憲政分立</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+      <!-- Left: Democratic Milestones -->
+      <rect x="0" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="20" y="26" font-size="15" font-weight="700" fill="#f8fafc">🇹🇼 臺灣民主化四大里程碑</text>
+
+      <rect x="16" y="55" width="338" height="58" rx="8" fill="#0f172a" stroke="#3b82f6"/>
+      <text x="30" y="78" font-size="13" font-weight="700" fill="#60a5fa">📅 1987 年：宣布解嚴</text>
+      <text x="30" y="98" font-size="11" fill="#cbd5e1">解除戒嚴令，開放黨禁與報禁，人民享有集會結社言論自由。</text>
+
+      <rect x="16" y="120" width="338" height="58" rx="8" fill="#0f172a" stroke="#10b981"/>
+      <text x="30" y="143" font-size="13" font-weight="700" fill="#34d399">📅 1991~1992 年：國會全面改選</text>
+      <text x="30" y="163" font-size="11" fill="#cbd5e1">終止動員戡亂時期，第一屆中央民代退職，落實真正民意代表。</text>
+
+      <rect x="16" y="185" width="338" height="58" rx="8" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="30" y="208" font-size="13" font-weight="700" fill="#fbbf24">📅 1996 年：首任總統公民直選</text>
+      <text x="30" y="228" font-size="11" fill="#cbd5e1">全體公民一票一人直接投票選出國家元首，邁入成熟民主體制。</text>
+
+      <rect x="16" y="250" width="338" height="58" rx="8" fill="#0f172a" stroke="#a855f7"/>
+      <text x="30" y="273" font-size="13" font-weight="700" fill="#c084fc">📅 2000 年至今：政黨輪替常態化</text>
+      <text x="30" y="293" font-size="11" fill="#cbd5e1">政權和平轉移，多元民意透過選票理性展現，成亞洲民主典範。</text>
+
+      <!-- Right: Five Branches Pentagram -->
+      <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">🏛️ 五院職權與制衡分立體系</text>
+
+      <!-- Executive -->
+      <rect x="500" y="55" width="150" height="45" rx="8" fill="#2563eb"/>
+      <text x="575" y="76" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">行政院 (最高行政)</text>
+      <text x="575" y="92" font-size="10" fill="#dbeafe" text-anchor="middle">推動政策・編列預算</text>
+
+      <!-- Legislative -->
+      <rect x="405" y="130" width="140" height="45" rx="8" fill="#10b981"/>
+      <text x="475" y="151" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">立法院 (最高民意)</text>
+      <text x="475" y="167" font-size="10" fill="#d1fae5" text-anchor="middle">制定法律・審查預算</text>
+
+      <!-- Judicial -->
+      <rect x="605" y="130" width="140" height="45" rx="8" fill="#f59e0b"/>
+      <text x="675" y="151" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">司法院 (公正裁判)</text>
+      <text x="675" y="167" font-size="10" fill="#fef3c7" text-anchor="middle">掌理民刑審判・釋憲</text>
+
+      <!-- Examination -->
+      <rect x="420" y="215" width="140" height="45" rx="8" fill="#8b5cf6"/>
+      <text x="490" y="236" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">考試院 (公職考選)</text>
+      <text x="490" y="252" font-size="10" fill="#ede9fe" text-anchor="middle">公務員選拔・保障升遷</text>
+
+      <!-- Control -->
+      <rect x="590" y="215" width="140" height="45" rx="8" fill="#e11d48"/>
+      <text x="660" y="236" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">監察院 (監督風氣)</text>
+      <text x="660" y="252" font-size="10" fill="#ffe4e6" text-anchor="middle">糾舉彈劾・審計審查</text>
+
+      <!-- Bottom Principle -->
+      <rect x="405" y="275" width="340" height="40" rx="8" fill="#0f172a" stroke="#64748b"/>
+      <text x="575" y="298" font-size="12" font-weight="700" fill="#cbd5e1" text-anchor="middle">五院分工合作・互不隸屬・權力分立相互監督制衡</text>
+    
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>

@@ -42,7 +42,7 @@ $\textcolor{#2e7d32}{\textbf{d-III-2}}$ 能從各類統計圖表中進行資訊�
 
 ## 🔑 核心觀念 1：認識圓形圖與百分率圓形圖
 
-![圖解說明](./images/math_u12_concept1.jpg)
+![圖解說明](./images/math_u12_concept1.svg)
 
 ### 1. 什麼是圓形圖 (Circle Graph / Pie Chart)？
 以一個完整的圓形代表「$\textcolor{#2196f3}{\textbf{全體（總量 100\%）}}$」，再依據各個項目所佔全體的比例大小，將圓分割成不同大小的「扇形」。
@@ -60,7 +60,7 @@ $\textcolor{#2e7d32}{\textbf{d-III-2}}$ 能從各類統計圖表中進行資訊�
 
 ## 🔑 核心觀念 2：圓心角圓形圖與角度精算
 
-![圖解說明](./images/math_u12_concept2.jpg)
+![圖解說明](./images/math_u12_concept2.svg)
 
 如果紙上沒有預先印好的 100 格百分比刻度，我們要如何用「量角器」親手畫出精確的圓形圖？
 這時候就必須透過 $\textcolor{#e91e63}{\textbf{圓心角（360^\circ）}}$ 來換算！
@@ -87,7 +87,7 @@ $$\text{某項目的圓心角} = 360^\circ \times \frac{\text{該項目的數量
 
 ## 🔑 核心觀念 3：三大統計圖表的特點與選擇抉擇
 
-![圖解說明](./images/math_u12_concept3.jpg)
+![圖解說明](./images/math_u12_concept3.svg)
 
 在生活中遇到不同的數據情境，該選擇哪一種圖表最合適？
 

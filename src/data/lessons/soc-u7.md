@@ -27,7 +27,7 @@ $\textcolor{#2e7d32}{\textbf{Ba-III-1}}$ 認識聯合國教科文組織 (UNESCO)
 
 ## 🔑 核心觀念 1：世界七大洲與三大洋地理舞台
 
-![圖解說明](./images/soc_u7_concept1.jpg)
+![圖解說明](./images/soc_u7_concept1.svg)
 
 地球表面約有 $\mathbf{71\%}$ 是海洋，陸地僅佔 $\mathbf{29\%}$。
 
@@ -61,7 +61,7 @@ $\textcolor{#2e7d32}{\textbf{Ba-III-1}}$ 認識聯合國教科文組織 (UNESCO)
 
 ## 🔑 核心觀念 2：古代文明搖籃與世界主要宗教
 
-![圖解說明](./images/soc_u7_concept2.jpg)
+![圖解說明](./images/soc_u7_concept2.svg)
 
 ### 1. 大河孕育古代四大文明：
 人類最早的文明全部誕生於**水源豐沛、土壤肥沃的「大河流域」**：
@@ -91,7 +91,7 @@ $\textcolor{#2e7d32}{\textbf{Ba-III-1}}$ 認識聯合國教科文組織 (UNESCO)
 
 ## 🔑 核心觀念 3：UNESCO 世界遺產與全球跨文化尊重
 
-![圖解說明](./images/soc_u7_concept3.jpg)
+![圖解說明](./images/soc_u7_concept3.svg)
 
 ### 1. 什麼是世界遺產 (World Heritage)？
 由聯合國教科文組織 (UNESCO) 依據《世界遺產公約》審定，認為具有「全人類公認的卓越普世價值」的珍貴自然或文化資產：

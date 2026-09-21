@@ -1,5 +1,7 @@
 # 📌 單元標題與學習目標
 
+**課綱指標**：$\textcolor{#06b6d4}{\textbf{1-III-2 / 2-III-1}}$ 能聽懂、辨識並運用日常作息時間說法（整點、半點、一刻鐘）、時間介系詞 (at/in/on) 與頻率副詞進行流暢生活對話。
+
 **Unit 1: Daily Routines & Time Management (日常生活作息與時間表達)**
 *(108課綱對應指標：◎ 聽 1-III-1, 1-III-8 / ◎ 說 2-III-1, 2-III-7 / ◎ 讀 3-III-1 / ◎ 寫 4-III-1)*
 
@@ -22,7 +24,7 @@
 
 ## 🔑 核心觀念 1：英美時鐘視覺化報時法 (Telling Time)
 
-![圖解說明](./images/eng_u1_concept1.jpg)
+![圖解說明](./images/eng_u1_concept1.svg)
 
 除了直接念出阿拉伯數字（如 8:15 念 *eight fifteen*），母語人士最愛使用的「時鐘分割法」是以 30 分鐘為分界線：
 

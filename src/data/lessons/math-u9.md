@@ -30,7 +30,7 @@
 
 ## 🔑 核心觀念 1：放大圖與縮圖的幾何特徵
 
-![圖解說明](./images/math_u9_concept1.jpg)
+![圖解說明](./images/math_u9_concept1.svg)
 
 當我們把一個圖形依固定倍率放大或縮小時：
 1. $\textcolor{#2196f3}{\textbf{對應角相等}}$：所有對應的角度大小**完全不變**！

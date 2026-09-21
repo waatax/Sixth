@@ -16,6 +16,7 @@ import {
 import { interactiveLabsList } from '../data/interactiveLabsData';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { useGamification } from '../context/GamificationContext';
+import { VirtualMicroscopeLab, NumberLineSimulator, EnglishTenseTimeMachine } from '../components/prep/InteractivePrepSimulators';
 import confetti from 'canvas-confetti';
 
 const InteractiveLabsPage = () => {
@@ -168,7 +169,7 @@ const InteractiveLabsPage = () => {
       </div>
 
       {/* Lab Tabs Selector Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-2">
         {interactiveLabsList.map(lab => {
           const isSelected = selectedLabId === lab.id;
           return (
@@ -906,6 +907,33 @@ const InteractiveLabsPage = () => {
                 </button>
               </div>
             </div>
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 7: Virtual Microscope Lab */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'virtual-microscope' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <VirtualMicroscopeLab />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 8: Junior High Number Line Simulator */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'number-line' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <NumberLineSimulator />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 9: English Tense Time Machine */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'english-tense' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <EnglishTenseTimeMachine />
           </div>
         )}
       </div>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">經濟發展與產業轉型 (Economy & Silicon Shield) - 圖解 3</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">土地改革加工區、十大建設、竹科與全球半導體</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">108 課綱 社 3a-III-1</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+    <rect x="0" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+    <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+    <text x="20" y="26" font-size="15" font-weight="700" fill="#f8fafc">📌 核心架構視覺概念圖解 (Part 3)</text>
+
+    <rect x="20" y="60" width="330" height="75" rx="8" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="35" y="85" font-size="14" font-weight="800" fill="#60a5fa">經濟發展與產業轉型 </text>
+    <text x="35" y="110" font-size="12" fill="#cbd5e1">土地改革加工區、十大建設、竹科與全球半導體</text>
+
+    <rect x="20" y="150" width="330" height="150" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="35" y="178" font-size="13" font-weight="800" fill="#34d399">💡 108 課綱學習重點檢核：</text>
+    <text x="35" y="202" font-size="12" fill="#cbd5e1">1. 掌握基本定義、原理與生活實例應用</text>
+    <text x="35" y="225" font-size="12" fill="#cbd5e1">2. 融會貫通算式推導、邏輯架構與實驗分析</text>
+    <text x="35" y="248" font-size="12" fill="#cbd5e1">3. 避開常考迷思陷阱，靈活解決素養問題</text>
+    <text x="35" y="275" font-size="12" font-weight="700" fill="#38bdf8">★ 核心素養導向：知行合一・自主探究</text>
+
+    <!-- Right Box -->
+    <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+    <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+    <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">🚀 知識圖譜拓撲與升學銜接</text>
+
+    <rect x="405" y="55" width="340" height="80" rx="8" fill="#0f172a" stroke="#f59e0b"/>
+    <text x="420" y="80" font-size="13" font-weight="800" fill="#fbbf24">國小六年級先備知識 ➔</text>
+    <text x="420" y="103" font-size="12" fill="#cbd5e1">建立扎實基本功，熟練運算與概念辨識，不留死角！</text>
+    <text x="420" y="122" font-size="11" fill="#fde68a">打好地基是國中先修最關鍵的一步。</text>
+
+    <rect x="405" y="145" width="340" height="80" rx="8" fill="#0f172a" stroke="#a855f7"/>
+    <text x="420" y="170" font-size="13" font-weight="800" fill="#c084fc">國中七年級先修橋樑 ➔</text>
+    <text x="420" y="193" font-size="12" fill="#cbd5e1">銜接國中抽象概念、代數符號思維與會考綜合題型。</text>
+    <text x="420" y="212" font-size="11" fill="#e9d5ff">無痛跨越小學到中學的思考鴻溝！</text>
+
+    <rect x="405" y="235" width="340" height="75" rx="8" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="575" y="260" font-size="13" font-weight="800" fill="#38bdf8" text-anchor="middle">均一教育基金會・權威專家審定</text>
+    <text x="575" y="285" font-size="12" fill="#94a3b8" text-anchor="middle">對齊康軒、南一、翰林三大版本教科書進度</text>
+  
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>

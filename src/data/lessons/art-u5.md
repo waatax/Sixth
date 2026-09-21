@@ -30,7 +30,7 @@ $\textcolor{#2e7d32}{\textbf{設 2-III-2}}$ 欣賞當代互動新媒體藝術與
 
 ## 🔑 核心觀念 1：數位繪圖核心心法——「圖層 (Layers)」的思維
 
-![圖解說明](./images/art_u5_concept1.jpg)
+![圖解說明](./images/art_u5_concept1.svg)
 
 學習數位藝術的第一步，就是理解「$\textcolor{#2196f3}{\textbf{圖層（Layers）}}$」的概念。
 想像有一疊完全透明的玻璃紙，一層層疊放在一起：
@@ -58,7 +58,7 @@ $\textcolor{#2e7d32}{\textbf{設 2-III-2}}$ 欣賞當代互動新媒體藝術與
 
 ## 🔑 核心觀念 2：定格動畫 (Stop Motion) 製作五部曲
 
-![圖解說明](./images/art_u5_concept2.jpg)
+![圖解說明](./images/art_u5_concept2.svg)
 
 ### 1. 視覺暫留原理與每秒影格率 (FPS)：
 人類眼睛看過物體後，影像會在視網膜上短暫停留約 $\frac{1}{16}$ 秒。
@@ -85,7 +85,7 @@ $\textcolor{#2e7d32}{\textbf{設 2-III-2}}$ 欣賞當代互動新媒體藝術與
 
 ## 🔑 核心觀念 3：擬音 (Foley) 藝術與聲音魔法
 
-![圖解說明](./images/art_u5_concept3.jpg)
+![圖解說明](./images/art_u5_concept3.svg)
 
 好萊塢電影中大部分的音效，都不是在拍攝現場錄製的，而是由專業的「擬音師 (Foley Artist)」在錄音室用生活物品敲打出來的：
 - 🥬 **捏碎新鮮芹菜或甘藍菜** $\rightarrow$ 模擬：怪獸咬碎骨頭的清脆聲響！

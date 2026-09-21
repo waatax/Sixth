@@ -30,7 +30,7 @@
 
 ## 🔑 核心觀念 1：物質的變臉秀——物理變化 vs 化學變化
 
-![圖解說明](./images/sci_u7_concept1.png)
+![圖解說明](./images/sci_u7_concept1.svg)
 
 在自然界與日常生活中，物質發生的所有變化皆可歸納為兩大類別：
 
@@ -51,7 +51,7 @@
 
 ## 🔑 核心觀念 2：鐵生鏽的秘密與防鏽大作戰
 
-![圖解說明](./images/sci_u7_concept2.png)
+![圖解說明](./images/sci_u7_concept2.svg)
 
 $\textcolor{#ff9800}{\textbf{鐵生鏽}}$ 是一種緩慢進行的$\textcolor{#2196f3}{\textbf{氧化化學反應}}$。堅硬銀灰色的鐵元素，與空氣中的氧氣和水分長期接觸，轉變為鬆散、多孔、無金屬光澤且容易脫落的紅褐色$\textcolor{#e91e63}{\textbf{水合氧化鐵（鐵鏽，}\text{Fe}_2\text{O}_3\cdot x\text{H}_2\text{O}\textbf{）}}$。
 
@@ -90,7 +90,7 @@ $$\textcolor{#2196f3}{\textbf{鐵生鏽化學反應式：}} \textcolor{#e91e63}{
 
 ## 🔑 核心觀念 3：食物腐敗的罪魁禍首——微生物生長條件
 
-![圖解說明](./images/sci_u7_concept3.png)
+![圖解說明](./images/sci_u7_concept3.svg)
 
 新鮮食物放久變酸發臭、長出毛茸茸的菌絲，是空氣中肉眼看不見的$\textcolor{#e91e63}{\textbf{微生物（細菌、黴菌、酵母菌）}}$在食物上附著、大量繁殖，並分泌酵素分解食物營養所導致的$\textcolor{#2196f3}{\textbf{化學腐敗}}$。
 
@@ -112,7 +112,7 @@ $$\textcolor{#2196f3}{\textbf{鐵生鏽化學反應式：}} \textcolor{#e91e63}{
 
 ## 🔑 核心觀念 4：食品保存五大工法——與微生物的科學賽跑
 
-![圖解說明](./images/sci_u7_concept4.png)
+![圖解說明](./images/sci_u7_concept4.svg)
 
 食品保存的本質就是：$\textcolor{#e91e63}{\textbf{精準破壞微生物繁殖的四大條件}}$！
 

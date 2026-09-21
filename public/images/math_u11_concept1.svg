@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">等量公理與未知數方程求解模型 (Axiom of Equality)</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 r-III-4：用天平平衡原理理解等量加減乘除與移項法則</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">等式等量公理</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+      <!-- Left: Balance Scale -->
+      <rect x="0" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="20" y="26" font-size="15" font-weight="700" fill="#f8fafc">⚖️ 天平平衡幾何直觀</text>
+
+      <!-- Balance post -->
+      <line x1="185" y1="75" x2="185" y2="190" stroke="#94a3b8" stroke-width="5"/>
+      <polygon points="185,190 150,225 220,225" fill="#475569"/>
+      <!-- Balance beam -->
+      <line x1="60" y1="90" x2="310" y2="90" stroke="#f59e0b" stroke-width="4"/>
+      <!-- Left pan -->
+      <line x1="80" y1="90" x2="80" y2="140" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="40" y="140" width="80" height="20" rx="4" fill="#2563eb"/>
+      <text x="80" y="155" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">x ＋ 5</text>
+      <!-- Right pan -->
+      <line x1="290" y1="90" x2="290" y2="140" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="250" y="140" width="80" height="20" rx="4" fill="#10b981"/>
+      <text x="290" y="155" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">12</text>
+
+      <rect x="20" y="235" width="330" height="75" rx="8" fill="#0f172a" stroke="#3b82f6"/>
+      <text x="185" y="260" font-size="14" font-weight="800" fill="#60a5fa" text-anchor="middle">天平兩邊同時拿走 5 (等量減法)</text>
+      <text x="185" y="285" font-size="16" font-weight="900" fill="#34d399" text-anchor="middle">x ＋ 5 － 5 ＝ 12 － 5 ➔ x ＝ 7</text>
+      <text x="185" y="303" font-size="11" fill="#94a3b8" text-anchor="middle">天平依然保持水平平衡！</text>
+
+      <!-- Right: Four Axioms -->
+      <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">📐 等量公理四大核心律</text>
+
+      <rect x="405" y="55" width="340" height="55" rx="8" fill="#0f172a" stroke="#2563eb"/>
+      <text x="420" y="76" font-size="13" font-weight="800" fill="#60a5fa">① 等量加法公理</text>
+      <text x="420" y="96" font-size="12" fill="#cbd5e1">若 a ＝ b，則 a ＋ c ＝ b ＋ c （等號兩邊同加 c）</text>
+
+      <rect x="405" y="118" width="340" height="55" rx="8" fill="#0f172a" stroke="#10b981"/>
+      <text x="420" y="139" font-size="13" font-weight="800" fill="#34d399">② 等量減法公理</text>
+      <text x="420" y="159" font-size="12" fill="#cbd5e1">若 a ＝ b，則 a － c ＝ b － c （等號兩邊同減 c）</text>
+
+      <rect x="405" y="181" width="340" height="55" rx="8" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="420" y="202" font-size="13" font-weight="800" fill="#fbbf24">③ 等量乘法公理</text>
+      <text x="420" y="222" font-size="12" fill="#cbd5e1">若 a ＝ b，則 a × c ＝ b × c （等號兩邊同乘 c）</text>
+
+      <rect x="405" y="244" width="340" height="65" rx="8" fill="#0f172a" stroke="#ef4444"/>
+      <text x="420" y="265" font-size="13" font-weight="800" fill="#f87171">④ 等量除法公理 (c ≠ 0)</text>
+      <text x="420" y="285" font-size="12" fill="#cbd5e1">若 a ＝ b 且 c ≠ 0，則 a ÷ c ＝ b ÷ c</text>
+      <text x="420" y="300" font-size="10" fill="#fca5a5">特別注意：除數不能為 0！</text>
+    
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>

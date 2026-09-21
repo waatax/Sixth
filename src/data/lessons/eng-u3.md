@@ -1,5 +1,7 @@
 # 📌 單元標題與學習目標
 
+**課綱指標**：$\textcolor{#10b981}{\textbf{1-III-4 / 2-III-2}}$ 能看懂城鎮街道地圖、運用空間介系詞 (across from, next to, between) 與禮貌問路指路句型 (Excuse me, how do I get to...?)。
+
 **Unit 3: Places & Asking for Directions (城市探索與問路指路指南)**  
 *(108課綱對應指標：◎ 聽 1-III-4, 1-III-10 / ◎ 說 2-III-3, 2-III-9 / ◎ 讀 3-III-3 / ◎ 寫 4-III-3)*
 
@@ -22,6 +24,9 @@
 ---
 
 ## 🔑 核心觀念 1：城市設施單字庫 (City Places & Landmarks)
+
+![圖解說明](./images/eng_u3_concept1.svg)
+
 
 我們把城市裡的建築物依照生活功能分類，牢記以下高頻核心單字：
 

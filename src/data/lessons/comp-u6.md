@@ -30,7 +30,7 @@ $\textcolor{#2e7d32}{\textbf{環 2-III-1}}$ 深入實踐無痕山林（Leave No 
 
 ## 🔑 核心觀念 1：戶外行前裝備與洋蔥式三層穿搭法
 
-![圖解說明](./images/comp_u6_concept1.jpg)
+![圖解說明](./images/comp_u6_concept1.svg)
 
 在野外，**「失溫（Hypothermia）」是山林中威脅生命的第一大殺手**！
 
@@ -59,7 +59,7 @@ $\textcolor{#2e7d32}{\textbf{環 2-III-1}}$ 深入實踐無痕山林（Leave No 
 
 ## 🔑 核心觀念 2：無痕山林 (Leave No Trace, LNT) 七大黃金準則
 
-![圖解說明](./images/comp_u6_concept2.jpg)
+![圖解說明](./images/comp_u6_concept2.svg)
 
 無痕山林源自美國，是一套保護自然環境、讓後代子孫享有原始美景的全球環境倫理：
 
@@ -80,7 +80,7 @@ $\textcolor{#2e7d32}{\textbf{環 2-III-1}}$ 深入實踐無痕山林（Leave No 
 
 ## 🔑 核心觀念 3：等高線地圖、定向越野與野外迷途 STOP 原則
 
-![圖解說明](./images/comp_u6_concept3.jpg)
+![圖解說明](./images/comp_u6_concept3.svg)
 
 ### 1. 等高線地圖 (Contour Map) 的閱讀密碼：
 - **等高線密集** $\rightarrow$ 地形陡峭（懸崖或陡坡）！

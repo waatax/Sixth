@@ -16,13 +16,11 @@ import {
   BookOpen, 
   Lightbulb, 
   Copy, 
-  Eye, 
   Timer,
   Bookmark,
   ChevronDown,
   ChevronUp,
   Smile,
-  ShieldCheck,
   Award,
   Volume2,
   Headphones,
@@ -33,13 +31,11 @@ import {
   ZoomIn,
   Maximize2,
   Minimize2,
-  CheckSquare,
   PenTool,
-  HelpCircle,
-  RotateCcw,
   Printer,
-  Heart,
-  Palette
+  Palette,
+  FileText,
+  X
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
@@ -50,6 +46,8 @@ import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundE
 import LessonLightboxModal from '../components/lesson/LessonLightboxModal';
 import LessonNotebookDrawer from '../components/lesson/LessonNotebookDrawer';
 import LessonQuickFlashcardsModal from '../components/lesson/LessonQuickFlashcardsModal';
+import LessonScratchpadModal from '../components/lesson/LessonScratchpadModal';
+import LessonCheatSheetModal from '../components/lesson/LessonCheatSheetModal';
 import InteractiveMisconceptionCard from '../components/lesson/InteractiveMisconceptionCard';
 import InteractiveAnswerToggle from '../components/lesson/InteractiveAnswerToggle';
 import LessonMiniLabWidget from '../components/lesson/LessonMiniLabWidget';
@@ -72,7 +70,7 @@ const createSlug = (text) => {
 const LessonPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
-  const { fontSize, increaseFontSize, decreaseFontSize, focusMode, setFocusMode } = useTheme();
+  const { increaseFontSize, decreaseFontSize, focusMode, setFocusMode } = useTheme();
   const { addCoins, addXp } = useGamification();
 
   const [content, setContent] = useState('');
@@ -80,20 +78,25 @@ const LessonPage = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [copiedCodeId, setCopiedCodeId] = useState(null);
-  const [copiedTableId, setCopiedTableId] = useState(null);
   const [highlightMode, setHighlightMode] = useState(true);
   const [quickSummaryOpen, setQuickSummaryOpen] = useState(true);
   const [selectedTextBubble, setSelectedTextBubble] = useState(null);
   const [speechRate, setSpeechRate] = useState(speechEngine.rate || 1.0);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // New Interactive Modals & Features State
+  // Modals & Drawers State
   const [lightboxImage, setLightboxImage] = useState(null);
   const [isNotebookOpen, setIsNotebookOpen] = useState(false);
   const [isFlashcardsOpen, setIsFlashcardsOpen] = useState(false);
+  const [isScratchpadOpen, setIsScratchpadOpen] = useState(false);
+  const [isCheatSheetOpen, setIsCheatSheetOpen] = useState(false);
+  const [isTocDrawerOpen, setIsTocDrawerOpen] = useState(false);
   const [hasBookmarked, setHasBookmarked] = useState(false);
 
-  // 7x7 Eye-Care Reading Themes: 'normal' | 'sepia' | 'sage'
+  // ScrollSpy Active Section Tracking
+  const [activeSectionId, setActiveSectionId] = useState('');
+
+  // Eye-Care Reading Themes: 'normal' | 'sepia' | 'sage'
   const [readingTheme, setReadingTheme] = useState(() => {
     try {
       return localStorage.getItem('sixth_reading_theme') || 'normal';
@@ -102,20 +105,33 @@ const LessonPage = () => {
     }
   });
 
-  // 7x7 Floating Heart Particles for Double-tap reactions
+  // Floating Heart Particles for Double-tap reactions
   const [floatingHearts, setFloatingHearts] = useState([]);
   const [hasNotifiedMidway, setHasNotifiedMidway] = useState(false);
 
   // Concept Checklist state persisted in localStorage
   const [masteredConcepts, setMasteredConcepts] = useState([]);
+  // Section Mastery state persisted in localStorage
+  const [masteredSections, setMasteredSections] = useState([]);
+  // User Highlighting Vault persisted in localStorage
+  const [userHighlights, setUserHighlights] = useState([]);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(`sixth_mastered_concepts_${unitId}`);
       setMasteredConcepts(saved ? JSON.parse(saved) : []);
+
+      const savedSec = localStorage.getItem(`sixth_sec_mastery_${unitId}`);
+      setMasteredSections(savedSec ? JSON.parse(savedSec) : []);
+
+      const savedHl = localStorage.getItem(`sixth_highlights_${unitId}`);
+      setUserHighlights(savedHl ? JSON.parse(savedHl) : []);
+
       setHasBookmarked(!!localStorage.getItem(`bookmark_${unitId}`));
     } catch (e) {
       setMasteredConcepts([]);
+      setMasteredSections([]);
+      setUserHighlights([]);
     }
   }, [unitId]);
 
@@ -139,8 +155,8 @@ const LessonPage = () => {
           const rect = range.getBoundingClientRect();
           setSelectedTextBubble({
             text,
-            top: rect.top + window.scrollY - 44,
-            left: Math.max(10, rect.left + window.scrollX + rect.width / 2 - 80)
+            top: rect.top + window.scrollY - 52,
+            left: Math.max(10, rect.left + window.scrollX + rect.width / 2 - 140)
           });
         } catch (e) {
           setSelectedTextBubble(null);
@@ -174,7 +190,7 @@ const LessonPage = () => {
   }
 
   const [hasCelebrated, setHasCelebrated] = useState(false);
-  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [showFloatingDock, setShowFloatingDock] = useState(false);
 
   // Track scroll reading progress
   useEffect(() => {
@@ -184,10 +200,10 @@ const LessonPage = () => {
         const progress = Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100));
         setScrollProgress(progress);
         
-        if (window.scrollY > 400) {
-          setShowBackToTop(true);
+        if (window.scrollY > 260) {
+          setShowFloatingDock(true);
         } else {
-          setShowBackToTop(false);
+          setShowFloatingDock(false);
         }
 
         if (progress >= 99 && !hasCelebrated) {
@@ -206,6 +222,7 @@ const LessonPage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasCelebrated]);
 
+  // Fetch markdown content
   useEffect(() => {
     const fetchMarkdown = async () => {
       setLoading(true);
@@ -278,6 +295,74 @@ const LessonPage = () => {
     });
   };
 
+  // Toggle Section Mastery ("我懂了")
+  const toggleSectionMastery = (secId, secTitle) => {
+    setMasteredSections(prev => {
+      const isAlready = prev.includes(secId);
+      const next = isAlready ? prev.filter(id => id !== secId) : [...prev, secId];
+      try {
+        localStorage.setItem(`sixth_sec_mastery_${unitId}`, JSON.stringify(next));
+      } catch (e) {}
+
+      if (!isAlready) {
+        playSound('coin');
+        triggerHaptic('medium');
+        addCoins(3);
+        addXp(10, 'section_mastery');
+        dispatchDynamicIsland({
+          title: `💡 掌握小節：${secTitle.slice(0, 10)}`,
+          subtitle: '融會貫通！獲得 +3 🪙 +10 XP',
+          icon: '✅'
+        });
+      }
+      return next;
+    });
+  };
+
+  // Add highlight from selection bubble
+  const handleAddHighlight = (color = 'yellow') => {
+    if (!selectedTextBubble?.text) return;
+    const newHighlight = {
+      id: Date.now(),
+      text: selectedTextBubble.text,
+      color,
+      time: new Date().toLocaleDateString('zh-TW')
+    };
+    const nextList = [newHighlight, ...userHighlights.slice(0, 40)];
+    setUserHighlights(nextList);
+    try {
+      localStorage.setItem(`sixth_highlights_${unitId}`, JSON.stringify(nextList));
+    } catch (e) {}
+
+    playSound('coin');
+    triggerHaptic('light');
+    dispatchDynamicIsland({
+      title: '🖍️ 重點已加入劃記庫！',
+      subtitle: '可在右側隨堂筆記本中隨時複習',
+      icon: color === 'yellow' ? '🟡' : color === 'green' ? '🟢' : '💖'
+    });
+    setSelectedTextBubble(null);
+  };
+
+  // Add selection directly to notebook note text
+  const handleAddSelectionToNote = () => {
+    if (!selectedTextBubble?.text) return;
+    const noteKey = `sixth_notes_${unitId}`;
+    const saved = localStorage.getItem(noteKey) || '';
+    const updated = saved ? `${saved}\n\n📌 摘錄重點：\n"${selectedTextBubble.text}"` : `📌 摘錄重點：\n"${selectedTextBubble.text}"`;
+    try {
+      localStorage.setItem(noteKey, updated);
+    } catch (e) {}
+
+    playSound('correct');
+    dispatchDynamicIsland({
+      title: '📝 已加入隨堂手寫筆記本！',
+      subtitle: '點擊中控台筆記圖標即可檢視',
+      icon: '✨'
+    });
+    setSelectedTextBubble(null);
+  };
+
   // Universal TTS Narration Handler
   const toggleUniversalSpeech = () => {
     if (isPlaying) {
@@ -285,7 +370,6 @@ const LessonPage = () => {
     } else {
       const isEnglish = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
       const lang = isEnglish ? 'en-US' : 'zh-TW';
-      // Speak unit title and key concepts
       const conceptsText = currentUnit.keyConcepts ? currentUnit.keyConcepts.join('，') : '';
       const textToSpeak = `${currentUnit.title}。本單元核心考點：${conceptsText}。`;
       speechEngine.speak(textToSpeak, { lang });
@@ -326,10 +410,31 @@ const LessonPage = () => {
     return list;
   }, [content]);
 
+  // ScrollSpy with IntersectionObserver
+  useEffect(() => {
+    if (sections.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find(e => e.isIntersecting);
+        if (visible) {
+          setActiveSectionId(visible.target.id);
+        }
+      },
+      { rootMargin: '-70px 0px -55% 0px' }
+    );
+
+    sections.forEach(sec => {
+      const el = document.getElementById(sec.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [sections]);
+
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
-      const yOffset = -70;
+      const yOffset = -75;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -340,16 +445,11 @@ const LessonPage = () => {
     if (summarySec) {
       scrollToSection(summarySec.id);
     } else {
-      const tableEl = document.querySelector('.lesson-table-container');
-      if (tableEl) {
-        const yOffset = -80;
-        const y = tableEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
+      setIsCheatSheetOpen(true);
     }
   };
 
-  // 7x7 Theme Switcher
+  // Reading Theme Switcher
   const toggleReadingTheme = () => {
     const themes = ['normal', 'sepia', 'sage'];
     const nextIdx = (themes.indexOf(readingTheme) + 1) % themes.length;
@@ -362,7 +462,7 @@ const LessonPage = () => {
     triggerHaptic('light');
   };
 
-  // 7x7 Double-tap / double-click paragraph heart reaction
+  // Double-click paragraph heart reaction
   const handleParagraphDoubleClick = (e) => {
     const x = e.clientX;
     const y = e.clientY + window.scrollY;
@@ -375,7 +475,7 @@ const LessonPage = () => {
     }, 1100);
   };
 
-  // 7x7 Keyboard Navigation (J: next section, K: prev section, F: focus, P: print)
+  // Keyboard Shortcuts (J/K: nav, F: focus, P: print, S: scratchpad)
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
@@ -408,7 +508,7 @@ const LessonPage = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [sections, setFocusMode]);
 
-  // 7x7 Mid-lesson 50% Reading Notification
+  // Mid-lesson 50% Reading Notification
   useEffect(() => {
     if (scrollProgress >= 50 && !hasNotifiedMidway) {
       setHasNotifiedMidway(true);
@@ -424,6 +524,9 @@ const LessonPage = () => {
   const readTimeMin = Math.max(1, Math.ceil(wordCount / 400));
   const isEnglishSubject = (currentSubject?.id === 'english' || unitId.startsWith('eng-'));
 
+  // Active section name for breadcrumb
+  const currentActiveSectionObj = sections.find(s => s.id === activeSectionId);
+
   if (!currentUnit) {
     return (
       <div className="container py-12 text-center">
@@ -435,7 +538,7 @@ const LessonPage = () => {
 
   return (
     <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''} ${readingTheme !== 'normal' ? `theme-${readingTheme}` : ''}`}>
-      {/* 7x7 Floating Heart Particles */}
+      {/* Floating Heart Particles */}
       {floatingHearts.map(h => (
         <div 
           key={h.id} 
@@ -478,35 +581,22 @@ const LessonPage = () => {
         subjectName={currentSubject?.name || ''}
       />
 
-      {/* Back to Top Button */}
-      {showBackToTop && (
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          style={{
-            position: 'fixed',
-            bottom: '24px',
-            right: '24px',
-            width: '48px',
-            height: '48px',
-            borderRadius: '50%',
-            backgroundColor: 'var(--accent-primary)',
-            color: 'white',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-            zIndex: 100,
-            cursor: 'pointer',
-            border: 'none',
-            transition: 'transform 0.2s, opacity 0.2s',
-            opacity: showBackToTop ? 1 : 0,
-            transform: showBackToTop ? 'scale(1)' : 'scale(0.8)'
-          }}
-          title="回到最上方"
-        >
-          <ChevronUp size={24} />
-        </button>
-      )}
+      {/* Scratchpad Calculation Canvas Modal */}
+      <LessonScratchpadModal
+        isOpen={isScratchpadOpen}
+        onClose={() => setIsScratchpadOpen(false)}
+        unitId={unitId}
+        unitTitle={currentUnit.title}
+      />
+
+      {/* Exam Cheat Sheet Modal */}
+      <LessonCheatSheetModal
+        isOpen={isCheatSheetOpen}
+        onClose={() => setIsCheatSheetOpen(false)}
+        unit={currentUnit}
+        subjectName={currentSubject?.name || ''}
+        markdownContent={content}
+      />
 
       {/* Top Navigation & Fast Control Bar */}
       <div
@@ -545,6 +635,7 @@ const LessonPage = () => {
             約 {readTimeMin} 分鐘
           </span>
 
+          {/* Quick Cheat Sheet Modal Button */}
           <button 
             className="badge cursor-pointer hover:opacity-90 transition-all flex items-center gap-1"
             style={{ 
@@ -554,10 +645,26 @@ const LessonPage = () => {
               fontWeight: 700
             }}
             onClick={scrollToSummaryTable}
-            title="一鍵直達本單元核心重點與公式速查表格"
+            title="開啟考前 1 分鐘極速秘笈與速查表"
           >
             <Zap size={13} style={{ fill: '#d97706' }} />
-            <span>📊 考前速查</span>
+            <span>📊 考前速查秘笈</span>
+          </button>
+
+          {/* Scratchpad Button */}
+          <button
+            onClick={() => setIsScratchpadOpen(true)}
+            className="badge cursor-pointer flex items-center gap-1"
+            style={{
+              backgroundColor: 'rgba(59, 130, 246, 0.15)',
+              color: 'var(--accent-primary)',
+              border: '1px solid rgba(59, 130, 246, 0.3)',
+              fontWeight: 700
+            }}
+            title="開啟隨堂計算草稿紙"
+          >
+            <PenTool size={12} />
+            <span>🧮 計算草稿</span>
           </button>
 
           {/* Quick Flashcards Button */}
@@ -578,17 +685,20 @@ const LessonPage = () => {
           {/* Notebook Drawer Button */}
           <button
             onClick={() => setIsNotebookOpen(true)}
-            className="badge cursor-pointer flex items-center gap-1"
+            className="badge cursor-pointer flex items-center gap-1 relative"
             style={{
               backgroundColor: 'var(--accent-soft)',
               color: 'var(--accent-primary)',
               border: '1px solid rgba(37, 99, 235, 0.3)',
               fontWeight: 700
             }}
-            title="開啟隨堂個人便利貼筆記本"
+            title="開啟隨堂個人筆記與劃記庫"
           >
-            <PenTool size={12} />
+            <BookOpen size={12} />
             <span>📝 筆記</span>
+            {userHighlights.length > 0 && (
+              <span className="w-2 h-2 rounded-full bg-amber-500 absolute -top-0.5 -right-0.5" />
+            )}
           </button>
 
           {/* Bookmark Button */}
@@ -604,7 +714,6 @@ const LessonPage = () => {
 
         {/* Right Actions: Font Size, Focus Mode, Highlight Mode & Share */}
         <div className="flex items-center gap-1.5 flex-wrap">
-          {/* Font scale buttons */}
           <div className="flex items-center border border-slate-200 dark:border-slate-700 rounded-lg p-0.5 bg-tertiary">
             <button
               onClick={decreaseFontSize}
@@ -623,7 +732,6 @@ const LessonPage = () => {
             </button>
           </div>
 
-          {/* Focus mode toggle */}
           <button
             onClick={() => setFocusMode(!focusMode)}
             className={`btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1 ${focusMode ? 'bg-blue-50 text-blue-600 border-blue-300' : ''}`}
@@ -643,23 +751,21 @@ const LessonPage = () => {
               backgroundColor: highlightMode ? 'var(--accent-warning-soft)' : 'transparent',
               color: highlightMode ? 'var(--accent-warning-text)' : 'var(--text-secondary)'
             }}
-            title="切換關鍵公式與重點色彩高亮"
+            title="切換關鍵字螢光筆高亮"
           >
             <Lightbulb size={13} style={{ color: highlightMode ? '#f59e0b' : 'inherit' }} />
             <span className="hidden sm:inline">{highlightMode ? '螢光筆' : '螢光筆關'}</span>
           </button>
 
-          {/* 7x7 Print Study Guide Button */}
           <button
             onClick={() => window.print()}
             className="btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1"
             title="列印或另存為潔淨 PDF 講義 (快捷鍵: P)"
           >
             <Printer size={13} />
-            <span className="hidden sm:inline">列印講義</span>
+            <span className="hidden sm:inline">列印</span>
           </button>
 
-          {/* 7x7 Reading Theme Switcher */}
           <button
             onClick={toggleReadingTheme}
             className="btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1"
@@ -681,7 +787,7 @@ const LessonPage = () => {
         </div>
       </div>
 
-      {/* 🐾 7x7 Interactive Companion Pet Motivation Widget */}
+      {/* Interactive Companion Mascot Pet */}
       <LessonCompanionPet 
         scrollProgress={scrollProgress}
         masteredCount={masteredConcepts.length}
@@ -689,7 +795,7 @@ const LessonPage = () => {
         subjectId={currentSubject?.id || ''}
       />
 
-      {/* 🎯 30-Second Scaffolding Quick Concepts Card with Interactive Checklist */}
+      {/* 30-Second Scaffolding Quick Concepts Card with Interactive Checklist */}
       {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
         <div 
           className="card mb-3 overflow-hidden" 
@@ -750,7 +856,7 @@ const LessonPage = () => {
         </div>
       )}
 
-      {/* 🧭 Dynamic Section Jump Navigation Bar */}
+      {/* Dynamic Section Jump Navigation Bar with Real-time ScrollSpy */}
       {sections.length > 0 && (
         <div 
           className="card mb-5 lesson-section-nav-card"
@@ -767,19 +873,26 @@ const LessonPage = () => {
               <ListChecks size={15} style={{ color: 'var(--accent-primary)' }} />
               <span>📑 單元章節快速導航・點擊直達重點板塊：</span>
             </div>
-            <span className="text-xs text-tertiary hidden sm:inline">共 {sections.length} 個主要板塊</span>
+            {currentActiveSectionObj && (
+              <span className="text-xs text-blue-600 dark:text-blue-400 font-bold hidden sm:inline flex items-center gap-1">
+                <span>📍 當前位置：{currentActiveSectionObj.shortLabel}</span>
+              </span>
+            )}
           </div>
           <div className="lesson-section-nav-pills flex flex-wrap gap-1.5">
             {sections.map((sec, idx) => {
               const isSummary = sec.shortLabel.includes('重點') || sec.shortLabel.includes('速查') || sec.title.includes('表格') || sec.title.includes('公式');
+              const isActive = activeSectionId === sec.id;
+              const isMastered = masteredSections.includes(sec.id);
+
               return (
                 <button
                   key={idx}
-                  className={`section-nav-pill ${isSummary ? 'highlight-summary-pill' : ''}`}
+                  className={`section-nav-pill ${isActive ? 'active-spy-pill' : ''} ${isSummary ? 'highlight-summary-pill' : ''}`}
                   onClick={() => scrollToSection(sec.id)}
                   title={`點擊直達：${sec.title}`}
                 >
-                  <span className="pill-icon">{sec.icon}</span>
+                  <span className="pill-icon">{isMastered ? '✅' : sec.icon}</span>
                   <span className="pill-text">{sec.shortLabel}</span>
                 </button>
               );
@@ -788,10 +901,10 @@ const LessonPage = () => {
         </div>
       )}
 
-      {/* 🔬 7x7 Embedded PhET Dynamic STEM Mini-Lab */}
+      {/* Embedded PhET Dynamic STEM & Language Mini-Lab */}
       <LessonMiniLabWidget unitId={unitId} subjectId={currentSubject?.id || ''} />
 
-      {/* 🎧 Universal Speech / Audio Companion Bar */}
+      {/* Universal Speech / Audio Companion Bar */}
       {isEnglishSubject ? (
         <>
           <div className="english-speed-sticky-bar animate-fade-in">
@@ -837,7 +950,6 @@ const LessonPage = () => {
           <EnglishAudioStudio unitId={unitId} />
         </>
       ) : (
-        /* Universal Companion for Math, Science, Mandarin, Social, Art, PE */
         <div 
           className="card mb-4 p-3 flex items-center justify-between flex-wrap gap-2 animate-fade-in"
           style={{ 
@@ -915,32 +1027,57 @@ const LessonPage = () => {
               h2: ({ node, children, ...props }) => {
                 const rawText = extractTextFromNode(node) || String(children);
                 const slug = createSlug(rawText);
+                const isMastered = masteredSections.includes(slug);
+
                 return (
-                  <div className="flex items-center justify-between gap-2 lesson-section-h2-container">
-                    <h2 id={slug} className="lesson-section-h2" style={{ flex: 1 }} {...props}>
-                      {children}
-                    </h2>
-                    <button
-                      onClick={() => {
-                        const lang = isEnglishSubject ? 'en-US' : 'zh-TW';
-                        speechEngine.speak(rawText, { lang });
-                      }}
-                      className="btn-outline flex items-center gap-1 text-xs py-1 px-2.5 rounded-full"
-                      style={{ fontSize: '0.75rem', borderColor: 'var(--border-strong)', flexShrink: 0 }}
-                      title={`朗讀此章節標題：${rawText}`}
-                    >
-                      <Volume2 size={13} style={{ color: 'var(--accent-primary)' }} />
-                      <span className="hidden sm:inline">伴讀</span>
-                    </button>
+                  <div className="lesson-section-h2-container my-4">
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <h2 id={slug} className="lesson-section-h2" style={{ flex: 1, margin: 0 }} {...props}>
+                        {children}
+                      </h2>
+
+                      <div className="flex items-center gap-1.5 flex-shrink-0">
+                        <button
+                          onClick={() => toggleSectionMastery(slug, rawText)}
+                          className={`text-xs py-1 px-3 rounded-full font-bold transition-all flex items-center gap-1 ${
+                            isMastered 
+                              ? 'bg-emerald-500 text-white shadow-sm' 
+                              : 'btn-outline border-slate-300 text-secondary hover:text-primary hover:border-emerald-500'
+                          }`}
+                          title={isMastered ? '已標記掌握本小節 (點擊取消)' : '點擊標記本節已融會貫通 (+10 XP)'}
+                        >
+                          <CheckCircle2 size={13} />
+                          <span>{isMastered ? '本節已掌握' : '標記掌握'}</span>
+                        </button>
+
+                        <button
+                          onClick={() => {
+                            const lang = isEnglishSubject ? 'en-US' : 'zh-TW';
+                            speechEngine.speak(rawText, { lang });
+                          }}
+                          className="btn-outline flex items-center gap-1 text-xs py-1 px-2.5 rounded-full"
+                          style={{ fontSize: '0.75rem', borderColor: 'var(--border-strong)', flexShrink: 0 }}
+                          title={`朗讀此章節標題：${rawText}`}
+                        >
+                          <Volume2 size={13} style={{ color: 'var(--accent-primary)' }} />
+                          <span className="hidden sm:inline">伴讀</span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 );
               },
-              img: ({ node, src, alt, ...props }) => {
+              img: ({ _node, src, alt, ...props }) => {
                 let normalizedSrc = src || '';
+                const baseUrl = import.meta.env.BASE_URL || '/';
+                const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+
                 if (normalizedSrc.startsWith('./images/')) {
-                  normalizedSrc = normalizedSrc.replace('./images/', '/images/');
+                  normalizedSrc = cleanBase + 'images/' + normalizedSrc.slice(9);
+                } else if (normalizedSrc.startsWith('/images/')) {
+                  normalizedSrc = cleanBase + 'images/' + normalizedSrc.slice(8);
                 } else if (normalizedSrc.startsWith('images/')) {
-                  normalizedSrc = '/' + normalizedSrc;
+                  normalizedSrc = cleanBase + 'images/' + normalizedSrc.slice(7);
                 }
 
                 return (
@@ -954,6 +1091,11 @@ const LessonPage = () => {
                         src={normalizedSrc} 
                         alt={alt || '教學圖解'} 
                         onError={(e) => {
+                          if (!e.target.dataset.triedSvg && (normalizedSrc.endsWith('.jpg') || normalizedSrc.endsWith('.png'))) {
+                            e.target.dataset.triedSvg = 'true';
+                            e.target.src = normalizedSrc.replace(/\.(jpg|png)$/, '.svg');
+                            return;
+                          }
                           e.target.style.display = 'none';
                           const fallbackEl = e.target.nextSibling;
                           if (fallbackEl) fallbackEl.style.display = 'flex';
@@ -1033,7 +1175,7 @@ const LessonPage = () => {
                   </p>
                 );
               },
-              details: ({ node, children, ...props }) => {
+              details: ({ _node, children, ...props }) => {
                 return (
                   <details {...props} className="lesson-custom-details animate-fade-in">
                     {children}
@@ -1106,7 +1248,6 @@ const LessonPage = () => {
               li: ({ node, children, ...props }) => {
                 const rawText = extractTextFromNode(node);
                 
-                // If this list item contains detailed explanation or answer, wrap in answer toggle
                 if (rawText.startsWith('**詳細解析**') || rawText.startsWith('**答案**') || rawText.startsWith('解答：')) {
                   return (
                     <li {...props} style={{ listStyle: 'none' }}>
@@ -1194,7 +1335,7 @@ const LessonPage = () => {
                   </blockquote>
                 );
               },
-              em: ({ node, children, ...props }) => {
+              em: ({ _node, children, ...props }) => {
                 const text = String(children);
                 const isEnglish = isEnglishSubject && /[a-zA-Z]{2,}/.test(text);
 
@@ -1214,7 +1355,7 @@ const LessonPage = () => {
                   </em>
                 );
               },
-              code: ({ node, inline, className, children, ...props }) => {
+              code: ({ _node, inline, className, children, ...props }) => {
                 const textContent = String(children).replace(/\n$/, '');
 
                 if (inline) {
@@ -1277,7 +1418,7 @@ const LessonPage = () => {
             {content}
           </ReactMarkdown>
 
-          {/* Floating Selection Audio Tooltip */}
+          {/* Floating Text Selection Multi-Action Bubble */}
           {selectedTextBubble && (
             <div
               style={{
@@ -1286,35 +1427,70 @@ const LessonPage = () => {
                 left: `${selectedTextBubble.left}px`,
                 zIndex: 9999
               }}
-              className="animate-fade-in"
+              className="animate-fade-in text-selection-action-bubble flex items-center gap-1.5 p-1.5 bg-slate-900 text-white rounded-xl shadow-2xl border border-slate-700"
             >
+              {/* Pronounce / Speak */}
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   const lang = /[a-zA-Z]{2,}/.test(selectedTextBubble.text) ? 'en-US' : 'zh-TW';
                   speechEngine.speak(selectedTextBubble.text, { lang });
                 }}
-                className="btn-primary flex items-center gap-1 text-xs"
-                style={{
-                  padding: '6px 12px',
-                  borderRadius: 'var(--radius-full)',
-                  boxShadow: '0 4px 14px rgba(0,0,0,0.25)',
-                  fontSize: '0.78rem',
-                  fontWeight: 700,
-                  backgroundColor: 'var(--accent-primary)',
-                  color: '#ffffff'
-                }}
-                title="朗讀所選取的文字或句子"
+                className="bubble-action-btn"
+                title="朗讀所選文字"
               >
                 <Volume2 size={13} />
-                <span>🔊 朗讀所選: "{selectedTextBubble.text.length > 18 ? selectedTextBubble.text.slice(0, 18) + '...' : selectedTextBubble.text}"</span>
+                <span>朗讀</span>
+              </button>
+
+              {/* Highlight colors */}
+              <div className="flex items-center gap-1 px-1 border-l border-r border-slate-700">
+                <button
+                  onClick={(e) => { e.stopPropagation(); handleAddHighlight('yellow'); }}
+                  className="w-5 h-5 rounded-full bg-amber-400 hover:scale-110 transition-transform"
+                  title="劃黃色重點 (考點黃)"
+                />
+                <button
+                  onClick={(e) => { e.stopPropagation(); handleAddHighlight('green'); }}
+                  className="w-5 h-5 rounded-full bg-emerald-400 hover:scale-110 transition-transform"
+                  title="劃綠色重點 (理解綠)"
+                />
+                <button
+                  onClick={(e) => { e.stopPropagation(); handleAddHighlight('pink'); }}
+                  className="w-5 h-5 rounded-full bg-rose-400 hover:scale-110 transition-transform"
+                  title="劃粉色重點 (陷阱粉)"
+                />
+              </div>
+
+              {/* Add to Notebook */}
+              <button
+                onClick={(e) => { e.stopPropagation(); handleAddSelectionToNote(); }}
+                className="bubble-action-btn text-blue-300"
+                title="將所選文字加入隨堂手寫筆記"
+              >
+                <PenTool size={12} />
+                <span>入筆記</span>
+              </button>
+
+              {/* Copy */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigator.clipboard.writeText(selectedTextBubble.text);
+                  playSound('click');
+                  setSelectedTextBubble(null);
+                }}
+                className="bubble-action-btn"
+                title="複製文字"
+              >
+                <Copy size={12} />
               </button>
             </div>
           )}
         </div>
       )}
 
-      {/* ⚡ 7x7 5-Second Concept Pulse Check */}
+      {/* 5-Second Concept Pulse Check */}
       <LessonPulseCheck 
         unitId={unitId} 
         unitTitle={currentUnit.title} 
@@ -1339,7 +1515,7 @@ const LessonPage = () => {
             <span>🎉 本課核心觀念已融會貫通！</span>
           </div>
           <div className="text-sm text-secondary" style={{ marginTop: '4px', lineHeight: 1.6 }}>
-            太棒了！只要花 2 分鐘做 3 道隨堂小測驗，就能賺取 <strong style={{ color: 'var(--accent-success-text)' }}>+50 XP 經驗值</strong> 並解鎖榮譽勳章！
+            太棒了！小節掌握度達 <strong>{masteredSections.length} / {sections.length || 4}</strong>，花 2 分鐘做 3 道隨堂小測驗，就能賺取 <strong style={{ color: 'var(--accent-success-text)' }}>+50 XP 經驗值</strong> 並解鎖榮譽勳章！
           </div>
         </div>
 
@@ -1410,6 +1586,125 @@ const LessonPage = () => {
           <div></div>
         )}
       </div>
+
+      {/* 🚀 Sleek Floating Reader Control Dock (磨砂玻璃學習中控台) */}
+      {showFloatingDock && (
+        <div className="floating-reader-dock-wrapper animate-slide-up">
+          <div className="floating-reader-dock flex items-center gap-1.5 p-1.5 rounded-full shadow-2xl">
+            {/* TOC Popover Trigger */}
+            <div className="relative">
+              <button
+                onClick={() => { setIsTocDrawerOpen(!isTocDrawerOpen); playSound('click'); }}
+                className={`dock-btn ${isTocDrawerOpen ? 'active' : ''}`}
+                title="單元章節目錄清單"
+              >
+                <ListChecks size={16} />
+                <span className="hidden md:inline">目錄</span>
+              </button>
+
+              {isTocDrawerOpen && (
+                <div 
+                  className="absolute bottom-12 left-0 w-64 p-3 bg-slate-900 text-white rounded-2xl shadow-2xl border border-slate-700 animate-scale-up z-50 max-h-72 overflow-y-auto"
+                >
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-700 mb-2">
+                    <span className="text-xs font-bold text-slate-300">📑 章節快速導航</span>
+                    <button onClick={() => setIsTocDrawerOpen(false)} className="text-slate-400 hover:text-white">
+                      <X size={14} />
+                    </button>
+                  </div>
+                  <div className="space-y-1">
+                    {sections.map((s, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          scrollToSection(s.id);
+                          setIsTocDrawerOpen(false);
+                        }}
+                        className={`w-full text-left p-1.5 rounded-lg text-xs flex items-center justify-between gap-1 transition-colors ${
+                          activeSectionId === s.id ? 'bg-blue-600 text-white font-bold' : 'hover:bg-slate-800 text-slate-300'
+                        }`}
+                      >
+                        <span className="truncate">{s.icon} {s.shortLabel}</span>
+                        {masteredSections.includes(s.id) && <span className="text-emerald-400">✓</span>}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Scratchpad Trigger */}
+            <button
+              onClick={() => { setIsScratchpadOpen(true); playSound('click'); }}
+              className="dock-btn text-blue-500 hover:text-blue-600"
+              title="隨堂計算草稿紙"
+            >
+              <PenTool size={16} />
+              <span className="hidden md:inline">草稿</span>
+            </button>
+
+            {/* Notebook Trigger */}
+            <button
+              onClick={() => { setIsNotebookOpen(true); playSound('click'); }}
+              className="dock-btn relative"
+              title="隨堂個人筆記與劃記"
+            >
+              <BookOpen size={16} />
+              <span className="hidden md:inline">筆記</span>
+              {userHighlights.length > 0 && (
+                <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-amber-500" />
+              )}
+            </button>
+
+            {/* Flashcards Trigger */}
+            <button
+              onClick={() => { setIsFlashcardsOpen(true); playSound('click'); }}
+              className="dock-btn text-purple-500"
+              title="速記翻牌卡"
+            >
+              <Zap size={16} />
+              <span className="hidden md:inline">閃卡</span>
+            </button>
+
+            {/* Cheat Sheet Trigger */}
+            <button
+              onClick={() => { setIsCheatSheetOpen(true); playSound('click'); }}
+              className="dock-btn text-amber-500"
+              title="考前極速秘笈"
+            >
+              <FileText size={16} />
+              <span className="hidden md:inline">秘笈</span>
+            </button>
+
+            {/* Reading Theme Toggle */}
+            <button
+              onClick={toggleReadingTheme}
+              className="dock-btn"
+              title="切換閱讀護眼底色"
+            >
+              <Palette size={16} />
+            </button>
+
+            {/* TTS Toggle */}
+            <button
+              onClick={toggleUniversalSpeech}
+              className={`dock-btn ${isPlaying ? 'text-blue-500 animate-pulse' : ''}`}
+              title={isPlaying ? '停止朗讀' : '語音伴讀'}
+            >
+              {isPlaying ? <Square size={14} style={{ fill: 'currentColor' }} /> : <Volume2 size={16} />}
+            </button>
+
+            {/* Back to Top */}
+            <button
+              onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); playSound('click'); }}
+              className="dock-btn"
+              title="回到最上方"
+            >
+              <ChevronUp size={16} />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -33,7 +33,7 @@ $\textcolor{#2e7d32}{\textbf{綜 3-III-3}}$ 實踐「20-20-20 護眼」與「數
 
 ## 🔑 核心觀念 1：假新聞解剖學與內容農場的套路
 
-![圖解說明](./images/comp_u5_concept1.jpg)
+![圖解說明](./images/comp_u5_concept1.svg)
 
 ### 1. 為什麼有人要製造「假新聞 (Fake News)」？
 假新聞絕非無心之失，背後通常有明確的惡意企圖：
@@ -55,7 +55,7 @@ $\textcolor{#2e7d32}{\textbf{綜 3-III-3}}$ 實踐「20-20-20 護眼」與「數
 
 ## 🔑 核心觀念 2：事實查核三步驟與科技查核神盾
 
-![圖解說明](./images/comp_u5_concept2.jpg)
+![圖解說明](./images/comp_u5_concept2.svg)
 
 收到可疑訊息時，請嚴格執行「$\textcolor{#2196f3}{\textbf{查核三步驟}}$」：
 
@@ -79,7 +79,7 @@ $\textcolor{#2e7d32}{\textbf{綜 3-III-3}}$ 實踐「20-20-20 護眼」與「數
 
 ## 🔑 核心觀念 3：演算法過濾泡泡與數位排毒生活守則
 
-![圖解說明](./images/comp_u5_concept3.jpg)
+![圖解說明](./images/comp_u5_concept3.svg)
 
 ### 1. 演算法過濾泡泡 (Filter Bubble) 與同溫層：
 社群媒體的演算法只做一件事：**計算你喜歡看什麼，然後不斷推更多同類型的內容給你**！

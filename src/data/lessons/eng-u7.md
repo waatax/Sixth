@@ -30,7 +30,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🔑 核心觀念 1：未來式兩大巨星——will vs be going to
 
-![圖解說明](./images/eng_u7_concept1.jpg)
+![圖解說明](./images/eng_u7_concept1.svg)
 
 英文中表達「未來要發生的事」，最常用的兩大結構是 $\textcolor{#2196f3}{\textbf{will}}$ 與 $\textcolor{#e91e63}{\textbf{be going to}}$：
 
@@ -67,7 +67,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🔑 核心觀念 2：夢想職業百寶箱 (Dream Careers Vocabulary)
 
-![圖解說明](./images/eng_u7_concept2.jpg)
+![圖解說明](./images/eng_u7_concept2.svg)
 
 以下是高年級必學與未來前瞻熱門職業單字：
 
@@ -84,7 +84,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🔑 核心觀念 3：銜接國中新生活——英文計畫實用金句
 
-![圖解說明](./images/eng_u7_concept3.jpg)
+![圖解說明](./images/eng_u7_concept3.svg)
 
 在畢業典禮或自我介紹時，如何用英文自信發表未來目標？請熟記這三大主題句型：
 1. **關於學業學習**：

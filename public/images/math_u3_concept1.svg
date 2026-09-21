@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="460" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="457" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Bar -->
+  <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">小數除法直式算則與餘數定位規律 (Decimal Division & Remainder)</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 n-III-7：除數小數點向右移、商與餘數小數點對齊關鍵規則</text>
+
+  <!-- Badge on top right -->
+  <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">餘數小數點對原位</text>
+
+  <!-- Main Visual Body Content -->
+  <g transform="translate(20, 86)">
+    
+      <!-- Left: Long division rule -->
+      <rect x="0" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="20" y="26" font-size="15" font-weight="700" fill="#f8fafc">🔢 小數除法 3 步移位算則</text>
+
+      <rect x="16" y="55" width="338" height="60" rx="8" fill="#0f172a" stroke="#3b82f6"/>
+      <text x="30" y="78" font-size="13" font-weight="700" fill="#60a5fa">Step 1：除數化為整數 (向右移位)</text>
+      <text x="30" y="98" font-size="12" fill="#cbd5e1">除數有幾位小數，被除數小數點就同步向右移幾位！</text>
+
+      <rect x="16" y="125" width="338" height="60" rx="8" fill="#0f172a" stroke="#10b981"/>
+      <text x="30" y="148" font-size="13" font-weight="700" fill="#34d399">Step 2：商的小數點 ➔ 對齊「新小數點」</text>
+      <text x="30" y="168" font-size="12" fill="#cbd5e1">商的小數點直接向上對齊移動後的新位置。</text>
+
+      <rect x="16" y="195" width="338" height="70" rx="8" fill="#0f172a" stroke="#f43f5e"/>
+      <text x="30" y="218" font-size="13" font-weight="800" fill="#fb7185">Step 3：餘數的小數點 ➔ 對齊「原本小數點」！</text>
+      <text x="30" y="238" font-size="12" fill="#fecdd3">★ 全國大考最高頻陷阱！</text>
+      <text x="30" y="255" font-size="11" fill="#cbd5e1">餘數代表實際剩下的量，必須還原垂直對齊被除數原小數點！</text>
+
+      <rect x="16" y="275" width="338" height="40" rx="8" fill="#7c3aed" fill-opacity="0.2" stroke="#a855f7"/>
+      <text x="185" y="300" font-size="13" font-weight="700" fill="#c084fc" text-anchor="middle">口訣：商隨新點走・餘點對原頭</text>
+
+      <!-- Right: Worked example -->
+      <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
+      <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+      <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">📝 經典驗證：7.5 公升果汁，每 0.8 公升裝一瓶？</text>
+
+      <rect x="405" y="55" width="340" height="150" rx="8" fill="#0f172a" stroke="#f59e0b"/>
+      <text x="420" y="80" font-size="13" font-weight="700" fill="#fbbf24">直式計算演示：7.5 ÷ 0.8</text>
+      <text x="430" y="110" font-size="14" font-family="monospace" fill="#ffffff">除數 0.8 右移1位 ➔ 變成 8</text>
+      <text x="430" y="132" font-size="14" font-family="monospace" fill="#ffffff">被除數 7.5 右移1位 ➔ 變成 75</text>
+      <text x="430" y="154" font-size="14" font-family="monospace" fill="#38bdf8">75 ÷ 8 ＝ 9 (瓶) ... 餘 3</text>
+      <text x="430" y="185" font-size="14" font-family="monospace" font-weight="800" fill="#f87171">餘數還原：0.3 公升 (不是 3 公升！)</text>
+
+      <rect x="405" y="215" width="340" height="95" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#34d399"/>
+      <text x="420" y="238" font-size="13" font-weight="800" fill="#34d399">驗算方程式：</text>
+      <text x="420" y="260" font-size="14" font-weight="700" fill="#ffffff">被除數 ＝ 除數 × 商 ＋ 餘數</text>
+      <text x="420" y="282" font-size="14" font-weight="700" fill="#a7f3d0">7.5 ＝ (0.8 × 9) ＋ 0.3 ＝ 7.2 ＋ 0.3 ＝ 7.5 (完全正確！)</text>
+    
+  </g>
+
+  <!-- Bottom Watermark & Status -->
+  <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
+  <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+</svg>
