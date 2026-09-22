@@ -242,6 +242,70 @@ const SubjectPage = () => {
         </div>
       </div>
 
+      {/* 🔬 Subject Exclusive Interactive Lab & Shorts Quick Jump */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <Link
+          to={`/labs?lab=${{
+            math: 'circle-area',
+            science: 'lever-seesaw',
+            mandarin: 'hanzi-six-scripts',
+            social: 'five-powers-balance',
+            english: 'english-tense',
+            arts: 'color-wheel-mixer',
+            health_pe: 'cpr-rhythm-metronome',
+            integrative: 'time-management-matrix'
+          }[subjectId] || 'circle-area'}`}
+          className="card p-3.5 flex items-center justify-between gap-3 text-decoration-none transition-all hover:border-emerald-500"
+          style={{
+            backgroundColor: 'var(--bg-secondary)',
+            border: '1.5px solid var(--border-light)',
+            borderRadius: 'var(--radius-lg)'
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+              🔬
+            </div>
+            <div>
+              <div className="text-xs font-bold text-primary flex items-center gap-1.5">
+                <span>{subject.shortName}領域動態互動實驗室</span>
+                <span className="badge badge-success text-[10px]">PhET 風格</span>
+              </div>
+              <div className="text-[11px] text-secondary mt-0.5">
+                動手拉桿、視覺化探究算理與現象
+              </div>
+            </div>
+          </div>
+          <ArrowRight size={16} className="text-emerald-500 flex-shrink-0" />
+        </Link>
+
+        <Link
+          to={`/shorts?subject=${subjectId === 'arts' ? 'arts' : subjectId}`}
+          className="card p-3.5 flex items-center justify-between gap-3 text-decoration-none transition-all hover:border-pink-500"
+          style={{
+            backgroundColor: 'var(--bg-secondary)',
+            border: '1.5px solid var(--border-light)',
+            borderRadius: 'var(--radius-lg)'
+          }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-pink-500/15 text-pink-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+              📱
+            </div>
+            <div>
+              <div className="text-xs font-bold text-primary flex items-center gap-1.5">
+                <span>{subject.shortName}領域 30秒知識短影音</span>
+                <span className="badge badge-accent text-[10px]">Reels</span>
+              </div>
+              <div className="text-[11px] text-secondary mt-0.5">
+                語音伴學、重點口訣與多巴胺快問答
+              </div>
+            </div>
+          </div>
+          <ArrowRight size={16} className="text-pink-500 flex-shrink-0" />
+        </Link>
+      </div>
+
       {/* 🎧 English Audio Warm-up Widget */}
       {subjectId === 'english' && (
         <div 

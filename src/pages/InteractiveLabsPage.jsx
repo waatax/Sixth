@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
   Sparkles, 
@@ -17,11 +17,32 @@ import { interactiveLabsList } from '../data/interactiveLabsData';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { useGamification } from '../context/GamificationContext';
 import { VirtualMicroscopeLab, NumberLineSimulator, EnglishTenseTimeMachine } from '../components/prep/InteractivePrepSimulators';
+import { 
+  HanziSixScriptsLab, 
+  FivePowersSandbox, 
+  ColorWheelMixerLab, 
+  CprRhythmMetronomeLab, 
+  TimeManagementMatrixLab 
+} from '../components/labs/DomainInteractiveSimulators';
 import confetti from 'canvas-confetti';
 
 const InteractiveLabsPage = () => {
   const { addCoins, addXp } = useGamification();
-  const [selectedLabId, setSelectedLabId] = useState('circle-area');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const labParam = searchParams.get('lab') || searchParams.get('id');
+  const [selectedLabId, setSelectedLabId] = useState(() => {
+    if (labParam && interactiveLabsList.some(l => l.id === labParam)) {
+      return labParam;
+    }
+    return 'circle-area';
+  });
+
+  // Sync state if URL query param changes
+  useEffect(() => {
+    if (labParam && interactiveLabsList.some(l => l.id === labParam)) {
+      setSelectedLabId(labParam);
+    }
+  }, [labParam]);
 
   // Lab 1: Circle Area Slicing
   const [slices, setSlices] = useState(16);
@@ -169,7 +190,7 @@ const InteractiveLabsPage = () => {
       </div>
 
       {/* Lab Tabs Selector Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2">
         {interactiveLabsList.map(lab => {
           const isSelected = selectedLabId === lab.id;
           return (
@@ -177,6 +198,7 @@ const InteractiveLabsPage = () => {
               key={lab.id}
               onClick={() => {
                 setSelectedLabId(lab.id);
+                setSearchParams({ lab: lab.id });
                 triggerHaptic('selection');
                 playSound('lab_interact');
               }}
@@ -934,6 +956,51 @@ const InteractiveLabsPage = () => {
         {selectedLabId === 'english-tense' && (
           <div className="flex flex-col gap-4 animate-fade-in">
             <EnglishTenseTimeMachine />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 10: Hanzi Six Scripts Lab (Mandarin) */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'hanzi-six-scripts' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <HanziSixScriptsLab />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 11: Five Powers Balance Sandbox (Social Studies) */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'five-powers-balance' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <FivePowersSandbox />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 12: Color Wheel & Mixer Lab (Arts) */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'color-wheel-mixer' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <ColorWheelMixerLab />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 13: CPR Rhythm Metronome & AED Lab (Health & PE) */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'cpr-rhythm-metronome' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <CprRhythmMetronomeLab />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 14: Time Management Matrix Lab (Integrative Activity) */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'time-management-matrix' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <TimeManagementMatrixLab />
           </div>
         )}
       </div>

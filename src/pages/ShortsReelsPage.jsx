@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
   ChevronUp, 
@@ -27,9 +27,11 @@ import confetti from 'canvas-confetti';
 
 const ShortsReelsPage = () => {
   const { addCoins, addXp } = useGamification();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const subjectParam = searchParams.get('subject') || 'all';
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedSubject, setSelectedSubject] = useState('all');
+  const [selectedSubject, setSelectedSubject] = useState(subjectParam);
   const [likedReels, setLikedReels] = useState({});
   const [floatingHearts, setFloatingHearts] = useState([]);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -39,9 +41,20 @@ const ShortsReelsPage = () => {
   const [copied, setCopied] = useState(false);
   const [touchStartY, setTouchStartY] = useState(null);
 
+  // Sync state if URL query param changes
+  useEffect(() => {
+    if (subjectParam && subjectParam !== selectedSubject) {
+      setSelectedSubject(subjectParam);
+      setCurrentIndex(0);
+    }
+  }, [subjectParam, selectedSubject]);
+
   // Filter reels
   const filteredReels = shortsReelsData.filter(r => {
     if (selectedSubject === 'all') return true;
+    if (selectedSubject === 'arts' || selectedSubject === 'art') {
+      return r.subject === 'arts' || r.subject === 'art';
+    }
     return r.subject === selectedSubject;
   });
 
@@ -186,18 +199,23 @@ const ShortsReelsPage = () => {
     { id: 'all', label: '全部短影音 (All)', emoji: '🔥' },
     { id: 'math', label: '🧮 數學大神', emoji: '🧮' },
     { id: 'science', label: '🔬 自然狂人', emoji: '🔬' },
-    { id: 'english', label: '🇬🇧 雙語神手', emoji: '🇬🇧' },
-    { id: 'prep', label: '🎓 國中先修', emoji: '🎓' },
     { id: 'mandarin', label: '📖 國語秒懂', emoji: '📖' },
     { id: 'social', label: '🌍 社會領航', emoji: '🌍' },
-    { id: 'health_pe', label: '💪 健體小鐵人', emoji: '💪' }
+    { id: 'english', label: '🇬🇧 雙語神手', emoji: '🇬🇧' },
+    { id: 'arts', label: '🎨 藝術玩家', emoji: '🎨' },
+    { id: 'health_pe', label: '💪 健體小鐵人', emoji: '💪' },
+    { id: 'integrative', label: '🧭 綜合實踐家', emoji: '🧭' },
+    { id: 'prep', label: '🎓 國中先修', emoji: '🎓' }
   ];
 
   if (!currentReel) {
     return (
       <div className="flex flex-col items-center justify-center py-16 gap-4">
         <h3 className="h3">此領域暫無短影音卡片</h3>
-        <button className="btn-primary" onClick={() => setSelectedSubject('all')}>查看全部</button>
+        <button className="btn-primary" onClick={() => {
+          setSelectedSubject('all');
+          setSearchParams({});
+        }}>查看全部</button>
       </div>
     );
   }
@@ -229,6 +247,11 @@ const ShortsReelsPage = () => {
             key={s.id}
             onClick={() => {
               setSelectedSubject(s.id);
+              if (s.id === 'all') {
+                setSearchParams({});
+              } else {
+                setSearchParams({ subject: s.id });
+              }
               setCurrentIndex(0);
               playSound('click');
             }}
