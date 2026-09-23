@@ -1,0 +1,482 @@
+[
+  {
+    "subjectId": "math",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "math_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/math_6A_midterm.pdf",
+    "sizeBytes": 1201832
+  },
+  {
+    "subjectId": "math",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "math_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/math_6A_final.pdf",
+    "sizeBytes": 1127044
+  },
+  {
+    "subjectId": "math",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 6,
+    "pdfFileName": "math_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/math_6A_all.pdf",
+    "sizeBytes": 1390798
+  },
+  {
+    "subjectId": "math",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "math_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/math_6B_midterm.pdf",
+    "sizeBytes": 1211255
+  },
+  {
+    "subjectId": "math",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "math_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/math_6B_final.pdf",
+    "sizeBytes": 1209567
+  },
+  {
+    "subjectId": "math",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 6,
+    "pdfFileName": "math_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/math_6B_all.pdf",
+    "sizeBytes": 1430466
+  },
+  {
+    "subjectId": "science",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "science_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/science_6A_midterm.pdf",
+    "sizeBytes": 1439075
+  },
+  {
+    "subjectId": "science",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "science_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/science_6A_final.pdf",
+    "sizeBytes": 1256712
+  },
+  {
+    "subjectId": "science",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 5,
+    "pdfFileName": "science_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/science_6A_all.pdf",
+    "sizeBytes": 1679104
+  },
+  {
+    "subjectId": "science",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "science_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/science_6B_midterm.pdf",
+    "sizeBytes": 1463218
+  },
+  {
+    "subjectId": "science",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "science_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/science_6B_final.pdf",
+    "sizeBytes": 1286554
+  },
+  {
+    "subjectId": "science",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 5,
+    "pdfFileName": "science_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/science_6B_all.pdf",
+    "sizeBytes": 1712743
+  },
+  {
+    "subjectId": "mandarin",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "mandarin_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/mandarin_6A_midterm.pdf",
+    "sizeBytes": 1235680
+  },
+  {
+    "subjectId": "mandarin",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "mandarin_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/mandarin_6A_final.pdf",
+    "sizeBytes": 1278372
+  },
+  {
+    "subjectId": "mandarin",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 4,
+    "pdfFileName": "mandarin_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/mandarin_6A_all.pdf",
+    "sizeBytes": 1554158
+  },
+  {
+    "subjectId": "mandarin",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "mandarin_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/mandarin_6B_midterm.pdf",
+    "sizeBytes": 1253599
+  },
+  {
+    "subjectId": "mandarin",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "mandarin_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/mandarin_6B_final.pdf",
+    "sizeBytes": 1220855
+  },
+  {
+    "subjectId": "mandarin",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 4,
+    "pdfFileName": "mandarin_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/mandarin_6B_all.pdf",
+    "sizeBytes": 1515773
+  },
+  {
+    "subjectId": "social",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "social_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/social_6A_midterm.pdf",
+    "sizeBytes": 1284764
+  },
+  {
+    "subjectId": "social",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "social_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/social_6A_final.pdf",
+    "sizeBytes": 1188335
+  },
+  {
+    "subjectId": "social",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 4,
+    "pdfFileName": "social_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/social_6A_all.pdf",
+    "sizeBytes": 1535728
+  },
+  {
+    "subjectId": "social",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "social_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/social_6B_midterm.pdf",
+    "sizeBytes": 1257545
+  },
+  {
+    "subjectId": "social",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "social_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/social_6B_final.pdf",
+    "sizeBytes": 1290475
+  },
+  {
+    "subjectId": "social",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 4,
+    "pdfFileName": "social_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/social_6B_all.pdf",
+    "sizeBytes": 1569874
+  },
+  {
+    "subjectId": "english",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "english_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/english_6A_midterm.pdf",
+    "sizeBytes": 1015303
+  },
+  {
+    "subjectId": "english",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "english_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/english_6A_final.pdf",
+    "sizeBytes": 946929
+  },
+  {
+    "subjectId": "english",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 4,
+    "pdfFileName": "english_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/english_6A_all.pdf",
+    "sizeBytes": 1087844
+  },
+  {
+    "subjectId": "english",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "english_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/english_6B_midterm.pdf",
+    "sizeBytes": 1013061
+  },
+  {
+    "subjectId": "english",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "english_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/english_6B_final.pdf",
+    "sizeBytes": 1031057
+  },
+  {
+    "subjectId": "english",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 4,
+    "pdfFileName": "english_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/english_6B_all.pdf",
+    "sizeBytes": 1118254
+  },
+  {
+    "subjectId": "arts",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "arts_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/arts_6A_midterm.pdf",
+    "sizeBytes": 1252594
+  },
+  {
+    "subjectId": "arts",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 1,
+    "pdfFileName": "arts_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/arts_6A_final.pdf",
+    "sizeBytes": 1048938
+  },
+  {
+    "subjectId": "arts",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "arts_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/arts_6A_all.pdf",
+    "sizeBytes": 1402692
+  },
+  {
+    "subjectId": "arts",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "arts_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/arts_6B_midterm.pdf",
+    "sizeBytes": 1204161
+  },
+  {
+    "subjectId": "arts",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 1,
+    "pdfFileName": "arts_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/arts_6B_final.pdf",
+    "sizeBytes": 1056120
+  },
+  {
+    "subjectId": "arts",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "arts_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/arts_6B_all.pdf",
+    "sizeBytes": 1355319
+  },
+  {
+    "subjectId": "health_pe",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "health_pe_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/health_pe_6A_midterm.pdf",
+    "sizeBytes": 1410546
+  },
+  {
+    "subjectId": "health_pe",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 1,
+    "pdfFileName": "health_pe_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/health_pe_6A_final.pdf",
+    "sizeBytes": 1022480
+  },
+  {
+    "subjectId": "health_pe",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "health_pe_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/health_pe_6A_all.pdf",
+    "sizeBytes": 1547083
+  },
+  {
+    "subjectId": "health_pe",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "health_pe_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/health_pe_6B_midterm.pdf",
+    "sizeBytes": 1288239
+  },
+  {
+    "subjectId": "health_pe",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 1,
+    "pdfFileName": "health_pe_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/health_pe_6B_final.pdf",
+    "sizeBytes": 1110086
+  },
+  {
+    "subjectId": "health_pe",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "health_pe_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/health_pe_6B_all.pdf",
+    "sizeBytes": 1450353
+  },
+  {
+    "subjectId": "integrative",
+    "semester": "6A",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級上學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "integrative_6A_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/integrative_6A_midterm.pdf",
+    "sizeBytes": 1323116
+  },
+  {
+    "subjectId": "integrative",
+    "semester": "6A",
+    "scope": "final",
+    "title": "108 課綱國小六年級上學期【期末考（第二次段考）衝刺講義】名師大複習",
+    "unitCount": 1,
+    "pdfFileName": "integrative_6A_final.pdf",
+    "pdfUrl": "/downloads/pdf/integrative_6A_final.pdf",
+    "sizeBytes": 1075508
+  },
+  {
+    "subjectId": "integrative",
+    "semester": "6A",
+    "scope": "all",
+    "title": "108 課綱國小六年級上學期【第一學期（期末總複習）完整講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "integrative_6A_all.pdf",
+    "pdfUrl": "/downloads/pdf/integrative_6A_all.pdf",
+    "sizeBytes": 1464551
+  },
+  {
+    "subjectId": "integrative",
+    "semester": "6B",
+    "scope": "midterm",
+    "title": "108 課綱國小六年級下學期【期中考（第一次段考）重點講義】名師大複習",
+    "unitCount": 2,
+    "pdfFileName": "integrative_6B_midterm.pdf",
+    "pdfUrl": "/downloads/pdf/integrative_6B_midterm.pdf",
+    "sizeBytes": 1276597
+  },
+  {
+    "subjectId": "integrative",
+    "semester": "6B",
+    "scope": "final",
+    "title": "108 課綱國小六年級下學期【畢業考（畢業考與國中先修）衝刺講義】名師大複習",
+    "unitCount": 1,
+    "pdfFileName": "integrative_6B_final.pdf",
+    "pdfUrl": "/downloads/pdf/integrative_6B_final.pdf",
+    "sizeBytes": 1120744
+  },
+  {
+    "subjectId": "integrative",
+    "semester": "6B",
+    "scope": "all",
+    "title": "108 課綱國小六年級下學期【第二學期（畢業考與先修）完整講義】名師大複習",
+    "unitCount": 3,
+    "pdfFileName": "integrative_6B_all.pdf",
+    "pdfUrl": "/downloads/pdf/integrative_6B_all.pdf",
+    "sizeBytes": 1425999
+  }
+]

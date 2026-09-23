@@ -19,7 +19,9 @@ import {
   X,
   Trophy,
   RotateCcw,
-  Sparkles
+  Sparkles,
+  FileText,
+  Download
 } from 'lucide-react';
 import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
@@ -237,8 +239,105 @@ const SubjectPage = () => {
           </span>
           <span>➔</span>
           <span className="badge" style={{ backgroundColor: 'var(--accent-warning-soft)', color: 'var(--accent-warning-text)', fontWeight: 700 }}>
-            ③ 賺金幣培育守護神獸
+            ③ 累積星光成就培育守護神獸
           </span>
+        </div>
+      </div>
+
+      {/* 📖 Subject Pre-Exam Review Notes Banner */}
+      <div
+        className="card p-4 flex flex-col md:flex-row justify-between items-center gap-4 animate-fade-in"
+        style={{
+          background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%)',
+          border: '1.5px solid var(--accent-primary)',
+          borderRadius: 'var(--radius-xl)'
+        }}
+      >
+        <div className="flex items-center gap-3.5" style={{ flex: 1 }}>
+          <div
+            style={{
+              width: '46px',
+              height: '46px',
+              borderRadius: '14px',
+              backgroundColor: 'var(--accent-soft)',
+              color: 'var(--accent-primary)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.5rem',
+              flexShrink: 0
+            }}
+          >
+            📖
+          </div>
+          <div>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="font-extrabold text-base" style={{ color: 'var(--text-primary)' }}>
+                {subject.name}・教科書考前筆記大複習
+              </span>
+              <span className="badge badge-accent text-[11px] font-bold">108 課綱段考必備</span>
+              <span className="badge badge-success text-[11px] font-bold">支援 A4 / PDF 下載列印</span>
+            </div>
+            <p className="text-xs text-secondary mt-1 mb-0" style={{ lineHeight: 1.5 }}>
+              名師核心觀念、解題公式口訣、易錯防雷陷阱、各校歷年段考真題解析與 10 分鐘必會檢核清單！
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 flex-shrink-0 w-full md:w-auto justify-end flex-wrap">
+          <Link
+            to={`/exam-notes/${subjectId}/6A`}
+            className="btn-outline text-xs font-bold flex items-center gap-1.5 py-2 px-3"
+            style={{ borderRadius: 'var(--radius-md)', textDecoration: 'none' }}
+          >
+            <FileText size={13} />
+            <span>📘 6上講義</span>
+          </Link>
+          <a
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/downloads/pdf/${subjectId}_6A_all.pdf`}
+            download={`${subjectId}_6A_all.pdf`}
+            className="btn-outline text-xs font-bold flex items-center gap-1 py-2 px-2.5"
+            style={{ 
+              borderRadius: 'var(--radius-md)', 
+              textDecoration: 'none', 
+              color: '#6366f1', 
+              borderColor: 'rgba(99, 102, 241, 0.4)',
+              backgroundColor: 'rgba(99, 102, 241, 0.08)'
+            }}
+            title="一鍵下載 6上全冊 A4 格式 PDF 講義"
+          >
+            <Download size={13} />
+            <span>6上 PDF</span>
+          </a>
+          <Link
+            to={`/exam-notes/${subjectId}/6B`}
+            className="btn-primary text-xs font-bold flex items-center gap-1.5 py-2 px-3"
+            style={{ 
+              borderRadius: 'var(--radius-md)', 
+              textDecoration: 'none', 
+              backgroundColor: subject.color, 
+              borderColor: subject.color 
+            }}
+          >
+            <FileText size={13} />
+            <span>📗 6下講義</span>
+          </Link>
+          <a
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/downloads/pdf/${subjectId}_6B_all.pdf`}
+            download={`${subjectId}_6B_all.pdf`}
+            className="btn-outline text-xs font-bold flex items-center gap-1 py-2 px-2.5"
+            style={{ 
+              borderRadius: 'var(--radius-md)', 
+              textDecoration: 'none', 
+              color: '#059669', 
+              borderColor: 'rgba(5, 150, 105, 0.4)',
+              backgroundColor: 'rgba(5, 150, 105, 0.08)'
+            }}
+            title="一鍵下載 6下全冊 A4 格式 PDF 講義"
+          >
+            <Download size={13} />
+            <span>6下 PDF</span>
+          </a>
         </div>
       </div>
 

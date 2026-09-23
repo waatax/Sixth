@@ -23,6 +23,7 @@ import {
 import { playSound } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
 import confetti from 'canvas-confetti';
+import QuestionDiagram from '../components/quiz/QuestionDiagram';
 
 const QuestionBankPage = () => {
   const [activeTab, setActiveTab] = useState('math');
@@ -153,7 +154,7 @@ const QuestionBankPage = () => {
             style={{ padding: '10px 22px', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '8px' }}
           >
             <Zap size={18} />
-            <span>⚡ 在線題庫實戰刷題 (192+ 題)</span>
+            <span>⚡ 在線題庫實戰刷題 (1,400+ 題)</span>
           </button>
         </div>
       </div>
@@ -339,9 +340,21 @@ const QuestionBankPage = () => {
               {/* Question Box */}
               <div className="p-5 rounded-xl mb-4" style={{ backgroundColor: 'var(--bg-tertiary)', border: '1.5px solid var(--border-light)' }}>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="badge badge-accent text-xs">
-                    📖 {drillQuestions[drillIdx].unitTitle || '單元考題'}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="badge badge-accent text-xs">
+                      📖 {drillQuestions[drillIdx].unitTitle || '單元考題'}
+                    </span>
+                    {(drillQuestions[drillIdx].isMockChallenge || drillQuestions[drillIdx].isChallenge) && (
+                      <span className="badge text-xs" style={{ background: 'rgba(234, 88, 12, 0.15)', color: '#ea580c', border: '1px solid rgba(234, 88, 12, 0.3)', fontWeight: 700 }}>
+                        ⚔️ 模擬挑戰題
+                      </span>
+                    )}
+                    {drillQuestions[drillIdx].isRepresentative && (
+                      <span className="badge text-xs" style={{ background: 'rgba(59, 130, 246, 0.15)', color: '#2563eb', border: '1px solid rgba(59, 130, 246, 0.3)', fontWeight: 700 }}>
+                        📘 課綱代表題
+                      </span>
+                    )}
+                  </div>
                   <button
                     onClick={() => speechEngine.speak(drillQuestions[drillIdx].question)}
                     className="flex items-center gap-1 text-xs text-secondary hover:text-primary transition-colors cursor-pointer"
@@ -354,6 +367,12 @@ const QuestionBankPage = () => {
                 <h3 style={{ fontSize: '1.15rem', fontWeight: 700, lineHeight: 1.6, color: 'var(--text-primary)' }}>
                   {drillIdx + 1}. {drillQuestions[drillIdx].question}
                 </h3>
+
+                {drillQuestions[drillIdx].diagram && (
+                  <div className="mt-3">
+                    <QuestionDiagram diagram={drillQuestions[drillIdx].diagram} />
+                  </div>
+                )}
               </div>
 
               {/* Options List */}
@@ -568,6 +587,11 @@ const QuestionBankPage = () => {
                         <div className="font-semibold text-sm mb-2" style={{ color: '#0f172a' }}>
                           ({qIdx + 1}) {qObj.question}
                         </div>
+                        {qObj.diagram && (
+                          <div className="my-2">
+                            <QuestionDiagram diagram={qObj.diagram} />
+                          </div>
+                        )}
                         <div className="grid grid-cols-2 gap-2 text-xs text-slate-700 pl-4">
                           {qObj.options.map((opt, oIdx) => (
                             <div key={oIdx}>

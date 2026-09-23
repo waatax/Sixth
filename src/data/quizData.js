@@ -2,7 +2,10 @@
 // 題型涵蓋：1. 基礎核心觀念題  2. 計算推論與應用題  3. 生活素養情境題 / 易錯陷阱題
 // 每題均附帶選項、標準答案、與步驟級詳細解析（含解題口訣與破題關鍵）
 
-export const quizData = {
+import { mockChallengesData } from './mockChallengesData.js';
+import { thousandQuestionsData } from './questionBank/index.js';
+
+const baseQuizData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 🧮 1. 數學領域 (Math: Units 1 ~ 10)
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2057,3 +2060,24 @@ export const quizData = {
   ]
 
 };
+
+// 合併 64 單元進階「模擬挑戰」題目與「課綱精選代表題」(全庫達 1,408 題)
+export const quizData = { ...baseQuizData };
+
+Object.keys(mockChallengesData).forEach(unitId => {
+  if (quizData[unitId]) {
+    quizData[unitId] = [...quizData[unitId], ...mockChallengesData[unitId]];
+  } else {
+    quizData[unitId] = [...mockChallengesData[unitId]];
+  }
+});
+
+Object.keys(thousandQuestionsData).forEach(unitId => {
+  if (quizData[unitId]) {
+    quizData[unitId] = [...quizData[unitId], ...thousandQuestionsData[unitId]];
+  } else {
+    quizData[unitId] = [...thousandQuestionsData[unitId]];
+  }
+});
+
+export { thousandQuestionsData };

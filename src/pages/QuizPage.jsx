@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle, Keyboard } from 'lucide-react';
+import { useState, useEffect, useMemo } from 'react';
+import { useParams, useNavigate, useSearchParams, Link } from 'react-router-dom';
+import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle, Keyboard, Target } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { coursesData } from '../data/courses';
@@ -9,10 +9,12 @@ import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 import ComboFlameIndicator from '../components/gamification/ComboFlameIndicator';
 import LessonCheatSheetModal from '../components/lesson/LessonCheatSheetModal';
+import QuestionDiagram from '../components/quiz/QuestionDiagram';
 
 const QuizPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { recordQuizResult, inventory, consumeItem } = useGamification();
   const [showCheatSheet, setShowCheatSheet] = useState(false);
 
@@ -32,6 +34,31 @@ const QuizPage = () => {
     currentSubjectName = '重點單元';
   }
 
+  // Quiz Mode: 'all' | 'representative' | 'foundation' | 'challenge'
+  const urlMode = searchParams.get('mode');
+  const [quizMode, setQuizMode] = useState(
+    urlMode === 'challenge' ? 'challenge' : 
+    urlMode === 'representative' ? 'representative' : 
+    urlMode === 'foundation' ? 'foundation' : 'all'
+  );
+
+  const allQuestions = useMemo(() => quizData[unitId] || [], [unitId]);
+
+  const questions = useMemo(() => {
+    if (quizMode === 'challenge') {
+      const list = allQuestions.filter(q => q.isMockChallenge);
+      return list.length > 0 ? list : allQuestions;
+    }
+    if (quizMode === 'representative') {
+      const list = allQuestions.filter(q => q.isRepresentative);
+      return list.length > 0 ? list : allQuestions;
+    }
+    if (quizMode === 'foundation') {
+      const list = allQuestions.filter(q => !q.isMockChallenge && !q.isRepresentative);
+      return list.length > 0 ? list : allQuestions;
+    }
+    return allQuestions;
+  }, [allQuestions, quizMode]);
 
   const [currentQ, setCurrentQ] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -43,7 +70,18 @@ const QuizPage = () => {
   const [disabledOptions, setDisabledOptions] = useState([]);
   const [quizSummary, setQuizSummary] = useState(null);
 
-  const questions = quizData[unitId] || [];
+  const changeMode = (newMode) => {
+    setQuizMode(newMode);
+    setCurrentQ(0);
+    setSelectedOption(null);
+    setShowResult(false);
+    setScore(0);
+    setUserAnswers([]);
+    setCombo(0);
+    setDisabledOptions([]);
+    setQuizSummary(null);
+    playSound('click');
+  };
 
   const handleMuteToggle = () => {
     const newState = toggleMute();
@@ -142,7 +180,7 @@ const QuizPage = () => {
 
   const handleUse5050 = () => {
     if ((inventory.hint_5050 || 0) <= 0) {
-      alert('背包中沒有 50:50 提示卡了！可至星光商城購買！');
+      alert('背包中沒有 50:50 提示卡了！可在首頁每日幸運轉盤或神獸轉蛋中免費獲得！');
       return;
     }
     const q = questions[currentQ];
@@ -303,6 +341,11 @@ const QuizPage = () => {
                   <div className="text-xs text-secondary mt-1">
                     <strong style={{ color: 'var(--text-primary)' }}>正確解答：</strong> {q.options[q.answerIndex]}
                   </div>
+                  {q.diagram && (
+                    <div className="my-2 max-w-sm mx-auto">
+                      <QuestionDiagram diagram={q.diagram} />
+                    </div>
+                  )}
                   <div className="text-xs text-secondary mt-1" style={{ lineHeight: 1.6 }}>
                     <strong style={{ color: 'var(--text-primary)' }}>觀念名師解析：</strong> {q.explanation}
                   </div>
@@ -369,11 +412,50 @@ const QuizPage = () => {
         </div>
       </div>
 
+      {/* Mode Switcher Tabs */}
+      <div className="flex justify-center gap-2 p-1.5 rounded-2xl bg-slate-200/60 dark:bg-slate-800/80 mb-1 flex-wrap">
+        <button
+          className={`btn-pill text-xs font-bold ${quizMode === 'all' ? 'active' : ''}`}
+          onClick={() => changeMode('all')}
+        >
+          🏆 全單元大滿貫 ({allQuestions.length}題)
+        </button>
+        <button
+          className={`btn-pill text-xs font-bold ${quizMode === 'representative' ? 'active' : ''}`}
+          onClick={() => changeMode('representative')}
+          style={quizMode === 'representative' ? { backgroundColor: 'var(--apple-blue)', color: '#fff', borderColor: 'var(--apple-blue)' } : {}}
+        >
+          📘 課綱精選代表題 ({allQuestions.filter(q => q.isRepresentative).length || 16}題)
+        </button>
+        <button
+          className={`btn-pill text-xs font-bold ${quizMode === 'foundation' ? 'active' : ''}`}
+          onClick={() => changeMode('foundation')}
+        >
+          📝 基礎核心驗收 ({allQuestions.filter(q => !q.isMockChallenge && !q.isRepresentative).length || 4}題)
+        </button>
+        <button
+          className={`btn-pill text-xs font-bold ${quizMode === 'challenge' ? 'active' : ''}`}
+          onClick={() => changeMode('challenge')}
+          style={quizMode === 'challenge' ? { backgroundColor: 'var(--apple-orange)', color: '#fff', borderColor: 'var(--apple-orange)' } : {}}
+        >
+          <Flame size={13} className="inline mr-1" />
+          ⚔️ 模擬挑戰圖解 ({allQuestions.filter(q => q.isMockChallenge).length || 2}題)
+        </button>
+      </div>
+
       <div className="card flex flex-col gap-6" style={{ padding: '32px', borderRadius: 'var(--radius-xl)', border: '1.5px solid var(--border-light)', backgroundColor: 'var(--bg-secondary)' }}>
         {/* Progress Header & 50:50 Lifeline */}
         <div className="flex justify-between items-center text-sm" style={{ color: 'var(--text-secondary)' }}>
-          <span className="badge badge-accent" style={{ fontWeight: 700 }}>
-            ✏️ 單元重點測驗・觀念驗收
+          <span 
+            className="badge badge-accent" 
+            style={{ 
+              fontWeight: 700, 
+              backgroundColor: quizMode === 'challenge' ? 'rgba(255, 149, 0, 0.15)' : quizMode === 'representative' ? 'rgba(59, 130, 246, 0.15)' : undefined, 
+              color: quizMode === 'challenge' ? 'var(--apple-orange)' : quizMode === 'representative' ? '#2563eb' : undefined,
+              border: quizMode === 'challenge' ? '1px solid rgba(255, 149, 0, 0.3)' : quizMode === 'representative' ? '1px solid rgba(59, 130, 246, 0.3)' : undefined
+            }}
+          >
+            {quizMode === 'challenge' ? '⚔️ 單元模擬挑戰・會考素養' : quizMode === 'representative' ? '📘 課綱精選代表題・實戰衝刺' : quizMode === 'foundation' ? '✏️ 單元重點測驗・基礎驗收' : '🏆 全單元大滿貫測驗'}
           </span>
 
           <div className="flex items-center gap-2">
@@ -416,11 +498,30 @@ const QuizPage = () => {
             style={{ 
               width: `${((currentQ + 1) / questions.length) * 100}%`, 
               height: '100%', 
-              backgroundColor: 'var(--accent-primary)', 
+              backgroundColor: quizMode === 'challenge' ? 'var(--apple-orange)' : 'var(--accent-primary)', 
               transition: 'width 0.3s cubic-bezier(0.4, 0, 0.2, 1)' 
             }} 
           />
         </div>
+
+        {/* Challenge badge if present */}
+        {question?.isMockChallenge && (
+          <div className="-mb-2">
+            <span 
+              className="badge inline-flex items-center gap-1.5 py-1 px-3"
+              style={{
+                backgroundColor: 'rgba(255, 149, 0, 0.15)',
+                color: 'var(--apple-orange)',
+                border: '1px solid rgba(255, 149, 0, 0.35)',
+                fontWeight: 700,
+                fontSize: '0.8rem'
+              }}
+            >
+              <Flame size={14} />
+              <span>{question.challengeBadge || '🔥 單元模擬挑戰・壓軸真題'}</span>
+            </span>
+          </div>
+        )}
 
         {/* Question Title */}
         <div className="flex justify-between items-start gap-3">
@@ -447,6 +548,11 @@ const QuizPage = () => {
             </button>
           )}
         </div>
+
+        {/* Render Visual Diagram if question has one */}
+        {question?.diagram && (
+          <QuestionDiagram diagram={question.diagram} />
+        )}
 
         {/* Options */}
         <div className="flex flex-col gap-3">

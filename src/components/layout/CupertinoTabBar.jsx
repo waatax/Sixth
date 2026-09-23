@@ -10,7 +10,7 @@ import {
   Timer, 
   CheckCircle2, 
   GraduationCap, 
-  ShoppingBag, 
+  FileText, 
   Layers, 
   HelpCircle,
   Globe
@@ -29,13 +29,13 @@ const CupertinoTabBar = () => {
   ];
 
   const moreItems = [
+    { path: '/exam-notes', label: '章節講義 (PDF)', icon: FileText, color: '#6366f1', desc: '八科段考重點與A4講義' },
     { path: '/flashcards', label: '速記翻翻卡', icon: Zap, color: '#f59e0b', desc: '考前重點高效速記' },
     { path: '/mock-exam', label: '全真模擬考', icon: Timer, color: '#ef4444', desc: '倒數計時真實段考' },
     { path: '/mistakes', label: '錯題粉碎擂台', icon: CheckCircle2, color: '#10b981', desc: '揮動重錘擊碎弱點' },
     { path: '/gept', label: '全民英檢先修', icon: Sparkles, color: '#8b5cf6', desc: '單字聽力雙語特訓' },
     { path: '/prep', label: '國中七年級先修', icon: GraduationCap, color: '#0ea5e9', desc: '會考必備衔接要點' },
-    { path: '/shop', label: '星光守護商城', icon: ShoppingBag, color: '#ec4899', desc: '裝備飾品屬性強化' },
-    { path: '/memory-game', label: '記憶翻牌挑戰', icon: Layers, color: '#6366f1', desc: '專注力與腦力特訓' },
+    { path: '/memory-game', label: '記憶翻牌挑戰', icon: Layers, color: '#ec4899', desc: '專注力與腦力特訓' },
     { path: '/question-bank', label: '全國段考試題庫', icon: HelpCircle, color: '#14b8a6', desc: '歷屆名校段考真題' },
     { path: '/resources', label: '全臺教育導航', icon: Globe, color: '#64748b', desc: '因材網均一公私立庫' }
   ];

@@ -213,7 +213,7 @@ const BossBattlePage = () => {
 
   const handleUse5050 = () => {
     if ((inventory.hint_5050 || 0) <= 0) {
-      alert('背包中沒有 50:50 提示卡了！可至星光商城購買！');
+      alert('背包中沒有 50:50 提示卡了！可在每日幸運轉盤或闖關中免費獲得！');
       return;
     }
     const q = battleQuestions[currentQIndex];
@@ -234,10 +234,8 @@ const BossBattlePage = () => {
         <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
           <ArrowLeft size={16} /> 返回課程首頁
         </Link>
-        <div className="flex items-center gap-3">
-          <Link to="/shop" className="btn-pill text-xs flex items-center gap-1 font-bold text-amber-500">
-            <span>🛒 道具商城</span>
-          </Link>
+        <div className="flex items-center gap-2">
+          <span className="badge badge-accent text-xs font-bold">✨ 免費通關・純粹知識對決</span>
         </div>
       </div>
 
@@ -414,7 +412,7 @@ const BossBattlePage = () => {
             <span className="badge badge-error mb-2 font-bold">時間耗盡・挑戰未完成</span>
             <h2 className="h2 my-2">別灰心！多加練習觀念隨時再來！</h2>
             <p className="text-secondary text-sm">
-              魔王還剩 {bossHp} 點 HP。可以在商店購買「50:50 提示卡」輔助戰鬥！
+              魔王還剩 {bossHp} 點 HP。每天可在轉盤免費領取「50:50 提示卡」輔助戰鬥！
             </p>
           </div>
 

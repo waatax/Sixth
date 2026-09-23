@@ -35,6 +35,7 @@ import {
   Printer,
   Palette,
   FileText,
+  Flame,
   X
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
@@ -650,6 +651,24 @@ const LessonPage = () => {
             <Zap size={13} style={{ fill: '#d97706' }} />
             <span>📊 考前速查秘笈</span>
           </button>
+
+          {/* Lecture Notes & PDF Quick Link */}
+          {currentSubject && (
+            <button
+              onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+              className="badge cursor-pointer flex items-center gap-1"
+              style={{
+                backgroundColor: 'rgba(99, 102, 241, 0.15)',
+                color: '#6366f1',
+                border: '1px solid rgba(99, 102, 241, 0.3)',
+                fontWeight: 700
+              }}
+              title="查看本學科段考講義與下載 PDF"
+            >
+              <FileText size={12} />
+              <span>📑 章節講義 (PDF)</span>
+            </button>
+          )}
 
           {/* Scratchpad Button */}
           <button
@@ -1520,6 +1539,24 @@ const LessonPage = () => {
         </div>
 
         <div className="flex items-center gap-3 flex-wrap">
+          {currentSubject && (
+            <button 
+              className="btn-outline flex items-center gap-1.5"
+              onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+              style={{
+                padding: '12px 18px',
+                fontSize: '0.92rem',
+                fontWeight: 700,
+                borderRadius: 'var(--radius-md)',
+                borderColor: '#6366f1',
+                color: '#6366f1'
+              }}
+              title="查看並下載本學科專屬章節講義與考前大複習 PDF"
+            >
+              <FileText size={16} /> 📑 下載【{currentSubject.name}】章節講義 (PDF)
+            </button>
+          )}
+
           {currentUnit.videoUrl && (
             <a 
               href={currentUnit.videoUrl} 
@@ -1538,8 +1575,8 @@ const LessonPage = () => {
             className="btn-primary flex items-center gap-2" 
             onClick={() => navigate(`/quiz/${unitId}`)}
             style={{
-              padding: '12px 26px',
-              fontSize: '1rem',
+              padding: '12px 22px',
+              fontSize: '0.95rem',
               fontWeight: 700,
               backgroundColor: 'var(--accent-success)',
               borderColor: 'var(--accent-success)',
@@ -1549,6 +1586,24 @@ const LessonPage = () => {
             }}
           >
             <CheckCircle2 size={18} /> 進入觀念小測驗 (+50 XP) →
+          </button>
+
+          <button 
+            className="btn-primary flex items-center gap-2" 
+            onClick={() => navigate(`/quiz/${unitId}?mode=challenge`)}
+            style={{
+              padding: '12px 22px',
+              fontSize: '0.95rem',
+              fontWeight: 700,
+              background: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
+              border: 'none',
+              color: 'white',
+              borderRadius: 'var(--radius-md)',
+              boxShadow: '0 4px 12px rgba(234, 88, 12, 0.35)'
+            }}
+            title="進行圖示壓軸題與進階素養模擬挑戰"
+          >
+            <Flame size={18} /> 進入單元模擬挑戰 (+100 XP) ⚔️
           </button>
         </div>
       </div>

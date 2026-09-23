@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import HomePage from './pages/HomePage';
 import SubjectPage from './pages/SubjectPage';
@@ -13,9 +13,9 @@ import MistakesPage from './pages/MistakesPage';
 import GeptPage from './pages/GeptPage';
 import BossBattlePage from './pages/BossBattlePage';
 import MemoryGamePage from './pages/MemoryGamePage';
-import ShopPage from './pages/ShopPage';
 import ShortsReelsPage from './pages/ShortsReelsPage';
 import InteractiveLabsPage from './pages/InteractiveLabsPage';
+import ExamReviewNotesPage from './pages/ExamReviewNotesPage';
 import { GamificationProvider } from './context/GamificationContext';
 import PetCompanionWidget from './components/gamification/PetCompanionWidget';
 import './App.css';
@@ -38,9 +38,13 @@ function App() {
           <Route path="gept" element={<GeptPage />} />
           <Route path="boss-battle" element={<BossBattlePage />} />
           <Route path="memory-game" element={<MemoryGamePage />} />
-          <Route path="shop" element={<ShopPage />} />
+          <Route path="shop" element={<Navigate to="/" replace />} />
           <Route path="shorts" element={<ShortsReelsPage />} />
           <Route path="labs" element={<InteractiveLabsPage />} />
+          <Route path="exam-notes" element={<ExamReviewNotesPage />} />
+          <Route path="exam-notes/:subjectId" element={<ExamReviewNotesPage />} />
+          <Route path="exam-notes/:subjectId/:semester" element={<ExamReviewNotesPage />} />
+          <Route path="exam-notes/:subjectId/:semester/:scope" element={<ExamReviewNotesPage />} />
         </Route>
       </Routes>
       <PetCompanionWidget />

@@ -1,0 +1,1046 @@
+/* ==========================================================================
+   ExamReviewNotesPage.css - 考前筆記大複習與 A4 列印 / 轉存 PDF 樣式
+   ========================================================================== */
+
+.exam-notes-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+/* 頂部英雄區 */
+.notes-hero-banner {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.12) 50%, rgba(236, 72, 153, 0.08) 100%);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 2rem 2.2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.notes-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-primary);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.notes-hero-title {
+  font-size: calc(2rem * var(--font-scale));
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0.3rem 0 0.8rem;
+  color: var(--text-primary);
+}
+
+.notes-hero-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+/* 控制工具列 */
+.notes-controls-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* 學期切換標籤 */
+.semester-tabs-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.semester-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-light);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.semester-tab-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.semester-tab-btn.active {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+/* 學科選擇按鈕組 */
+.subjects-pills-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--border-light);
+}
+
+.subject-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 15px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-light);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.subject-pill-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.subject-pill-btn.active {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 動作列（搜尋、列印、統計） */
+.notes-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.notes-search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+  max-width: 400px;
+}
+
+.notes-search-input {
+  width: 100%;
+  padding: 9px 14px 9px 38px;
+  font-size: 0.88rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-light);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.notes-search-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: var(--bg-secondary);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.btn-print-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: 1.5px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-print-action:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+
+.btn-download-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white !important;
+  font-weight: 800;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-download-pdf:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+}
+
+.btn-offline-html {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.82rem;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-offline-html:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+/* 段考範圍選擇器 */
+.exam-scopes-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.exam-scope-label {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exam-scope-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-light);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.exam-scope-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.exam-scope-btn.active {
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* 講義段考高亮資訊橫幅 */
+.handout-scope-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap-3;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
+  border: 1.5px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+}
+
+.handout-scope-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.handout-scope-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.handout-scope-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* PDF 下載指引卡 */
+.pdf-guide-tipbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1.5px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  margin-bottom: 2rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* 主體兩欄佈局（目錄 + 筆記內容） */
+.notes-main-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .notes-main-layout {
+    grid-template-columns: 1fr;
+  }
+  .notes-toc-sidebar {
+    display: none;
+  }
+}
+
+/* 浮動目錄側邊欄 */
+.notes-toc-sidebar {
+  position: sticky;
+  top: 90px;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.toc-header {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 0.6rem;
+  border-bottom: 1.5px solid var(--border-light);
+}
+
+.toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-item-link {
+  display: block;
+  padding: 7px 12px;
+  border-radius: var(--radius-xs);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.toc-item-link:hover {
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* 單元筆記內容卡片清單 */
+.notes-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.unit-note-card {
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 100px;
+  transition: border-color var(--transition-normal);
+}
+
+.unit-note-card:hover {
+  border-color: var(--border-strong);
+}
+
+/* 單元標頭 */
+.unit-note-header {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.unit-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+
+.unit-note-title {
+  font-size: calc(1.4rem * var(--font-scale));
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0.3rem 0;
+}
+
+.unit-textbook-coverage {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.3rem;
+}
+
+/* 高密度雙欄排版 (左欄觀念與大招，右欄考點向量圖解與防雷陷阱) */
+.unit-dual-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .unit-dual-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.unit-grid-left,
+.unit-grid-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* 考點向量視覺圖解展示卡 */
+.unit-diagram-card {
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.unit-diagram-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+}
+
+.unit-diagram-header {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.unit-diagram-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+
+.unit-diagram-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 3px 0 0 0;
+  line-height: 1.4;
+}
+
+.unit-diagram-svg-container {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.unit-diagram-svg-container svg {
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;
+  display: block;
+}
+
+.unit-diagram-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 0.6rem;
+  padding: 6px 10px;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: var(--radius-xs);
+  border-left: 3px solid var(--accent-primary);
+}
+
+/* 核心區塊標題 */
+.note-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 0.8rem;
+}
+
+/* 1. 課綱觀念列表 */
+.core-concepts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.core-concept-item {
+  padding: 10px 14px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--accent-primary);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+/* 2. 公式口訣區塊 */
+.formulas-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formula-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.07) 100%);
+  border: 1.5px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.formula-name {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.formula-body {
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--bg-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-light);
+  margin-bottom: 6px;
+  overflow-x: auto;
+}
+
+.formula-detail {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 3. 防雷陷阱區塊 */
+.pitfalls-box {
+  background: var(--accent-error-soft);
+  border: 1.5px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.pitfall-item {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.pitfall-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 全幅真題與自測區塊 */
+.unit-full-section {
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--border-light);
+}
+
+.walkthroughs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 4. 歷年真題實戰 */
+.walkthrough-box {
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  margin-bottom: 0;
+}
+
+.walkthrough-source {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  background: var(--accent-soft);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+
+.walkthrough-question {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.walkthrough-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.walkthrough-option-item {
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xs);
+  font-size: 0.85rem;
+}
+
+.walkthrough-explanation {
+  background: rgba(16, 185, 129, 0.08);
+  border-left: 4px solid var(--accent-success);
+  border-radius: var(--radius-xs);
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  white-space: pre-line;
+}
+
+/* 5. 檢核清單 (多欄緊湊膠囊排列) */
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checklist-container.compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 8px;
+}
+
+.checklist-item-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  font-size: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition-fast);
+}
+
+.checklist-item-row:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-primary);
+}
+
+.checklist-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-primary);
+  cursor: pointer;
+}
+
+.checklist-text.checked {
+  text-decoration: line-through;
+  color: var(--text-tertiary);
+}
+
+/* 僅在列印時呈現的元件（網頁上隱藏） */
+.print-only-header,
+.print-only {
+  display: none;
+}
+
+/* ==========================================================================
+   🖨️ A4 列印 / 另存為 PDF 專屬樣式 (@media print)
+   ========================================================================== */
+
+@media print {
+  .print-only {
+    display: block !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* 設定 A4 紙張與邊距 */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm 15mm 15mm;
+  }
+
+  /* 隱藏網頁導覽、按鈕、側邊欄、寵物及動態元件 */
+  header,
+  nav,
+  footer,
+  .header,
+  .footer,
+  .notes-hero-banner,
+  .notes-controls-bar,
+  .notes-toc-sidebar,
+  .pdf-guide-tipbox,
+  .btn-print-action,
+  .btn-outline,
+  .pet-companion-widget,
+  .floating-reader-dock-wrapper,
+  .eye-care-toolbar {
+    display: none !important;
+  }
+
+  /* 強制黑白高對比列印與去除外層捲軸 */
+  body,
+  html,
+  #root,
+  .main-layout,
+  .exam-notes-page {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .notes-main-layout {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .notes-content-container {
+    gap: 1.5rem !important;
+  }
+
+  /* 列印官方講義抬頭顯示 */
+  .print-only-header {
+    display: block !important;
+    border: 2px solid #111827;
+    border-radius: 6px;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    background: #f9fafb !important;
+    page-break-after: avoid;
+  }
+
+  .print-header-title {
+    font-size: 16pt;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  .print-header-subtitle {
+    font-size: 11pt;
+    text-align: center;
+    color: #374151;
+    margin-bottom: 12px;
+  }
+
+  .print-header-fields {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    font-weight: 700;
+    border-top: 1px dashed #9ca3af;
+    padding-top: 8px;
+  }
+
+  /* 單元卡片分頁規則 */
+  .unit-note-card {
+    border: 1.5px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    margin-bottom: 18px !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .unit-note-title {
+    font-size: 13.5pt !important;
+    color: #000000 !important;
+    border-bottom: 1.5px solid #000000;
+    padding-bottom: 4px;
+    margin-bottom: 10px !important;
+  }
+
+  /* 列印雙欄排版，節省頁面空間 */
+  .unit-dual-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 12px !important;
+    margin-bottom: 10px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .unit-grid-left,
+  .unit-grid-right {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  /* 考點向量圖解列印優化 */
+  .unit-diagram-card {
+    background: #f9fafb !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    padding: 8px 10px !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .unit-diagram-badge {
+    background: #e0e7ff !important;
+    color: #3730a3 !important;
+    font-size: 8pt !important;
+    padding: 2px 6px !important;
+  }
+
+  .unit-diagram-title {
+    font-size: 10pt !important;
+    color: #111827 !important;
+  }
+
+  .unit-diagram-svg-container {
+    background: #ffffff !important;
+    border: 1px solid #9ca3af !important;
+    padding: 4px !important;
+  }
+
+  .unit-diagram-svg-container svg {
+    max-height: 170px !important;
+  }
+
+  .unit-diagram-subtitle {
+    background: #f3f4f6 !important;
+    border-left: 2.5px solid #4f46e5 !important;
+    color: #374151 !important;
+    font-size: 8.5pt !important;
+    padding: 4px 6px !important;
+  }
+
+  .note-section-title {
+    font-size: 10.5pt !important;
+    font-weight: 800 !important;
+    color: #000000 !important;
+    margin: 0 0 4px !important;
+  }
+
+  .core-concept-item {
+    background: #f9fafb !important;
+    border-left: 3px solid #374151 !important;
+    padding: 6px 10px !important;
+    font-size: 9.5pt !important;
+    color: #111827 !important;
+    page-break-inside: avoid;
+  }
+
+  .formula-card {
+    background: #f3f4f6 !important;
+    border: 1px solid #9ca3af !important;
+    padding: 8px 10px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .formula-name {
+    color: #111827 !important;
+    font-size: 9.5pt !important;
+  }
+
+  .formula-body {
+    background: #ffffff !important;
+    border: 1px solid #6b7280 !important;
+    color: #000000 !important;
+    padding: 6px 8px !important;
+    font-size: 9.5pt !important;
+  }
+
+  .formula-detail {
+    font-size: 8.5pt !important;
+  }
+
+  .pitfalls-box {
+    background: #fef2f2 !important;
+    border: 1.5px solid #ef4444 !important;
+    padding: 8px 10px !important;
+    page-break-inside: avoid !important;
+  }
+
+  .pitfall-item {
+    font-size: 9pt !important;
+    margin-bottom: 4px !important;
+  }
+
+  .unit-full-section {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+    border-top: 1px dashed #d1d5db !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .walkthrough-box {
+    background: #ffffff !important;
+    border: 1px solid #9ca3af !important;
+    padding: 10px 12px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .walkthrough-question {
+    font-size: 9.5pt !important;
+    margin-bottom: 6px !important;
+  }
+
+  .walkthrough-options {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .walkthrough-option-item {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    padding: 4px 6px !important;
+    font-size: 9pt !important;
+  }
+
+  .walkthrough-explanation {
+    background: #f0fdf4 !important;
+    border-left: 3px solid #16a34a !important;
+    padding: 6px 10px !important;
+    font-size: 9pt !important;
+    display: block !important;
+  }
+
+  .checklist-container.compact-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4px 12px !important;
+  }
+
+  .checklist-item-row {
+    background: transparent !important;
+    border-bottom: 1px dotted #d1d5db;
+    padding: 4px 0 !important;
+    font-size: 9pt !important;
+    page-break-inside: avoid;
+  }
+
+  .checklist-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid #111827;
+    border-radius: 2px;
+  }
+}

@@ -19,9 +19,11 @@ import { quizData } from '../data/quizData';
 import { coursesData } from '../data/courses';
 import { playSound } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
+import QuestionDiagram from '../components/quiz/QuestionDiagram';
 
 const EXAM_MODES = [
   { id: 'all', title: '🎯 全科素養綜合大滿貫', desc: '八大學習領域隨機抽取 10 題，全方位檢驗實戰應考力！', icon: '🏆', color: 'var(--accent-primary)' },
+  { id: 'challenge', title: '⚔️ 模擬挑戰專區・圖示壓軸素養題', desc: '全科精選幾何鋪色、電路磁效應、槓桿天平、顯微鏡與地圖等完整圖示模擬挑戰題！', icon: '🔥', color: 'var(--apple-orange)' },
   { id: 'math', title: '🧮 數學科專題模擬考', desc: '數與量、分數小數除法、比值、圓面積與柱體速率', icon: '🧮', color: 'hsl(215, 85%, 52%)' },
   { id: 'science', title: '🔬 自然科學專題模擬考', desc: '天氣系統、水溶液酸鹼、電與磁、簡單機械與生態系', icon: '🔬', color: 'hsl(152, 70%, 42%)' },
   { id: 'mandarin', title: '📖 國語文專題模擬考', desc: '閱讀理解策略、記敘說明議論文、修辭成語與古詩', icon: '📖', color: 'hsl(25, 90%, 52%)' },
@@ -53,7 +55,11 @@ const MockExamPage = () => {
       return '單元核心考題';
     };
 
-    if (modeId === 'all') {
+    if (modeId === 'challenge') {
+      Object.entries(quizData).forEach(([unitId, qList]) => {
+        qList.filter(q => q.isMockChallenge).forEach(q => allQs.push({ ...q, unitId, unitTitle: getUnitTitle(unitId) }));
+      });
+    } else if (modeId === 'all') {
       Object.entries(quizData).forEach(([unitId, qList]) => {
         qList.forEach(q => allQs.push({ ...q, unitId, unitTitle: getUnitTitle(unitId) }));
       });
@@ -308,6 +314,11 @@ const MockExamPage = () => {
                     <div className="text-xs text-secondary mt-1">
                       <strong>你的答案：</strong> <span style={{ color: isCorrect ? 'var(--accent-success-text)' : '#ef4444', fontWeight: 600 }}>{userAns !== undefined ? q.options[userAns] : '未作答'}</span> | <strong style={{ color: 'var(--accent-success-text)' }}>正確答案：</strong> {q.options[q.answerIndex]}
                     </div>
+                    {q.diagram && (
+                      <div className="my-2 max-w-sm mx-auto">
+                        <QuestionDiagram diagram={q.diagram} />
+                      </div>
+                    )}
                     <div className="text-xs text-secondary mt-2 p-2.5 rounded bg-bg-secondary" style={{ lineHeight: 1.7, border: '1px solid var(--border-light)' }}>
                       <strong style={{ color: 'var(--accent-primary)' }}>💡 觀念名師解析：</strong> {q.explanation}
                     </div>
@@ -373,9 +384,33 @@ const MockExamPage = () => {
                 </button>
               </div>
 
+              {/* Challenge badge if present */}
+              {examQuestions[currentIdx]?.isMockChallenge && (
+                <div className="-mt-3 mb-1">
+                  <span 
+                    className="badge inline-flex items-center gap-1.5 py-1 px-3"
+                    style={{
+                      backgroundColor: 'rgba(255, 149, 0, 0.15)',
+                      color: 'var(--apple-orange)',
+                      border: '1px solid rgba(255, 149, 0, 0.35)',
+                      fontWeight: 700,
+                      fontSize: '0.8rem'
+                    }}
+                  >
+                    <Flame size={14} />
+                    <span>{examQuestions[currentIdx].challengeBadge || '🔥 單元模擬挑戰・壓軸真題'}</span>
+                  </span>
+                </div>
+              )}
+
               <h2 className="h3" style={{ fontSize: 'calc(1.25rem * var(--font-scale))', lineHeight: 1.6 }}>
                 {currentIdx + 1}. {examQuestions[currentIdx].question}
               </h2>
+
+              {/* Render Question Diagram if question has one */}
+              {examQuestions[currentIdx]?.diagram && (
+                <QuestionDiagram diagram={examQuestions[currentIdx].diagram} />
+              )}
 
               <div className="flex flex-col gap-3">
                 {examQuestions[currentIdx].options.map((opt, optIdx) => {
