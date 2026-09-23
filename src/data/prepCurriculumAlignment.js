@@ -1,42 +1,42 @@
-// 均一教育平台 (Junyi Academy) 最強小六 + 升國中 英數理國社 全科先修旗艦專案
+// 最強小六 (Sixth) 升國中 英數理國社 全科銜接先修旗艦專案
 // 專家顧問委員會 (9 人陣容) & 7 輪深度會議迭代紀要白皮書 & 108課綱三版本對照矩陣 & 7x7 完整度查驗矩陣
 
 export const expertCouncil = [
   {
-    id: 'junyi-cto',
+    id: 'sixth-cto',
     name: '林技術長 (CTO)',
-    title: '均一平台技術長兼首席架構師',
-    org: '均一平台教育基金會 (Junyi Academy)',
+    title: '最強小六平台架構長兼技術總監',
+    org: '最強小六數位學習研發核心團隊 (Sixth EdTech Labs)',
     badge: '演算法與雲端架構',
     avatar: '💻',
-    bio: '深耕 EdTech 技術 12 年，主導均一適性化推薦演算法、知識圖譜 (Knowledge Graph) 引擎與百萬學生實時學習數據串流架構。',
+    bio: '深耕 EdTech 技術 12 年，主導最強小六適性化學習路徑演算法、知識圖譜 (Knowledge Graph) 引擎與百萬學生實時學習數據串流架構。',
     focus: 'BKT (貝氏知識追蹤) 演算法、微服務高效能渲染、零延遲互動探究工具、7x7 完整度查驗自動化'
   },
   {
-    id: 'junyi-cko',
+    id: 'sixth-cko',
     name: '張知識長 (CKO)',
-    title: '均一平台知識長兼內容總監',
-    org: '均一平台教育基金會 (Junyi Academy)',
+    title: '最強小六課程體系總監兼全科知識圖譜顧問',
+    org: '最強小六數位學習研發核心團隊 (Sixth EdTech Labs)',
     badge: '課程知識體系',
     avatar: '🧭',
     bio: '專攻 K-12 全科課程體系規劃，建立超過 3 萬個微概念拓撲圖，引領台灣開放教育資源 (OER) 與適性化學習路徑設計。',
     focus: '微概念粒度切割 (Micro-concepts)、跨學段先備知識相依性拓撲圖、英數理國社全科對齊'
   },
   {
-    id: 'junyi-cpo',
+    id: 'sixth-cpo',
     name: '黃平台規劃長 (CPO)',
-    title: '均一產品與平台規劃長',
-    org: '均一平台教育基金會 (Junyi Academy)',
+    title: '最強小六學習體驗與產品規劃長',
+    org: '最強小六數位學習研發核心團隊 (Sixth EdTech Labs)',
     badge: '產品體驗設計',
     avatar: '📱',
     bio: '專注青少年學習旅程 (Learner Journey) 與自學動線優化，將高門檻抽象概念轉化為直覺、流暢、具沉浸感之數位介面。',
     focus: '學習者體驗路徑 (UX Flow)、鷹架式引導提示、青少年自主學習留存率'
   },
   {
-    id: 'junyi-edu-dir',
+    id: 'sixth-edu-dir',
     name: '陳資深教育專家',
-    title: '均一教育研發顧問兼師資培訓總監',
-    org: '均一平台教育基金會 (Junyi Academy)',
+    title: '最強小六自主學習法研發顧問兼國教素養培訓名師',
+    org: '最強小六數位學習研發核心團隊 (Sixth EdTech Labs)',
     badge: '學習法與師資培訓',
     avatar: '🎓',
     bio: '擁有 20 年第一線教學與國教輔導團資歷，專精鷹架學習理論 (Scaffolding)、差異化教學與自律學習循環 (SRL)。',
@@ -105,7 +105,7 @@ export const iterationLogs = [
   },
   {
     round: 2,
-    title: 'Round 2【均一知識圖譜微概念拓撲】',
+    title: 'Round 2【全科知識圖譜微概念拓撲】',
     focus: '打破章節藩籬，將國中先修拆解為「小六先備 ➔ 國中核心 ➔ 會考延伸」五階能力階梯 (L1~L5)',
     debates: '張知識長 (CKO) 強調：傳統單元教學步幅過大，學童一遇代數符號即產生習得性無助。陳資深教育專家建議將概念顆粒度細化至微概念。',
     breakthrough: '建立全科目五階進階階梯 (L1 具象先備 ➔ L2 符號過渡 ➔ L3 核心難點 ➔ L4 延伸進階 ➔ L5 會考素養)。',
@@ -130,7 +130,7 @@ export const iterationLogs = [
   {
     round: 5,
     title: 'Round 5【自然微觀世界具象與實驗探究】',
-    focus: '對齊均一 ns-ele-high 15 大單元，銜接國一生物顯微鏡微觀世界與國二理化密度水溶液',
+    focus: '全科對齊 108 課綱國小高年級 15 大核心主題，銜接國一生物顯微鏡微觀世界與國二理化密度水溶液',
     debates: '自然科如何克服顯微鏡倒立成像與物像反向移動的空間旋轉障礙？',
     breakthrough: '研發動態「光學顯微鏡虛擬操作台」，模擬高低倍鏡視野亮度（暗小少大）與載玻片反向移動規律。',
     actions: '實裝顯微鏡虛擬實驗台，並全面貫徹 108 課綱探究與實作變因分析架構。'
@@ -147,7 +147,7 @@ export const iterationLogs = [
     round: 7,
     title: 'Round 7【7×7 完整度迭代驗收與旗艦部署】',
     focus: '7 大維度 × 7 大領域 = 49 節點完整度矩陣無死角驗收，端到端性能走查與 GitHub.io 部署',
-    debates: '林技術長 (CTO)、郭測評科學家與全體專家逐項檢驗 49 個核心節點，確認均一官方知識錨點全數閉環，三階自適應測評 35 題處方箋全覆蓋。',
+    debates: '林技術長 (CTO)、郭測評科學家與全體專家逐項檢驗 49 個核心節點，確認全科核心知識圖譜錨點全數閉環，三階自適應測評 35 題處方箋全覆蓋。',
     breakthrough: '全體專家簽署驗收合格證書！打造「7×7 完整度查驗儀表板」，正式完成 GitHub Actions CI/CD 發布至 GitHub Pages。',
     actions: '全系統無瑕疵通過 Oxlint 規範與 Vite 生產構建，正式上線發布。'
   }
@@ -273,12 +273,12 @@ export const versionMatrix = {
   science: [
     {
       id: 'vm-sci-1',
-      unitTitle: '光學顯微鏡操作與動植物細胞構造 (對齊均一 ns-ele-high 與 7上生物)',
+      unitTitle: '光學顯微鏡操作與動植物細胞構造 (對齊國小高年級顯微觀察與 7上生物)',
       gradeCode: '7 上生物 第 1 章',
       kangHsuan: '第 1 冊 第 1 章 1-1 進入實驗室與顯微鏡使用、1-2 動植物細胞構造',
       nanI: '第 1 冊 第 1 章 1-1 科學方法與顯微鏡、1-2 生命的基本單位——細胞',
       hanLin: '第 1 冊 第 1 章 1-1 顯微鏡的操作、1-2 細胞的構造與功能',
-      elemBridge: '小五/小六：均一 ns-ele-high (水溶液、微小生物、植物構造)',
+      elemBridge: '小五/小六：國小自然：微小生物、水溶液性質、植物構造',
       alertLevel: '極高 (★★★ 國一生物第一次段考必考第 1 題)',
       coreSkills: ['複式顯微鏡成像特點：倒立放大虛像（上下顛倒、左右相反）', '物像移動口訣：「物在哪裡，載玻片就往哪裡移」', '低倍鏡換高倍鏡特徵四重奏：視野變暗、範圍變小、細胞數變少、細胞體積變大', '動植物細胞構造比對：細胞壁與葉綠體為植物特有，粒線體為能量工廠']
     },
@@ -289,7 +289,7 @@ export const versionMatrix = {
       kangHsuan: '第 1 冊 第 2 章 養分與酵素、第 3 章 運輸、第 4 章 協調與恆定',
       nanI: '第 1 冊 第 2 章 養分與能量、第 3 章 生物體的循環、第 4 章 神經與內分泌',
       hanLin: '第 1 冊 第 2 章 酵素與光合作用、第 3 章 人體的循環與防禦、第 4 章 恆定性',
-      elemBridge: '均一 ns-g5-02 植物世界、ns-g5-03 空氣燃燒、小六人體消化循環',
+      elemBridge: '國小自然：植物世界、空氣燃燒、人體消化循環',
       alertLevel: '高 (★★ 生物概念核心)',
       coreSkills: ['酵素（生物催化劑）專一性、溫度與 pH 最佳活性曲線', '光合作用完整反應：水 + 二氧化碳 + 光能 ➔ 葡萄糖 + 氧氣 + 水', '人體循環系統：左心室體循環壁最厚，動脈 ➔ 微血管（物質交換） ➔ 靜脈', '神經系統：受器 ➔ 感覺神經元 ➔ 大腦/脊髓中樞 ➔ 運動神經元 ➔ 動器']
     },
@@ -311,7 +311,7 @@ export const versionMatrix = {
       kangHsuan: '第 3 冊 第 2 章 2-1 物質的分類、2-2 水溶液與濃度',
       nanI: '第 3 冊 第 2 章 2-1 純物質與混合物、2-2 水溶液的溶解度與濃度',
       hanLin: '第 3 冊 第 2 章 2-1 認識物質、2-2 水溶液與濃度計算',
-      elemBridge: '均一 ns-g5-06 水溶液、ns-g6-06 防鏽防腐、小六酸鹼性石蕊試紙',
+      elemBridge: '國小自然：水溶液特性、防鏽防腐、酸鹼性石蕊試紙',
       alertLevel: '高 (★★ 混合物分離法必考)',
       coreSkills: ['純物質（元素、化合物）vs 混合物之熔沸點判斷', '混合物分離三法：過濾法（顆粒大小）、蒸發結晶（沸點）、蒸餾法', '重量百分濃度公式：wt% = [溶質質量 / (溶質 + 溶劑)] × 100%', '飽和水溶液在特定溫度下溶解度固定，多加溶質不改變濃度']
     },
@@ -322,7 +322,7 @@ export const versionMatrix = {
       kangHsuan: '第 4 冊 第 1 章 1-1 元素與化合物、1-2 原子與原子結構',
       nanI: '第 4 冊 第 1 章 1-1 認識元素與週期表、1-2 原子的構造',
       hanLin: '第 4 冊 第 1 章 1-1 元素符號與週期表、1-2 原子的組成',
-      elemBridge: '均一 ns-g6-03 電磁作用、ns-g6-06 防鏽與防腐',
+      elemBridge: '國小自然：電磁作用探究、防鏽與防腐實驗',
       alertLevel: '中 (★★ 理化基石口訣)',
       coreSkills: ['原子結構：原子核（帶正電質子 + 不帶電中子）+ 核外負電電子', '原子序 = 質子數 = 電子數（中性原子）；質量數 = 質子數 + 中子數', '前 20 號元素順口溜速記：親愛的皮朋，探討氧氣奶奶，那個美麗西林，留綠鴨加蓋', '生活重要金屬元素符號：Fe, Cu, Zn, Ag, Au, Pb, Hg']
     }
@@ -526,7 +526,7 @@ export const knowledgeGraphLadders = {
     {
       level: 'L1',
       name: '科學方法與實驗器材操作',
-      prereq: '均一 ns-ele-high 15單元：觀察紀錄與器材操作',
+      prereq: '國小高年級自然實驗：顯微觀察紀錄與器材操作規範',
       target: '掌握操縱變因、控制變因、應變變因；測量值包含準確值與最後一位估計值。',
       status: '探究基礎'
     },
@@ -643,11 +643,11 @@ export const completenessMatrix7x7 = [
   {
     id: 'cm-1-1',
     dimensionId: 'v1',
-    dimensionName: 'V1 均一知識圖譜拓撲對齊',
+    dimensionName: 'V1 全科微概念知識圖譜拓撲對齊',
     domainId: 'd1',
     domainName: 'D1 數學科高年級',
     status: 'verified',
-    junyiRef: 'topics/math-topic-elem (數與量/空間與形狀/關係)',
+    curriculumRef: 'topics/math-topic-elem (數與量/空間與形狀/關係)',
     checkItem: '高年級因倍數、分數除法、比與比值、圓扇柱體幾何相依拓撲圖',
     resultDetail: '全面錨定小五小六 12 大單元，建立向國一負數、方程式之先備知識指向箭頭。'
   },
@@ -658,7 +658,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd1',
     domainName: 'D1 數學科高年級',
     status: 'verified',
-    junyiRef: 'n-III-1, n-III-6, s-III-1, r-III-1',
+    curriculumRef: 'n-III-1, n-III-6, s-III-1, r-III-1',
     checkItem: '素養導向情境題（平分分裝、圓周率測量、縮圖比例尺日常應用）',
     resultDetail: '落實數感培養、生活情境建模，並設計幾何公式直觀推導。'
   },
@@ -669,7 +669,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd1',
     domainName: 'D1 數學科高年級',
     status: 'verified',
-    junyiRef: '康軒第11~12冊 / 南一第11~12冊 / 翰林第11~12冊',
+    curriculumRef: '康軒第11~12冊 / 南一第11~12冊 / 翰林第11~12冊',
     checkItem: '三大版本小六上與小六下單元順序與名詞對照表',
     resultDetail: '消除康軒先教比例尺、南一先教圓面積之版本教學順序落差。'
   },
@@ -680,7 +680,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd1',
     domainName: 'D1 數學科高年級',
     status: 'verified',
-    junyiRef: 'math-elem-ladders',
+    curriculumRef: 'math-elem-ladders',
     checkItem: '從整數四則算術到文字符號列式的微步過渡',
     resultDetail: 'L1因倍數 ➔ L2分數小數除 ➔ L3比與幾何 ➔ L4速率與比例 ➔ L5未知數等量公理。'
   },
@@ -691,7 +691,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd1',
     domainName: 'D1 數學科高年級',
     status: 'verified',
-    junyiRef: 'misconception-elem-math',
+    curriculumRef: 'misconception-elem-math',
     checkItem: '分數除法顛倒相乘為何要倒數？小數除法餘數小數點忘記對齊？',
     resultDetail: '內建名師防雷分析，詳解除數小於1商反變大、餘數小數點對齊被除數原位置。'
   },
@@ -702,7 +702,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd1',
     domainName: 'D1 數學科高年級',
     status: 'verified',
-    junyiRef: 'formula-elem-math',
+    curriculumRef: 'formula-elem-math',
     checkItem: '圓周長、圓面積、扇形面積、柱體表面積與體積公式精華箱',
     resultDetail: '提供可一鍵複製之 Markdown 公式代碼，配搭名師逐步推導展開折疊。'
   },
@@ -713,7 +713,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd1',
     domainName: 'D1 數學科高年級',
     status: 'verified',
-    junyiRef: 'quiz-elem-math-scaffold',
+    curriculumRef: 'quiz-elem-math-scaffold',
     checkItem: '觀念提點 ➔ 步驟引導 ➔ 完整詳解 三階提示支援高年級題組',
     resultDetail: '測驗錯題即時映射至知識點弱點處方箋，引導立即回看對應教材。'
   },
@@ -722,13 +722,13 @@ export const completenessMatrix7x7 = [
   {
     id: 'cm-2-1',
     dimensionId: 'v1',
-    dimensionName: 'V1 均一知識圖譜拓撲對齊',
+    dimensionName: 'V1 全科微概念知識圖譜拓撲對齊',
     domainId: 'd2',
     domainName: 'D2 數學科國中先修',
     status: 'verified',
-    junyiRef: 'topics/math-topic-juni (數與量/代數與函數/幾何)',
+    curriculumRef: 'topics/math-topic-juni (數與量/代數與函數/幾何)',
     checkItem: '負數數線、絕對值、指數律、一元一次方程式微概念圖譜',
-    resultDetail: '精確對齊均一 mjn 與 mja 系列主題，先備條件完全打通。'
+    resultDetail: '精確對齊國小高年級至國中數與代數微概念階梯，先備條件完全打通。'
   },
   {
     id: 'cm-2-2',
@@ -737,7 +737,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd2',
     domainName: 'D2 數學科國中先修',
     status: 'verified',
-    junyiRef: 'N-7-1, N-7-2, A-7-1, A-7-2, A-7-3',
+    curriculumRef: 'N-7-1, N-7-2, A-7-1, A-7-2, A-7-3',
     checkItem: '正負數四則運算、去括號變號律與移項法則代數符號建模',
     resultDetail: '以天平平衡公理推導移項法則，杜絕死背跨過等號變號。'
   },
@@ -748,7 +748,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd2',
     domainName: 'D2 數學科國中先修',
     status: 'verified',
-    junyiRef: 'versionMatrix.math (康軒/南一/翰林 第1冊)',
+    curriculumRef: 'versionMatrix.math (康軒/南一/翰林 第1冊)',
     checkItem: '七上第 1 章至第 3 章單元編號、名稱與失分警訊對照',
     resultDetail: '康軒、南一、翰林第一冊單元 1-1 至 3-3 全線貫通。'
   },
@@ -759,7 +759,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd2',
     domainName: 'D2 數學科國中先修',
     status: 'verified',
-    junyiRef: 'knowledgeGraphLadders.math',
+    curriculumRef: 'knowledgeGraphLadders.math',
     checkItem: 'L1數線正負 ➔ L2絕對值 ➔ L3四則變號 ➔ L4等量公理 ➔ L5列方程應用',
     resultDetail: '五階階梯完整標註小六先備條件與各層階核心能力指標。'
   },
@@ -770,7 +770,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd2',
     domainName: 'D2 數學科國中先修',
     status: 'verified',
-    junyiRef: 'prepData.math.misconceptions',
+    curriculumRef: 'prepData.math.misconceptions',
     checkItem: '(-2)⁴ 與 -2⁴ 區分、括號前負號去括號變號、兩點距離絕對值',
     resultDetail: '收錄國一第一次段考前三大陷阱題，提供名師正解心法。'
   },
@@ -781,7 +781,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd2',
     domainName: 'D2 數學科國中先修',
     status: 'verified',
-    junyiRef: 'prepData.math.formulaBox & Interactive Number Line',
+    curriculumRef: 'prepData.math.formulaBox & Interactive Number Line',
     checkItem: '絕對值兩點距離公式、去括號法則速記、動態數線走步機',
     resultDetail: '支援數線向量互動模擬器與一元一次方程解題步驟推導。'
   },
@@ -792,7 +792,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd2',
     domainName: 'D2 數學科國中先修',
     status: 'verified',
-    junyiRef: 'prepData.quizQuestions (Math units)',
+    curriculumRef: 'prepData.quizQuestions (Math units)',
     checkItem: '數學科 7 道高頻段考銜接自適應題，三階提示齊全',
     resultDetail: '提供 Level 1 觀念、Level 2 算式步驟引導與 Level 3 完整步驟解析。'
   },
@@ -801,13 +801,13 @@ export const completenessMatrix7x7 = [
   {
     id: 'cm-3-1',
     dimensionId: 'v1',
-    dimensionName: 'V1 均一知識圖譜拓撲對齊',
+    dimensionName: 'V1 全科微概念知識圖譜拓撲對齊',
     domainId: 'd3',
     domainName: 'D3 英語文高年級與國中銜接',
     status: 'verified',
-    junyiRef: 'topics/eng-junior (七八九年級語法/基礎單字/發音)',
+    curriculumRef: 'topics/eng-junior (七八九年級語法/基礎單字/發音)',
     checkItem: 'be動詞、助動詞do/does、三單-s/-es、現在進行式拓撲依賴',
-    resultDetail: '對齊均一英語文法與會考題庫，先備日常生活口語至國中語法樹。'
+    resultDetail: '對齊國中英語常用文法與會考核心題庫，先備日常生活口語至國中語法樹。'
   },
   {
     id: 'cm-3-2',
@@ -816,7 +816,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd3',
     domainName: 'D3 英語文高年級與國中銜接',
     status: 'verified',
-    junyiRef: 'Ae-IV-1, Ae-IV-2, B-IV-2 (英語溝通素養)',
+    curriculumRef: 'Ae-IV-1, Ae-IV-2, B-IV-2 (英語溝通素養)',
     checkItem: '情境化生活對話句型轉換（肯定句 ➔ 否定句 ➔ 疑問句與簡答）',
     resultDetail: '杜絕生硬死記文法，結合動態時光機情境模擬時間軸。'
   },
@@ -827,7 +827,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd3',
     domainName: 'D3 英語文高年級與國中銜接',
     status: 'verified',
-    junyiRef: 'versionMatrix.english (康軒/南一/翰林 Book 1)',
+    curriculumRef: 'versionMatrix.english (康軒/南一/翰林 Book 1)',
     checkItem: '七上 Starter 至 Unit 6 動詞與時態單元進度對照',
     resultDetail: '全版本通用涵蓋康軒 Wonder World 升中、南一與翰林 Here We Go 銜接。'
   },
@@ -838,7 +838,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd3',
     domainName: 'D3 英語文高年級與國中銜接',
     status: 'verified',
-    junyiRef: 'knowledgeGraphLadders.english',
+    curriculumRef: 'knowledgeGraphLadders.english',
     checkItem: 'L1代名詞be動詞 ➔ L2助動詞雙軌 ➔ L3三單變化 ➔ L4進行式 ➔ L5五大句型1200單',
     resultDetail: '由淺入深化解學童「中文無動詞變化」的語言認知障礙。'
   },
@@ -849,7 +849,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd3',
     domainName: 'D3 英語文高年級與國中銜接',
     status: 'verified',
-    junyiRef: 'prepData.english.misconceptions',
+    curriculumRef: 'prepData.english.misconceptions',
     checkItem: '「一山不容二虎」：be動詞與一般動詞並存錯誤、三單-s忘記加、助動詞後未還原形',
     resultDetail: '列舉段考最高頻 3 大失分地雷，附上糾錯對比表格。'
   },
@@ -860,7 +860,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd3',
     domainName: 'D3 英語文高年級與國中銜接',
     status: 'verified',
-    junyiRef: 'prepData.english.formulaBox & Interactive Tense Machine',
+    curriculumRef: 'prepData.english.formulaBox & Interactive Tense Machine',
     checkItem: '動詞時態時間軸、動詞-s/-es加法口訣、動態英語時態時光機',
     resultDetail: '實裝可切換主詞、動詞與時態之動態時光機互動工具。'
   },
@@ -871,7 +871,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd3',
     domainName: 'D3 英語文高年級與國中銜接',
     status: 'verified',
-    junyiRef: 'prepData.quizQuestions (English units)',
+    curriculumRef: 'prepData.quizQuestions (English units)',
     checkItem: '英語科 7 道語法與時態自適應題，三階提示齊全',
     resultDetail: '精準診斷動詞三單、be動詞與時態錯誤，生成單元處方箋。'
   },
@@ -880,11 +880,11 @@ export const completenessMatrix7x7 = [
   {
     id: 'cm-4-1',
     dimensionId: 'v1',
-    dimensionName: 'V1 均一知識圖譜拓撲對齊',
+    dimensionName: 'V1 全科微概念知識圖譜拓撲對齊',
     domainId: 'd4',
     domainName: 'D4 自然科學高年級',
     status: 'verified',
-    junyiRef: 'topics/ns-ele-high (官方 15 大核心單元全數入庫)',
+    curriculumRef: 'topics/ns-ele-high (官方 15 大核心單元全數入庫)',
     checkItem: '小五 8 單元 (光折射/植物/燃燒/聲音/星空/水溶液/動物/力運動) + 小六 7 單元 (天氣/地表/電磁/熱/機械/防鏽/生態)',
     resultDetail: '15 大單元微概念拓撲無縫整合至專案，對齊小學高年級探究課程。'
   },
@@ -895,7 +895,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd4',
     domainName: 'D4 自然科學高年級',
     status: 'verified',
-    junyiRef: 'INa-III-1 至 INg-III-2 (自然科學領域課綱)',
+    curriculumRef: 'INa-III-1 至 INg-III-2 (自然科學領域課綱)',
     checkItem: '探究與實作能力：控制變因法、觀察紀錄、模型建立與環保意識',
     resultDetail: '涵蓋電磁鐵圈數實驗、水溶液酸鹼指示劑變色、天候圖判讀素養。'
   },
@@ -906,7 +906,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd4',
     domainName: 'D4 自然科學高年級',
     status: 'verified',
-    junyiRef: '康軒/南一/翰林 國小五六年級自然課本',
+    curriculumRef: '康軒/南一/翰林 國小五六年級自然課本',
     checkItem: '高年級自然四大主題（物質能量、生命世界、地球環境、科學探究）版本對照',
     resultDetail: '對應各家版本實驗操作順序與安全注意事項。'
   },
@@ -917,7 +917,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd4',
     domainName: 'D4 自然科學高年級',
     status: 'verified',
-    junyiRef: 'knowledgeGraphLadders.science (L1~L3)',
+    curriculumRef: 'knowledgeGraphLadders.science (L1~L3)',
     checkItem: 'L1實驗變因 ➔ L2顯微鏡實作 ➔ L3動植物微觀細胞',
     resultDetail: '落實由宏觀現象觀察（天氣、燃燒）跨入微觀世界（細胞、分子）之過渡。'
   },
@@ -928,7 +928,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd4',
     domainName: 'D4 自然科學高年級',
     status: 'verified',
-    junyiRef: 'prepData.science.misconceptions (Elem focus)',
+    curriculumRef: 'prepData.science.misconceptions (Elem focus)',
     checkItem: '酸鹼中和放熱、電磁鐵極性判斷（右手螺旋定則）、熱傳導與對流區隔',
     resultDetail: '破除學童誤以為「保溫瓶能製造熱量」或「指示劑變紅一定是酸性」等直覺誤區。'
   },
@@ -939,7 +939,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd4',
     domainName: 'D4 自然科學高年級',
     status: 'verified',
-    junyiRef: 'prepData.science.formulaBox',
+    curriculumRef: 'prepData.science.formulaBox',
     checkItem: '兩力平衡條件、槓桿原理力矩平衡、熱量公式概念先行',
     resultDetail: '提供簡單機械力臂力矩計算與生活應用實例步驟。'
   },
@@ -950,22 +950,22 @@ export const completenessMatrix7x7 = [
     domainId: 'd4',
     domainName: 'D4 自然科學高年級',
     status: 'verified',
-    junyiRef: 'prepData.quizQuestions (Science Elem focus)',
+    curriculumRef: 'prepData.quizQuestions (Science Elem focus)',
     checkItem: '高年級自然探究實驗題組，支援三階提示與弱點回溯',
-    resultDetail: '錯題精準對應均一 ns-ele-high 具體單元影片與練習題。'
+    resultDetail: '錯題精準對應國小自然高年級概念節點與專題解析。'
   },
 
   // D5: 自然科學國中 (G7-G9 Junior High Science)
   {
     id: 'cm-5-1',
     dimensionId: 'v1',
-    dimensionName: 'V1 均一知識圖譜拓撲對齊',
+    dimensionName: 'V1 全科微概念知識圖譜拓撲對齊',
     domainId: 'd5',
     domainName: 'D5 自然科學國中',
     status: 'verified',
-    junyiRef: 'topics/science-juni (國中生物/理化/地科)',
+    curriculumRef: 'topics/science-juni (國中生物/理化/地科)',
     checkItem: '顯微鏡、細胞生理、密度D=M/V、水溶液濃度、元素週期表拓撲圖',
-    resultDetail: '對齊均一七上生物與八上理化微概念，建立高年級至國中銜接樞紐。'
+    resultDetail: '對齊七上生物與八上理化關鍵微概念，建立高年級至國中銜接樞紐。'
   },
   {
     id: 'cm-5-2',
@@ -974,7 +974,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd5',
     domainName: 'D5 自然科學國中',
     status: 'verified',
-    junyiRef: 'INa-IV-1, INb-IV-1, INc-IV-2 (國中自然科學)',
+    curriculumRef: 'INa-IV-1, INb-IV-1, INc-IV-2 (國中自然科學)',
     checkItem: '實驗室安全、準確值與估計值、密度公式數學建模、原子分子微觀模型',
     resultDetail: '建立定性觀察至定量計算的科學思維躍遷。'
   },
@@ -985,7 +985,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd5',
     domainName: 'D5 自然科學國中',
     status: 'verified',
-    junyiRef: 'versionMatrix.science (康軒/南一/翰林 生物與理化第1冊)',
+    curriculumRef: 'versionMatrix.science (康軒/南一/翰林 生物與理化第1冊)',
     checkItem: '七上生物第 1~4 章與八上理化第 1~2 章單元對照',
     resultDetail: '完整標註國一第一次段考與國二理化第一次段考最容易失分題型。'
   },
@@ -996,7 +996,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd5',
     domainName: 'D5 自然科學國中',
     status: 'verified',
-    junyiRef: 'knowledgeGraphLadders.science (L4~L5)',
+    curriculumRef: 'knowledgeGraphLadders.science (L4~L5)',
     checkItem: 'L4物質分類密度 ➔ L5水溶液濃度與原子結構前20號',
     resultDetail: '涵蓋純物質vs混合物、排水法求體積、重量百分濃度與原子核結構。'
   },
@@ -1007,7 +1007,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd5',
     domainName: 'D5 自然科學國中',
     status: 'verified',
-    junyiRef: 'prepData.science.misconceptions (Junior focus)',
+    curriculumRef: 'prepData.science.misconceptions (Junior focus)',
     checkItem: '高倍鏡「暗小少大」反向移動規律、密度與質量非正比（特定物質密度為定值）',
     resultDetail: '破解顯微鏡載玻片移動方向、天平騎碼讀數與飽和溶液濃度迷思。'
   },
@@ -1018,7 +1018,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd5',
     domainName: 'D5 自然科學國中',
     status: 'verified',
-    junyiRef: 'prepData.science.formulaBox & Interactive Microscope Lab',
+    curriculumRef: 'prepData.science.formulaBox & Interactive Microscope Lab',
     checkItem: '密度公式 D=M/V、濃度公式 wt%、前 20 號元素週期表速記口訣、虛擬顯微鏡台',
     resultDetail: '實裝可調節粗細調節輪、光圈與玻片移動之動態顯微鏡實驗台。'
   },
@@ -1029,7 +1029,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd5',
     domainName: 'D5 自然科學國中',
     status: 'verified',
-    junyiRef: 'prepData.quizQuestions (Science Junior focus)',
+    curriculumRef: 'prepData.quizQuestions (Science Junior focus)',
     checkItem: '國中生物與理化 7 道核心段考題，支援三階提示與處方箋',
     resultDetail: '包含顯微鏡成像判斷、酵素活性曲線、密度計算與濃度溶解度題目。'
   },
@@ -1038,11 +1038,11 @@ export const completenessMatrix7x7 = [
   {
     id: 'cm-6-1',
     dimensionId: 'v1',
-    dimensionName: 'V1 均一知識圖譜拓撲對齊',
+    dimensionName: 'V1 全科微概念知識圖譜拓撲對齊',
     domainId: 'd6',
     domainName: 'D6 國語文高年級與國中先修',
     status: 'verified',
-    junyiRef: 'topics/jun-c (七八九年級國文/語文常識/文言文/閱讀素養)',
+    curriculumRef: 'topics/jun-c (七八九年級國文/語文常識/文言文/閱讀素養)',
     checkItem: '漢字六書構造、韻文體裁演進、八大修辭、文言虛詞倒裝句拓撲圖',
     resultDetail: '銜接國小字詞閱讀至國中文學批評與古文閱讀理解框架。'
   },
@@ -1053,7 +1053,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd6',
     domainName: 'D6 國語文高年級與國中先修',
     status: 'verified',
-    junyiRef: 'Ab-IV-1, Ac-IV-2, Bb-IV-1, Be-IV-2 (國語文領域課綱)',
+    curriculumRef: 'Ab-IV-1, Ac-IV-2, Bb-IV-1, Be-IV-2 (國語文領域課綱)',
     checkItem: '文本字詞辨識、篇章結構分析、古典文化底蘊與思辨表達素養',
     resultDetail: '結合 PIRLS 四層次提問與會考素養題組解構方法。'
   },
@@ -1064,7 +1064,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd6',
     domainName: 'D6 國語文高年級與國中先修',
     status: 'verified',
-    junyiRef: 'versionMatrix.chinese (康軒/南一/翰林 第1~5冊)',
+    curriculumRef: 'versionMatrix.chinese (康軒/南一/翰林 第1~5冊)',
     checkItem: '語文常識六書、近體詩選、兒時記趣、世說新語版本跨冊對應',
     resultDetail: '全面梳理三大版本國文選文差異與共選文核心考點。'
   },
@@ -1075,7 +1075,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd6',
     domainName: 'D6 國語文高年級與國中先修',
     status: 'verified',
-    junyiRef: 'knowledgeGraphLadders.chinese',
+    curriculumRef: 'knowledgeGraphLadders.chinese',
     checkItem: 'L1六書構造 ➔ L2八大修辭 ➔ L3近體詩格律 ➔ L4文言虛詞倒裝 ➔ L5長文素養',
     resultDetail: '建立系統化語文素養階梯，從文字微觀到篇章宏觀全面進階。'
   },
@@ -1086,7 +1086,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd6',
     domainName: 'D6 國語文高年級與國中先修',
     status: 'verified',
-    junyiRef: 'prepData.chinese.misconceptions',
+    curriculumRef: 'prepData.chinese.misconceptions',
     checkItem: '指事與象形區分（抽象符號vs實物輪廓）、形聲與會意區分、文言「之」字用法',
     resultDetail: '收錄刃/刀、休/江、武/信等高頻失分字例，剖析形符與聲符識別要訣。'
   },
@@ -1097,7 +1097,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd6',
     domainName: 'D6 國語文高年級與國中先修',
     status: 'verified',
-    junyiRef: 'prepData.chinese.formulaBox',
+    curriculumRef: 'prepData.chinese.formulaBox',
     checkItem: '六書造字判斷樹、近體詩平仄押韻法則、文言倒裝句還原三部曲',
     resultDetail: '提供清晰圖解判斷樹與經典古文（何陋之有、兒時記趣）例題剖析。'
   },
@@ -1108,7 +1108,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd6',
     domainName: 'D6 國語文高年級與國中先修',
     status: 'verified',
-    junyiRef: 'prepData.quizQuestions (Chinese units)',
+    curriculumRef: 'prepData.quizQuestions (Chinese units)',
     checkItem: '國語文 7 道六書、修辭、文言虛詞、近體詩自適應題，三階提示齊備',
     resultDetail: '題目配備語文提點、步驟引導與詳解，針對錯題生成國學處方箋。'
   },
@@ -1117,11 +1117,11 @@ export const completenessMatrix7x7 = [
   {
     id: 'cm-7-1',
     dimensionId: 'v1',
-    dimensionName: 'V1 均一知識圖譜拓撲對齊',
+    dimensionName: 'V1 全科微概念知識圖譜拓撲對齊',
     domainId: 'd7',
     domainName: 'D7 社會領域高年級與國中先修',
     status: 'verified',
-    junyiRef: 'topics/social-juni (國中地理/歷史/公民 整合圖譜)',
+    curriculumRef: 'topics/social-juni (國中地理/歷史/公民 整合圖譜)',
     checkItem: '經緯時區等高線、臺灣與世界歷史因果網絡、憲法法律位階、政府五院制衡',
     resultDetail: '全面串聯高年級鄉土人文地理至國中現代國家公民與全球貿易網絡。'
   },
@@ -1132,7 +1132,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd7',
     domainName: 'D7 社會領域高年級與國中先修',
     status: 'verified',
-    junyiRef: '社-J-A1, 社-J-B2, 社-J-C3 (社會領域核心素養)',
+    curriculumRef: '社-J-A1, 社-J-B2, 社-J-C3 (社會領域核心素養)',
     checkItem: '空間思維、歷史同理心、公民參與、法治觀念與市場經濟思辨',
     resultDetail: '結合現代公民權益、地方創生與全球可持續發展目標 (SDGs)。'
   },
@@ -1143,7 +1143,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd7',
     domainName: 'D7 社會領域高年級與國中先修',
     status: 'verified',
-    junyiRef: 'versionMatrix.social (康軒/南一/翰林 史地公全冊)',
+    curriculumRef: 'versionMatrix.social (康軒/南一/翰林 史地公全冊)',
     checkItem: '七八九年級地理氣候圖表、歷史時序轉折、公民法律位階版本對齊',
     resultDetail: '標明三大版本在臺灣史劃分（大航海/清領/日治）與五院制衡呈現方式。'
   },
@@ -1154,7 +1154,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd7',
     domainName: 'D7 社會領域高年級與國中先修',
     status: 'verified',
-    junyiRef: 'knowledgeGraphLadders.social',
+    curriculumRef: 'knowledgeGraphLadders.social',
     checkItem: 'L1經緯時區等高線 ➔ L2臺灣史轉折 ➔ L3法律位階人權 ➔ L4中央政府五院 ➔ L5市場供需地緣',
     resultDetail: '跨領域史地公五階進階階梯，構築宏觀公民素養。'
   },
@@ -1165,7 +1165,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd7',
     domainName: 'D7 社會領域高年級與國中先修',
     status: 'verified',
-    junyiRef: 'prepData.social.misconceptions',
+    curriculumRef: 'prepData.social.misconceptions',
     checkItem: '等高線河流流向判斷陷阱、清領渡台禁令vs開港通商因果倒置、行政院覆議vs不信任案混淆',
     resultDetail: '詳解「凸高為谷」「水往低處流」、五院三權分立制衡權限邊界。'
   },
@@ -1176,7 +1176,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd7',
     domainName: 'D7 社會領域高年級與國中先修',
     status: 'verified',
-    junyiRef: 'prepData.social.formulaBox',
+    curriculumRef: 'prepData.social.formulaBox',
     checkItem: '經度時區換算公式（15度1小時）、機會成本計算矩陣、市場供需平衡圖解',
     resultDetail: '提供時區跨日線計算步驟、機會成本「所失最高價值」精選例題解析。'
   },
@@ -1187,7 +1187,7 @@ export const completenessMatrix7x7 = [
     domainId: 'd7',
     domainName: 'D7 社會領域高年級與國中先修',
     status: 'verified',
-    junyiRef: 'prepData.quizQuestions (Social units)',
+    curriculumRef: 'prepData.quizQuestions (Social units)',
     checkItem: '社會科 7 道經緯時區、臺灣史轉折、法律位階、政府五院自適應題，三階提示齊備',
     resultDetail: '測驗結果即時回饋公民權益與史地圖表弱點，提供對應教材診斷書。'
   }

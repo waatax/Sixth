@@ -661,10 +661,10 @@ const SubjectPage = () => {
                       target="_blank" 
                       rel="noreferrer" 
                       className="flex items-center gap-1.5 text-xs text-secondary hover:text-primary transition-colors"
-                      title="前往均一教育平台觀看相關教學影音"
+                      title="前往推薦教育平台觀看相關教學影音"
                     >
                       <PlayCircle size={15} />
-                      <span>📺 均一影音輔助 (延伸觀看)</span>
+                      <span>📺 推薦延伸影音 (延伸觀看)</span>
                     </a>
                   )}
 

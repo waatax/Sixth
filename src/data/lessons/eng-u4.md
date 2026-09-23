@@ -145,7 +145,7 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ```text
                          /\
-                        /  \    【 Fats, Oils & Nuts 】
+                        /  \    【 Fats, Oils \& Nuts 】
                        / 🥜 \   油脂與堅果種子類 (少油多健康)
                       /──────\
                      /  🥛🥩  \  【 Dairy & Protein 】
@@ -168,7 +168,7 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 | $\textcolor{#2196f3}{\textbf{Dairy}}$ | 乳品類 | milk (鮮乳), cheese (起司), yogurt (優格) | 提供豐富鈣質，強健牙齒與骨骼 |
 | $\textcolor{#4caf50}{\textbf{Vegetables}}$ | 蔬菜類 | broccoli (花椰菜), spinach (菠菜), carrots (胡蘿蔔) | 膳食纖維促進腸道健康蠕動 |
 | $\textcolor{#e91e63}{\textbf{Fruits}}$ | 水果類 | apples (蘋果), oranges (柳橙), guavas (芭樂) | 豐富維他命 C，增強抵抗力 |
-| $\textcolor{#9c27b0}{\textbf{Fats, Oils & Nuts}}$ | 油脂與堅果種子 | olive oil (橄欖油), walnuts (核桃), almonds (杏仁) | 提供必需脂肪酸與脂溶性維生素 |
+| $\textcolor{#9c27b0}{\textbf{Fats, Oils \& Nuts}}$ | 油脂與堅果種子 | olive oil (橄欖油), walnuts (核桃), almonds (杏仁) | 提供必需脂肪酸與脂溶性維生素 |
 
 ### 🌟 完整範例
 

@@ -39,11 +39,11 @@ const ExpertWhitepaperModal = ({ isOpen, onClose }) => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg sm:text-xl font-black text-primary">均一專家顧問委員會・7 次迭代方法論白皮書</h2>
+                <h2 className="text-lg sm:text-xl font-black text-primary">最強小六專家顧問委員會・7 次迭代方法論白皮書</h2>
                 <span className="badge badge-accent text-[11px] font-bold">7×7 完整度認證</span>
               </div>
               <p className="text-xs text-secondary mt-0.5">
-                均一核心團隊 + 5 位外聘權威名師 × 7 輪會議迭代與 49 項查驗矩陣全公開
+                最強小六研發核心團隊 + 5 位外聘權威名師 × 7 輪會議迭代與 49 項查驗矩陣全公開
               </p>
             </div>
           </div>
@@ -234,7 +234,7 @@ const ExpertWhitepaperModal = ({ isOpen, onClose }) => {
                     </div>
 
                     <div className="text-[11px] text-blue-600 dark:text-blue-400 font-mono flex items-center gap-1">
-                      🔗 均一官方錨點：{item.junyiRef}
+                      🔗 課程知識圖譜錨點：{item.curriculumRef || item.checkItem}
                     </div>
 
                     <div className="text-secondary leading-relaxed bg-slate-50 dark:bg-slate-800/40 p-2 rounded-xl text-[11px]">

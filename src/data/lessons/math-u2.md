@@ -17,7 +17,7 @@
   原有 3/4 披薩，平分給 2 人              4/5 公升奶茶，每杯 2/15 公升
          │                                       │
          ▼                                       ▼
-  每人得到：$\textcolor{#2196f3}{\textbf{\frac{3}{4} \div 2 = \frac{3}{8} 個}}$                 可倒滿：$\textcolor{#e91e63}{\textbf{\frac{4}{5} \div \frac{2}{15} = 6 杯}}$
+  每人得到：3/4 ÷ 2 = 3/8 個              可倒滿：4/5 ÷ 2/15 = 6 杯
 ```
 
 除法本質就是乘法的「反向操作」與「均分測量」。今天就讓我們一起解開「除法為什麼要顛倒相乘」的幾何秘密！
@@ -31,7 +31,7 @@
 ### 1. 概念與核心公式
 分數除以整數，代表「把一個分數平均分成更多等份」，也就是 $\textcolor{#e91e63}{\textbf{分母乘上該整數（切得更細）}}$，或者 $\textcolor{#2196f3}{\textbf{分子直接除以該整數（若能整除）}}$：
 
-$$ \textcolor{#e91e63}{\textbf{\frac{a}{b} \div c = \frac{a}{b \times c}}} \quad \text{或} \quad \textcolor{#2196f3}{\textbf{\frac{a}{b} \div c = \frac{a \div c}{b}}} $$
+$$ \frac{a}{b} \div c = \frac{a}{b \times c} \qquad \text{或} \qquad \frac{a}{b} \div c = \frac{a \div c}{b} $$
 
 ### 📝 範例 1：$\frac{3}{4} \div 2$
 $$ \frac{3}{4} \div 2 = \frac{3}{4 \times 2} = \frac{3}{8} $$
@@ -48,11 +48,11 @@ $$ \frac{3}{4} \div 2 = \frac{3}{4 \times 2} = \frac{3}{8} $$
   ├─────┼─────┼─────┼─────┤
   │     │     │     │     │
   └─────┴─────┴─────┴─────┘
-  取其中平分的一半 ➔ 得到 $\textcolor{#e91e63}{\textbf{\frac{3}{8}}}$！
+  取其中平分的一半 ➔ 得到 3/8 個！
 ```
 
 ### 📝 範例 2：$\frac{6}{7} \div 3$（分子能整除時直接算）
-$$ \frac{6}{7} \div 3 = \frac{6 \div 3}{7} = \textcolor{#2196f3}{\textbf{\frac{2}{7}}} $$
+$$ \frac{6}{7} \div 3 = \frac{6 \div 3}{7} = \frac{2}{7} $$
 
 ---
 
@@ -62,9 +62,9 @@ $$ \frac{6}{7} \div 3 = \frac{6 \div 3}{7} = \textcolor{#2196f3}{\textbf{\frac{2
 
 ### 1. 什麼是「倒數 (Reciprocal)」？
 如果兩個數相乘的結果等於 $\textcolor{#d32f2f}{\textbf{1}}$，我們就稱這兩個數「$\textcolor{#e91e63}{\textbf{互為倒數}}$」：
-- 正整數 $3$ 的倒數是 $\textcolor{#2196f3}{\textbf{\frac{1}{3}}}$（因為 $3 \times \frac{1}{3} = 1$）。
-- 真分數 $\frac{2}{5}$ 的倒數是 $\textcolor{#2196f3}{\textbf{\frac{5}{2}}}$（分子分母上下顛倒！）。
-- 帶分數 $1\frac{1}{2} = \frac{3}{2}$，其倒數是 $\textcolor{#2196f3}{\textbf{\frac{2}{3}}}$。
+- 正整數 $3$ 的倒數是 $\frac{1}{3}$（因為 $3 \times \frac{1}{3} = 1$）。
+- 真分數 $\frac{2}{5}$ 的倒數是 $\frac{5}{2}$（分子分母上下顛倒！）。
+- 帶分數 $1\frac{1}{2} = \frac{3}{2}$，其倒數是 $\frac{2}{3}$。
 - ⚠️ **重大禁忌**：$\textcolor{#d32f2f}{\textbf{0 沒有倒數！}}$（因為沒有任何數乘上 0 會等於 1，分母也不能為 0）。
 
 ### 2. 顛倒相乘的推導原理
@@ -75,10 +75,10 @@ $$ 6 \div 2 = 6 \times \frac{1}{2} = 3 $$
 「$\textcolor{#2e7d32}{\textbf{除以一個數，等於乘以它的倒數}}$」！
 
 同理：
-$$ \frac{a}{b} \div \frac{c}{d} = \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{\frac{a}{b} \times \frac{d}{c}}{\frac{c}{d} \times \frac{d}{c}} = \frac{\frac{a}{b} \times \frac{d}{c}}{1} = \textcolor{#e91e63}{\textbf{\frac{a}{b} \times \frac{d}{c}}} $$
+$$ \frac{a}{b} \div \frac{c}{d} = \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{\frac{a}{b} \times \frac{d}{c}}{\frac{c}{d} \times \frac{d}{c}} = \frac{\frac{a}{b} \times \frac{d}{c}}{1} = \frac{a}{b} \times \frac{d}{c} $$
 
 ### 📝 範例 3：$\frac{4}{5} \div \frac{2}{3}$
-$$ \frac{4}{5} \div \frac{2}{3} = \frac{4}{5} \times \frac{3}{2} = \frac{\overset{2}{\cancel{4}} \times 3}{5 \times \underset{1}{\cancel{2}}} = \frac{6}{5} = \textcolor{#e91e63}{\textbf{1\frac{1}{5}}} $$
+$$ \frac{4}{5} \div \frac{2}{3} = \frac{4}{5} \times \frac{3}{2} = \frac{\overset{2}{\cancel{4}} \times 3}{5 \times \underset{1}{\cancel{2}}} = \frac{6}{5} = 1\frac{1}{5} $$
 
 ---
 
@@ -99,7 +99,7 @@ $$ \frac{4}{5} \div \frac{2}{3} = \frac{4}{5} \times \frac{3}{2} = \frac{\overse
   步驟 3：交叉約分 ──➔ (9÷3)/(4÷2) = 3/2 = 1又1/2
 ```
 
-$$ 2\frac{1}{4} \div 1\frac{1}{2} = \frac{9}{4} \div \frac{3}{2} = \frac{9}{4} \times \frac{2}{3} = \frac{\overset{3}{\cancel{9}} \times \overset{1}{\cancel{2}}}{\underset{2}{\cancel{4}} \times \underset{1}{\cancel{3}}} = \frac{3}{2} = \textcolor{#e91e63}{\textbf{1\frac{1}{2}}} $$
+$$ 2\frac{1}{4} \div 1\frac{1}{2} = \frac{9}{4} \div \frac{3}{2} = \frac{9}{4} \times \frac{2}{3} = \frac{\overset{3}{\cancel{9}} \times \overset{1}{\cancel{2}}}{\underset{2}{\cancel{4}} \times \underset{1}{\cancel{3}}} = \frac{3}{2} = 1\frac{1}{2} $$
 
 ---
 
@@ -120,23 +120,23 @@ $$ 2\frac{1}{4} \div 1\frac{1}{2} = \frac{9}{4} \div \frac{3}{2} = \frac{9}{4} \
 ## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
 
 ### 📝 範例 1：【分數除以分數】顛倒相乘運算
-- 📌 **題目情境**：計算 $rac{2}{3} \div rac{4}{5}$ 的結果，並化為最簡分數。
+- 📌 **題目情境**：計算 $\frac{2}{3} \div \frac{4}{5}$ 的結果，並化為最簡分數。
 - 💡 **思考關鍵**：分數除法的核心口訣是「除以一個分數，等於乘以該分數的倒數」。除號變乘號，除數上下顛倒！
 - 📐 **詳盡步驟**：
-  $$rac{2}{3} \div rac{4}{5} = rac{2}{3} 	imes rac{5}{4}$$
+  $$\frac{2}{3} \div \frac{4}{5} = \frac{2}{3} \times \frac{5}{4}$$
   分子與分母交叉約分（2 與 4 約分得 1 與 2）：
-  $$= rac{1 	imes 5}{3 	imes 2} = \mathbf{rac{5}{6}}$$
+  $$= \frac{1 \times 5}{3 \times 2} = \mathbf{\frac{5}{6}}$$
 - ⚠️ **常犯錯誤**：千萬不能把被除數也顛倒！只有「除號後面的除數」需要顛倒！
 
 ### 📝 範例 2：【生活容量分裝與餘數換算】
-- 📌 **題目情境**：媽媽煮了 $2rac{1}{2}$ 公升的綠豆湯，每 $rac{3}{4}$ 公升裝滿一保溫瓶，最多可以裝滿幾瓶？還剩下多少公升？
+- 📌 **題目情境**：媽媽煮了 $2\frac{1}{2}$ 公升的綠豆湯，每 $\frac{3}{4}$ 公升裝滿一保溫瓶，最多可以裝滿幾瓶？還剩下多少公升？
 - 💡 **思考關鍵**：先將帶分數化為假分數進行除法。得到的帶分數商中，「整數部分」代表裝滿瓶數，「真分數部分」代表剩餘的瓶數比例，需乘以每瓶容量才能換回實際公升數！
 - 📐 **詳盡步驟**：
-  1. $2rac{1}{2} = rac{5}{2}$。
-  2. $rac{5}{2} \div rac{3}{4} = rac{5}{2} 	imes rac{4}{3} = rac{10}{3} = 3rac{1}{3}	ext{ (瓶)}$。
-  3. 整數部分為 $\mathbf{3	ext{ 瓶}}$。
-  4. 剩下 $rac{1}{3}$ 瓶，換算為實際公升數：$rac{3}{4} 	imes rac{1}{3} = \mathbf{rac{1}{4}	ext{ 公升}}$。
-- ⚠️ **常犯錯誤**：直接將餘數寫成 $rac{1}{3}$ 公升！記住：$rac{1}{3}$ 是「瓶」，不是「公升」！
+  1. $2\frac{1}{2} = \frac{5}{2}$。
+  2. $\frac{5}{2} \div \frac{3}{4} = \frac{5}{2} \times \frac{4}{3} = \frac{10}{3} = 3\frac{1}{3}\text{ (瓶)}$。
+  3. 整數部分為 $\mathbf{3\text{ 瓶}}$。
+  4. 剩下 $\frac{1}{3}$ 瓶，換算為實際公升數：$\frac{3}{4} \times \frac{1}{3} = \mathbf{\frac{1}{4}\text{ 公升}}$。
+- ⚠️ **常犯錯誤**：直接將餘數寫成 $\frac{1}{3}$ 公升！記住：$\frac{1}{3}$ 是「瓶」，不是「公升」！
 
 ---
 
@@ -172,13 +172,13 @@ $$ 2\frac{1}{4} \div 1\frac{1}{2} = \frac{9}{4} \div \frac{3}{2} = \frac{9}{4} \
    - **詳細解析**：
      - 除號變乘號，$\frac{14}{15}$ 顛倒為 $\frac{15}{14}$
      - 交叉約分：7 與 14 同除以 7 剩下 1 和 2；9 與 15 同除以 3 剩下 3 和 5
-     - $$ \frac{7}{9} \div \frac{14}{15} = \frac{\overset{1}{\cancel{7}}}{\underset{3}{\cancel{9}}} \times \frac{\overset{5}{\cancel{15}}}{\underset{2}{\cancel{14}}} = \frac{1 \times 5}{3 \times 2} = \textcolor{#e91e63}{\textbf{\frac{5}{6}}} $$
+     - $$ \frac{7}{9} \div \frac{14}{15} = \frac{\overset{1}{\cancel{7}}}{\underset{3}{\cancel{9}}} \times \frac{\overset{5}{\cancel{15}}}{\underset{2}{\cancel{14}}} = \frac{1 \times 5}{3 \times 2} = \frac{5}{6} $$
    - **答案**：$\frac{5}{6}$。
 
 2. **(計算題)** 計算 $3\frac{3}{4} \div 1\frac{7}{8}$。
    - **詳細解析**：
      - 化為假分數：$3\frac{3}{4} = \frac{15}{4}$；$1\frac{7}{8} = \frac{15}{8}$
-     - 顛倒相乘：$$ \frac{15}{4} \times \frac{8}{15} = \frac{\overset{1}{\cancel{15}}}{\underset{1}{\cancel{4}}} \times \frac{\overset{2}{\cancel{8}}}{\underset{1}{\cancel{15}}} = \textcolor{#2196f3}{\textbf{2}} $$
+     - 顛倒相乘：$$ \frac{15}{4} \times \frac{8}{15} = \frac{\overset{1}{\cancel{15}}}{\underset{1}{\cancel{4}}} \times \frac{\overset{2}{\cancel{8}}}{\underset{1}{\cancel{15}}} = 2 $$
    - **答案**：$2$。
 
 3. **(應用題)** 一大瓶柳橙汁有 $2\frac{2}{5}$ 公升，每 $\frac{3}{10}$ 公升裝成一杯，總共可以裝滿幾杯？

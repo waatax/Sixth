@@ -107,7 +107,7 @@ const PrepPage = () => {
           >
             <div className="flex justify-between items-center mb-2 flex-wrap gap-2">
               <div className="text-xs font-bold flex items-center gap-1.5" style={{ color: accentColor }}>
-                <Layers size={15} /> 均一知識圖譜微概念階梯 (Knowledge Ladder L1~L5)
+                <Layers size={15} /> 全科微概念螺旋學習階梯 (Knowledge Ladder L1~L5)
               </div>
               <span className="text-[11px] text-secondary">
                 螺旋遞進 • 先備條件自動錨定
@@ -235,7 +235,7 @@ const PrepPage = () => {
                   }}
                 >
                   <span className="flex items-center gap-1.5">
-                    <AlertTriangle size={15} /> ⚠️ 均一名師防雷・三大常見迷思盲點破解 ({item.misconceptions.length})
+                    <AlertTriangle size={15} /> ⚠️ 名師防雷・三大常見迷思盲點破解 ({item.misconceptions.length})
                   </span>
                   {openMisconceptions[item.id] ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                 </button>
@@ -358,7 +358,7 @@ const PrepPage = () => {
         }}
       >
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-bold mb-3 border border-blue-200 dark:border-blue-800">
-          <ShieldCheck size={14} /> 均一教育平台 9 位跨領域專家顧問委員會 • 7 輪深度會議迭代認證
+          <ShieldCheck size={14} /> 最強小六 9 位跨領域課程專家研發委員會 • 7 輪深度會議迭代認證
         </div>
         
         <h1 className="text-2xl sm:text-3xl font-black text-primary mb-2">
@@ -504,13 +504,13 @@ const PrepPage = () => {
             <div className="flex justify-between items-center flex-wrap gap-4">
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 text-xs font-bold mb-2">
-                  <ShieldCheck size={14} /> 均一專家委員會 × 7 輪深度會議迭代
+                  <ShieldCheck size={14} /> 課程專家研發委員會 × 7 輪深度會議迭代
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-primary">
                   7×7 (49 節點) 完整度迭代查驗儀表板
                 </h2>
                 <p className="text-xs text-secondary mt-1 max-w-xl leading-relaxed">
-                  橫跨<strong>英、數、理、國、社</strong>高年級與國中五大核心領域，針對 7 大學術與實作維度進行 49 項全指標嚴格驗收，100% 達成均一知識圖譜與 108 課綱對齊。
+                  橫跨<strong>英、數、理、國、社</strong>高年級與國中五大核心領域，針對 7 大學術與實作維度進行 49 項全指標嚴格驗收，100% 達成全科微概念知識圖譜與 108 課綱對齊。
                 </p>
               </div>
 
@@ -581,7 +581,7 @@ const PrepPage = () => {
                 </div>
 
                 <div className="text-[11px] text-blue-600 dark:text-blue-400 font-mono flex items-center gap-1">
-                  🔗 均一官方錨點：{item.junyiRef}
+                  🔗 核心素養與知識圖譜錨點：{item.curriculumRef || item.junyiRef}
                 </div>
 
                 <div className="text-secondary leading-relaxed bg-slate-50 dark:bg-slate-800/40 p-2.5 rounded-xl text-[11px] border border-slate-100 dark:border-slate-800">
@@ -597,7 +597,7 @@ const PrepPage = () => {
       {activeTab === 'simulators' && (
         <div className="space-y-6 animate-fade-in">
           <div className="p-4 rounded-2xl bg-purple-50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800 text-xs text-secondary leading-relaxed">
-            <strong className="text-purple-700 dark:text-purple-300 font-bold">🔬 均一探究教學法：</strong>
+            <strong className="text-purple-700 dark:text-purple-300 font-bold">🔬 原創素養探究教學法：</strong>
             抽象數理觀念單靠死背文字容易遺忘。透過以下三大動態模擬工具，親手滑動數線、撥動動詞時鐘、調整顯微鏡光學焦距，將知識深深烙印在大腦神經迴路中！
           </div>
 
@@ -648,7 +648,7 @@ const PrepPage = () => {
               <div>
                 <h2 className="text-2xl font-black text-primary mb-2">國中先修全科自適應闖關體檢</h2>
                 <p className="text-sm text-secondary max-w-lg mx-auto leading-relaxed">
-                  涵蓋<strong>英、數、理、國、社</strong>五大領域共 35 題核心銜接題。支援均一<strong>「三階提示鷹架」</strong>（觀念提點 ➔ 步驟引導 ➔ 完整詳解），測驗後即時生成<strong>「個人化弱點處方箋」</strong>！
+                  涵蓋<strong>英、數、理、國、社</strong>五大領域共 35 題核心銜接題。支援原創<strong>「三階提示鷹架」</strong>（觀念提點 ➔ 步驟引導 ➔ 完整詳解），測驗後即時生成<strong>「個人化弱點處方箋」</strong>！
                 </p>
               </div>
               <div className="flex items-center gap-3 text-xs text-secondary font-medium flex-wrap justify-center">
@@ -682,7 +682,7 @@ const PrepPage = () => {
                 <div className="w-full text-left p-5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 space-y-3">
                   <div className="font-bold text-amber-800 dark:text-amber-300 flex items-center gap-2 text-sm">
                     <ShieldCheck size={18} />
-                    <span>📋 均一智能弱點診斷處方箋 (Smart Learning Prescription)</span>
+                    <span>📋 最強小六智能弱點診斷處方箋 (Smart Learning Prescription)</span>
                   </div>
                   <p className="text-xs text-secondary">
                     系統根據本次作答表現，診斷出您在以下 {missedQuestions.length} 個知識點存在銜接斷層，建議優先補強：
@@ -789,7 +789,7 @@ const PrepPage = () => {
                       <div className="flex items-center justify-between flex-wrap gap-2">
                         <div className="text-xs font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5">
                           <HelpCircle size={14} />
-                          <span>均一解題思考鷹架（先提示不扣分）：</span>
+                          <span>三階解題思考鷹架（先提示不扣分）：</span>
                         </div>
                         <div className="flex gap-1.5">
                           <button

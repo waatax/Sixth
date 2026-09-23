@@ -100,7 +100,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | $\textcolor{#2196f3}{\textbf{冷鋒}}$ | 藍色三角形尖端朝向移動方向 $\textcolor{#2196f3}{\blacktriangle\blacktriangle\blacktriangle}$ | $\textcolor{#2196f3}{\textbf{冷氣團勢力強}}$，強行插入暖氣團下方將暖空氣強烈抬升 | 氣溫陡降、颳起強烈陣風、伴隨短暫強陣雨或雷雨，鋒面過後轉乾冷 | 秋冬季節（大陸冷氣團、寒流南下時） |
 | $\textcolor{#e91e63}{\textbf{暖鋒}}$ | 紅色半圓形朝向移動方向 $\textcolor{#e91e63}{\blacksquare\blacksquare\blacksquare}$ | $\textcolor{#e91e63}{\textbf{暖氣團勢力強}}$，緩慢爬升到冷氣團上方並向前推進 | 氣溫逐漸回升、出現大範圍連續性陰雨或綿綿細雨 | 春季（較少直接完全通過臺灣本島） |
-| $\textcolor{#9c27b0}{\textbf{滯留鋒}}$ | 紅藍相間、半圓與三角反向交錯 | 冷暖氣團$\textcolor{#9c27b0}{\textbf{勢力相當}}$，雙方僵持不下在原地徘徊 | 陰雨連綿數日至數週，容易引發劇烈局部性豪大雨與雷擊 | 每年 $\textcolor{#e91e63}{\textbf{5\sim 6 月梅雨季}}$ |
+| $\textcolor{#9c27b0}{\textbf{滯留鋒}}$ | 紅藍相間、半圓與三角反向交錯 | 冷暖氣團$\textcolor{#9c27b0}{\textbf{勢力相當}}$，雙方僵持不下在原地徘徊 | 陰雨連綿數日至數週，容易引發劇烈局部性豪大雨與雷擊 | 每年 $\textcolor{#e91e63}{\textbf{5 ~ 6 月梅雨季}}$ |
 
 ---
 

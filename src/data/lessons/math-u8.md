@@ -2,7 +2,7 @@
 
 **課綱指標**：$\textcolor{#2e7d32}{\textbf{s-III-4}}$ 理解角柱與圓柱之體積與表面積公式推導，熟練運用「$\text{底面積} \times \text{高}$」計算柱體體積，並能運用展開圖計算各類柱體之表面積（含無蓋容器與複合柱體之生活情境問題）。
 
-**學習目標**：透過本單元，我們將直觀建立「立體堆疊」與「平面展開」的空間幾何概念，熟練掌握各類角柱與圓柱的體積通用公式（$\textcolor{#e91e63}{\textbf{V = \text{底面積} \times \text{高}}}$），精通表面積展開圖計算心法（$\textcolor{#2196f3}{\textbf{\text{表面積} = 2 \times \text{底面積} + \text{底面周長} \times \text{高}}}$），並探索工業罐頭設計與 3D 列印切片技術中的幾何原理！
+**學習目標**：透過本單元，我們將直觀建立「立體堆疊」與「平面展開」的空間幾何概念，熟練掌握各類角柱與圓柱的體積通用公式（$\textcolor{#e91e63}{\mathbf{V = \text{底面積} \times \text{高}}}$），精通表面積展開圖計算心法（$\textcolor{#2196f3}{\mathbf{\text{表面積} = 2 \times \text{底面積} + \text{底面周長} \times \text{高}}}$），並探索工業罐頭設計與 3D 列印切片技術中的幾何原理！
 
 ---
 
@@ -50,7 +50,7 @@
 
 不管是什麼底面形狀的柱體，體積的通用核心公式永遠只有一個：
 
-$$ \textcolor{#e91e63}{\textbf{\text{柱體體積} = \text{底面積} \times \text{高} \quad (V = A_{\text{base}} \times h)}} $$
+$$ \textcolor{#e91e63}{\mathbf{\text{柱體體積} = \text{底面積} \times \text{高} \quad (V = A_{\text{base}} \times h)}} $$
 
 ```text
        長方體體積                  三角柱體積                     圓柱體積
@@ -59,23 +59,23 @@ $$ \textcolor{#e91e63}{\textbf{\text{柱體體積} = \text{底面積} \times \te
   ┌─────────────┐ │           ┌───┐                      ╭──────╮ │ 高 h
   │  長 × 寬    │ ╯ 高 h     │底×高÷2│ 高 h             │ πr²  │ ╯ 
   └─────────────┘             └───┘                      ╰──────╯
-  $V = (\text{長}\times\text{寬})\times h$     $V = (\text{底}\times\text{高}\div 2)\times h$        $V = (\pi r^2)\times h$
+  V = (長 × 寬) × h          V = (底 × 高 ÷ 2) × h          V = (π × r²) × h
 ```
 
 ### 📝 範例 1：長方體體積
 長 $8\text{ cm}$、寬 $5\text{ cm}$、高 $3\text{ cm}$：
 - $\text{底面積} = 8 \times 5 = 40\text{ cm}^2$
-- $\text{體積} = 40 \times 3 = \textcolor{#2196f3}{\textbf{120\text{ cm}^3}}$
+- $\text{體積} = 40 \times 3 = \textcolor{#2196f3}{\mathbf{120\text{ cm}^3}}$
 
 ### 📝 範例 2：三角柱體積
 底面為直角三角形（底邊 $6\text{ cm}$、高 $4\text{ cm}$），柱體高 $10\text{ cm}$：
 - $\text{底面積} = 6 \times 4 \div 2 = 12\text{ cm}^2$
-- $\text{體積} = 12 \times 10 = \textcolor{#2196f3}{\textbf{120\text{ cm}^3}}$
+- $\text{體積} = 12 \times 10 = \textcolor{#2196f3}{\mathbf{120\text{ cm}^3}}$
 
 ### 📝 範例 3：圓柱體積
 底面半徑 $5\text{ cm}$，柱體高 $8\text{ cm}$：
 - $\text{底面積} = 5 \times 5 \times 3.14 = 78.5\text{ cm}^2$
-- $\text{體積} = 78.5 \times 8 = \textcolor{#e91e63}{\textbf{628\text{ cm}^3}}$
+- $\text{體積} = 78.5 \times 8 = \textcolor{#e91e63}{\mathbf{628\text{ cm}^3}}$
 
 ---
 
@@ -83,13 +83,13 @@ $$ \textcolor{#e91e63}{\textbf{\text{柱體體積} = \text{底面積} \times \te
 
 表面積就是把柱體的所有外表剪開攤平（展開圖），所有面之面積的總和：
 
-$$ \textcolor{#e91e63}{\textbf{\text{柱體表面積} = \text{底面積} \times 2 + \text{側面積}}} $$
+$$ \textcolor{#e91e63}{\mathbf{\text{柱體表面積} = \text{底面積} \times 2 + \text{側面積}}} $$
 
 ### 🌟 側面積超強通用公式：
 所有直柱體展開後，側面都會形成一個大長方形：
 - **長方形的長** $=$ **底面周長**
 - **長方形的寬** $=$ **柱體的高 $h$**
-$$ \textcolor{#2196f3}{\textbf{\text{側面積} = \text{底面周長} \times \text{高}}} $$
+$$ \textcolor{#2196f3}{\mathbf{\text{側面積} = \text{底面周長} \times \text{高}}} $$
 
 ```text
 【圓柱展開圖詳解】：
@@ -108,14 +108,14 @@ $$ \textcolor{#2196f3}{\textbf{\text{側面積} = \text{底面周長} \times \te
 ```
 
 ### 🌟 圓柱表面積精華公式：
-$$ \textcolor{#e91e63}{\textbf{\text{圓柱表面積} = (r \times r \times 3.14 \times 2) + (2 \times r \times 3.14 \times h)}} $$
+$ \text{圓柱表面積} = (r \times r \times 3.14 \times 2) + (2 \times r \times 3.14 \times h) $
 
 ### 📝 範例 4：計算圓柱表面積
 底面半徑 $5\text{ cm}$，高 $8\text{ cm}$ 的圓柱：
 1. **兩個底面積** $= 2 \times (5 \times 5 \times 3.14) = 2 \times 78.5 = 157\text{ cm}^2$
 2. **底面圓周長** $= 5 \times 2 \times 3.14 = 31.4\text{ cm}$
 3. **側面積** $= 31.4 \times 8 = 251.2\text{ cm}^2$
-4. **表面積** $= 157 + 251.2 = \textcolor{#e91e63}{\textbf{408.2\text{ cm}^2}}$
+4. **表面積** $= 157 + 251.2 = \textcolor{#e91e63}{\mathbf{408.2\text{ cm}^2}}$
 
 ---
 
@@ -130,21 +130,21 @@ $$ \textcolor{#e91e63}{\textbf{\text{圓柱表面積} = (r \times r \times 3.14 
 
 ### 📝 範例 1：【三角柱體積計算】
 - 📌 **題目情境**：一個三角柱的底面為底 $6$ 公分、高 $4$ 公分的直角三角形，柱高為 $10$ 公分，求此三角柱的體積。
-- 💡 **思考關鍵**：柱體體積核心公式 $=$ 底面積 $	imes$ 柱高。先算出底面三角形面積！
+- 💡 **思考關鍵**：柱體體積核心公式 $=$ 底面積 $\times$ 柱高。先算出底面三角形面積！
 - 📐 **詳盡步驟**：
-  1. 三角形底面積 $= (6 	imes 4) \div 2 = 12	ext{ 平方公分}$。
-  2. 柱體體積 $= 12 	imes 10 = \mathbf{120	ext{ 立方公分}}$。
+  1. 三角形底面積 $= (6 \times 4) \div 2 = 12\text{ 平方公分}$。
+  2. 柱體體積 $= 12 \times 10 = \mathbf{120\text{ 立方公分}}$。
 
 ### 📝 範例 2：【圓柱體積與表面積】
 - 📌 **題目情境**：底面半徑 $3$ 公分、柱高 $10$ 公分的圓柱體，求其體積與側面積。($\pi$ 取 $3.14$)
 - 💡 **思考關鍵**：
-  - 圓柱體積 $=$ 底面圓面積 $	imes$ 柱高。
-  - 圓柱側面積 $=$ 底面圓周長 $	imes$ 柱高（展開為長方形）。
+  - 圓柱體積 $=$ 底面圓面積 $\times$ 柱高。
+  - 圓柱側面積 $=$ 底面圓周長 $\times$ 柱高（展開為長方形）。
 - 📐 **詳盡步驟**：
-  1. 底面積 $= 3 	imes 3 	imes 3.14 = 28.26	ext{ 平方公分}$。
-  2. 圓柱體積 $= 28.26 	imes 10 = \mathbf{282.6	ext{ 立方公分}}$。
-  3. 底面圓周長 $= 3 	imes 2 	imes 3.14 = 18.84	ext{ 公分}$。
-  4. 側面積 $= 18.84 	imes 10 = \mathbf{188.4	ext{ 平方公分}}$。
+  1. 底面積 $= 3 \times 3 \times 3.14 = 28.26\text{ 平方公分}$。
+  2. 圓柱體積 $= 28.26 \times 10 = \mathbf{282.6\text{ 立方公分}}$。
+  3. 底面圓周長 $= 3 \times 2 \times 3.14 = 18.84\text{ 公分}$。
+  4. 側面積 $= 18.84 \times 10 = \mathbf{188.4\text{ 平方公分}}$。
 
 ---
 
@@ -228,6 +228,6 @@ $$ \textcolor{#e91e63}{\textbf{\text{圓柱表面積} = (r \times r \times 3.14 
 ## 🚀 +10% 現代素養前瞻新知
 
 **🖨️ 3D 列印技術中的「柱體切片演算法 (Slicing Engine)」！**
-現代高科技 3D 列印機能夠憑空印出精密的齒輪、人工骨骼甚至整棟建築，背後的電腦演算法核心正是「$\textcolor{#e91e63}{\textbf{底面積 \times 層高}}$」的柱體積分原理！
+現代高科技 3D 列印機能夠憑空印出精密的齒輪、人工骨骼甚至整棟建築，背後的電腦演算法核心正是「$\textcolor{#e91e63}{\mathbf{\text{底面積} \times \text{層高}}}$」的柱體積分原理！
 
 3D 切片軟體會將複雜的三維模型沿著高度 $z$ 軸橫切成數千層厚度僅 $0.1\text{ mm}$ 的超薄微型柱體（每一層的高度 $h = 0.1\text{ mm}$）。列印噴頭依照每一層的底面積圖形精準擠出熱融塑料，一層層向上堆疊，最終組裝成強大的立體結構！

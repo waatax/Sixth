@@ -2,7 +2,7 @@
 
 **課綱指標**：$\textcolor{#2e7d32}{\textbf{s-III-2}}$ 理解圓周率 $\pi$ 的意義與推導過程，熟練運用公式計算圓周長、半圓周長、扇形弧長與扇形周長（包含複合圖形之周長計算）。
 
-**學習目標**：透過本單元，我們將探索圓周率 $\pi \approx 3.14$ 的數學由來與實測驗證，精熟「$\textcolor{#e91e63}{\textbf{\text{圓周長} = \text{直徑} \times 3.14}}$」核心公式，掌握圓心角與扇形比例關係（$\frac{\theta}{360^\circ}$），徹底破解「$\textcolor{#d32f2f}{\textbf{扇形周長一定要加上兩條半徑}}$」的高頻失分陷阱，並探索輪胎滾動與太空軌道導航的生活科技應用！
+**學習目標**：透過本單元，我們將探索圓周率 $\pi \approx 3.14$ 的數學由來與實測驗證，精熟「$\textcolor{#e91e63}{\mathbf{\text{圓周長} = \text{直徑} \times 3.14}}$」核心公式，掌握圓心角與扇形比例關係（$\frac{\theta}{360^\circ}$），徹底破解「$\textcolor{#d32f2f}{\textbf{扇形周長一定要加上兩條半徑}}$」的高頻失分陷阱，並探索輪胎滾動與太空軌道導航的生活科技應用！
 
 ---
 
@@ -18,7 +18,7 @@
   直徑 d 繞一整圈                           圓弧 + 2 條半徑
          │                                         │
          ▼                                         ▼
-  $\textcolor{#e91e63}{\textbf{\text{周長} = \text{直徑} \times 3.14}}$                  $\textcolor{#2196f3}{\textbf{\text{周長} = \text{弧長} + 2 \times \text{半徑}}}$
+  周長 = 直徑 × 3.14                  周長 = 弧長 + 2 × 半徑
 ```
 
 從古代車輪的發明，到現代高鐵軌道與人造衛星環繞地球，圓形是人類幾何文明的基石。今天就讓我們一起揭開圓周率 $\pi$ 的神奇奧秘！
@@ -34,8 +34,8 @@
 > **世界上任何一個圓，不論大小，它的「圓周長」除以「直徑」，其比值永遠是一個固定的常數！**
 
 這個固定常數就稱為 $\textcolor{#e91e63}{\textbf{圓周率}}$，以希臘字母 **$\pi$**（讀作 $\text{pi}$）表示：
-$$ \textcolor{#e91e63}{\textbf{\pi = \frac{\text{圓周長}}{\text{直徑}} \approx 3.1415926535\dots}} $$
-- 在國小階段的數學計算中，通常取概數 $\textcolor{#2196f3}{\textbf{\pi \approx 3.14}}$。
+$ \pi = \frac{\text{圓周長}}{\text{直徑}} \approx 3.1415926535\dots $
+- 在國小階段的數學計算中，通常取概數 $\textcolor{#2196f3}{\mathbf{\pi \approx 3.14}}$。
 
 ### 📊 本單元核心考點與重點公式速查表
 
@@ -67,9 +67,9 @@ $$ \textcolor{#e91e63}{\textbf{\pi = \frac{\text{圓周長}}{\text{直徑}} \app
 
 ### 🌟 核心公式
 1. **已知直徑 $d$**：
-   $$ \textcolor{#e91e63}{\textbf{\text{圓周長} = \text{直徑} \times 3.14 \quad (C = \pi d)}} $$
+   $$ \textcolor{#e91e63}{\mathbf{\text{圓周長} = \text{直徑} \times 3.14 \quad (C = \pi d)}} $$
 2. **已知半徑 $r$**（因為 $\text{直徑} = 2 \times \text{半徑}$）：
-   $$ \textcolor{#2196f3}{\textbf{\text{圓周長} = \text{半徑} \times 2 \times 3.14 \quad (C = 2\pi r)}} $$
+   $$ \textcolor{#2196f3}{\mathbf{\text{圓周長} = \text{半徑} \times 2 \times 3.14 \quad (C = 2\pi r)}} $$
 3. **逆推求直徑與半徑**：
    $$ \text{直徑} = \text{圓周長} \div 3.14 \quad , \quad \text{半徑} = \text{圓周長} \div 3.14 \div 2 $$
 
@@ -86,21 +86,21 @@ $$ C = 5 \times 2 \times 3.14 = 10 \times 3.14 = \textcolor{#2196f3}{\textbf{31.
 ![圖解說明](./images/math_u5_concept3.svg)
 
 **扇形**是由兩條半徑和一段圓弧所圍成的圖形：
-- 一個完整圓的圓心角是 $\textcolor{#e91e63}{\textbf{360^\circ}}$。
-- 圓心角為 $\theta$ 的扇形，佔整個圓的比例為 $\textcolor{#2196f3}{\textbf{\frac{\theta}{360^\circ}}}$。
+- 一個完整圓的圓心角是 $\textcolor{#e91e63}{\mathbf{360^\circ}}$。
+- 圓心角為 $\theta$ 的扇形，佔整個圓的比例為 $\textcolor{#2196f3}{\mathbf{\frac{\theta}{360^\circ}}}$。
 
 ### 🌟 扇形弧長 (Arc Length) 公式：
-$$ \textcolor{#e91e63}{\textbf{\text{扇形弧長} = \text{直徑} \times 3.14 \times \frac{\text{圓心角}}{360^\circ}}} $$
+$ \text{扇形弧長} = \text{直徑} \times 3.14 \times \frac{\text{圓心角}}{360^\circ} $
 
 ### 📊 常見圓心角與扇形比例速查表
 
 | 圓心角 ($\theta$) | 佔整圓比例 | 扇形名稱 | 弧長計算公式簡化 |
 | :--- | :--- | :--- | :--- |
-| **$180^\circ$** | $\frac{180^\circ}{360^\circ} = \textcolor{#e91e63}{\textbf{\frac{1}{2}}}$ | 半圓 | $\text{直徑} \times 3.14 \times \frac{1}{2}$ |
-| **$120^\circ$** | $\frac{120^\circ}{360^\circ} = \textcolor{#2196f3}{\textbf{\frac{1}{3}}}$ | $\frac{1}{3}$ 圓扇形 | $\text{直徑} \times 3.14 \times \frac{1}{3}$ |
-| **$90^\circ$** | $\frac{90^\circ}{360^\circ} = \textcolor{#2e7d32}{\textbf{\frac{1}{4}}}$ | $\frac{1}{4}$ 圓扇形（直角） | $\text{直徑} \times 3.14 \times \frac{1}{4}$ |
-| **$60^\circ$** | $\frac{60^\circ}{360^\circ} = \textcolor{#ff9800}{\textbf{\frac{1}{6}}}$ | $\frac{1}{6}$ 圓扇形 | $\text{直徑} \times 3.14 \times \frac{1}{6}$ |
-| **$45^\circ$** | $\frac{45^\circ}{360^\circ} = \textcolor{#9c27b0}{\textbf{\frac{1}{8}}}$ | $\frac{1}{8}$ 圓扇形 | $\text{直徑} \times 3.14 \times \frac{1}{8}$ |
+| **$180^\circ$** | $\frac{180^\circ}{360^\circ} = \textcolor{#e91e63}{\mathbf{\frac{1}{2}}}$ | 半圓 | $\text{直徑} \times 3.14 \times \frac{1}{2}$ |
+| **$120^\circ$** | $\frac{120^\circ}{360^\circ} = \textcolor{#2196f3}{\mathbf{\frac{1}{3}}}$ | $\frac{1}{3}$ 圓扇形 | $\text{直徑} \times 3.14 \times \frac{1}{3}$ |
+| **$90^\circ$** | $\frac{90^\circ}{360^\circ} = \textcolor{#2e7d32}{\mathbf{\frac{1}{4}}}$ | $\frac{1}{4}$ 圓扇形（直角） | $\text{直徑} \times 3.14 \times \frac{1}{4}$ |
+| **$60^\circ$** | $\frac{60^\circ}{360^\circ} = \textcolor{#ff9800}{\mathbf{\frac{1}{6}}}$ | $\frac{1}{6}$ 圓扇形 | $\text{直徑} \times 3.14 \times \frac{1}{6}$ |
+| **$45^\circ$** | $\frac{45^\circ}{360^\circ} = \textcolor{#9c27b0}{\mathbf{\frac{1}{8}}}$ | $\frac{1}{8}$ 圓扇形 | $\text{直徑} \times 3.14 \times \frac{1}{8}$ |
 
 ---
 
@@ -122,8 +122,8 @@ $$ \textcolor{#e91e63}{\textbf{\text{扇形弧長} = \text{直徑} \times 3.14 \
 ```
 
 ### 🌟 重要周長公式比對：
-1. $\textcolor{#2196f3}{\textbf{\text{扇形周長} = \text{弧長} + \text{半徑} \times 2}}$
-2. $\textcolor{#e91e63}{\textbf{\text{半圓周長} = \text{半圓弧長} + \text{直徑} = (\text{半徑} \times 3.14) + (\text{半徑} \times 2)}}$
+1. $\textcolor{#2196f3}{\mathbf{\text{扇形周長} = \text{弧長} + \text{半徑} \times 2}}$
+2. $\textcolor{#e91e63}{\mathbf{\text{半圓周長} = \text{半圓弧長} + \text{直徑} = (\text{半徑} \times 3.14) + (\text{半徑} \times 2)}}$
 
 ### 📝 範例 3：半徑 $6$ 公分、圓心角 $90^\circ$ 的扇形，求「弧長」與「周長」
 1. 直徑 $= 6 \times 2 = 12$ 公分。
@@ -136,22 +136,22 @@ $$ \textcolor{#e91e63}{\textbf{\text{扇形弧長} = \text{直徑} \times 3.14 \
 
 ### 📝 範例 1：【圓周長與滾動距離】
 - 📌 **題目情境**：腳踏車輪子的直徑為 $60$ 公分，輪子向前滾動 $50$ 圈，大約行進了多少公尺？($\pi$ 以 $3.14$ 計算)
-- 💡 **思考關鍵**：輪子每滾動 1 圈前進的距離等於「圓周長（直徑 $	imes 3.14$）」。注意最後要換算單位（公分 $ightarrow$ 公尺）。
+- 💡 **思考關鍵**：輪子每滾動 1 圈前進的距離等於「圓周長（直徑 $\times 3.14$）」。注意最後要換算單位（公分 $ightarrow$ 公尺）。
 - 📐 **詳盡步驟**：
-  1. 輪子 1 圈周長 $= 60 	imes 3.14 = 188.4	ext{ 公分}$。
-  2. 滾動 50 圈總距離 $= 188.4 	imes 50 = 9420	ext{ 公分}$。
-  3. 換算為公尺：$9420 \div 100 = \mathbf{94.2	ext{ 公尺}}$。
+  1. 輪子 1 圈周長 $= 60 \times 3.14 = 188.4\text{ 公分}$。
+  2. 滾動 50 圈總距離 $= 188.4 \times 50 = 9420\text{ 公分}$。
+  3. 換算為公尺：$9420 \div 100 = \mathbf{94.2\text{ 公尺}}$。
 
 ### 📝 範例 2：【扇形弧長 vs 扇形周長】
 - 📌 **題目情境**：半徑 $6$ 公分、圓心角 $60^\circ$ 的扇形，求其「弧長」與「扇形周長」各是多少公分？
 - 💡 **思考關鍵**：
-  - 弧長 $=$ 完整圓周長 $	imes rac{	ext{圓心角}}{360^\circ}$。
-  - 扇形周長 $=$ 弧長 $+ 2 	imes 	ext{半徑}$（務必加上兩條半徑直線邊！）。
+  - 弧長 $=$ 完整圓周長 $\times \frac{\text{圓心角}}{360^\circ}$。
+  - 扇形周長 $=$ 弧長 $+ 2 \times \text{半徑}$（務必加上兩條半徑直線邊！）。
 - 📐 **詳盡步驟**：
-  1. 完整圓周長 $= 6 	imes 2 	imes 3.14 = 37.68	ext{ 公分}$。
-  2. 扇形比例 $= rac{60^\circ}{360^\circ} = rac{1}{6}$。
-  3. 扇形弧長 $= 37.68 	imes rac{1}{6} = \mathbf{6.28	ext{ 公分}}$。
-  4. 扇形周長 $= 6.28 + 6 + 6 = \mathbf{18.28	ext{ 公分}}$。
+  1. 完整圓周長 $= 6 \times 2 \times 3.14 = 37.68\text{ 公分}$。
+  2. 扇形比例 $= \frac{60^\circ}{360^\circ} = \frac{1}{6}$。
+  3. 扇形弧長 $= 37.68 \times \frac{1}{6} = \mathbf{6.28\text{ 公分}}$。
+  4. 扇形周長 $= 6.28 + 6 + 6 = \mathbf{18.28\text{ 公分}}$。
 
 ---
 
@@ -162,7 +162,7 @@ $$ \textcolor{#e91e63}{\textbf{\text{扇形弧長} = \text{直徑} \times 3.14 \
 即：$\textcolor{#e91e63}{\textbf{\text{半圓周長} = \text{半圓弧長} + \text{直徑}}}$！
 
 ❌ **迷思 2**：題目給「半徑 4 公分」，直接拿 $4 \times 3.14$ 當作周長。
-✅ **正確觀念**：公式是「$\textcolor{#e91e63}{\textbf{\text{直徑} \times 3.14}}$」！看到半徑時，一定要先乘 2 算出直徑（$4 \times 2 = 8$ 公分），再去乘 3.14！
+✅ **正確觀念**：公式是「$\textcolor{#e91e63}{\mathbf{\text{直徑} \times 3.14}}$」！看到半徑時，一定要先乘 2 算出直徑（$4 \times 2 = 8$ 公分），再去乘 3.14！
 
 ❌ **迷思 3**：圓周率 $\pi$ 是有限小數，寫到 3.14 就結束了。
 ✅ **正確觀念**：$\pi$ 是一個「無限不循環小數（無理數）」，小數點後有無限多位且毫無規則循環重複（$3.141592653589793\dots$）。我們日常寫 3.14 只是為了計算方便所取的概數。

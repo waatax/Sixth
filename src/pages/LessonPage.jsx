@@ -68,6 +68,44 @@ const createSlug = (text) => {
     .toLowerCase();
 };
 
+// 安全淨化 ASCII 圖解純文字區塊中的殘留 LaTeX 標籤，保證 100% 易讀與等寬排版
+const cleanDiagramText = (text) => {
+  if (!text || typeof text !== 'string') return text;
+  return text
+    // 移除顏色與樣式外殼 \textcolor{...}{...}
+    .replace(/\\textcolor\{#[a-fA-F0-9]{3,8}\}\{([\s\S]*?)\}/g, '$1')
+    .replace(/\\textcolor\{[a-zA-Z]+\}\{([\s\S]*?)\}/g, '$1')
+    // 移除 \textbf, \mathbf, \text, \mathrm, \boldsymbol 等文字/數學包裝
+    .replace(/\\(?:textbf|mathbf|text|mathrm|boldsymbol)\{([\s\S]*?)\}/g, '$1')
+    .replace(/\\(?:textbf|mathbf|text|mathrm|boldsymbol)\{([\s\S]*?)\}/g, '$1')
+    // 將 \frac{a}{b} 轉換為小學直觀的等寬分數 a/b
+    .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1/$2')
+    // 替換數學符號
+    .replace(/\\div/g, '÷')
+    .replace(/\\times/g, '×')
+    .replace(/\\approx/g, '≈')
+    .replace(/\\sim/g, '~')
+    .replace(/\\rightarrow/g, '→')
+    .replace(/\\pi/g, 'π')
+    .replace(/\\circ/g, '°')
+    .replace(/\\cdot/g, '·')
+    .replace(/\\\$/g, '$')
+    .replace(/\\%/g, '%')
+    .replace(/\^\{?(\d+)\}?/g, '^$1')
+    .replace(/(?<!\\)\$/g, '');
+};
+
+// 預先修復與淨化 Markdown 文本，確保 KaTeX 渲染零報錯、絕不外洩原始代碼
+const preprocessLessonMarkdown = (raw) => {
+  if (!raw || typeof raw !== 'string') return raw;
+  return raw
+    // 1. 若數學公式中誤將 \frac, \div, \times 包在 \textbf{} (文本模式) 中，自動轉為 \mathbf{} (數學模式)
+    .replace(/\\textbf\{([^{}]*\\(?:frac|div|times|sqrt|pi|approx|cdot|pm)[^{}]*)\}/g, '\\mathbf{$1}')
+    // 2. 若公式核心被 \textcolor 外層包覆可能導致報錯，自動安全提取內部數學算式
+    .replace(/\$\$\s*\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\(?:textbf|mathbf)\{([\s\S]*?)\}\}\s*\$\$/g, '$$ $1 $$')
+    .replace(/\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\textbf\{([^{}]*\\frac[^{}]*)\}\}/g, '$1');
+};
+
 const LessonPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
@@ -231,7 +269,7 @@ const LessonPage = () => {
       if (mdModules[path]) {
         try {
           const mdContent = await mdModules[path]();
-          setContent(mdContent);
+          setContent(preprocessLessonMarkdown(mdContent));
         } catch (_err) {
           setContent('# 糟糕！無法載入教學內容\n\n內容檔案可能遺失或正在建置中。');
         }
@@ -1041,7 +1079,7 @@ const LessonPage = () => {
 
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
+            rehypePlugins={[[rehypeKatex, { strict: false, throwOnError: false }]]}
             components={{
               h2: ({ node, children, ...props }) => {
                 const rawText = extractTextFromNode(node) || String(children);
@@ -1399,6 +1437,7 @@ const LessonPage = () => {
                   );
                 }
 
+                const cleanedDiagram = cleanDiagramText(textContent);
                 return (
                   <div className="visual-diagram-card my-5">
                     <div className="diagram-header flex items-center justify-between">
@@ -1407,11 +1446,11 @@ const LessonPage = () => {
                         <span>🎨 視覺概念模型與圖解架構 (Visual Concept Diagram)</span>
                       </div>
                       <button
-                        onClick={() => handleCopyDiagram(textContent, textContent.slice(0, 15))}
+                        onClick={() => handleCopyDiagram(cleanedDiagram, cleanedDiagram.slice(0, 15))}
                         className="diagram-copy-btn text-xs flex items-center gap-1"
                         title="複製圖解內容"
                       >
-                        {copiedCodeId === textContent.slice(0, 15) ? (
+                        {copiedCodeId === cleanedDiagram.slice(0, 15) ? (
                           <>
                             <Check size={12} style={{ color: 'var(--accent-success)' }} />
                             <span>已複製</span>
@@ -1426,7 +1465,7 @@ const LessonPage = () => {
                     </div>
                     <pre className="diagram-pre">
                       <code className={className} {...props}>
-                        {children}
+                        {cleanedDiagram}
                       </code>
                     </pre>
                   </div>
@@ -1564,9 +1603,9 @@ const LessonPage = () => {
               rel="noreferrer" 
               className="btn-outline text-sm flex items-center gap-1"
               style={{ padding: '10px 18px', borderRadius: 'var(--radius-md)' }}
-              title="前往均一教育平台觀看相關教學影音"
+              title="前往推薦教育平台觀看相關教學影音"
             >
-              <span>📺 均一影音輔助</span>
+              <span>📺 推薦延伸影音</span>
               <ExternalLink size={14} />
             </a>
           )}

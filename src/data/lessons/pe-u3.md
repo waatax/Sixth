@@ -43,8 +43,8 @@
 ### 📍 1. CPR 胸外按壓核心技巧 (Chest Compressions)
 - **按壓位置**：兩乳頭連線正中央的胸骨處。
 - **姿勢要訣**：雙手掌根重疊、十指互扣、手肘打直，以身體重量垂直下壓。
-- **按壓深度**：約 $\textcolor{#e91e63}{\textbf{5 \sim 6\text{ 公分}}}$。
-- **按壓速率**：每分鐘 $\textcolor{#2196f3}{\textbf{100 \sim 120\text{ 次}}}$（相當於洗腦神曲《Baby Shark》或《Stayin' Alive》的節奏）。
+- **按壓深度**：約 $\textcolor{#e91e63}{\mathbf{5 \sim 6}\text{ 公分}}$。
+- **按壓速率**：每分鐘 $\textcolor{#2196f3}{\mathbf{100 \sim 120}\text{ 次}}$（相當於洗腦神曲《Baby Shark》或《Stayin' Alive》的節奏）。
 - **關鍵原則**：$\textcolor{#4caf50}{\textbf{用力壓、快快壓、胸部完全回彈、中斷不超過 10 秒}}$。
 
 ### ⚡ 2. 傻瓜電擊器 AED 使用四字口訣：【開、貼、插、電】

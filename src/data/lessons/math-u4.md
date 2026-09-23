@@ -17,7 +17,7 @@
      黑糖漿 : 鮮奶 = 1 : 4                    紅色 : 白色 = 2 : 5
             │                                        │
             ▼                                        ▼
-   黑糖 80 ml ──➔ 鮮奶 $\textcolor{#e91e63}{\textbf{320 ml}}$              紅 2 份 + 白 5 份 ──➔ 總共 $\textcolor{#2196f3}{\textbf{7 等份}}$
+   黑糖 80 ml ──➔ 鮮奶 320 ml              紅 2 份 + 白 5 份 ──➔ 總共 7 等份
 ```
 
 「比」是我們在生活中用來比較兩個（或多個）數量相對關係最簡潔的數學語言。學會比與比值，你就能掌握生活調飲、烘焙配方與視覺構圖的完美平衡！
@@ -36,13 +36,13 @@
 
 ### 2. 什麼是「比值」？
 「比值」就是**前項除以後項所得到的商**（一個具體的數值）：
-$$ \textcolor{#e91e63}{\textbf{\text{比值} = \text{前項} \div \text{後項} = \frac{\text{前項}}{\text{後項}}}} $$
+$$ \textcolor{#e91e63}{\mathbf{\text{比值} = \text{前項} \div \text{後項} = \frac{\text{前項}}{\text{後項}}}} $$
 - 比值可以寫成**最簡分數、整數或小數**，通常**不帶單位**。
 
 ### 📝 範例 1：求下列各比的比值
-- $3 : 5 \rightarrow \text{比值} = 3 \div 5 = \textcolor{#2196f3}{\textbf{\frac{3}{5}}} = 0.6$
-- $12 : 4 \rightarrow \text{比值} = 12 \div 4 = \textcolor{#2196f3}{\textbf{3}}$
-- $2.4 : 1.6 \rightarrow \text{比值} = 2.4 \div 1.6 = \frac{24}{16} = \textcolor{#2196f3}{\textbf{\frac{3}{2}}} = 1.5$
+- $3 : 5 \rightarrow \text{比值} = 3 \div 5 = \textcolor{#2196f3}{\mathbf{\frac{3}{5}}} = 0.6$
+- $12 : 4 \rightarrow \text{比值} = 12 \div 4 = 3$
+- $2.4 : 1.6 \rightarrow \text{比值} = 2.4 \div 1.6 = \frac{24}{16} = \textcolor{#2196f3}{\mathbf{\frac{3}{2}}} = 1.5$
 
 ### 📊 本單元核心考點與重點公式速查表
 
@@ -59,7 +59,7 @@ $$ \textcolor{#e91e63}{\textbf{\text{比值} = \text{前項} \div \text{後項} 
 ![圖解說明](./images/math_u4_concept2.svg)
 
 如果兩個比的 $\textcolor{#e91e63}{\textbf{比值相同}}$，我們就稱這兩個比是「**相等的比**」，可以用等號連接組成**比例式**：
-$$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff \textcolor{#2196f3}{\textbf{a \times d = b \times c}} \quad \text{（外項乘積 = 內項乘積）} $$
+$$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff a \times d = b \times c \quad \text{（外項乘積 = 內項乘積）} $$
 
 ### 🌟 等比性質（黃金法則）
 > 比的前項和後項**同乘**或**同除**以同一個不為 0 的數，其**比值保持不變**！
@@ -86,9 +86,9 @@ $$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff \textcolor{#2196f3}{\textbf
 
 | 題型種類 | 題目範例 | 核心解題步驟 | 示範演算過程 |
 | :--- | :--- | :--- | :--- |
-| **1. 整數比** | $24 : 36$ | 同除以兩數的 $\textcolor{#e91e63}{\textbf{最大公因數 (GCD)}}$ | $\text{GCD}(24, 36) = 12$ <br> $(24 \div 12) : (36 \div 12) = \textcolor{#e91e63}{\textbf{2 : 3}}$ |
+| **1. 整數比** | $24 : 36$ | 同除以兩數的 $\textcolor{#e91e63}{\textbf{最大公因數 (GCD)}}$ | $\text{GCD}(24, 36) = 12$ <br> $(24 \div 12) : (36 \div 12) = 2 : 3$ |
 | **2. 小數比** | $0.35 : 0.8$ | 先同乘 10、100 化為整數，再除以 GCD | 同乘 100 $\rightarrow 35 : 80$ <br> 同除以 5 $\rightarrow \textcolor{#e91e63}{\textbf{7 : 16}}$ |
-| **3. 分數比** | $\frac{2}{3} : \frac{5}{6}$ | 先同乘分母的 $\textcolor{#2196f3}{\textbf{最小公倍數 (LCM)}}$ 消除分母 | $\text{LCM}(3, 6) = 6$，同乘 6 <br> $(\frac{2}{3} \times 6) : (\frac{5}{6} \times 6) = \textcolor{#e91e63}{\textbf{4 : 5}}$ |
+| **3. 分數比** | $\frac{2}{3} : \frac{5}{6}$ | 先同乘分母的 $\textcolor{#2196f3}{\textbf{最小公倍數 (LCM)}}$ 消除分母 | $\text{LCM}(3, 6) = 6$，同乘 6 <br> $(\frac{2}{3} \times 6) : (\frac{5}{6} \times 6) = 4 : 5$ |
 | **4. 混和比** | $0.75 : \frac{9}{8}$ | 先全部轉為分數（或小數），再同乘公倍數 | $0.75 = \frac{3}{4}$ <br> $\frac{3}{4} : \frac{9}{8} \xrightarrow{\times 8} 6 : 9 \xrightarrow{\div 3} \textcolor{#e91e63}{\textbf{2 : 3}}$ |
 
 ---
@@ -113,8 +113,8 @@ $$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff \textcolor{#2196f3}{\textbf
 
 1. **算總份數**：$3 + 2 = 5$ 份。
 2. **算每份數量**：$60 \div 5 = 12$ 顆/份。
-3. **小明（佔 3 份）**：$12 \times 3 = \textcolor{#e91e63}{\textbf{36 顆}}$。
-4. **小華（佔 2 份）**：$12 \times 2 = \textcolor{#2196f3}{\textbf{24 顆}}$。
+3. **小明（佔 3 份）**：$12 \times 3 = 36 顆$。
+4. **小華（佔 2 份）**：$12 \times 2 = 24 顆$。
 - **檢驗**：$36 + 24 = 60$ 顆，且 $36 : 24 = 3 : 2$ ✅
 
 ---
@@ -122,24 +122,24 @@ $$ a : b = c : d \iff \frac{a}{b} = \frac{c}{d} \iff \textcolor{#2196f3}{\textbf
 ## 📝 經典範例剖析與考題示範 (Step-by-Step Worked Examples)
 
 ### 📝 範例 1：【比值計算與化為最簡整數比】
-- 📌 **題目情境**：將 $0.6 : rac{4}{5}$ 化為最簡整數比，並求其比值。
+- 📌 **題目情境**：將 $0.6 : \frac{4}{5}$ 化為最簡整數比，並求其比值。
 - 💡 **思考關鍵**：
   1. 先將小數與分數統一化為同類型（小數或分數）。
   2. 兩項同乘分母的公倍數化為整數比，再同除以最大公因數。
   3. 比值 $=$ 前項 $\div$ 後項。
 - 📐 **詳盡步驟**：
-  1. $0.6 = rac{3}{5}$，原式為 $rac{3}{5} : rac{4}{5}$。
+  1. $0.6 = \frac{3}{5}$，原式為 $\frac{3}{5} : \frac{4}{5}$。
   2. 兩項同乘 $5$ 得到整數比 $\mathbf{3 : 4}$（3 和 4 互質，為最簡整數比）。
-  3. 比值 $= 3 \div 4 = \mathbf{rac{3}{4}	ext{ (或 0.75)}}$。
+  3. 比值 $= 3 \div 4 = \mathbf{\frac{3}{4}\text{ (或 0.75)}}$。
 - ⚠️ **常犯錯誤**：比值寫成 $3 : 4$（比值是數值，不可寫冒號！）。
 
 ### 📝 範例 2：【按比例分配生活題】
 - 📌 **題目情境**：六年一班男生與女生的人數比為 $4 : 5$，全班共有 $36$ 人，請問男生和女生各有多少人？
 - 💡 **思考關鍵**：將全班總人數視為分成 $4 + 5 = 9$ 等份，先算出每一等份的人數。
 - 📐 **詳盡步驟**：
-  1. 總份數 $= 4 + 5 = 9	ext{ 份}$。
-  2. 每一份的人數 $= 36 \div 9 = 4	ext{ 人}$。
-  3. 男生人數 $= 4 	imes 4 = \mathbf{16	ext{ 人}}$；女生人數 $= 4 	imes 5 = \mathbf{20	ext{ 人}}$。
+  1. 總份數 $= 4 + 5 = 9\text{ 份}$。
+  2. 每一份的人數 $= 36 \div 9 = 4\text{ 人}$。
+  3. 男生人數 $= 4 \times 4 = \mathbf{16\text{ 人}}$；女生人數 $= 4 \times 5 = \mathbf{20\text{ 人}}$。
 
 ---
 

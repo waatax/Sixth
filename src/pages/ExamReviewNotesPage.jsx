@@ -343,7 +343,7 @@ const ExamReviewNotesPage = () => {
         </h1>
 
         <p className="notes-hero-desc">
-          {handoutInfo.description} 由均一專家團隊與教科書編審名師聯合編撰，深度拆解核心觀念突破、名師必背公式、歷屆名校高頻陷阱與段考真題步驟級詳解。學會後可直擊歷年各校段考題目！
+          {handoutInfo.description} 由最強小六研發團隊與教科書編審名師聯合編撰，深度拆解核心觀念突破、名師必背公式、歷屆名校高頻陷阱與段考真題步驟級詳解。學會後可直擊歷年各校段考題目！
         </p>
       </div>
 

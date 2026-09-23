@@ -101,5 +101,5 @@
   <!-- Bottom Watermark & Status -->
   <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
   <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
-  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Junyi Academic Design System</text>
+  <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Sixth Curriculum Design System</text>
 </svg>

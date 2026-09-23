@@ -32,7 +32,7 @@ $\textcolor{#2e7d32}{\textbf{INd-III-2}}$ 探討微生物在食品發酵、醫�
 ### 1. 顯微鏡兩大核心透鏡與放大倍率：
 - **目鏡（Eyepiece）**：靠近眼睛觀察的透鏡（長度越長，倍率通常越小）。
 - **物鏡（Objective）**：靠近觀察標本的透鏡（長度越長，倍率越大）。
-$$\textcolor{#2e7d32}{\textbf{\text{總放大倍率} = \text{目鏡倍率} \times \text{物鏡倍率}}}$$
+$$\textcolor{#2e7d32}{\mathbf{\text{總放大倍率} = \text{目鏡倍率} \times \text{物鏡倍率}}}$$
 - 例如：目鏡 $10\times$，物鏡 $40\times$，則總放大倍率為 $10 \times 40 = \mathbf{400}$ 倍！
 
 ```text

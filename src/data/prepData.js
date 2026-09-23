@@ -1,6 +1,6 @@
-// 國中先修 (Junior High Prep Courses) 均一專家旗艦版教材資料庫
+// 國中先修 (Junior High Prep Courses) 最強小六原創旗艦版教材資料庫
 // 嚴格對標 108 課綱與 康軒 (Kang Hsuan)、南一 (Nan I)、翰林 (Han Lin) 三大版本七年級教科書
-// 配備：版本對照標籤、小六先備知識、均一微概念階梯、常犯迷思防雷 (Misconception Buster)、三階提示自適應診斷題庫
+// 配備：版本對照標籤、小六先備知識、微概念螺旋階梯、常犯迷思防雷 (Misconception Buster)、三階提示自適應診斷題庫
 
 export const prepData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

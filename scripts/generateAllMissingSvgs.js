@@ -111,7 +111,7 @@ function generateGenericVisualContent(meta, conceptNum = 1) {
     <text x="420" y="212" font-size="11" fill="#e9d5ff">無痛跨越小學到中學的思考鴻溝！</text>
 
     <rect x="405" y="235" width="340" height="75" rx="8" fill="#1e293b" stroke="#38bdf8"/>
-    <text x="575" y="260" font-size="13" font-weight="800" fill="#38bdf8" text-anchor="middle">均一教育基金會・權威專家審定</text>
+    <text x="575" y="260" font-size="13" font-weight="800" fill="#38bdf8" text-anchor="middle">最強小六課程研發團隊・核心素養審定</text>
     <text x="575" y="285" font-size="12" fill="#94a3b8" text-anchor="middle">對齊康軒、南一、翰林三大版本教科書進度</text>
   `;
 }
