@@ -4,7 +4,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
-import os from 'node:os';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import katex from 'katex';
@@ -218,6 +217,90 @@ function buildHandoutHtml(handoutInfo, notesList) {
       border-left: 3.5px solid #2563eb;
       padding-left: 7px;
       margin: 3px 0 0 0;
+    }
+
+    .unit-pedagogy-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .pedagogy-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 9.5px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      line-height: 1.4;
+    }
+
+    .pedagogy-pill.prior {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+    }
+
+    .pedagogy-pill.skill {
+      background: #fdf4ff;
+      color: #86198f;
+      border: 1px solid #f5d0fe;
+    }
+
+    .unit-highlights-box {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1.5px solid #fde68a;
+      border-radius: 6px;
+      padding: 7px 10px;
+      margin-bottom: 9px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .highlights-box-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .highlight-card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #fcd34d;
+      border-radius: 4px;
+      padding: 5px 7px;
+    }
+
+    .highlight-num {
+      font-size: 8px;
+      font-weight: 800;
+      color: #d97706;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .highlight-point {
+      font-size: 10px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 2px;
+      line-height: 1.35;
+    }
+
+    .highlight-desc {
+      font-size: 9px;
+      color: #475569;
+      line-height: 1.4;
     }
 
     .unit-dual-grid {
@@ -485,7 +568,7 @@ function buildHandoutHtml(handoutInfo, notesList) {
 
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    ${notesList.map((note, noteIdx) => {
+    ${notesList.map((note) => {
       const diag = getUnitDiagram(note.unitId);
       return `
       <div class="unit-card">
@@ -497,7 +580,28 @@ function buildHandoutHtml(handoutInfo, notesList) {
             <span style="font-size: 10px; color: #64748b;">${note.textbookCoverage}</span>
           </div>
           <h2 class="unit-title">${note.title}</h2>
+          ${note.priorConcept || note.masterySkill ? `
+            <div class="unit-pedagogy-row">
+              ${note.priorConcept ? `<span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>${note.priorConcept}</span>` : ''}
+              ${note.masterySkill ? `<span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>${note.masterySkill}</span>` : ''}
+            </div>
+          ` : ''}
         </div>
+
+        ${note.highlights && note.highlights.length > 0 ? `
+          <div class="unit-highlights-box">
+            <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
+            <div class="highlights-grid">
+              ${note.highlights.map((h, hIdx) => `
+                <div class="highlight-card">
+                  <div class="highlight-num">亮點 0${hIdx + 1}</div>
+                  <div class="highlight-point">${h.point}</div>
+                  <div class="highlight-desc">${h.detail}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">

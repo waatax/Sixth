@@ -24,7 +24,10 @@ import {
   Maximize2,
   Minimize2,
   FolderDown,
-  Calendar
+  Calendar,
+  Target,
+  Award,
+  Compass
 } from 'lucide-react';
 import { playSound } from '../utils/soundEffects';
 import './ExamReviewNotesPage.css';
@@ -66,6 +69,22 @@ function renderDisplayFormula(formula) {
   return `<div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">${formula}</span><span class="mnemonic-quote-mark">”</span></div>`;
 }
 
+// 計算單元自測掌握度與評級徽章
+function getUnitMasteryInfo(note, checkedMap) {
+  const list = note.selfChecklist || [];
+  if (list.length === 0) {
+    return { checked: 0, total: 0, percent: 100, level: 'gold', label: '奪冠滿分', icon: '🥇' };
+  }
+  let checked = 0;
+  list.forEach((_, idx) => {
+    if (checkedMap[`${note.unitId}_${idx}`]) checked++;
+  });
+  const percent = Math.round((checked / list.length) * 100);
+  if (percent === 100) return { checked, total: list.length, percent, level: 'gold', label: '奪冠滿分', icon: '🥇' };
+  if (percent >= 50) return { checked, total: list.length, percent, level: 'silver', label: '穩固精熟', icon: '🥈' };
+  return { checked, total: list.length, percent, level: 'bronze', label: '初步理解', icon: '🥉' };
+}
+
 const ExamReviewNotesPage = () => {
   const { subjectId = 'math', semester = '6A', scope = 'all' } = useParams();
   const navigate = useNavigate();
@@ -92,6 +111,8 @@ const ExamReviewNotesPage = () => {
     }
   });
   const [allSolutionsExpanded, setAllSolutionsExpanded] = useState(false);
+  // 焦點衝刺模式: 'all' (全部) | 'highlights' (段考亮點) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (真題解析) | 'checklist' (自測清單)
+  const [focusSection, setFocusSection] = useState('all');
 
   // 當前學科資訊
   const currentSubjectMeta = useMemo(() => {
@@ -244,6 +265,28 @@ const ExamReviewNotesPage = () => {
       </div>
       <h2 style="font-size: 16px; margin: 0 0 10px 0; color: #0f172a; border-left: 3.5px solid #2563eb; padding-left: 6px;">${n.title}</h2>
       
+      ${n.priorConcept || n.masterySkill ? `
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;">
+          ${n.priorConcept ? `<span style="display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 4px; font-size: 11px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">🎯 <strong>溫故知新：</strong>${n.priorConcept}</span>` : ''}
+          ${n.masterySkill ? `<span style="display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 4px; font-size: 11px; background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe;">🏅 <strong>能力指標：</strong>${n.masterySkill}</span>` : ''}
+        </div>
+      ` : ''}
+
+      ${n.highlights && n.highlights.length > 0 ? `
+        <div style="background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1.5px solid #fde68a; border-radius: 6px; padding: 10px 12px; margin-bottom: 12px;">
+          <div style="font-size: 11.5px; font-weight: bold; color: #92400e; margin-bottom: 6px;">🌟 段考三大核心知識亮點・高頻必考精華</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px;">
+            ${n.highlights.map((h, hIdx) => `
+              <div style="background: rgba(255,255,255,0.85); border: 1px solid #fcd34d; border-radius: 4px; padding: 6px 8px;">
+                <div style="font-size: 10px; font-weight: 800; color: #b45309;">亮點 0${hIdx + 1}</div>
+                <div style="font-size: 11.5px; font-weight: bold; color: #1e293b; margin: 2px 0;">${h.point}</div>
+                <div style="font-size: 10.5px; color: #475569; line-height: 1.4;">${h.detail}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
       <div class="dual-grid">
         <div class="col-left">
           <div style="font-size: 12px; font-weight: bold; margin-bottom: 6px; color: #1e293b;">📖 課綱核心觀念突破</div>
@@ -545,6 +588,36 @@ const ExamReviewNotesPage = () => {
             </div>
           </div>
         </div>
+
+        {/* 5. 🎯 考前衝刺焦點篩選器 (快速鎖定學習目標) */}
+        <div className="focus-modes-row">
+          <div className="focus-modes-label">
+            <Compass size={15} style={{ color: 'var(--accent-primary)' }} />
+            <span>焦點衝刺導覽：</span>
+          </div>
+          <div className="focus-pills-list">
+            {[
+              { id: 'all', label: '🌟 完整全覽精讀', tag: null },
+              { id: 'highlights', label: '💡 三大段考知識亮點', tag: '精華' },
+              { id: 'formulas', label: '⚡ 名師公式口訣', tag: '速解' },
+              { id: 'pitfalls', label: '⚠️ 歷屆避雷陷阱', tag: '防錯' },
+              { id: 'walkthroughs', label: '📝 各校真題步驟', tag: '實戰' },
+              { id: 'checklist', label: '📋 考前自測檢核', tag: '自評' }
+            ].map(f => (
+              <button
+                key={f.id}
+                className={`focus-pill-btn ${focusSection === f.id ? 'active' : ''}`}
+                onClick={() => {
+                  setFocusSection(f.id);
+                  playSound('click');
+                }}
+              >
+                <span>{f.label}</span>
+                {f.tag && <span className="focus-pill-tag">{f.tag}</span>}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* 當前段考範圍高亮總覽卡 */}
@@ -604,140 +677,203 @@ const ExamReviewNotesPage = () => {
           ) : (
             filteredNotes.map(note => {
               const unitDiagram = getUnitDiagram(note.unitId);
+              const unitMastery = getUnitMasteryInfo(note, checkedItems);
 
               return (
                 <section key={note.unitId} id={`note-${note.unitId}`} className="unit-note-card">
                   {/* 單元標頭 */}
                   <div className="unit-note-header">
-                    <div className="unit-badges-row">
-                      <span 
-                        className="badge font-bold" 
-                        style={{ 
-                          backgroundColor: `${currentSubjectMeta.color}15`, 
-                          color: currentSubjectMeta.color,
-                          borderColor: `${currentSubjectMeta.color}30` 
-                        }}
-                      >
-                        {currentSubjectMeta.name}
-                      </span>
-                      <span className="badge badge-accent font-bold">
-                        {note.examScopeLabel || note.term}
-                      </span>
-                      {note.examWeight && (
-                        <span className="badge badge-success font-bold text-xs">
-                          {note.examWeight}
+                    <div className="unit-header-top">
+                      <div className="unit-badges-row">
+                        <span 
+                          className="badge font-bold" 
+                          style={{ 
+                            backgroundColor: `${currentSubjectMeta.color}15`, 
+                            color: currentSubjectMeta.color,
+                            borderColor: `${currentSubjectMeta.color}30` 
+                          }}
+                        >
+                          {currentSubjectMeta.name}
                         </span>
-                      )}
-                      <span className="badge badge-secondary text-xs">
-                        {note.textbookCoverage}
-                      </span>
+                        <span className="badge badge-accent font-bold">
+                          {note.examScopeLabel || note.term}
+                        </span>
+                        {note.examWeight && (
+                          <span className="badge badge-success font-bold text-xs">
+                            {note.examWeight}
+                          </span>
+                        )}
+                        <span className="badge badge-secondary text-xs">
+                          {note.textbookCoverage}
+                        </span>
+                      </div>
+
+                      {/* 單元掌握度評級徽章 */}
+                      <div 
+                        className={`unit-mastery-stamp level-${unitMastery.level}`} 
+                        title={`單元自測進度 ${unitMastery.checked}/${unitMastery.total} (${unitMastery.percent}%)`}
+                      >
+                        <span className="stamp-icon">{unitMastery.icon}</span>
+                        <span className="stamp-label">{unitMastery.label}</span>
+                        <span className="stamp-progress">{unitMastery.percent}%</span>
+                      </div>
                     </div>
 
                     <h2 className="unit-note-title">
                       {note.title}
                     </h2>
+
+                    {/* 單元教學導向標籤：溫故知新與核心能力指標 */}
+                    {(note.priorConcept || note.masterySkill) && (
+                      <div className="unit-pedagogy-row">
+                        {note.priorConcept && (
+                          <span className="pedagogy-pill prior" title="先備觀念橋樑（溫故知新）">
+                            <Target size={13} />
+                            <span><strong>溫故知新：</strong>{note.priorConcept}</span>
+                          </span>
+                        )}
+                        {note.masterySkill && (
+                          <span className="pedagogy-pill skill" title="本單元核心能力指標">
+                            <Award size={13} />
+                            <span><strong>能力指標：</strong>{note.masterySkill}</span>
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
 
-                  {/* 核心雙欄緊湊排版 (左欄觀念與大招，右欄考點向量圖解與防雷陷阱) */}
-                  <div className="unit-dual-grid">
-                    {/* 左欄：課綱觀念突破 ＋ 名師必背公式 */}
-                    <div className="unit-grid-left">
-                      {/* 1. 📖 課綱核心觀念突破 */}
-                      <div className="note-section-block">
-                        <h3 className="note-section-title">
-                          <BookOpen size={17} style={{ color: 'var(--accent-primary)' }} />
-                          <span>📖 課綱核心觀念突破</span>
-                        </h3>
-                        <div className="core-concepts-list">
-                          {note.coreConcepts.map((concept, idx) => (
-                            <div 
-                              key={idx} 
-                              className="core-concept-item"
-                              dangerouslySetInnerHTML={{ __html: renderMathText(concept) }}
-                            />
-                          ))}
+                  {/* 💡 三大段考核心知識亮點 (High-Yield Highlights) */}
+                  {(focusSection === 'all' || focusSection === 'highlights') && note.highlights && note.highlights.length > 0 && (
+                    <div className="unit-highlights-banner">
+                      <div className="highlights-banner-header">
+                        <div className="highlights-badge">
+                          <Sparkles size={13} />
+                          <span>三大段考知識亮點</span>
                         </div>
+                        <span className="highlights-banner-subtitle">名師嚴選・高頻必考精華</span>
                       </div>
+                      <div className="highlights-grid">
+                        {note.highlights.map((h, hIdx) => (
+                          <div key={hIdx} className="highlight-grid-card">
+                            <div className="highlight-card-header">
+                              <span className="highlight-num">亮點 0{hIdx + 1}</span>
+                              <h4 className="highlight-card-title">{h.point}</h4>
+                            </div>
+                            <p className="highlight-card-desc">{h.detail}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
-                      {/* 2. ⚡ 名師公式・解題大招・速記口訣 */}
-                      {note.keyFormulas && note.keyFormulas.length > 0 && (
-                        <div className="note-section-block">
-                          <h3 className="note-section-title">
-                            <Zap size={17} style={{ color: '#d97706' }} />
-                            <span>⚡ 名師必背公式・速解大招與口訣</span>
-                          </h3>
-                          <div className="formulas-grid">
-                            {note.keyFormulas.map((f, idx) => (
-                              <div key={idx} className="formula-card">
-                                <div className="formula-name">
-                                  <Sparkles size={13} />
-                                  <span>{f.name}</span>
+                  {/* 核心雙欄緊湊排版 (左欄觀念與大招，右欄考點向量圖解與防雷陷阱) */}
+                  {(focusSection === 'all' || (focusSection === 'highlights' && unitDiagram) || (focusSection === 'formulas' && note.keyFormulas?.length > 0) || (focusSection === 'pitfalls' && note.examPitfalls?.length > 0)) && (
+                    <div className={`unit-dual-grid ${focusSection !== 'all' ? 'focus-single-col' : ''}`}>
+                      {/* 左欄：課綱觀念突破 ＋ 名師必背公式 */}
+                      {(focusSection === 'all' || focusSection === 'formulas') && (
+                        <div className="unit-grid-left">
+                          {/* 1. 📖 課綱核心觀念突破 */}
+                          {focusSection === 'all' && (
+                            <div className="note-section-block">
+                              <h3 className="note-section-title">
+                                <BookOpen size={17} style={{ color: 'var(--accent-primary)' }} />
+                                <span>📖 課綱核心觀念突破</span>
+                              </h3>
+                              <div className="core-concepts-list">
+                                {note.coreConcepts.map((concept, idx) => (
+                                  <div 
+                                    key={idx} 
+                                    className="core-concept-item"
+                                    dangerouslySetInnerHTML={{ __html: renderMathText(concept) }}
+                                  />
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* 2. ⚡ 名師公式・解題大招・速記口訣 */}
+                          {note.keyFormulas && note.keyFormulas.length > 0 && (
+                            <div className="note-section-block">
+                              <h3 className="note-section-title">
+                                <Zap size={17} style={{ color: '#d97706' }} />
+                                <span>⚡ 名師必背公式・速解大招與口訣</span>
+                              </h3>
+                              <div className="formulas-grid">
+                                {note.keyFormulas.map((f, idx) => (
+                                  <div key={idx} className="formula-card">
+                                    <div className="formula-name">
+                                      <Sparkles size={13} />
+                                      <span>{f.name}</span>
+                                    </div>
+                                    <div 
+                                      className="formula-body"
+                                      dangerouslySetInnerHTML={{ __html: renderDisplayFormula(f.formula) }}
+                                    />
+                                    {f.detail && (
+                                      <div className="formula-detail">
+                                        💡 <strong>解題應用：</strong>{f.detail}
+                                      </div>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* 右欄：考點向量視覺圖解 ＋ 歷屆高頻避雷指南 */}
+                      {(focusSection === 'all' || focusSection === 'highlights' || focusSection === 'pitfalls') && (
+                        <div className="unit-grid-right">
+                          {/* 考點向量視覺圖解展示卡 */}
+                          {(focusSection === 'all' || focusSection === 'highlights') && unitDiagram && (
+                            <div className="note-section-block unit-diagram-block">
+                              <div className="unit-diagram-card">
+                                <div className="unit-diagram-header">
+                                  <div className="unit-diagram-badge">
+                                    <Sparkles size={12} />
+                                    <span>考點視覺圖解・直擊核心</span>
+                                  </div>
+                                  <h4 className="unit-diagram-title">{unitDiagram.title}</h4>
                                 </div>
                                 <div 
-                                  className="formula-body"
-                                  dangerouslySetInnerHTML={{ __html: renderDisplayFormula(f.formula) }}
+                                  className="unit-diagram-svg-container"
+                                  dangerouslySetInnerHTML={{ __html: unitDiagram.svg }}
                                 />
-                                {f.detail && (
-                                  <div className="formula-detail">
-                                    💡 <strong>解題應用：</strong>{f.detail}
+                                {unitDiagram.subtitle && (
+                                  <div className="unit-diagram-subtitle">
+                                    💡 {unitDiagram.subtitle}
                                   </div>
                                 )}
                               </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* 右欄：考點向量視覺圖解 ＋ 歷屆高頻避雷指南 */}
-                    <div className="unit-grid-right">
-                      {/* 考點向量視覺圖解展示卡 */}
-                      {unitDiagram && (
-                        <div className="note-section-block unit-diagram-block">
-                          <div className="unit-diagram-card">
-                            <div className="unit-diagram-header">
-                              <div className="unit-diagram-badge">
-                                <Sparkles size={12} />
-                                <span>考點視覺圖解・直擊核心</span>
-                              </div>
-                              <h4 className="unit-diagram-title">{unitDiagram.title}</h4>
                             </div>
-                            <div 
-                              className="unit-diagram-svg-container"
-                              dangerouslySetInnerHTML={{ __html: unitDiagram.svg }}
-                            />
-                            {unitDiagram.subtitle && (
-                              <div className="unit-diagram-subtitle">
-                                💡 {unitDiagram.subtitle}
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      )}
+                          )}
 
-                      {/* 3. ⚠️ 歷屆名校高頻常考易錯陷阱（防雷指引） */}
-                      {note.examPitfalls && note.examPitfalls.length > 0 && (
-                        <div className="note-section-block">
-                          <h3 className="note-section-title" style={{ color: 'var(--accent-error)' }}>
-                            <AlertTriangle size={17} />
-                            <span>⚠️ 歷屆名校高頻常考易錯陷阱（避雷指南）</span>
-                          </h3>
-                          <div className="pitfalls-box">
-                            {note.examPitfalls.map((pitfall, idx) => (
-                              <div 
-                                key={idx} 
-                                className="pitfall-item"
-                                dangerouslySetInnerHTML={{ __html: renderMathText(pitfall) }}
-                              />
-                            ))}
-                          </div>
+                          {/* 3. ⚠️ 歷屆名校高頻常考易錯陷阱（防雷指引） */}
+                          {(focusSection === 'all' || focusSection === 'pitfalls') && note.examPitfalls && note.examPitfalls.length > 0 && (
+                            <div className="note-section-block">
+                              <h3 className="note-section-title" style={{ color: 'var(--accent-error)' }}>
+                                <AlertTriangle size={17} />
+                                <span>⚠️ 歷屆名校高頻常考易錯陷阱（避雷指南）</span>
+                              </h3>
+                              <div className="pitfalls-box">
+                                {note.examPitfalls.map((pitfall, idx) => (
+                                  <div 
+                                    key={idx} 
+                                    className="pitfall-item"
+                                    dangerouslySetInnerHTML={{ __html: renderMathText(pitfall) }}
+                                  />
+                                ))}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>
-                  </div>
+                  )}
 
                   {/* 4. 📝 各校歷年段考/畢業考經典真題實戰 */}
-                  {note.pastExamWalkthroughs && note.pastExamWalkthroughs.length > 0 && (
+                  {(focusSection === 'all' || focusSection === 'walkthroughs') && note.pastExamWalkthroughs && note.pastExamWalkthroughs.length > 0 && (
                     <div className="note-section-block unit-full-section">
                       <h3 className="note-section-title">
                         <HelpCircle size={18} style={{ color: 'var(--accent-success)' }} />
@@ -808,7 +944,7 @@ const ExamReviewNotesPage = () => {
                   )}
 
                   {/* 5. 📋 考前自測檢核清單 (多欄膠囊排列，緊湊省空間) */}
-                  {note.selfChecklist && note.selfChecklist.length > 0 && (
+                  {(focusSection === 'all' || focusSection === 'checklist') && note.selfChecklist && note.selfChecklist.length > 0 && (
                     <div className="note-section-block unit-full-section">
                       <h3 className="note-section-title">
                         <CheckCircle2 size={18} style={{ color: 'var(--accent-primary)' }} />
@@ -836,6 +972,18 @@ const ExamReviewNotesPage = () => {
                           );
                         })}
                       </div>
+                    </div>
+                  )}
+
+                  {/* 焦點模式空狀態提示 (若該單元無此類別內容) */}
+                  {focusSection !== 'all' && 
+                   ((focusSection === 'highlights' && (!note.highlights || note.highlights.length === 0) && !unitDiagram) ||
+                    (focusSection === 'formulas' && (!note.keyFormulas || note.keyFormulas.length === 0)) ||
+                    (focusSection === 'pitfalls' && (!note.examPitfalls || note.examPitfalls.length === 0)) ||
+                    (focusSection === 'walkthroughs' && (!note.pastExamWalkthroughs || note.pastExamWalkthroughs.length === 0)) ||
+                    (focusSection === 'checklist' && (!note.selfChecklist || note.selfChecklist.length === 0))) && (
+                    <div className="unit-focus-empty-hint">
+                      <span>💡 本單元在此焦點類別無額外設定，建議切換至「完整全覽精讀」進行全面複習。</span>
                     </div>
                   )}
                 </section>
