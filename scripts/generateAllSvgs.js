@@ -646,7 +646,7 @@ const diagrams = [
       <text x="15" y="55" font-size="12" font-weight="700" fill="#f8fafc">SDG 1 終結貧窮</text>
       <text x="15" y="75" font-size="12" font-weight="700" fill="#f8fafc">SDG 2 消除飢餓</text>
       <text x="15" y="95" font-size="12" font-weight="700" fill="#f8fafc">SDG 3 良好健康與福祉</text>
-      <text x="15" y="115" font-size="12" font-weight="700" fill="#f8fafc">SDG 4 優質教育 (均一核心)</text>
+      <text x="15" y="115" font-size="12" font-weight="700" fill="#f8fafc">SDG 4 優質教育 (Sixth 核心)</text>
       <text x="15" y="135" font-size="12" font-weight="700" fill="#f8fafc">SDG 5 性別平權</text>
 
       <rect x="260" y="0" width="240" height="155" rx="10" fill="#1e293b" stroke="#10b981"/>

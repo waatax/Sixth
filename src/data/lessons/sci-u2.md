@@ -109,8 +109,8 @@
 
 | 分類 | 定義與微觀機制 | 燈泡反應 | 代表性水溶液物質 |
 | :--- | :--- | :--- | :--- |
-| $\textcolor{#4caf50}{\textbf{電解質 (Electrolyte)}}$ | 溶於水後會解離出帶正電與負電的$\textcolor{#e91e63}{\textbf{自由移動離子}}$，可在電場引導下傳遞電荷 | $\textcolor{#4caf50}{\textbf{✅ 燈泡發亮}}$ | $\textcolor{#2196f3}{\textbf{食鹽水}}$ ($\text{Na}^+ + \text{Cl}^-$)、$\textcolor{#e91e63}{\textbf{稀鹽酸}}$ ($\text{H}^+ + \text{Cl}^-$)、$\textcolor{#9c27b0}{\textbf{醋酸}}$、$\textcolor{#ff9800}{\textbf{小蘇打水}}$、$\textcolor{#00bcd4}{\textbf{氫氧化鈉溶液}}$ |
-| $\textcolor{#e91e63}{\textbf{非電解質 (Non-electrolyte)}}$ | 溶於水後仍以$\textcolor{#2196f3}{\textbf{電中性完整分子}}$狀態存在，無法產生自由游動離子 | $\textcolor{#e91e63}{\textbf{❌ 燈泡不亮}}$ | $\textcolor{#2196f3}{\textbf{蔗糖水}}$、$\textcolor{#e91e63}{\textbf{純酒精溶液}}$ (乙醇)、$\textcolor{#9c27b0}{\textbf{葡萄糖水}}$、$\textcolor{#00bcd4}{\textbf{純水 (蒸餾水)}}$ |
+| $\textcolor{#4caf50}{\textbf{電解質 (Electrolyte)}}$ | 溶於水後會解離出帶正電與負電的$\textcolor{#e91e63}{\textbf{自由移動離子}}$，可在電場引導下傳遞電荷 | **✅ 燈泡發亮** | $\textcolor{#2196f3}{\textbf{食鹽水}}$ ($\text{Na}^+ + \text{Cl}^-$)、$\textcolor{#e91e63}{\textbf{稀鹽酸}}$ ($\text{H}^+ + \text{Cl}^-$)、$\textcolor{#9c27b0}{\textbf{醋酸}}$、$\textcolor{#ff9800}{\textbf{小蘇打水}}$、$\textcolor{#00bcd4}{\textbf{氫氧化鈉溶液}}$ |
+| $\textcolor{#e91e63}{\textbf{非電解質 (Non-electrolyte)}}$ | 溶於水後仍以$\textcolor{#2196f3}{\textbf{電中性完整分子}}$狀態存在，無法產生自由游動離子 | **❌ 燈泡不亮** | $\textcolor{#2196f3}{\textbf{蔗糖水}}$、$\textcolor{#e91e63}{\textbf{純酒精溶液}}$ (乙醇)、$\textcolor{#9c27b0}{\textbf{葡萄糖水}}$、$\textcolor{#00bcd4}{\textbf{純水 (蒸餾水)}}$ |
 
 > ⚡ **居家安全科學叮嚀**：
 > 純水（蒸餾水）幾乎不導電，但我們洗澡用的自來水、流出的汗水以及雨水中，都溶解了大量的礦物質與鹽類（電解質）。因此，**濕手絕對不可觸碰開關插座，在浴室與積水處使用電器極易發生致命觸電！**
@@ -136,11 +136,11 @@
 
 | 指示劑 / 檢驗工具 | 酸性溶液 (Acidic) | 中性溶液 (Neutral) | 鹼性溶液 (Basic/Alkaline) | 核心記憶口訣與技巧 |
 | :--- | :--- | :--- | :--- | :--- |
-| $\textcolor{#2196f3}{\textbf{藍色石蕊試紙}}$ | $\textcolor{#e91e63}{\textbf{變紅色 🔴}}$ | 保持藍色 (不變色) | 保持藍色 (不變色) | **「酸變紅」**（藍試紙遇酸變紅） |
-| $\textcolor{#e91e63}{\textbf{紅色石蕊試紙}}$ | 保持紅色 (不變色) | 保持紅色 (不變色) | $\textcolor{#2196f3}{\textbf{變藍色 🔵}}$ | **「鹼變藍」**（紅試紙遇鹼變藍） |
+| $\textcolor{#2196f3}{\textbf{藍色石蕊試紙}}$ | **變紅色 🔴** | 保持藍色 (不變色) | 保持藍色 (不變色) | **「酸變紅」**（藍試紙遇酸變紅） |
+| $\textcolor{#e91e63}{\textbf{紅色石蕊試紙}}$ | 保持紅色 (不變色) | 保持紅色 (不變色) | **變藍色 🔵** | **「鹼變藍」**（紅試紙遇鹼變藍） |
 | $\textcolor{#9c27b0}{\textbf{廣用試紙 / 溶液}}$ | 紅色、橙色、黃色 $\textcolor{#e91e63}{\blacksquare}\textcolor{#ff9800}{\blacksquare}\textcolor{#ffeb3b}{\blacksquare}$ | 綠色 $\textcolor{#4caf50}{\blacksquare}$ | 藍色、靛色、紫色 $\textcolor{#2196f3}{\blacksquare}\textcolor{#3f51b5}{\blacksquare}\textcolor{#9c27b0}{\blacksquare}$ | 像彩虹光譜：紅橙黃為酸，綠為中，藍靛紫為鹼 |
 | $\textcolor{#9c27b0}{\textbf{紫色高麗菜汁}}$ | 紅色、粉紅色 $\textcolor{#e91e63}{\blacksquare}$ | 紫色（原色） $\textcolor{#9c27b0}{\blacksquare}$ | 綠色、黃色 $\textcolor{#4caf50}{\blacksquare}\textcolor{#ffeb3b}{\blacksquare}$ | 天然花青素隨酸鹼值改變分子結構而變色 |
-| $\textcolor{#00bcd4}{\textbf{酚酞指示劑}}$ | 無色透明 | 無色透明 | $\textcolor{#e91e63}{\textbf{鮮豔粉紅色 🌸}}$ | 專門用來檢驗鹼性溶液 |
+| $\textcolor{#00bcd4}{\textbf{酚酞指示劑}}$ | 無色透明 | 無色透明 | **鮮豔粉紅色 🌸** | 專門用來檢驗鹼性溶液 |
 
 ### 📏 pH 值酸鹼度量表
 

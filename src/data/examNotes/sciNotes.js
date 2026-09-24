@@ -512,7 +512,7 @@ export const sciNotes = {
     keyFormulas: [
       {
         name: '食物鏈箭號標準指向法則',
-        formula: '被吃者 \\longrightarrow 掠食者（能量由箭尾流向箭頭）',
+        formula: '被吃者 ➔ 掠食者（能量由箭尾流向箭頭）',
         detail: '能量在食物鏈傳遞中逐階遞減（約只有 10% 傳到下一營養階層），因此頂級掠食者數量最稀少。'
       }
     ],

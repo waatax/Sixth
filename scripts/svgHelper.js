@@ -7,8 +7,19 @@ if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir, { recursive: true });
 }
 
+function escapeXml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&(?!amp;|lt;|gt;|quot;|apos;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 // Helper to generate styled SVG card
 function createSvg(title, subtitle, badge, content) {
+  const safeTitle = escapeXml(title);
+  const safeSubtitle = escapeXml(subtitle);
+  const safeBadge = escapeXml(badge);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -51,12 +62,12 @@ function createSvg(title, subtitle, badge, content) {
   <!-- Top Header Bar -->
   <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
   <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
-  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">${title}</text>
-  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">${subtitle}</text>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">${safeTitle}</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">${safeSubtitle}</text>
 
   <!-- Badge on top right -->
   <rect x="630" y="29" width="136" height="30" rx="8" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1"/>
-  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">${badge}</text>
+  <text x="698" y="49" font-size="12" font-weight="700" fill="#60a5fa" text-anchor="middle">${safeBadge}</text>
 
   <!-- Main Visual Body Content -->
   <g transform="translate(20, 86)">

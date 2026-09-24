@@ -7,7 +7,7 @@
     "unitCount": 3,
     "pdfFileName": "math_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/math_6A_midterm.pdf",
-    "sizeBytes": 1201832
+    "sizeBytes": 1180444
   },
   {
     "subjectId": "math",
@@ -17,7 +17,7 @@
     "unitCount": 3,
     "pdfFileName": "math_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/math_6A_final.pdf",
-    "sizeBytes": 1127044
+    "sizeBytes": 1130334
   },
   {
     "subjectId": "math",
@@ -27,7 +27,7 @@
     "unitCount": 6,
     "pdfFileName": "math_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/math_6A_all.pdf",
-    "sizeBytes": 1390798
+    "sizeBytes": 1375245
   },
   {
     "subjectId": "math",
@@ -37,7 +37,7 @@
     "unitCount": 3,
     "pdfFileName": "math_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/math_6B_midterm.pdf",
-    "sizeBytes": 1211255
+    "sizeBytes": 1214417
   },
   {
     "subjectId": "math",
@@ -47,7 +47,7 @@
     "unitCount": 3,
     "pdfFileName": "math_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/math_6B_final.pdf",
-    "sizeBytes": 1209567
+    "sizeBytes": 1212608
   },
   {
     "subjectId": "math",
@@ -57,7 +57,7 @@
     "unitCount": 6,
     "pdfFileName": "math_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/math_6B_all.pdf",
-    "sizeBytes": 1430466
+    "sizeBytes": 1436539
   },
   {
     "subjectId": "science",
@@ -67,7 +67,7 @@
     "unitCount": 3,
     "pdfFileName": "science_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/science_6A_midterm.pdf",
-    "sizeBytes": 1439075
+    "sizeBytes": 1302280
   },
   {
     "subjectId": "science",
@@ -77,7 +77,7 @@
     "unitCount": 2,
     "pdfFileName": "science_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/science_6A_final.pdf",
-    "sizeBytes": 1256712
+    "sizeBytes": 1186284
   },
   {
     "subjectId": "science",
@@ -87,7 +87,7 @@
     "unitCount": 5,
     "pdfFileName": "science_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/science_6A_all.pdf",
-    "sizeBytes": 1679104
+    "sizeBytes": 1514324
   },
   {
     "subjectId": "science",
@@ -97,7 +97,7 @@
     "unitCount": 3,
     "pdfFileName": "science_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/science_6B_midterm.pdf",
-    "sizeBytes": 1463218
+    "sizeBytes": 1397081
   },
   {
     "subjectId": "science",
@@ -107,7 +107,7 @@
     "unitCount": 2,
     "pdfFileName": "science_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/science_6B_final.pdf",
-    "sizeBytes": 1286554
+    "sizeBytes": 1227232
   },
   {
     "subjectId": "science",
@@ -117,7 +117,7 @@
     "unitCount": 5,
     "pdfFileName": "science_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/science_6B_all.pdf",
-    "sizeBytes": 1712743
+    "sizeBytes": 1602790
   },
   {
     "subjectId": "mandarin",
@@ -127,7 +127,7 @@
     "unitCount": 2,
     "pdfFileName": "mandarin_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/mandarin_6A_midterm.pdf",
-    "sizeBytes": 1235680
+    "sizeBytes": 1155269
   },
   {
     "subjectId": "mandarin",
@@ -137,7 +137,7 @@
     "unitCount": 2,
     "pdfFileName": "mandarin_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/mandarin_6A_final.pdf",
-    "sizeBytes": 1278372
+    "sizeBytes": 1183816
   },
   {
     "subjectId": "mandarin",
@@ -147,7 +147,7 @@
     "unitCount": 4,
     "pdfFileName": "mandarin_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/mandarin_6A_all.pdf",
-    "sizeBytes": 1554158
+    "sizeBytes": 1396330
   },
   {
     "subjectId": "mandarin",
@@ -157,7 +157,7 @@
     "unitCount": 2,
     "pdfFileName": "mandarin_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/mandarin_6B_midterm.pdf",
-    "sizeBytes": 1253599
+    "sizeBytes": 1180015
   },
   {
     "subjectId": "mandarin",
@@ -167,7 +167,7 @@
     "unitCount": 2,
     "pdfFileName": "mandarin_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/mandarin_6B_final.pdf",
-    "sizeBytes": 1220855
+    "sizeBytes": 1142119
   },
   {
     "subjectId": "mandarin",
@@ -177,7 +177,7 @@
     "unitCount": 4,
     "pdfFileName": "mandarin_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/mandarin_6B_all.pdf",
-    "sizeBytes": 1515773
+    "sizeBytes": 1381950
   },
   {
     "subjectId": "social",
@@ -187,7 +187,7 @@
     "unitCount": 2,
     "pdfFileName": "social_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/social_6A_midterm.pdf",
-    "sizeBytes": 1284764
+    "sizeBytes": 1204466
   },
   {
     "subjectId": "social",
@@ -197,7 +197,7 @@
     "unitCount": 2,
     "pdfFileName": "social_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/social_6A_final.pdf",
-    "sizeBytes": 1188335
+    "sizeBytes": 1091141
   },
   {
     "subjectId": "social",
@@ -207,7 +207,7 @@
     "unitCount": 4,
     "pdfFileName": "social_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/social_6A_all.pdf",
-    "sizeBytes": 1535728
+    "sizeBytes": 1390368
   },
   {
     "subjectId": "social",
@@ -217,7 +217,7 @@
     "unitCount": 2,
     "pdfFileName": "social_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/social_6B_midterm.pdf",
-    "sizeBytes": 1257545
+    "sizeBytes": 1186852
   },
   {
     "subjectId": "social",
@@ -227,7 +227,7 @@
     "unitCount": 2,
     "pdfFileName": "social_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/social_6B_final.pdf",
-    "sizeBytes": 1290475
+    "sizeBytes": 1225658
   },
   {
     "subjectId": "social",
@@ -237,7 +237,7 @@
     "unitCount": 4,
     "pdfFileName": "social_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/social_6B_all.pdf",
-    "sizeBytes": 1569874
+    "sizeBytes": 1439674
   },
   {
     "subjectId": "english",
@@ -247,7 +247,7 @@
     "unitCount": 2,
     "pdfFileName": "english_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/english_6A_midterm.pdf",
-    "sizeBytes": 1015303
+    "sizeBytes": 974758
   },
   {
     "subjectId": "english",
@@ -257,7 +257,7 @@
     "unitCount": 2,
     "pdfFileName": "english_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/english_6A_final.pdf",
-    "sizeBytes": 946929
+    "sizeBytes": 930954
   },
   {
     "subjectId": "english",
@@ -267,7 +267,7 @@
     "unitCount": 4,
     "pdfFileName": "english_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/english_6A_all.pdf",
-    "sizeBytes": 1087844
+    "sizeBytes": 1049966
   },
   {
     "subjectId": "english",
@@ -277,7 +277,7 @@
     "unitCount": 2,
     "pdfFileName": "english_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/english_6B_midterm.pdf",
-    "sizeBytes": 1013061
+    "sizeBytes": 1001855
   },
   {
     "subjectId": "english",
@@ -287,7 +287,7 @@
     "unitCount": 2,
     "pdfFileName": "english_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/english_6B_final.pdf",
-    "sizeBytes": 1031057
+    "sizeBytes": 1010612
   },
   {
     "subjectId": "english",
@@ -297,7 +297,7 @@
     "unitCount": 4,
     "pdfFileName": "english_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/english_6B_all.pdf",
-    "sizeBytes": 1118254
+    "sizeBytes": 1098927
   },
   {
     "subjectId": "arts",
@@ -307,7 +307,7 @@
     "unitCount": 2,
     "pdfFileName": "arts_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/arts_6A_midterm.pdf",
-    "sizeBytes": 1252594
+    "sizeBytes": 1179779
   },
   {
     "subjectId": "arts",
@@ -317,7 +317,7 @@
     "unitCount": 1,
     "pdfFileName": "arts_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/arts_6A_final.pdf",
-    "sizeBytes": 1048938
+    "sizeBytes": 981573
   },
   {
     "subjectId": "arts",
@@ -327,7 +327,7 @@
     "unitCount": 3,
     "pdfFileName": "arts_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/arts_6A_all.pdf",
-    "sizeBytes": 1402692
+    "sizeBytes": 1277949
   },
   {
     "subjectId": "arts",
@@ -337,7 +337,7 @@
     "unitCount": 2,
     "pdfFileName": "arts_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/arts_6B_midterm.pdf",
-    "sizeBytes": 1204161
+    "sizeBytes": 1119797
   },
   {
     "subjectId": "arts",
@@ -347,7 +347,7 @@
     "unitCount": 1,
     "pdfFileName": "arts_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/arts_6B_final.pdf",
-    "sizeBytes": 1056120
+    "sizeBytes": 1020903
   },
   {
     "subjectId": "arts",
@@ -357,7 +357,7 @@
     "unitCount": 3,
     "pdfFileName": "arts_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/arts_6B_all.pdf",
-    "sizeBytes": 1355319
+    "sizeBytes": 1239501
   },
   {
     "subjectId": "health_pe",
@@ -367,7 +367,7 @@
     "unitCount": 2,
     "pdfFileName": "health_pe_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/health_pe_6A_midterm.pdf",
-    "sizeBytes": 1410546
+    "sizeBytes": 1332308
   },
   {
     "subjectId": "health_pe",
@@ -377,7 +377,7 @@
     "unitCount": 1,
     "pdfFileName": "health_pe_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/health_pe_6A_final.pdf",
-    "sizeBytes": 1022480
+    "sizeBytes": 960602
   },
   {
     "subjectId": "health_pe",
@@ -387,7 +387,7 @@
     "unitCount": 3,
     "pdfFileName": "health_pe_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/health_pe_6A_all.pdf",
-    "sizeBytes": 1547083
+    "sizeBytes": 1422647
   },
   {
     "subjectId": "health_pe",
@@ -397,7 +397,7 @@
     "unitCount": 2,
     "pdfFileName": "health_pe_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/health_pe_6B_midterm.pdf",
-    "sizeBytes": 1288239
+    "sizeBytes": 1199319
   },
   {
     "subjectId": "health_pe",
@@ -407,7 +407,7 @@
     "unitCount": 1,
     "pdfFileName": "health_pe_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/health_pe_6B_final.pdf",
-    "sizeBytes": 1110086
+    "sizeBytes": 1053482
   },
   {
     "subjectId": "health_pe",
@@ -417,7 +417,7 @@
     "unitCount": 3,
     "pdfFileName": "health_pe_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/health_pe_6B_all.pdf",
-    "sizeBytes": 1450353
+    "sizeBytes": 1323615
   },
   {
     "subjectId": "integrative",
@@ -427,7 +427,7 @@
     "unitCount": 2,
     "pdfFileName": "integrative_6A_midterm.pdf",
     "pdfUrl": "/downloads/pdf/integrative_6A_midterm.pdf",
-    "sizeBytes": 1323116
+    "sizeBytes": 1226339
   },
   {
     "subjectId": "integrative",
@@ -437,7 +437,7 @@
     "unitCount": 1,
     "pdfFileName": "integrative_6A_final.pdf",
     "pdfUrl": "/downloads/pdf/integrative_6A_final.pdf",
-    "sizeBytes": 1075508
+    "sizeBytes": 1027795
   },
   {
     "subjectId": "integrative",
@@ -447,7 +447,7 @@
     "unitCount": 3,
     "pdfFileName": "integrative_6A_all.pdf",
     "pdfUrl": "/downloads/pdf/integrative_6A_all.pdf",
-    "sizeBytes": 1464551
+    "sizeBytes": 1336224
   },
   {
     "subjectId": "integrative",
@@ -457,7 +457,7 @@
     "unitCount": 2,
     "pdfFileName": "integrative_6B_midterm.pdf",
     "pdfUrl": "/downloads/pdf/integrative_6B_midterm.pdf",
-    "sizeBytes": 1276597
+    "sizeBytes": 1189458
   },
   {
     "subjectId": "integrative",
@@ -467,7 +467,7 @@
     "unitCount": 1,
     "pdfFileName": "integrative_6B_final.pdf",
     "pdfUrl": "/downloads/pdf/integrative_6B_final.pdf",
-    "sizeBytes": 1120744
+    "sizeBytes": 1040696
   },
   {
     "subjectId": "integrative",
@@ -477,6 +477,6 @@
     "unitCount": 3,
     "pdfFileName": "integrative_6B_all.pdf",
     "pdfUrl": "/downloads/pdf/integrative_6B_all.pdf",
-    "sizeBytes": 1425999
+    "sizeBytes": 1291016
   }
 ]

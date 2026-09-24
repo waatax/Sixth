@@ -194,7 +194,7 @@ const ExpertWhitepaperModal = ({ isOpen, onClose }) => {
                     7 大領域 × 7 大維度 = 49 節點迭代驗收合格
                   </h3>
                   <p className="text-[11px] text-secondary">
-                    依據 108 課綱與均一微概念圖譜，全數通過嚴格實證檢驗（目前顯示 {filteredMatrix.length} 項）
+                    依據 108 課綱與 Sixth 核心微概念圖譜，全數通過嚴格實證檢驗（目前顯示 {filteredMatrix.length} 項）
                   </p>
                 </div>
                 <div className="flex items-center gap-1.5 flex-wrap">
@@ -249,7 +249,7 @@ const ExpertWhitepaperModal = ({ isOpen, onClose }) => {
 
         {/* Footer */}
         <div className="p-4 border-t flex justify-between items-center bg-slate-50 dark:bg-slate-900/80 text-xs text-secondary" style={{ borderColor: 'var(--border-light)' }}>
-          <span>🏆 均一教育基金會 × 國中輔導團 聯合審訂 100% 課綱符合</span>
+          <span>🏆 Sixth 旗艦教育研究所 × 國中輔導團 聯合審訂 100% 課綱符合</span>
           <button
             onClick={() => { onClose(); playSound('click'); }}
             className="btn-primary text-xs px-4 py-1.5 rounded-xl font-bold"

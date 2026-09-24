@@ -198,9 +198,9 @@ $\textcolor{#ff9800}{\textbf{熱輻射 (Thermal Radiation)}}$ 是熱能以$\text
 
 | 傳播方式 | 需要物質介質？ | 主要發生狀態 | 物理機制與特徵 | 🏠 生活與自然經典實例 |
 | :--- | :--- | :--- | :--- | :--- |
-| $\textcolor{#e91e63}{\textbf{熱傳導}}$ | $\textcolor{#4caf50}{\textbf{✅ 需要}}$ | $\textcolor{#e91e63}{\textbf{固體}}$（金屬最佳） | 粒子接力振動傳熱（高溫 $\rightarrow$ 低溫） | 金屬鍋身導熱、摸冰塊手覺得冰 |
-| $\textcolor{#2196f3}{\textbf{熱對流}}$ | $\textcolor{#4caf50}{\textbf{✅ 需要}}$ | $\textcolor{#2196f3}{\textbf{液體、氣體}}$ | 熱升冷降，密度差帶動循環流動 | 煮開水、冷氣裝高處、海陸風循環 |
-| $\textcolor{#ff9800}{\textbf{熱輻射}}$ | $\textcolor{#e91e63}{\textbf{❌ 不需要}}$ | $\textcolor{#ff9800}{\textbf{真空、透明介質}}$| 以電磁波直線傳遞，深色易吸/易放熱 | 太陽曬熱大地、電暖爐烘烤、穿淺色防熱 |
+| $\textcolor{#e91e63}{\textbf{熱傳導}}$ | **✅ 需要** | $\textcolor{#e91e63}{\textbf{固體}}$（金屬最佳） | 粒子接力振動傳熱（高溫 $\rightarrow$ 低溫） | 金屬鍋身導熱、摸冰塊手覺得冰 |
+| $\textcolor{#2196f3}{\textbf{熱對流}}$ | **✅ 需要** | $\textcolor{#2196f3}{\textbf{液體、氣體}}$ | 熱升冷降，密度差帶動循環流動 | 煮開水、冷氣裝高處、海陸風循環 |
+| $\textcolor{#ff9800}{\textbf{熱輻射}}$ | **❌ 不需要** | $\textcolor{#ff9800}{\textbf{真空、透明介質}}$| 以電磁波直線傳遞，深色易吸/易放熱 | 太陽曬熱大地、電暖爐烘烤、穿淺色防熱 |
 
 ---
 

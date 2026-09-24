@@ -656,15 +656,15 @@ const QuestionBankPage = () => {
           </a>
 
           <a
-            href="https://www.junyiacademy.org/"
+            href="https://adl.edu.tw/"
             target="_blank"
             rel="noreferrer"
             className="card card-hoverable flex items-center justify-between"
             style={{ padding: '16px', backgroundColor: 'var(--bg-tertiary)' }}
           >
             <div>
-              <div style={{ fontWeight: 700, color: 'var(--text-primary)' }}>均一教育平台</div>
-              <div className="text-xs text-secondary mt-1">小六全科教學影音與技能練習題</div>
+              <div style={{ fontWeight: 700, color: 'var(--text-primary)' }}>教育部因材網數位學習平台</div>
+              <div className="text-xs text-secondary mt-1">108 課綱適性診斷與各學科能力指標評量</div>
             </div>
             <ExternalLink size={18} style={{ color: 'var(--accent-primary)' }} />
           </a>

@@ -581,7 +581,7 @@ const PrepPage = () => {
                 </div>
 
                 <div className="text-[11px] text-blue-600 dark:text-blue-400 font-mono flex items-center gap-1">
-                  🔗 核心素養與知識圖譜錨點：{item.curriculumRef || item.junyiRef}
+                  🔗 核心素養與知識圖譜錨點：{item.curriculumRef || item.conceptRef || '108-CORE'}
                 </div>
 
                 <div className="text-secondary leading-relaxed bg-slate-50 dark:bg-slate-800/40 p-2.5 rounded-xl text-[11px] border border-slate-100 dark:border-slate-800">

@@ -77,7 +77,7 @@ const LessonCheatSheetModal = ({ isOpen, onClose, unit, subjectName, markdownCon
       text += `💡 關鍵口訣與必背規則：\n${extractedInsights.filter(i => i.type === 'rule').map(r => `  • ${r.text}`).join('\n')}\n\n`;
       text += `⚠️ 常考易錯地雷：\n${extractedInsights.filter(i => i.type === 'pitfall').map(p => `  • ${p.text}`).join('\n')}\n\n`;
     }
-    text += `— 來自《最強小六》均一專家團隊全科學習護照`;
+    text += `— 來自《最強小六》Sixth 核心教學團隊全科學習護照`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -343,7 +343,7 @@ const LessonCheatSheetModal = ({ isOpen, onClose, unit, subjectName, markdownCon
             >
               <div className="flex items-center gap-1.5 font-bold text-indigo-700 dark:text-indigo-300">
                 <GraduationCap size={15} />
-                <span>🎓 均一教育顧問：國中會考銜接先修提點</span>
+                <span>🎓 Sixth 核心教育顧問：國中會考銜接先修提點</span>
               </div>
               <p className="text-secondary leading-relaxed">
                 {curated.juniorHighBridge}

@@ -38,7 +38,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="flex justify-between items-center text-xs text-tertiary pt-3 border-t flex-wrap gap-2" style={{ borderTop: '1px solid var(--border-light)' }}>
           <p>© 2026 最強小六 108 課綱學習平台 (v2.0 教科書旗艦版)</p>
-          <p>深度整合 均一教育平台、教育部因材網、Cool English 與 全國開放試題庫</p>
+          <p>深度對齊 108 課綱核心素養、教育部因材網、Cool English 與 全國開放試題庫</p>
         </div>
       </div>
     </footer>

@@ -225,7 +225,7 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 | 學習項目 | 關鍵概念公式 | 經典速記範例 | 避坑提醒 |
 | :--- | :--- | :--- | :--- |
-| **報時系統** | $\text{quarter past} (15分) / \text{half past} (30分) / \text{quarter to} (差15分)$ | $8:15 \rightarrow \text{a quarter past eight}$<br>$8:45 \rightarrow \text{a quarter to nine}$ | quarter to 後面接「下一個小時」 |
+| **報時系統** | **quarter past (15分) / half past (30分) / quarter to (差15分)** | $8:15 \rightarrow \text{a quarter past eight}$<br>$8:45 \rightarrow \text{a quarter to nine}$ | quarter to 後面接「下一個小時」 |
 | **時間介系詞** | $\textcolor{#e91e63}{\textbf{at}}$ (時刻) / $\textcolor{#2196f3}{\textbf{on}}$ (某日) / $\textcolor{#4caf50}{\textbf{in}}$ (月份、年月、早中晚) | $\text{at 7:00, on Friday, in July}$ | 特例：$\text{at night, on Friday morning}$ |
 | **日常動詞句型** | $\text{What time do you... ? / I... at (時間).}$ | $\text{I brush my teeth at 7:10.}$ | 動作片語動詞須用原形 |
 | **頻率副詞** | $\text{always(100\%) } > \text{usually(80\%) } > \text{often(60\%) } > \text{sometimes(30\%) } > \text{seldom(10\%) } > \text{never(0\%)}$ | $\text{He usually walks to school.}$ | 牢記位置：$\textcolor{#ff5722}{\textbf{Be後動前}}$ |

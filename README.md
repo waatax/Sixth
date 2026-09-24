@@ -76,9 +76,9 @@
   1. `🏛️ 中央官方數位學習`：教育部因材網 (ADL)、Cool English 酷英網、教育部教育雲、國教院 CIRN、愛學網 (stv.naer)、國語辭典簡編本、臺灣閩南語辭典、中小學數位素養網。
   2. `🏙️ 縣市精選線上園地`：臺北酷課雲 (CooC)、高雄數位學園/達學堂、臺中市線上教學研發中心、花蓮洄瀾數位學習網。
   3. `📚 課綱三大書商專區`：康軒雲、翰林雲端學院、南一數位學習網、真平語文本土語。
-  4. `🔬 數學思維・自然科普`：均一教育平台、PhET 互動科學模擬、數感實驗室、科教館 Go Science、科博教學資源網、中研院研之有物、NASA Kids' Club。
+  4. `🔬 數學思維・自然科普`：教育部數位學習資源、PhET 互動科學模擬、數感實驗室、科教館 Go Science、科博教學資源網、中研院研之有物、NASA Kids' Club。
   5. `🗣️ 語文素養・雙語閱讀`：SmartReading 智慧閱讀、文化部兒童文化館、國語日報數位、學習吧 LearnMode、British Council LearnEnglish Kids、Storyline Online、國家文化記憶庫。
-  6. `💻 資訊科技・運算思維`：MIT Scratch、Code.org (Hour of Code)、micro:bit 基金會、均一 AI 狐狸貓助教、全國貓咪盃競賽作品庫。
+  6. `💻 資訊科技・運算思維`：MIT Scratch、Code.org (Hour of Code)、micro:bit 基金會、因材網 e度 AI 助教、全國貓咪盃競賽作品庫。
   7. `🎮 遊戲化互動與競賽`：PaGamO 答題攻城、Wordwall 互動遊戲、Blooket 派對答題、Quizizz 自適應題庫。
   8. `🎓 升國中先修・會考銜接`：DeltaMOOCx 數理先修、國中教育會考 CAP、站內國一數學負數代數指南、國中理化先修、互動實驗室、全民英檢 GEPT 專區。
 - **100% 權威有效鏈路驗證**：排查已停用之舊題庫網，全面替換引進最新公辦與國際認證平台，杜絕死鏈。

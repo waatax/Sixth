@@ -637,7 +637,7 @@ const ResourcesPage = () => {
               </div>
               <div className="p-3 rounded-xl" style={{ backgroundColor: 'var(--bg-tertiary)' }}>
                 <div className="font-bold text-primary mb-1" style={{ color: 'var(--apple-green)' }}>2. 課後適性診斷 (15-20分鐘)</div>
-                <div>避免題海死背！使用因材網或均一星空圖進行節點測試，針對紅燈錯題觀看詳解，建立完整知識網絡。</div>
+                <div>避免題海死背！使用因材網知識節點或概念星空圖進行節點測試，針對紅燈錯題觀看詳解，建立完整知識網絡。</div>
               </div>
               <div className="p-3 rounded-xl" style={{ backgroundColor: 'var(--bg-tertiary)' }}>
                 <div className="font-bold text-primary mb-1" style={{ color: 'var(--apple-orange)' }}>3. 假日動手探究 (30-40分鐘)</div>

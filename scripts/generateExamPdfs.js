@@ -29,6 +29,40 @@ fs.mkdirSync(PDF_OUTPUT_DIR, { recursive: true });
 const katexCssPath = path.join(projectRoot, 'node_modules', 'katex', 'dist', 'katex.min.css');
 const katexCssContent = fs.existsSync(katexCssPath) ? fs.readFileSync(katexCssPath, 'utf8') : '';
 
+// 針對 OneDrive 同步暫時鎖檔設計的安全寫入函式（具備指數退避重試）
+function safeWriteFileSync(filePath, content, encoding = 'utf8') {
+  let retries = 6;
+  while (retries > 0) {
+    try {
+      fs.writeFileSync(filePath, content, encoding);
+      return;
+    } catch (err) {
+      retries--;
+      if (retries === 0) throw err;
+      const buffer = new SharedArrayBuffer(4);
+      const view = new Int32Array(buffer);
+      Atomics.wait(view, 0, 0, 250);
+    }
+  }
+}
+
+// 安全複製函式
+function safeCopyFileSync(src, dest) {
+  let retries = 6;
+  while (retries > 0) {
+    try {
+      fs.copyFileSync(src, dest);
+      return;
+    } catch (err) {
+      retries--;
+      if (retries === 0) throw err;
+      const buffer = new SharedArrayBuffer(4);
+      const view = new Int32Array(buffer);
+      Atomics.wait(view, 0, 0, 250);
+    }
+  }
+}
+
 // Chrome / Edge 執行檔路徑搜尋
 function getBrowserExecutablePath() {
   const possiblePaths = [
@@ -44,7 +78,18 @@ function getBrowserExecutablePath() {
   return null;
 }
 
-// 數學公式渲染器
+// 判斷是否為實質 LaTeX 數學或科學公式
+function isLaTeXMathFormula(str) {
+  if (!str) return false;
+  // 若包含中文字且未被 \text{} 包裹，則屬於純文字速記口訣/金句
+  const chineseCount = (str.match(/[\u4e00-\u9fa5]/g) || []).length;
+  if (chineseCount > 0 && !str.includes('\\text{')) {
+    return false;
+  }
+  return /\\(frac|times|div|text|theta|circ|quad|implies|pm|approx|cdot|sqrt|neq|[a-zA-Z]+)|[\^_{}]/.test(str);
+}
+
+// 數學公式與名師速記口訣渲染器
 function renderMathText(text) {
   if (!text) return '';
   return text.replace(/\$([^$]+)\$/g, (match, formula) => {
@@ -58,11 +103,14 @@ function renderMathText(text) {
 
 function renderDisplayFormula(formula) {
   if (!formula) return '';
-  try {
-    return katex.renderToString(formula, { displayMode: true, throwOnError: false });
-  } catch {
-    return formula;
+  if (isLaTeXMathFormula(formula)) {
+    try {
+      return katex.renderToString(formula, { displayMode: true, throwOnError: false });
+    } catch {
+      return `<div class="formula-text-fallback">${formula}</div>`;
+    }
   }
+  return `<div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">${formula}</span><span class="mnemonic-quote-mark">”</span></div>`;
 }
 
 // 生成單一講義 HTML
@@ -77,7 +125,7 @@ function buildHandoutHtml(handoutInfo, notesList) {
 
     @page {
       size: A4 portrait;
-      margin: 12mm 14mm 14mm 14mm;
+      margin: 9mm 10mm 10mm 10mm;
     }
 
     * {
@@ -232,6 +280,30 @@ function buildHandoutHtml(handoutInfo, notesList) {
     .formula-body {
       font-size: 11.5px;
       margin: 2px 0;
+    }
+
+    .formula-mnemonic-callout {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 3.5px solid #d97706;
+      border-radius: 4px;
+      padding: 5px 8px;
+      color: #92400e;
+      font-weight: 700;
+      font-size: 10.5px;
+      line-height: 1.45;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 3px 0;
+    }
+
+    .mnemonic-quote-mark {
+      font-size: 13px;
+      color: #d97706;
+      font-family: Georgia, serif;
+      line-height: 1;
+      flex-shrink: 0;
     }
 
     .formula-detail {
@@ -530,7 +602,8 @@ function buildHandoutHtml(handoutInfo, notesList) {
 
 // 主執行函式
 async function main() {
-  console.log('🚀 開始批次生成六年級各科段考學習講義與真實 PDF 檔案...');
+  const isForce = process.argv.includes('--force');
+  console.log(`🚀 開始批次生成六年級各科段考學習講義與真實 PDF 檔案... ${isForce ? '(強制全量重新編譯模式)' : ''}`);
 
   const browserPath = getBrowserExecutablePath();
   if (!browserPath) {
@@ -563,14 +636,14 @@ async function main() {
 
         // 1. 生成 standalone HTML
         const htmlContent = buildHandoutHtml(handoutInfo, notesList);
-        fs.writeFileSync(htmlFilePath, htmlContent, 'utf8');
+        safeWriteFileSync(htmlFilePath, htmlContent, 'utf8');
 
         // 2. 調用 Edge / Chrome Headless 編譯為真實 PDF
         let compiled = false;
         let lastErr = null;
 
-        // 若已存在且大於 10KB，可直接復用
-        if (fs.existsSync(pdfFilePath) && fs.statSync(pdfFilePath).size > 10000) {
+        // 若非強制重新編譯且已存在大於 10KB，可直接復用
+        if (!isForce && fs.existsSync(pdfFilePath) && fs.statSync(pdfFilePath).size > 10000) {
           compiled = true;
           const stat = fs.statSync(pdfFilePath);
           console.log(`⚡ [${++generatedCount}/48] 既有最新 PDF: ${pdfFileName} (${Math.round(stat.size / 1024)} KB, ${notesList.length} 個單元)`);
@@ -588,7 +661,7 @@ async function main() {
 
           if (sem === '6B' && scope === 'final') {
             const gradPdfPath = path.join(PDF_OUTPUT_DIR, `${sub}_6B_graduation.pdf`);
-            fs.copyFileSync(pdfFilePath, gradPdfPath);
+            safeCopyFileSync(pdfFilePath, gradPdfPath);
           }
         }
 
@@ -602,7 +675,7 @@ async function main() {
               '--no-pdf-header-footer',
               `--print-to-pdf=${pdfFilePath}`,
               htmlFilePath
-            ], { stdio: 'ignore', timeout: 45000 });
+            ], { stdio: 'ignore', timeout: 90000 });
 
             if (fs.existsSync(pdfFilePath) && fs.statSync(pdfFilePath).size > 1000) {
               compiled = true;
@@ -623,7 +696,7 @@ async function main() {
               // 如果是 6B final，額外複製一份為 6B_graduation.pdf 方便相容
               if (sem === '6B' && scope === 'final') {
                 const gradPdfPath = path.join(PDF_OUTPUT_DIR, `${sub}_6B_graduation.pdf`);
-                fs.copyFileSync(pdfFilePath, gradPdfPath);
+                safeCopyFileSync(pdfFilePath, gradPdfPath);
               }
             }
           } catch (err) {
@@ -640,7 +713,7 @@ async function main() {
 
   // 寫入 manifest.json
   const manifestPath = path.join(PDF_OUTPUT_DIR, 'manifest.json');
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
+  safeWriteFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
   console.log(`\n🎉 全部完成！共成功編譯 ${generatedCount} 套段考 PDF 講義檔案至 public/downloads/pdf/！`);
 }
 

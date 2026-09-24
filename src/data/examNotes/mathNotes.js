@@ -20,7 +20,7 @@ export const mathNotes = {
     keyFormulas: [
       {
         name: '短除法求 GCD 與 LCM 口訣',
-        formula: 'GCD = 左側除數相乘；LCM = 左側除數 \\times 底部商數 (L 型相乘)',
+        formula: 'GCD = 左側除數相乘；LCM = 左側除數 × 底部商數 (L 型相乘)',
         detail: '三數求 LCM 注意：短除法只要其中任兩數有公因數就必須繼續除，無法整除的那一個數需直接「原封不動落下」。'
       },
       {

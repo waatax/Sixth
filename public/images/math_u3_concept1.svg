@@ -40,7 +40,7 @@
   <!-- Top Header Bar -->
   <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
   <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
-  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">小數除法直式算則與餘數定位規律 (Decimal Division & Remainder)</text>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">小數除法直式算則與餘數定位規律 (Decimal Division &amp; Remainder)</text>
   <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 n-III-7：除數小數點向右移、商與餘數小數點對齊關鍵規則</text>
 
   <!-- Badge on top right -->
@@ -90,7 +90,7 @@
     
   </g>
 
-  <!-- Bottom Watermark & Status -->
+  <!-- Bottom Watermark &amp; Status -->
   <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
   <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
   <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Sixth Curriculum Design System</text>

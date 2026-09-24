@@ -75,22 +75,32 @@ const cleanDiagramText = (text) => {
     // 移除顏色與樣式外殼 \textcolor{...}{...}
     .replace(/\\textcolor\{#[a-fA-F0-9]{3,8}\}\{([\s\S]*?)\}/g, '$1')
     .replace(/\\textcolor\{[a-zA-Z]+\}\{([\s\S]*?)\}/g, '$1')
-    // 移除 \textbf, \mathbf, \text, \mathrm, \boldsymbol 等文字/數學包裝
-    .replace(/\\(?:textbf|mathbf|text|mathrm|boldsymbol)\{([\s\S]*?)\}/g, '$1')
-    .replace(/\\(?:textbf|mathbf|text|mathrm|boldsymbol)\{([\s\S]*?)\}/g, '$1')
+    // 移除 \textbf, \mathbf, \text, \mathrm, \boldsymbol, \underline 等文字/數學包裝
+    .replace(/\\(?:textbf|mathbf|text|mathrm|boldsymbol|underline)\{([\s\S]*?)\}/g, '$1')
+    .replace(/\\(?:textbf|mathbf|text|mathrm|boldsymbol|underline)\{([\s\S]*?)\}/g, '$1')
     // 將 \frac{a}{b} 轉換為小學直觀的等寬分數 a/b
     .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1/$2')
+    .replace(/\\sqrt\{([^}]+)\}/g, '√($1)')
     // 替換數學符號
     .replace(/\\div/g, '÷')
     .replace(/\\times/g, '×')
     .replace(/\\approx/g, '≈')
     .replace(/\\sim/g, '~')
     .replace(/\\rightarrow/g, '→')
+    .replace(/\\leftarrow/g, '←')
+    .replace(/\\leftrightarrow/g, '◄─►')
+    .replace(/\\le(?:q)?\b/g, '≤')
+    .replace(/\\ge(?:q)?\b/g, '≥')
+    .replace(/\\neq\b/g, '≠')
+    .replace(/\\pm\b/g, '±')
+    .replace(/\\degree\b/g, '°')
     .replace(/\\pi/g, 'π')
     .replace(/\\circ/g, '°')
     .replace(/\\cdot/g, '·')
     .replace(/\\\$/g, '$')
     .replace(/\\%/g, '%')
+    .replace(/\\quad/g, '   ')
+    .replace(/\\qquad/g, '      ')
     .replace(/\^\{?(\d+)\}?/g, '^$1')
     .replace(/(?<!\\)\$/g, '');
 };
@@ -103,7 +113,9 @@ const preprocessLessonMarkdown = (raw) => {
     .replace(/\\textbf\{([^{}]*\\(?:frac|div|times|sqrt|pi|approx|cdot|pm)[^{}]*)\}/g, '\\mathbf{$1}')
     // 2. 若公式核心被 \textcolor 外層包覆可能導致報錯，自動安全提取內部數學算式
     .replace(/\$\$\s*\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\(?:textbf|mathbf)\{([\s\S]*?)\}\}\s*\$\$/g, '$$ $1 $$')
-    .replace(/\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\textbf\{([^{}]*\\frac[^{}]*)\}\}/g, '$1');
+    .replace(/\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\textbf\{([^{}]*\\frac[^{}]*)\}\}/g, '$1')
+    // 3. 淨化可能殘留的 non-math unicode symbols inside inline math
+    .replace(/\$\s*\\mathbf\{([^a-zA-Z0-9\s\\+\-*/=<>^_{}()]+)\}\s*\$/g, '**$1**');
 };
 
 const LessonPage = () => {

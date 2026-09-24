@@ -40,7 +40,7 @@
   <!-- Top Header Bar -->
   <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
   <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
-  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">Adjective Degrees: Comparative & Superlative (比較級與最高級)</text>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">Adjective Degrees: Comparative &amp; Superlative (比較級與最高級)</text>
   <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 2-III-6：規則 -er/-est、more/the most 與不規則天梯圖</text>
 
   <!-- Badge on top right -->
@@ -75,7 +75,7 @@
       <rect x="20" y="280" width="330" height="36" rx="6" fill="#0f172a" stroke="#64748b"/>
       <text x="185" y="303" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">最高級前務必加「the」！例：the tallest, the best</text>
 
-      <!-- Right: Rules & Irregulars -->
+      <!-- Right: Rules &amp; Irregulars -->
       <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
       <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
       <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">⭐ 規則變化 vs 必考不規則金榜</text>
@@ -95,7 +95,7 @@
     
   </g>
 
-  <!-- Bottom Watermark & Status -->
+  <!-- Bottom Watermark &amp; Status -->
   <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
   <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
   <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Sixth Curriculum Design System</text>

@@ -40,7 +40,7 @@
   <!-- Top Header Bar -->
   <rect x="20" y="18" width="760" height="54" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
   <rect x="34" y="30" width="8" height="30" rx="4" fill="url(#primaryGrad)"/>
-  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">圓周率 π 與圓周長公式結構 (Circumference & Diameter)</text>
+  <text x="52" y="45" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="0.5">圓周率 π 與圓周長公式結構 (Circumference &amp; Diameter)</text>
   <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">108 課綱 s-III-1：認識圓周率約等於 3.14 及直徑與圓周長倍數關係</text>
 
   <!-- Badge on top right -->
@@ -74,7 +74,7 @@
       <rect x="15" y="270" width="340" height="45" rx="8" fill="#0f172a" stroke="#10b981"/>
       <text x="185" y="298" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">圓周率 π ＝ 圓周長 ÷ 直徑 ≈ 3.14</text>
 
-      <!-- Right: Formulas & Sector Arc -->
+      <!-- Right: Formulas &amp; Sector Arc -->
       <rect x="390" y="0" width="370" height="326" rx="12" fill="#1e293b" stroke="#334155"/>
       <rect x="390" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
       <text x="410" y="26" font-size="15" font-weight="700" fill="#f8fafc">📐 扇形弧長與扇形周長黃金公式</text>
@@ -95,7 +95,7 @@
     
   </g>
 
-  <!-- Bottom Watermark & Status -->
+  <!-- Bottom Watermark &amp; Status -->
   <rect x="20" y="424" width="760" height="24" rx="6" fill="#1e293b" fill-opacity="0.6"/>
   <text x="32" y="440" font-size="11" font-weight="600" fill="#64748b">108 課綱六年級專家精編・全方位觀念圖解</text>
   <text x="768" y="440" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="end">Sixth Curriculum Design System</text>

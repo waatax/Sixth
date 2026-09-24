@@ -20,6 +20,9 @@ import {
   Sparkles,
   ArrowLeft,
   Eye,
+  EyeOff,
+  Maximize2,
+  Minimize2,
   FolderDown,
   Calendar
 } from 'lucide-react';
@@ -38,14 +41,29 @@ function renderMathText(text) {
   });
 }
 
-// 渲染獨立展示數學公式
+// 判斷是否為實質 LaTeX 數學或科學公式
+function isLaTeXMathFormula(str) {
+  if (!str) return false;
+  // 若包含中文字且未被 \text{} 包裹，則屬於純文字速記口訣/金句
+  const chineseCount = (str.match(/[\u4e00-\u9fa5]/g) || []).length;
+  if (chineseCount > 0 && !str.includes('\\text{')) {
+    return false;
+  }
+  return /\\(frac|times|div|text|theta|circ|quad|implies|pm|approx|cdot|sqrt|neq|[a-zA-Z]+)|[\^_{}]/.test(str);
+}
+
+// 渲染獨立展示數學公式或名師口訣金句
 function renderDisplayFormula(formula) {
   if (!formula) return '';
-  try {
-    return katex.renderToString(formula, { displayMode: true, throwOnError: false });
-  } catch {
-    return formula;
+  if (isLaTeXMathFormula(formula)) {
+    try {
+      return katex.renderToString(formula, { displayMode: true, throwOnError: false });
+    } catch {
+      return `<div class="formula-text-fallback">${formula}</div>`;
+    }
   }
+  // 純文字速記口訣或名師金句
+  return `<div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">${formula}</span><span class="mnemonic-quote-mark">”</span></div>`;
 }
 
 const ExamReviewNotesPage = () => {
@@ -66,6 +84,14 @@ const ExamReviewNotesPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [revealedSolutions, setRevealedSolutions] = useState({});
   const [checkedItems, setCheckedItems] = useState({});
+  const [isWideMode, setIsWideMode] = useState(() => {
+    try {
+      return localStorage.getItem('sixth_notes_wide_mode') === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [allSolutionsExpanded, setAllSolutionsExpanded] = useState(false);
 
   // 當前學科資訊
   const currentSubjectMeta = useMemo(() => {
@@ -107,13 +133,38 @@ const ExamReviewNotesPage = () => {
     playSound('pop');
   };
 
-  // 切換答案顯示
-  const toggleRevealSolution = (walkthroughId) => {
-    setRevealedSolutions(prev => ({
-      ...prev,
-      [walkthroughId]: !prev[walkthroughId]
-    }));
+  // 切換單一題目答案顯示
+  const toggleRevealSolution = (walkthroughKey) => {
+    setRevealedSolutions(prev => {
+      const current = prev[walkthroughKey] !== undefined ? prev[walkthroughKey] : allSolutionsExpanded;
+      return {
+        ...prev,
+        [walkthroughKey]: !current
+      };
+    });
     playSound('click');
+  };
+
+  // 切換全景廣角閱讀模式（最大可閱讀面積）
+  const toggleWideMode = () => {
+    setIsWideMode(prev => {
+      const next = !prev;
+      try {
+        localStorage.setItem('sixth_notes_wide_mode', String(next));
+      } catch {}
+      playSound('pop');
+      return next;
+    });
+  };
+
+  // 一鍵展開／收合所有段考真題詳解
+  const toggleAllSolutions = () => {
+    setAllSolutionsExpanded(prev => {
+      const next = !prev;
+      setRevealedSolutions({});
+      playSound('click');
+      return next;
+    });
   };
 
   // 切換學科
@@ -303,7 +354,7 @@ const ExamReviewNotesPage = () => {
     : 0;
 
   return (
-    <div className="exam-notes-page animate-fade-in">
+    <div className={`exam-notes-page animate-fade-in ${isWideMode ? 'wide-reading-mode' : ''}`}>
       {/* 🖨️ 僅在 A4 列印或另存 PDF 時呈現之專業講義抬頭 */}
       <div className="print-only-header">
         <div className="print-header-title">
@@ -450,7 +501,7 @@ const ExamReviewNotesPage = () => {
           ))}
         </div>
 
-        {/* 4. 搜尋與自測進度 */}
+        {/* 4. 搜尋、廣角閱讀模式、一鍵解析與自測進度 */}
         <div className="notes-actions-row">
           <div className="notes-search-wrapper">
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" />
@@ -461,6 +512,27 @@ const ExamReviewNotesPage = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+          </div>
+
+          {/* 閱讀面積與速讀工具按鈕群 */}
+          <div className="reading-tools-group">
+            <button
+              className={`btn-reading-tool ${isWideMode ? 'active' : ''}`}
+              onClick={toggleWideMode}
+              title={isWideMode ? '切換為標準雙欄導航模式' : '切換為廣角極致閱讀模式（最大可閱讀面積）'}
+            >
+              {isWideMode ? <Minimize2 size={15} /> : <Maximize2 size={15} />}
+              <span>{isWideMode ? '標準欄寬' : '廣角極限閱讀'}</span>
+            </button>
+
+            <button
+              className={`btn-reading-tool ${allSolutionsExpanded ? 'active' : ''}`}
+              onClick={toggleAllSolutions}
+              title={allSolutionsExpanded ? '收合所有題目之名師詳解（切換為自我檢核模式）' : '一鍵展開所有歷年段考真題步驟解析（快速考前衝刺）'}
+            >
+              {allSolutionsExpanded ? <EyeOff size={15} /> : <Eye size={15} />}
+              <span>{allSolutionsExpanded ? '收合全部解析' : '一鍵全開解析'}</span>
+            </button>
           </div>
 
           <div className="flex items-center gap-3 text-xs text-secondary flex-wrap">
@@ -675,7 +747,9 @@ const ExamReviewNotesPage = () => {
                       <div className="walkthroughs-list">
                         {note.pastExamWalkthroughs.map((walk, idx) => {
                           const walkthroughKey = `${note.unitId}_walk_${idx}`;
-                          const isRevealed = revealedSolutions[walkthroughKey];
+                          const isRevealed = revealedSolutions[walkthroughKey] !== undefined 
+                            ? revealedSolutions[walkthroughKey] 
+                            : allSolutionsExpanded;
 
                           return (
                             <div key={idx} className="walkthrough-box">
