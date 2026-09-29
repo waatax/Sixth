@@ -254,25 +254,32 @@ const Header = () => {
               {/* Eye-Care Quick Switch in Mobile Drawer */}
               <div className="p-3 mb-4 rounded-lg" style={{ backgroundColor: 'var(--bg-tertiary)', borderRadius: 'var(--radius-md)' }}>
                 <div className="text-xs font-bold text-secondary mb-2">👁️ 視覺護眼與字級：</div>
-                <div className="grid gap-2 mb-3" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+                <div className="grid gap-2 mb-3" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                   <button
                     onClick={() => setTheme('light')}
                     className="btn-pill justify-center"
-                    style={{ backgroundColor: theme === 'light' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'light' ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+                    style={{ backgroundColor: theme === 'light' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'light' ? 'var(--accent-primary)' : 'var(--text-secondary)', padding: '5px 2px', fontSize: '0.75rem' }}
                   >
                     ☀️ 淨柔
                   </button>
                   <button
                     onClick={() => setTheme('sepia')}
                     className="btn-pill justify-center"
-                    style={{ backgroundColor: theme === 'sepia' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'sepia' ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+                    style={{ backgroundColor: theme === 'sepia' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'sepia' ? 'var(--accent-primary)' : 'var(--text-secondary)', padding: '5px 2px', fontSize: '0.75rem' }}
                   >
                     🌿 暖陽
                   </button>
                   <button
+                    onClick={() => setTheme('green')}
+                    className="btn-pill justify-center"
+                    style={{ backgroundColor: theme === 'green' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'green' ? 'var(--accent-primary)' : 'var(--text-secondary)', padding: '5px 2px', fontSize: '0.75rem' }}
+                  >
+                    🍃 青木
+                  </button>
+                  <button
                     onClick={() => setTheme('dark')}
                     className="btn-pill justify-center"
-                    style={{ backgroundColor: theme === 'dark' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'dark' ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+                    style={{ backgroundColor: theme === 'dark' ? 'var(--bg-secondary)' : 'transparent', color: theme === 'dark' ? 'var(--accent-primary)' : 'var(--text-secondary)', padding: '5px 2px', fontSize: '0.75rem' }}
                   >
                     🌙 夜讀
                   </button>
@@ -281,7 +288,7 @@ const Header = () => {
                 <div className="flex justify-between items-center text-xs">
                   <span className="text-secondary font-bold">字級：{FONT_SIZES[fontSize]?.label}</span>
                   <div className="flex gap-2">
-                    <button className="btn-outline" style={{ padding: '4px 10px', minHeight: '32px' }} onClick={decreaseFontSize} disabled={fontSize === 'sm'}>A-</button>
+                    <button className="btn-outline" style={{ padding: '4px 10px', minHeight: '32px' }} onClick={decreaseFontSize} disabled={fontSize === 'xs'}>A-</button>
                     <button className="btn-primary" style={{ padding: '4px 10px', minHeight: '32px' }} onClick={increaseFontSize} disabled={fontSize === 'xl'}>A+</button>
                   </div>
                 </div>
@@ -334,7 +341,7 @@ const Header = () => {
             {/* Drawer Footer */}
             <div className="pt-4 border-t text-xs text-secondary text-center" style={{ borderTop: '1px solid var(--border-light)' }}>
               2026 新學期・108 課綱遊戲化自主學習平台<br />
-              <span style={{ color: 'var(--text-tertiary)', fontSize: '0.75rem' }}>適配直式、橫式、手機與平板</span>
+              <span style={{ color: 'var(--text-tertiary)', fontSize: '0.75rem' }}>適配直式、橫式、手機與電腦最優化呈現</span>
             </div>
           </div>
         </div>
@@ -342,10 +349,15 @@ const Header = () => {
 
       {/* Responsive media query styling rules for navigation */}
       <style>{`
-        @media (min-width: 1160px) {
+        @media (min-width: 1024px) {
           .desktop-nav { display: flex !important; }
           .desktop-controls { display: flex !important; }
           .mobile-hamburger-btn { display: none !important; }
+        }
+        @media (max-width: 1023px) {
+          .desktop-nav { display: none !important; }
+          .desktop-controls { display: none !important; }
+          .mobile-hamburger-btn { display: flex !important; }
         }
       `}</style>
     </>

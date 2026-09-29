@@ -18,6 +18,7 @@ const PetCompanionWidget = () => {
   const [isSanctuaryOpen, setIsSanctuaryOpen] = useState(false);
   const [bubbleText, setBubbleText] = useState('主人好！今天想一起挑戰哪一科呢？🐾');
   const [showHeart, setShowHeart] = useState(false);
+  const [showBubble, setShowBubble] = useState(() => typeof window !== 'undefined' && window.innerWidth >= 1024);
 
   const currentEvolution = activePetTemplate?.evolutions.slice().reverse().find(e => (currentPetStats?.level || 1) >= e.minLevel) || activePetTemplate?.evolutions[0];
 
@@ -26,7 +27,12 @@ const PetCompanionWidget = () => {
     const randomMsg = CHEER_MESSAGES[Math.floor(Math.random() * CHEER_MESSAGES.length)];
     setBubbleText(randomMsg);
     setShowHeart(true);
+    setShowBubble(true);
     setTimeout(() => setShowHeart(false), 1200);
+    // On mobile, auto fade out bubble after 5s so screen isn't obstructed
+    if (window.innerWidth < 1024) {
+      setTimeout(() => setShowBubble(false), 5000);
+    }
   };
 
   return (
@@ -44,34 +50,45 @@ const PetCompanionWidget = () => {
         }}
       >
         {/* Dialogue Bubble */}
-        <div
-          className="card animate-fade-in shadow-md"
-          style={{
-            maxWidth: '220px',
-            padding: '10px 14px',
-            borderRadius: '16px',
-            backgroundColor: 'var(--bg-secondary)',
-            border: '1.5px solid var(--border-light)',
-            fontSize: '0.82rem',
-            lineHeight: 1.45,
-            color: 'var(--text-primary)',
-            position: 'relative',
-            boxShadow: '0 6px 18px rgba(0,0,0,0.1)'
-          }}
-        >
-          <div className="flex items-center justify-between mb-1">
-            <span className="font-bold text-xs" style={{ color: 'var(--accent-primary)' }}>
-              {activePetTemplate?.name.split(' ')[0]} (Lv.{currentPetStats?.level})
-            </span>
-            <button
-              onClick={() => setIsSanctuaryOpen(true)}
-              className="text-[11px] text-amber-500 font-bold hover:underline"
-            >
-              進殿堂 →
-            </button>
+        {showBubble && (
+          <div
+            className="card animate-fade-in shadow-md"
+            style={{
+              maxWidth: '220px',
+              padding: '10px 14px',
+              borderRadius: '16px',
+              backgroundColor: 'var(--bg-secondary)',
+              border: '1.5px solid var(--border-light)',
+              fontSize: '0.82rem',
+              lineHeight: 1.45,
+              color: 'var(--text-primary)',
+              position: 'relative',
+              boxShadow: '0 6px 18px rgba(0,0,0,0.1)'
+            }}
+          >
+            <div className="flex items-center justify-between mb-1">
+              <span className="font-bold text-xs" style={{ color: 'var(--accent-primary)' }}>
+                {activePetTemplate?.name.split(' ')[0]} (Lv.{currentPetStats?.level})
+              </span>
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={() => setIsSanctuaryOpen(true)}
+                  className="text-[11px] text-amber-500 font-bold hover:underline"
+                >
+                  進殿堂 →
+                </button>
+                <button
+                  onClick={() => setShowBubble(false)}
+                  className="text-[11px] text-gray-400 hover:text-gray-600 px-1"
+                  aria-label="收起對話"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+            <div>{bubbleText}</div>
           </div>
-          <div>{bubbleText}</div>
-        </div>
+        )}
 
         {/* Pet Avatar Bubble Button */}
         <div style={{ position: 'relative' }}>

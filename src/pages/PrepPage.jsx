@@ -403,7 +403,7 @@ const PrepPage = () => {
       </div>
 
       {/* Primary Tabs Navigation */}
-      <div className="flex justify-center gap-1.5 border-b pb-3 flex-wrap" style={{ borderBottom: '1px solid var(--border-light)' }}>
+      <div className="flex justify-center gap-1.5 border-b pb-3 flex-wrap mobile-scroll-row" style={{ borderBottom: '1px solid var(--border-light)' }}>
         <button
           className={`btn-pill ${activeTab === 'math' ? 'active' : ''}`}
           onClick={() => setActiveTab('math')}
@@ -470,7 +470,7 @@ const PrepPage = () => {
             <BookOpen size={14} className="text-primary" />
             <span>目前對齊教科書版本：</span>
           </div>
-          <div className="flex gap-1 font-bold">
+          <div className="flex gap-1 font-bold mobile-scroll-row">
             {[
               { id: 'all', label: '全版本通用' },
               { id: 'kangHsuan', label: '康軒版' },

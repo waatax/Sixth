@@ -226,7 +226,7 @@ const HomePage = () => {
           </div>
 
           {/* iOS Segmented Control */}
-          <div className="ios-segmented-control">
+          <div className="ios-segmented-control mobile-scroll-row">
             {categories.map(cat => (
               <button
                 key={cat.id}
@@ -249,7 +249,7 @@ const HomePage = () => {
           className="subjects-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(270px, 100%), 1fr))',
             gap: '20px'
           }}
         >

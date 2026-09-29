@@ -1,6 +1,27 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useSearchParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, XCircle, Trophy, Zap, Sparkles, BookOpen, RotateCcw, Volume2, VolumeX, ShieldCheck, Heart, Flame, HelpCircle, Keyboard, Target } from 'lucide-react';
+import { 
+  ArrowLeft, 
+  CheckCircle2, 
+  XCircle, 
+  Trophy, 
+  Zap, 
+  Sparkles, 
+  BookOpen, 
+  RotateCcw, 
+  Volume2, 
+  VolumeX, 
+  ShieldCheck, 
+  Heart, 
+  Flame, 
+  HelpCircle, 
+  Keyboard, 
+  Target,
+  Lightbulb,
+  Compass,
+  PenTool,
+  FileText
+} from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
 import { coursesData } from '../data/courses';
@@ -9,7 +30,42 @@ import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 import ComboFlameIndicator from '../components/gamification/ComboFlameIndicator';
 import LessonCheatSheetModal from '../components/lesson/LessonCheatSheetModal';
+import LessonScratchpadModal from '../components/lesson/LessonScratchpadModal';
 import QuestionDiagram from '../components/quiz/QuestionDiagram';
+
+// 智能三階提示鷹架提取演算法（不洩漏標準答案，循序漸進啟發思考）
+const extractQuestionHints = (question) => {
+  if (!question) return { level1: '', level2: '' };
+
+  let level1 = question.hintLevel1 || '';
+  let level2 = question.hintLevel2 || '';
+
+  const exp = question.explanation || '';
+
+  if (!level1) {
+    const conceptMatch = exp.match(/【(?:觀念解析|破題口訣|思考方向|概念心法)】\s*([^。！？\n]+[。！？]?)/);
+    if (conceptMatch) {
+      level1 = conceptMatch[1].trim();
+    } else {
+      const firstSentence = exp.split(/[。！？\n]/)[0];
+      level1 = firstSentence ? `${firstSentence}。` : '回想本課核心觀念與定義，找出題幹中的關鍵條件與數據。';
+    }
+  }
+
+  if (!level2) {
+    const stepMatch = exp.match(/【(?:解題步驟|計算推導|步驟指引|解題關鍵)】\s*([\s\S]*?)(?=【|$)/);
+    if (stepMatch) {
+      const stepText = stepMatch[1].trim();
+      const firstStep = stepText.split(/[；;\n]/)[0];
+      level2 = firstStep ? `${firstStep}。` : stepText.slice(0, 90);
+    } else {
+      const sentences = exp.split(/[。！？\n]/).filter(s => s.trim().length > 0);
+      level2 = sentences[1] ? `${sentences[1]}。` : '先列出題目已知條件，判斷要套用的解題步驟與公式。';
+    }
+  }
+
+  return { level1, level2 };
+};
 
 const QuizPage = () => {
   const { unitId } = useParams();
@@ -69,6 +125,14 @@ const QuizPage = () => {
   const [combo, setCombo] = useState(0);
   const [disabledOptions, setDisabledOptions] = useState([]);
   const [quizSummary, setQuizSummary] = useState(null);
+  const [isScratchpadOpen, setIsScratchpadOpen] = useState(false);
+  const [hintLevel, setHintLevel] = useState(0); // 0: none, 1: Level 1 clue, 2: Level 2 step
+
+  const toggleHint = (level) => {
+    playSound('pop');
+    triggerHaptic('light');
+    setHintLevel(prev => (prev === level ? 0 : level));
+  };
 
   const changeMode = (newMode) => {
     setQuizMode(newMode);
@@ -80,6 +144,7 @@ const QuizPage = () => {
     setCombo(0);
     setDisabledOptions([]);
     setQuizSummary(null);
+    setHintLevel(0);
     playSound('click');
   };
 
@@ -175,6 +240,7 @@ const QuizPage = () => {
       setSelectedOption(null);
       setShowResult(false);
       setDisabledOptions([]);
+      setHintLevel(0);
     }
   };
 
@@ -200,6 +266,7 @@ const QuizPage = () => {
     setCombo(0);
     setDisabledOptions([]);
     setQuizSummary(null);
+    setHintLevel(0);
   };
 
   // Keyboard navigation & shortcuts (1-4 / A-D / Enter)
@@ -355,6 +422,58 @@ const QuizPage = () => {
           </div>
         </div>
 
+        {/* Smart Prescription for Unfamiliar Students */}
+        {score < questions.length ? (
+          <div 
+            className="w-full text-left p-4 rounded-2xl border animate-fade-in"
+            style={{
+              backgroundColor: 'rgba(239, 68, 68, 0.04)',
+              borderColor: 'rgba(239, 68, 68, 0.25)',
+              borderLeft: '5px solid #ef4444'
+            }}
+          >
+            <div className="flex items-center gap-2 text-sm font-bold text-rose-600 dark:text-rose-400 mb-1">
+              <span>🩺 智能弱點診斷處方箋 (Smart Prescription)</span>
+            </div>
+            <p className="text-xs text-secondary mb-3 leading-relaxed">
+              本次測驗有 {questions.length - score} 題需要加強。名師叮嚀：搞懂錯題是融會貫通的最快途徑！建議點擊下方按鈕回到課文對應小節精準複習：
+            </p>
+            <div className="flex items-center gap-2 flex-wrap">
+              <button
+                onClick={() => navigate(`/lesson/${unitId}`)}
+                className="btn-primary text-xs py-2 px-4 rounded-lg flex items-center gap-1.5 font-bold shadow-sm"
+                style={{ backgroundColor: '#ef4444', borderColor: '#ef4444' }}
+              >
+                <BookOpen size={14} />
+                <span>📖 回到【{currentUnit.title}】課文精準補強</span>
+              </button>
+              <button
+                onClick={() => setShowCheatSheet(true)}
+                className="btn-outline text-xs py-2 px-4 rounded-lg flex items-center gap-1.5 font-bold"
+              >
+                <Zap size={14} style={{ color: '#d97706' }} />
+                <span>⚡ 查閱考前 1 分鐘極速秘笈</span>
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div 
+            className="w-full text-left p-4 rounded-2xl border animate-fade-in"
+            style={{
+              backgroundColor: 'rgba(16, 185, 129, 0.05)',
+              borderColor: 'rgba(16, 185, 129, 0.3)',
+              borderLeft: '5px solid #10b981'
+            }}
+          >
+            <div className="flex items-center gap-2 text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1">
+              <span>🏆 完美融會貫通認證！</span>
+            </div>
+            <p className="text-xs text-secondary leading-relaxed m-0">
+              太強了！你已 100% 掌握本單元所有核心觀念與題型，解題思維達到國中先修與會考素養標準！可以挑戰下一個單元或前往「國中先修專區」解鎖新知！
+            </p>
+          </div>
+        )}
+
         {/* Action Buttons */}
         <div className="flex gap-3 mt-4 flex-wrap justify-center w-full">
           <button 
@@ -461,6 +580,21 @@ const QuizPage = () => {
           <div className="flex items-center gap-2">
             <button
               onClick={() => {
+                setIsScratchpadOpen(true);
+                playSound('pop');
+              }}
+              className="btn-outline flex items-center gap-1 text-xs py-1 px-3 font-bold text-blue-500"
+              style={{
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                borderColor: 'rgba(59, 130, 246, 0.4)'
+              }}
+              title="開啟隨堂計算草稿紙"
+            >
+              <PenTool size={13} />
+              <span>🧮 計算草稿</span>
+            </button>
+            <button
+              onClick={() => {
                 setShowCheatSheet(true);
                 playSound('pop');
                 triggerHaptic('selection');
@@ -553,6 +687,71 @@ const QuizPage = () => {
         {question?.diagram && (
           <QuestionDiagram diagram={question.diagram} />
         )}
+
+        {/* Three-Tiered Scaffolding Hints System */}
+        {(() => {
+          const hints = extractQuestionHints(question);
+          return (
+            <div 
+              className="scaffolding-hint-container rounded-2xl p-3 border transition-all"
+              style={{
+                backgroundColor: 'var(--bg-tertiary)',
+                borderColor: hintLevel > 0 ? (hintLevel === 1 ? 'rgba(245, 158, 11, 0.4)' : 'rgba(59, 130, 246, 0.4)') : 'var(--border-light)'
+              }}
+            >
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--text-primary)' }}>
+                  <HelpCircle size={15} style={{ color: 'var(--accent-primary)' }} />
+                  <span>卡題了？點擊漸進式思考鷹架（引導自主破題）：</span>
+                </div>
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <button
+                    onClick={() => toggleHint(1)}
+                    className={`btn-outline text-xs py-1 px-3 rounded-full font-bold flex items-center gap-1 ${
+                      hintLevel === 1 ? 'bg-amber-500/15 border-amber-500 text-amber-600 dark:text-amber-400' : ''
+                    }`}
+                    title="開啟 Level 1 核心觀念線索（不劇透答案）"
+                  >
+                    <Lightbulb size={13} />
+                    <span>💡 Level 1 觀念提點</span>
+                  </button>
+                  <button
+                    onClick={() => toggleHint(2)}
+                    className={`btn-outline text-xs py-1 px-3 rounded-full font-bold flex items-center gap-1 ${
+                      hintLevel === 2 ? 'bg-blue-500/15 border-blue-500 text-blue-600 dark:text-blue-400' : ''
+                    }`}
+                    title="開啟 Level 2 步驟指引（算式或關鍵字拆解）"
+                  >
+                    <Compass size={13} />
+                    <span>📝 Level 2 步驟指引</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Level 1 Hint Box */}
+              {hintLevel === 1 && (
+                <div className="mt-2.5 p-3 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs animate-fade-in flex items-start gap-2">
+                  <Lightbulb size={15} className="text-amber-500 flex-shrink-0 mt-0.5" />
+                  <div className="leading-relaxed">
+                    <strong className="text-amber-700 dark:text-amber-300 font-bold">💡 Level 1 觀念提點：</strong>
+                    <span className="text-secondary">{hints.level1}</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Level 2 Hint Box */}
+              {hintLevel === 2 && (
+                <div className="mt-2.5 p-3 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-xs animate-fade-in flex items-start gap-2">
+                  <Compass size={15} className="text-blue-500 flex-shrink-0 mt-0.5" />
+                  <div className="leading-relaxed">
+                    <strong className="text-blue-700 dark:text-blue-300 font-bold">📝 Level 2 步驟指引：</strong>
+                    <span className="text-secondary">{hints.level2}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* Options */}
         <div className="flex flex-col gap-3">
@@ -704,6 +903,14 @@ const QuizPage = () => {
         onClose={() => setShowCheatSheet(false)}
         unit={currentUnit}
         subjectName={currentSubjectName}
+      />
+
+      {/* Instant Scratchpad Calculation Canvas Modal */}
+      <LessonScratchpadModal
+        isOpen={isScratchpadOpen}
+        onClose={() => setIsScratchpadOpen(false)}
+        unitId={unitId}
+        unitTitle={currentUnit?.title || ''}
       />
     </div>
   );

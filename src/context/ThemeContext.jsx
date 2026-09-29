@@ -3,10 +3,11 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export const FONT_SIZES = {
+  xs: { label: '緊湊', scale: '0.9', class: 'font-size-xs' },
   sm: { label: '標準', scale: '1', class: 'font-size-sm' },
-  md: { label: '中大', scale: '1.125', class: 'font-size-md' },
-  lg: { label: '特大', scale: '1.25', class: 'font-size-lg' },
-  xl: { label: '超大護眼', scale: '1.375', class: 'font-size-xl' },
+  md: { label: '舒適', scale: '1.12', class: 'font-size-md' },
+  lg: { label: '大字', scale: '1.25', class: 'font-size-lg' },
+  xl: { label: '超大護眼', scale: '1.4', class: 'font-size-xl' },
 };
 
 export const THEMES = {
@@ -16,25 +17,31 @@ export const THEMES = {
     icon: '☀️',
     desc: '柔和無眩光白晝模式'
   },
-  dark: {
-    id: 'dark',
-    name: '深邃夜讀',
-    icon: '🌙',
-    desc: '低刺激沉浸夜間模式'
-  },
   sepia: {
     id: 'sepia',
     name: '護眼暖陽',
     icon: '🌿',
     desc: '抗藍光羊皮紙暖光模式'
+  },
+  green: {
+    id: 'green',
+    name: '舒眼青木',
+    icon: '🍃',
+    desc: '眼科推薦自然豆沙綠抗疲勞'
+  },
+  dark: {
+    id: 'dark',
+    name: '深邃夜讀',
+    icon: '🌙',
+    desc: '低刺激沉浸夜間模式'
   }
 };
 
 export const ThemeProvider = ({ children }) => {
-  // Theme state: 'light' | 'dark' | 'sepia'
+  // Theme state: 'light' | 'sepia' | 'green' | 'dark'
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('sixth_theme');
-    if (saved && ['light', 'dark', 'sepia'].includes(saved)) {
+    if (saved && ['light', 'dark', 'sepia', 'green'].includes(saved)) {
       return saved;
     }
     // Check system preference
@@ -77,7 +84,7 @@ export const ThemeProvider = ({ children }) => {
   }, [focusMode]);
 
   const toggleTheme = () => {
-    const themeCycle = ['light', 'sepia', 'dark'];
+    const themeCycle = ['light', 'sepia', 'green', 'dark'];
     const nextIdx = (themeCycle.indexOf(theme) + 1) % themeCycle.length;
     setTheme(themeCycle[nextIdx]);
   };

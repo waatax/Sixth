@@ -1507,3 +1507,149 @@
     border-radius: 2px;
   }
 }
+
+/* ==========================================================================
+   📱 Mobile Portrait & Responsive Optimization (< 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .exam-notes-page {
+    padding: 0.8rem 0.5rem 5rem;
+  }
+
+  .notes-hero-banner {
+    padding: 1rem 1.1rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1rem;
+  }
+
+  .notes-hero-title {
+    font-size: calc(1.5rem * var(--font-scale));
+  }
+
+  .notes-controls-bar {
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.2rem;
+  }
+
+  .semester-tabs-group {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    gap: 6px;
+  }
+
+  .semester-tab-btn {
+    padding: 8px 14px;
+    font-size: 0.84rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .subjects-pills-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    gap: 6px;
+  }
+
+  .subject-pill-btn {
+    padding: 6px 11px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .notes-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .notes-search-wrapper {
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .reading-tools-group {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .unit-note-card {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .unit-note-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .walkthrough-options {
+    grid-template-columns: 1fr !important;
+  }
+
+  .formula-item-card {
+    padding: 10px 12px;
+  }
+
+  .formula-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ==========================================================================
+   🍃 Eye-Care Green (舒眼青木) & Sepia Theme Overrides
+   ========================================================================== */
+[data-theme='green'] .notes-hero-banner {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.08) 0%, rgba(5, 150, 105, 0.08) 50%, rgba(20, 184, 166, 0.06) 100%);
+  border-color: rgba(22, 163, 74, 0.25);
+}
+
+[data-theme='green'] .pedagogy-pill.prior {
+  background: rgba(22, 163, 74, 0.12);
+  color: #15803d;
+  border-color: rgba(22, 163, 74, 0.25);
+}
+
+[data-theme='green'] .pedagogy-pill.skill {
+  background: rgba(5, 150, 105, 0.12);
+  color: #047857;
+  border-color: rgba(5, 150, 105, 0.25);
+}
+
+[data-theme='green'] .unit-highlights-banner {
+  background: linear-gradient(135deg, rgba(220, 252, 231, 0.7) 0%, rgba(209, 250, 229, 0.5) 100%);
+  border-color: rgba(22, 163, 74, 0.3);
+}
+
+[data-theme='green'] .highlight-item-box {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(22, 163, 74, 0.2);
+}
+
+[data-theme='green'] .formula-mnemonic-callout {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  border-left-color: #16a34a;
+  color: #14532d;
+}
+
+[data-theme='sepia'] .notes-hero-banner {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.08) 0%, rgba(217, 119, 6, 0.08) 50%, rgba(245, 158, 11, 0.06) 100%);
+  border-color: rgba(180, 83, 9, 0.22);
+}
+
+[data-theme='sepia'] .unit-highlights-banner {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.8) 0%, rgba(253, 230, 138, 0.45) 100%);
+  border-color: rgba(180, 83, 9, 0.3);
+}

@@ -481,7 +481,7 @@ const SubjectPage = () => {
         style={{ backgroundColor: 'var(--bg-secondary)', border: '1.5px solid var(--border-light)' }}
       >
         {/* Tier filter tabs */}
-        <div className="flex gap-1.5 flex-wrap w-full md:w-auto">
+        <div className="flex gap-1.5 flex-wrap mobile-scroll-row w-full md:w-auto">
           {[
             { id: 'all', label: `全部單元 (${units.length})` },
             { id: 'tier1', label: '🌱 基礎加固' },

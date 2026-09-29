@@ -1022,5 +1022,104 @@
   animation: slideUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* -----------------------------------------------------------
+ * 零基礎學力躍升 UI/UX 專屬樣式
+ * ----------------------------------------------------------- */
+.learning-roadmap-stepper-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
 
+.concept-knowledge-bridge-card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.problem-solving-scaffold-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.lesson-example-h3-banner {
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.08);
+}
+
+.scaffolding-hint-container {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* ==========================================================================
+   🍃 Eye-Care Green & Sepia Overrides for Lesson Page
+   ========================================================================== */
+[data-theme='green'] .scratchpad-canvas-container.bg-style-grid {
+  background-color: #f7faf7;
+  background-image: 
+    linear-gradient(rgba(22, 163, 74, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 163, 74, 0.12) 1px, transparent 1px);
+}
+
+[data-theme='green'] .scratchpad-canvas-container.bg-style-dots {
+  background-color: #f7faf7;
+  background-image: radial-gradient(rgba(22, 163, 74, 0.22) 1.5px, transparent 1.5px);
+}
+
+[data-theme='green'] .scratchpad-canvas-container.bg-style-blank {
+  background-color: #f7faf7;
+}
+
+[data-theme='green'] .lesson-page-wrapper .markdown-body {
+  color: var(--text-primary);
+}
+
+[data-theme='green'] .lesson-page-wrapper .markdown-body pre {
+  background-color: #173824 !important;
+  color: #f7faf7 !important;
+  border: 1px solid rgba(22, 163, 74, 0.3) !important;
+}
+
+[data-theme='sepia'] .scratchpad-canvas-container.bg-style-grid {
+  background-color: #fbf7ee;
+  background-image: 
+    linear-gradient(rgba(180, 83, 9, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 83, 9, 0.12) 1px, transparent 1px);
+}
+
+[data-theme='sepia'] .lesson-page-wrapper .markdown-body pre {
+  background-color: #2d2319 !important;
+  color: #fbf7ee !important;
+}
+
+/* ==========================================================================
+   📱 Mobile Portrait Adaptations (< 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .lesson-page-wrapper {
+    padding: 0;
+  }
+
+  .roadmap-stepper-steps-wrapper {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    gap: 8px;
+  }
+
+  .roadmap-step-pill {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .lesson-visual-img-container img {
+    max-height: 280px;
+  }
+
+  .lesson-floating-dock {
+    bottom: calc(76px + env(safe-area-inset-bottom, 12px)) !important;
+    right: 12px !important;
+  }
+}
 

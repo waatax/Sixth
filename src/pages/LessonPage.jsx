@@ -54,6 +54,9 @@ import InteractiveAnswerToggle from '../components/lesson/InteractiveAnswerToggl
 import LessonMiniLabWidget from '../components/lesson/LessonMiniLabWidget';
 import LessonCompanionPet from '../components/lesson/LessonCompanionPet';
 import LessonPulseCheck from '../components/lesson/LessonPulseCheck';
+import LearningRoadmapStepper from '../components/lesson/LearningRoadmapStepper';
+import ConceptKnowledgeBridge from '../components/lesson/ConceptKnowledgeBridge';
+import ProblemSolvingScaffold from '../components/lesson/ProblemSolvingScaffold';
 import './LessonPage.css';
 
 // Vite dynamic import for raw markdown files
@@ -856,6 +859,22 @@ const LessonPage = () => {
         </div>
       </div>
 
+      {/* 4-Stage Guided Roadmap Stepper for Unfamiliar Students */}
+      {sections.length > 0 && (
+        <LearningRoadmapStepper
+          sections={sections}
+          activeSectionId={activeSectionId}
+          onJumpToSection={scrollToSection}
+        />
+      )}
+
+      {/* Synthesized Concept Knowledge Bridge & Prerequisites Map */}
+      <ConceptKnowledgeBridge
+        unitId={unitId}
+        subjectId={currentSubject?.id || ''}
+        unitTitle={currentUnit.title}
+      />
+
       {/* Interactive Companion Mascot Pet */}
       <LessonCompanionPet 
         scrollProgress={scrollProgress}
@@ -1313,6 +1332,29 @@ const LessonPage = () => {
                     )}
                   </td>
                 );
+              },
+              h3: ({ node, children, ...props }) => {
+                const rawText = extractTextFromNode(node) || String(children);
+                if (rawText.includes('範例') || rawText.includes('例題')) {
+                  return (
+                    <div className="lesson-example-h3-banner flex items-center gap-2 mt-7 mb-3 p-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-300 dark:border-amber-800">
+                      <span className="badge badge-accent text-xs font-bold py-0.5 px-2 bg-amber-500 text-white">📝 實戰演練例題</span>
+                      <h3 className="text-base font-bold text-primary m-0" {...props}>{children}</h3>
+                    </div>
+                  );
+                }
+                return <h3 {...props}>{children}</h3>;
+              },
+              ul: ({ node, children, ...props }) => {
+                const rawText = extractTextFromNode(node);
+                if (rawText.includes('題目情境') && (rawText.includes('思考關鍵') || rawText.includes('詳盡步驟') || rawText.includes('解題步驟'))) {
+                  return (
+                    <ProblemSolvingScaffold rawText={rawText} isEnglish={isEnglishSubject}>
+                      {children}
+                    </ProblemSolvingScaffold>
+                  );
+                }
+                return <ul {...props}>{children}</ul>;
               },
               li: ({ node, children, ...props }) => {
                 const rawText = extractTextFromNode(node);
