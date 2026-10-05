@@ -61,6 +61,8 @@
 
 ## 🔑 核心觀念 2：康乃爾筆記法 (Cornell Notes)——課堂複習神器
 
+![圖解說明](./images/comp_u3_concept2.svg)
+
 由美國康乃爾大學教授華特·波克（Walter Pauk）研發，是公認最高效的**結構化筆記與自我測驗系統**！
 
 ```text
@@ -95,6 +97,8 @@
 
 ## 🔑 核心觀念 3：費曼學習法 (Feynman Technique)——以教促學
 
+![圖解說明](./images/comp_u3_concept3.svg)
+
 諾貝爾物理學獎得主理查·費曼（Richard Feynman）提出一條黃金準則：
 $\textcolor{#e91e63}{\textbf{「如果你無法用最簡單的白話文，把一個概念解釋給 8 歲小孩聽懂，就代表你還沒真正搞懂它！」}}$
 
@@ -123,6 +127,8 @@ $\textcolor{#e91e63}{\textbf{「如果你無法用最簡單的白話文，把一
 ---
 
 ## 🔑 核心觀念 4：全腦思維整理——心智圖 (Mind Mapping)
+
+![圖解說明](./images/comp_u3_concept4.svg)
 
 由英國「大腦之父」東尼·博贊（Tony Buzan）發明，利用**放射狀樹枝結構**模擬大腦神經元突觸，結合色彩與圖像，將整本書的重點濃縮於一張圖中！
 

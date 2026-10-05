@@ -50,6 +50,8 @@
 
 ## 🔑 核心觀念 2：文字魔法——「Show, Don't Tell (展現而非告知)」
 
+![圖解說明](./images/man_u2_concept2.svg)
+
 好作家的第一鐵律是：**不要直接「告訴」讀者結論，而是用具體畫面「展現」給讀者看！**
 
 $$\textcolor{#e91e63}{\textbf{動人畫面}} = \textcolor{#2196f3}{\textbf{五感摹寫 (Sensory)}} + \textcolor{#4caf50}{\textbf{微動作分解 (Action)}} + \textcolor{#ff9800}{\textbf{心理獨白 (Monologue)}}$$
@@ -81,6 +83,8 @@ $$\textcolor{#e91e63}{\textbf{動人畫面}} = \textcolor{#2196f3}{\textbf{五�
 
 ## 🔑 核心觀念 3：五感摹寫矩陣——打通讀者的感官通道
 
+![圖解說明](./images/man_u2_concept3.svg)
+
 描寫景色或場景時，善用「**視、聽、嗅、味、觸**」五種感官，能讓文章立體逼真：
 
 ```text
@@ -106,6 +110,8 @@ $$\textcolor{#e91e63}{\textbf{動人畫面}} = \textcolor{#2196f3}{\textbf{五�
 ---
 
 ## 🔑 核心觀念 4：寫作實戰法寶——6大開頭法與 5大結尾法
+
+![圖解說明](./images/man_u2_concept4.svg)
 
 ### 🌟 6 大吸睛開頭法
 

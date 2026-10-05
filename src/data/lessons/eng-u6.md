@@ -56,6 +56,8 @@
 
 ## 🔑 核心觀念 2：單字萬能拆解器——字首與字尾 (Prefixes & Suffixes)
 
+![圖解說明](./images/eng_u6_concept2.svg)
+
 英文單字是由「**字首 (前綴)** + **字根** + **字尾 (後綴)**」像樂高積木一樣組裝而成：
 - $\textcolor{#4caf50}{\textbf{字首 (Prefix)}}$：放在前面，通常**改變字義**（如正向變反向）。
 - $\textcolor{#ff9800}{\textbf{字尾 (Suffix)}}$：放在後面，通常**改變詞性**（如動詞變名詞/形容詞）。
@@ -112,6 +114,8 @@
 
 ## 🔑 核心觀念 3：上下文線索推理法 (Context Clues)
 
+![圖解說明](./images/eng_u6_concept3.svg)
+
 當遇到沒有字首字尾能拆的生字時，利用「上下文的四大蛛絲馬跡」來推理：
 
 1. 📖 **同義與定義線索 (Definition)**：*An **entomologist**, or a scientist who studies insects, found a new butterfly.*  
@@ -143,6 +147,8 @@
 ---
 
 ## 🔑 核心觀念 4：閱讀交通路標——轉折詞 (Linking Words)
+
+![圖解說明](./images/eng_u6_concept4.svg)
 
 轉折詞引導文章的邏輯走向，就像路口的路標指示：
 

@@ -59,6 +59,8 @@
 
 ## 🔑 核心觀念 2：西方代表性節慶全覽 (Western Festivals)
 
+![圖解說明](./images/eng_u5_concept2.svg)
+
 西方節慶融合了宗教歷史、感恩收穫與歡樂歡聚的文化精髓：
 
 ```text
@@ -104,6 +106,8 @@
 
 ## 🔑 核心觀念 3：節慶時間介系詞黃金法則 (in / on / at)
 
+![圖解說明](./images/eng_u5_concept3.svg)
+
 表達節慶時間時，介系詞的選擇取決於時間的「精準度」：
 
 ```text
@@ -141,6 +145,8 @@
 ---
 
 ## 🔑 核心觀念 4：手寫溫馨英文節慶卡片 (Greeting Card Writing)
+
+![圖解說明](./images/eng_u5_concept4.svg)
 
 一張標準且誠摯的節慶賀卡包含四個部分：
 

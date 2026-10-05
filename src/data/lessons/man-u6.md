@@ -65,6 +65,8 @@
 
 ## 🔑 核心觀念 2：簡報設計 Less is More (少即是多) 四大黃金法則
 
+![圖解說明](./images/man_u6_concept2.svg)
+
 簡報（Slides/PPT）是你的**視覺助攻工具**，千萬不要把簡報當成演講者的「提詞讀稿機」！
 
 $$\textcolor{#e91e63}{\textbf{神級簡報}} = \textcolor{#2196f3}{\textbf{大字少字 (高提煉)}} + \textcolor{#4caf50}{\textbf{一圖勝千言 (圖像化)}} + \textcolor{#ff9800}{\textbf{高對比配色 (易讀性)}} + \textcolor{#9c27b0}{\textbf{風格統一 (專業感)}}$$
@@ -81,6 +83,8 @@ $$\textcolor{#e91e63}{\textbf{神級簡報}} = \textcolor{#2196f3}{\textbf{大�
 ---
 
 ## 🔑 核心觀念 3：演講稿黃金架構（Hook - Story - Action）
+
+![圖解說明](./images/man_u6_concept3.svg)
 
 不知道上台該說什麼？背熟這個風靡全球的演說黃金架構：
 
@@ -106,6 +110,8 @@ $$\textcolor{#e91e63}{\textbf{神級簡報}} = \textcolor{#2196f3}{\textbf{大�
 ---
 
 ## 🔑 核心觀念 4：正向溝通藝術——三明治回饋法與 Q&A 應答
+
+![圖解說明](./images/man_u6_concept4.svg)
 
 ### 🍔 三明治回饋法（Sandwich Feedback Method）
 當同學報告完畢，老師請你提供評語時，如何給出建設性又不傷人的高品質回饋？

@@ -1028,3 +1028,37 @@ button, a, input, select, textarea, [role="button"] {
   animation: dynamicIslandExpand 0.35s var(--ios-spring);
 }
 
+/* ==========================================================================
+   14. Text Clamp & Subject Icon Micro-Interactions (信達雅美學動效)
+   ========================================================================== */
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.subject-icon-badge {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card-hoverable:hover .subject-icon-badge,
+.ios-glass-card:hover .subject-icon-badge {
+  transform: translateY(-2px) scale(1.06);
+}
+

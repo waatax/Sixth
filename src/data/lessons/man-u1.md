@@ -47,6 +47,8 @@
 
 ## 🔑 核心觀念 2：推論理解的邏輯公式——當個閱讀名偵探
 
+![圖解說明](./images/man_u1_concept2.svg)
+
 很多人以為「推論」就是憑感覺猜測，其實推論是一門嚴謹的邏輯思考！
 
 $$\textcolor{#e91e63}{\textbf{推論 (Inference)}} = \textcolor{#2196f3}{\textbf{文章線索 (Text Clues)}} + \textcolor{#4caf50}{\textbf{讀者先備知識 (Prior Knowledge)}}$$
@@ -84,6 +86,8 @@ $$\textcolor{#e91e63}{\textbf{推論 (Inference)}} = \textcolor{#2196f3}{\textbf
 
 ## 🔑 核心觀念 3：火眼金睛——分清「事實 (Fact)」與「觀點 (Opinion)」
 
+![圖解說明](./images/man_u1_concept3.svg)
+
 在現代閱讀與批判性思考中，最關鍵的能力之一就是**區分客觀事實與主觀觀點**。
 
 ### 📊 事實 vs 觀點深度對比表
@@ -115,6 +119,8 @@ $$\textcolor{#e91e63}{\textbf{推論 (Inference)}} = \textcolor{#2196f3}{\textbf
 ---
 
 ## 🔑 核心觀念 4：六何分析法 (5W1H)——拆解長文的超級工具
+
+![圖解說明](./images/man_u1_concept4.svg)
 
 當我們面對結構複雜的記敘文或新聞報導時，使用**六何分析法（5W1H）**能迅速將混亂的資訊轉化為條理分明的結構圖！
 

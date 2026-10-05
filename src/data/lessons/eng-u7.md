@@ -101,6 +101,8 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 📊 本單元核心考點與重點公式速查表
 
+![圖解說明](./images/eng_u7_concept4.svg)
+
 | 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
 | $\textcolor{#2196f3}{\textbf{動詞原形原則}}$ | will + **原形動詞 (V)**<br>be going to + **原形動詞 (V)** | **「遇見 will 和 to，動詞乖乖回原形」** | ❌ 誤寫成 He will goes 或 She is going to buying（to 後面必須是動詞原形 buy！）。 |

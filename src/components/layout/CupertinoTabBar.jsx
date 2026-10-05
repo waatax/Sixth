@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   BookOpen, 
   Zap, 
-  Sparkles, 
+  FlaskConical, 
   Swords, 
   LayoutGrid, 
   X, 
@@ -13,28 +13,32 @@ import {
   FileText, 
   Layers, 
   HelpCircle,
-  Globe
+  Globe,
+  Search,
+  BookmarkCheck,
+  Award
 } from 'lucide-react';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
 const CupertinoTabBar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMoreSheetOpen, setIsMoreSheetOpen] = useState(false);
 
   const mainTabs = [
     { path: '/', label: '學習領域', icon: BookOpen },
     { path: '/shorts', label: '短影音', icon: Zap },
-    { path: '/labs', label: '實驗室', icon: Sparkles },
+    { path: '/labs', label: '實驗室', icon: FlaskConical },
     { path: '/boss-battle', label: '魔王戰', icon: Swords },
   ];
 
   const moreItems = [
     { path: '/exam-notes', label: '章節講義 (PDF)', icon: FileText, color: '#6366f1', desc: '八科段考重點與A4講義' },
-    { path: '/flashcards', label: '速記翻翻卡', icon: Zap, color: '#f59e0b', desc: '考前重點高效速記' },
+    { path: '/flashcards', label: '速記翻翻卡', icon: BookmarkCheck, color: '#f59e0b', desc: '考前重點高效速記' },
     { path: '/mock-exam', label: '全真模擬考', icon: Timer, color: '#ef4444', desc: '倒數計時真實段考' },
     { path: '/mistakes', label: '錯題粉碎擂台', icon: CheckCircle2, color: '#10b981', desc: '揮動重錘擊碎弱點' },
-    { path: '/gept', label: '全民英檢先修', icon: Sparkles, color: '#8b5cf6', desc: '單字聽力雙語特訓' },
-    { path: '/prep', label: '國中七年級先修', icon: GraduationCap, color: '#0ea5e9', desc: '會考必備衔接要點' },
+    { path: '/gept', label: '全民英檢先修', icon: Award, color: '#8b5cf6', desc: '單字聽力雙語特訓' },
+    { path: '/prep', label: '國中七年級先修', icon: GraduationCap, color: '#0ea5e9', desc: '會考必備銜接要點' },
     { path: '/memory-game', label: '記憶翻牌挑戰', icon: Layers, color: '#ec4899', desc: '專注力與腦力特訓' },
     { path: '/question-bank', label: '全國段考試題庫', icon: HelpCircle, color: '#14b8a6', desc: '歷屆名校段考真題' },
     { path: '/resources', label: '全臺教育導航', icon: Globe, color: '#64748b', desc: '因材網與開放試題庫' }
@@ -43,6 +47,27 @@ const CupertinoTabBar = () => {
   const handleTabClick = () => {
     triggerHaptic('selection');
     playSound('ios_tap');
+  };
+
+  const handleJumpToSearch = () => {
+    setIsMoreSheetOpen(false);
+    triggerHaptic('light');
+    playSound('ios_tap');
+
+    if (location.pathname !== '/') {
+      navigate('/#topic-discovery-section');
+      setTimeout(() => {
+        const el = document.getElementById('topic-discovery-section');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        const input = document.querySelector('#topic-discovery-section input');
+        if (input) input.focus();
+      }, 250);
+    } else {
+      const el = document.getElementById('topic-discovery-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+      const input = document.querySelector('#topic-discovery-section input');
+      if (input) input.focus();
+    }
   };
 
   const isMoreActive = moreItems.some(item => location.pathname === item.path);
@@ -103,6 +128,10 @@ const CupertinoTabBar = () => {
           <div 
             className="ios-action-sheet" 
             onClick={(e) => e.stopPropagation()}
+            style={{
+              maxHeight: '85vh',
+              overflowY: 'auto'
+            }}
           >
             {/* Sheet Handle Indicator (iOS Pull-bar) */}
             <div className="flex justify-center mb-3">
@@ -118,7 +147,7 @@ const CupertinoTabBar = () => {
             </div>
 
             {/* Sheet Header */}
-            <div className="flex justify-between items-center pb-3 mb-4 border-b" style={{ borderColor: 'var(--border-light)' }}>
+            <div className="flex justify-between items-center pb-3 mb-3 border-b" style={{ borderColor: 'var(--border-light)' }}>
               <div className="flex items-center gap-2">
                 <LayoutGrid size={20} style={{ color: 'var(--accent-primary)' }} />
                 <span style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text-primary)' }}>
@@ -142,8 +171,30 @@ const CupertinoTabBar = () => {
               </button>
             </div>
 
+            {/* 🔍 快速主題搜尋快捷條 */}
+            <button
+              onClick={handleJumpToSearch}
+              className="w-full mb-3.5 p-3 rounded-2xl flex items-center justify-between text-left ios-pressable"
+              style={{
+                backgroundColor: 'var(--accent-soft)',
+                border: '1.5px solid var(--accent-primary)',
+                color: 'var(--accent-primary)'
+              }}
+            >
+              <div className="flex items-center gap-2.5">
+                <Search size={18} />
+                <div>
+                  <div className="text-xs font-black">🔍 智能探索 64 門主題課堂</div>
+                  <div className="text-[10px] text-tertiary">圓面積、酸鹼試紙、修辭、負數一鍵搜尋</div>
+                </div>
+              </div>
+              <span className="text-[11px] font-extrabold py-1 px-2.5 rounded-full bg-white dark:bg-slate-900 shadow-sm">
+                前往 ➔
+              </span>
+            </button>
+
             {/* Grid of All Modules */}
-            <div className="grid grid-cols-2 gap-3 mb-2">
+            <div className="grid grid-cols-2 gap-2.5 mb-2">
               {moreItems.map((item) => {
                 const Icon = item.icon;
                 const isSelected = location.pathname === item.path;
@@ -155,7 +206,7 @@ const CupertinoTabBar = () => {
                       setIsMoreSheetOpen(false);
                       handleTabClick();
                     }}
-                    className="ios-pressable p-3 rounded-2xl flex items-start gap-3 text-left"
+                    className="ios-pressable p-3 rounded-2xl flex items-start gap-2.5 text-left"
                     style={{
                       textDecoration: 'none',
                       backgroundColor: isSelected ? 'var(--accent-soft)' : 'var(--bg-tertiary)',
@@ -166,21 +217,23 @@ const CupertinoTabBar = () => {
                       style={{
                         width: '36px',
                         height: '36px',
-                        borderRadius: '10px',
-                        backgroundColor: item.color,
-                        color: '#ffffff',
+                        borderRadius: '11px',
+                        backgroundColor: `${item.color}18`,
+                        border: `1.5px solid ${item.color}35`,
+                        color: item.color,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        flexShrink: 0
+                        flexShrink: 0,
+                        boxShadow: `0 2px 6px ${item.color}15`
                       }}
                     >
-                      <Icon size={18} />
+                      <Icon size={18} strokeWidth={2.2} />
                     </div>
                     <div style={{ overflow: 'hidden' }}>
                       <div 
                         style={{ 
-                          fontSize: '0.85rem', 
+                          fontSize: '0.84rem', 
                           fontWeight: 700, 
                           color: isSelected ? 'var(--accent-text)' : 'var(--text-primary)',
                           whiteSpace: 'nowrap',

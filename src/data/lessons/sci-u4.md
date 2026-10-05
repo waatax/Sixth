@@ -75,6 +75,8 @@
 
 ## 🔑 核心觀念 2：礦物的身分證——辨識四大指標
 
+![圖解說明](./images/sci_u4_concept2.svg)
+
 岩石是由「$\textcolor{#00bcd4}{\textbf{礦物 (Minerals)}}$」所組成的天然均質固體無機物。要辨識不同的礦物，地質學家會使用以下四種科學檢驗方法：
 
 ```text
@@ -102,6 +104,8 @@ $$\textcolor{#4caf50}{\textbf{滑石 (1)}} \rightarrow \textcolor{#4caf50}{\text
 
 ## 🔑 核心觀念 3：地貌的雕刻師——風化、侵蝕、搬運與堆積
 
+![圖解說明](./images/sci_u4_concept3.svg)
+
 地表的岩石並非恆久不變，在大自然外營力的持續作用下，經歷了四大循環階段：
 
 ```text
@@ -122,6 +126,8 @@ $$\textcolor{#4caf50}{\textbf{滑石 (1)}} \rightarrow \textcolor{#4caf50}{\text
 ---
 
 ## 🔑 核心觀念 4：板塊運動與地震能量釋放
+
+![圖解說明](./images/sci_u4_concept4.svg)
 
 地球的最外層是由地殼與上部地函頂部組成的岩石圈，破裂拼接成十幾個巨大的$\textcolor{#e91e63}{\textbf{板塊 (Tectonic Plates)}}$。
 

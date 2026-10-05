@@ -69,6 +69,8 @@
 
 ## 🔑 核心觀念 2：地球大磁鐵與指北針
 
+![圖解說明](./images/sci_u3_concept2.svg)
+
 我們的地球本體就是一顆巨大無比的球體磁鐵！因為地球外地核中含有高溫流動的液態鐵與鎳，透過發電機效應產生了覆蓋全地球的$\textcolor{#2196f3}{\textbf{地磁場}}$。
 
 ```text
@@ -100,6 +102,8 @@
 
 ## 🔑 核心觀念 3：電流的磁效應——厄斯特的劃時代發現
 
+![圖解說明](./images/sci_u3_concept3.svg)
+
 1820 年，丹麥物理學家**厄斯特 (Hans Christian Ørsted)** 在課堂實驗中偶然發現：當導線通上直流電時，放置在導線下方或上方的指北針磁針竟然發生了明顯的$\textcolor{#ff9800}{\textbf{偏轉}}$！
 
 $$\textcolor{#e91e63}{\textbf{重大科學結論：}} \textcolor{#2196f3}{\textbf{電流 (流動的電荷)}} \text{ 會在其周圍空間激發出 } \textcolor{#e91e63}{\textbf{磁場 (Magnetic Field)}}$$
@@ -123,6 +127,8 @@ $$\textcolor{#e91e63}{\textbf{重大科學結論：}} \textcolor{#2196f3}{\textb
 ---
 
 ## 🔑 核心觀念 4：電磁鐵——威力強大的可控磁鐵
+
+![圖解說明](./images/sci_u3_concept4.svg)
 
 將絕緣漆包線緊密纏繞在一根純鐵釘（鐵芯）上，通入直流電流，鐵釘便瞬間獲得強大磁性，這就是$\textcolor{#9c27b0}{\textbf{電磁鐵 (Electromagnet)}}$！
 

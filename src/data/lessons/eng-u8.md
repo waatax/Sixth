@@ -99,6 +99,8 @@ In our daily lives, we are always comparing things:
 
 ## 📊 本單元核心考點與重點公式速查表
 
+![圖解說明](./images/eng_u8_concept4.svg)
+
 | 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
 | $\textcolor{#2196f3}{\textbf{雙寫字尾原則}}$ | 單一短母音 + 單一子音（如 big, hot, thin, fat） | **「母短子單停一下，雙寫字尾再加 er」** | ❌ 誤寫成 biger 或 hoter（漏掉雙寫！正確為 bigger, hotter）。 |

@@ -17,7 +17,11 @@ import {
   FileText,
   BookOpen,
   Download,
-  HelpCircle
+  HelpCircle,
+  Search,
+  FlaskConical,
+  BookmarkCheck,
+  Flame
 } from 'lucide-react';
 import GuidedStartWizard from '../components/common/GuidedStartWizard';
 import DailyQuestCard from '../components/common/DailyQuestCard';
@@ -25,8 +29,22 @@ import DailyLuckyWheel from '../components/gamification/DailyLuckyWheel';
 import PetSanctuaryModal from '../components/gamification/PetSanctuaryModal';
 import GachaLootModal from '../components/gamification/GachaLootModal';
 import LectureNotesDownloadHub from '../components/home/LectureNotesDownloadHub';
+import TopicDiscoveryExplorer from '../components/home/TopicDiscoveryExplorer';
+import SubjectIconBadge from '../components/common/SubjectIconBadge';
 import { useGamification } from '../context/GamificationContext';
 import { triggerHaptic, playSound, dispatchDynamicIsland } from '../utils/soundEffects';
+
+// 八大學科精選代表主題標籤 (信達雅：讓學童一眼掌握核心亮點)
+const SUBJECT_HIGHLIGHT_TOPICS = {
+  math: ['圓面積', '比與比值', '速率追趕', '柱體體積', '未知數方程'],
+  science: ['水溶液酸鹼', '槓桿天平', '電磁鐵', '天氣鋒面', '顯微鏡'],
+  mandarin: ['閱讀理解', '修辭成語', '古典詩詞', '記敘議論文', '造字六書'],
+  social: ['臺灣民主', '多元族群', '產業轉型', 'SDGs永續', '世界遺產'],
+  english: ['Daily Routines', 'Past Tense 冒險', '問路方向', 'GEPT核心字彙'],
+  arts: ['色彩構圖', '音樂節奏', '戲劇舞台', '定格動畫與偶戲'],
+  health_pe: ['青春期蛻變', '餐盤營養', 'CPR急救防護', '心理抗壓'],
+  integrative: ['自律時間管理', '高EQ人際溝通', '生涯天賦探索', '媒體素養']
+};
 
 const HomePage = () => {
   const [categoryFilter, setCategoryFilter] = useState('all');
@@ -102,24 +120,46 @@ const HomePage = () => {
             </div>
             
             <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.9rem * var(--font-scale))', letterSpacing: '-0.02em', lineHeight: 1.3 }}>
-              歡迎回來，{currentTitle}！直覺探索八大學科與章節講義
+              歡迎回來，{currentTitle}！直覺探索八大學科與主題課堂
             </h1>
 
             <p className="text-secondary" style={{ marginTop: '10px', fontSize: 'calc(0.96rem * var(--font-scale))', lineHeight: 1.65 }}>
-              每個單元皆具備 <strong style={{ color: 'var(--accent-primary)' }}>「視覺概念圖解」</strong>、<strong style={{ color: '#6366f1' }}>「章節段考講義 (PDF)」</strong> 與 <strong style={{ color: '#10b981' }}>「互動探究模擬」</strong>。點選下方科目即可立即開始學習與下載講義！
+              每個單元皆具備 <strong style={{ color: 'var(--accent-primary)' }}>「視覺概念圖解」</strong>、<strong style={{ color: '#6366f1' }}>「章節段考講義 (PDF)」</strong> 與 <strong style={{ color: '#10b981' }}>「互動探究模擬」</strong>。立即從下方智能搜尋感興趣的主題，或直接展開科目闖關！
             </p>
 
             {/* Quick Fast Jump Action Buttons */}
             <div className="flex flex-wrap gap-2.5 mt-4">
+              {/* 🎯 智能主題探索快捷鍵 */}
               <button
-                onClick={() => scrollToSection('subjects-section')}
+                onClick={() => scrollToSection('topic-discovery-section')}
                 className="ios-pressable btn-primary flex items-center gap-1.5 text-xs font-black py-2 px-3.5"
                 style={{
                   borderRadius: 'var(--radius-md)',
-                  boxShadow: '0 3px 10px rgba(37, 99, 235, 0.3)'
+                  background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)',
+                  color: '#ffffff',
+                  boxShadow: '0 3px 10px rgba(124, 58, 237, 0.35)',
+                  border: 'none',
+                  cursor: 'pointer'
                 }}
               >
-                <span>🚀 進入八大學科學習</span>
+                <Sparkles size={14} />
+                <span>🎯 探索感興趣主題</span>
+              </button>
+
+              <button
+                onClick={() => scrollToSection('subjects-section')}
+                className="ios-pressable flex items-center gap-1.5 text-xs font-black py-2 px-3.5"
+                style={{
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: 'var(--bg-secondary)',
+                  color: 'var(--text-primary)',
+                  border: '1.5px solid var(--border-strong)',
+                  boxShadow: 'var(--shadow-sm)',
+                  cursor: 'pointer'
+                }}
+              >
+                <BookOpen size={14} style={{ color: 'var(--accent-primary)' }} />
+                <span>📚 八大學科課綱</span>
               </button>
 
               <button
@@ -135,7 +175,7 @@ const HomePage = () => {
                 }}
               >
                 <Download size={14} />
-                <span>📑 快速下載章節講義 (57份PDF)</span>
+                <span>📑 下載章節講義 (57份PDF)</span>
               </button>
 
               <Link
@@ -144,7 +184,7 @@ const HomePage = () => {
                 className="ios-pressable btn-outline flex items-center gap-1.5 text-xs font-bold py-2 px-3"
                 style={{ borderRadius: 'var(--radius-md)', textDecoration: 'none' }}
               >
-                <Sparkles size={14} className="text-emerald-500" />
+                <FlaskConical size={14} className="text-emerald-500" />
                 <span>🔬 互動實驗室</span>
               </Link>
             </div>
@@ -209,13 +249,18 @@ const HomePage = () => {
       </div>
 
       {/* ============================================================ */}
-      {/* 📚 2. 【核心直覺入口】八大學科學習中心 (優先層級提升至最上方) */}
+      {/* 🎯 2. 【全新核心】全科知識主題探索與智能搜尋中心 (直覺找到感興趣主題) */}
+      {/* ============================================================ */}
+      <TopicDiscoveryExplorer />
+
+      {/* ============================================================ */}
+      {/* 📚 3. 【核心直覺入口】八大學科學習領域課綱地圖 */}
       {/* ============================================================ */}
       <section id="subjects-section" className="scroll-mt-20">
         <div className="flex justify-between items-center flex-wrap gap-3 mb-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="badge badge-accent font-bold">學習首選</span>
+              <span className="badge badge-accent font-bold">系統課綱</span>
               <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.4rem * var(--font-scale))', whiteSpace: 'nowrap' }}>
                 📖 八大學科學習領域・直覺闖關入口
               </h2>
@@ -265,6 +310,7 @@ const HomePage = () => {
             const maxSubjectStars = unitCount * 3;
             const completedCount = units.filter(u => (unitStars[u.id] || 0) > 0).length;
             const progressPercent = maxSubjectStars > 0 ? Math.round((subjectStars / maxSubjectStars) * 100) : 0;
+            const highlightTopics = SUBJECT_HIGHLIGHT_TOPICS[subject.id] || [];
 
             return (
               <div
@@ -282,41 +328,10 @@ const HomePage = () => {
                   overflow: 'hidden'
                 }}
               >
-                {/* Background Mascot Watermark */}
-                <div 
-                  style={{
-                    position: 'absolute',
-                    top: '-10px',
-                    right: '-8px',
-                    fontSize: '4.5rem',
-                    opacity: 0.07,
-                    userSelect: 'none',
-                    pointerEvents: 'none'
-                  }}
-                >
-                  {subject.emoji}
-                </div>
-
                 <div>
-                  {/* Top Header: Mascot Avatar + Badges */}
+                  {/* Top Header: 信達雅 Squircle 向量圖示 + 吉祥物與星星徽章 */}
                   <div className="flex justify-between items-start mb-3.5">
-                    <div 
-                      style={{
-                        width: '54px',
-                        height: '54px',
-                        borderRadius: '16px',
-                        backgroundColor: `${subject.color}15`,
-                        border: `2px solid ${subject.color}35`,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '1.9rem',
-                        boxShadow: `0 4px 12px ${subject.color}20`,
-                        flexShrink: 0
-                      }}
-                    >
-                      {subject.emoji}
-                    </div>
+                    <SubjectIconBadge id={subject.id} size="lg" />
 
                     <div className="flex flex-col items-end gap-1">
                       <span
@@ -339,7 +354,7 @@ const HomePage = () => {
                   </div>
 
                   {/* Subject Title */}
-                  <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.3rem', fontWeight: 800 }}>
+                  <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.28rem', fontWeight: 800 }}>
                     {subject.name}
                   </h3>
 
@@ -364,6 +379,29 @@ const HomePage = () => {
                   <p className="text-sm text-secondary" style={{ lineHeight: 1.55, fontSize: '0.86rem', margin: 0 }}>
                     {subject.desc}
                   </p>
+
+                  {/* 🔥 熱門亮點主題標籤 (讓使用者一眼看出有哪些感興趣主題) */}
+                  <div className="mt-3">
+                    <div className="text-[10px] text-tertiary font-bold mb-1 flex items-center gap-1">
+                      <Flame size={11} className="text-amber-500" />
+                      <span>精選探索亮點：</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1">
+                      {highlightTopics.map((topic, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="text-[11px] font-semibold py-0.5 px-2 rounded-md"
+                          style={{
+                            backgroundColor: `${subject.color}10`,
+                            color: subject.color,
+                            border: `1px solid ${subject.color}20`
+                          }}
+                        >
+                          #{topic}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
                   {/* Unit Progress Mini-bar */}
                   <div className="mt-3 pt-2">
@@ -408,7 +446,7 @@ const HomePage = () => {
                         boxShadow: `0 3px 10px ${subject.color}35`
                       }}
                     >
-                      <span>🚀 進入闖關 ({unitCount} 關)</span>
+                      <span>🚀 進入課堂 ({unitCount} 關)</span>
                       <ArrowRight size={13} />
                     </Link>
 
@@ -461,17 +499,17 @@ const HomePage = () => {
       </section>
 
       {/* ============================================================ */}
-      {/* 📑 3. 【全新高光】章節講義與考前手冊快速下載中心 (核心需求元件) */}
+      {/* 📑 4. 【全新高光】章節講義與考前手冊快速下載中心 */}
       {/* ============================================================ */}
       <LectureNotesDownloadHub />
 
       {/* ============================================================ */}
-      {/* ☀️ 4. 每日自主微任務 (Daily Quest) */}
+      {/* ☀️ 5. 每日自主微任務 (Daily Quest) */}
       {/* ============================================================ */}
       <DailyQuestCard />
 
       {/* ============================================================ */}
-      {/* 🎮 5. 沉浸式素養與實戰工具殿堂 (互動實驗、短影音、魔王城堡、計時模擬) */}
+      {/* 🎮 6. 沉浸式素養與實戰工具殿堂 (互動實驗、短影音、魔王城堡、計時模擬) */}
       {/* ============================================================ */}
       <section>
         <div className="flex items-center justify-between mb-3">
@@ -500,20 +538,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'rgba(16, 185, 129, 0.15)',
-                color: '#10b981',
-                padding: '12px',
-                borderRadius: 'var(--radius-lg)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}
-            >
-              <Sparkles size={24} />
-            </div>
+            <SubjectIconBadge id="labs" size="md" />
             <div>
               <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
                 <span>互動探究實驗室</span>
@@ -538,20 +563,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'rgba(236, 72, 153, 0.15)',
-                color: '#ec4899',
-                padding: '12px',
-                borderRadius: 'var(--radius-lg)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}
-            >
-              <Zap size={24} />
-            </div>
+            <SubjectIconBadge id="shorts" size="md" />
             <div>
               <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
                 <span>知識短影音</span>
@@ -576,20 +588,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'rgba(139, 92, 246, 0.15)',
-                color: '#8b5cf6',
-                padding: '12px',
-                borderRadius: 'var(--radius-lg)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}
-            >
-              <Swords size={24} />
-            </div>
+            <SubjectIconBadge id="boss-battle" size="md" />
             <div>
               <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
                 <span>魔王城堡挑戰賽</span>
@@ -614,20 +613,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'rgba(59, 130, 246, 0.15)',
-                color: '#3b82f6',
-                padding: '12px',
-                borderRadius: 'var(--radius-lg)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0
-              }}
-            >
-              <Layers size={24} />
-            </div>
+            <SubjectIconBadge id="memory-game" size="md" />
             <div>
               <div className="flex items-center gap-1.5 font-extrabold text-base text-primary">
                 <span>記憶翻牌對決</span>
@@ -642,7 +628,7 @@ const HomePage = () => {
       </section>
 
       {/* ============================================================ */}
-      {/* ⚡ 6. 快速充電與考前利器 (閃卡、模擬考、錯題本、英檢、國中先修) */}
+      {/* ⚡ 7. 快速充電與考前利器 (閃卡、模擬考、錯題本、英檢、國中先修) */}
       {/* ============================================================ */}
       <section>
         <div className="flex items-center gap-2 mb-3">
@@ -669,19 +655,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-warning-soft)',
-                color: 'var(--accent-warning)',
-                padding: '10px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Zap size={20} />
-            </div>
+            <SubjectIconBadge id="flashcards" size="sm" customColor="#f59e0b" />
             <div>
               <div style={{ fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-primary)' }}>速記閃卡</div>
               <div className="text-xs text-secondary" style={{ marginTop: '2px', lineHeight: 1.4 }}>
@@ -700,19 +674,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-soft)',
-                color: 'var(--accent-primary)',
-                padding: '10px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Timer size={20} />
-            </div>
+            <SubjectIconBadge id="mock-exam" size="sm" customColor="#ef4444" />
             <div>
               <div style={{ fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-primary)' }}>計時全真模擬</div>
               <div className="text-xs text-secondary" style={{ marginTop: '2px', lineHeight: 1.4 }}>
@@ -731,19 +693,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-error-soft)',
-                color: 'var(--accent-error)',
-                padding: '10px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <CheckCircle2 size={20} />
-            </div>
+            <SubjectIconBadge id="mistakes" size="sm" customColor="#10b981" />
             <div>
               <div style={{ fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-primary)' }}>錯題粉碎本</div>
               <div className="text-xs text-secondary" style={{ marginTop: '2px', lineHeight: 1.4 }}>
@@ -762,19 +712,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'hsl(192, 88%, 95%)',
-                color: 'hsl(192, 88%, 45%)',
-                padding: '10px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <Award size={20} />
-            </div>
+            <SubjectIconBadge id="gept" size="sm" customColor="#8b5cf6" />
             <div>
               <div style={{ fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-primary)' }}>全民英檢先修</div>
               <div className="text-xs text-secondary" style={{ marginTop: '2px', lineHeight: 1.4 }}>
@@ -793,19 +731,7 @@ const HomePage = () => {
               textDecoration: 'none'
             }}
           >
-            <div
-              style={{
-                backgroundColor: 'var(--accent-purple-soft)',
-                color: 'var(--accent-purple)',
-                padding: '10px',
-                borderRadius: 'var(--radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <GraduationCap size={20} />
-            </div>
+            <SubjectIconBadge id="prep" size="sm" customColor="#0ea5e9" />
             <div>
               <div style={{ fontWeight: 700, fontSize: '0.98rem', color: 'var(--text-primary)' }}>國中七年級先修</div>
               <div className="text-xs text-secondary" style={{ marginTop: '2px', lineHeight: 1.4 }}>

@@ -54,6 +54,8 @@
 
 ## 🔑 核心觀念 2：四大神級說明方法——讓文字精準又生動
 
+![圖解說明](./images/man_u3_concept2.svg)
+
 要讓讀者輕鬆讀懂複雜的知識，必須靈活調配「四大說明方法」：
 
 $$\textcolor{#e91e63}{\textbf{卓越說明}} = \textcolor{#2196f3}{\textbf{列數字 (精確)}} + \textcolor{#4caf50}{\textbf{舉例子 (具體)}} + \textcolor{#ff9800}{\textbf{作比較 (鮮明)}} + \textcolor{#9c27b0}{\textbf{打比方 (形象)}}$$
@@ -81,6 +83,8 @@ $$\textcolor{#e91e63}{\textbf{卓越說明}} = \textcolor{#2196f3}{\textbf{列�
 
 ## 🔑 核心觀念 3：議論文三要素——邏輯說服的堅固金字塔
 
+![圖解說明](./images/man_u3_concept3.svg)
+
 議論文的靈魂在於「**提出個人主張，並運用嚴謹的證據與邏輯，說服他人認同並接受**」。
 
 ```text
@@ -107,6 +111,8 @@ $$\textcolor{#e91e63}{\textbf{卓越說明}} = \textcolor{#2196f3}{\textbf{列�
 ---
 
 ## 🔑 核心觀念 4：三大文體全方位大對決
+
+![圖解說明](./images/man_u3_concept4.svg)
 
 在小學與國中語文學習中，三大文體扮演著不同角色：
 

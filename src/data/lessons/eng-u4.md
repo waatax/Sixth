@@ -55,6 +55,8 @@
 
 ## 🔑 核心觀念 2：病痛症狀拆解與醫病對話 (Symptoms & Clinic Dialogue)
 
+![圖解說明](./images/eng_u4_concept2.svg)
+
 在英文中，很多疼痛單字是由「$\textcolor{#2196f3}{\textbf{身體部位}} + \textcolor{#e91e63}{\textbf{-ache (疼痛)}}$」組合而成（-ache 發音為 /eɪk/），就像玩積木一樣簡單：
 
 ```text
@@ -102,6 +104,8 @@
 
 ## 🔑 核心觀念 3：健康建議指令——助動詞 should / shouldn't
 
+![圖解說明](./images/eng_u4_concept3.svg)
+
 當家人朋友生病時，我們要怎麼給予關心和建議呢？使用助動詞 $\textcolor{#4caf50}{\textbf{should (應該)}}$ 與 $\textcolor{#e91e63}{\textbf{shouldn't (不應該)}}$ 來幫忙：
 
 $$\text{肯定句：主詞} + \textcolor{#4caf50}{\textbf{should}} + \textcolor{#00bcd4}{\textbf{動詞原形 (V)}}.$$
@@ -140,6 +144,8 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 ---
 
 ## 🔑 核心觀念 4：六大類食物營養金字塔 (The 6 Food Groups)
+
+![圖解說明](./images/eng_u4_concept4.svg)
 
 要維持無敵的免疫力、長高長壯，每天必須從六大類食物攝取均衡營養！跟著圖表，看看你今天吃對了嗎？
 

@@ -48,6 +48,8 @@
 
 ## 🔑 核心觀念 2：柱體體積通用公式——「底面積 $\times$ 高」
 
+![圖解說明](./images/math_u8_concept2.svg)
+
 不管是什麼底面形狀的柱體，體積的通用核心公式永遠只有一個：
 
 $$ \textcolor{#e91e63}{\mathbf{\text{柱體體積} = \text{底面積} \times \text{高} \quad (V = A_{\text{base}} \times h)}} $$
@@ -80,6 +82,8 @@ $$ \textcolor{#e91e63}{\mathbf{\text{柱體體積} = \text{底面積} \times \te
 ---
 
 ## 🔑 核心觀念 3：柱體表面積——「2 個底面積 $+$ 側面積」
+
+![圖解說明](./images/math_u8_concept3.svg)
 
 表面積就是把柱體的所有外表剪開攤平（展開圖），所有面之面積的總和：
 
@@ -120,6 +124,8 @@ $ \text{圓柱表面積} = (r \times r \times 3.14 \times 2) + (2 \times r \time
 ---
 
 ## 🔑 核心觀念 4：特殊題型——無蓋容器表面積
+
+![圖解說明](./images/math_u8_concept4.svg)
 
 在生活題目中常會遇到「無蓋水杯」、「無蓋筆筒」或「游泳池貼磁磚」：
 - $\textcolor{#d32f2f}{\textbf{無蓋容器表面積 = 1 個底面積 + 側面積}}$（只有底部，沒有上面的蓋子！）

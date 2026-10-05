@@ -54,6 +54,8 @@ $$\textcolor{#e91e63}{\textbf{熱傳遞方向鐵則：}} \text{熱量永遠由 }
 
 ## 🔑 核心觀念 2：熱對流——升降梯般的流體循環
 
+![圖解說明](./images/sci_u5_concept2.svg)
+
 $\textcolor{#2196f3}{\textbf{熱對流 (Thermal Convection)}}$ 是$\textcolor{#2196f3}{\textbf{液體與氣體（流體）}}$中最主要的熱傳播方式。當流體底部受熱時，受熱區域流體溫度升高、體積膨脹、密度變小而**向上浮起**；上方較冷、密度較大的流體則**向下沉降補充**，形成循環流動。
 
 $$\textcolor{#2196f3}{\textbf{對流黃金八字口訣：}} \textcolor{#e91e63}{\textbf{熱升 (密度小)}} \longleftrightarrow \textcolor{#2196f3}{\textbf{冷降 (密度大)}}$$
@@ -83,6 +85,8 @@ $$\textcolor{#2196f3}{\textbf{對流黃金八字口訣：}} \textcolor{#e91e63}{
 
 ## 🔑 核心觀念 3：熱輻射——穿透真空的電磁光波
 
+![圖解說明](./images/sci_u5_concept3.svg)
+
 $\textcolor{#ff9800}{\textbf{熱輻射 (Thermal Radiation)}}$ 是熱能以$\textcolor{#ff9800}{\textbf{電磁波（主要是紅外線）}}$形式直接向四面八方發射傳播的方式。它$\textcolor{#e91e63}{\textbf{完全不需要任何介質}}$，在真空的宇宙太空中依然能以光速前進！
 
 ```text
@@ -109,6 +113,8 @@ $\textcolor{#ff9800}{\textbf{熱輻射 (Thermal Radiation)}}$ 是熱能以$\text
 ---
 
 ## 🔑 核心觀念 4：熱脹冷縮與保溫瓶的究極防護
+
+![圖解說明](./images/sci_u5_concept4.svg)
 
 大多數物質受熱時微觀粒子運動加劇、間距拉大，呈現$\textcolor{#e91e63}{\textbf{受熱膨脹}}$；降溫時粒子振動減緩、間距縮小，呈現$\textcolor{#2196f3}{\textbf{遇冷收縮}}$。
 

@@ -65,6 +65,8 @@
 
 ## 🔑 核心觀念 2：空間幾何圖解——5 大地方介系詞 (Prepositions of Place)
 
+![圖解說明](./images/eng_u3_concept2.svg)
+
 要精準指出建築物的位置，空間介系詞就像 GPS 座標一樣不可或缺！
 
 ```text
@@ -88,6 +90,8 @@
 
 ### 📊 本單元核心考點與重點公式速查表
 
+![圖解說明](./images/eng_u3_concept4.svg)
+
 | 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
 | $\textcolor{#e91e63}{\textbf{禮貌問路三大核心句型}}$ | 1. **Excuse me, how do I get to the [place]?**<br>2. **Where is the nearest [place]?**<br>3. **Can you tell me the way to the [place]?** | **「問路先說 Excuse me，How do I get to 禮貌佳」** | 💡 問路開頭務必先說 *Excuse me*（不好意思），展現良好英語社交禮儀 |
@@ -96,6 +100,8 @@
 | $\textcolor{#2e7d32}{\textbf{地圖問答常用場所單字}}$ | library (圖書館), post office (郵局), supermarket (超市), hospital (醫院), train station (火車站) | **「辨識地標關鍵字，指路地圖不迷路」** | 💡 描述位置時常用定冠詞 **the**，例如 *The bookstore is across from the school.* |
 
 ## 🔑 核心觀念 3：問路與指路實戰指南 (Asking & Giving Directions)
+
+![圖解說明](./images/eng_u3_concept3.svg)
 
 ### ❓ 禮貌問路句型 (Asking for Directions)
 問路前一定要先說 $\textcolor{#e91e63}{\textbf{Excuse me}}$（不好意思打擾一下），這是國際禮儀！

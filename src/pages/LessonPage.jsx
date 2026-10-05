@@ -36,9 +36,20 @@ import {
   Palette,
   FileText,
   Flame,
-  X
+  X,
+  BookmarkCheck,
+  AlertTriangle,
+  Compass,
+  GraduationCap,
+  Calculator,
+  FlaskConical,
+  ShieldCheck,
+  Layers,
+  MessageSquareQuote
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
+import { interactiveLabsList } from '../data/interactiveLabsData';
+import SubjectIconBadge from '../components/common/SubjectIconBadge';
 import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
 import { speechEngine, extractTextFromNode, extractEnglishSentence } from '../utils/speechHelper';
 import { useTheme } from '../context/ThemeContext';
@@ -119,6 +130,26 @@ const preprocessLessonMarkdown = (raw) => {
     .replace(/\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\textbf\{([^{}]*\\frac[^{}]*)\}\}/g, '$1')
     // 3. 淨化可能殘留的 non-math unicode symbols inside inline math
     .replace(/\$\s*\\mathbf\{([^a-zA-Z0-9\s\\+\-*/=<>^_{}()]+)\}\s*\$/g, '**$1**');
+};
+
+// 根據章節小標題內容自動解析配置信達雅語義向量圖示
+const getSectionIconInfo = (title = '') => {
+  if (title.includes('導引') || title.includes('情境') || title.includes('為什麼')) {
+    return { icon: Compass, color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.12)', label: '導引' };
+  } else if (title.includes('觀念') || title.includes('定義') || title.includes('原理')) {
+    return { icon: BookOpen, color: '#10b981', bg: 'rgba(16, 185, 129, 0.12)', label: '觀念' };
+  } else if (title.includes('範例') || title.includes('例題') || title.includes('解題') || title.includes('考題')) {
+    return { icon: PenTool, color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.12)', label: '例題' };
+  } else if (title.includes('重點') || title.includes('速查') || title.includes('整理') || title.includes('表格') || title.includes('公式')) {
+    return { icon: TableIcon, color: '#6366f1', bg: 'rgba(99, 102, 241, 0.12)', label: '速查' };
+  } else if (title.includes('迷思') || title.includes('陷阱') || title.includes('防雷')) {
+    return { icon: AlertTriangle, color: '#ef4444', bg: 'rgba(239, 68, 68, 0.12)', label: '迷思' };
+  } else if (title.includes('練習') || title.includes('測驗') || title.includes('隨堂')) {
+    return { icon: CheckCircle2, color: '#0ea5e9', bg: 'rgba(14, 165, 233, 0.12)', label: '測驗' };
+  } else if (title.includes('素養') || title.includes('前瞻') || title.includes('新知') || title.includes('你知道嗎')) {
+    return { icon: Sparkles, color: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.12)', label: '素養' };
+  }
+  return { icon: BookOpen, color: 'var(--accent-primary)', bg: 'var(--accent-soft)', label: '重點' };
 };
 
 const LessonPage = () => {
@@ -242,6 +273,21 @@ const LessonPage = () => {
       break;
     }
   }
+
+  // 檢查本單元是否有對應之 PhET 動態模擬實驗室
+  const matchedLab = useMemo(() => {
+    if (!currentSubject || !unitId) return null;
+    return interactiveLabsList.find(lab => {
+      if (currentSubject.id === 'math' && unitId === 'math-u6' && lab.id === 'circle-area') return true;
+      if (currentSubject.id === 'science' && unitId === 'science-u6' && lab.id === 'lever-seesaw') return true;
+      if (currentSubject.id === 'science' && unitId === 'science-u2' && lab.id === 'acid-base-ph') return true;
+      if (currentSubject.id === 'science' && unitId === 'science-u3' && lab.id === 'electromagnet') return true;
+      if (currentSubject.id === 'science' && unitId === 'science-u1' && lab.id === 'weather-fronts') return true;
+      if (currentSubject.id === 'math' && unitId === 'math-u7' && lab.id === 'speed-race') return true;
+      if (currentSubject.id === 'science' && unitId === 'science-u10' && lab.id === 'virtual-microscope') return true;
+      return false;
+    });
+  }, [currentSubject, unitId]);
 
   const [hasCelebrated, setHasCelebrated] = useState(false);
   const [showFloatingDock, setShowFloatingDock] = useState(false);
@@ -673,14 +719,15 @@ const LessonPage = () => {
         <div className="flex items-center gap-2 flex-wrap">
           {currentSubject && (
             <span
-              className="badge"
+              className="badge flex items-center gap-1.5"
               style={{
                 backgroundColor: `${currentSubject.color}20`,
                 color: currentSubject.color,
                 fontWeight: 700
               }}
             >
-              {currentSubject.name}
+              <SubjectIconBadge id={currentSubject.id} size="xs" />
+              <span>{currentSubject.name}</span>
             </span>
           )}
 
@@ -691,7 +738,7 @@ const LessonPage = () => {
 
           {/* Quick Cheat Sheet Modal Button */}
           <button 
-            className="badge cursor-pointer hover:opacity-90 transition-all flex items-center gap-1"
+            className="badge cursor-pointer hover:opacity-90 transition-all flex items-center gap-1.5"
             style={{ 
               backgroundColor: 'rgba(245, 158, 11, 0.15)', 
               color: '#d97706',
@@ -702,14 +749,14 @@ const LessonPage = () => {
             title="開啟考前 1 分鐘極速秘笈與速查表"
           >
             <Zap size={13} style={{ fill: '#d97706' }} />
-            <span>📊 考前速查秘笈</span>
+            <span>考前速查</span>
           </button>
 
           {/* Lecture Notes & PDF Quick Link */}
           {currentSubject && (
             <button
               onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
-              className="badge cursor-pointer flex items-center gap-1"
+              className="badge cursor-pointer flex items-center gap-1.5"
               style={{
                 backgroundColor: 'rgba(99, 102, 241, 0.15)',
                 color: '#6366f1',
@@ -719,14 +766,14 @@ const LessonPage = () => {
               title="查看本學科段考講義與下載 PDF"
             >
               <FileText size={12} />
-              <span>📑 章節講義 (PDF)</span>
+              <span>章節講義 (PDF)</span>
             </button>
           )}
 
           {/* Scratchpad Button */}
           <button
             onClick={() => setIsScratchpadOpen(true)}
-            className="badge cursor-pointer flex items-center gap-1"
+            className="badge cursor-pointer flex items-center gap-1.5"
             style={{
               backgroundColor: 'rgba(59, 130, 246, 0.15)',
               color: 'var(--accent-primary)',
@@ -736,13 +783,13 @@ const LessonPage = () => {
             title="開啟隨堂計算草稿紙"
           >
             <PenTool size={12} />
-            <span>🧮 計算草稿</span>
+            <span>計算草稿</span>
           </button>
 
           {/* Quick Flashcards Button */}
           <button
             onClick={() => setIsFlashcardsOpen(true)}
-            className="badge cursor-pointer flex items-center gap-1"
+            className="badge cursor-pointer flex items-center gap-1.5"
             style={{
               backgroundColor: 'var(--accent-purple-soft)',
               color: 'var(--accent-purple)',
@@ -751,13 +798,14 @@ const LessonPage = () => {
             }}
             title="開啟考前速記翻牌卡"
           >
-            <span>🃏 速記卡</span>
+            <BookmarkCheck size={12} />
+            <span>速記卡</span>
           </button>
 
           {/* Notebook Drawer Button */}
           <button
             onClick={() => setIsNotebookOpen(true)}
-            className="badge cursor-pointer flex items-center gap-1 relative"
+            className="badge cursor-pointer flex items-center gap-1.5 relative"
             style={{
               backgroundColor: 'var(--accent-soft)',
               color: 'var(--accent-primary)',
@@ -767,7 +815,7 @@ const LessonPage = () => {
             title="開啟隨堂個人筆記與劃記庫"
           >
             <BookOpen size={12} />
-            <span>📝 筆記</span>
+            <span>筆記</span>
             {userHighlights.length > 0 && (
               <span className="w-2 h-2 rounded-full bg-amber-500 absolute -top-0.5 -right-0.5" />
             )}
@@ -775,7 +823,7 @@ const LessonPage = () => {
 
           {/* Bookmark Button */}
           <button 
-            className={`badge cursor-pointer transition-all flex items-center gap-1 ${hasBookmarked ? 'badge-success' : 'badge-secondary'}`}
+            className={`badge cursor-pointer transition-all flex items-center gap-1.5 ${hasBookmarked ? 'badge-success' : 'badge-secondary'}`}
             onClick={handleToggleBookmark}
             title={hasBookmarked ? '點擊取消收藏' : '點擊收藏本單元重點'}
           >
@@ -859,6 +907,130 @@ const LessonPage = () => {
         </div>
       </div>
 
+      {/* 🌟 Lesson Hero Showcase Banner (單元核心沉浸式圖文導覽看板) */}
+      {currentUnit && (
+        <div className="lesson-hero-banner">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+            <div className="flex items-start gap-4">
+              {currentSubject && (
+                <div className="flex-shrink-0 mt-1">
+                  <SubjectIconBadge id={currentSubject.id} size="lg" />
+                </div>
+              )}
+              <div>
+                <div className="flex items-center gap-2 flex-wrap mb-1.5">
+                  <span 
+                    className="badge text-xs font-bold px-2 py-0.5"
+                    style={{
+                      backgroundColor: currentSubject ? `${currentSubject.color}25` : 'var(--accent-soft)',
+                      color: currentSubject?.color || 'var(--accent-primary)'
+                    }}
+                  >
+                    {currentSubject?.name || '國小六年級'} • {currentUnit.term === '6-down' ? '6年級下學期' : '6年級上學期'}
+                  </span>
+                  <span className="badge badge-accent text-xs flex items-center gap-1">
+                    <Timer size={12} /> 約 {readTimeMin} 分鐘速成
+                  </span>
+                  {matchedLab && (
+                    <span 
+                      className="badge text-xs font-bold px-2 py-0.5 flex items-center gap-1 bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30"
+                    >
+                      <FlaskConical size={12} /> 配套互動實驗室
+                    </span>
+                  )}
+                </div>
+
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-primary m-0 tracking-tight">
+                  {currentUnit.title}
+                </h1>
+
+                {currentUnit.description && (
+                  <p className="text-sm text-secondary mt-2 mb-0 line-clamp-2 max-w-2xl leading-relaxed">
+                    {currentUnit.description}
+                  </p>
+                )}
+
+                {/* 核心考點概念標籤 */}
+                {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
+                  <div className="flex items-center gap-1.5 flex-wrap mt-3">
+                    <span className="text-xs text-tertiary flex items-center gap-1 mr-1">
+                      <Sparkles size={12} className="text-amber-500" />
+                      核心考點：
+                    </span>
+                    {currentUnit.keyConcepts.map((concept, cIdx) => (
+                      <span 
+                        key={cIdx}
+                        className="text-xs px-2.5 py-0.5 rounded-full font-medium"
+                        style={{
+                          backgroundColor: 'var(--bg-tertiary)',
+                          color: 'var(--text-secondary)',
+                          border: '1px solid var(--border-light)'
+                        }}
+                      >
+                        {concept}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Quick Action Navigation Buttons */}
+            <div className="flex flex-wrap md:flex-col gap-2 w-full md:w-auto flex-shrink-0">
+              <button
+                onClick={scrollToSummaryTable}
+                className="hero-action-chip flex-1 md:flex-initial"
+                title="直達單元核心速查表"
+              >
+                <Zap size={14} className="text-amber-500" />
+                <span>重點速查表</span>
+              </button>
+
+              {currentSubject && (
+                <button
+                  onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+                  className="hero-action-chip flex-1 md:flex-initial"
+                  title="閱讀與下載章節講義 PDF"
+                >
+                  <FileText size={14} className="text-indigo-500" />
+                  <span>章節講義 PDF</span>
+                </button>
+              )}
+
+              {matchedLab && (
+                <button
+                  onClick={() => navigate(`/labs/${matchedLab.id}`)}
+                  className="hero-action-chip flex-1 md:flex-initial"
+                  style={{
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    borderColor: 'rgba(16, 185, 129, 0.3)',
+                    color: '#10b981'
+                  }}
+                  title={`開啟對應實驗：${matchedLab.title}`}
+                >
+                  <FlaskConical size={14} />
+                  <span>實做實驗模擬</span>
+                </button>
+              )}
+
+              <button
+                onClick={() => navigate(`/quiz/${unitId}`)}
+                className="hero-action-chip flex-1 md:flex-initial"
+                style={{
+                  backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                  borderColor: 'rgba(59, 130, 246, 0.3)',
+                  color: 'var(--accent-primary)'
+                }}
+                title="前往本單元隨堂測驗"
+              >
+                <CheckCircle2 size={14} />
+                <span>隨堂觀念測驗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 4-Stage Guided Roadmap Stepper for Unfamiliar Students */}
       {sections.length > 0 && (
         <LearningRoadmapStepper
@@ -905,8 +1077,8 @@ const LessonPage = () => {
             }}
           >
             <div className="flex items-center gap-2 text-sm font-bold" style={{ color: 'var(--text-primary)' }}>
-              <Smile size={16} style={{ color: 'var(--accent-primary)' }} />
-              <span>💡 30 秒安心導讀・核心考點自評打卡</span>
+              <ShieldCheck size={16} style={{ color: 'var(--accent-primary)' }} />
+              <span>30 秒核心考點自評打卡</span>
               <span className="badge badge-success" style={{ fontSize: '0.7rem' }}>零基礎必看</span>
             </div>
             <div className="flex items-center gap-2 text-xs text-secondary">
@@ -932,7 +1104,11 @@ const LessonPage = () => {
                       className={`concept-checklist-pill ${isMastered ? 'mastered' : ''}`}
                       title={isMastered ? '已掌握此考點 (點擊取消)' : '點擊標記掌握 (+15 XP, +5 🪙)'}
                     >
-                      {isMastered ? <CheckCircle2 size={14} style={{ color: 'var(--accent-success)' }} /> : <span>⭐</span>}
+                      {isMastered ? (
+                        <CheckCircle2 size={14} style={{ color: 'var(--accent-success)' }} />
+                      ) : (
+                        <Sparkles size={13} className="text-amber-500" />
+                      )}
                       <span>{concept}</span>
                       {isMastered && <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400">已打卡</span>}
                     </button>
@@ -958,12 +1134,13 @@ const LessonPage = () => {
         >
           <div className="flex items-center justify-between gap-2 mb-2">
             <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--text-primary)' }}>
-              <ListChecks size={15} style={{ color: 'var(--accent-primary)' }} />
-              <span>📑 單元章節快速導航・點擊直達重點板塊：</span>
+              <Layers size={14} style={{ color: 'var(--accent-primary)' }} />
+              <span>單元章節快速導航・點擊直達重點板塊：</span>
             </div>
             {currentActiveSectionObj && (
               <span className="text-xs text-blue-600 dark:text-blue-400 font-bold hidden sm:inline flex items-center gap-1">
-                <span>📍 當前位置：{currentActiveSectionObj.shortLabel}</span>
+                <Compass size={13} className="text-blue-500" />
+                <span>當前位置：{currentActiveSectionObj.shortLabel}</span>
               </span>
             )}
           </div>
@@ -972,6 +1149,8 @@ const LessonPage = () => {
               const isSummary = sec.shortLabel.includes('重點') || sec.shortLabel.includes('速查') || sec.title.includes('表格') || sec.title.includes('公式');
               const isActive = activeSectionId === sec.id;
               const isMastered = masteredSections.includes(sec.id);
+              const iconInfo = getSectionIconInfo(sec.title);
+              const SectionIcon = iconInfo.icon;
 
               return (
                 <button
@@ -980,7 +1159,13 @@ const LessonPage = () => {
                   onClick={() => scrollToSection(sec.id)}
                   title={`點擊直達：${sec.title}`}
                 >
-                  <span className="pill-icon">{isMastered ? '✅' : sec.icon}</span>
+                  <span className="pill-icon flex items-center justify-center">
+                    {isMastered ? (
+                      <CheckCircle2 size={13} className="text-emerald-500" />
+                    ) : (
+                      <SectionIcon size={13} style={{ color: iconInfo.color }} />
+                    )}
+                  </span>
                   <span className="pill-text">{sec.shortLabel}</span>
                 </button>
               );
@@ -1116,12 +1301,21 @@ const LessonPage = () => {
                 const rawText = extractTextFromNode(node) || String(children);
                 const slug = createSlug(rawText);
                 const isMastered = masteredSections.includes(slug);
+                const iconInfo = getSectionIconInfo(rawText);
+                const H2Icon = iconInfo.icon;
 
                 return (
                   <div className="lesson-section-h2-container my-4">
                     <div className="flex items-center justify-between gap-2 flex-wrap">
-                      <h2 id={slug} className="lesson-section-h2" style={{ flex: 1, margin: 0 }} {...props}>
-                        {children}
+                      <h2 id={slug} className="lesson-section-h2 flex items-center" style={{ flex: 1, margin: 0 }} {...props}>
+                        <span 
+                          className="lesson-section-h2-icon-badge" 
+                          style={{ backgroundColor: iconInfo.bg, color: iconInfo.color }}
+                          title={iconInfo.label}
+                        >
+                          <H2Icon size={16} />
+                        </span>
+                        <span>{children}</span>
                       </h2>
 
                       <div className="flex items-center gap-1.5 flex-shrink-0">
@@ -1399,50 +1593,62 @@ const LessonPage = () => {
 
                 return (
                   <blockquote className="dialogue-bubble-quote" {...props}>
-                    <div style={{ flex: 1 }}>{children}</div>
-                    {isEnglishSubject && engSentence ? (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          speechEngine.speak(engSentence);
-                        }}
-                        className="btn-outline flex items-center gap-1 text-xs"
+                    <div className="flex items-start gap-3 w-full">
+                      <div 
+                        className="rounded-full p-2 flex items-center justify-center flex-shrink-0"
                         style={{
-                          padding: '4px 10px',
-                          borderRadius: 'var(--radius-full)',
-                          flexShrink: 0,
                           backgroundColor: 'var(--accent-soft)',
-                          borderColor: 'var(--accent-primary)',
-                          color: 'var(--accent-primary)',
-                          fontWeight: 700
+                          color: 'var(--accent-primary)'
                         }}
-                        title={`🔊 點擊聆聽此段對話: "${engSentence}"`}
+                        title="教師教學叮嚀與核心對話"
                       >
-                        <Volume2 size={13} />
-                        <span>🔊 聽對話</span>
-                      </button>
-                    ) : (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          speechEngine.speak(rawText, { lang: 'zh-TW' });
-                        }}
-                        className="btn-outline flex items-center gap-1 text-xs"
-                        style={{
-                          padding: '4px 10px',
-                          borderRadius: 'var(--radius-full)',
-                          flexShrink: 0,
-                          backgroundColor: 'var(--accent-soft)',
-                          borderColor: 'var(--accent-primary)',
-                          color: 'var(--accent-primary)',
-                          fontWeight: 700
-                        }}
-                        title="🔊 聆聽老師叮嚀語音"
-                      >
-                        <Volume2 size={13} />
-                        <span>🔊 聽叮嚀</span>
-                      </button>
-                    )}
+                        <GraduationCap size={18} />
+                      </div>
+                      <div style={{ flex: 1 }}>{children}</div>
+                      {isEnglishSubject && engSentence ? (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            speechEngine.speak(engSentence);
+                          }}
+                          className="btn-outline flex items-center gap-1 text-xs"
+                          style={{
+                            padding: '4px 10px',
+                            borderRadius: 'var(--radius-full)',
+                            flexShrink: 0,
+                            backgroundColor: 'var(--accent-soft)',
+                            borderColor: 'var(--accent-primary)',
+                            color: 'var(--accent-primary)',
+                            fontWeight: 700
+                          }}
+                          title={`點擊聆聽此段對話: "${engSentence}"`}
+                        >
+                          <Volume2 size={13} />
+                          <span>聽對話</span>
+                        </button>
+                      ) : (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            speechEngine.speak(rawText, { lang: 'zh-TW' });
+                          }}
+                          className="btn-outline flex items-center gap-1 text-xs"
+                          style={{
+                            padding: '4px 10px',
+                            borderRadius: 'var(--radius-full)',
+                            flexShrink: 0,
+                            backgroundColor: 'var(--accent-soft)',
+                            borderColor: 'var(--accent-primary)',
+                            color: 'var(--accent-primary)',
+                            fontWeight: 700
+                          }}
+                          title="聆聽老師叮嚀語音"
+                        >
+                          <Volume2 size={13} />
+                          <span>聽叮嚀</span>
+                        </button>
+                      )}
+                    </div>
                   </blockquote>
                 );
               },
@@ -1621,13 +1827,20 @@ const LessonPage = () => {
           boxShadow: 'var(--shadow-sm)'
         }}
       >
-        <div>
-          <div className="flex items-center gap-2" style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text-primary)' }}>
-            <Award size={20} style={{ color: 'var(--accent-success)' }} />
-            <span>🎉 本課核心觀念已融會貫通！</span>
-          </div>
-          <div className="text-sm text-secondary" style={{ marginTop: '4px', lineHeight: 1.6 }}>
-            太棒了！小節掌握度達 <strong>{masteredSections.length} / {sections.length || 4}</strong>，花 2 分鐘做 3 道隨堂小測驗，就能賺取 <strong style={{ color: 'var(--accent-success-text)' }}>+50 XP 經驗值</strong> 並解鎖榮譽勳章！
+        <div className="flex items-start gap-4">
+          {currentSubject && (
+            <div className="flex-shrink-0 mt-0.5 hidden sm:block">
+              <SubjectIconBadge id={currentSubject.id} size="md" />
+            </div>
+          )}
+          <div>
+            <div className="flex items-center gap-2" style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text-primary)' }}>
+              <Award size={20} style={{ color: 'var(--accent-success)' }} />
+              <span>本課核心觀念已融會貫通！</span>
+            </div>
+            <div className="text-sm text-secondary" style={{ marginTop: '4px', lineHeight: 1.6 }}>
+              太棒了！小節掌握度達 <strong>{masteredSections.length} / {sections.length || 4}</strong>，花 2 分鐘做 3 道隨堂小測驗，就能賺取 <strong style={{ color: 'var(--accent-success-text)' }}>+50 XP 經驗值</strong> 並解鎖榮譽勳章！
+            </div>
           </div>
         </div>
 
@@ -1646,7 +1859,7 @@ const LessonPage = () => {
               }}
               title="查看並下載本學科專屬章節講義與考前大複習 PDF"
             >
-              <FileText size={16} /> 📑 下載【{currentSubject.name}】章節講義 (PDF)
+              <FileText size={16} /> 下載【{currentSubject.name}】章節講義 (PDF)
             </button>
           )}
 
@@ -1659,7 +1872,7 @@ const LessonPage = () => {
               style={{ padding: '10px 18px', borderRadius: 'var(--radius-md)' }}
               title="前往推薦教育平台觀看相關教學影音"
             >
-              <span>📺 推薦延伸影音</span>
+              <span>推薦延伸影音</span>
               <ExternalLink size={14} />
             </a>
           )}
@@ -1696,7 +1909,7 @@ const LessonPage = () => {
             }}
             title="進行圖示壓軸題與進階素養模擬挑戰"
           >
-            <Flame size={18} /> 進入單元模擬挑戰 (+100 XP) ⚔️
+            <Flame size={18} /> 進入單元模擬挑戰 (+100 XP)
           </button>
         </div>
       </div>
@@ -1755,27 +1968,37 @@ const LessonPage = () => {
                   className="absolute bottom-12 left-0 w-64 p-3 bg-slate-900 text-white rounded-2xl shadow-2xl border border-slate-700 animate-scale-up z-50 max-h-72 overflow-y-auto"
                 >
                   <div className="flex items-center justify-between pb-2 border-b border-slate-700 mb-2">
-                    <span className="text-xs font-bold text-slate-300">📑 章節快速導航</span>
+                    <span className="text-xs font-bold text-slate-300 flex items-center gap-1.5">
+                      <ListChecks size={13} className="text-blue-400" />
+                      <span>章節快速導航</span>
+                    </span>
                     <button onClick={() => setIsTocDrawerOpen(false)} className="text-slate-400 hover:text-white">
                       <X size={14} />
                     </button>
                   </div>
                   <div className="space-y-1">
-                    {sections.map((s, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => {
-                          scrollToSection(s.id);
-                          setIsTocDrawerOpen(false);
-                        }}
-                        className={`w-full text-left p-1.5 rounded-lg text-xs flex items-center justify-between gap-1 transition-colors ${
-                          activeSectionId === s.id ? 'bg-blue-600 text-white font-bold' : 'hover:bg-slate-800 text-slate-300'
-                        }`}
-                      >
-                        <span className="truncate">{s.icon} {s.shortLabel}</span>
-                        {masteredSections.includes(s.id) && <span className="text-emerald-400">✓</span>}
-                      </button>
-                    ))}
+                    {sections.map((s, idx) => {
+                      const iconInfo = getSectionIconInfo(s.title);
+                      const TocIcon = iconInfo.icon;
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => {
+                            scrollToSection(s.id);
+                            setIsTocDrawerOpen(false);
+                          }}
+                          className={`w-full text-left p-1.5 rounded-lg text-xs flex items-center justify-between gap-1 transition-colors ${
+                            activeSectionId === s.id ? 'bg-blue-600 text-white font-bold' : 'hover:bg-slate-800 text-slate-300'
+                          }`}
+                        >
+                          <span className="truncate flex items-center gap-1.5">
+                            <TocIcon size={12} style={{ color: activeSectionId === s.id ? '#ffffff' : iconInfo.color }} />
+                            <span>{s.shortLabel}</span>
+                          </span>
+                          {masteredSections.includes(s.id) && <CheckCircle2 size={12} className="text-emerald-400" />}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               )}

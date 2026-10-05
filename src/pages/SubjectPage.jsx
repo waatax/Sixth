@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
+import SubjectIconBadge from '../components/common/SubjectIconBadge';
 
 const SubjectPage = () => {
   const { subjectId } = useParams();
@@ -113,24 +114,8 @@ const SubjectPage = () => {
       >
         <div className="flex justify-between items-start flex-wrap gap-4">
           <div className="flex items-start gap-4" style={{ flex: 1, minWidth: '280px' }}>
-            {/* Cute Mascot Avatar */}
-            <div 
-              style={{
-                width: '64px',
-                height: '64px',
-                borderRadius: '20px',
-                backgroundColor: `${subject.color}15`,
-                border: `2px solid ${subject.color}35`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '2.2rem',
-                boxShadow: `0 4px 14px ${subject.color}25`,
-                flexShrink: 0
-              }}
-            >
-              {subject.emoji}
-            </div>
+            {/* Mascot & Subject Crest Avatar */}
+            <SubjectIconBadge id={subject.id} size="xl" />
 
             <div>
               <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
@@ -254,22 +239,7 @@ const SubjectPage = () => {
         }}
       >
         <div className="flex items-center gap-3.5" style={{ flex: 1 }}>
-          <div
-            style={{
-              width: '46px',
-              height: '46px',
-              borderRadius: '14px',
-              backgroundColor: 'var(--accent-soft)',
-              color: 'var(--accent-primary)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.5rem',
-              flexShrink: 0
-            }}
-          >
-            📖
-          </div>
+          <SubjectIconBadge id="exam-notes" size="md" />
           <div>
             <div className="flex items-center gap-2 flex-wrap">
               <span className="font-extrabold text-base" style={{ color: 'var(--text-primary)' }}>
@@ -362,9 +332,7 @@ const SubjectPage = () => {
           }}
         >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
-              🔬
-            </div>
+            <SubjectIconBadge id="labs" size="sm" />
             <div>
               <div className="text-xs font-bold text-primary flex items-center gap-1.5">
                 <span>{subject.shortName}領域動態互動實驗室</span>
@@ -388,9 +356,7 @@ const SubjectPage = () => {
           }}
         >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-pink-500/15 text-pink-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
-              📱
-            </div>
+            <SubjectIconBadge id="shorts" size="sm" />
             <div>
               <div className="text-xs font-bold text-primary flex items-center gap-1.5">
                 <span>{subject.shortName}領域 30秒知識短影音</span>
@@ -639,57 +605,74 @@ const SubjectPage = () => {
                     <Compass size={15} style={{ color: 'var(--accent-primary)' }} />
                     <span>本單元核心考點與圖解關鍵：</span>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '8px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '8px' }}>
                     {unit.keyConcepts.map((concept, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-secondary">
-                        <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>•</span>
-                        <span>{concept}</span>
-                      </div>
+                      <button 
+                        key={i} 
+                        onClick={() => setSearchQuery(concept)}
+                        className="flex items-center gap-1.5 text-xs text-secondary hover:text-primary transition-colors text-left"
+                        style={{ background: 'none', border: 'none', padding: '2px 0', cursor: 'pointer' }}
+                        title={`點擊即時搜尋「${concept}」相關單元`}
+                      >
+                        <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>#</span>
+                        <span className="hover:underline">{concept}</span>
+                      </button>
                     ))}
                   </div>
                 </div>
 
                 {/* Actions Toolbar */}
                 <div
-                  className="flex justify-between items-center flex-wrap gap-3 pt-3 border-t"
+                  className="flex justify-between items-center flex-wrap gap-2.5 pt-3 border-t"
                   style={{ borderTop: '1px solid var(--border-light)' }}
                 >
-                  {/* Auxiliary Video Link */}
-                  {unit.videoUrl && (
-                    <a 
-                      href={unit.videoUrl} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="flex items-center gap-1.5 text-xs text-secondary hover:text-primary transition-colors"
-                      title="前往推薦教育平台觀看相關教學影音"
+                  {/* Auxiliary Video Link & Notes Shortcut */}
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {unit.videoUrl && (
+                      <a 
+                        href={unit.videoUrl} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="flex items-center gap-1.5 text-xs text-secondary hover:text-primary transition-colors"
+                        title="前往推薦教育平台觀看相關教學影音"
+                      >
+                        <PlayCircle size={15} />
+                        <span>📺 延伸影音</span>
+                      </a>
+                    )}
+                    <Link
+                      to={`/exam-notes/${subjectId}`}
+                      className="btn-outline flex items-center gap-1 text-xs font-bold"
+                      style={{ padding: '6px 12px', borderRadius: 'var(--radius-md)' }}
+                      title="查看本學科段考講義與考前重點"
                     >
-                      <PlayCircle size={15} />
-                      <span>📺 推薦延伸影音 (延伸觀看)</span>
-                    </a>
-                  )}
+                      <FileText size={13} className="text-indigo-500" />
+                      <span>章節講義</span>
+                    </Link>
+                  </div>
 
                   {/* Primary Core Actions */}
-                  <div className="flex gap-3 flex-wrap ml-auto">
+                  <div className="flex gap-2 flex-wrap ml-auto">
                     <Link 
                       to={`/quiz/${unit.id}`} 
-                      className="btn-outline flex items-center gap-2 text-sm font-bold" 
+                      className="btn-outline flex items-center gap-1.5 text-xs md:text-sm font-bold" 
                       style={{
-                        padding: '8px 18px',
+                        padding: '8px 16px',
                         borderColor: 'var(--accent-success)',
                         color: 'var(--accent-success-text)'
                       }}
                       onClick={() => handleRecordLastStudied(unit.id)}
                     >
-                      <CheckCircle2 size={16} /> 觀念測驗 (+50 XP)
+                      <CheckCircle2 size={15} /> 觀念測驗
                     </Link>
                     <Link 
                       to={`/lesson/${unit.id}`} 
-                      className="btn-primary flex items-center gap-2 text-sm font-bold" 
-                      style={{ padding: '8px 22px' }}
+                      className="btn-primary flex items-center gap-1.5 text-xs md:text-sm font-bold" 
+                      style={{ padding: '8px 20px' }}
                       onClick={() => handleRecordLastStudied(unit.id)}
                     >
-                      <BookOpen size={16} /> 進入圖解教學單元
-                      <ArrowRight size={15} />
+                      <BookOpen size={15} /> 圖解單元
+                      <ArrowRight size={14} />
                     </Link>
                   </div>
                 </div>
