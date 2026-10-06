@@ -53,21 +53,7 @@ const CupertinoTabBar = () => {
     setIsMoreSheetOpen(false);
     triggerHaptic('light');
     playSound('ios_tap');
-
-    if (location.pathname !== '/') {
-      navigate('/#topic-discovery-section');
-      setTimeout(() => {
-        const el = document.getElementById('topic-discovery-section');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-        const input = document.querySelector('#topic-discovery-section input');
-        if (input) input.focus();
-      }, 250);
-    } else {
-      const el = document.getElementById('topic-discovery-section');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-      const input = document.querySelector('#topic-discovery-section input');
-      if (input) input.focus();
-    }
+    window.dispatchEvent(new CustomEvent('open_command_palette'));
   };
 
   const isMoreActive = moreItems.some(item => location.pathname === item.path);

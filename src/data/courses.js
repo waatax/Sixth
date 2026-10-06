@@ -102,6 +102,12 @@ export const coursesData = {
         title: '單元 1：最大公因數與最小公倍數',
         description: '了解因數、倍數、質數與合數，並學習短除法與生活平分、排隊應用題。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-A1',
+        badge: '質因數分解與因倍數',
         keyConcepts: ['因數與公因數', '質因數分解', '短除法求最大公因數(GCD)與最小公倍數(LCM)', '互質概念']
       },
       {
@@ -109,6 +115,12 @@ export const coursesData = {
         title: '單元 2：分數的除法',
         description: '掌握分數除以整數、分數除以分數的運算規則與「顛倒相乘」的幾何意義。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-A2',
+        badge: '顛倒相乘幾何算理',
         keyConcepts: ['分數除以整數', '除以分數等於乘以倒數', '帶分數化假分數計算', '生活分裝應用題']
       },
       {
@@ -116,6 +128,12 @@ export const coursesData = {
         title: '單元 3：小數的除法與餘數',
         description: '學習小數除以整數、小數除以小數，掌握移動小數點的技巧與餘數的正確判斷。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-A2',
+        badge: '小數點移位與餘數',
         keyConcepts: ['除數小數點向右移', '商與餘數的小數點位置', '四捨五入求概數', '容量與重量分裝']
       },
       {
@@ -123,6 +141,12 @@ export const coursesData = {
         title: '單元 4：比與比值',
         description: '理解前項與後項的關係，學習求比值、化為最簡整數比與生活配方比例。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-B1',
+        badge: '比與比值最簡比',
         keyConcepts: ['比的表示法 a:b', '比值 = 前項 ÷ 後項', '等比性質與最簡整數比', '比例調配問題']
       },
       {
@@ -130,6 +154,12 @@ export const coursesData = {
         title: '單元 5：圓周長與扇形弧長',
         description: '探索圓周率 π ≈ 3.14 的由來，靈活計算圓周長與不同圓心角的扇形弧長。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-B1',
+        badge: '圓周長與扇形弧長',
         keyConcepts: ['圓周率 π 的意義', '圓周長 = 直徑 × 3.14', '圓心角與扇形比例', '扇形周長（弧長 + 2個半徑）']
       },
       {
@@ -137,6 +167,12 @@ export const coursesData = {
         title: '單元 6：圓面積與扇形面積',
         description: '推導圓面積分割拼貼公式，精準計算圓面積、扇形面積與複合鋪色圖形。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '數-E-B3',
+        badge: '圓面積切片拼貼幾何',
         keyConcepts: ['圓面積 = 半徑 × 半徑 × 3.14', '扇形面積公式', '鋪色複合圖形面積（加減切割法）']
       },
       {
@@ -144,6 +180,12 @@ export const coursesData = {
         title: '單元 7：速率與生活應用',
         description: '理解距離、時間與速率的公式關係，熟練時速/分速/秒速換算與追趕問題。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-C1',
+        badge: '速率追趕單位換算',
         keyConcepts: ['速率 = 距離 ÷ 時間', '時速、分速、秒速單位換算', '同向追趕與反向相遇問題', '平均速率計算']
       },
       {
@@ -151,6 +193,12 @@ export const coursesData = {
         title: '單元 8：柱體體積與表面積',
         description: '認識角柱與圓柱的展開圖，熟練「底面積 × 高」計算柱體體積與表面積。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '數-E-B3',
+        badge: '柱體體積與表面積',
         keyConcepts: ['柱體體積 = 底面積 × 柱高', '角柱表面積 = 2個底面積 + 側面總面積', '圓柱側面積展開為長方形', '空心柱體計算']
       },
       {
@@ -158,6 +206,12 @@ export const coursesData = {
         title: '單元 9：放大圖、縮圖與比例尺',
         description: '掌握圖形放大與縮小的對應角與對應邊變化，學會地圖比例尺的換算應用。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-B1',
+        badge: '放大縮小圖與比例尺',
         keyConcepts: ['放大縮小圖對應角不變、對應邊成比例', '面積倍數 = 長度倍數的平方', '比值型與圖示型比例尺換算', '地圖距離求實際距離']
       },
       {
@@ -165,6 +219,12 @@ export const coursesData = {
         title: '單元 10：基準量、比較量與怎樣解題',
         description: '學會判斷「基準量（1倍數）」與「比較量」，解決折扣、加成、母子和差問題。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '數-E-A2',
+        badge: '基準量比較量與解題',
         keyConcepts: ['比較量 ÷ 基準量 = 比值', '打折與加成計算', '母子和與母子差問題', '雞兔同籠與間隔問題']
       },
       {
@@ -172,6 +232,12 @@ export const coursesData = {
         title: '單元 11：等量公理與未知數方程',
         description: '學習用未知數符號 (x, y) 列式，熟練等式平衡、等量公理與一元一次方程式求解。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '數-E-A1',
+        badge: '等量公理與代數先修',
         keyConcepts: ['用未知數符號列式', '等量加法與減法公理', '等量乘法與除法公理', '生活應用題解未知數']
       },
       {
@@ -179,6 +245,12 @@ export const coursesData = {
         title: '單元 12：統計圖表與圓形圖',
         description: '掌握百分率圓形圖與圓心角換算，靈活判讀折線圖、長條圖與綜合統計數據。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '數-E-C2',
+        badge: '圓形圖與統計判讀',
         keyConcepts: ['百分率圓形圖判讀與繪製', '圓心角換算 (360° × 百分率)', '折線圖與長條圖比較', '生活大數據與統計判讀']
       }
     ],
@@ -188,6 +260,12 @@ export const coursesData = {
         title: '單元 1：多變的天氣與氣象預報',
         description: '認識大氣中的水循環、高低氣壓、冷暖鋒面與颱風防災知識。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-B2',
+        badge: '冷暖鋒面與水循環',
         keyConcepts: ['大氣中水氣的變化（雲、霧、雨、露、霜）', '高氣壓（晴朗）與低氣壓（陰雨）', '冷鋒、暖鋒與滯留鋒（梅雨）', '颱風結構與防颱安全措施']
       },
       {
@@ -195,6 +273,12 @@ export const coursesData = {
         title: '單元 2：水溶液的性質與酸鹼性',
         description: '探討物質的溶解、水溶液的導電性（電解質）與石蕊試紙酸鹼檢驗。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-A2',
+        badge: '水溶液酸鹼石蕊試紙',
         keyConcepts: ['溶解度與飽和溶液', '電解質與水溶液導電性', '石蕊試紙與天然酸鹼指示劑', '酸鹼中和現象']
       },
       {
@@ -202,6 +286,12 @@ export const coursesData = {
         title: '單元 3：電與磁的奇妙世界',
         description: '探索磁鐵性質、地磁指北針、電流磁效應與電磁鐵的製作與生活應用。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-A1',
+        badge: '電磁鐵奧斯特實驗',
         keyConcepts: ['磁場與指北針原理', '奧斯特實驗（電流產生磁場）', '電磁鐵磁力增強條件（線圈數、電流大小）', '馬達與電鈴的應用']
       },
       {
@@ -209,6 +299,12 @@ export const coursesData = {
         title: '單元 4：變動的大地與地表作用',
         description: '認識三大類岩石與礦物、流水侵蝕堆積作用與地震板塊運動防災。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-C1',
+        badge: '三大岩類流水侵蝕',
         keyConcepts: ['三大岩類（火成岩、沉積岩、變質岩）', '礦物辨識特性', '流水的三大作用（侵蝕、搬運、堆積）', '地震板塊運動與防震演練']
       },
       {
@@ -216,6 +312,12 @@ export const coursesData = {
         title: '單元 5：熱的傳播與保溫原理',
         description: '理解熱傳導、熱對流與熱輻射三種熱傳播途徑，探索保溫瓶防熱傳播構造。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-B3',
+        badge: '熱傳導對流輻射',
         keyConcepts: ['熱傳導（固體良導體與不良導體）', '熱對流（流体熱升冷降）', '熱輻射（不需介質）', '保溫瓶真空層與鍍銀反射設計']
       },
       {
@@ -223,6 +325,12 @@ export const coursesData = {
         title: '單元 6：巧妙的簡單機械',
         description: '學習槓桿原理三大要素、定滑輪與動滑輪、輪軸與斜面的省力與省距離規律。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '自-E-A3',
+        badge: '槓桿原理簡單機械',
         keyConcepts: ['槓桿原理（施力×施力臂 = 抗力×抗力臂）', '三類槓桿辨別與生活應用', '定滑輪（改方向）與動滑輪（省力1/2）', '輪軸與斜面省力規律']
       },
       {
@@ -230,6 +338,12 @@ export const coursesData = {
         title: '單元 7：物質的變化——防鏽與防腐',
         description: '探討鐵生鏽的三大條件與防鏽方法，學習微生物與食品保存的科學原理。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-A2',
+        badge: '鐵生鏽防鏽微生物',
         keyConcepts: ['鐵生鏽條件（水+氧氣）', '防鏽方法（塗漆、鍍鋅、不鏽鋼）', '微生物生長條件', '食物保存（冷凍、脫水、醃漬、真空）']
       },
       {
@@ -237,6 +351,12 @@ export const coursesData = {
         title: '單元 8：生物與環境保育——地球村生態系',
         description: '認識生產者/消費者/分解者、食物鏈與食物網、臺灣豐富生態系與環境永續。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-C2',
+        badge: '食物網生態系保育',
         keyConcepts: ['生態系組成角色', '食物鏈、食物網與能量金字塔', '臺灣四大生態系特徵', '生物多樣性與環境保護行動']
       },
       {
@@ -244,6 +364,12 @@ export const coursesData = {
         title: '單元 9：奇妙的聲音世界與自製樂器',
         description: '探討物體震動產生聲音、傳播介質、音調高低與音量大小，親手設計簡易樂器。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '自-E-B1',
+        badge: '聲音振動傳播樂器',
         keyConcepts: ['物體震動與傳播介質', '音調高低（頻率/弦長粗細緊度）', '音量大小（振幅/敲擊力道）', '回音、吸音與自製樂器']
       },
       {
@@ -251,6 +377,12 @@ export const coursesData = {
         title: '單元 10：微觀世界與顯微鏡微生物探秘',
         description: '掌握光學顯微鏡構造與正確操作步驟，觀察黴菌、酵母菌與生活發酵應用。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '自-E-A1',
+        badge: '顯微鏡操作微觀世界',
         keyConcepts: ['顯微鏡構造與操作七步驟', '玻片標本製作技巧', '黴菌與酵母菌發酵作用', '水滴中的微小生物與生活益害']
       }
     ],
@@ -260,6 +392,12 @@ export const coursesData = {
         title: '單元 1：高年級閱讀理解策略',
         description: '掌握擷取訊息、推論理解、區分事實與觀點及六何法(5W1H)深層閱讀。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '國-E-A1',
+        badge: '閱讀理解策略六何法',
         keyConcepts: ['訊息擷取與定位', '推論與觀點統整', '事實 (Fact) vs 觀點 (Opinion)', '六何法分析文章脈絡']
       },
       {
@@ -267,6 +405,12 @@ export const coursesData = {
         title: '單元 2：記敘文寫作的起承轉合',
         description: '學習記敘文的人事時地物要素、引人入勝的開頭與畫龍點睛的結尾技巧。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '國-E-B1',
+        badge: '記敘文起承轉合寫作',
         keyConcepts: ['起承轉合架構安排', '順敘、倒敘與插敘法', '人物外貌、動作與心理描寫', '以小見大的真情實感表達']
       },
       {
@@ -274,6 +418,12 @@ export const coursesData = {
         title: '單元 3：說明文與議論文思維',
         description: '學習說明文的總分總結構與說明方法，掌握議論文「論點、論據、論證」邏輯。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '國-E-A2',
+        badge: '說明文與議論文思維',
         keyConcepts: ['總分總結構與邏輯順序', '列數字、作比較、打比方說明法', '議論文三大核心要素', '理性批判與雙向論證']
       },
       {
@@ -281,6 +431,12 @@ export const coursesData = {
         title: '單元 4：修辭的魔法與成語百寶箱',
         description: '精通譬喻、擬人、排比、誇飾、設問等高頻修辭，活用成語提升寫作深度。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '國-E-B2',
+        badge: '修辭魔法成語百寶箱',
         keyConcepts: ['明喻、暗喻與借喻區別', '擬人化生動描寫', '排比與誇飾的語氣強化', '高頻成語典故與語境運用']
       },
       {
@@ -288,6 +444,12 @@ export const coursesData = {
         title: '單元 5：古典文學選讀——詩詞與寓言',
         description: '欣賞唐詩絕句與律詩格律意境，閱讀文言寓言領略古人處世哲思與智慧。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '國-E-B3',
+        badge: '古典文學詩詞寓言',
         keyConcepts: ['近體詩押韻、對仗與字數規律', '王之渙、孟浩然經典名作鑑賞', '文言基礎字詞理解', '《守株待兔》《揠苗助長》寓意分析']
       },
       {
@@ -295,6 +457,12 @@ export const coursesData = {
         title: '單元 6：口語表達與簡報力',
         description: '學習上台發表三要素、眼神與聲音表情，掌握吸睛簡報與同理傾聽技巧。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '國-E-C1',
+        badge: '口語表達簡報台風',
         keyConcepts: ['燈塔原則眼神接觸與聲音投射', '肢體語言與自信站姿', '簡報 Less is More 視覺原則', '三明治正向回饋法']
       },
       {
@@ -302,6 +470,12 @@ export const coursesData = {
         title: '單元 7：應用文的智慧與生活實踐',
         description: '精熟書信六大結構、信封直式橫式寫法、便條日記與畢業致詞演講稿寫作。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '國-E-B1',
+        badge: '書信便條應用文格式',
         keyConcepts: ['書信格式與提稱語祝道語', '直式與橫式信封收件人稱謂', '便條與留言條要素', '畢業致詞與自我介紹短講']
       },
       {
@@ -309,6 +483,12 @@ export const coursesData = {
         title: '單元 8：漢字造字之美與升中銜接國學常識',
         description: '探索六書造字法則（象形/指事/會意/形聲）、易錯形近字多音字與文言虛詞入門。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '國-E-A3',
+        badge: '六書造字升中銜接',
         keyConcepts: ['六書造字法則特徵', '形近字與多音多義字辨析', '標點符號破折號與夾注號', '常見文言虛詞（之乎者也）入門']
       }
     ],
@@ -318,6 +498,12 @@ export const coursesData = {
         title: '單元 1：臺灣的民主之路與政府組織',
         description: '回顧解嚴至總統直選的民主轉型歷程，認識五權分立機關與公民權利義務。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '社-E-B1',
+        badge: '臺灣民主五院制衡',
         keyConcepts: ['解嚴(1987)與總統直選(1996)歷史', '五院職權與制衡關係', '憲法四大基本權利', '守法與公民參與精神']
       },
       {
@@ -325,6 +511,12 @@ export const coursesData = {
         title: '單元 2：社會變遷與多元族群文化',
         description: '探討少子高齡化與家庭型態變遷，欣賞原住民族、閩客、外省與新住民文化。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '社-E-C1',
+        badge: '多元族群社會變遷',
         keyConcepts: ['少子化與高齡社會挑戰', '16個法定原住民族文化智慧', '閩客傳統節慶與客家精神', '新住民多元包容與平權']
       },
       {
@@ -332,6 +524,12 @@ export const coursesData = {
         title: '單元 3：經濟發展與產業轉型',
         description: '從土地改革、十大建設到新竹科學園區與半導體矽盾，見證臺灣經濟奇蹟。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '社-E-A2',
+        badge: '經濟轉型十大建設',
         keyConcepts: ['耕者有其田與進口替代', '加工出口區與十大建設基礎設施', '竹科與全球半導體關鍵供應鏈', '綠色能源與永續轉型']
       },
       {
@@ -339,6 +537,12 @@ export const coursesData = {
         title: '單元 4：全球化浪潮與國際組織參與',
         description: '探討全球化對經貿文化的影響，認識聯合國UN、WHO等組織與Taiwan Can Help貢獻。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '社-E-C2',
+        badge: '全球化浪潮UN國際組織',
         keyConcepts: ['全球化機會與風險', 'UN、WHO、WTO、APEC 職責', '臺灣醫療團與農技團國際貢獻', '全球公民意識養成']
       },
       {
@@ -346,6 +550,12 @@ export const coursesData = {
         title: '單元 5：法律與生活——兒童人權與網路安全',
         description: '認識聯合國兒童權利公約CRC四大原則、智慧財產權保護與防制網路霸凌。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '社-E-A3',
+        badge: '兒童人權CRC個資防護',
         keyConcepts: ['兒童權利公約四大原則', '著作權保護與合理引用', '個資防護與防範網路詐騙', '反霸凌專線1953與求助管道']
       },
       {
@@ -353,6 +563,12 @@ export const coursesData = {
         title: '單元 6：永續發展與環境——SDGs公民行動',
         description: '探索聯合國SDGs 17項指標，從食衣住行落實節能減碳與環境保育公民行動。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '社-E-C3',
+        badge: '聯合國SDGs永續公民',
         keyConcepts: ['聯合國SDGs 17大目標意涵', '氣候變遷與淨零減碳', '源頭減塑與在地綠色消費', '校園與社區環保倡議行動']
       },
       {
@@ -360,6 +576,12 @@ export const coursesData = {
         title: '單元 7：地球村的世界地理與多元文明遺產',
         description: '探索七大洲三大洋地形氣候、世界四大文明古國、世界主要宗教與文化遺產保護。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '社-E-B2',
+        badge: '世界地理文化遺產',
         keyConcepts: ['七大洲三大洋與氣候帶', '四大古文明與主要世界宗教', 'UNESCO 世界文化與自然遺產', '全球多元文化包容與尊重']
       },
       {
@@ -367,6 +589,12 @@ export const coursesData = {
         title: '單元 8：科技浪潮、資訊倫理與未來社會',
         description: '探討人工智慧與自動化衝擊、數位足跡與隱私保護、科技倫理與未來公民責任。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '社-E-A1',
+        badge: 'AI科技浪潮資訊倫理',
         keyConcepts: ['AI 人工智慧與就業生活變革', '大數據與數位足跡保護', 'Deepfake 深偽辨識與科技倫理', '未來世界公民素養與國際視野']
       }
     ],
@@ -376,6 +604,12 @@ export const coursesData = {
         title: 'Unit 1: Daily Routines & Time Management',
         description: '學習詢問與回答時間、時間介系詞(at/in/on)與頻率副詞(always to never)生活句型。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '英-E-A1',
+        badge: 'Daily Routines日常會話',
         keyConcepts: ['What time is it? & Quarter/Half past', 'Prepositions: at (time), in (morning), on (days)', 'Daily routine verbs (brush, wake up, study)', 'Frequency adverbs position']
       },
       {
@@ -383,6 +617,12 @@ export const coursesData = {
         title: 'Unit 2: Past Tense Stories & Adventures',
         description: '掌握規則動詞(-ed)與高頻不規則動詞過去式變化，熟練did問句與否定句。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '英-E-B1',
+        badge: 'Past Tense過去式冒險',
         keyConcepts: ['Regular verb past forms (+ed)', 'Irregular verbs (went, saw, ate, had, took)', 'Negative sentences with didn\'t + base verb', 'Past questions with Did you...?']
       },
       {
@@ -390,6 +630,12 @@ export const coursesData = {
         title: 'Unit 3: Places & Asking for Directions',
         description: '熟練方位介系詞(next to, between, across from)與禮貌問路指路英文句型。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '英-E-C1',
+        badge: 'Directions問路方位',
         keyConcepts: ['Prepositions of place (next to, across from)', 'Excuse me, how do I get to...?', 'Giving directions: Go straight, Turn left/right', 'Map reading vocabulary']
       },
       {
@@ -397,6 +643,12 @@ export const coursesData = {
         title: 'Unit 4: Food, Health & Body Care',
         description: '學習身體部位單字、表達身體不舒服症狀(-ache)與看醫生看診實用對話。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '英-E-A2',
+        badge: 'Health Care身體健康',
         keyConcepts: ['Body parts & symptoms (headache, stomachache)', 'I have a sore throat / cold / fever', 'Doctor visit dialogue & advice', 'Nutrition & healthy food groups']
       },
       {
@@ -404,6 +656,12 @@ export const coursesData = {
         title: 'Unit 5: Festivals, Holidays & World Cultures',
         description: '比較中西重要節慶（春節、端午、中秋 vs 萬聖節、聖誕節）習俗與文化英語。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '英-E-C2',
+        badge: 'Festivals中西節慶',
         keyConcepts: ['Taiwanese festivals vocabulary (zongzi, red envelope)', 'Western holidays (Halloween, Christmas)', 'Holiday dates with in/on', 'Cultural respect & traditions']
       },
       {
@@ -411,6 +669,12 @@ export const coursesData = {
         title: 'Unit 6: Reading Comprehension & Phonics Mastery',
         description: '掌握 Skimming 略讀與 Scanning 掃讀策略，利用上下文線索推敲英文生字。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '英-E-B2',
+        badge: 'Reading Comprehension',
         keyConcepts: ['Skimming for main idea', 'Scanning for specific details', 'Context clues for new vocabulary', 'Word suffixes (-tion, -ful, -ly)']
       },
       {
@@ -418,6 +682,12 @@ export const coursesData = {
         title: 'Unit 7: Future Plans & Dream Careers',
         description: '掌握未來式 will + V 與 be going to 句型，討論夢想職業與寒暑假精彩計畫。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '英-E-A1',
+        badge: 'Future Plans未來職業',
         keyConcepts: ['Future tense: will & be going to', 'What are you going to do this summer?', 'Dream careers & job descriptions', 'Junior high goals & dreams']
       },
       {
@@ -425,6 +695,12 @@ export const coursesData = {
         title: 'Unit 8: Comparisons & World Wonders',
         description: '熟練形容詞比較級 (-er/more) 與最高級 (-est/most)，比較世界地標與自然奇景。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '英-E-B1',
+        badge: 'Comparisons比較級最高級',
         keyConcepts: ['Comparative adjectives (-er, more)', 'Superlative adjectives (-est, the most)', 'Irregular adjectives (good/better/best)', 'Expressing opinions with reasons']
       }
     ],
@@ -434,6 +710,12 @@ export const coursesData = {
         title: '單元 1：視覺藝術探索——色彩與構圖之美',
         description: '掌握色彩三要素（色相、明度、彩度）、冷暖色調與黃金比例對稱構圖原則。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '藝-E-A1',
+        badge: '色彩三要素構圖美學',
         keyConcepts: ['色彩三要素與色相環', '冷色調與暖色調的情緒感染', '黃金比例、三分法與對稱平衡', '水彩、版畫多元媒材特性']
       },
       {
@@ -441,6 +723,12 @@ export const coursesData = {
         title: '單元 2：音樂欣賞與實作——音符與節奏的魔力',
         description: '認識五線譜音符拍號、打擊樂器節奏，欣賞古典樂、民謠與臺灣本土音樂。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '藝-E-B1',
+        badge: '五線譜拍號古典本土',
         keyConcepts: ['五線譜高音譜號、音名與休止符', '拍號意義（4/4拍、3/4拍律動）', '古典交響樂器編制', '臺灣本土民謠與歌仔戲曲風']
       },
       {
@@ -448,6 +736,12 @@ export const coursesData = {
         title: '單元 3：表演藝術與戲劇舞台——身體與創意的交響曲',
         description: '探索肢體動作、聲音四度空間、三幕劇架構與幕前幕後團隊合作分工。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '藝-E-C1',
+        badge: '表演藝術三幕劇肢體',
         keyConcepts: ['肢體雕塑與非語言情緒傳達', '聲音音高、音量、音色與語速', '戲劇三幕架構（開端、高潮、結局）', '導演、舞台、燈光幕後團隊職責']
       },
       {
@@ -455,6 +749,12 @@ export const coursesData = {
         title: '單元 4：生活美學與設計思考——點亮生活的創意智慧',
         description: '學習以人為本的設計思考五步驟，探討通用設計、公共指標系統與綠色包裝。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '藝-E-A2',
+        badge: '設計思考通用設計',
         keyConcepts: ['設計思考五大步驟 (EDIPT)', '通用設計 (Universal Design) 友善原則', '公共視覺指標 (Pictogram) 特點', '綠色永續與形式跟隨功能']
       },
       {
@@ -462,6 +762,12 @@ export const coursesData = {
         title: '單元 5：數位藝術、定格動畫與多媒體創客',
         description: '學習平板數位繪圖圖層技法、定格動畫分鏡腳本製作與聲音採集配樂剪輯。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '藝-E-B2',
+        badge: '平板電繪定格動畫',
         keyConcepts: ['數位繪圖圖層與筆刷運用', '定格動畫製作五大流程', '角色製作與 FPS 影格率', '聲音音效採集與多媒體整合']
       },
       {
@@ -469,6 +775,12 @@ export const coursesData = {
         title: '單元 6：臺灣傳統民間工藝與世界偶戲巡禮',
         description: '欣賞交趾陶、剪黏與藍染工藝，探索布袋戲生旦淨末丑操偶身段與世界偶戲藝術。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '藝-E-C2',
+        badge: '民間工藝世界偶戲',
         keyConcepts: ['臺灣傳統工藝（交趾陶/剪黏/藍染）', '布袋戲歷史與操偶身段', '角色行當（生旦淨末丑）特徵', '世界經典偶戲文化巡禮']
       }
     ],
@@ -478,6 +790,12 @@ export const coursesData = {
         title: '單元 1：青春期的身心蛻變——擁抱成長與自我肯定',
         description: '認識男女第二性徵生理變化、情緒調適、性別平等與建立正向身體意象。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '體-E-A1',
+        badge: '青春期發育自我肯定',
         keyConcepts: ['青春期生長衝刺與第二性徵', '情緒管理與同儕調適妙方', '正向身體意象 (拒絕外貌焦慮)', '身體自主權與堅定拒絕']
       },
       {
@@ -485,6 +803,12 @@ export const coursesData = {
         title: '單元 2：飲食與營養密碼——「我的餐盤」聰明吃',
         description: '實踐「我的餐盤」六大口訣，學會解讀食品成分標示與避開高糖高鈉陷阱。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '體-E-B1',
+        badge: '我的餐盤食品標示',
         keyConcepts: ['六大類食物功能與均衡攝取', '「我的餐盤」六句健康口訣', '食品營養標示三要素解讀', '減糖減鈉與白開水重要性']
       },
       {
@@ -492,6 +816,12 @@ export const coursesData = {
         title: '單元 3：安全急救與運動防護——關鍵時刻的守護者',
         description: '熟練 CPR+AED「叫叫CD」急救口訣、哈姆立克法與運動傷害 PRICE 冰敷原則。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '體-E-C1',
+        badge: 'CPR+AED叫叫CD急救',
         keyConcepts: ['CPR胸外按壓（位置、深度5cm、速率100~120次）', 'AED操作口訣與電擊安全', '氣道哽塞哈姆立克急救法', '急性運動傷害 PRICE 原則']
       },
       {
@@ -499,6 +829,12 @@ export const coursesData = {
         title: '單元 4：體適能與運動家精神——身心強健的恆毅力',
         description: '掌握健康體適能四大要素與鍛鍊方法，內化守規則、全力以赴的運動家品格。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '體-E-A2',
+        badge: '健康體適能運動品格',
         keyConcepts: ['心肺耐力、肌力耐力、柔軟度、身體組成', '個人運動計畫設計要領', '運動家精神四大核心品格', '運動對大腦發育與情緒助益']
       },
       {
@@ -506,6 +842,12 @@ export const coursesData = {
         title: '單元 5：球類戰術、團隊合作與運動安全競賽',
         description: '精進籃球、排球與羽球核心技術，掌握攻守戰術、動態熱身與運動傷害防護。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '體-E-B2',
+        badge: '球類戰術動態熱身',
         keyConcepts: ['籃球運球上籃與區域防守', '排球托球接球與發球要領', '羽球擊球步法與戰術配合', '動態熱身與運動安全防護']
       },
       {
@@ -513,6 +855,12 @@ export const coursesData = {
         title: '單元 6：心理健康、壓力調適與挫折復原力',
         description: '認識高年級課業與同儕壓力源，學習正念深呼吸、成長心態與反霸凌求助支援。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '體-E-C2',
+        badge: '壓力調適成長心態',
         keyConcepts: ['青少年壓力來源與身心覺察', '正念 4-7-8 呼吸放鬆法', '成長心態 (Growth Mindset) 建立', '霸凌類型辨識與求助管道']
       }
     ],
@@ -522,6 +870,12 @@ export const coursesData = {
         title: '單元 1：時間與金錢管理——打造自律高效的精彩生活',
         description: '活用時間管理「四象限法則」、辨析需要與想要、掌握六三一存錢法。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '綜-E-A1',
+        badge: '時間四象限六三一理財',
         keyConcepts: ['時間管理四象限法（重視第二象限）', '自主制定高年級學習計畫表', '「需要」vs「想要」理性消費', '六三一儲蓄與預算分配']
       },
       {
@@ -529,6 +883,12 @@ export const coursesData = {
         title: '單元 2：人際溝通與情緒解碼——高EQ的人際和諧術',
         description: '學會情緒紅綠燈辨識、掌握「我訊息(I-Message)」表達與衝突同理心化解。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '綜-E-B1',
+        badge: '情緒紅綠燈我訊息高EQ',
         keyConcepts: ['情緒紅綠燈停想行步驟', '「我訊息」溝通公式四步驟', '衝突處理同理心五階段', '健康接納情緒的高EQ思維']
       },
       {
@@ -536,6 +896,12 @@ export const coursesData = {
         title: '單元 3：生涯探索與自主學習策略——發掘天賦的成長地圖',
         description: '探索迦納八大多元智能，掌握康乃爾筆記法與費曼學習法等高效學習工具。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6A',
+        term: 'final',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '綜-E-A2',
+        badge: '八大多元智能筆記法',
         keyConcepts: ['迦納八大多元智能理論', '發掘個人優勢與興趣熱忱', '康乃爾筆記法三大結構', '費曼學習法「大白話輸出」驗證']
       },
       {
@@ -543,6 +909,12 @@ export const coursesData = {
         title: '單元 4：社會服務與公民實踐——用愛與行動溫暖世界',
         description: '理解服務學習四部曲，從小做起參與校園志工、社區關懷與環境倡議實踐。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 1,
+        estimatedMinutes: 15,
+        competencyCode: '綜-E-C1',
+        badge: '服務學習四部曲公民',
         keyConcepts: ['服務學習四部曲 (準備、行動、反思、慶賀)', '少年公民社區與校園參與方案', '關懷弱勢與友善平權行動', '利他精神帶來的生命價值']
       },
       {
@@ -550,6 +922,12 @@ export const coursesData = {
         title: '單元 5：媒體素養、數位辨識與健康上網指南',
         description: '學會假新聞查核三步驟、識破演算法同溫層與標題黨、建立健康 3C 數位生活。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'midterm',
+        difficulty: 2,
+        estimatedMinutes: 15,
+        competencyCode: '綜-E-B2',
+        badge: '假新聞查核數位素養',
         keyConcepts: ['假訊息查證三步驟', '演算法同溫層與過濾泡泡', '個人數位足跡與隱私防護', '20-20-20 護眼與數位排毒']
       },
       {
@@ -557,6 +935,12 @@ export const coursesData = {
         title: '單元 6：戶外冒險、無痕山林與危機自主應變',
         description: '實踐無痕山林 LNT 七大準則，熟練指北針地圖定向越野與野外求生 333 原則。',
         videoUrl: 'https://adl.edu.tw/',
+        semester: '6B',
+        term: 'final',
+        difficulty: 3,
+        estimatedMinutes: 18,
+        competencyCode: '綜-E-C2',
+        badge: '無痕山林LNT野外求生',
         keyConcepts: ['戶外行前評估與裝備清單', '無痕山林 (LNT) 七大準則', '指北針與地圖定向越野技能', '野外迷路求生 333 原則與 STOP 法則']
       }
     ]

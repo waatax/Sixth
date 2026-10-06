@@ -30,6 +30,7 @@ import SubjectIconBadge from '../components/common/SubjectIconBadge';
 const SubjectPage = () => {
   const { subjectId } = useParams();
   const { unitStars } = useGamification();
+  const [selectedSemester, setSelectedSemester] = useState('all'); // 'all' | '6A' | '6B'
   const [selectedTier, setSelectedTier] = useState('all'); // 'all' | 'tier1' | 'tier2' | 'tier3'
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -62,15 +63,16 @@ const SubjectPage = () => {
   // Filtered units
   const filteredUnits = useMemo(() => {
     return units.map((u, idx) => ({ ...u, originalIndex: idx, tier: getTierInfo(idx, units.length) })).filter(u => {
+      const matchSemester = selectedSemester === 'all' || u.semester === selectedSemester;
       const matchTier = selectedTier === 'all' || u.tier.id === selectedTier;
       const q = searchQuery.trim().toLowerCase();
       const matchSearch = !q || 
         u.title.toLowerCase().includes(q) ||
         u.description.toLowerCase().includes(q) ||
         (u.keyConcepts && u.keyConcepts.some(c => c.toLowerCase().includes(q)));
-      return matchTier && matchSearch;
+      return matchSemester && matchTier && matchSearch;
     });
-  }, [units, selectedTier, searchQuery]);
+  }, [units, selectedSemester, selectedTier, searchQuery]);
 
   // Overall Mastery stats
   const totalStars = units.reduce((acc, u) => acc + (unitStars[u.id] || 0), 0);
@@ -441,48 +443,69 @@ const SubjectPage = () => {
         </div>
       )}
 
-      {/* 🔍 Search & Tier Filter Bar */}
+      {/* 🔍 Search, Semester & Tier Filter Bar */}
       <div 
-        className="card p-3 flex flex-col md:flex-row justify-between items-center gap-3"
-        style={{ backgroundColor: 'var(--bg-secondary)', border: '1.5px solid var(--border-light)' }}
+        className="card p-3.5 flex flex-col gap-2.5"
+        style={{ backgroundColor: 'var(--bg-secondary)', border: '1.5px solid var(--border-light)', borderRadius: 'var(--radius-xl)' }}
       >
-        {/* Tier filter tabs */}
-        <div className="flex gap-1.5 flex-wrap mobile-scroll-row w-full md:w-auto">
+        {/* Row 1: Semester Tabs & Search Input */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+          {/* Semester pills */}
+          <div className="flex gap-1.5 flex-wrap mobile-scroll-row w-full md:w-auto">
+            {[
+              { id: 'all', label: `🌟 全部學期 (${units.length})` },
+              { id: '6A', label: `📘 6年級上學期 (${units.filter(u => u.semester === '6A').length})` },
+              { id: '6B', label: `📗 6年級下學期 (${units.filter(u => u.semester === '6B').length})` }
+            ].map(s => (
+              <button
+                key={s.id}
+                onClick={() => setSelectedSemester(s.id)}
+                className={`btn-pill text-xs px-3 py-1.5 font-bold ${selectedSemester === s.id ? 'active' : ''}`}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Real-time search input */}
+          <div className="relative w-full md:w-72">
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" />
+            <input
+              type="text"
+              placeholder="搜尋單元標題或核心考點..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="input-field pl-8 pr-8 py-1.5 text-xs w-full"
+              style={{ borderRadius: 'var(--radius-full)' }}
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-tertiary hover:text-primary"
+              >
+                <X size={13} />
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Row 2: Learning Tier Stepper pills */}
+        <div className="flex items-center gap-2 pt-2 border-t border-light flex-wrap">
+          <span className="text-[11px] font-bold text-tertiary">學習階梯：</span>
           {[
-            { id: 'all', label: `全部單元 (${units.length})` },
-            { id: 'tier1', label: '🌱 基礎加固' },
-            { id: 'tier2', label: '🌿 核心必考' },
-            { id: 'tier3', label: '🌳 實戰高分' }
+            { id: 'all', label: '全部階梯' },
+            { id: 'tier1', label: '🌱 基礎加固 (暖身)' },
+            { id: 'tier2', label: '🌿 核心觀念 (必考)' },
+            { id: 'tier3', label: '🌳 實戰高分 (壓軸)' }
           ].map(t => (
             <button
               key={t.id}
               onClick={() => setSelectedTier(t.id)}
-              className={`btn-pill text-xs px-3 py-1.5 font-bold ${selectedTier === t.id ? 'active' : ''}`}
+              className={`btn-pill text-[11px] px-2.5 py-1 font-semibold ${selectedTier === t.id ? 'active' : ''}`}
             >
               {t.label}
             </button>
           ))}
-        </div>
-
-        {/* Real-time search input */}
-        <div className="relative w-full md:w-72">
-          <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" />
-          <input
-            type="text"
-            placeholder="搜尋單元標題或核心考點..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="input-field pl-8 pr-8 py-1.5 text-xs w-full"
-            style={{ borderRadius: 'var(--radius-full)' }}
-          />
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-tertiary hover:text-primary"
-            >
-              <X size={13} />
-            </button>
-          )}
         </div>
       </div>
 
@@ -532,14 +555,35 @@ const SubjectPage = () => {
                         第 {unit.originalIndex + 1} 關
                       </span>
                       <span 
+                        className="badge font-bold" 
+                        style={{ 
+                          backgroundColor: unit.semester === '6A' ? 'rgba(59, 130, 246, 0.12)' : 'rgba(16, 185, 129, 0.12)', 
+                          color: unit.semester === '6A' ? '#2563eb' : '#059669', 
+                          fontSize: '0.72rem' 
+                        }}
+                      >
+                        {unit.semester === '6A' ? '📘 6上' : '📗 6下'}
+                      </span>
+                      <span 
                         className="badge" 
-                        style={{ backgroundColor: tier.bg, color: tier.color, fontWeight: 700, fontSize: '0.75rem' }}
+                        style={{ backgroundColor: tier.bg, color: tier.color, fontWeight: 700, fontSize: '0.72rem' }}
                       >
                         {tier.label}
                       </span>
-                      <span className="text-xs text-secondary flex items-center gap-1">
+                      {unit.competencyCode && (
+                        <span 
+                          className="badge text-[10px] font-bold"
+                          style={{ backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-secondary)' }}
+                        >
+                          {unit.competencyCode}
+                        </span>
+                      )}
+                      <span className="text-[11px] font-bold text-amber-500">
+                        難度：{'★'.repeat(unit.difficulty || 2)}{'☆'.repeat(3 - (unit.difficulty || 2))}
+                      </span>
+                      <span className="text-xs text-secondary flex items-center gap-1 font-semibold">
                         <Clock size={12} />
-                        約 3~5 分鐘
+                        約 {unit.estimatedMinutes || 15} 分鐘
                       </span>
                     </div>
 

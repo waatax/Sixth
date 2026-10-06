@@ -30,6 +30,7 @@ import PetSanctuaryModal from '../components/gamification/PetSanctuaryModal';
 import GachaLootModal from '../components/gamification/GachaLootModal';
 import LectureNotesDownloadHub from '../components/home/LectureNotesDownloadHub';
 import TopicDiscoveryExplorer from '../components/home/TopicDiscoveryExplorer';
+import ResumeLearningBanner from '../components/home/ResumeLearningBanner';
 import SubjectIconBadge from '../components/common/SubjectIconBadge';
 import { useGamification } from '../context/GamificationContext';
 import { triggerHaptic, playSound, dispatchDynamicIsland } from '../utils/soundEffects';
@@ -247,6 +248,11 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+ 
+      {/* ============================================================ */}
+      {/* 🎯 1.5 學習記憶：接續上次學習進度 / 推薦起點 */}
+      {/* ============================================================ */}
+      <ResumeLearningBanner />
 
       {/* ============================================================ */}
       {/* 🎯 2. 【全新核心】全科知識主題探索與智能搜尋中心 (直覺找到感興趣主題) */}

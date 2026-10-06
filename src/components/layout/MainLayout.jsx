@@ -4,6 +4,7 @@ import Footer from './Footer';
 import EyeCareToolbar from '../common/EyeCareToolbar';
 import DynamicIsland from '../common/DynamicIsland';
 import CupertinoTabBar from './CupertinoTabBar';
+import GlobalCommandPalette from '../common/GlobalCommandPalette';
 import './Layout.css';
 
 const MainLayout = () => {
@@ -28,6 +29,9 @@ const MainLayout = () => {
 
       {/* iOS Cupertino Bottom Frosted TabBar for Mobile */}
       <CupertinoTabBar />
+
+      {/* Global Spotlight Omnisearch Command Palette */}
+      <GlobalCommandPalette />
     </div>
   );
 };

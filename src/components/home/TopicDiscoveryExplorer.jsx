@@ -66,17 +66,25 @@ export const TopicDiscoveryExplorer = () => {
     coursesData.subjects.forEach(subject => {
       const units = coursesData.units[subject.id] || [];
       units.forEach((unit, idx) => {
-        // 檢查該單元是否有關聯的動態實驗
-        const matchedLab = interactiveLabsList.find(lab => {
-          if (subject.id === 'math' && unit.id === 'math-u6' && lab.id === 'circle-area') return true;
-          if (subject.id === 'science' && unit.id === 'science-u6' && lab.id === 'lever-seesaw') return true;
-          if (subject.id === 'science' && unit.id === 'science-u2' && lab.id === 'acid-base-ph') return true;
-          if (subject.id === 'science' && unit.id === 'science-u3' && lab.id === 'electromagnet') return true;
-          if (subject.id === 'science' && unit.id === 'science-u1' && lab.id === 'weather-fronts') return true;
-          if (subject.id === 'math' && unit.id === 'math-u7' && lab.id === 'speed-race') return true;
-          if (subject.id === 'science' && unit.id === 'science-u10' && lab.id === 'virtual-microscope') return true;
-          return false;
-        });
+        // 檢查該單元是否有關聯的動態實驗 (全站 14 大動態實驗全面連通)
+        const labMap = {
+          'math-u6': 'circle-area',
+          'math-u7': 'speed-race',
+          'math-u11': 'number-line',
+          'sci-u1': 'weather-fronts',
+          'sci-u2': 'acid-base-ph',
+          'sci-u3': 'electromagnet',
+          'sci-u6': 'lever-seesaw',
+          'sci-u10': 'virtual-microscope',
+          'eng-u2': 'english-tense',
+          'man-u8': 'hanzi-six-scripts',
+          'soc-u1': 'five-powers-balance',
+          'art-u1': 'color-wheel-mixer',
+          'pe-u3': 'cpr-rhythm-metronome',
+          'comp-u1': 'time-management-matrix'
+        };
+        const targetLabId = labMap[unit.id];
+        const matchedLab = targetLabId ? interactiveLabsList.find(lab => lab.id === targetLabId) : null;
 
         // 標記國中銜接重要性
         const isPrepBridge = [

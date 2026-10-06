@@ -986,6 +986,54 @@ const ExamReviewNotesPage = () => {
                       <span>💡 本單元在此焦點類別無額外設定，建議切換至「完整全覽精讀」進行全面複習。</span>
                     </div>
                   )}
+
+                  {/* 單元雙向貫通：直通課文精讀與隨堂測驗 (網頁端專屬) */}
+                  <div className="unit-action-footer no-print">
+                    <div className="text-xs text-secondary font-bold flex items-center gap-1.5">
+                      <Sparkles size={13} style={{ color: currentSubjectMeta.color }} />
+                      <span>延伸學習與即時驗收：</span>
+                    </div>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <Link
+                        to={`/lesson/${note.unitId}`}
+                        className="btn-outline text-xs font-bold flex items-center gap-1.5 py-1.5 px-3"
+                        style={{ borderRadius: 'var(--radius-md)', textDecoration: 'none' }}
+                      >
+                        <BookOpen size={13} />
+                        <span>📖 圖解課文精讀</span>
+                      </Link>
+
+                      <Link
+                        to={`/quiz/${note.unitId}`}
+                        className="btn-outline text-xs font-bold flex items-center gap-1.5 py-1.5 px-3"
+                        style={{ 
+                          borderRadius: 'var(--radius-md)', 
+                          textDecoration: 'none',
+                          borderColor: 'var(--accent-success)',
+                          color: 'var(--accent-success-text)',
+                          backgroundColor: 'var(--accent-success-soft)'
+                        }}
+                      >
+                        <CheckCircle2 size={13} />
+                        <span>✍️ 隨堂測驗 (+50 XP)</span>
+                      </Link>
+
+                      <Link
+                        to={`/quiz/${note.unitId}?mode=challenge`}
+                        className="btn-outline text-xs font-bold flex items-center gap-1.5 py-1.5 px-3"
+                        style={{ 
+                          borderRadius: 'var(--radius-md)', 
+                          textDecoration: 'none',
+                          borderColor: '#f59e0b',
+                          color: '#d97706',
+                          backgroundColor: '#fffbeb'
+                        }}
+                      >
+                        <Zap size={13} />
+                        <span>⚔️ 壓軸挑戰 (+100 XP)</span>
+                      </Link>
+                    </div>
+                  </div>
                 </section>
               );
             })

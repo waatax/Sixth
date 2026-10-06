@@ -1653,3 +1653,18 @@
   background: linear-gradient(135deg, rgba(254, 243, 199, 0.8) 0%, rgba(253, 230, 138, 0.45) 100%);
   border-color: rgba(180, 83, 9, 0.3);
 }
+
+/* ==========================================================================
+   🔗 單元底部雙向貫通工具列 (網頁端專屬)
+   ========================================================================== */
+.unit-action-footer {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+

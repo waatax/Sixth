@@ -45,37 +45,11 @@ const Header = () => {
     setExamToolsDropdownOpen(false);
   }, [location.pathname]);
 
-  // Global Ctrl+K / Cmd+K shortcut listener to jump to Topic Explorer
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        handleJumpToTopicExplorer();
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [location.pathname]);
-
-  const handleJumpToTopicExplorer = () => {
+  const handleOpenSpotlight = () => {
     triggerHaptic('light');
     playSound('ios_tap');
     setMobileMenuOpen(false);
-
-    if (location.pathname !== '/') {
-      navigate('/#topic-discovery-section');
-      setTimeout(() => {
-        const el = document.getElementById('topic-discovery-section');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-        const input = document.querySelector('#topic-discovery-section input');
-        if (input) input.focus();
-      }, 250);
-    } else {
-      const el = document.getElementById('topic-discovery-section');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-      const input = document.querySelector('#topic-discovery-section input');
-      if (input) input.focus();
-    }
+    window.dispatchEvent(new CustomEvent('open_command_palette'));
   };
 
   // Primary navigation links for desktop
@@ -350,7 +324,7 @@ const Header = () => {
           <div className="flex items-center gap-2" style={{ flexShrink: 0 }}>
             {/* Quick Topic Search Button */}
             <button
-              onClick={handleJumpToTopicExplorer}
+              onClick={handleOpenSpotlight}
               className="ios-pressable flex items-center gap-1.5 px-3 py-1.5 rounded-full"
               style={{
                 backgroundColor: 'var(--bg-tertiary)',
@@ -469,7 +443,7 @@ const Header = () => {
 
               {/* Mobile Drawer: Instant Search Banner */}
               <button
-                onClick={handleJumpToTopicExplorer}
+                onClick={handleOpenSpotlight}
                 className="w-full mb-3.5 p-2.5 rounded-xl flex items-center justify-between text-left ios-pressable"
                 style={{
                   backgroundColor: 'var(--accent-soft)',

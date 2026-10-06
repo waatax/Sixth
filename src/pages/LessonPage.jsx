@@ -274,19 +274,43 @@ const LessonPage = () => {
     }
   }
 
-  // 檢查本單元是否有對應之 PhET 動態模擬實驗室
+  // 自動記錄本單元為最近學習課程
+  useEffect(() => {
+    if (unitId) {
+      try {
+        localStorage.setItem('sixth_last_unit', unitId);
+        if (currentSubject) {
+          localStorage.setItem(`sixth_last_studied_${currentSubject.id}`, unitId);
+        }
+        localStorage.setItem('sixth_last_studied_time', Date.now().toString());
+      } catch (e) {}
+    }
+  }, [unitId, currentSubject]);
+
+  // 檢查本單元是否有對應之動態模擬實驗室 (全站 14 大實驗全面連通)
   const matchedLab = useMemo(() => {
     if (!currentSubject || !unitId) return null;
-    return interactiveLabsList.find(lab => {
-      if (currentSubject.id === 'math' && unitId === 'math-u6' && lab.id === 'circle-area') return true;
-      if (currentSubject.id === 'science' && unitId === 'science-u6' && lab.id === 'lever-seesaw') return true;
-      if (currentSubject.id === 'science' && unitId === 'science-u2' && lab.id === 'acid-base-ph') return true;
-      if (currentSubject.id === 'science' && unitId === 'science-u3' && lab.id === 'electromagnet') return true;
-      if (currentSubject.id === 'science' && unitId === 'science-u1' && lab.id === 'weather-fronts') return true;
-      if (currentSubject.id === 'math' && unitId === 'math-u7' && lab.id === 'speed-race') return true;
-      if (currentSubject.id === 'science' && unitId === 'science-u10' && lab.id === 'virtual-microscope') return true;
-      return false;
-    });
+    const labMap = {
+      'math-u6': 'circle-area',
+      'math-u7': 'speed-race',
+      'math-u11': 'number-line',
+      'sci-u1': 'weather-fronts',
+      'sci-u2': 'acid-base-ph',
+      'sci-u3': 'electromagnet',
+      'sci-u6': 'lever-seesaw',
+      'sci-u10': 'virtual-microscope',
+      'eng-u2': 'english-tense',
+      'man-u8': 'hanzi-six-scripts',
+      'soc-u1': 'five-powers-balance',
+      'art-u1': 'color-wheel-mixer',
+      'pe-u3': 'cpr-rhythm-metronome',
+      'comp-u1': 'time-management-matrix'
+    };
+    const targetLabId = labMap[unitId];
+    if (targetLabId) {
+      return interactiveLabsList.find(lab => lab.id === targetLabId) || null;
+    }
+    return null;
   }, [currentSubject, unitId]);
 
   const [hasCelebrated, setHasCelebrated] = useState(false);
@@ -299,6 +323,9 @@ const LessonPage = () => {
       if (totalHeight > 0) {
         const progress = Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100));
         setScrollProgress(progress);
+        try {
+          localStorage.setItem(`sixth_unit_progress_${unitId}`, Math.round(progress).toString());
+        } catch (e) {}
         
         if (window.scrollY > 260) {
           setShowFloatingDock(true);
@@ -320,7 +347,7 @@ const LessonPage = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [hasCelebrated]);
+  }, [hasCelebrated, unitId]);
 
   // Fetch markdown content
   useEffect(() => {
@@ -1860,6 +1887,24 @@ const LessonPage = () => {
               title="查看並下載本學科專屬章節講義與考前大複習 PDF"
             >
               <FileText size={16} /> 下載【{currentSubject.name}】章節講義 (PDF)
+            </button>
+          )}
+
+          {matchedLab && (
+            <button 
+              className="btn-outline flex items-center gap-1.5"
+              onClick={() => navigate(`/labs?lab=${matchedLab.id}`)}
+              style={{
+                padding: '12px 18px',
+                fontSize: '0.92rem',
+                fontWeight: 700,
+                borderRadius: 'var(--radius-md)',
+                borderColor: matchedLab.color || '#10b981',
+                color: matchedLab.color || '#10b981'
+              }}
+              title={`前往動態模擬實驗：${matchedLab.title}`}
+            >
+              <FlaskConical size={16} /> 動手做【{matchedLab.title.split(' ')[1] || matchedLab.title}】
             </button>
           )}
 

@@ -487,6 +487,13 @@ const QuizPage = () => {
             <Zap size={16} /> ⚡ 查閱本單元考前極速秘笈
           </button>
 
+          <button
+            className="btn-outline flex items-center gap-1.5 text-sm font-bold text-indigo-500 border-indigo-400/60 hover:bg-indigo-500/10"
+            onClick={() => navigate(`/lesson/${unitId}`)}
+          >
+            <BookOpen size={16} /> 📖 返回圖解課文
+          </button>
+
           <button className="btn-outline flex items-center gap-2 text-sm" onClick={handleRestart}>
             <RotateCcw size={16} /> 重新挑戰刷滿 3 星
           </button>
