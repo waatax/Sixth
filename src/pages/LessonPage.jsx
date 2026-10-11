@@ -68,6 +68,7 @@ import LessonPulseCheck from '../components/lesson/LessonPulseCheck';
 import LearningRoadmapStepper from '../components/lesson/LearningRoadmapStepper';
 import ConceptKnowledgeBridge from '../components/lesson/ConceptKnowledgeBridge';
 import ProblemSolvingScaffold from '../components/lesson/ProblemSolvingScaffold';
+import LessonCompletionModal from '../components/lesson/LessonCompletionModal';
 import './LessonPage.css';
 
 // Vite dynamic import for raw markdown files
@@ -156,7 +157,14 @@ const LessonPage = () => {
   const { unitId } = useParams();
   const navigate = useNavigate();
   const { increaseFontSize, decreaseFontSize, focusMode, setFocusMode } = useTheme();
-  const { addCoins, addXp } = useGamification();
+  const { 
+    addCoins, 
+    addXp, 
+    recordLessonRead, 
+    isBookmarked, 
+    toggleBookmark, 
+    addHighlight: addGlobalHighlight 
+  } = useGamification();
 
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
@@ -177,6 +185,9 @@ const LessonPage = () => {
   const [isCheatSheetOpen, setIsCheatSheetOpen] = useState(false);
   const [isTocDrawerOpen, setIsTocDrawerOpen] = useState(false);
   const [hasBookmarked, setHasBookmarked] = useState(false);
+  const [isZenMode, setIsZenMode] = useState(false);
+  const [showCompletionModal, setShowCompletionModal] = useState(false);
+  const [completionReward, setCompletionReward] = useState(null);
 
   // ScrollSpy Active Section Tracking
   const [activeSectionId, setActiveSectionId] = useState('');
@@ -333,13 +344,24 @@ const LessonPage = () => {
           setShowFloatingDock(false);
         }
 
-        if (progress >= 99 && !hasCelebrated) {
+        if (progress >= 95 && !hasCelebrated) {
           setHasCelebrated(true);
+          const reward = recordLessonRead(unitId);
+          setCompletionReward(reward);
+          setShowCompletionModal(true);
           confetti({
-            particleCount: 80,
-            spread: 70,
-            origin: { y: 0.9 },
-            colors: ['#10b981', '#3b82f6', '#f59e0b', '#ec4899']
+            particleCount: 100,
+            spread: 80,
+            origin: { y: 0.6 },
+            colors: ['#10b981', '#3b82f6', '#f59e0b', '#ec4899', '#8b5cf6']
+          });
+          playSound('levelup');
+          triggerHaptic('heavy');
+          dispatchDynamicIsland({
+            title: `🏆 單元完讀達成！`,
+            subtitle: `獲得 +${reward?.earnedXp || 50} XP • +${reward?.earnedCoins || 15} 金幣`,
+            icon: '🎉',
+            color: '#10b981'
           });
         }
       }
@@ -347,7 +369,7 @@ const LessonPage = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [hasCelebrated, unitId]);
+  }, [hasCelebrated, unitId, recordLessonRead]);
 
   // Fetch markdown content
   useEffect(() => {
@@ -386,16 +408,19 @@ const LessonPage = () => {
   };
 
   const handleToggleBookmark = () => {
-    const key = `bookmark_${unitId}`;
-    if (hasBookmarked) {
-      localStorage.removeItem(key);
-      setHasBookmarked(false);
-      playSound('click');
-    } else {
-      localStorage.setItem(key, 'true');
-      setHasBookmarked(true);
+    toggleBookmark(unitId);
+    const nextState = !hasBookmarked;
+    setHasBookmarked(nextState);
+    if (nextState) {
       playSound('coin');
       addCoins(5);
+      dispatchDynamicIsland({
+        title: '⭐ 已加入星標收藏！',
+        subtitle: currentUnit.title,
+        icon: '🔖'
+      });
+    } else {
+      playSound('click');
     }
   };
 
@@ -723,6 +748,18 @@ const LessonPage = () => {
         unit={currentUnit}
         subjectName={currentSubject?.name || ''}
         markdownContent={content}
+      />
+
+      {/* Lesson Completion Milestone Modal */}
+      <LessonCompletionModal
+        isOpen={showCompletionModal}
+        onClose={() => setShowCompletionModal(false)}
+        unitTitle={currentUnit?.title || ''}
+        unitNumber={currentUnit?.originalIndex ? currentUnit.originalIndex + 1 : (currentUnit?.id?.split('-u')[1] || '1')}
+        nextUnit={nextUnit}
+        matchedLab={matchedLab}
+        unitId={unitId}
+        reward={completionReward}
       />
 
       {/* Top Navigation & Fast Control Bar */}

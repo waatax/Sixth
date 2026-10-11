@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import { 
   PlayCircle, 
@@ -21,18 +21,30 @@ import {
   RotateCcw,
   Sparkles,
   FileText,
-  Download
+  Download,
+  Bookmark,
+  Map,
+  List
 } from 'lucide-react';
 import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 import SubjectIconBadge from '../components/common/SubjectIconBadge';
+import { triggerHaptic, playSound, dispatchDynamicIsland } from '../utils/soundEffects';
 
 const SubjectPage = () => {
   const { subjectId } = useParams();
-  const { unitStars } = useGamification();
+  const navigate = useNavigate();
+  const { 
+    unitStars = {}, 
+    readLessons = {}, 
+    bookmarks = [], 
+    toggleBookmark, 
+    isBookmarked 
+  } = useGamification();
   const [selectedSemester, setSelectedSemester] = useState('all'); // 'all' | '6A' | '6B'
   const [selectedTier, setSelectedTier] = useState('all'); // 'all' | 'tier1' | 'tier2' | 'tier3'
   const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState('list'); // 'list' | 'roadmap'
 
   const subject = coursesData.subjects.find(s => s.id === subjectId);
   const units = coursesData.units[subjectId] || [];
@@ -489,43 +501,214 @@ const SubjectPage = () => {
           </div>
         </div>
 
-        {/* Row 2: Learning Tier Stepper pills */}
-        <div className="flex items-center gap-2 pt-2 border-t border-light flex-wrap">
-          <span className="text-[11px] font-bold text-tertiary">學習階梯：</span>
-          {[
-            { id: 'all', label: '全部階梯' },
-            { id: 'tier1', label: '🌱 基礎加固 (暖身)' },
-            { id: 'tier2', label: '🌿 核心觀念 (必考)' },
-            { id: 'tier3', label: '🌳 實戰高分 (壓軸)' }
-          ].map(t => (
+        {/* Row 2: Learning Tier Stepper pills & View Mode switcher */}
+        <div className="flex items-center justify-between gap-2 pt-2 border-t border-light flex-wrap">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-[11px] font-bold text-tertiary">學習階梯：</span>
+            {[
+              { id: 'all', label: '全部階梯' },
+              { id: 'tier1', label: '🌱 基礎加固 (暖身)' },
+              { id: 'tier2', label: '🌿 核心觀念 (必考)' },
+              { id: 'tier3', label: '🌳 實戰高分 (壓軸)' }
+            ].map(t => (
+              <button
+                key={t.id}
+                onClick={() => setSelectedTier(t.id)}
+                className={`btn-pill text-[11px] px-2.5 py-1 font-semibold ${selectedTier === t.id ? 'active' : ''}`}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex items-center p-0.5 rounded-lg bg-tertiary border border-light">
             <button
-              key={t.id}
-              onClick={() => setSelectedTier(t.id)}
-              className={`btn-pill text-[11px] px-2.5 py-1 font-semibold ${selectedTier === t.id ? 'active' : ''}`}
+              onClick={() => { setViewMode('list'); playSound('ios_tap'); }}
+              className={`px-2.5 py-1 text-xs font-bold rounded-md flex items-center gap-1 transition-all ${
+                viewMode === 'list' ? 'bg-blue-600 text-white shadow-sm' : 'text-secondary hover:text-primary'
+              }`}
+              title="卡片精讀視圖"
             >
-              {t.label}
+              <List size={13} />
+              <span>卡片</span>
             </button>
-          ))}
+            <button
+              onClick={() => { setViewMode('roadmap'); playSound('ios_tap'); }}
+              className={`px-2.5 py-1 text-xs font-bold rounded-md flex items-center gap-1 transition-all ${
+                viewMode === 'roadmap' ? 'bg-blue-600 text-white shadow-sm' : 'text-secondary hover:text-primary'
+              }`}
+              title="闖關冒險路徑圖"
+            >
+              <Map size={13} />
+              <span>冒險地圖</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Unit Cards List */}
-      <div className="units-list flex flex-col gap-5 mt-1">
-        {filteredUnits.length === 0 ? (
-          <div className="card text-center py-12">
-            <p className="text-secondary mb-2">沒有找到符合搜尋條件的單元。</p>
-            <button
-              onClick={() => { setSelectedTier('all'); setSearchQuery(''); }}
-              className="btn-outline text-xs mt-2"
-            >
-              清除搜尋條件
-            </button>
+      {/* Unit Cards List vs Adventure Roadmap View */}
+      {filteredUnits.length === 0 ? (
+        <div className="card text-center py-12">
+          <p className="text-secondary mb-2">沒有找到符合搜尋條件的單元。</p>
+          <button
+            onClick={() => { setSelectedTier('all'); setSearchQuery(''); }}
+            className="btn-outline text-xs mt-2"
+          >
+            清除搜尋條件
+          </button>
+        </div>
+      ) : viewMode === 'roadmap' ? (
+        <div className="adventure-roadmap-container py-4 relative">
+          {/* Vertical connecting line */}
+          <div 
+            className="absolute left-6 sm:left-8 top-8 bottom-8 w-1 rounded-full pointer-events-none"
+            style={{ 
+              background: `linear-gradient(to bottom, ${subject.color}, rgba(99, 102, 241, 0.4), var(--border-light))` 
+            }}
+          />
+
+          <div className="flex flex-col gap-6 relative z-10">
+            {filteredUnits.map((unit, idx) => {
+              const stars = unitStars[unit.id] || 0;
+              const isCompleted = stars > 0;
+              const isRead = !!readLessons[unit.id];
+              const isMarked = isBookmarked(unit.id);
+              const isNextTarget = !isCompleted && (idx === 0 || (unitStars[filteredUnits[idx - 1]?.id] || 0) > 0);
+
+              return (
+                <div 
+                  key={unit.id}
+                  className="flex items-start gap-4 sm:gap-6 pl-2"
+                >
+                  {/* Step Milestone Circle */}
+                  <div
+                    className={`flex-shrink-0 w-10 sm:w-12 h-10 sm:h-12 rounded-2xl flex items-center justify-center font-black text-sm sm:text-base transition-all shadow-md ${
+                      isCompleted 
+                        ? 'bg-emerald-500 text-white ring-4 ring-emerald-500/20' 
+                        : isNextTarget
+                          ? 'bg-blue-600 text-white ring-4 ring-blue-500/30 animate-pulse'
+                          : 'bg-slate-200 dark:bg-slate-800 text-slate-500 border border-slate-300 dark:border-slate-700'
+                    }`}
+                  >
+                    {isCompleted ? (
+                      stars === 3 ? '👑' : '⭐'
+                    ) : (
+                      unit.originalIndex + 1
+                    )}
+                  </div>
+
+                  {/* Step Card Content */}
+                  <div 
+                    className="card flex-1 p-4 sm:p-5 hover:border-blue-400 transition-all cursor-pointer"
+                    style={{
+                      backgroundColor: 'var(--bg-secondary)',
+                      borderRadius: 'var(--radius-xl)',
+                      border: isCompleted 
+                        ? '1.5px solid rgba(16, 185, 129, 0.4)' 
+                        : isNextTarget 
+                          ? '1.5px solid rgba(59, 130, 246, 0.6)' 
+                          : '1.5px solid var(--border-light)'
+                    }}
+                    onClick={() => {
+                      handleRecordLastStudied(unit.id);
+                      navigate(`/lesson/${unit.id}`);
+                    }}
+                  >
+                    <div className="flex justify-between items-start gap-2 flex-wrap mb-1.5">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span 
+                          className="badge text-[11px] font-bold"
+                          style={{
+                            backgroundColor: unit.semester === '6A' ? 'rgba(59, 130, 246, 0.12)' : 'rgba(16, 185, 129, 0.12)',
+                            color: unit.semester === '6A' ? '#2563eb' : '#059669'
+                          }}
+                        >
+                          {unit.semester === '6A' ? '📘 6上' : '📗 6下'}
+                        </span>
+                        <span className="badge text-[11px] font-bold" style={{ backgroundColor: unit.tier.bg, color: unit.tier.color }}>
+                          {unit.tier.short}
+                        </span>
+                        {isRead && (
+                          <span className="badge badge-success text-[10px] font-bold">
+                            精讀完成 ✅
+                          </span>
+                        )}
+                        {isNextTarget && (
+                          <span className="badge badge-accent text-[10px] font-black animate-bounce">
+                            🎯 推薦當前攻克關卡
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="flex items-center gap-1.5">
+                        {isCompleted && (
+                          <span className="text-amber-500 text-xs font-black">
+                            {'⭐'.repeat(stars)}
+                          </span>
+                        )}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleBookmark(unit.id);
+                            triggerHaptic('light');
+                            playSound('ios_tap');
+                          }}
+                          className="p-1 text-secondary hover:text-amber-500"
+                        >
+                          <Bookmark size={15} className={isMarked ? 'fill-amber-500 text-amber-500' : ''} />
+                        </button>
+                      </div>
+                    </div>
+
+                    <h3 className="text-base sm:text-lg font-black text-primary m-0 mb-1">
+                      {unit.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-secondary m-0 line-clamp-2 leading-relaxed">
+                      {unit.description}
+                    </p>
+
+                    {/* Quick action buttons */}
+                    <div className="flex items-center justify-between gap-2 mt-3 pt-3 border-t border-light flex-wrap">
+                      <div className="flex items-center gap-1 flex-wrap">
+                        {unit.keyConcepts?.slice(0, 3).map((kc, kIdx) => (
+                          <span key={kIdx} className="text-[11px] px-2 py-0.5 rounded-md bg-tertiary text-secondary font-medium">
+                            #{kc}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <Link
+                          to={`/quiz/${unit.id}`}
+                          onClick={(e) => { e.stopPropagation(); handleRecordLastStudied(unit.id); }}
+                          className="btn-outline text-xs px-2.5 py-1 rounded-lg font-bold"
+                        >
+                          隨堂測驗
+                        </Link>
+                        <Link
+                          to={`/lesson/${unit.id}`}
+                          onClick={(e) => { e.stopPropagation(); handleRecordLastStudied(unit.id); }}
+                          className="btn-primary text-xs px-3 py-1 rounded-lg font-bold flex items-center gap-1"
+                        >
+                          <span>進入單元</span>
+                          <ArrowRight size={12} />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        ) : (
-          filteredUnits.map((unit) => {
+        </div>
+      ) : (
+        <div className="units-list flex flex-col gap-5 mt-1">
+          {filteredUnits.map((unit) => {
             const tier = unit.tier;
             const stars = unitStars[unit.id] || 0;
             const isCompleted = stars > 0;
+            const isRead = !!readLessons[unit.id];
+            const isMarked = isBookmarked(unit.id);
 
             return (
               <div
@@ -570,6 +753,14 @@ const SubjectPage = () => {
                       >
                         {tier.label}
                       </span>
+                      {isRead && (
+                        <span 
+                          className="badge badge-success flex items-center gap-1 font-bold"
+                          style={{ fontSize: '0.72rem' }}
+                        >
+                          <CheckCircle2 size={11} /> 精讀完成
+                        </span>
+                      )}
                       {unit.competencyCode && (
                         <span 
                           className="badge text-[10px] font-bold"
@@ -616,8 +807,8 @@ const SubjectPage = () => {
                     </p>
                   </div>
 
-                  {/* Completion Star Badge */}
-                  <div>
+                  {/* Completion Star Badge & Bookmark Toggle */}
+                  <div className="flex items-center gap-2.5">
                     {isCompleted ? (
                       <div className="flex flex-col items-end gap-1">
                         <div className="text-amber-500 font-black text-base tracking-wider">
@@ -633,6 +824,29 @@ const SubjectPage = () => {
                         🌱 待挑戰 (未通關)
                       </span>
                     )}
+
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleBookmark(unit.id);
+                        triggerHaptic('light');
+                        playSound('ios_tap');
+                        dispatchDynamicIsland({
+                          title: isMarked ? '已取消星標收藏' : '⭐ 已加入星標收藏',
+                          subtitle: unit.title,
+                          icon: isMarked ? '🗑️' : '🔖'
+                        });
+                      }}
+                      className="p-1.5 rounded-xl border border-light transition-all hover:scale-105"
+                      style={{
+                        backgroundColor: isMarked ? 'rgba(245, 158, 11, 0.15)' : 'var(--bg-tertiary)',
+                        color: isMarked ? '#f59e0b' : 'var(--text-tertiary)',
+                        borderColor: isMarked ? '#f59e0b' : 'var(--border-light)'
+                      }}
+                      title={isMarked ? '點擊取消收藏' : '加入星標收藏'}
+                    >
+                      <Bookmark size={16} className={isMarked ? 'fill-amber-500 text-amber-500' : ''} />
+                    </button>
                   </div>
                 </div>
                 
@@ -722,9 +936,9 @@ const SubjectPage = () => {
                 </div>
               </div>
             );
-          })
-        )}
-      </div>
+          })}
+        </div>
+      )}
     </div>
   );
 };

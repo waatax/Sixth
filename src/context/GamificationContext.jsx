@@ -234,7 +234,24 @@ const INITIAL_STATE = {
   badges: ['數學小博士', '氣象小偵探', '2026新學期啟航者'],
 
   // Daily spin
-  lastSpinDate: null
+  lastSpinDate: null,
+
+  // Lesson Reading Progress: unitId -> completion timestamp
+  readLessons: {
+    'math-u1': Date.now() - 86400000,
+    'sci-u1': Date.now() - 86400000,
+    'man-u1': Date.now() - 86400000
+  },
+
+  // Bookmarked Units: array of unitIds
+  bookmarks: ['math-u1', 'sci-u1'],
+
+  // User Highlights across all lessons: array of { id, unitId, text, note, createdAt }
+  highlights: [],
+
+  // Daily study metrics
+  todayStudyMinutes: 15,
+  todayConceptsMastered: 4
 };
 
 export const GamificationProvider = ({ children }) => {
@@ -402,6 +419,102 @@ export const GamificationProvider = ({ children }) => {
 
     return { stars, earnedCoins: baseCoins, earnedXp: baseExp };
   }, [addCoins, addXp]);
+
+  // Record Lesson Reading Completion & Award XP + Coins
+  const recordLessonRead = useCallback((unitId) => {
+    let isFirstTime = false;
+    setState(prev => {
+      const alreadyRead = !!prev.readLessons?.[unitId];
+      if (!alreadyRead) isFirstTime = true;
+
+      const newReadLessons = {
+        ...(prev.readLessons || {}),
+        [unitId]: Date.now()
+      };
+
+      const readCount = Object.keys(newReadLessons).length;
+      const newBadges = [...(prev.badges || [])];
+      if (readCount >= 1 && !newBadges.includes('📖 破卷起航')) {
+        newBadges.push('📖 破卷起航');
+      }
+      if (readCount >= 10 && !newBadges.includes('📜 博覽群書')) {
+        newBadges.push('📜 博覽群書');
+      }
+      if (readCount >= 30 && !newBadges.includes('👑 國小知識大宗師')) {
+        newBadges.push('👑 國小知識大宗師');
+      }
+
+      // Slightly increase active pet happiness and hunger
+      const petId = prev.activePetId;
+      const currentPet = prev.petStats?.[petId] || { hunger: 80, happiness: 80 };
+      const updatedPet = {
+        ...currentPet,
+        happiness: Math.min(100, (currentPet.happiness || 80) + 5),
+        hunger: Math.min(100, (currentPet.hunger || 80) + 3)
+      };
+
+      return {
+        ...prev,
+        readLessons: newReadLessons,
+        todayConceptsMastered: (prev.todayConceptsMastered || 0) + 1,
+        badges: newBadges,
+        petStats: {
+          ...(prev.petStats || {}),
+          [petId]: updatedPet
+        }
+      };
+    });
+
+    const earnedXp = isFirstTime ? 50 : 20;
+    const earnedCoins = isFirstTime ? 15 : 5;
+    addXp(earnedXp, `lesson_read_${unitId}`);
+    addCoins(earnedCoins);
+
+    return { isFirstTime, earnedXp, earnedCoins };
+  }, [addCoins, addXp]);
+
+  // Toggle Bookmark
+  const toggleBookmark = useCallback((unitId) => {
+    setState(prev => {
+      const current = prev.bookmarks || [];
+      const isBookmarked = current.includes(unitId);
+      const newBookmarks = isBookmarked ? current.filter(id => id !== unitId) : [...current, unitId];
+      return {
+        ...prev,
+        bookmarks: newBookmarks
+      };
+    });
+  }, []);
+
+  // Check Bookmark
+  const isBookmarked = useCallback((unitId) => {
+    return (state.bookmarks || []).includes(unitId);
+  }, [state.bookmarks]);
+
+  // Add Highlight
+  const addHighlight = useCallback((unitId, text, note = '') => {
+    setState(prev => {
+      const newHighlight = {
+        id: `hl_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
+        unitId,
+        text,
+        note,
+        createdAt: Date.now()
+      };
+      return {
+        ...prev,
+        highlights: [newHighlight, ...(prev.highlights || [])]
+      };
+    });
+  }, []);
+
+  // Remove Highlight
+  const removeHighlight = useCallback((highlightId) => {
+    setState(prev => ({
+      ...prev,
+      highlights: (prev.highlights || []).filter(h => h.id !== highlightId)
+    }));
+  }, []);
 
   // Feed Pet
   const feedPet = useCallback((foodItemId) => {
@@ -615,6 +728,11 @@ export const GamificationProvider = ({ children }) => {
     addCoins,
     addGems,
     recordQuizResult,
+    recordLessonRead,
+    toggleBookmark,
+    isBookmarked,
+    addHighlight,
+    removeHighlight,
     feedPet,
     selectPet,
     buyItem,
