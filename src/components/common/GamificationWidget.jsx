@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Award, Flame, Zap, Trophy, Star, CheckCircle, X, Sparkles, Heart } from 'lucide-react';
 import { useGamification, getXpForNextLevel } from '../../context/GamificationContext';
 import PetSanctuaryModal from '../gamification/PetSanctuaryModal';
+import TrophyHallModal from '../gamification/TrophyHallModal';
 
 const GamificationWidget = () => {
   const { 
@@ -19,6 +20,7 @@ const GamificationWidget = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isSanctuaryOpen, setIsSanctuaryOpen] = useState(false);
+  const [isTrophyHallOpen, setIsTrophyHallOpen] = useState(false);
 
   const nextLevelXp = getXpForNextLevel(level);
   const currentLevelProgress = Math.min(100, Math.round((xp % 100) / 100 * 100));
@@ -176,8 +178,14 @@ const GamificationWidget = () => {
             {/* Badges Collection */}
             <div className="mb-3">
               <div className="text-xs font-bold mb-2 text-secondary flex items-center justify-between">
-                <span>🏆 已解鎖榮譽勳章 ({badges.length})：</span>
-                <span className="text-[11px] text-emerald-500 font-bold">已通關 {completedUnitCount} 單元</span>
+                <span>🏆 榮譽勳章 ({badges.length})：</span>
+                <button
+                  type="button"
+                  onClick={() => { setIsOpen(false); setIsTrophyHallOpen(true); }}
+                  className="text-[11px] text-amber-600 dark:text-amber-400 font-bold hover:underline flex items-center gap-0.5"
+                >
+                  <Trophy size={12} /> 圖鑑館 (16枚) →
+                </button>
               </div>
               <div className="flex gap-1.5 flex-wrap">
                 {badges.map((b, i) => (
@@ -209,6 +217,12 @@ const GamificationWidget = () => {
       <PetSanctuaryModal
         isOpen={isSanctuaryOpen}
         onClose={() => setIsSanctuaryOpen(false)}
+      />
+
+      {/* Trophy Hall Modal */}
+      <TrophyHallModal
+        isOpen={isTrophyHallOpen}
+        onClose={() => setIsTrophyHallOpen(false)}
       />
     </div>
   );

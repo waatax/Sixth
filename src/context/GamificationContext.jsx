@@ -180,6 +180,25 @@ export const SHOP_ITEMS = [
   }
 ];
 
+export const ALL_ACHIEVEMENTS = [
+  { id: 'start_2026', name: '2026新學期啟航者', icon: '🚀', category: 'special', desc: '啟動最強小六旗艦版學習系統', req: '進入平台' },
+  { id: 'math_novice', name: '數學小博士', icon: '🧮', category: 'subject', desc: '完成數學質因數與短除法核心探索', req: '通關數學單元' },
+  { id: 'sci_detective', name: '氣象小偵探', icon: '⛅', category: 'subject', desc: '解構冷暖鋒面與天氣現象規律', req: '通關自然單元' },
+  { id: 'read_1', name: '📖 破卷起航', icon: '📖', category: 'reading', desc: '完成第 1 篇沉浸式圖解單元精讀', req: '精讀 1 個單元' },
+  { id: 'read_10', name: '📜 博覽群書', icon: '📜', category: 'reading', desc: '累計精讀超過 10 篇全科核心單元', req: '精讀 10 個單元' },
+  { id: 'read_30', name: '👑 國小知識大宗師', icon: '👑', category: 'reading', desc: '突破 30 篇單元深度圖解，知識庫大成', req: '精讀 30 個單元' },
+  { id: 'quiz_master', name: '滿分神射手', icon: '🎯', category: 'quiz', desc: '在隨堂觀念測驗中斬獲 3 星完美評級', req: '獲得 3 星評級' },
+  { id: 'quiz_stars_15', name: '百發百中', icon: '⭐', category: 'quiz', desc: '全科題庫累計收割 15 顆榮譽星星', req: '獲得 15 顆星星' },
+  { id: 'quiz_stars_50', name: '全滿貫星神', icon: '🌟', category: 'quiz', desc: '突破 50 顆星星，傲視全校段考', req: '獲得 50 顆星星' },
+  { id: 'streak_3', name: '🔥 意志之火', icon: '🔥', category: 'streak', desc: '連續登入自主學習達到 3 天', req: '連續學習 3 天' },
+  { id: 'streak_7', name: '⚡ 恆星耀斑', icon: '⚡', category: 'streak', desc: '自律突破一週！連續學習達到 7 天', req: '連續學習 7 天' },
+  { id: 'streak_14', name: '💎 不動明王', icon: '💎', category: 'streak', desc: '連續學習達到 14 天，自律習慣已化為本能', req: '連續學習 14 天' },
+  { id: 'boss_conqueror', name: '魔王征服者', icon: '⚔️', category: 'battle', desc: '在魔王城堡中運用學科學力擊潰強敵', req: '擊敗任意城堡魔王' },
+  { id: 'dragon_slayer', name: '屠龍勇者', icon: '🐉', category: 'battle', desc: '擊敗終極黑晶聖龍，榮登傳奇之巔', req: '擊潰終極巨龍' },
+  { id: 'lab_explorer', name: '🧪 探究實踐者', icon: '🧪', category: 'explore', desc: '進入 STEM PhET 跨領域互動實驗室操作', req: '開啟互動實驗' },
+  { id: 'bookmark_collector', name: '🔖 星標藏書家', icon: '🔖', category: 'reading', desc: '星標收藏超過 3 個單元個人精選', req: '收藏 3 個單元' }
+];
+
 const INITIAL_STATE = {
   xp: 180,
   level: 2,
@@ -251,7 +270,16 @@ const INITIAL_STATE = {
 
   // Daily study metrics
   todayStudyMinutes: 15,
-  todayConceptsMastered: 4
+  todayConceptsMastered: 4,
+
+  // 14-day study activity history { 'YYYY-MM-DD': { count: 3, xp: 80 } }
+  activityHistory: {
+    [new Date(Date.now() - 86400000 * 4).toISOString().slice(0, 10)]: { count: 2, xp: 70 },
+    [new Date(Date.now() - 86400000 * 3).toISOString().slice(0, 10)]: { count: 3, xp: 120 },
+    [new Date(Date.now() - 86400000 * 2).toISOString().slice(0, 10)]: { count: 1, xp: 40 },
+    [new Date(Date.now() - 86400000 * 1).toISOString().slice(0, 10)]: { count: 4, xp: 160 },
+    [new Date().toISOString().slice(0, 10)]: { count: 2, xp: 80 }
+  }
 };
 
 export const GamificationProvider = ({ children }) => {
@@ -453,11 +481,23 @@ export const GamificationProvider = ({ children }) => {
         hunger: Math.min(100, (currentPet.hunger || 80) + 3)
       };
 
+      const today = new Date().toISOString().slice(0, 10);
+      const currentHistory = prev.activityHistory || {};
+      const todayAct = currentHistory[today] || { count: 0, xp: 0 };
+      const nextHistory = {
+        ...currentHistory,
+        [today]: {
+          count: todayAct.count + 1,
+          xp: todayAct.xp + (isFirstTime ? 50 : 20)
+        }
+      };
+
       return {
         ...prev,
         readLessons: newReadLessons,
         todayConceptsMastered: (prev.todayConceptsMastered || 0) + 1,
         badges: newBadges,
+        activityHistory: nextHistory,
         petStats: {
           ...(prev.petStats || {}),
           [petId]: updatedPet
@@ -722,6 +762,7 @@ export const GamificationProvider = ({ children }) => {
   const value = {
     ...state,
     currentTitle,
+    allAchievements: ALL_ACHIEVEMENTS,
     activePetTemplate: PET_TEMPLATES[state.activePetId],
     currentPetStats: state.petStats[state.activePetId],
     addXp,

@@ -1188,4 +1188,54 @@
   animation: pulse-ring 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
 
+/* ==========================================================================
+   ⚡ 考點速讀模式 (Quick Scan Mode) - 考前 3 分鐘精準提煉視覺
+   ========================================================================== */
+
+.lesson-page-wrapper.mode-quick-scan .markdown-body p:not(.callout-text) {
+  opacity: 0.72;
+  transition: opacity var(--transition-fast);
+}
+
+.lesson-page-wrapper.mode-quick-scan .markdown-body p:not(.callout-text):hover {
+  opacity: 1;
+}
+
+.lesson-page-wrapper.mode-quick-scan .markdown-body strong {
+  background: rgba(245, 158, 11, 0.22) !important;
+  color: #d97706 !important;
+  padding: 0.15em 0.4em !important;
+  border-radius: 6px !important;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+  font-weight: 800;
+}
+
+[data-theme='dark'] .lesson-page-wrapper.mode-quick-scan .markdown-body strong {
+  background: rgba(251, 191, 36, 0.28) !important;
+  color: #fef08a !important;
+}
+
+.lesson-page-wrapper.mode-quick-scan .markdown-body .katex-display,
+.lesson-page-wrapper.mode-quick-scan .markdown-body table,
+.lesson-page-wrapper.mode-quick-scan .misconception-card,
+.lesson-page-wrapper.mode-quick-scan .callout-box,
+.lesson-page-wrapper.mode-quick-scan blockquote {
+  border: 2px solid rgba(245, 158, 11, 0.45) !important;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.12) !important;
+  position: relative;
+}
+
+.quick-scan-active-banner {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(234, 179, 8, 0.08) 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 10px 16px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
 

@@ -20,7 +20,6 @@ import {
   Bookmark,
   ChevronDown,
   ChevronUp,
-  Smile,
   Award,
   Volume2,
   Headphones,
@@ -41,11 +40,9 @@ import {
   AlertTriangle,
   Compass,
   GraduationCap,
-  Calculator,
   FlaskConical,
   ShieldCheck,
-  Layers,
-  MessageSquareQuote
+  Layers
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
 import { interactiveLabsList } from '../data/interactiveLabsData';
@@ -69,6 +66,8 @@ import LearningRoadmapStepper from '../components/lesson/LearningRoadmapStepper'
 import ConceptKnowledgeBridge from '../components/lesson/ConceptKnowledgeBridge';
 import ProblemSolvingScaffold from '../components/lesson/ProblemSolvingScaffold';
 import LessonCompletionModal from '../components/lesson/LessonCompletionModal';
+import LessonGlossaryModal from '../components/lesson/LessonGlossaryModal';
+import { findGlossaryTerm } from '../data/glossaryTerms';
 import './LessonPage.css';
 
 // Vite dynamic import for raw markdown files
@@ -161,9 +160,7 @@ const LessonPage = () => {
     addCoins, 
     addXp, 
     recordLessonRead, 
-    isBookmarked, 
-    toggleBookmark, 
-    addHighlight: addGlobalHighlight 
+    toggleBookmark 
   } = useGamification();
 
   const [content, setContent] = useState('');
@@ -185,9 +182,10 @@ const LessonPage = () => {
   const [isCheatSheetOpen, setIsCheatSheetOpen] = useState(false);
   const [isTocDrawerOpen, setIsTocDrawerOpen] = useState(false);
   const [hasBookmarked, setHasBookmarked] = useState(false);
-  const [isZenMode, setIsZenMode] = useState(false);
   const [showCompletionModal, setShowCompletionModal] = useState(false);
   const [completionReward, setCompletionReward] = useState(null);
+  const [activeGlossary, setActiveGlossary] = useState(null);
+  const [quickScanMode, setQuickScanMode] = useState(false);
 
   // ScrollSpy Active Section Tracking
   const [activeSectionId, setActiveSectionId] = useState('');
@@ -689,7 +687,7 @@ const LessonPage = () => {
   }
 
   return (
-    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''} ${readingTheme !== 'normal' ? `theme-${readingTheme}` : ''}`}>
+    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''} ${readingTheme !== 'normal' ? `theme-${readingTheme}` : ''} ${quickScanMode ? 'mode-quick-scan' : ''}`}>
       {/* Floating Heart Particles */}
       {floatingHearts.map(h => (
         <div 
@@ -762,6 +760,12 @@ const LessonPage = () => {
         reward={completionReward}
       />
 
+      {/* Concept Micro Glossary Modal */}
+      <LessonGlossaryModal
+        termData={activeGlossary}
+        onClose={() => setActiveGlossary(null)}
+      />
+
       {/* Top Navigation & Fast Control Bar */}
       <div
         className="card mb-4 flex justify-between items-center flex-wrap gap-3"
@@ -814,6 +818,32 @@ const LessonPage = () => {
           >
             <Zap size={13} style={{ fill: '#d97706' }} />
             <span>考前速查</span>
+          </button>
+
+          {/* Quick Scan Mode Switcher */}
+          <button
+            onClick={() => {
+              const nextState = !quickScanMode;
+              setQuickScanMode(nextState);
+              playSound('pop');
+              triggerHaptic('light');
+              dispatchDynamicIsland({
+                title: nextState ? '⚡ 已開啟考點速讀模式' : '📖 已切換至全篇精讀模式',
+                subtitle: nextState ? '自動聚焦關鍵字、公式框與結論' : '沉浸式完整圖文教學',
+                icon: nextState ? '⚡' : '📚'
+              });
+            }}
+            className={`badge cursor-pointer flex items-center gap-1.5 transition-all ${quickScanMode ? 'bg-amber-500 text-white font-bold ring-2 ring-amber-400' : ''}`}
+            style={!quickScanMode ? {
+              backgroundColor: 'rgba(234, 179, 8, 0.12)',
+              color: '#ca8a04',
+              border: '1px solid rgba(234, 179, 8, 0.3)',
+              fontWeight: 700
+            } : undefined}
+            title={quickScanMode ? '關閉速讀模式，返回全篇精讀' : '開啟考前 3 分鐘速讀模式（凸顯精華考點與避坑指南）'}
+          >
+            <Zap size={12} className={quickScanMode ? 'fill-white' : 'fill-amber-500'} />
+            <span>{quickScanMode ? '速讀中' : '⚡ 考點速讀'}</span>
           </button>
 
           {/* Lecture Notes & PDF Quick Link */}
@@ -1014,26 +1044,43 @@ const LessonPage = () => {
                   </p>
                 )}
 
-                {/* 核心考點概念標籤 */}
+                {/* 核心考點概念標籤 (點擊可查看秒懂釋義與考前 Tips) */}
                 {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
                   <div className="flex items-center gap-1.5 flex-wrap mt-3">
                     <span className="text-xs text-tertiary flex items-center gap-1 mr-1">
                       <Sparkles size={12} className="text-amber-500" />
                       核心考點：
                     </span>
-                    {currentUnit.keyConcepts.map((concept, cIdx) => (
-                      <span 
-                        key={cIdx}
-                        className="text-xs px-2.5 py-0.5 rounded-full font-medium"
-                        style={{
-                          backgroundColor: 'var(--bg-tertiary)',
-                          color: 'var(--text-secondary)',
-                          border: '1px solid var(--border-light)'
-                        }}
-                      >
-                        {concept}
-                      </span>
-                    ))}
+                    {currentUnit.keyConcepts.map((concept, cIdx) => {
+                      const termData = findGlossaryTerm(concept);
+                      return (
+                        <button 
+                          key={cIdx}
+                          onClick={() => {
+                            if (termData) {
+                              setActiveGlossary(termData);
+                            } else {
+                              setActiveGlossary({
+                                term: concept,
+                                def: `小六 ${currentSubject?.name || '學科'} 核心考點「${concept}」，段考常結合情境題與典型計算進行綜合測驗。`,
+                                tip: '💡 建議詳讀下方重點整理、範例解題與避坑指南，強化融會貫通！'
+                              });
+                            }
+                            playSound('ios_tap');
+                          }}
+                          className="text-xs px-2.5 py-0.5 rounded-full font-medium cursor-pointer hover:scale-105 hover:border-amber-400 hover:text-amber-500 transition-all flex items-center gap-1"
+                          style={{
+                            backgroundColor: 'var(--bg-tertiary)',
+                            color: 'var(--text-secondary)',
+                            border: '1px solid var(--border-light)'
+                          }}
+                          title="點擊查看核心概念釋義與名師秘訣"
+                        >
+                          <span>{concept}</span>
+                          <span className="text-[10px] text-amber-500 opacity-80">💡</span>
+                        </button>
+                      );
+                    })}
                   </div>
                 )}
               </div>
@@ -1092,6 +1139,22 @@ const LessonPage = () => {
               </button>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Quick Scan Active Banner */}
+      {quickScanMode && (
+        <div className="quick-scan-active-banner">
+          <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-300">
+            <Zap size={16} className="fill-amber-500 text-amber-500 animate-pulse flex-shrink-0" />
+            <span>⚡ 考點速讀模式已啟用：已為您高亮核心考點、公式框與避坑陷阱，快速吸收段考精華！</span>
+          </div>
+          <button 
+            onClick={() => setQuickScanMode(false)}
+            className="text-xs px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-800 dark:text-amber-200 font-bold transition-colors flex-shrink-0"
+          >
+            切回精讀
+          </button>
         </div>
       )}
 

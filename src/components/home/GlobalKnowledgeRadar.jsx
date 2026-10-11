@@ -15,12 +15,15 @@ import {
   TrendingUp,
   Award,
   Zap,
-  Clock
+  Clock,
+  Network
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import { useGamification } from '../../context/GamificationContext';
 import { triggerHaptic, playSound, dispatchDynamicIsland } from '../../utils/soundEffects';
 import SubjectIconBadge from '../common/SubjectIconBadge';
+import TrophyHallModal from '../gamification/TrophyHallModal';
+import GlobalConceptGalaxyModal from './GlobalConceptGalaxyModal';
 
 export const GlobalKnowledgeRadar = () => {
   const navigate = useNavigate();
@@ -31,10 +34,14 @@ export const GlobalKnowledgeRadar = () => {
     bookmarks = [],
     addXp,
     addCoins,
-    todayConceptsMastered = 0
+    todayConceptsMastered = 0,
+    activityHistory = {},
+    badges = []
   } = useGamification();
 
   const [activeTab, setActiveTab] = useState('overview'); // 'overview' | 'tasks' | 'bookmarks'
+  const [isTrophyHallOpen, setIsTrophyHallOpen] = useState(false);
+  const [isGalaxyOpen, setIsGalaxyOpen] = useState(false);
   const [dailyChestClaimed, setDailyChestClaimed] = useState(() => {
     try {
       const today = new Date().toISOString().slice(0, 10);
@@ -83,6 +90,23 @@ export const GlobalKnowledgeRadar = () => {
       };
     });
   }, [readLessons, unitStars]);
+
+  // 14-day study activity history heatmap
+  const past14Days = useMemo(() => {
+    const list = [];
+    for (let i = 13; i >= 0; i--) {
+      const d = new Date(Date.now() - 86400000 * i);
+      const key = d.toISOString().slice(0, 10);
+      const act = activityHistory[key] || { count: 0, xp: 0 };
+      list.push({
+        date: key,
+        label: `${d.getMonth() + 1}/${d.getDate()}`,
+        count: act.count || 0,
+        xp: act.xp || 0
+      });
+    }
+    return list;
+  }, [activityHistory]);
 
   // Daily Tasks state
   const isTask1Done = readUnitsCount > 0;
@@ -212,6 +236,32 @@ export const GlobalKnowledgeRadar = () => {
           </div>
 
           <button
+            onClick={() => {
+              setIsGalaxyOpen(true);
+              triggerHaptic('medium');
+              playSound('ios_tap');
+            }}
+            className="btn-outline text-xs px-3 py-1.5 rounded-xl flex items-center gap-1.5 font-bold hover:border-indigo-500 hover:text-indigo-500"
+            title="開啟 8 領域 64 單元全息概念星空圖譜"
+          >
+            <Network size={13} className="text-indigo-500" />
+            <span className="hidden sm:inline">星空圖譜</span>
+          </button>
+
+          <button
+            onClick={() => {
+              setIsTrophyHallOpen(true);
+              triggerHaptic('medium');
+              playSound('chest_open');
+            }}
+            className="btn-outline text-xs px-3 py-1.5 rounded-xl flex items-center gap-1.5 font-bold hover:border-amber-500 hover:text-amber-500"
+            title="開啟榮譽成就徽章展覽館"
+          >
+            <Trophy size={13} className="text-amber-500" />
+            <span className="hidden sm:inline">成就館 ({badges.length})</span>
+          </button>
+
+          <button
             onClick={handleRandomInspire}
             className="btn-outline text-xs px-3 py-1.5 rounded-xl flex items-center gap-1.5 font-bold hover:border-blue-500 hover:text-blue-500"
             title="隨機為你抽取下一個學習探索目標"
@@ -303,6 +353,48 @@ export const GlobalKnowledgeRadar = () => {
               <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold mt-2">
                 ✨ 自律學習每步都算數
               </div>
+            </div>
+          </div>
+
+          {/* 14-Day Study Activity Heatmap */}
+          <div 
+            className="p-3.5 mb-5 rounded-2xl border border-light flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+            style={{ backgroundColor: 'var(--bg-card)' }}
+          >
+            <div>
+              <div className="flex items-center gap-1.5 text-xs font-bold text-primary">
+                <Flame size={14} className="text-rose-500 fill-rose-500" />
+                <span>最近 14 天自律學習活躍足跡：</span>
+                <span className="badge badge-accent text-[10px] font-bold py-0.5">連續學習</span>
+              </div>
+              <div className="text-[11px] text-secondary mt-0.5">
+                方格數字代表當天完成之單元精讀與測驗挑戰次數
+              </div>
+            </div>
+
+            <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
+              {past14Days.map((day, idx) => {
+                const isToday = idx === past14Days.length - 1;
+                let bgStyle = 'bg-slate-200 dark:bg-slate-800 text-slate-400';
+                if (day.count >= 3) bgStyle = 'bg-emerald-600 text-white shadow-sm ring-1 ring-emerald-400';
+                else if (day.count === 2) bgStyle = 'bg-emerald-500 text-white';
+                else if (day.count === 1) bgStyle = 'bg-emerald-400/70 text-slate-900 dark:text-white';
+
+                return (
+                  <div
+                    key={day.date}
+                    className="flex flex-col items-center gap-1 flex-shrink-0 cursor-default"
+                    title={`${day.date}：活躍 ${day.count} 次，獲得 ${day.xp} XP`}
+                  >
+                    <div 
+                      className={`w-6 sm:w-7 h-6 sm:h-7 rounded-lg flex items-center justify-center text-[10px] font-black transition-transform hover:scale-110 ${bgStyle} ${isToday ? 'ring-2 ring-blue-500' : ''}`}
+                    >
+                      {day.count > 0 ? day.count : '·'}
+                    </div>
+                    <span className="text-[9px] text-tertiary">{day.label}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -540,6 +632,18 @@ export const GlobalKnowledgeRadar = () => {
           )}
         </div>
       )}
+
+      {/* Trophy Hall Modal */}
+      <TrophyHallModal
+        isOpen={isTrophyHallOpen}
+        onClose={() => setIsTrophyHallOpen(false)}
+      />
+
+      {/* Concept Galaxy Modal */}
+      <GlobalConceptGalaxyModal
+        isOpen={isGalaxyOpen}
+        onClose={() => setIsGalaxyOpen(false)}
+      />
     </div>
   );
 };
