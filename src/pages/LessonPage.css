@@ -1238,4 +1238,100 @@
   animation: fadeIn 0.3s ease;
 }
 
+/* ==========================================================================
+   🖥️ 電腦端橫向巨幕 / 全螢幕沉浸研經講堂 (Widescreen & Fullscreen Presentation)
+   ========================================================================== */
+
+/* 寬屏模式下主網格佈局 */
+.lesson-stage-grid.is-widescreen {
+  display: block;
+  width: 100%;
+  transition: all var(--transition-normal);
+}
+
+@media (min-width: 1024px) {
+  .lesson-stage-grid.is-widescreen {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1280px) {
+  .lesson-stage-grid.is-widescreen {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr) 280px;
+    gap: 24px;
+    align-items: start;
+  }
+}
+
+/* 標準單欄閱讀模式 */
+.lesson-stage-grid.is-standard {
+  display: block;
+  width: 100%;
+}
+
+/* 左右側欄黏著滾動 */
+.lesson-sidebar-left,
+.lesson-sidebar-right {
+  position: sticky;
+  top: 76px;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  padding-bottom: 24px;
+  z-index: 20;
+}
+
+/* 側欄超細滑動條 */
+.custom-thin-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+  opacity: 0.5;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* 電腦全螢幕沉浸講堂 (True Fullscreen & Presentation Mode) */
+.lesson-page-wrapper.is-browser-fullscreen {
+  max-width: 100% !important;
+  padding: 16px 28px !important;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.lesson-page-wrapper.is-browser-fullscreen .markdown-body {
+  font-size: calc(1.15rem * var(--font-scale));
+  line-height: 1.9;
+}
+
+.lesson-page-wrapper.is-browser-fullscreen .lesson-sidebar-left,
+.lesson-page-wrapper.is-browser-fullscreen .lesson-sidebar-right {
+  top: 20px;
+  max-height: calc(100vh - 40px);
+}
+
+/* 電子白板與大螢幕閱讀自適應陰影與對比強化 */
+@media (min-width: 1600px) {
+  .lesson-page-wrapper.widescreen-active {
+    max-width: 1720px;
+  }
+  .lesson-page-wrapper.widescreen-active .markdown-body {
+    font-size: calc(1.12rem * var(--font-scale));
+    line-height: 1.95;
+  }
+}
+
+
 

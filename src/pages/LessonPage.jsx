@@ -42,9 +42,13 @@ import {
   GraduationCap,
   FlaskConical,
   ShieldCheck,
-  Layers
+  Layers,
+  Monitor,
+  ArrowRight
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
+import { getConceptBridge } from '../data/conceptBridges';
+import LessonDeepStudyDossier from '../components/lesson/LessonDeepStudyDossier';
 import { interactiveLabsList } from '../data/interactiveLabsData';
 import SubjectIconBadge from '../components/common/SubjectIconBadge';
 import EnglishAudioStudio from '../components/english/EnglishAudioStudio';
@@ -187,6 +191,59 @@ const LessonPage = () => {
   const [activeGlossary, setActiveGlossary] = useState(null);
   const [quickScanMode, setQuickScanMode] = useState(false);
 
+  // Desktop Widescreen Layout Mode (電腦橫向寬屏開展模式)
+  const [widescreenMode, setWidescreenMode] = useState(() => {
+    try {
+      const saved = localStorage.getItem('sixth_widescreen_mode');
+      if (saved !== null) return saved === 'true';
+      return typeof window !== 'undefined' && window.innerWidth >= 1280;
+    } catch (e) {
+      return false;
+    }
+  });
+
+  // True Browser Fullscreen Tracking
+  const [isBrowserFullscreen, setIsBrowserFullscreen] = useState(false);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsBrowserFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  const toggleBrowserFullscreen = () => {
+    if (!document.fullscreenElement) {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen().catch(() => {});
+        playSound('pop');
+        triggerHaptic('medium');
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+        playSound('pop');
+        triggerHaptic('light');
+      }
+    }
+  };
+
+  const toggleWidescreenMode = () => {
+    const next = !widescreenMode;
+    setWidescreenMode(next);
+    try {
+      localStorage.setItem('sixth_widescreen_mode', next.toString());
+    } catch (e) {}
+    playSound('pop');
+    triggerHaptic('medium');
+    dispatchDynamicIsland({
+      title: next ? '🖥️ 已展開電腦橫向多欄巨幕講堂' : '🪟 已切換為標準閱讀寬度',
+      subtitle: next ? '左側導讀目錄 + 中央主講堂 + 右側速查工作台' : '標準精讀單欄寬度 (適合手機或專注文讀)',
+      icon: next ? '🖥️' : '🪟'
+    });
+  };
+
   // ScrollSpy Active Section Tracking
   const [activeSectionId, setActiveSectionId] = useState('');
 
@@ -282,6 +339,10 @@ const LessonPage = () => {
       break;
     }
   }
+
+  const bridgeData = useMemo(() => {
+    return getConceptBridge(unitId, currentSubject?.id);
+  }, [unitId, currentSubject]);
 
   // 自動記錄本單元為最近學習課程
   useEffect(() => {
@@ -647,8 +708,10 @@ const LessonPage = () => {
           });
           if (prevSec) scrollToSection(prevSec.id);
         }
+      } else if (e.key === 'w' || e.key === 'W') {
+        toggleWidescreenMode();
       } else if (e.key === 'f' || e.key === 'F') {
-        setFocusMode(prev => !prev);
+        toggleBrowserFullscreen();
       } else if (e.key === 'p' || e.key === 'P') {
         window.print();
       }
@@ -656,7 +719,7 @@ const LessonPage = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [sections, setFocusMode]);
+  }, [sections, widescreenMode, isBrowserFullscreen]);
 
   // Mid-lesson 50% Reading Notification
   useEffect(() => {
@@ -687,7 +750,7 @@ const LessonPage = () => {
   }
 
   return (
-    <div className={`lesson-page-wrapper max-w-4xl mx-auto py-4 ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''} ${readingTheme !== 'normal' ? `theme-${readingTheme}` : ''} ${quickScanMode ? 'mode-quick-scan' : ''}`}>
+    <div className={`lesson-page-wrapper ${widescreenMode ? 'widescreen-active max-w-[1720px] w-full px-2 sm:px-4 lg:px-6' : 'max-w-4xl'} mx-auto py-4 ${isBrowserFullscreen ? 'is-browser-fullscreen' : ''} ${highlightMode ? 'mode-highlight-active' : ''} ${focusMode ? 'focus-mode-active' : ''} ${readingTheme !== 'normal' ? `theme-${readingTheme}` : ''} ${quickScanMode ? 'mode-quick-scan' : ''}`}>
       {/* Floating Heart Particles */}
       {floatingHearts.map(h => (
         <div 
@@ -955,6 +1018,34 @@ const LessonPage = () => {
             <span className="hidden sm:inline">{focusMode ? '標準' : '專注'}</span>
           </button>
 
+          {/* Desktop Widescreen Toggle Button */}
+          <button
+            onClick={toggleWidescreenMode}
+            className={`btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1 transition-all ${
+              widescreenMode 
+                ? 'bg-indigo-50 text-indigo-600 border-indigo-300 dark:bg-indigo-950 dark:text-indigo-400 font-bold shadow-sm' 
+                : ''
+            }`}
+            title={widescreenMode ? '切換為標準單欄閱讀 (快捷鍵: W)' : '展開電腦橫向多欄巨幕講堂模式 (快捷鍵: W)'}
+          >
+            <Monitor size={14} className={widescreenMode ? 'text-indigo-600 dark:text-indigo-400' : ''} />
+            <span className="hidden sm:inline">{widescreenMode ? '橫向巨幕' : '展開寬屏'}</span>
+          </button>
+
+          {/* True Fullscreen Toggle Button */}
+          <button
+            onClick={toggleBrowserFullscreen}
+            className={`btn-outline p-1.5 rounded-lg text-xs flex items-center gap-1 transition-all ${
+              isBrowserFullscreen 
+                ? 'bg-amber-50 text-amber-600 border-amber-300 dark:bg-amber-950 dark:text-amber-400 font-bold' 
+                : ''
+            }`}
+            title={isBrowserFullscreen ? '退出全螢幕講堂 (快捷鍵: F / Esc)' : '開啟電腦全螢幕無干擾講堂 (快捷鍵: F)'}
+          >
+            {isBrowserFullscreen ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
+            <span className="hidden sm:inline">{isBrowserFullscreen ? '退出全屏' : '全螢幕'}</span>
+          </button>
+
           <button
             onClick={() => setHighlightMode(!highlightMode)}
             className={`btn-outline ${highlightMode ? 'active-highlight-btn' : ''}`}
@@ -1142,37 +1233,193 @@ const LessonPage = () => {
         </div>
       )}
 
-      {/* Quick Scan Active Banner */}
-      {quickScanMode && (
-        <div className="quick-scan-active-banner">
-          <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-300">
-            <Zap size={16} className="fill-amber-500 text-amber-500 animate-pulse flex-shrink-0" />
-            <span>⚡ 考點速讀模式已啟用：已為您高亮核心考點、公式框與避坑陷阱，快速吸收段考精華！</span>
-          </div>
-          <button 
-            onClick={() => setQuickScanMode(false)}
-            className="text-xs px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-800 dark:text-amber-200 font-bold transition-colors flex-shrink-0"
-          >
-            切回精讀
-          </button>
-        </div>
-      )}
+      {/* 🖥️ Desktop Multi-Column Widescreen Presentation Layout Container */}
+      <div className={`lesson-stage-grid ${widescreenMode ? 'is-widescreen' : 'is-standard'}`}>
 
-      {/* 4-Stage Guided Roadmap Stepper for Unfamiliar Students */}
-      {sections.length > 0 && (
-        <LearningRoadmapStepper
-          sections={sections}
-          activeSectionId={activeSectionId}
-          onJumpToSection={scrollToSection}
-        />
-      )}
+        {/* 🧭 Left Sticky Navigation & TOC Sidebar (Desktop Widescreen Mode Only) */}
+        {widescreenMode && (
+          <aside className="lesson-sidebar-left hidden lg:block">
+            {/* Unit Info & Mastered Progress Card */}
+            <div className="card p-4 rounded-2xl border mb-3.5 bg-secondary shadow-sm">
+              <div className="flex items-center gap-2 mb-2">
+                {currentSubject && <SubjectIconBadge id={currentSubject.id} size="sm" />}
+                <div className="min-w-0">
+                  <div className="text-[11px] font-bold text-tertiary truncate">
+                    {currentSubject?.name} • {currentUnit.term === '6-down' ? '6年級下學期' : '6年級上學期'}
+                  </div>
+                  <h4 className="text-xs font-black text-primary truncate m-0">
+                    {currentUnit.title}
+                  </h4>
+                </div>
+              </div>
 
-      {/* Synthesized Concept Knowledge Bridge & Prerequisites Map */}
-      <ConceptKnowledgeBridge
-        unitId={unitId}
-        subjectId={currentSubject?.id || ''}
-        unitTitle={currentUnit.title}
-      />
+              {/* Reading Progress */}
+              <div className="space-y-1.5 pt-2 border-t border-light">
+                <div className="flex justify-between text-[11px] font-bold text-secondary">
+                  <span>閱讀進度</span>
+                  <span className="text-blue-600 dark:text-blue-400 font-mono">{Math.round(scrollProgress)}%</span>
+                </div>
+                <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                  <div 
+                    className="bg-blue-600 h-full rounded-full transition-all duration-300"
+                    style={{ width: `${scrollProgress}%` }}
+                  />
+                </div>
+              </div>
+
+              {/* Mastered Section Counter */}
+              <div className="mt-2.5 flex items-center justify-between text-[11px] text-secondary font-medium">
+                <span>小節掌握度：</span>
+                <span className="font-bold text-emerald-600 dark:text-emerald-400">
+                  {masteredSections.length} / {sections.length} 節
+                </span>
+              </div>
+            </div>
+
+            {/* Sticky Table of Contents (TOC) with Real-time ScrollSpy */}
+            {sections.length > 0 && (
+              <div className="card p-3.5 rounded-2xl border mb-3.5 bg-secondary shadow-sm">
+                <div className="flex items-center justify-between pb-2 mb-2 border-b border-light">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-primary">
+                    <ListChecks size={14} className="text-blue-500" />
+                    <span>章節目錄導引</span>
+                  </div>
+                  <span className="text-[10px] text-tertiary font-mono">
+                    {sections.length} 個重點
+                  </span>
+                </div>
+
+                <div className="space-y-1 max-h-[340px] overflow-y-auto pr-1 custom-thin-scrollbar">
+                  {sections.map((sec, idx) => {
+                    const isActive = activeSectionId === sec.id;
+                    const isMastered = masteredSections.includes(sec.id);
+                    const iconInfo = getSectionIconInfo(sec.title);
+                    const SecIcon = iconInfo.icon;
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => scrollToSection(sec.id)}
+                        className={`w-full text-left p-2 rounded-xl text-xs flex items-center justify-between gap-1.5 transition-all ${
+                          isActive 
+                            ? 'bg-blue-50 text-blue-700 font-bold border border-blue-200 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800' 
+                            : 'hover:bg-tertiary text-secondary'
+                        }`}
+                      >
+                        <span className="truncate flex items-center gap-1.5">
+                          <SecIcon size={12} style={{ color: isActive ? '#3b82f6' : iconInfo.color }} />
+                          <span className="truncate">{sec.shortLabel}</span>
+                        </span>
+                        {isMastered && (
+                          <CheckCircle2 size={13} className="text-emerald-500 flex-shrink-0" />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Core Concepts Micro-Glossary Trigger Chips */}
+            {currentUnit.keyConcepts && currentUnit.keyConcepts.length > 0 && (
+              <div className="card p-3.5 rounded-2xl border mb-3.5 bg-secondary shadow-sm">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-primary mb-2">
+                  <Sparkles size={13} className="text-amber-500" />
+                  <span>核心考點釋義庫</span>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {currentUnit.keyConcepts.map((concept, cIdx) => {
+                    const termData = findGlossaryTerm(concept);
+                    return (
+                      <button
+                        key={cIdx}
+                        onClick={() => {
+                          if (termData) {
+                            setActiveGlossary(termData);
+                          } else {
+                            setActiveGlossary({
+                              term: concept,
+                              def: `小六 ${currentSubject?.name || '學科'} 核心考點「${concept}」，段考常結合情境題與典型計算進行綜合測驗。`,
+                              tip: '💡 建議詳讀下方重點整理、範例解題與避坑指南，強化融會貫通！'
+                            });
+                          }
+                          playSound('ios_tap');
+                        }}
+                        className="text-[11px] px-2 py-1 rounded-lg border border-light bg-tertiary hover:border-amber-400 hover:text-amber-500 transition-colors text-secondary font-medium flex items-center gap-1"
+                      >
+                        <span>{concept}</span>
+                        <span className="text-[9px] text-amber-500">💡</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Quick View Controls */}
+            <div className="p-3 rounded-2xl border border-light bg-tertiary text-xs space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-secondary font-bold">⚡ 考點速讀</span>
+                <button
+                  onClick={() => setQuickScanMode(!quickScanMode)}
+                  className={`px-2 py-0.5 rounded-md text-[11px] font-bold ${quickScanMode ? 'bg-amber-500 text-white' : 'bg-slate-200 dark:bg-slate-700 text-secondary'}`}
+                >
+                  {quickScanMode ? '開啟中' : '關閉'}
+                </button>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-secondary font-bold">💡 重點螢光筆</span>
+                <button
+                  onClick={() => setHighlightMode(!highlightMode)}
+                  className={`px-2 py-0.5 rounded-md text-[11px] font-bold ${highlightMode ? 'bg-amber-500 text-white' : 'bg-slate-200 dark:bg-slate-700 text-secondary'}`}
+                >
+                  {highlightMode ? '開啟中' : '關閉'}
+                </button>
+              </div>
+            </div>
+          </aside>
+        )}
+
+        {/* 🏛️ Center Main Stage (Expansive Core Lecture Content) */}
+        <main className="lesson-stage-center min-w-0">
+          {/* Quick Scan Active Banner */}
+          {quickScanMode && (
+            <div className="quick-scan-active-banner">
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-300">
+                <Zap size={16} className="fill-amber-500 text-amber-500 animate-pulse flex-shrink-0" />
+                <span>⚡ 考點速讀模式已啟用：已為您高亮核心考點、公式框與避坑陷阱，快速吸收段考精華！</span>
+              </div>
+              <button 
+                onClick={() => setQuickScanMode(false)}
+                className="text-xs px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-800 dark:text-amber-200 font-bold transition-colors flex-shrink-0"
+              >
+                切回精讀
+              </button>
+            </div>
+          )}
+
+          {/* 4-Stage Guided Roadmap Stepper for Unfamiliar Students */}
+          {sections.length > 0 && (
+            <LearningRoadmapStepper
+              sections={sections}
+              activeSectionId={activeSectionId}
+              onJumpToSection={scrollToSection}
+            />
+          )}
+
+          {/* 🎓 108 課綱六年級名師深度研經考點錦囊 */}
+          <LessonDeepStudyDossier
+            unitId={unitId}
+            unitTitle={currentUnit.title}
+            bridgeData={bridgeData}
+            competencyCode={currentUnit.competencyCode || '108課綱核心素養'}
+          />
+
+          {/* Synthesized Concept Knowledge Bridge & Prerequisites Map */}
+          <ConceptKnowledgeBridge
+            unitId={unitId}
+            subjectId={currentSubject?.id || ''}
+            unitTitle={currentUnit.title}
+          />
 
       {/* Interactive Companion Mascot Pet */}
       <LessonCompanionPet 
@@ -2092,9 +2339,123 @@ const LessonPage = () => {
           <div></div>
         )}
       </div>
+    </main>
 
-      {/* 🚀 Sleek Floating Reader Control Dock (磨砂玻璃學習中控台) */}
-      {showFloatingDock && (
+    {/* 🛠️ Right Sticky Inspector & Workspace Dock (Widescreen xl screens Only) */}
+    {widescreenMode && (
+      <aside className="lesson-sidebar-right hidden xl:block">
+        {/* Quick Cheat Sheet Card */}
+        <div className="card p-4 rounded-2xl border mb-3.5 bg-secondary shadow-sm">
+          <div className="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 mb-1.5">
+            <Zap size={14} className="fill-amber-500" />
+            <span>考前 1 分鐘極速秘笈</span>
+          </div>
+          <p className="text-[11px] text-secondary mb-3 leading-relaxed">
+            快速瀏覽核心公式、名師避坑指引與單元重點速查表。
+          </p>
+          <button
+            onClick={scrollToSummaryTable}
+            className="w-full btn-outline text-xs py-1.5 rounded-xl font-bold flex items-center justify-center gap-1.5"
+          >
+            <span>直達重點速查表</span>
+            <ArrowRight size={13} />
+          </button>
+        </div>
+
+        {/* Quick Scratchpad Card */}
+        <div className="card p-4 rounded-2xl border mb-3.5 bg-secondary shadow-sm">
+          <div className="flex items-center gap-2 text-xs font-bold text-blue-600 dark:text-blue-400 mb-1.5">
+            <PenTool size={14} />
+            <span>隨堂計算草稿紙</span>
+          </div>
+          <p className="text-[11px] text-secondary mb-3 leading-relaxed">
+            解題遇到計算？隨時開啟手寫草稿畫布與數字演練。
+          </p>
+          <button
+            onClick={() => setIsScratchpadOpen(true)}
+            className="w-full btn-primary text-xs py-1.5 rounded-xl font-bold flex items-center justify-center gap-1.5"
+          >
+            <PenTool size={13} />
+            <span>開啟草稿紙 ✍️</span>
+          </button>
+        </div>
+
+        {/* Matched Lab Shortcut */}
+        {matchedLab && (
+          <div className="card p-4 rounded-2xl border mb-3.5 bg-secondary shadow-sm border-emerald-500/30">
+            <div className="flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400 mb-1.5">
+              <FlaskConical size={14} />
+              <span>配套互動實驗室</span>
+            </div>
+            <p className="text-[11px] text-secondary mb-3 leading-relaxed">
+              {matchedLab.title}
+            </p>
+            <button
+              onClick={() => navigate(`/labs/${matchedLab.id}`)}
+              className="w-full text-xs py-1.5 px-3 rounded-xl font-bold bg-emerald-500/15 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all flex items-center justify-center gap-1.5 border border-emerald-500/30"
+            >
+              <FlaskConical size={13} />
+              <span>實做實驗模擬 🔬</span>
+            </button>
+          </div>
+        )}
+
+        {/* Quick Quiz Launch Card */}
+        <div className="card p-4 rounded-2xl border mb-3.5 bg-secondary shadow-sm">
+          <div className="flex items-center gap-2 text-xs font-bold text-indigo-600 dark:text-indigo-400 mb-1.5">
+            <CheckCircle2 size={14} />
+            <span>隨堂觀念測驗</span>
+          </div>
+          <p className="text-[11px] text-secondary mb-3 leading-relaxed">
+            學完立即檢測！三階提示鷹架陪伴，答對獲 +20 XP。
+          </p>
+          <button
+            onClick={() => navigate(`/quiz/${unitId}`)}
+            className="w-full btn-primary text-xs py-1.5 rounded-xl font-bold flex items-center justify-center gap-1.5"
+          >
+            <span>進入觀念測驗 ✏️</span>
+          </button>
+        </div>
+
+        {/* Personal Highlights & Notes Card */}
+        <div className="card p-4 rounded-2xl border mb-3.5 bg-secondary shadow-sm">
+          <div className="flex items-center justify-between text-xs font-bold text-secondary mb-1.5">
+            <span className="flex items-center gap-1.5">
+              <BookOpen size={13} />
+              <span>隨堂手寫筆記</span>
+            </span>
+            <span className="text-[11px] text-amber-500 font-mono">
+              {userHighlights.length} 條劃記
+            </span>
+          </div>
+          <button
+            onClick={() => setIsNotebookOpen(true)}
+            className="w-full btn-outline text-xs py-1.5 rounded-xl font-bold flex items-center justify-center gap-1.5"
+          >
+            <span>開啟筆記本抽屜</span>
+          </button>
+        </div>
+
+        {/* PDF Notes Quick Link */}
+        {currentSubject && (
+          <button
+            onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+            className="w-full p-2.5 rounded-2xl border border-light text-xs font-bold text-secondary hover:text-primary hover:bg-tertiary transition-colors flex items-center justify-between"
+          >
+            <span className="flex items-center gap-1.5">
+              <FileText size={13} className="text-indigo-500" />
+              <span>章節講義 PDF</span>
+            </span>
+            <ArrowRight size={13} />
+          </button>
+        )}
+      </aside>
+    )}
+
+  </div>
+
+  {/* 🚀 Sleek Floating Reader Control Dock (磨砂玻璃學習中控台) */}
+  {showFloatingDock && (
         <div className="floating-reader-dock-wrapper animate-slide-up">
           <div className="floating-reader-dock flex items-center gap-1.5 p-1.5 rounded-full shadow-2xl">
             {/* TOC Popover Trigger */}
@@ -2208,6 +2569,24 @@ const LessonPage = () => {
               title={isPlaying ? '停止朗讀' : '語音伴讀'}
             >
               {isPlaying ? <Square size={14} style={{ fill: 'currentColor' }} /> : <Volume2 size={16} />}
+            </button>
+
+            {/* Widescreen Toggle */}
+            <button
+              onClick={toggleWidescreenMode}
+              className={`dock-btn ${widescreenMode ? 'text-indigo-500 font-bold' : ''}`}
+              title={widescreenMode ? '切換為標準單欄閱讀' : '展開電腦橫向多欄巨幕講堂'}
+            >
+              <Monitor size={16} />
+            </button>
+
+            {/* True Browser Fullscreen Toggle */}
+            <button
+              onClick={toggleBrowserFullscreen}
+              className={`dock-btn ${isBrowserFullscreen ? 'text-amber-500 font-bold' : ''}`}
+              title={isBrowserFullscreen ? '退出全螢幕講堂' : '開啟全螢幕講堂'}
+            >
+              {isBrowserFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
             </button>
 
             {/* Back to Top */}

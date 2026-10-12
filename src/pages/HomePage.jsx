@@ -119,6 +119,9 @@ const HomePage = () => {
                 <ShieldCheck size={13} />
                 完全免登入・無廣告・公益綠色學習
               </span>
+              <span className="badge text-xs font-bold bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+                🖥️ 支援電腦橫向巨幕與全螢幕講堂
+              </span>
             </div>
             
             <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.9rem * var(--font-scale))', letterSpacing: '-0.02em', lineHeight: 1.3 }}>

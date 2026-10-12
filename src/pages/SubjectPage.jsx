@@ -149,14 +149,19 @@ const SubjectPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-end gap-2">
+          <div className="flex flex-col items-end gap-1.5">
             <span className="badge badge-accent" style={{ fontSize: '0.88rem', padding: '6px 14px' }}>
               共 {units.length} 個圖解闖關單元
             </span>
-            <span className="text-xs text-secondary flex items-center gap-1">
-              <ShieldCheck size={14} style={{ color: 'var(--accent-success)' }} />
-              每課平均 3~5 分鐘零負擔
-            </span>
+            <div className="flex items-center gap-2 flex-wrap justify-end">
+              <span className="badge text-[11px] font-bold bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+                🖥️ 支援電腦橫向巨幕
+              </span>
+              <span className="text-xs text-secondary flex items-center gap-1">
+                <ShieldCheck size={14} style={{ color: 'var(--accent-success)' }} />
+                每課平均 3~5 分鐘零負擔
+              </span>
+            </div>
           </div>
         </div>
       </div>
