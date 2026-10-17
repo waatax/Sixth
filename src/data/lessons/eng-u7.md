@@ -30,7 +30,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🔑 核心觀念 1：未來式兩大巨星——will vs be going to
 
-![圖解說明](./images/eng_u7_concept1.svg)
+![Future Plans & Dream Careers (未來式與夢想職業) - 圖解 1](./images/eng_u7_concept1.svg)
 
 英文中表達「未來要發生的事」，最常用的兩大結構是 $\textcolor{#2196f3}{\textbf{will}}$ 與 $\textcolor{#e91e63}{\textbf{be going to}}$：
 
@@ -67,7 +67,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🔑 核心觀念 2：夢想職業百寶箱 (Dream Careers Vocabulary)
 
-![圖解說明](./images/eng_u7_concept2.svg)
+![Future Plans & Dream Careers (未來式與夢想職業) - 圖解 2](./images/eng_u7_concept2.svg)
 
 以下是高年級必學與未來前瞻熱門職業單字：
 
@@ -84,7 +84,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🔑 核心觀念 3：銜接國中新生活——英文計畫實用金句
 
-![圖解說明](./images/eng_u7_concept3.svg)
+![Future Plans & Dream Careers (未來式與夢想職業) - 圖解 3](./images/eng_u7_concept3.svg)
 
 在畢業典禮或自我介紹時，如何用英文自信發表未來目標？請熟記這三大主題句型：
 1. **關於學業學習**：
@@ -101,7 +101,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 📊 本單元核心考點與重點公式速查表
 
-![圖解說明](./images/eng_u7_concept4.svg)
+![Future Plans & Dream Careers (未來式與夢想職業) - 圖解 4](./images/eng_u7_concept4.svg)
 
 | 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
@@ -147,6 +147,49 @@ Graduation is just around the corner! (畢業就在眼前了！)
 ❌ **迷思 4**：只要看到 going，後面就一定要加 to。
 ✅ **正確觀念**：如果後面接的是地方副詞（如 home, abroad, there），就不能加 to！例如要說 "I am going **home**."，不能說 "I am going to home."。
 
+---
+
+## 📈 視覺化知識圖表與多維度比較矩陣
+
+![Unit 7: Future Plans & Dream Careers・視覺化考點雷達與知識圖表](./images/eng_u7_visual_chart.svg)
+
+### 🗺️ 單元知識架構與破題決策流程圖
+
+```text
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 💡 【Unit 7: Future Plans & Dream Careers】核心心智模型與四階破題決策圖          │
+├──────────────────────────────────────────────────────────────────────────┤
+│  [先備根基] 國小五年級：職業單字 (teacher, doctor, police officer)、現在式造…
+│       │
+│       ▼
+│  ┌─────────────────┬─────────────────┬─────────────────┬────────────────┐
+│  │ 1. Future ten… │ 2. What are y… │ 3. Dream care… │ 4. Junior hig…│
+│  └────────┬────────┴────────┬────────┴────────┬────────┴────────┬───────┘
+│           └─────────────────┼─────────────────┼─────────────────┘
+│                             ▼                 ▼
+│  [審題雷達] 看到「未來時間副詞關鍵信號」 ➔ 啟動「tomorrow, next week…」
+│  [圖表判讀] 看到「will vs be going to 語…」 ➔ 啟動「I will help you. (當…」
+│       │
+│       ▼
+│  [國中銜接] 國二英文【未來式與條件副詞子句】：will / be going to 與 if/when 引導之…
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+### 📊 審題關鍵字雷達與破題工具對照表
+
+| 審題維度 | 🔍 題幹關鍵字訊號 (看到這些詞立即圈起來) | 🛠️ 對應破題工具與標準步驟 | ⚠️ 段考防錯檢核點 |
+| :--- | :--- | :--- | :--- |
+| **第一階：核心訊號** | 未來時間副詞關鍵信號 | **tomorrow, next week, in the future, soon** | 確認定義與單位基準一致，切勿憑直覺跳步 |
+| **第二階：進階變形** | will vs be going to 語意辨析 | **I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)** | 先列式或畫簡圖標記已知條件，再逐步推演 |
+| **第三階：綜合素養** | 詢問未來的夢想與計畫句型 | **What do you want to be in the future? / I want to be an engineer.** | 檢查最終結果是否符合「撰寫全英語國中學習先修計畫目標、用英語…」 |
+
+### 🧭 縱向學力銜接與跨領域應用矩陣表
+
+| 學習階段 | 核心知識焦點 | 關鍵思維躍遷 | 實戰生活與跨科應用場景 |
+| :--- | :--- | :--- | :--- |
+| **國小中年級／五年級先備** | 國小五年級：職業單字 (teacher, doctor, police officer)、現在式造句。 | 由具象操作建立初步直覺經驗 | 課堂基礎觀察與日常簡單實例辨識 |
+| **國小六年級本單元核心** | **Future tense: will & be going to、What are you going to do this summer?、Dream careers & job descriptions、Junior high goals & dreams** | **未來式時態雙軌架構：【will + V原形】（客觀預測、當下瞬間決定） vs 【be going to + V原形】（事先規劃好的意圖、已有明確跡象即將發生）；職業生涯探索與夢想目標陳述。** | **撰寫全英語國中學習先修計畫目標、用英語向師長分享自己的未來志向與職業抱負。** |
+| **國中七～九年級進階延伸** | 國二英文【未來式與條件副詞子句】：will / be going to 與 if/when 引導之副詞子句（現在式代替未來式）。 | 由具體數字與圖表推升至抽象符號與嚴密論證 | 國中教育會考跨領域素養題與專題探究 |
 ---
 
 ## ✏️ 隨堂自我小練習

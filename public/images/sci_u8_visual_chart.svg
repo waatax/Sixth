@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" style="background:#0f172a; border-radius:16px; font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card Background -->
+  <rect width="800" height="470" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="797" height="467" rx="14.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <rect x="20" y="16" width="760" height="56" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="34" y="28" width="8" height="32" rx="4" fill="url(#headerGrad)"/>
+  <text x="52" y="43" font-size="17" font-weight="800" fill="#f8fafc">單元 8：生物與環境保育——地球村生態系・視覺化考點雷達與知識圖表</text>
+  <text x="52" y="61" font-size="12" font-weight="500" fill="#94a3b8">課綱指標 自-E-C2｜生態系金字塔：生產者（自營光合作用） ➔ 初級消費者（草食） ➔ 次級消費者（肉食…</text>
+
+  <rect x="646" y="29" width="120" height="30" rx="8" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1"/>
+  <text x="706" y="49" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">食物網生態系保育</text>
+
+  <!-- Left Column: Exam Competency Weight Bar Chart -->
+  <g transform="translate(20, 86)">
+    <rect x="0" y="0" width="370" height="306" rx="12" fill="#1e293b" stroke="#334155"/>
+    <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+    <text x="18" y="25" font-size="14" font-weight="800" fill="#f8fafc">📊 核心知識點・段考命題熱度圖表</text>
+    <text x="18" y="54" font-size="11.5" fill="#94a3b8">依歷屆段考與素養命題頻率量化分析：</text>
+    
+      <g transform="translate(18, 70)">
+        <text x="0" y="14" font-size="12.5" font-weight="700" fill="#e2e8f0">1. 生態系組成角色</text>
+        <text x="334" y="14" font-size="12" font-weight="800" fill="#3b82f6" text-anchor="end">95%</text>
+        <rect x="0" y="22" width="334" height="14" rx="7" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <rect x="0" y="22" width="276" height="14" rx="7" fill="#3b82f6"/>
+      </g>
+
+      <g transform="translate(18, 128)">
+        <text x="0" y="14" font-size="12.5" font-weight="700" fill="#e2e8f0">2. 食物鏈、食物網與能量金字塔</text>
+        <text x="334" y="14" font-size="12" font-weight="800" fill="#10b981" text-anchor="end">88%</text>
+        <rect x="0" y="22" width="334" height="14" rx="7" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <rect x="0" y="22" width="255" height="14" rx="7" fill="#10b981"/>
+      </g>
+
+      <g transform="translate(18, 186)">
+        <text x="0" y="14" font-size="12.5" font-weight="700" fill="#e2e8f0">3. 臺灣四大生態系特徵</text>
+        <text x="334" y="14" font-size="12" font-weight="800" fill="#f59e0b" text-anchor="end">82%</text>
+        <rect x="0" y="22" width="334" height="14" rx="7" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <rect x="0" y="22" width="238" height="14" rx="7" fill="#f59e0b"/>
+      </g>
+
+      <g transform="translate(18, 244)">
+        <text x="0" y="14" font-size="12.5" font-weight="700" fill="#e2e8f0">4. 生物多樣性與環境保護行動</text>
+        <text x="334" y="14" font-size="12" font-weight="800" fill="#a855f7" text-anchor="end">76%</text>
+        <rect x="0" y="22" width="334" height="14" rx="7" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+        <rect x="0" y="22" width="220" height="14" rx="7" fill="#a855f7"/>
+      </g>
+  </g>
+
+  <!-- Right Column: Decision Matrix and Signal Radar -->
+  <g transform="translate(410, 86)">
+    <rect x="0" y="0" width="370" height="306" rx="12" fill="#1e293b" stroke="#334155"/>
+    <rect x="0" y="0" width="370" height="40" rx="12" fill="#334155" fill-opacity="0.5"/>
+    <text x="18" y="25" font-size="14" font-weight="800" fill="#f8fafc">🧭 審題關鍵字雷達 ➔ 破題工具對照圖</text>
+
+    <!-- Radar Box 1 -->
+    <rect x="16" y="54" width="338" height="72" rx="9" fill="#0f172a" stroke="#3b82f6" stroke-width="1.2"/>
+    <text x="28" y="74" font-size="12" font-weight="800" fill="#60a5fa">🔍 訊號 1：扮演物質循環關鍵終點、將有機物分解為無機物</text>
+    <text x="28" y="95" font-size="12" font-weight="600" fill="#f8fafc">➔ 破題：分解者（真菌、細菌、蚯蚓腐生生物）</text>
+    <text x="28" y="114" font-size="11" fill="#94a3b8">先圈出關鍵條件，對齊基準量或核心定義</text>
+
+    <!-- Radar Box 2 -->
+    <rect x="16" y="136" width="338" height="72" rx="9" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+    <text x="28" y="156" font-size="12" font-weight="800" fill="#34d399">🔍 訊號 2：有毒重金屬或塑膠微粒在頂級掠食者體內濃度最高</text>
+    <text x="28" y="177" font-size="12" font-weight="600" fill="#f8fafc">➔ 破題：生物放大作用 (Biological Magn…</text>
+    <text x="28" y="196" font-size="11" fill="#94a3b8">搭配圖表與標準步驟列式，避免跳步心算</text>
+
+    <!-- Radar Box 3 -->
+    <rect x="16" y="218" width="338" height="72" rx="9" fill="#0f172a" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="28" y="238" font-size="12" font-weight="800" fill="#fbbf24">🔍 訊號 3：外來種入侵危害本土物種</text>
+    <text x="28" y="259" font-size="12" font-weight="600" fill="#f8fafc">➔ 破題：缺乏天敵、繁殖力強、破壞原生物多樣性</text>
+    <text x="28" y="278" font-size="11" fill="#94a3b8">檢查單位一致性，代回原題逆向驗算</text>
+  </g>
+
+  <!-- Bottom Cross-Grade Bridge Bar -->
+  <rect x="20" y="404" width="760" height="48" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.2"/>
+  <text x="36" y="425" font-size="12.5" font-weight="800" fill="#34d399">🚀 跨學段銜接與生活應用：國一生物【生態系與群集】：食物網複雜度決定生態穩定性、碳循環與氮循環、生態足跡與保…</text>
+  <text x="36" y="443" font-size="11.5" fill="#cbd5e1">🌍 生活實踐：紅樹林濕地保護候鳥水鳥、海洋塑膠垃圾淨灘行動、廚餘堆肥化轉為有機土壤肥料。</text>
+</svg>

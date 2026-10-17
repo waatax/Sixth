@@ -25,7 +25,7 @@
 
 ## 🔑 核心觀念 1：城市設施單字庫 (City Places & Landmarks)
 
-![圖解說明](./images/eng_u3_concept1.svg)
+![Places & Asking for Directions (問路指路與空間介系詞)](./images/eng_u3_concept1.svg)
 
 
 我們把城市裡的建築物依照生活功能分類，牢記以下高頻核心單字：
@@ -65,7 +65,7 @@
 
 ## 🔑 核心觀念 2：空間幾何圖解——5 大地方介系詞 (Prepositions of Place)
 
-![圖解說明](./images/eng_u3_concept2.svg)
+![Places & Asking for Directions (問路與空間介系詞) - 圖解 2](./images/eng_u3_concept2.svg)
 
 要精準指出建築物的位置，空間介系詞就像 GPS 座標一樣不可或缺！
 
@@ -90,7 +90,7 @@
 
 ### 📊 本單元核心考點與重點公式速查表
 
-![圖解說明](./images/eng_u3_concept4.svg)
+![Places & Asking for Directions (問路與空間介系詞) - 圖解 4](./images/eng_u3_concept4.svg)
 
 | 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
@@ -101,7 +101,7 @@
 
 ## 🔑 核心觀念 3：問路與指路實戰指南 (Asking & Giving Directions)
 
-![圖解說明](./images/eng_u3_concept3.svg)
+![Places & Asking for Directions (問路與空間介系詞) - 圖解 3](./images/eng_u3_concept3.svg)
 
 ### ❓ 禮貌問路句型 (Asking for Directions)
 問路前一定要先說 $\textcolor{#e91e63}{\textbf{Excuse me}}$（不好意思打擾一下），這是國際禮儀！
@@ -190,6 +190,49 @@
 ❌ **迷思 3**：左轉說成 "Turn to left."？  
 ✅ **正確觀念**：轉彎直接說 $\textcolor{#ff9800}{\textbf{Turn left}}$ 或 $\textcolor{#ff9800}{\textbf{Turn right}}$，中間不加介系詞 to！
 
+---
+
+## 📈 視覺化知識圖表與多維度比較矩陣
+
+![Unit 3: Places & Asking for Directions・視覺化考點雷達與知識圖表](./images/eng_u3_visual_chart.svg)
+
+### 🗺️ 單元知識架構與破題決策流程圖
+
+```text
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 💡 【Unit 3: Places & Asking for Directions】核心心智模型與四階破題決策圖          │
+├──────────────────────────────────────────────────────────────────────────┤
+│  [先備根基] 國小五年級：常見城市公共設施單字 (bank, park, school, hospital)。
+│       │
+│       ▼
+│  ┌─────────────────┬─────────────────┬─────────────────┬────────────────┐
+│  │ 1. Prepositio… │ 2. Excuse me,… │ 3. Giving dir… │ 4. Map readin…│
+│  └────────┬────────┴────────┬────────┴────────┬────────┴────────┬───────┘
+│           └─────────────────┼─────────────────┼─────────────────┘
+│                             ▼                 ▼
+│  [審題雷達] 看到「禮貌詢問路線開場句型」 ➔ 啟動「Excuse me, how can …」
+│  [圖表判讀] 看到「精確方位介系詞判定」 ➔ 啟動「next to (旁邊), acros…」
+│       │
+│       ▼
+│  [國中銜接] 國二英文【方向介系詞與祈使句】：複合地方副詞、地圖閱讀素養題型推論。
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+### 📊 審題關鍵字雷達與破題工具對照表
+
+| 審題維度 | 🔍 題幹關鍵字訊號 (看到這些詞立即圈起來) | 🛠️ 對應破題工具與標準步驟 | ⚠️ 段考防錯檢核點 |
+| :--- | :--- | :--- | :--- |
+| **第一階：核心訊號** | 禮貌詢問路線開場句型 | **Excuse me, how can I get to the library? / Where is the post office?** | 確認定義與單位基準一致，切勿憑直覺跳步 |
+| **第二階：進階變形** | 精確方位介系詞判定 | **next to (旁邊), across from (對面), between A and B (在兩者之間), on the corner of (轉角處)** | 先列式或畫簡圖標記已知條件，再逐步推演 |
+| **第三階：綜合素養** | 祈使句指引路線 | **Go straight (直走), Turn left/right at the second light (在第二個紅綠燈左/右轉)** | 檢查最終結果是否符合「在臺北捷運站或觀光景點用流暢英語為外國…」 |
+
+### 🧭 縱向學力銜接與跨領域應用矩陣表
+
+| 學習階段 | 核心知識焦點 | 關鍵思維躍遷 | 實戰生活與跨科應用場景 |
+| :--- | :--- | :--- | :--- |
+| **國小中年級／五年級先備** | 國小五年級：常見城市公共設施單字 (bank, park, school, hospital)。 | 由具象操作建立初步直覺經驗 | 課堂基礎觀察與日常簡單實例辨識 |
+| **國小六年級本單元核心** | **Prepositions of place (next to, across from)、Excuse me, how do I get to...?、Giving directions: Go straight, Turn left/right、Map reading vocabulary** | **空間地圖與問路導航句構：禮貌問路開場白 ➔ 空間相對位置介系詞（next to, across from, between A and B） ➔ 祈使句方向指引（Turn left, Go straight for two blocks）。** | **在臺北捷運站或觀光景點用流暢英語為外國觀光客指引正確方向。** |
+| **國中七～九年級進階延伸** | 國二英文【方向介系詞與祈使句】：複合地方副詞、地圖閱讀素養題型推論。 | 由具體數字與圖表推升至抽象符號與嚴密論證 | 國中教育會考跨領域素養題與專題探究 |
 ---
 
 ## 📊 本單元重點速查整理表格

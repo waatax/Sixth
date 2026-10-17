@@ -71,6 +71,7 @@ import ConceptKnowledgeBridge from '../components/lesson/ConceptKnowledgeBridge'
 import ProblemSolvingScaffold from '../components/lesson/ProblemSolvingScaffold';
 import LessonCompletionModal from '../components/lesson/LessonCompletionModal';
 import LessonGlossaryModal from '../components/lesson/LessonGlossaryModal';
+import LessonVisualInfographicDeck from '../components/lesson/LessonVisualInfographicDeck';
 import { findGlossaryTerm } from '../data/glossaryTerms';
 import './LessonPage.css';
 
@@ -606,8 +607,8 @@ const LessonPage = () => {
           shortLabel = clean.length > 8 ? clean.slice(0, 7) + '..' : clean;
         } else if (title.includes('範例') || title.includes('例題') || title.includes('考題')) {
           icon = '📝'; shortLabel = '經典例題講解';
-        } else if (title.includes('重點') || title.includes('速查') || title.includes('整理') || title.includes('表格') || title.includes('公式')) {
-          icon = '📊'; shortLabel = '重點速查表';
+        } else if (title.includes('重點') || title.includes('速查') || title.includes('整理') || title.includes('表格') || title.includes('公式') || title.includes('圖表')) {
+          icon = '📊'; shortLabel = '圖表與速查';
         } else if (title.includes('迷思')) {
           icon = '🧠'; shortLabel = '迷思大破解';
         } else if (title.includes('練習') || title.includes('測驗') || title.includes('隨堂')) {
@@ -619,6 +620,29 @@ const LessonPage = () => {
       }
     });
     return list;
+  }, [content]);
+
+  // Extract all illustration & chart images from markdown content for quick visual gallery
+  const lessonImages = useMemo(() => {
+    if (!content) return [];
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+    const regex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+    const imgs = [];
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      const alt = match[1] || `觀念圖解 ${imgs.length + 1}`;
+      let src = match[2] || '';
+      if (src.startsWith('./images/')) {
+        src = cleanBase + 'images/' + src.slice(9);
+      } else if (src.startsWith('/images/')) {
+        src = cleanBase + 'images/' + src.slice(8);
+      } else if (src.startsWith('images/')) {
+        src = cleanBase + 'images/' + src.slice(7);
+      }
+      imgs.push({ alt, src, idx: imgs.length + 1 });
+    }
+    return imgs;
   }, [content]);
 
   // ScrollSpy with IntersectionObserver
@@ -1421,6 +1445,16 @@ const LessonPage = () => {
             unitTitle={currentUnit.title}
           />
 
+          {/* 📊 視覺化知識圖表與多維度比較矩陣 */}
+          <LessonVisualInfographicDeck
+            unitTitle={currentUnit.title}
+            subjectName={currentSubject?.shortName || currentSubject?.name || ''}
+            keyConcepts={currentUnit.keyConcepts || []}
+            bridgeData={bridgeData}
+            masteredConcepts={masteredConcepts}
+            onToggleConcept={toggleConceptMastery}
+          />
+
       {/* Interactive Companion Mascot Pet */}
       <LessonCompanionPet 
         scrollProgress={scrollProgress}
@@ -1664,6 +1698,57 @@ const LessonPage = () => {
             >
               <Volume2 size={16} />
               <span>💡 英語全篇語音指南：課文中所有表格、例句、對話與粗體字皆附有「🔊 聽發音」按鈕，劃詞亦可即時聆聽！</span>
+            </div>
+          )}
+
+          {/* 🖼️ 本課插圖與視覺圖表畫廊快覽 (點擊任一插圖即刻開啟高清放大檢視) */}
+          {lessonImages.length > 0 && (
+            <div
+              className="mb-6 p-3.5 rounded-2xl border"
+              style={{
+                backgroundColor: 'var(--bg-tertiary)',
+                borderColor: 'var(--border-light)'
+              }}
+            >
+              <div className="flex items-center justify-between flex-wrap gap-2 mb-2.5">
+                <div className="flex items-center gap-1.5 text-xs font-extrabold" style={{ color: 'var(--text-primary)' }}>
+                  <ImageIcon size={14} style={{ color: 'var(--accent-primary)' }} />
+                  <span>🖼️ 本課教學插圖與視覺圖表畫廊（共 {lessonImages.length} 幅高清圖解）</span>
+                </div>
+                <span className="text-[11px] text-secondary">
+                  🔍 點擊任一圖卡即可開啟全螢幕高清放大燈箱
+                </span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5">
+                {lessonImages.map((imgItem, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setLightboxImage({ src: imgItem.src, alt: imgItem.alt })}
+                    className="group text-left p-2 rounded-xl border transition-all hover:shadow-md flex flex-col justify-between overflow-hidden"
+                    style={{
+                      backgroundColor: 'var(--bg-secondary)',
+                      borderColor: 'var(--border-light)'
+                    }}
+                    title={`點擊放大檢視：${imgItem.alt}`}
+                  >
+                    <div className="w-full h-20 rounded-lg overflow-hidden bg-slate-900 mb-1.5 relative flex items-center justify-center">
+                      <img
+                        src={imgItem.src}
+                        alt={imgItem.alt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                      <span className="absolute top-1 left-1 px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-900/80 text-white">
+                        圖 {imgItem.idx}
+                      </span>
+                    </div>
+                    <div className="text-[11px] font-bold truncate w-full" style={{ color: 'var(--text-primary)' }}>
+                      {imgItem.alt}
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 

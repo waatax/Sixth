@@ -26,7 +26,7 @@
 
 ## 🔑 核心觀念 1：台灣傳統節慶全攻略 (Taiwanese Festivals)
 
-![圖解說明](./images/eng_u5_concept1.svg)
+![Festivals, Holidays & World Cultures (世界節慶) - 圖解 1](./images/eng_u5_concept1.svg)
 
 
 ```text
@@ -59,7 +59,7 @@
 
 ## 🔑 核心觀念 2：西方代表性節慶全覽 (Western Festivals)
 
-![圖解說明](./images/eng_u5_concept2.svg)
+![Festivals, Holidays & World Cultures (世界節慶) - 圖解 2](./images/eng_u5_concept2.svg)
 
 西方節慶融合了宗教歷史、感恩收穫與歡樂歡聚的文化精髓：
 
@@ -106,7 +106,7 @@
 
 ## 🔑 核心觀念 3：節慶時間介系詞黃金法則 (in / on / at)
 
-![圖解說明](./images/eng_u5_concept3.svg)
+![Festivals, Holidays & World Cultures (世界節慶) - 圖解 3](./images/eng_u5_concept3.svg)
 
 表達節慶時間時，介系詞的選擇取決於時間的「精準度」：
 
@@ -146,7 +146,7 @@
 
 ## 🔑 核心觀念 4：手寫溫馨英文節慶卡片 (Greeting Card Writing)
 
-![圖解說明](./images/eng_u5_concept4.svg)
+![Festivals, Holidays & World Cultures (世界節慶) - 圖解 4](./images/eng_u5_concept4.svg)
 
 一張標準且誠摯的節慶賀卡包含四個部分：
 
@@ -210,6 +210,49 @@
 ❌ **迷思 2**：所有西方節慶的國曆日期都是固定的？  
 ✅ **正確觀念**：聖誕節 (12/25) 與萬聖節 (10/31) 日期固定；但 **Thanksgiving**（美國為 11 月第四個星期四）與 **Easter**（每年春分月圓後的第一個星期日）每年的國曆日期都不同！
 
+---
+
+## 📈 視覺化知識圖表與多維度比較矩陣
+
+![Unit 5: Festivals, Holidays & World Cultures・視覺化考點雷達與知識圖表](./images/eng_u5_visual_chart.svg)
+
+### 🗺️ 單元知識架構與破題決策流程圖
+
+```text
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 💡 【Unit 5: Festivals, Holidays & World Cultures】核心心智模型與四階破題決策圖          │
+├──────────────────────────────────────────────────────────────────────────┤
+│  [先備根基] 國小五年級：中西方主要節慶名稱 (Christmas, New Year, Dragon Boat…
+│       │
+│       ▼
+│  ┌─────────────────┬─────────────────┬─────────────────┬────────────────┐
+│  │ 1. Taiwanese … │ 2. Western ho… │ 3. Holiday da… │ 4. Cultural r…│
+│  └────────┬────────┴────────┬────────┴────────┬────────┴────────┬───────┘
+│           └─────────────────┼─────────────────┼─────────────────┘
+│                             ▼                 ▼
+│  [審題雷達] 看到「西方三大節慶特色標誌」 ➔ 啟動「Halloween (trick or…」
+│  [圖表判讀] 看到「臺灣傳統節慶英語介紹」 ➔ 啟動「Lunar New Year (red…」
+│       │
+│       ▼
+│  [國中銜接] 國二英文【情態助動詞與從屬連接詞】：must / have to / should 語氣強度差異與…
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+### 📊 審題關鍵字雷達與破題工具對照表
+
+| 審題維度 | 🔍 題幹關鍵字訊號 (看到這些詞立即圈起來) | 🛠️ 對應破題工具與標準步驟 | ⚠️ 段考防錯檢核點 |
+| :--- | :--- | :--- | :--- |
+| **第一階：核心訊號** | 西方三大節慶特色標誌 | **Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)** | 確認定義與單位基準一致，切勿憑直覺跳步 |
+| **第二階：進階變形** | 臺灣傳統節慶英語介紹 | **Lunar New Year (red envelopes), Dragon Boat Festival (dragon boat race/rice dumplings)** | 先列式或畫簡圖標記已知條件，再逐步推演 |
+| **第三階：綜合素養** | 節慶祝賀語 | **Merry Christmas! / Happy New Year! / Wishing you joy and prosperity!** | 檢查最終結果是否符合「接待國外交換學生參訪臺灣傳統民俗節慶、…」 |
+
+### 🧭 縱向學力銜接與跨領域應用矩陣表
+
+| 學習階段 | 核心知識焦點 | 關鍵思維躍遷 | 實戰生活與跨科應用場景 |
+| :--- | :--- | :--- | :--- |
+| **國小中年級／五年級先備** | 國小五年級：中西方主要節慶名稱 (Christmas, New Year, Dragon Boat Festival)。 | 由具象操作建立初步直覺經驗 | 課堂基礎觀察與日常簡單實例辨識 |
+| **國小六年級本單元核心** | **Taiwanese festivals vocabulary (zongzi, red envelope)、Western holidays (Halloween, Christmas)、Holiday dates with in/on、Cultural respect & traditions** | **節慶文化與情態對話：掌握全球經典節慶之文化由來與習俗活動；情態助動詞 (can, may, should, must) 表達能力、允許、義務與祝願。** | **接待國外交換學生參訪臺灣傳統民俗節慶、製作全英語跨文化新年電子賀卡。** |
+| **國中七～九年級進階延伸** | 國二英文【情態助動詞與從屬連接詞】：must / have to / should 語氣強度差異與 when/before/after 敘事。 | 由具體數字與圖表推升至抽象符號與嚴密論證 | 國中教育會考跨領域素養題與專題探究 |
 ---
 
 ## 📊 本單元重點速查整理表格

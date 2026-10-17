@@ -23,7 +23,7 @@
 
 ## 🔑 核心觀念 1：人體部位全覽與特殊複數 (Body Parts)
 
-![圖解說明](./images/eng_u4_concept1.svg)
+![Food, Health & Body Care (身體保健與症狀) - 圖解 1](./images/eng_u4_concept1.svg)
 
 
 從頭頂到腳趾，讓我們逐一清點人體的重要部位。記得觀察哪些單字有神奇的變化喔！
@@ -55,7 +55,7 @@
 
 ## 🔑 核心觀念 2：病痛症狀拆解與醫病對話 (Symptoms & Clinic Dialogue)
 
-![圖解說明](./images/eng_u4_concept2.svg)
+![Food, Health & Body Care (身體保健與症狀) - 圖解 2](./images/eng_u4_concept2.svg)
 
 在英文中，很多疼痛單字是由「$\textcolor{#2196f3}{\textbf{身體部位}} + \textcolor{#e91e63}{\textbf{-ache (疼痛)}}$」組合而成（-ache 發音為 /eɪk/），就像玩積木一樣簡單：
 
@@ -104,7 +104,7 @@
 
 ## 🔑 核心觀念 3：健康建議指令——助動詞 should / shouldn't
 
-![圖解說明](./images/eng_u4_concept3.svg)
+![Food, Health & Body Care (身體保健與症狀) - 圖解 3](./images/eng_u4_concept3.svg)
 
 當家人朋友生病時，我們要怎麼給予關心和建議呢？使用助動詞 $\textcolor{#4caf50}{\textbf{should (應該)}}$ 與 $\textcolor{#e91e63}{\textbf{shouldn't (不應該)}}$ 來幫忙：
 
@@ -145,7 +145,7 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ## 🔑 核心觀念 4：六大類食物營養金字塔 (The 6 Food Groups)
 
-![圖解說明](./images/eng_u4_concept4.svg)
+![Food, Health & Body Care (身體保健與症狀) - 圖解 4](./images/eng_u4_concept4.svg)
 
 要維持無敵的免疫力、長高長壯，每天必須從六大類食物攝取均衡營養！跟著圖表，看看你今天吃對了嗎？
 
@@ -228,6 +228,49 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 ❌ **迷思 3**：感冒只要喝果汁不用吃新鮮水果？  
 ✅ **正確觀念**：市售果汁大多過濾掉了珍貴的膳食纖維，甚至添加了大量游離糖。吃整顆新鮮水果才能獲取最完整的維生素與抗氧化物！
 
+---
+
+## 📈 視覺化知識圖表與多維度比較矩陣
+
+![Unit 4: Food, Health & Body Care・視覺化考點雷達與知識圖表](./images/eng_u4_visual_chart.svg)
+
+### 🗺️ 單元知識架構與破題決策流程圖
+
+```text
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 💡 【Unit 4: Food, Health & Body Care】核心心智模型與四階破題決策圖          │
+├──────────────────────────────────────────────────────────────────────────┤
+│  [先備根基] 國小五年級：常見食物水果單字、身體部位單字 (head, stomach, leg)。
+│       │
+│       ▼
+│  ┌─────────────────┬─────────────────┬─────────────────┬────────────────┐
+│  │ 1. Body parts… │ 2. I have a s… │ 3. Doctor vis… │ 4. Nutrition …│
+│  └────────┬────────┴────────┬────────┴────────┬────────┴────────┬───────┘
+│           └─────────────────┼─────────────────┼─────────────────┘
+│                             ▼                 ▼
+│  [審題雷達] 看到「不可數名詞食物判定」 ➔ 啟動「water, milk, rice, …」
+│  [圖表判讀] 看到「表達身體生病不舒服」 ➔ 啟動「I have a fever / he…」
+│       │
+│       ▼
+│  [國中銜接] 國一英文【名詞單複數與數量詞】：how many (可數) vs how much (不可數/價格…
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+### 📊 審題關鍵字雷達與破題工具對照表
+
+| 審題維度 | 🔍 題幹關鍵字訊號 (看到這些詞立即圈起來) | 🛠️ 對應破題工具與標準步驟 | ⚠️ 段考防錯檢核點 |
+| :--- | :--- | :--- | :--- |
+| **第一階：核心訊號** | 不可數名詞食物判定 | **water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）** | 確認定義與單位基準一致，切勿憑直覺跳步 |
+| **第二階：進階變形** | 表達身體生病不舒服 | **I have a fever / headache / stomachache / toothache** | 先列式或畫簡圖標記已知條件，再逐步推演 |
+| **第三階：綜合素養** | 給予保健建議句型 | **You should drink plenty of water and take a good rest.** | 檢查最終結果是否符合「在國外西餐廳點餐確認餐點分量、在國外藥…」 |
+
+### 🧭 縱向學力銜接與跨領域應用矩陣表
+
+| 學習階段 | 核心知識焦點 | 關鍵思維躍遷 | 實戰生活與跨科應用場景 |
+| :--- | :--- | :--- | :--- |
+| **國小中年級／五年級先備** | 國小五年級：常見食物水果單字、身體部位單字 (head, stomach, leg)。 | 由具象操作建立初步直覺經驗 | 課堂基礎觀察與日常簡單實例辨識 |
+| **國小六年級本單元核心** | **Body parts & symptoms (headache, stomachache)、I have a sore throat / cold / fever、Doctor visit dialogue & advice、Nutrition & healthy food groups** | **飲食與健康表達架構：可數名詞與不可數名詞分水嶺（a / an / many 可數 vs some / much 不可數）；身體不適與求診對話（I have a cold / sore throat）；情態助動詞 should 提供健康建議。** | **在國外西餐廳點餐確認餐點分量、在國外藥局向藥劑師清楚描述個人身體不適症狀。** |
+| **國中七～九年級進階延伸** | 國一英文【名詞單複數與數量詞】：how many (可數) vs how much (不可數/價格)、量詞片語。 | 由具體數字與圖表推升至抽象符號與嚴密論證 | 國中教育會考跨領域素養題與專題探究 |
 ---
 
 ## 📊 本單元重點速查整理表格

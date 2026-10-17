@@ -33,7 +33,7 @@ In our daily lives, we are always comparing things:
 
 ## 🔑 核心觀念 1：形容詞比較級規則變化四大公式
 
-![圖解說明](./images/eng_u8_concept1.svg)
+![Adjective Degrees: Comparative & Superlative (比較級與最高級)](./images/eng_u8_concept1.svg)
 
 比較兩者時，公式為：$\textcolor{#2196f3}{\textbf{A + be動詞 + 比較級 + than + B}}$
 
@@ -60,7 +60,7 @@ In our daily lives, we are always comparing things:
 
 ## 🔑 核心觀念 2：形容詞最高級與「the」的守護
 
-![圖解說明](./images/eng_u8_concept2.svg)
+![Comparisons & World Wonders (比較級最高級) - 圖解 2](./images/eng_u8_concept2.svg)
 
 當在「三個以上」的人、事、物或群體中評選第一名時，使用最高級！
 公式為：$\textcolor{#2e7d32}{\textbf{A + be動詞 + the + 最高級 + in / of + 範圍}}$
@@ -84,7 +84,7 @@ In our daily lives, we are always comparing things:
 
 ## 🔑 核心觀念 3：高頻不規則變化大本營 (Irregular Adjectives)
 
-![圖解說明](./images/eng_u8_concept3.svg)
+![Comparisons & World Wonders (比較級最高級) - 圖解 3](./images/eng_u8_concept3.svg)
 
 有些最重要的日常形容詞，比較級和最高級完全不按牌理出牌，必須死死焊在大腦裡：
 
@@ -99,7 +99,7 @@ In our daily lives, we are always comparing things:
 
 ## 📊 本單元核心考點與重點公式速查表
 
-![圖解說明](./images/eng_u8_concept4.svg)
+![Comparisons & World Wonders (比較級最高級) - 圖解 4](./images/eng_u8_concept4.svg)
 
 | 核心知識點 / 考點主題 | 📐 核心公式 / 定理 / 規則架構 | 💡 黃金記憶口訣 / 速記法 | ⚠️ 常考易錯陷阱 / 必勝解題秘訣 |
 | :--- | :--- | :--- | :--- |
@@ -146,6 +146,49 @@ In our daily lives, we are always comparing things:
 ❌ **迷思 4**：最高級後面接所有範圍都用 in。
 ✅ **正確觀念**：接單數地方或群體用 in（in the world, in class）；但如果是指「在所有複數人事物之中」，必須用 of（of all, of the five boys）！
 
+---
+
+## 📈 視覺化知識圖表與多維度比較矩陣
+
+![Unit 8: Comparisons & World Wonders・視覺化考點雷達與知識圖表](./images/eng_u8_visual_chart.svg)
+
+### 🗺️ 單元知識架構與破題決策流程圖
+
+```text
+┌──────────────────────────────────────────────────────────────────────────┐
+│ 💡 【Unit 8: Comparisons & World Wonders】核心心智模型與四階破題決策圖          │
+├──────────────────────────────────────────────────────────────────────────┤
+│  [先備根基] 國小五年級：形容詞基本單字 (tall, fast, big, expensive)。
+│       │
+│       ▼
+│  ┌─────────────────┬─────────────────┬─────────────────┬────────────────┐
+│  │ 1. Comparativ… │ 2. Superlativ… │ 3. Irregular … │ 4. Expressing…│
+│  └────────┬────────┴────────┬────────┴────────┬────────┴────────┬───────┘
+│           └─────────────────┼─────────────────┼─────────────────┘
+│                             ▼                 ▼
+│  [審題雷達] 看到「比較級關鍵信號詞與字尾規則」 ➔ 啟動「句子必有 than；單音節加 -er（…」
+│  [圖表判讀] 看到「最高級關鍵信號詞」 ➔ 啟動「前面必加 the；單音節加 -est，…」
+│       │
+│       ▼
+│  [國中銜接] 國二英文【形容詞與副詞之三級變化】：同級比較、最高級替代句型（A is taller than a…
+└──────────────────────────────────────────────────────────────────────────┘
+```
+
+### 📊 審題關鍵字雷達與破題工具對照表
+
+| 審題維度 | 🔍 題幹關鍵字訊號 (看到這些詞立即圈起來) | 🛠️ 對應破題工具與標準步驟 | ⚠️ 段考防錯檢核點 |
+| :--- | :--- | :--- | :--- |
+| **第一階：核心訊號** | 比較級關鍵信號詞與字尾規則 | **句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）** | 確認定義與單位基準一致，切勿憑直覺跳步 |
+| **第二階：進階變形** | 最高級關鍵信號詞 | **前面必加 the；單音節加 -est，三音節以上加 most；範圍片語 in the world / of all** | 先列式或畫簡圖標記已知條件，再逐步推演 |
+| **第三階：綜合素養** | 不規則三級變化大考必考天王 | **good ➔ better ➔ best；bad ➔ worse ➔ worst；many/much ➔ more ➔ most** | 檢查最終結果是否符合「用英語比較兩款智慧型手機性價比、向外國…」 |
+
+### 🧭 縱向學力銜接與跨領域應用矩陣表
+
+| 學習階段 | 核心知識焦點 | 關鍵思維躍遷 | 實戰生活與跨科應用場景 |
+| :--- | :--- | :--- | :--- |
+| **國小中年級／五年級先備** | 國小五年級：形容詞基本單字 (tall, fast, big, expensive)。 | 由具象操作建立初步直覺經驗 | 課堂基礎觀察與日常簡單實例辨識 |
+| **國小六年級本單元核心** | **Comparative adjectives (-er, more)、Superlative adjectives (-est, the most)、Irregular adjectives (good/better/best)、Expressing opinions with reasons** | **形容詞三級變化階梯：【原級】（兩者一樣 A is as tall as B） ➔ 【比較級】（A is -er than B / more... than B，兩者相比） ➔ 【最高級】（the -est / the most... in/of，三者以上居冠）。** | **用英語比較兩款智慧型手機性價比、向外國友人介紹臺灣最高峰玉山與台北101大樓。** |
+| **國中七～九年級進階延伸** | 國二英文【形容詞與副詞之三級變化】：同級比較、最高級替代句型（A is taller than any other student）。 | 由具體數字與圖表推升至抽象符號與嚴密論證 | 國中教育會考跨領域素養題與專題探究 |
 ---
 
 ## ✏️ 隨堂自我小練習
