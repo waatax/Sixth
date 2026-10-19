@@ -4,7 +4,8 @@ import katex from 'katex';
 import { coursesData } from '../data/courses';
 import {
   getNotesBySubjectSemesterAndScope,
-  getExamHandoutInfo
+  getExamHandoutInfo,
+  normalizeHighlightItem
 } from '../data/examNotes';
 import { getUnitDiagram } from '../data/examNotes/unitDiagrams';
 import { 
@@ -27,7 +28,10 @@ import {
   Calendar,
   Target,
   Award,
-  Compass
+  Compass,
+  Layers,
+  Clock,
+  ShieldCheck
 } from 'lucide-react';
 import { playSound } from '../utils/soundEffects';
 import './ExamReviewNotesPage.css';
@@ -100,6 +104,19 @@ const ExamReviewNotesPage = () => {
       setExamScope(scope.toLowerCase());
     }
   }, [scope]);
+
+  // 若 URL 帶有 #note-xxx 錨點，自動平滑捲動至該單元卡片
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 180);
+    }
+  }, [currentSubject, currentSemester, examScope]);
   const [searchQuery, setSearchQuery] = useState('');
   const [revealedSolutions, setRevealedSolutions] = useState({});
   const [checkedItems, setCheckedItems] = useState({});
@@ -276,14 +293,51 @@ const ExamReviewNotesPage = () => {
         <div style="background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1.5px solid #fde68a; border-radius: 6px; padding: 10px 12px; margin-bottom: 12px;">
           <div style="font-size: 11.5px; font-weight: bold; color: #92400e; margin-bottom: 6px;">🌟 段考三大核心知識亮點・高頻必考精華</div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px;">
-            ${n.highlights.map((h, hIdx) => `
-              <div style="background: rgba(255,255,255,0.85); border: 1px solid #fcd34d; border-radius: 4px; padding: 6px 8px;">
-                <div style="font-size: 10px; font-weight: 800; color: #b45309;">亮點 0${hIdx + 1}</div>
-                <div style="font-size: 11.5px; font-weight: bold; color: #1e293b; margin: 2px 0;">${h.point}</div>
-                <div style="font-size: 10.5px; color: #475569; line-height: 1.4;">${h.detail}</div>
+            ${(n.highlights || []).map((h, hIdx) => {
+              const normH = typeof h === 'object' && h.point ? h : normalizeHighlightItem(h, hIdx);
+              return `
+              <div style="background: rgba(255,255,255,0.9); border: 1px solid #fcd34d; border-radius: 4px; padding: 6px 8px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                  <span style="font-size: 10px; font-weight: 800; color: #b45309;">亮點 0${hIdx + 1}</span>
+                  <span style="font-size: 9.5px; background: #fef3c7; color: #92400e; padding: 1px 4px; border-radius: 3px;">${normH.examWeight || '段考必考 ★★★★★'}</span>
+                </div>
+                <div style="font-size: 11.5px; font-weight: bold; color: #1e293b; margin: 2px 0;">${normH.point}</div>
+                <div style="font-size: 10.5px; color: #475569; line-height: 1.4;">${normH.detail}</div>
+                ${normH.trapAlert ? `<div style="font-size: 9.5px; color: #dc2626; margin-top: 3px; font-weight: bold;">⚠️ ${normH.trapAlert}</div>` : ''}
               </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
+        </div>
+      ` : ''}
+
+      ${n.versionFocus ? `
+        <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 6px; padding: 10px 12px; margin-bottom: 12px;">
+          <div style="font-size: 11.5px; font-weight: bold; color: #1e293b; margin-bottom: 6px;">📚 108 課綱三大版本（康軒・翰林・南一）段考測驗特色對照</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px;">
+            <div style="background: #ecfdf5; border-left: 3px solid #10b981; border-radius: 4px; padding: 6px 8px; font-size: 11px;">
+              <strong style="color: #065f46;">🟢 康軒版 (Kang Hsuan)</strong>
+              <div style="color: #047857; margin-top: 2px;">${n.versionFocus.kangHsuan}</div>
+            </div>
+            <div style="background: #eff6ff; border-left: 3px solid #3b82f6; border-radius: 4px; padding: 6px 8px; font-size: 11px;">
+              <strong style="color: #1e40af;">🔵 翰林版 (Han Lin)</strong>
+              <div style="color: #1d4ed8; margin-top: 2px;">${n.versionFocus.hanLin}</div>
+            </div>
+            <div style="background: #f5f3ff; border-left: 3px solid #8b5cf6; border-radius: 4px; padding: 6px 8px; font-size: 11px;">
+              <strong style="color: #5b21b6;">🟣 南一版 (Nan I)</strong>
+              <div style="color: #6d28d9; margin-top: 2px;">${n.versionFocus.nanI}</div>
+            </div>
+          </div>
+        </div>
+      ` : ''}
+
+      ${n.quickRescue ? `
+        <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 6px; padding: 8px 12px; margin-bottom: 12px;">
+          <div style="font-size: 11.5px; font-weight: bold; color: #b45309; display: flex; align-items: center; justify-content: space-between;">
+            <span>⚡ 考前 5 秒瞬解速記口訣</span>
+            ${n.hotKeywords ? `<span style="font-size: 10px; color: #78350f; font-weight: normal;">🔍 <strong>審題雷達：</strong>${n.hotKeywords}</span>` : ''}
+          </div>
+          <div style="font-size: 12px; font-weight: bold; color: #92400e; margin-top: 4px;">“${n.quickRescue}”</div>
         </div>
       ` : ''}
 
@@ -599,6 +653,8 @@ const ExamReviewNotesPage = () => {
             {[
               { id: 'all', label: '🌟 完整全覽精讀', tag: null },
               { id: 'highlights', label: '💡 三大段考知識亮點', tag: '精華' },
+              { id: 'versions', label: '📚 三版本測驗對照', tag: '對齊' },
+              { id: 'rescue', label: '⏱️ 5秒瞬解急救卡', tag: '口訣' },
               { id: 'formulas', label: '⚡ 名師公式口訣', tag: '速解' },
               { id: 'pitfalls', label: '⚠️ 歷屆避雷陷阱', tag: '防錯' },
               { id: 'walkthroughs', label: '📝 各校真題步驟', tag: '實戰' },
@@ -753,16 +809,98 @@ const ExamReviewNotesPage = () => {
                         <span className="highlights-banner-subtitle">名師嚴選・高頻必考精華</span>
                       </div>
                       <div className="highlights-grid">
-                        {note.highlights.map((h, hIdx) => (
-                          <div key={hIdx} className="highlight-grid-card">
-                            <div className="highlight-card-header">
-                              <span className="highlight-num">亮點 0{hIdx + 1}</span>
-                              <h4 className="highlight-card-title">{h.point}</h4>
+                        {note.highlights.map((h, hIdx) => {
+                          const normH = typeof h === 'object' && h.point ? h : normalizeHighlightItem(h, hIdx);
+                          return (
+                            <div key={hIdx} className="highlight-grid-card">
+                              <div className="highlight-card-header">
+                                <div className="flex items-center justify-between gap-1 mb-1">
+                                  <span className="highlight-num">亮點 0{hIdx + 1}</span>
+                                  <span className="highlight-weight-tag">{normH.examWeight || '段考必考 ★★★★★'}</span>
+                                </div>
+                                <h4 
+                                  className="highlight-card-title"
+                                  dangerouslySetInnerHTML={{ __html: renderMathText(normH.point) }}
+                                />
+                              </div>
+                              <div 
+                                className="highlight-card-desc"
+                                dangerouslySetInnerHTML={{ __html: renderMathText(normH.detail) }}
+                              />
+                              {normH.trapAlert && (
+                                <div className="highlight-trap-pill">
+                                  <AlertTriangle size={11} />
+                                  <span>{normH.trapAlert}</span>
+                                </div>
+                              )}
                             </div>
-                            <p className="highlight-card-desc">{h.detail}</p>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
+                    </div>
+                  )}
+
+                  {/* 📚 108 課綱三大版本（康軒・翰林・南一）段考測驗特色雷達 */}
+                  {(focusSection === 'all' || focusSection === 'versions') && note.versionFocus && (
+                    <div className="unit-versions-section">
+                      <div className="versions-section-header">
+                        <div className="versions-badge">
+                          <BookOpen size={13} />
+                          <span>108 課綱三版本段考測驗焦點比對</span>
+                        </div>
+                        <span className="versions-section-subtitle">
+                          康軒 × 翰林 × 南一 命題風格與特色題型透視
+                        </span>
+                      </div>
+                      <div className="version-comparison-deck">
+                        <div className="version-card version-card-kh">
+                          <div className="version-card-tag">
+                            <span className="version-dot"></span>
+                            <span>🟢 康軒版 (Kang Hsuan)</span>
+                          </div>
+                          <p className="version-card-text">{note.versionFocus.kangHsuan}</p>
+                        </div>
+
+                        <div className="version-card version-card-hl">
+                          <div className="version-card-tag">
+                            <span className="version-dot"></span>
+                            <span>🔵 翰林版 (Han Lin)</span>
+                          </div>
+                          <p className="version-card-text">{note.versionFocus.hanLin}</p>
+                        </div>
+
+                        <div className="version-card version-card-ni">
+                          <div className="version-card-tag">
+                            <span className="version-dot"></span>
+                            <span>🟣 南一版 (Nan I)</span>
+                          </div>
+                          <p className="version-card-text">{note.versionFocus.nanI}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* ⏱️ 考前 5 秒瞬解速記急救卡 */}
+                  {(focusSection === 'all' || focusSection === 'rescue' || focusSection === 'formulas') && (note.quickRescue || note.hotKeywords) && (
+                    <div className="quick-rescue-card">
+                      <div className="quick-rescue-header">
+                        <div className="quick-rescue-badge">
+                          <Zap size={13} />
+                          <span>考前 5 秒瞬解速記口訣</span>
+                        </div>
+                        {note.hotKeywords && (
+                          <div className="hot-keywords-wrap">
+                            <Search size={12} className="text-tertiary" />
+                            <span className="text-xs text-secondary">
+                              <strong>審題雷達：</strong>{note.hotKeywords}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      <div 
+                        className="quick-rescue-body"
+                        dangerouslySetInnerHTML={{ __html: renderMathText(`“${note.quickRescue}”`) }}
+                      />
                     </div>
                   )}
 
@@ -978,6 +1116,8 @@ const ExamReviewNotesPage = () => {
                   {/* 焦點模式空狀態提示 (若該單元無此類別內容) */}
                   {focusSection !== 'all' && 
                    ((focusSection === 'highlights' && (!note.highlights || note.highlights.length === 0) && !unitDiagram) ||
+                    (focusSection === 'versions' && !note.versionFocus) ||
+                    (focusSection === 'rescue' && !note.quickRescue && !note.hotKeywords) ||
                     (focusSection === 'formulas' && (!note.keyFormulas || note.keyFormulas.length === 0)) ||
                     (focusSection === 'pitfalls' && (!note.examPitfalls || note.examPitfalls.length === 0)) ||
                     (focusSection === 'walkthroughs' && (!note.pastExamWalkthroughs || note.pastExamWalkthroughs.length === 0)) ||

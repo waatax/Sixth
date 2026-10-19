@@ -1,6 +1,87 @@
 // 🎓 108 課綱六年級全科 64 單元【三大段考知識亮點】與【溫故知新先備橋樑】資料庫
 // 涵蓋 8 大領域、全數 64 單元核心考點提煉、先備觀念喚醒與核心素養能力指標
 
+import { textbookVersionMatrix, getUnitVersionFocus } from './textbookVersionMatrix.js';
+
+export { textbookVersionMatrix, getUnitVersionFocus };
+
+// 將單一亮點（字串或物件）安全標準化為包含 point, detail, examWeight, trapAlert 之結構化物件
+export function normalizeHighlightItem(item, idx = 0) {
+  if (!item) {
+    return {
+      point: `考點 0${idx + 1}`,
+      detail: '',
+      examWeight: '段考必考 ★★★★★',
+      trapAlert: ''
+    };
+  }
+  if (typeof item === 'object' && (item.point || item.detail)) {
+    return {
+      point: item.point || `考點 0${idx + 1}`,
+      detail: item.detail || '',
+      examWeight: item.examWeight || '段考高頻 ★★★★★',
+      trapAlert: item.trapAlert || (item.detail?.includes('陷阱') || item.detail?.includes('避雷') ? '防雷必背' : '')
+    };
+  }
+
+  const str = String(item).trim();
+
+  // 1. 引號或括號開頭，例如「最小質數是 2」... 或【質數定義】...
+  const bracketMatch = str.match(/^(?:「([^」]+)」|【([^】]+)】)\s*([:：；;，,]?)\s*([\s\S]*)$/);
+  if (bracketMatch) {
+    const title = bracketMatch[1] || bracketMatch[2];
+    const rest = bracketMatch[4];
+    return {
+      point: title.trim(),
+      detail: rest ? rest.trim() : str,
+      examWeight: '段考高頻 ★★★★★',
+      trapAlert: str.includes('陷阱') || str.includes('必考') ? '防雷必背' : ''
+    };
+  }
+
+  // 2. 冒號或破折號分割，例如 兩數乘積恆等式：A × B = ...
+  const colonMatch = str.match(/^([^：:;；—–]{2,20})[：:;；—–]\s*([\s\S]*)$/);
+  if (colonMatch) {
+    return {
+      point: colonMatch[1].trim(),
+      detail: colonMatch[2].trim(),
+      examWeight: '段考必考 ★★★★★',
+      trapAlert: str.includes('陷阱') || str.includes('避雷') ? '防雷必背' : ''
+    };
+  }
+
+  // 3. 逗號分割前段作為標題
+  const commaIdx = str.search(/[，,]/);
+  if (commaIdx > 3 && commaIdx <= 18) {
+    return {
+      point: str.slice(0, commaIdx).trim(),
+      detail: str.slice(commaIdx + 1).trim(),
+      examWeight: '段考精選 ★★★★☆',
+      trapAlert: str.includes('陷阱') ? '防雷必背' : ''
+    };
+  }
+
+  return {
+    point: str.length > 16 ? str.slice(0, 15) + '…' : str,
+    detail: str,
+    examWeight: '段考精選 ★★★★☆',
+    trapAlert: ''
+  };
+}
+
+// 取得特定單元之完整亮點物件清單（自動完成標準化）
+export function getUnitNormalizedHighlights(unitId) {
+  const info = unitHighlightsMap[unitId];
+  if (!info || !info.highlights) {
+    return [
+      { point: '課綱核心觀念突破', detail: '精準掌握 108 課綱核心定義與運算算理', examWeight: '段考高頻 ★★★★★', trapAlert: '' },
+      { point: '歷屆名校高頻考點', detail: '直擊各校段考與畢業考必考題型與出題脈絡', examWeight: '段考必考 ★★★★★', trapAlert: '' },
+      { point: '段考避雷指引大招', detail: '防範常見失分陷阱，步驟級詳解與驗算確認', examWeight: '防雷必背 ★★★★★', trapAlert: '防雷必背' }
+    ];
+  }
+  return info.highlights.map((h, idx) => normalizeHighlightItem(h, idx));
+}
+
 export const unitHighlightsMap = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 🧮 數學領域 (12 單元)

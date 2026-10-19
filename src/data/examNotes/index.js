@@ -10,7 +10,13 @@ import { engNotes } from './engNotes.js';
 import { artNotes } from './artNotes.js';
 import { peNotes } from './peNotes.js';
 import { compNotes } from './compNotes.js';
-import { unitHighlightsMap } from './unitHighlights.js';
+import {
+  unitHighlightsMap,
+  normalizeHighlightItem,
+  getUnitNormalizedHighlights,
+  textbookVersionMatrix,
+  getUnitVersionFocus
+} from './unitHighlights.js';
 
 export {
   mathNotes,
@@ -21,7 +27,11 @@ export {
   artNotes,
   peNotes,
   compNotes,
-  unitHighlightsMap
+  unitHighlightsMap,
+  normalizeHighlightItem,
+  getUnitNormalizedHighlights,
+  textbookVersionMatrix,
+  getUnitVersionFocus
 };
 
 // 64 單元段考範圍對照表 (Unit to Exam Scope Mapping)
@@ -107,7 +117,7 @@ export const unitExamScopeMap = {
   'comp-u6': { scope: 'final', label: '6下畢業考 (期末考)', weight: '畢業評量 100%' }
 };
 
-// 輔助函式：自動注入 examScope、examScopeLabel 與三大段考知識亮點
+// 輔助函式：自動注入 examScope、examScopeLabel、三大段考知識亮點、三大版本對照與考前急救口訣
 function enrichNoteWithScope(note) {
   const meta = unitExamScopeMap[note.unitId] || { scope: 'midterm', label: '段考重點', weight: '核心考點' };
   const highlightInfo = unitHighlightsMap[note.unitId] || {
@@ -115,6 +125,8 @@ function enrichNoteWithScope(note) {
     masterySkill: '108 課綱核心素養實戰應用',
     highlights: ['課綱核心概念精準掌握', '歷屆名校高頻考點聚焦', '段考避雷指引與真題詳解']
   };
+  const versionFocus = getUnitVersionFocus(note.unitId);
+  const normalizedHighlights = (highlightInfo.highlights || []).map((h, idx) => normalizeHighlightItem(h, idx));
 
   return {
     ...note,
@@ -123,7 +135,11 @@ function enrichNoteWithScope(note) {
     examWeight: meta.weight,
     priorConcept: highlightInfo.priorConcept,
     masterySkill: highlightInfo.masterySkill,
-    highlights: highlightInfo.highlights
+    highlights: normalizedHighlights,
+    rawHighlights: highlightInfo.highlights,
+    versionFocus,
+    quickRescue: versionFocus.quickRescue || '掌握核心算理與定義，審題抓住關鍵字，仔細驗算奪滿分！',
+    hotKeywords: versionFocus.hotKeywords || ''
   };
 }
 

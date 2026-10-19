@@ -936,7 +936,10 @@ const LessonPage = () => {
           {/* Lecture Notes & PDF Quick Link */}
           {currentSubject && (
             <button
-              onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+              onClick={() => {
+                const sem = currentUnit?.term === '6-down' ? '6B' : '6A';
+                navigate(`/exam-notes/${currentSubject.id}/${sem}/all#note-${unitId}`);
+              }}
               className="badge cursor-pointer flex items-center gap-1.5"
               style={{
                 backgroundColor: 'rgba(99, 102, 241, 0.15)',
@@ -1214,9 +1217,12 @@ const LessonPage = () => {
 
               {currentSubject && (
                 <button
-                  onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+                  onClick={() => {
+                    const sem = currentUnit?.term === '6-down' ? '6B' : '6A';
+                    navigate(`/exam-notes/${currentSubject.id}/${sem}/all#note-${unitId}`);
+                  }}
                   className="hero-action-chip flex-1 md:flex-initial"
-                  title="閱讀與下載章節講義 PDF"
+                  title="閱讀與下載章節講義與考前重點筆記"
                 >
                   <FileText size={14} className="text-indigo-500" />
                   <span>章節講義 PDF</span>
@@ -2307,7 +2313,10 @@ const LessonPage = () => {
           {currentSubject && (
             <button 
               className="btn-outline flex items-center gap-1.5"
-              onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+              onClick={() => {
+                const sem = currentUnit?.term === '6-down' ? '6B' : '6A';
+                navigate(`/exam-notes/${currentSubject.id}/${sem}/all#note-${unitId}`);
+              }}
               style={{
                 padding: '12px 18px',
                 fontSize: '0.92rem',
@@ -2316,9 +2325,9 @@ const LessonPage = () => {
                 borderColor: '#6366f1',
                 color: '#6366f1'
               }}
-              title="查看並下載本學科專屬章節講義與考前大複習 PDF"
+              title="查看本單元考前重點筆記、三版本特色與各校歷屆真題"
             >
-              <FileText size={16} /> 下載【{currentSubject.name}】章節講義 (PDF)
+              <FileText size={16} /> 查看【{currentUnit?.title?.split('：')[1] || currentUnit?.title || '本單元'}】考前講義
             </button>
           )}
 
@@ -2524,7 +2533,10 @@ const LessonPage = () => {
         {/* PDF Notes Quick Link */}
         {currentSubject && (
           <button
-            onClick={() => navigate(`/exam-notes/${currentSubject.id}`)}
+            onClick={() => {
+              const sem = currentUnit?.term === '6-down' ? '6B' : '6A';
+              navigate(`/exam-notes/${currentSubject.id}/${sem}/all#note-${unitId}`);
+            }}
             className="w-full p-2.5 rounded-2xl border border-light text-xs font-bold text-secondary hover:text-primary hover:bg-tertiary transition-colors flex items-center justify-between"
           >
             <span className="flex items-center gap-1.5">
