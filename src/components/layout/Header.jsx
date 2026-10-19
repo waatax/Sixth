@@ -77,7 +77,7 @@ const Header = () => {
       title: '🎓 核心學程與段考講義',
       items: [
         { path: '/', label: '八大學科領域', icon: BookOpen, badge: null, color: 'hsl(215, 85%, 52%)' },
-        { path: '/exam-notes', label: '章節段考講義 (57份PDF)', icon: FileText, badge: 'PDF', color: '#6366f1' },
+        { path: '/exam-notes', label: '章節段考講義 (64單元全覆蓋)', icon: FileText, badge: 'PDF', color: '#6366f1' },
       ]
     },
     {

@@ -8,6 +8,7 @@ import {
   normalizeHighlightItem
 } from '../data/examNotes';
 import { getUnitDiagram } from '../data/examNotes/unitDiagrams';
+import KnowledgeMasteryModal from '../components/examNotes/KnowledgeMasteryModal';
 import { 
   Printer, 
   Search, 
@@ -128,6 +129,7 @@ const ExamReviewNotesPage = () => {
     }
   });
   const [allSolutionsExpanded, setAllSolutionsExpanded] = useState(false);
+  const [isMasteryModalOpen, setIsMasteryModalOpen] = useState(false);
   // 焦點衝刺模式: 'all' (全部) | 'highlights' (段考亮點) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (真題解析) | 'checklist' (自測清單)
   const [focusSection, setFocusSection] = useState('all');
 
@@ -613,6 +615,18 @@ const ExamReviewNotesPage = () => {
 
           {/* 閱讀面積與速讀工具按鈕群 */}
           <div className="reading-tools-group">
+            <button
+              className="btn-mastery-modal-trigger"
+              onClick={() => {
+                setIsMasteryModalOpen(true);
+                playSound('pop');
+              }}
+              title="開啟 108 課綱全 64 單元知識點掌握度總體檢與精熟儀表板"
+            >
+              <Award size={15} style={{ color: '#f59e0b' }} />
+              <span>🎓 64單元掌握度總體檢</span>
+            </button>
+
             <button
               className={`btn-reading-tool ${isWideMode ? 'active' : ''}`}
               onClick={toggleWideMode}
@@ -1180,6 +1194,16 @@ const ExamReviewNotesPage = () => {
           )}
         </main>
       </div>
+
+      {/* 🎓 64 單元知識點掌握度總體檢矩陣模態框 */}
+      <KnowledgeMasteryModal
+        isOpen={isMasteryModalOpen}
+        onClose={() => setIsMasteryModalOpen(false)}
+        onNavigateUnit={(subId, sem, uId) => {
+          setIsMasteryModalOpen(false);
+          navigate(`/exam-notes/${subId}/${sem}/all#note-${uId}`);
+        }}
+      />
     </div>
   );
 };

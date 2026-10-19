@@ -12,10 +12,12 @@ import {
   Copy, 
   Check, 
   BookOpen, 
-  Layers
+  Layers,
+  Zap
 } from 'lucide-react';
 import { speechEngine } from '../../utils/speechHelper';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/soundEffects';
+import { getUnitVersionFocus, getUnitNormalizedHighlights } from '../../data/examNotes';
 
 /**
  * 🎓 最強小六 (Sixth) 108 課綱六年級深度研經考點錦囊 (LessonDeepStudyDossier)
@@ -29,8 +31,16 @@ const LessonDeepStudyDossier = ({
   competencyCode = '數-E-A1'
 }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [activeTab, setActiveTab] = useState('pitfalls'); // 'pitfalls' | 'standards' | 'radar' | 'juniorHigh'
+  const [activeTab, setActiveTab] = useState('versions'); // 'versions' | 'highlights' | 'pitfalls' | 'radar' | 'standards' | 'juniorHigh'
   const [copied, setCopied] = useState(false);
+
+  const versionFocus = useMemo(() => {
+    return getUnitVersionFocus(unitId);
+  }, [unitId]);
+
+  const unitHighlights = useMemo(() => {
+    return getUnitNormalizedHighlights(unitId);
+  }, [unitId]);
 
   // 根據學科與單元自動生成名師研經三大避坑解析
   const synthesizedPitfalls = useMemo(() => {
@@ -264,6 +274,30 @@ const LessonDeepStudyDossier = ({
           {/* Sub Navigation Tabs */}
           <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-4 border-b border-light no-scrollbar">
             <button
+              onClick={() => { setActiveTab('versions'); playSound('click'); }}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+                activeTab === 'versions' 
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/25' 
+                  : 'text-secondary hover:bg-slate-100 dark:hover:bg-slate-800'
+              }`}
+            >
+              <BookOpen size={13} />
+              <span>📚 三版本測驗焦點</span>
+            </button>
+
+            <button
+              onClick={() => { setActiveTab('highlights'); playSound('click'); }}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+                activeTab === 'highlights' 
+                  ? 'bg-amber-500 text-white shadow-md shadow-amber-500/25' 
+                  : 'text-secondary hover:bg-slate-100 dark:hover:bg-slate-800'
+              }`}
+            >
+              <Sparkles size={13} />
+              <span>💡 三大知識亮點</span>
+            </button>
+
+            <button
               onClick={() => { setActiveTab('pitfalls'); playSound('click'); }}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-1.5 ${
                 activeTab === 'pitfalls' 
@@ -311,6 +345,133 @@ const LessonDeepStudyDossier = ({
               <span>🪜 國中七年級升學階梯</span>
             </button>
           </div>
+
+          {/* Tab 0A: Versions (108 課綱三版本測驗特色比對) */}
+          {activeTab === 'versions' && (
+            <div className="space-y-3.5 animate-fade-in">
+              <div className="text-xs text-secondary font-medium flex items-center justify-between flex-wrap gap-2">
+                <span>根據 108 課綱與三大版本（康軒・翰林・南一）歷年段考命題分析：</span>
+                {versionFocus.quickRescue && (
+                  <span className="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700 flex items-center gap-1">
+                    <Zap size={11} /> 5秒口訣：“{versionFocus.quickRescue}”
+                  </span>
+                )}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {/* 康軒版 */}
+                <div 
+                  className="p-3.5 rounded-2xl border"
+                  style={{
+                    backgroundColor: 'rgba(16, 185, 129, 0.05)',
+                    borderColor: 'rgba(16, 185, 129, 0.25)'
+                  }}
+                >
+                  <div className="flex items-center gap-1.5 text-xs font-black text-emerald-700 dark:text-emerald-400 mb-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>🟢 康軒版 (Kang Hsuan)</span>
+                  </div>
+                  <p className="text-xs text-secondary leading-relaxed m-0">
+                    {versionFocus.kangHsuan}
+                  </p>
+                </div>
+
+                {/* 翰林版 */}
+                <div 
+                  className="p-3.5 rounded-2xl border"
+                  style={{
+                    backgroundColor: 'rgba(37, 99, 235, 0.05)',
+                    borderColor: 'rgba(37, 99, 235, 0.25)'
+                  }}
+                >
+                  <div className="flex items-center gap-1.5 text-xs font-black text-blue-700 dark:text-blue-400 mb-2">
+                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span>🔵 翰林版 (Han Lin)</span>
+                  </div>
+                  <p className="text-xs text-secondary leading-relaxed m-0">
+                    {versionFocus.hanLin}
+                  </p>
+                </div>
+
+                {/* 南一版 */}
+                <div 
+                  className="p-3.5 rounded-2xl border"
+                  style={{
+                    backgroundColor: 'rgba(139, 92, 246, 0.05)',
+                    borderColor: 'rgba(139, 92, 246, 0.25)'
+                  }}
+                >
+                  <div className="flex items-center gap-1.5 text-xs font-black text-purple-700 dark:text-purple-400 mb-2">
+                    <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                    <span>🟣 南一版 (Nan I)</span>
+                  </div>
+                  <p className="text-xs text-secondary leading-relaxed m-0">
+                    {versionFocus.nanI}
+                  </p>
+                </div>
+              </div>
+
+              {versionFocus.hotKeywords && (
+                <div 
+                  className="p-3 rounded-xl border text-xs text-secondary flex items-center gap-2 flex-wrap"
+                  style={{ backgroundColor: 'var(--bg-tertiary)', borderColor: 'var(--border-light)' }}
+                >
+                  <span className="font-bold text-primary flex items-center gap-1">
+                    <Compass size={13} className="text-indigo-500" />
+                    <span>段考審題雷達：</span>
+                  </span>
+                  <span className="font-mono text-indigo-600 dark:text-indigo-400 font-bold">
+                    {versionFocus.hotKeywords}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Tab 0B: Highlights (三大段考核心知識亮點) */}
+          {activeTab === 'highlights' && (
+            <div className="space-y-3.5 animate-fade-in">
+              <div className="text-xs text-secondary font-medium mb-1">
+                教科書編審名師嚴選・本單元三大必考核心知識亮點與觀念提煉：
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {unitHighlights.map((h, idx) => (
+                  <div 
+                    key={idx}
+                    className="p-4 rounded-2xl border flex flex-col justify-between"
+                    style={{
+                      backgroundColor: 'rgba(245, 158, 11, 0.05)',
+                      borderColor: 'rgba(245, 158, 11, 0.25)'
+                    }}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-1 mb-2">
+                        <span className="text-[10px] font-black uppercase text-amber-600 dark:text-amber-400 bg-amber-500/15 px-2 py-0.5 rounded-full">
+                          亮點 0{idx + 1}
+                        </span>
+                        <span className="text-[10px] font-bold text-secondary">
+                          {h.examWeight || '段考高頻 ★★★★★'}
+                        </span>
+                      </div>
+                      <h4 className="text-xs font-bold text-primary mb-1.5">
+                        {h.point}
+                      </h4>
+                      <p className="text-xs text-secondary leading-relaxed m-0">
+                        {h.detail}
+                      </p>
+                    </div>
+
+                    {h.trapAlert && (
+                      <div className="mt-3 pt-2 border-t border-amber-200 dark:border-amber-800/40 text-[11px] font-bold text-rose-500 flex items-center gap-1">
+                        <AlertTriangle size={11} />
+                        <span>{h.trapAlert}</span>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Tab 1: Pitfalls (歷屆三大避坑焦點) */}
           {activeTab === 'pitfalls' && (
