@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 console.log('========================================================================');
-console.log('🚀 最強小六 (Sixth) 全維度 11 層品質與零基礎學習體驗檢驗矩陣測試');
+console.log('🚀 最強小六 (Sixth) 全維度 12 層品質與零基礎學習體驗檢驗矩陣測試');
 console.log('========================================================================\n');
 
 const results = [];
@@ -344,6 +344,47 @@ results.push({
   target: `全題庫 ${totalQuizQuestions.toLocaleString()} 道試題自適應提示`,
   method: 'Level 1 觀念提點 + Level 2 步驟指引 + Level 3 完整詳解',
   result: (hintLevel1Count === totalQuizQuestions && hintLevel2Count === totalQuizQuestions) ? `${totalQuizQuestions.toLocaleString()} 題 (100% 零死角覆蓋)` : `${hintLevel1Count}/${totalQuizQuestions} 題`
+});
+
+// ----------------------------------------------------
+// 12. 48 份段考講義全維度品質檢驗 (8科 × 2學期 × 3範圍)
+// ----------------------------------------------------
+const { getNotesBySubjectSemesterAndScope, allExamNotes: examNotesMap } = await import('../src/data/examNotes/index.js');
+const { getUnitDiagram: fetchUnitDiagram } = await import('../src/data/examNotes/unitDiagrams.js');
+
+const examSubjects = ['math', 'science', 'mandarin', 'social', 'english', 'arts', 'health_pe', 'integrative'];
+const examSemesters = ['6A', '6B'];
+const examScopes = ['midterm', 'final', 'all'];
+
+let validHandoutCombos = 0;
+let totalHandoutCombos = 0;
+
+for (const sub of examSubjects) {
+  for (const sem of examSemesters) {
+    for (const sc of examScopes) {
+      totalHandoutCombos++;
+      const notes = getNotesBySubjectSemesterAndScope(sub, sem, sc);
+      if (notes && notes.length > 0) {
+        const allValid = notes.every(n => {
+          const diag = fetchUnitDiagram(n.unitId);
+          const hasDiag = !!(diag && diag.svg && diag.svg.includes('<svg'));
+          const hasRadar = n.keywordRadar && n.keywordRadar.length >= 2;
+          const hasWalkthroughs = n.pastExamWalkthroughs && n.pastExamWalkthroughs.length >= 2;
+          const hasVersion = n.versionFocus && n.versionFocus.kangHsuan && n.versionFocus.hanLin && n.versionFocus.nanI;
+          return hasDiag && hasRadar && hasWalkthroughs && hasVersion;
+        });
+        if (allValid) validHandoutCombos++;
+      }
+    }
+  }
+}
+const totalWalkthroughCount = Object.values(examNotesMap).reduce((acc, n) => acc + (n.pastExamWalkthroughs?.length || 0), 0);
+
+results.push({
+  layer: '段考講義 48 組合檢驗',
+  target: `8科 × 2學期 × 3範圍 (48 份講義、${totalWalkthroughCount} 道真題步驟詳解)`,
+  method: '無空缺檢驗 + 考點向量圖解 + 審題雷達表格 + 步驟級真題解答',
+  result: validHandoutCombos === totalHandoutCombos ? `${validHandoutCombos} / ${totalHandoutCombos} 份講義 (100% 完美齊備)` : `${validHandoutCombos} / ${totalHandoutCombos} 份通過`
 });
 
 // ----------------------------------------------------

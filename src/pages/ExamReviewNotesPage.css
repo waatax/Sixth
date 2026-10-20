@@ -840,6 +840,171 @@
 }
 
 /* ==========================================================================
+   🧠 本單元核心心智模型導讀卡 (Mental Model Callout)
+   ========================================================================== */
+.mental-model-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.06) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-left: 4px solid #6366f1;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+.mental-model-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-xs);
+  margin-top: 0.1rem;
+}
+
+.mental-model-content {
+  flex: 1;
+}
+
+[data-theme='dark'] .mental-model-callout {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.12) 100%);
+  border-color: rgba(99, 102, 241, 0.35);
+  border-left-color: #818cf8;
+}
+
+[data-theme='dark'] .mental-model-badge {
+  background: rgba(99, 102, 241, 0.3);
+  color: #c7d2fe;
+}
+
+/* ==========================================================================
+   🔍 審題關鍵字破題雷達速查表 (Keyword Radar Table)
+   ========================================================================== */
+.keyword-radar-section {
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.keyword-radar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.keyword-radar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0369a1;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.75rem;
+}
+
+.keyword-radar-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
+.keyword-radar-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.keyword-radar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.keyword-radar-table th {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 700;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1.5px solid var(--border-medium);
+  font-size: 0.82rem;
+}
+
+.keyword-radar-table td {
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.55;
+  vertical-align: middle;
+}
+
+.keyword-radar-table tr:last-child td {
+  border-bottom: none;
+}
+
+.keyword-radar-table tr:hover td {
+  background: rgba(3, 105, 161, 0.04);
+}
+
+.radar-trigger-cell {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.radar-trigger-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  padding: 0.12rem 0.45rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.radar-tool-cell {
+  color: #0284c7;
+  font-weight: 700;
+  background: rgba(224, 242, 254, 0.2);
+}
+
+.radar-tool-icon {
+  margin-right: 0.4rem;
+}
+
+[data-theme='dark'] .keyword-radar-badge {
+  background: rgba(3, 105, 161, 0.25);
+  color: #7dd3fc;
+  border-color: rgba(3, 105, 161, 0.4);
+}
+
+[data-theme='dark'] .radar-tool-cell {
+  color: #38bdf8;
+  background: rgba(2, 132, 199, 0.15);
+}
+
+/* ==========================================================================
    📚 108 課綱三大版本（康軒・翰林・南一）段考測驗特色對照 Deck
    ========================================================================== */
 .unit-versions-section {
@@ -1292,7 +1457,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .walkthrough-option-item {
@@ -1303,15 +1468,387 @@
   font-size: 0.85rem;
 }
 
+.walkthrough-option-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  text-align: left;
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.walkthrough-option-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+
+.walkthrough-option-btn.selected-option {
+  border-color: var(--accent-primary);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.walkthrough-option-btn.correct-option {
+  border-color: #16a34a !important;
+  background: rgba(22, 163, 74, 0.12) !important;
+  color: #15803d !important;
+  font-weight: 700;
+}
+
+.walkthrough-option-btn.wrong-option {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+  color: #b91c1c !important;
+}
+
+.opt-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  font-weight: 800;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.correct-option .opt-letter {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.wrong-option .opt-letter {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.opt-text {
+  flex: 1;
+  line-height: 1.45;
+}
+
+.opt-feedback {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.opt-feedback.correct {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.opt-feedback.wrong {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
 .walkthrough-explanation {
   background: rgba(16, 185, 129, 0.08);
   border-left: 4px solid var(--accent-success);
-  border-radius: var(--radius-xs);
-  padding: 12px 14px;
-  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.86rem;
   line-height: 1.6;
   color: var(--text-primary);
-  white-space: pre-line;
+}
+
+/* 步驟級教學拆解結構樣式 */
+.walkthrough-structured-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+}
+
+.walkthrough-exp-header {
+  font-weight: 800;
+  color: #047857;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.walkthrough-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.55rem 0.8rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.step-badge {
+  flex-shrink: 0;
+}
+
+.step-num {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.step-content {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.walkthrough-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bullet-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.bullet-content {
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.walkthrough-verdict-banner {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  background: #ecfdf5;
+  border: 1.5px solid #a7f3d0;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  color: #047857;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+[data-theme='dark'] .walkthrough-step-item {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+[data-theme='dark'] .walkthrough-bullet-item {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+/* ==========================================================================
+   🌉 國中先修橋樑與日常生活素養應用 (Bridge Connections Deck)
+   ========================================================================== */
+.bridge-connections-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.bridge-card {
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.05rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.bridge-junior-high {
+  background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);
+  border: 1px solid #f5d0fe;
+  border-left: 4px solid #a855f7;
+  color: #581c87;
+}
+
+.bridge-life {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #22c55e;
+  color: #14532d;
+}
+
+.bridge-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 800;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.bridge-text {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+[data-theme='dark'] .bridge-junior-high {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(147, 51, 234, 0.1) 100%);
+  border-color: rgba(168, 85, 247, 0.35);
+  border-left-color: #c084fc;
+}
+
+[data-theme='dark'] .bridge-life {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(22, 163, 74, 0.1) 100%);
+  border-color: rgba(34, 197, 94, 0.35);
+  border-left-color: #4ade80;
+}
+
+/* ==========================================================================
+   🔍 考點向量圖解放大檢視工具與模態框
+   ========================================================================== */
+.btn-diagram-zoom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.btn-diagram-zoom:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-primary);
+}
+
+.unit-diagram-svg-container {
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.unit-diagram-svg-container:hover {
+  filter: brightness(1.02);
+}
+
+.diagram-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.diagram-modal-content {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  max-width: 860px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  border: 1.5px solid var(--border-medium);
+}
+
+.diagram-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-secondary);
+}
+
+.diagram-modal-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.btn-close-modal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-close-modal:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.diagram-modal-svg-wrap {
+  padding: 1.5rem;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.diagram-modal-svg-wrap svg {
+  max-width: 100%;
+  height: auto;
+  min-height: 250px;
+  max-height: 480px;
+}
+
+.diagram-modal-subtitle {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  line-height: 1.5;
+}
+
+.diagram-modal-footer {
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-tertiary);
 }
 
 /* 5. 檢核清單 (多欄緊湊膠囊排列) */
@@ -1770,6 +2307,101 @@
     padding: 6px 10px !important;
     font-size: 9pt !important;
     display: block !important;
+  }
+
+  .walkthrough-option-btn {
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    padding: 4px 6px !important;
+    font-size: 8.5pt !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .walkthrough-step-item {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 3px 6px !important;
+    font-size: 8pt !important;
+    margin-bottom: 3px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .step-num {
+    background: #0f172a !important;
+    color: #ffffff !important;
+    font-size: 7pt !important;
+    padding: 1px 4px !important;
+  }
+
+  .walkthrough-bullet-item {
+    font-size: 8pt !important;
+    padding: 2px 4px !important;
+  }
+
+  .walkthrough-verdict-banner {
+    background: #f0fdf4 !important;
+    border: 1px solid #86efac !important;
+    color: #14532d !important;
+    font-size: 8pt !important;
+    padding: 4px 6px !important;
+  }
+
+  .mental-model-callout {
+    background: #f5f3ff !important;
+    border: 1px solid #ddd6fe !important;
+    border-left: 3.5px solid #7c3aed !important;
+    padding: 4px 8px !important;
+    font-size: 8pt !important;
+    margin-bottom: 6px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .keyword-radar-section {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 6px 8px !important;
+    margin-bottom: 8px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .keyword-radar-table {
+    font-size: 7.5pt !important;
+  }
+
+  .keyword-radar-table th {
+    background: #e2e8f0 !important;
+    color: #0f172a !important;
+    padding: 3px 6px !important;
+    font-size: 7.5pt !important;
+  }
+
+  .keyword-radar-table td {
+    padding: 3px 6px !important;
+    font-size: 7.5pt !important;
+  }
+
+  .bridge-connections-deck {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .bridge-card {
+    padding: 4px 6px !important;
+    font-size: 7.5pt !important;
+    border: 1px solid #cbd5e1 !important;
+    page-break-inside: avoid !important;
+  }
+
+  .diagram-modal-overlay,
+  .btn-diagram-zoom {
+    display: none !important;
   }
 
   .checklist-container.compact-grid {

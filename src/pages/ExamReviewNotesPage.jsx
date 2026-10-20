@@ -32,7 +32,11 @@ import {
   Compass,
   Layers,
   Clock,
-  ShieldCheck
+  ShieldCheck,
+  ZoomIn,
+  X,
+  Check,
+  Lightbulb
 } from 'lucide-react';
 import { playSound } from '../utils/soundEffects';
 import './ExamReviewNotesPage.css';
@@ -72,6 +76,64 @@ function renderDisplayFormula(formula) {
   }
   // 純文字速記口訣或名師金句
   return `<div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">${formula}</span><span class="mnemonic-quote-mark">”</span></div>`;
+}
+
+// 渲染結構化段考真題步驟解答教學
+function renderStructuredWalkthroughExplanation(explanation) {
+  if (!explanation) return '';
+  const lines = explanation.split('\n');
+  const elements = [];
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) return;
+
+    if (trimmed.startsWith('【') && trimmed.includes('】')) {
+      elements.push(
+        `<div class="walkthrough-exp-header">
+          <span class="exp-header-icon">🎯</span>
+          <span class="exp-header-text">${renderMathText(trimmed)}</span>
+        </div>`
+      );
+    } else if (/^\d+\.\s*/.test(trimmed)) {
+      const match = trimmed.match(/^(\d+)\.\s*(.*)/);
+      const stepNo = match ? match[1] : '';
+      const stepContent = match ? match[2] : trimmed;
+      elements.push(
+        `<div class="walkthrough-step-item">
+          <div class="step-badge">
+            <span class="step-num">步驟 0${stepNo}</span>
+          </div>
+          <div class="step-content">
+            ${renderMathText(stepContent)}
+          </div>
+        </div>`
+      );
+    } else if (/^[•\-*]\s*/.test(trimmed)) {
+      const bulletContent = trimmed.replace(/^[•\-*]\s*/, '');
+      elements.push(
+        `<div class="walkthrough-bullet-item">
+          <span class="bullet-tag">🔍 考點分析</span>
+          <span class="bullet-content">${renderMathText(bulletContent)}</span>
+        </div>`
+      );
+    } else if (/^故(正確答案|選)/.test(trimmed)) {
+      elements.push(
+        `<div class="walkthrough-verdict-banner">
+          <span class="verdict-icon">🏆</span>
+          <span class="verdict-text">${renderMathText(trimmed)}</span>
+        </div>`
+      );
+    } else {
+      elements.push(
+        `<div class="walkthrough-normal-line">
+          ${renderMathText(trimmed)}
+        </div>`
+      );
+    }
+  });
+
+  return elements.join('');
 }
 
 // 計算單元自測掌握度與評級徽章
@@ -130,7 +192,11 @@ const ExamReviewNotesPage = () => {
   });
   const [allSolutionsExpanded, setAllSolutionsExpanded] = useState(false);
   const [isMasteryModalOpen, setIsMasteryModalOpen] = useState(false);
-  // 焦點衝刺模式: 'all' (全部) | 'highlights' (段考亮點) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (真題解析) | 'checklist' (自測清單)
+  // 用戶真題自測選答狀態: { [walkthroughKey]: optIdx }
+  const [userAnswers, setUserAnswers] = useState({});
+  // 考點圖解放大檢視模態框
+  const [previewDiagram, setPreviewDiagram] = useState(null);
+  // 焦點衝刺模式: 'all' (全部) | 'highlights' (段考亮點) | 'versions' (三版本對照) | 'radar' (審題雷達) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (真題解析) | 'checklist' (自測清單)
   const [focusSection, setFocusSection] = useState('all');
 
   // 當前學科資訊
@@ -171,6 +237,21 @@ const ExamReviewNotesPage = () => {
       localStorage.setItem(`sixth_exam_notes_chk_${currentSubject}_${currentSemester}`, JSON.stringify(next));
     } catch {}
     playSound('pop');
+  };
+
+  // 真題互動自測點選答題
+  const handleSelectOption = (walkthroughKey, optIdx, isCorrect) => {
+    setUserAnswers(prev => ({
+      ...prev,
+      [walkthroughKey]: optIdx
+    }));
+    if (isCorrect) {
+      playSound('success');
+      // 答對自動展開名師步驟詳解
+      setRevealedSolutions(prev => ({ ...prev, [walkthroughKey]: true }));
+    } else {
+      playSound('pop');
+    }
   };
 
   // 切換單一題目答案顯示
@@ -291,6 +372,13 @@ const ExamReviewNotesPage = () => {
         </div>
       ` : ''}
 
+      ${n.coreMentalModel ? `
+        <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border: 1.5px solid #ddd6fe; border-left: 4px solid #7c3aed; border-radius: 6px; padding: 8px 12px; margin-bottom: 12px; font-size: 11.5px; line-height: 1.5;">
+          <strong style="color: #6d28d9;">🧠 本單元核心心智模型與直觀生活比喻：</strong>
+          <span style="color: #374151;">${n.coreMentalModel}</span>
+        </div>
+      ` : ''}
+
       ${n.highlights && n.highlights.length > 0 ? `
         <div style="background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1.5px solid #fde68a; border-radius: 6px; padding: 10px 12px; margin-bottom: 12px;">
           <div style="font-size: 11.5px; font-weight: bold; color: #92400e; margin-bottom: 6px;">🌟 段考三大核心知識亮點・高頻必考精華</div>
@@ -310,6 +398,28 @@ const ExamReviewNotesPage = () => {
               `;
             }).join('')}
           </div>
+        </div>
+      ` : ''}
+
+      ${n.keywordRadar && n.keywordRadar.length > 0 ? `
+        <div style="background: #f0f9ff; border: 1.5px solid #bae6fd; border-radius: 6px; padding: 10px 12px; margin-bottom: 12px;">
+          <div style="font-size: 11.5px; font-weight: bold; color: #0369a1; margin-bottom: 6px;">🔍 審題關鍵字破題雷達速查表（直擊段考題幹特徵 ➔ 快速鎖定秒殺破題工具）</div>
+          <table style="width: 100%; border-collapse: collapse; font-size: 11px;">
+            <thead>
+              <tr style="background: #e0f2fe; color: #0369a1; border-bottom: 1.5px solid #bae6fd;">
+                <th style="padding: 5px 8px; text-align: left; width: 50%;">🎯 題幹高頻特徵與題型關鍵字</th>
+                <th style="padding: 5px 8px; text-align: left; width: 50%;">🛠️ 名師秒殺破題工具與解題大招</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${n.keywordRadar.map(kr => `
+                <tr style="border-bottom: 1px solid #e0f2fe;">
+                  <td style="padding: 5px 8px; color: #1e293b; font-weight: bold;">🏷️ ${kr.trigger}</td>
+                  <td style="padding: 5px 8px; color: #0284c7; font-weight: bold;">⚡ ${kr.tool}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
         </div>
       ` : ''}
 
@@ -381,20 +491,44 @@ const ExamReviewNotesPage = () => {
       </div>
 
       ${n.pastExamWalkthroughs && n.pastExamWalkthroughs.length > 0 ? `
-        <div style="font-size: 12px; font-weight: bold; margin: 10px 0 6px 0; color: #059669;">📝 各校歷年段考／畢業考經典真題實戰</div>
+        <div style="font-size: 12px; font-weight: bold; margin: 12px 0 6px 0; color: #059669;">📝 各校歷年段考／畢業考經典真題與步驟級教學解答</div>
         ${n.pastExamWalkthroughs.map((w, idx) => `
           <div class="walkthrough">
-            <div style="font-size: 10.5px; color: #64748b; font-weight: bold;">🏛️ ${w.examSource}</div>
-            <div style="font-weight: bold; margin: 4px 0; font-size: 12px;">【範例 ${idx + 1}】${w.question}</div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 5px 0; font-size: 11px;">
-              ${w.options.map((opt, oIdx) => `<div style="${oIdx === w.answerIndex ? 'font-weight: bold; color: #059669;' : ''}">${opt}</div>`).join('')}
+            <div style="font-size: 10.5px; color: #64748b; font-weight: bold; display: flex; justify-content: space-between;">
+              <span>🏛️ ${w.examSource}</span>
+              <span style="color: #059669; font-weight: bold;">範例 0${idx + 1}</span>
+            </div>
+            <div style="font-weight: bold; margin: 5px 0; font-size: 12px; color: #0f172a;">【範例 ${idx + 1}】${w.question}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 6px 0; font-size: 11px;">
+              ${w.options.map((opt, oIdx) => `
+                <div style="padding: 4px 6px; border-radius: 4px; border: 1px solid ${oIdx === w.answerIndex ? '#10b981' : '#e2e8f0'}; background: ${oIdx === w.answerIndex ? '#ecfdf5' : '#ffffff'}; font-weight: ${oIdx === w.answerIndex ? 'bold' : 'normal'}; color: ${oIdx === w.answerIndex ? '#065f46' : '#334155'};">
+                  ${opt} ${oIdx === w.answerIndex ? ' (✅ 正解)' : ''}
+                </div>
+              `).join('')}
             </div>
             <div class="explanation">
-              <strong>✅ 正解：選項 ${['A', 'B', 'C', 'D'][w.answerIndex]}</strong><br>
-              ${w.explanation.replace(/\n/g, '<br>')}
+              <div style="font-weight: bold; margin-bottom: 4px; color: #047857; font-size: 11.5px;">✍️ 正確解答：選項 ${['A', 'B', 'C', 'D'][w.answerIndex]}（步驟教學詳解）</div>
+              <div style="line-height: 1.55;">${w.explanation.replace(/\n/g, '<br>')}</div>
             </div>
           </div>
         `).join('')}
+      ` : ''}
+
+      ${n.juniorHighBridge || n.lifeApplication ? `
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; margin-bottom: 10px;">
+          ${n.juniorHighBridge ? `
+            <div style="background: #fdf4ff; border: 1px solid #f5d0fe; border-left: 3.5px solid #a855f7; border-radius: 4px; padding: 6px 8px; font-size: 11px;">
+              <strong style="color: #6b21a8;">🎓 國中先修橋樑（七年級銜接突破）：</strong>
+              <div style="color: #581c87; margin-top: 2px; line-height: 1.4;">${n.juniorHighBridge}</div>
+            </div>
+          ` : ''}
+          ${n.lifeApplication ? `
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 3.5px solid #22c55e; border-radius: 4px; padding: 6px 8px; font-size: 11px;">
+              <strong style="color: #15803d;">🌍 108 課綱日常生活素養應用：</strong>
+              <div style="color: #14532d; margin-top: 2px; line-height: 1.4;">${n.lifeApplication}</div>
+            </div>
+          ` : ''}
+        </div>
       ` : ''}
 
       ${n.selfChecklist && n.selfChecklist.length > 0 ? `
@@ -667,6 +801,7 @@ const ExamReviewNotesPage = () => {
             {[
               { id: 'all', label: '🌟 完整全覽精讀', tag: null },
               { id: 'highlights', label: '💡 三大段考知識亮點', tag: '精華' },
+              { id: 'radar', label: '🔍 審題關鍵字雷達', tag: '破題' },
               { id: 'versions', label: '📚 三版本測驗對照', tag: '對齊' },
               { id: 'rescue', label: '⏱️ 5秒瞬解急救卡', tag: '口訣' },
               { id: 'formulas', label: '⚡ 名師公式口訣', tag: '速解' },
@@ -810,6 +945,19 @@ const ExamReviewNotesPage = () => {
                         )}
                       </div>
                     )}
+
+                    {/* 🧠 本單元核心心智模型與直觀生活比喻 */}
+                    {(focusSection === 'all' || focusSection === 'highlights') && note.coreMentalModel && (
+                      <div className="mental-model-callout">
+                        <div className="mental-model-badge">
+                          <Sparkles size={12} />
+                          <span>🧠 核心心智模型</span>
+                        </div>
+                        <div className="mental-model-content">
+                          <strong>直觀建構：</strong>{note.coreMentalModel}
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   {/* 💡 三大段考核心知識亮點 (High-Yield Highlights) */}
@@ -850,6 +998,45 @@ const ExamReviewNotesPage = () => {
                             </div>
                           );
                         })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 🔍 審題關鍵字破題雷達速查表 (Keyword Radar Table) */}
+                  {(focusSection === 'all' || focusSection === 'radar' || focusSection === 'rescue' || focusSection === 'formulas') && note.keywordRadar && note.keywordRadar.length > 0 && (
+                    <div className="keyword-radar-section">
+                      <div className="keyword-radar-header">
+                        <div className="keyword-radar-badge">
+                          <Compass size={13} />
+                          <span>🔍 審題關鍵字破題雷達速查表</span>
+                        </div>
+                        <span className="keyword-radar-subtitle">
+                          直擊段考題幹特徵 ➔ 快速鎖定秒殺破題工具
+                        </span>
+                      </div>
+                      <div className="keyword-radar-table-wrapper">
+                        <table className="keyword-radar-table">
+                          <thead>
+                            <tr>
+                              <th style={{ width: '50%' }}>🎯 題幹高頻特徵與題型關鍵字</th>
+                              <th style={{ width: '50%' }}>🛠️ 名師秒殺破題工具與解題大招</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {note.keywordRadar.map((kr, krIdx) => (
+                              <tr key={krIdx}>
+                                <td className="radar-trigger-cell">
+                                  <span className="radar-trigger-tag">題幹關鍵字</span>
+                                  <span className="radar-trigger-text">{kr.trigger}</span>
+                                </td>
+                                <td className="radar-tool-cell">
+                                  <span className="radar-tool-icon">⚡</span>
+                                  <span className="radar-tool-text">{kr.tool}</span>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   )}
@@ -986,10 +1173,27 @@ const ExamReviewNotesPage = () => {
                                     <Sparkles size={12} />
                                     <span>考點視覺圖解・直擊核心</span>
                                   </div>
+                                  <button
+                                    type="button"
+                                    className="btn-diagram-zoom no-print"
+                                    title="點擊放大檢視考點高清向量圖"
+                                    onClick={() => {
+                                      setPreviewDiagram(unitDiagram);
+                                      playSound('pop');
+                                    }}
+                                  >
+                                    <ZoomIn size={12} />
+                                    <span>放大檢視</span>
+                                  </button>
                                   <h4 className="unit-diagram-title">{unitDiagram.title}</h4>
                                 </div>
                                 <div 
                                   className="unit-diagram-svg-container"
+                                  title="點擊放大檢視高清向量圖表"
+                                  onClick={() => {
+                                    setPreviewDiagram(unitDiagram);
+                                    playSound('pop');
+                                  }}
                                   dangerouslySetInnerHTML={{ __html: unitDiagram.svg }}
                                 />
                                 {unitDiagram.subtitle && (
@@ -1027,10 +1231,15 @@ const ExamReviewNotesPage = () => {
                   {/* 4. 📝 各校歷年段考/畢業考經典真題實戰 */}
                   {(focusSection === 'all' || focusSection === 'walkthroughs') && note.pastExamWalkthroughs && note.pastExamWalkthroughs.length > 0 && (
                     <div className="note-section-block unit-full-section">
-                      <h3 className="note-section-title">
-                        <HelpCircle size={18} style={{ color: 'var(--accent-success)' }} />
-                        <span>📝 各校歷年段考／畢業考經典真題實戰</span>
-                      </h3>
+                      <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
+                        <h3 className="note-section-title" style={{ margin: 0 }}>
+                          <HelpCircle size={18} style={{ color: 'var(--accent-success)' }} />
+                          <span>📝 各校歷年段考／畢業考經典真題與步驟級教學解答</span>
+                        </h3>
+                        <span className="text-xs text-secondary font-bold">
+                          點選選項可即時自測 ｜ 附名師步驟推導與解析
+                        </span>
+                      </div>
 
                       <div className="walkthroughs-list">
                         {note.pastExamWalkthroughs.map((walk, idx) => {
@@ -1038,60 +1247,117 @@ const ExamReviewNotesPage = () => {
                           const isRevealed = revealedSolutions[walkthroughKey] !== undefined 
                             ? revealedSolutions[walkthroughKey] 
                             : allSolutionsExpanded;
+                          const userAnswer = userAnswers[walkthroughKey];
 
                           return (
                             <div key={idx} className="walkthrough-box">
-                              <div className="walkthrough-source">
-                                🏛️ {walk.examSource}
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="walkthrough-source">
+                                  🏛️ {walk.examSource}
+                                </span>
+                                <span className="badge badge-secondary text-xs">
+                                  範例 0{idx + 1}
+                                </span>
                               </div>
 
                               <div 
                                 className="walkthrough-question"
-                                dangerouslySetInnerHTML={{ __html: renderMathText(`【範例 ${idx + 1}】${walk.question}`) }}
+                                dangerouslySetInnerHTML={{ __html: renderMathText(walk.question) }}
                               />
 
                               <div className="walkthrough-options">
-                                {walk.options.map((opt, optIdx) => (
-                                  <div 
-                                    key={optIdx} 
-                                    className="walkthrough-option-item"
-                                    style={isRevealed && optIdx === walk.answerIndex ? {
-                                      borderColor: 'var(--accent-success)',
-                                      backgroundColor: 'rgba(16, 185, 129, 0.08)',
-                                      fontWeight: 700
-                                    } : {}}
-                                  >
-                                    {opt}
-                                  </div>
-                                ))}
+                                {walk.options.map((opt, optIdx) => {
+                                  const isSelected = userAnswer === optIdx;
+                                  const isCorrect = optIdx === walk.answerIndex;
+                                  const hasAnswered = userAnswer !== undefined;
+                                  const showCheck = isRevealed || hasAnswered;
+
+                                  let btnClass = 'walkthrough-option-btn';
+                                  if (showCheck && isCorrect) {
+                                    btnClass += ' correct-option';
+                                  } else if (showCheck && isSelected && !isCorrect) {
+                                    btnClass += ' wrong-option';
+                                  } else if (isSelected) {
+                                    btnClass += ' selected-option';
+                                  }
+
+                                  return (
+                                    <button 
+                                      key={optIdx} 
+                                      type="button"
+                                      className={btnClass}
+                                      onClick={() => handleSelectOption(walkthroughKey, optIdx, isCorrect)}
+                                    >
+                                      <span className="opt-letter">{['A', 'B', 'C', 'D'][optIdx]}</span>
+                                      <span 
+                                        className="opt-text"
+                                        dangerouslySetInnerHTML={{ __html: renderMathText(opt.replace(/^[A-D]\.\s*/, '')) }}
+                                      />
+                                      {showCheck && isCorrect && (
+                                        <span className="opt-feedback correct">✓ 正解</span>
+                                      )}
+                                      {showCheck && isSelected && !isCorrect && (
+                                        <span className="opt-feedback wrong">✗ 需訂正</span>
+                                      )}
+                                    </button>
+                                  );
+                                })}
                               </div>
 
                               {/* 網頁上提供展開查看按鈕，列印時預設全部展開 */}
                               <div className="flex justify-between items-center mb-3 no-print">
                                 <button
+                                  type="button"
                                   className="btn-outline text-xs flex items-center gap-1.5 py-1 px-3"
                                   onClick={() => toggleRevealSolution(walkthroughKey)}
                                 >
                                   <Eye size={14} />
-                                  <span>{isRevealed ? '隱藏名師解析與正解' : '查看名師解析與正解步驟'}</span>
+                                  <span>{isRevealed ? '隱藏名師教學詳解' : '查看名師步驟級教學詳解與正解'}</span>
                                 </button>
                                 <span className="text-xs text-tertiary">
-                                  （列印講義時將自動包含完整詳解）
+                                  （列印或匯出講義時將自動包含完整教學詳解）
                                 </span>
                               </div>
 
                               <div 
                                 className={`walkthrough-explanation ${!isRevealed ? 'print-only' : ''}`}
                               >
-                                <div className="font-bold mb-1" style={{ color: 'var(--accent-success)' }}>
-                                  正確解答：選項 {['A', 'B', 'C', 'D'][walk.answerIndex]}
+                                <div className="font-bold mb-2 flex items-center gap-2" style={{ color: 'var(--accent-success)' }}>
+                                  <span>✅ 正確解答：選項 {['A', 'B', 'C', 'D'][walk.answerIndex]}</span>
                                 </div>
-                                <div dangerouslySetInnerHTML={{ __html: renderMathText(walk.explanation) }} />
+                                <div 
+                                  className="walkthrough-structured-explanation"
+                                  dangerouslySetInnerHTML={{ __html: renderStructuredWalkthroughExplanation(walk.explanation) }} 
+                                />
                               </div>
                             </div>
                           );
                         })}
                       </div>
+                    </div>
+                  )}
+
+                  {/* 5. 🌉 融會貫通：國中先修橋樑與日常生活素養應用 */}
+                  {focusSection === 'all' && (note.juniorHighBridge || note.lifeApplication) && (
+                    <div className="bridge-connections-deck">
+                      {note.juniorHighBridge && (
+                        <div className="bridge-card bridge-junior-high">
+                          <div className="bridge-tag">
+                            <Award size={13} />
+                            <span>🎓 國中先修橋樑（七年級銜接突破）</span>
+                          </div>
+                          <p className="bridge-text">{note.juniorHighBridge}</p>
+                        </div>
+                      )}
+                      {note.lifeApplication && (
+                        <div className="bridge-card bridge-life">
+                          <div className="bridge-tag">
+                            <Compass size={13} />
+                            <span>🌍 108 課綱日常生活素養應用</span>
+                          </div>
+                          <p className="bridge-text">{note.lifeApplication}</p>
+                        </div>
+                      )}
                     </div>
                   )}
 
@@ -1204,6 +1470,46 @@ const ExamReviewNotesPage = () => {
           navigate(`/exam-notes/${subId}/${sem}/all#note-${uId}`);
         }}
       />
+
+      {/* 🎨 考點圖解高清向量放大檢視模態框 */}
+      {previewDiagram && (
+        <div className="diagram-modal-overlay no-print" onClick={() => setPreviewDiagram(null)}>
+          <div className="diagram-modal-content" onClick={e => e.stopPropagation()}>
+            <div className="diagram-modal-header">
+              <div className="flex items-center gap-2">
+                <Sparkles size={16} style={{ color: 'var(--accent-primary)' }} />
+                <h3 className="diagram-modal-title">{previewDiagram.title}</h3>
+              </div>
+              <button 
+                type="button" 
+                className="btn-close-modal" 
+                onClick={() => setPreviewDiagram(null)}
+                title="關閉放大視窗"
+              >
+                <X size={18} />
+              </button>
+            </div>
+            <div 
+              className="diagram-modal-svg-wrap"
+              dangerouslySetInnerHTML={{ __html: previewDiagram.svg }}
+            />
+            {previewDiagram.subtitle && (
+              <div className="diagram-modal-subtitle">
+                💡 {previewDiagram.subtitle}
+              </div>
+            )}
+            <div className="diagram-modal-footer">
+              <button 
+                type="button" 
+                className="btn-outline text-xs py-1.5 px-4 font-bold" 
+                onClick={() => setPreviewDiagram(null)}
+              >
+                關閉放大視窗
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
