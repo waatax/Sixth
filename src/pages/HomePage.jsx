@@ -124,11 +124,11 @@ const HomePage = () => {
               </span>
             </div>
             
-            <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.9rem * var(--font-scale))', letterSpacing: '-0.02em', lineHeight: 1.3 }}>
+            <h1 className="h1" style={{ margin: 0, fontSize: '1.9rem', letterSpacing: '-0.02em', lineHeight: 1.3 }}>
               歡迎回來，{currentTitle}！直覺探索八大學科與主題課堂
             </h1>
 
-            <p className="text-secondary" style={{ marginTop: '10px', fontSize: 'calc(0.96rem * var(--font-scale))', lineHeight: 1.65 }}>
+            <p className="text-secondary" style={{ marginTop: '10px', fontSize: '0.96rem', lineHeight: 1.65 }}>
               每個單元皆具備 <strong style={{ color: 'var(--accent-primary)' }}>「視覺概念圖解」</strong>、<strong style={{ color: '#6366f1' }}>「章節段考講義 (PDF)」</strong> 與 <strong style={{ color: '#10b981' }}>「互動探究模擬」</strong>。立即從下方智能搜尋感興趣的主題，或直接展開科目闖關！
             </p>
 
@@ -276,7 +276,7 @@ const HomePage = () => {
           <div>
             <div className="flex items-center gap-2">
               <span className="badge badge-accent font-bold">系統課綱</span>
-              <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.4rem * var(--font-scale))', whiteSpace: 'nowrap' }}>
+              <h2 className="h2" style={{ margin: 0, fontSize: '1.4rem', whiteSpace: 'nowrap' }}>
                 📖 八大學科學習領域・直覺闖關入口
               </h2>
             </div>
@@ -529,7 +529,7 @@ const HomePage = () => {
       <section>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.3rem * var(--font-scale))' }}>
+            <h2 className="h2" style={{ margin: 0, fontSize: '1.3rem' }}>
               🎮 沉浸式素養探究與實戰工具殿堂
             </h2>
             <span className="badge badge-accent font-bold">多元自主學習</span>
@@ -647,7 +647,7 @@ const HomePage = () => {
       {/* ============================================================ */}
       <section>
         <div className="flex items-center gap-2 mb-3">
-          <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.3rem * var(--font-scale))' }}>
+          <h2 className="h2" style={{ margin: 0, fontSize: '1.3rem' }}>
             ⚡ 快速充電與段考輔助利器
           </h2>
           <span className="badge badge-accent">全方位支援</span>

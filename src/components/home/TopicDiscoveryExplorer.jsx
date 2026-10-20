@@ -204,7 +204,7 @@ export const TopicDiscoveryExplorer = () => {
               涵蓋全站 8 大領域・64 個精選單元地圖
             </span>
           </div>
-          <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.5rem * var(--font-scale))', letterSpacing: '-0.02em' }}>
+          <h2 className="h2" style={{ margin: 0, fontSize: '1.5rem', letterSpacing: '-0.02em' }}>
             🎯 依學習興趣與好奇心探索主題
           </h2>
           <p className="text-secondary text-sm mt-1 mb-0" style={{ lineHeight: 1.6 }}>
@@ -252,7 +252,7 @@ export const TopicDiscoveryExplorer = () => {
               background: 'none',
               border: 'none',
               outline: 'none',
-              fontSize: 'calc(1rem * var(--font-scale))',
+              fontSize: '1rem',
               color: 'var(--text-primary)',
               fontWeight: 600
             }}
@@ -459,7 +459,7 @@ export const TopicDiscoveryExplorer = () => {
                     style={{ 
                       color: 'var(--text-primary)', 
                       lineHeight: 1.45,
-                      fontSize: 'calc(0.96rem * var(--font-scale))'
+                      fontSize: '0.96rem'
                     }}
                   >
                     {unit.title}

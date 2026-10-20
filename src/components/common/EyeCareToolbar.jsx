@@ -314,8 +314,8 @@ const EyeCareToolbar = ({ isCompact = false }) => {
           onClick={scrollToTop}
           className="card flex items-center justify-center ios-pressable"
           style={{
-            width: '46px',
-            height: '46px',
+            width: '42px',
+            height: '42px',
             borderRadius: '50%',
             backgroundColor: 'var(--bg-secondary)',
             color: 'var(--text-secondary)',
@@ -326,21 +326,21 @@ const EyeCareToolbar = ({ isCompact = false }) => {
           title="回頁首"
           aria-label="回頁首"
         >
-          <ArrowUp size={20} />
+          <ArrowUp size={19} />
         </button>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 ios-pressable"
+          className="flex items-center justify-center gap-1.5 ios-pressable eyecare-trigger-pill"
           style={{
-            height: '46px',
-            padding: '0 16px',
+            height: '42px',
+            padding: '0 14px',
             borderRadius: 'var(--radius-full)',
             backgroundColor: 'var(--accent-primary)',
             color: 'var(--text-inverse)',
-            boxShadow: '0 4px 14px rgba(37, 99, 235, 0.35)',
+            boxShadow: '0 4px 14px rgba(79, 70, 229, 0.35)',
             fontWeight: 800,
-            fontSize: '0.86rem',
+            fontSize: '0.84rem',
             border: 'none',
             cursor: 'pointer'
           }}
@@ -348,7 +348,7 @@ const EyeCareToolbar = ({ isCompact = false }) => {
           aria-label="護眼控制盤"
         >
           <Eye size={18} />
-          <span>護眼與字級</span>
+          <span className="hidden sm:inline">護眼與字級</span>
         </button>
       </div>
     </div>

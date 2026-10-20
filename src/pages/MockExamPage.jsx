@@ -187,7 +187,7 @@ const MockExamPage = () => {
               <span className="badge badge-accent mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
                 ⏱️ 108 課綱全真段考・計時模擬測驗
               </span>
-              <h1 className="h1 mb-2" style={{ fontSize: 'calc(2rem * var(--font-scale))' }}>
+              <h1 className="h1 mb-2" style={{ fontSize: '2rem' }}>
                 計時模擬測驗中心 (Mock Exam)
               </h1>
               <p className="text-secondary max-w-xl mx-auto text-sm" style={{ lineHeight: 1.8 }}>
@@ -261,7 +261,7 @@ const MockExamPage = () => {
             <span className="badge badge-success mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
               🎉 模擬考完成！學習經驗值 +100 XP
             </span>
-            <h2 className="h1" style={{ margin: '8px 0', fontSize: 'calc(2.2rem * var(--font-scale))' }}>
+            <h2 className="h1" style={{ margin: '8px 0', fontSize: '2.2rem' }}>
               總成績：{Math.round((correctCount / examQuestions.length) * 100)} 分
             </h2>
             <p className="text-secondary text-sm">
@@ -403,7 +403,7 @@ const MockExamPage = () => {
                 </div>
               )}
 
-              <h2 className="h3" style={{ fontSize: 'calc(1.25rem * var(--font-scale))', lineHeight: 1.6 }}>
+              <h2 className="h3" style={{ fontSize: '1.25rem', lineHeight: 1.6 }}>
                 {currentIdx + 1}. {examQuestions[currentIdx].question}
               </h2>
 
@@ -426,7 +426,7 @@ const MockExamPage = () => {
                         backgroundColor: isSelected ? 'var(--accent-soft)' : 'var(--bg-secondary)',
                         color: isSelected ? 'var(--accent-text)' : 'var(--text-primary)',
                         fontWeight: isSelected ? 700 : 400,
-                        fontSize: 'calc(0.98rem * var(--font-scale))'
+                        fontSize: '0.98rem'
                       }}
                       onClick={() => handleSelectAnswer(optIdx)}
                     >

@@ -139,7 +139,7 @@ const GachaLootModal = ({ isOpen, onClose }) => {
             🎁 幸運神獸盲盒 (Mystery Gacha)
           </span>
         </div>
-        <h2 className="h2" style={{ margin: '4px 0', fontSize: 'calc(1.4rem * var(--font-scale))' }}>
+        <h2 className="h2" style={{ margin: '4px 0', fontSize: '1.4rem' }}>
           星光神獸轉蛋機
         </h2>
         <p className="text-xs text-secondary mb-4">

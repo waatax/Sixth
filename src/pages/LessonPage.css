@@ -5,14 +5,14 @@
 }
 
 .lesson-page-wrapper .markdown-body {
-  font-size: calc(1.05rem * var(--font-scale));
+  font-size: 1.05rem;
   line-height: 1.85;
   color: var(--text-primary);
   word-break: break-word;
 }
 
 .lesson-page-wrapper .markdown-body h1 {
-  font-size: calc(1.85rem * var(--font-scale));
+  font-size: 1.85rem;
   font-weight: 800;
   margin-top: 1.25rem;
   margin-bottom: 1.5rem;
@@ -24,7 +24,7 @@
 }
 
 .lesson-page-wrapper .markdown-body h2 {
-  font-size: calc(1.4rem * var(--font-scale));
+  font-size: 1.4rem;
   font-weight: 700;
   margin-top: 2.25rem;
   margin-bottom: 1rem;
@@ -41,7 +41,7 @@
 }
 
 .lesson-page-wrapper .markdown-body h3 {
-  font-size: calc(1.18rem * var(--font-scale));
+  font-size: 1.18rem;
   font-weight: 600;
   margin-top: 1.75rem;
   margin-bottom: 0.75rem;
@@ -52,7 +52,7 @@
 }
 
 .lesson-page-wrapper .markdown-body h4 {
-  font-size: calc(1.05rem * var(--font-scale));
+  font-size: 1.05rem;
   font-weight: 600;
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
@@ -170,7 +170,7 @@
   margin: 0;
   overflow-x: auto;
   font-family: var(--font-mono);
-  font-size: calc(0.92rem * var(--font-scale));
+  font-size: 0.92rem;
   line-height: 1.65;
   letter-spacing: 0.02em;
 }
@@ -352,7 +352,7 @@
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: calc(0.94rem * var(--font-scale));
+  font-size: 0.94rem;
 }
 
 .lesson-page-wrapper .markdown-body th {
@@ -414,15 +414,15 @@
 /* Responsive adjustments for Lesson Page */
 @media (max-width: 768px) {
   .lesson-page-wrapper .markdown-body {
-    font-size: calc(1rem * var(--font-scale));
+    font-size: 1rem;
   }
 
   .lesson-page-wrapper .markdown-body h1 {
-    font-size: calc(1.45rem * var(--font-scale));
+    font-size: 1.45rem;
   }
 
   .lesson-page-wrapper .markdown-body h2 {
-    font-size: calc(1.2rem * var(--font-scale));
+    font-size: 1.2rem;
   }
 
   .lesson-page-wrapper .markdown-body th,
@@ -528,7 +528,7 @@
 }
 
 .lesson-page-wrapper.focus-mode-active .markdown-body {
-  font-size: calc(1.15rem * var(--font-scale));
+  font-size: 1.15rem;
   line-height: 2;
 }
 
@@ -1267,9 +1267,20 @@
   }
 }
 
-/* 標準單欄閱讀模式 */
+/* 標準單欄閱讀模式 (最佳舒適閱覽寬度與字距) */
 .lesson-stage-grid.is-standard {
   display: block;
+  width: 100%;
+}
+
+.lesson-stage-grid.is-standard .lesson-stage-center {
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.lesson-stage-grid.is-widescreen .lesson-stage-center {
+  max-width: 100%;
   width: 100%;
 }
 
@@ -1312,7 +1323,7 @@
 }
 
 .lesson-page-wrapper.is-browser-fullscreen .markdown-body {
-  font-size: calc(1.15rem * var(--font-scale));
+  font-size: 1.15rem;
   line-height: 1.9;
 }
 
@@ -1328,7 +1339,7 @@
     max-width: 1720px;
   }
   .lesson-page-wrapper.widescreen-active .markdown-body {
-    font-size: calc(1.12rem * var(--font-scale));
+    font-size: 1.12rem;
     line-height: 1.95;
   }
 }

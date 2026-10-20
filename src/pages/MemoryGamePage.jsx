@@ -172,7 +172,7 @@ const MemoryGamePage = () => {
         <span className="badge badge-accent mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
           🃏 記憶連擊翻牌對決 (Memory Flip Arena)
         </span>
-        <h1 className="h1 mb-2" style={{ fontSize: 'calc(1.8rem * var(--font-scale))' }}>
+        <h1 className="h1 mb-2" style={{ fontSize: '1.8rem' }}>
           記憶翻牌配對樂
         </h1>
         <p className="text-secondary text-sm" style={{ lineHeight: 1.6 }}>
@@ -248,7 +248,7 @@ const MemoryGamePage = () => {
                 transform: isFlipped ? 'rotateY(0deg)' : 'rotateY(0deg)',
                 boxShadow: isFlipped ? 'var(--shadow-md)' : 'var(--shadow-sm)',
                 fontWeight: 700,
-                fontSize: 'calc(0.88rem * var(--font-scale))',
+                fontSize: '0.88rem',
                 color: isMatched
                   ? 'var(--accent-success-text)'
                   : isFlipped

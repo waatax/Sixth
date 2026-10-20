@@ -260,7 +260,7 @@ const MistakesPage = () => {
               <Sparkles size={14} />
               <span>成長型思維・錯題粉碎筆記</span>
             </div>
-            <h1 className="h1 mb-2" style={{ fontSize: 'calc(1.75rem * var(--font-scale))' }}>
+            <h1 className="h1 mb-2" style={{ fontSize: '1.75rem' }}>
               錯題筆記 (Mistakes Notebook)
             </h1>
             <p className="text-secondary text-sm max-w-lg mx-auto" style={{ lineHeight: 1.7 }}>

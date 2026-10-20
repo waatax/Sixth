@@ -583,7 +583,7 @@ const LectureNotesDownloadHub = () => {
               ✅ 57 份實體 A4 排版 PDF 自由下載列印
             </span>
           </div>
-          <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.45rem * var(--font-scale))', letterSpacing: '-0.02em' }}>
+          <h2 className="h2" style={{ margin: 0, fontSize: '1.45rem', letterSpacing: '-0.02em' }}>
             📑 各科目章節講義與考前手冊快速下載中心
           </h2>
           <p className="text-secondary text-xs sm:text-sm mt-1 mb-0" style={{ lineHeight: 1.6 }}>

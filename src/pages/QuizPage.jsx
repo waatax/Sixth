@@ -345,7 +345,7 @@ const QuizPage = () => {
           <span className="badge badge-success mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
             🎉 測驗完成！評分：{stars} 顆星！
           </span>
-          <h2 className="h1" style={{ margin: '8px 0', fontSize: 'calc(2.2rem * var(--font-scale))' }}>
+          <h2 className="h1" style={{ margin: '8px 0', fontSize: '2.2rem' }}>
             觀念檢核得分：{percentage} 分
           </h2>
           <p className="text-secondary text-sm" style={{ lineHeight: 1.7 }}>
@@ -666,7 +666,7 @@ const QuizPage = () => {
 
         {/* Question Title */}
         <div className="flex justify-between items-start gap-3">
-          <h2 className="h3" style={{ fontSize: 'calc(1.3rem * var(--font-scale))', lineHeight: 1.55, flex: 1 }}>
+          <h2 className="h3" style={{ fontSize: '1.3rem', lineHeight: 1.55, flex: 1 }}>
             {currentQ + 1}. {question.question}
           </h2>
           {unitId?.startsWith('eng-') && (
@@ -800,7 +800,7 @@ const QuizPage = () => {
                   textAlign: 'left',
                   padding: '16px 20px',
                   borderRadius: 'var(--radius-md)',
-                  fontSize: 'calc(0.98rem * var(--font-scale))',
+                  fontSize: '0.98rem',
                   backgroundColor: bgColor,
                   borderColor: borderColor,
                   color: textColor,

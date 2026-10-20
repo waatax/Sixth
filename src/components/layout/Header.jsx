@@ -158,7 +158,7 @@ const Header = () => {
                 <span
                   style={{
                     margin: 0,
-                    fontSize: 'calc(1.15rem * var(--font-scale))',
+                    fontSize: '1.15rem',
                     fontWeight: 900,
                     background: 'linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-purple) 100%)',
                     WebkitBackgroundClip: 'text',
@@ -203,7 +203,7 @@ const Header = () => {
                     padding: '6px 10px',
                     borderRadius: 'var(--radius-md)',
                     fontWeight: isActive ? 800 : 600,
-                    fontSize: 'calc(0.85rem * var(--font-scale))',
+                    fontSize: '0.85rem',
                     color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
                     backgroundColor: isActive ? 'var(--accent-soft)' : 'transparent',
                     transition: 'all var(--transition-fast)',
@@ -243,7 +243,7 @@ const Header = () => {
                   padding: '6px 10px',
                   borderRadius: 'var(--radius-md)',
                   fontWeight: isPrepToolActive ? 800 : 600,
-                  fontSize: 'calc(0.85rem * var(--font-scale))',
+                  fontSize: '0.85rem',
                   color: isPrepToolActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
                   backgroundColor: isPrepToolActive ? 'var(--accent-soft)' : 'transparent',
                   transition: 'all var(--transition-fast)',
@@ -329,7 +329,7 @@ const Header = () => {
               style={{
                 backgroundColor: 'var(--bg-tertiary)',
                 border: '1px solid var(--border-light)',
-                fontSize: 'calc(0.82rem * var(--font-scale))',
+                fontSize: '0.82rem',
                 fontWeight: 700,
                 color: 'var(--text-secondary)',
                 boxShadow: 'var(--shadow-sm)'

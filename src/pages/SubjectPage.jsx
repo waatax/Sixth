@@ -133,7 +133,7 @@ const SubjectPage = () => {
 
             <div>
               <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
-                <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.8rem * var(--font-scale))' }}>
+                <h1 className="h1" style={{ margin: 0, fontSize: '1.8rem' }}>
                   {subject.name}
                 </h1>
                 <span className="badge" style={{ backgroundColor: `${subject.color}20`, color: subject.color, fontWeight: 800, fontSize: '0.78rem' }}>
@@ -143,7 +143,7 @@ const SubjectPage = () => {
                   ✨ {subject.badge}
                 </span>
               </div>
-              <p className="text-secondary" style={{ fontSize: 'calc(0.98rem * var(--font-scale))', lineHeight: 1.65, maxWidth: '720px', margin: 0 }}>
+              <p className="text-secondary" style={{ fontSize: '0.98rem', lineHeight: 1.65, maxWidth: '720px', margin: 0 }}>
                 {subject.desc}
               </p>
             </div>

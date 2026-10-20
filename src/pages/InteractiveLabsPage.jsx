@@ -168,7 +168,7 @@ const InteractiveLabsPage = () => {
               ✨ 視覺化探究・動手操作秒懂原理
             </span>
           </div>
-          <h1 className="h1" style={{ margin: 0, fontSize: 'calc(1.75rem * var(--font-scale))' }}>
+          <h1 className="h1" style={{ margin: 0, fontSize: '1.75rem' }}>
             互動探究實驗室 (Interactive Labs)
           </h1>
           <p className="text-secondary text-xs mt-1.5" style={{ lineHeight: 1.6 }}>
@@ -237,7 +237,7 @@ const InteractiveLabsPage = () => {
           <div>
             <div className="flex items-center gap-2">
               <span className="text-2xl">{activeLab.emoji}</span>
-              <h2 className="h2" style={{ margin: 0, fontSize: 'calc(1.35rem * var(--font-scale))' }}>
+              <h2 className="h2" style={{ margin: 0, fontSize: '1.35rem' }}>
                 {activeLab.title}
               </h2>
             </div>

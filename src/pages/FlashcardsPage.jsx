@@ -296,7 +296,7 @@ const FlashcardsPage = () => {
         <span className="badge badge-warning mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
           ⚡ 考前 3 分鐘・高頻公式與關鍵觀念速記閃卡
         </span>
-        <h1 className="h1 mb-2" style={{ fontSize: 'calc(1.8rem * var(--font-scale))' }}>
+        <h1 className="h1 mb-2" style={{ fontSize: '1.8rem' }}>
           速記閃卡 (Flashcards)
         </h1>
         <p className="text-secondary text-sm" style={{ lineHeight: 1.6 }}>

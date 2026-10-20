@@ -554,7 +554,7 @@ const GeptPage = () => {
                             backgroundColor: isSelected ? 'var(--accent-soft)' : 'var(--bg-secondary)',
                             fontWeight: isSelected ? 700 : 500,
                             color: isSelected ? 'var(--accent-text)' : 'var(--text-primary)',
-                            fontSize: 'calc(0.96rem * var(--font-scale))'
+                            fontSize: '0.96rem'
                           }}
                           onClick={() => handleSelectQuizAnswer(optIdx)}
                         >

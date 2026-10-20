@@ -141,10 +141,10 @@ const ResourcesPage = () => {
             🌐 108 課綱小學全科數位教育資源旗艦智庫
           </span>
         </div>
-        <h1 className="h1 mb-3" style={{ fontSize: 'calc(2rem * var(--font-scale))' }}>
+        <h1 className="h1 mb-3" style={{ fontSize: '2rem' }}>
           網路國小學習資源與知識點指南
         </h1>
-        <p className="text-secondary max-w-2xl mx-auto" style={{ lineHeight: 1.8, fontSize: 'calc(0.98rem * var(--font-scale))' }}>
+        <p className="text-secondary max-w-2xl mx-auto" style={{ lineHeight: 1.8, fontSize: '0.98rem' }}>
           深度調研收錄 <strong>中央官方旗艦、直轄市精選園地、三大原廠書商、數學自然探究、雙語閱讀、資訊運算思維、遊戲化測驗及國中先修會考</strong> 權威有效資源，精確錨定 108 課綱微知識點與名師避坑指引！
         </p>
 
@@ -259,7 +259,7 @@ const ResourcesPage = () => {
                 padding: '12px 42px 12px 42px',
                 borderRadius: 'var(--radius-lg)',
                 border: '1px solid var(--border-strong)',
-                fontSize: 'calc(0.95rem * var(--font-scale))',
+                fontSize: '0.95rem',
                 backgroundColor: 'var(--bg-primary)',
                 color: 'var(--text-primary)',
                 outline: 'none',
@@ -346,7 +346,7 @@ const ResourcesPage = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="h3" style={{ fontSize: 'calc(1.18rem * var(--font-scale))', marginTop: '6px', color: 'var(--text-primary)' }}>
+                  <h3 className="h3" style={{ fontSize: '1.18rem', marginTop: '6px', color: 'var(--text-primary)' }}>
                     {res.title}
                   </h3>
 
@@ -503,7 +503,7 @@ const ResourcesPage = () => {
               </span>
             </div>
 
-            <h2 className="h2 mb-2" style={{ color: 'var(--text-primary)', fontSize: 'calc(1.35rem * var(--font-scale))' }}>
+            <h2 className="h2 mb-2" style={{ color: 'var(--text-primary)', fontSize: '1.35rem' }}>
               {activeModalResource.title}
             </h2>
 
@@ -627,7 +627,7 @@ const ResourcesPage = () => {
         <div className="flex items-start gap-4">
           <Award size={32} style={{ color: 'var(--apple-purple)', flexShrink: 0, marginTop: '2px' }} />
           <div>
-            <h3 className="h3 mb-2" style={{ fontSize: 'calc(1.18rem * var(--font-scale))' }}>
+            <h3 className="h3 mb-2" style={{ fontSize: '1.18rem' }}>
               🗺️ 108 課綱自律學習三原則 (Self-Regulated Learning SRL)
             </h3>
             <div className="grid md:grid-cols-3 gap-4 mt-3 text-xs text-secondary" style={{ lineHeight: 1.7 }}>

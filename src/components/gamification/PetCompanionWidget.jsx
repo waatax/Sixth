@@ -110,15 +110,15 @@ const PetCompanionWidget = () => {
 
           <button
             onClick={handlePetClick}
-            className="flex items-center justify-center cursor-pointer transition-transform hover:scale-110 active:scale-90"
+            className="pet-avatar-btn flex items-center justify-center cursor-pointer transition-transform hover:scale-110 active:scale-90"
             style={{
-              width: '58px',
-              height: '58px',
+              width: '56px',
+              height: '56px',
               borderRadius: '20px',
               background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%)',
               border: '2px solid var(--accent-primary)',
               boxShadow: '0 8px 20px rgba(0,0,0,0.18)',
-              fontSize: '2rem',
+              fontSize: '1.9rem',
               backdropFilter: 'blur(8px)',
               backgroundColor: 'var(--bg-secondary)'
             }}

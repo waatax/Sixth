@@ -246,7 +246,7 @@ const BossBattlePage = () => {
             <span className="badge badge-warning mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
               ⚔️ 知識魔王城堡挑戰賽 (Boss Castle Battle)
             </span>
-            <h1 className="h1 mb-2" style={{ fontSize: 'calc(2.1rem * var(--font-scale))' }}>
+            <h1 className="h1 mb-2" style={{ fontSize: '2.1rem' }}>
               知識魔王城堡 (Boss Arena)
             </h1>
             <p className="text-secondary text-sm max-w-lg mx-auto" style={{ lineHeight: 1.7 }}>
@@ -364,7 +364,7 @@ const BossBattlePage = () => {
             <span className="badge badge-success mb-2 font-bold">
               🎉 VICTORY！魔王已被徹底淨化！
             </span>
-            <h2 className="h1 my-2" style={{ fontSize: 'calc(2.2rem * var(--font-scale))' }}>
+            <h2 className="h1 my-2" style={{ fontSize: '2.2rem' }}>
               成功征服 {selectedBoss.name}！
             </h2>
             <p className="text-secondary text-sm">
@@ -558,7 +558,7 @@ const BossBattlePage = () => {
               </div>
 
               {/* Question Text */}
-              <h3 className="h3" style={{ fontSize: 'calc(1.15rem * var(--font-scale))', lineHeight: 1.5, margin: 0 }}>
+              <h3 className="h3" style={{ fontSize: '1.15rem', lineHeight: 1.5, margin: 0 }}>
                 {currentQ.question}
               </h3>
 
@@ -574,7 +574,7 @@ const BossBattlePage = () => {
                       className="btn-outline text-left p-3.5 flex items-center justify-between transition-all"
                       style={{
                         borderRadius: 'var(--radius-md)',
-                        fontSize: 'calc(0.92rem * var(--font-scale))',
+                        fontSize: '0.92rem',
                         opacity: isDisabled ? 0.3 : 1,
                         textDecoration: isDisabled ? 'line-through' : 'none',
                         cursor: isDisabled ? 'not-allowed' : 'pointer'

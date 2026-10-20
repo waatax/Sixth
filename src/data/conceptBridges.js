@@ -738,7 +738,7 @@ export const conceptBridges = {
   }
 };
 
-export const getConceptBridge = (unitId, subjectId) => {
+export const getConceptBridge = (unitId, _subjectId) => {
   if (conceptBridges[unitId]) {
     return conceptBridges[unitId];
   }
