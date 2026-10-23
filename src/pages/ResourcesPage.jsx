@@ -179,6 +179,21 @@ const ResourcesPage = () => {
             <span>🎲 隨機探索一個優質資源</span>
           </button>
           <button
+            className="flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-full border shadow-sm transition-all"
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('open_knowledge_hub', { detail: { subject: 'all' } }));
+            }}
+            style={{
+              backgroundColor: '#3b82f6',
+              color: '#ffffff',
+              borderColor: '#2563eb'
+            }}
+            title="開啟 108 課綱六年級全科 192 個微考點全景視覺圖鑑庫"
+          >
+            <Lightbulb size={16} className="text-amber-300 animate-pulse" />
+            <span>💡 視覺知識圖鑑庫 (192微考點)</span>
+          </button>
+          <button
             className={`btn-outline flex items-center gap-2 text-sm ${showOnlyFavorites ? 'active' : ''}`}
             onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
             style={{ 

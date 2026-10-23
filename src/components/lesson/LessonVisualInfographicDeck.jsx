@@ -14,14 +14,20 @@ import {
   Compass,
   Layers,
   CheckCircle2,
-  GraduationCap,
   Download,
-  Network
+  Network,
+  Maximize2,
+  X
 } from 'lucide-react';
 import { speechEngine } from '../../utils/speechHelper';
 import { playSound } from '../../utils/soundEffects';
 import { getKnowledgePointsByUnit } from '../../data/knowledgePoints';
-import { getKnowledgePointInfographic } from '../../data/knowledgeInfographics';
+import { 
+  getKnowledgePointInfographic, 
+  getUnitDiagramInfographic, 
+  getDynamicTailoredInfographic 
+} from '../../data/knowledgeInfographics';
+import { unitDiagramCatalog } from '../../data/examNotes/unitDiagrams';
 
 /**
  * 📈 單元視覺化知識圖表與多維度比較中樞 (LessonVisualInfographicDeck)
@@ -45,6 +51,8 @@ const LessonVisualInfographicDeck = ({
   const [selectedKpIdx, setSelectedKpIdx] = useState(0);
   const [highlightedRow, setHighlightedRow] = useState(null);
   const [copiedKey, setCopiedKey] = useState(null);
+  const [deckDiagramMode, setDeckDiagramMode] = useState('auto'); // 'auto' | 'unit' | 'tailored'
+  const [isFullscreenSvg, setIsFullscreenSvg] = useState(false);
 
   // 取得本單元之專屬微知識點清單
   const unitKnowledgePoints = useMemo(() => {
@@ -218,6 +226,19 @@ const LessonVisualInfographicDeck = ({
               </button>
             );
           })}
+          <button
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('open_knowledge_hub', {
+                detail: { unitId, subject: bridgeData?.subjectId || 'all' }
+              }));
+              playSound('pop');
+            }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900"
+            title="開啟 108 課綱全科微知識點全景圖鑑庫"
+          >
+            <Sparkles size={13} className="text-amber-500 animate-pulse" />
+            <span className="hidden sm:inline">全域知識圖鑑</span>
+          </button>
         </div>
       </div>
 
@@ -632,21 +653,77 @@ const LessonVisualInfographicDeck = ({
                 juniorHighBridge: '國中七年級進階銜接。'
               };
 
-              const currentInfographic = getKnowledgePointInfographic(currentKp);
+              const hasUnitDiagram = Boolean(unitDiagramCatalog[unitId]?.svg);
+              let currentInfographic = getKnowledgePointInfographic(currentKp);
+              if (deckDiagramMode === 'unit' && hasUnitDiagram) {
+                const uFig = getUnitDiagramInfographic(unitId, currentKp.title);
+                if (uFig) currentInfographic = uFig;
+              } else if (deckDiagramMode === 'tailored') {
+                const cFig = getDynamicTailoredInfographic(currentKp);
+                if (cFig) currentInfographic = cFig;
+              }
+
+              const handleDownloadCurrentSvg = () => {
+                if (!currentInfographic?.svg) return;
+                const blob = new Blob([currentInfographic.svg], { type: 'image/svg+xml;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `${currentKp.title}_infographic.svg`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+                playSound('chest_open');
+              };
 
               return (
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
                   {/* Left: SVG Infographic Display (7 cols) */}
                   <div className="lg:col-span-7 flex flex-col gap-2.5">
                     <div className="p-3 rounded-2xl border border-slate-200 dark:border-slate-700/80 bg-white dark:bg-slate-900 shadow-sm">
-                      <div className="flex items-center justify-between text-xs text-slate-500 mb-2 px-1">
+                      <div className="flex items-center justify-between text-xs text-slate-500 mb-2 px-1 flex-wrap gap-2">
                         <span className="font-bold flex items-center gap-1.5 text-slate-800 dark:text-slate-100">
                           <Sparkles size={14} className="text-amber-500" />
                           {currentInfographic.title}
                         </span>
-                        <span className="text-[11px] text-slate-400">
-                          {currentInfographic.subtitle}
-                        </span>
+
+                        <div className="flex items-center gap-1.5">
+                          {hasUnitDiagram && (
+                            <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 p-0.5 rounded-lg border border-slate-200 dark:border-slate-700 text-[11px]">
+                              <button
+                                onClick={() => { setDeckDiagramMode('auto'); playSound('pop'); }}
+                                className={`px-2 py-0.5 rounded font-bold transition-colors ${
+                                  deckDiagramMode !== 'unit' ? 'bg-blue-600 text-white' : 'text-slate-500'
+                                }`}
+                              >
+                                微概念
+                              </button>
+                              <button
+                                onClick={() => { setDeckDiagramMode('unit'); playSound('pop'); }}
+                                className={`px-2 py-0.5 rounded font-bold transition-colors ${
+                                  deckDiagramMode === 'unit' ? 'bg-indigo-600 text-white' : 'text-slate-500'
+                                }`}
+                              >
+                                單元全景
+                              </button>
+                            </div>
+                          )}
+                          <button
+                            onClick={() => { setIsFullscreenSvg(true); playSound('pop'); }}
+                            className="p-1 rounded-md border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300"
+                            title="全螢幕放大投影"
+                          >
+                            <Maximize2 size={13} />
+                          </button>
+                          <button
+                            onClick={handleDownloadCurrentSvg}
+                            className="p-1 rounded-md border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300"
+                            title="下載向量 SVG"
+                          >
+                            <Download size={13} />
+                          </button>
+                        </div>
                       </div>
 
                       {/* SVG Canvas */}
@@ -805,6 +882,65 @@ const LessonVisualInfographicDeck = ({
           </div>
         )}
       </div>
+
+      {/* 🖼️ SVG 圖卡全螢幕燈箱投影模態框 */}
+      {isFullscreenSvg && (
+        <div 
+          className="fixed inset-0 z-[120] bg-black/85 backdrop-blur-md flex items-center justify-center p-4 animate-fade-in"
+          onClick={() => setIsFullscreenSvg(false)}
+        >
+          <div 
+            className="max-w-4xl w-full bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col gap-4 max-h-[92vh] animate-in fade-in zoom-in-95 duration-200"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="badge badge-accent text-xs font-bold">{subjectName || '課堂知識'}</span>
+                  <span className="text-xs text-slate-400">108 課綱高清純向量 SVG</span>
+                </div>
+                <h3 className="text-lg font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
+                  <Sparkles size={16} className="text-amber-500" />
+                  {unitKnowledgePoints[selectedKpIdx]?.title || unitTitle}
+                </h3>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setIsFullscreenSvg(false)}
+                  className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+            </div>
+            
+            {/* 全螢幕大圖容器 */}
+            <div 
+              className="w-full flex-1 flex items-center justify-center p-6 bg-slate-50 dark:bg-slate-950/60 rounded-xl overflow-auto shadow-inner"
+              style={{ minHeight: '380px' }}
+              dangerouslySetInnerHTML={{ 
+                __html: (() => {
+                  const kp = unitKnowledgePoints[selectedKpIdx] || unitKnowledgePoints[0];
+                  if (deckDiagramMode === 'unit' && unitDiagramCatalog[unitId]?.svg) {
+                    return unitDiagramCatalog[unitId].svg;
+                  }
+                  return getKnowledgePointInfographic(kp).svg;
+                })()
+              }}
+            />
+
+            <div className="flex items-center justify-between text-xs text-slate-500 pt-1">
+              <span>💡 原生向量高畫質渲染 ｜ 支援白板對照與黑板教學</span>
+              <button
+                onClick={() => setIsFullscreenSvg(false)}
+                className="text-blue-500 hover:underline font-bold"
+              >
+                返回課堂 ✕
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

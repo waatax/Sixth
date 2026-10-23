@@ -169,6 +169,26 @@ const HomePage = () => {
               </button>
 
               <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('open_knowledge_hub', { detail: { subject: 'all' } }));
+                  triggerHaptic('medium');
+                  playSound('pop');
+                }}
+                className="ios-pressable flex items-center gap-1.5 text-xs font-black py-2 px-3.5"
+                style={{
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: '#f59e0b',
+                  color: '#ffffff',
+                  boxShadow: '0 3px 10px rgba(245, 158, 11, 0.35)',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                <Lightbulb size={14} className="animate-pulse" />
+                <span>💡 視覺知識圖鑑 (192微考點)</span>
+              </button>
+
+              <button
                 onClick={() => scrollToSection('lecture-notes-hub')}
                 className="ios-pressable flex items-center gap-1.5 text-xs font-black py-2 px-3.5"
                 style={{
