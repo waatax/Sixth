@@ -16,7 +16,8 @@ import {
   Globe,
   Search,
   BookmarkCheck,
-  Award
+  Award,
+  Lightbulb
 } from 'lucide-react';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
@@ -33,6 +34,7 @@ const CupertinoTabBar = () => {
   ];
 
   const moreItems = [
+    { path: '#knowledge-hub', label: '💡 視覺知識庫圖鑑', icon: Lightbulb, color: '#f59e0b', desc: '192個微知識點純向量圖解', isHub: true },
     { path: '/exam-notes', label: '章節講義 (PDF)', icon: FileText, color: '#6366f1', desc: '八科段考重點與A4講義' },
     { path: '/flashcards', label: '速記翻翻卡', icon: BookmarkCheck, color: '#f59e0b', desc: '考前重點高效速記' },
     { path: '/mock-exam', label: '全真模擬考', icon: Timer, color: '#ef4444', desc: '倒數計時真實段考' },
@@ -184,6 +186,60 @@ const CupertinoTabBar = () => {
               {moreItems.map((item) => {
                 const Icon = item.icon;
                 const isSelected = location.pathname === item.path;
+
+                if (item.isHub) {
+                  return (
+                    <button
+                      key={item.label}
+                      onClick={() => {
+                        setIsMoreSheetOpen(false);
+                        handleTabClick();
+                        window.dispatchEvent(new CustomEvent('open_knowledge_hub'));
+                      }}
+                      className="ios-pressable p-3 rounded-2xl flex items-start gap-2.5 text-left w-full cursor-pointer"
+                      style={{
+                        backgroundColor: 'var(--bg-tertiary)',
+                        border: '1px solid var(--border-light)'
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: '36px',
+                          height: '36px',
+                          borderRadius: '11px',
+                          backgroundColor: `${item.color}18`,
+                          border: `1.5px solid ${item.color}35`,
+                          color: item.color,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          flexShrink: 0,
+                          boxShadow: `0 2px 6px ${item.color}15`
+                        }}
+                      >
+                        <Icon size={18} strokeWidth={2.2} />
+                      </div>
+                      <div style={{ overflow: 'hidden' }}>
+                        <div 
+                          style={{ 
+                            fontSize: '0.84rem', 
+                            fontWeight: 700, 
+                            color: 'var(--text-primary)',
+                            whiteSpace: 'nowrap',
+                            textOverflow: 'ellipsis',
+                            overflow: 'hidden'
+                          }}
+                        >
+                          {item.label}
+                        </div>
+                        <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', marginTop: '2px' }}>
+                          {item.desc}
+                        </div>
+                      </div>
+                    </button>
+                  );
+                }
+
                 return (
                   <Link
                     key={item.path}

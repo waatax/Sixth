@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import {
   BarChart3,
   GitBranch,
   Table2,
+  Lightbulb,
   Volume2,
   Copy,
   Check,
@@ -12,10 +13,15 @@ import {
   ArrowRight,
   Compass,
   Layers,
-  CheckCircle2
+  CheckCircle2,
+  GraduationCap,
+  Download,
+  Network
 } from 'lucide-react';
 import { speechEngine } from '../../utils/speechHelper';
 import { playSound } from '../../utils/soundEffects';
+import { getKnowledgePointsByUnit } from '../../data/knowledgePoints';
+import { getKnowledgePointInfographic } from '../../data/knowledgeInfographics';
 
 /**
  * 📈 單元視覺化知識圖表與多維度比較中樞 (LessonVisualInfographicDeck)
@@ -23,8 +29,10 @@ import { playSound } from '../../utils/soundEffects';
  * 1. 📊 段考命題配重與核心概念視覺化長條圖表 (Visual Competency & Exam Weight Chart)
  * 2. 🔀 互動式四階破題思維決策流程圖 (Interactive 4-Stage Decision Flowchart)
  * 3. 📋 結構化審題訊號與跨學段對照總表 (Multi-Dimensional Signal & Bridge Matrix)
+ * 4. 💡 核心微知識點資訊圖卡與明確說明 (Explicit Knowledge Points & Infographics)
  */
 const LessonVisualInfographicDeck = ({
+  unitId = '',
   unitTitle = '',
   subjectName = '',
   keyConcepts = [],
@@ -32,10 +40,17 @@ const LessonVisualInfographicDeck = ({
   masteredConcepts = [],
   onToggleConcept = null
 }) => {
-  const [activeTab, setActiveTab] = useState('chart'); // 'chart' | 'flowchart' | 'matrix'
+  const [activeTab, setActiveTab] = useState('chart'); // 'chart' | 'flowchart' | 'matrix' | 'infographics'
   const [selectedStepIdx, setSelectedStepIdx] = useState(0);
+  const [selectedKpIdx, setSelectedKpIdx] = useState(0);
   const [highlightedRow, setHighlightedRow] = useState(null);
   const [copiedKey, setCopiedKey] = useState(null);
+
+  // 取得本單元之專屬微知識點清單
+  const unitKnowledgePoints = useMemo(() => {
+    if (!unitId) return [];
+    return getKnowledgePointsByUnit(unitId);
+  }, [unitId]);
 
   if (!bridgeData && (!keyConcepts || keyConcepts.length === 0)) return null;
 
@@ -178,7 +193,8 @@ const LessonVisualInfographicDeck = ({
           {[
             { id: 'chart', label: '考點配重圖表', icon: BarChart3 },
             { id: 'flowchart', label: '破題決策流程圖', icon: GitBranch },
-            { id: 'matrix', label: '多維對照總表', icon: Table2 }
+            { id: 'matrix', label: '多維對照總表', icon: Table2 },
+            { id: 'infographics', label: '微知識點圖卡', icon: Lightbulb }
           ].map(tab => {
             const TabIcon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -569,6 +585,223 @@ const LessonVisualInfographicDeck = ({
                 </tbody>
               </table>
             </div>
+          </div>
+        )}
+
+        {/* TAB 4: Explicit Knowledge Points & Pure Vector Infographics */}
+        {activeTab === 'infographics' && (
+          <div className="space-y-4 animate-fade-in">
+            {/* Knowledge points horizontal selector pills */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+              {(unitKnowledgePoints.length > 0 ? unitKnowledgePoints : [
+                { id: 'default-kp-1', title: '核心觀念定義與原理', category: '基礎觀念' },
+                { id: 'default-kp-2', title: '運算公式與標準推導', category: '算理心法' },
+                { id: 'default-kp-3', title: '避雷防錯與生活實踐', category: '素養實用' }
+              ]).map((kp, idx) => {
+                const isSelected = (selectedKpIdx === idx);
+                return (
+                  <button
+                    key={kp.id || idx}
+                    onClick={() => { setSelectedKpIdx(idx); playSound('pop'); }}
+                    className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border transition-all whitespace-nowrap ${
+                      isSelected
+                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-300 shadow-sm'
+                        : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-secondary hover:border-slate-300'
+                    }`}
+                  >
+                    <span className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center text-[10px]">
+                      0{idx + 1}
+                    </span>
+                    <span>{kp.title}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {(() => {
+              const currentKp = unitKnowledgePoints[selectedKpIdx] || unitKnowledgePoints[0] || {
+                id: `kp-${unitId}-1`,
+                title: `${unitTitle} 核心觀念`,
+                category: `${subjectName}・核心觀念突破`,
+                definition: '精準掌握 108 課綱定義與運算算理，建立完整心智模型。',
+                formulaOrRule: '循序推導，嚴謹審題，代入驗算。',
+                strategyTip: '【審題觸發】抓住題幹條件關鍵字，套用對應模型。',
+                trapAlert: '【避雷提醒】注意單位換算與題意正負方向。',
+                practicalUtility: '【生活實用】生活數據決策與現象觀察應用。',
+                textbookFocus: '康軒、南一、翰林三大版本綜合精選。',
+                juniorHighBridge: '國中七年級進階銜接。'
+              };
+
+              const currentInfographic = getKnowledgePointInfographic(currentKp);
+
+              return (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+                  {/* Left: SVG Infographic Display (7 cols) */}
+                  <div className="lg:col-span-7 flex flex-col gap-2.5">
+                    <div className="p-3 rounded-2xl border border-slate-200 dark:border-slate-700/80 bg-white dark:bg-slate-900 shadow-sm">
+                      <div className="flex items-center justify-between text-xs text-slate-500 mb-2 px-1">
+                        <span className="font-bold flex items-center gap-1.5 text-slate-800 dark:text-slate-100">
+                          <Sparkles size={14} className="text-amber-500" />
+                          {currentInfographic.title}
+                        </span>
+                        <span className="text-[11px] text-slate-400">
+                          {currentInfographic.subtitle}
+                        </span>
+                      </div>
+
+                      {/* SVG Canvas */}
+                      <div
+                        className="w-full flex items-center justify-center py-2"
+                        dangerouslySetInnerHTML={{ __html: currentInfographic.svg }}
+                      />
+                    </div>
+
+                    <div className="flex items-center justify-between gap-2 px-1">
+                      <span className="text-[11px] text-slate-400">
+                        108 課綱高對比純向量圖解 ｜ 支援自適應縮放
+                      </span>
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          onClick={() => {
+                            speechEngine.speak(`${currentKp.title}。${currentKp.definition}`, { lang: 'zh-TW' });
+                          }}
+                          className="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 flex items-center gap-1 transition-colors"
+                        >
+                          <Volume2 size={13} />
+                          <span>朗讀</span>
+                        </button>
+                        <button
+                          onClick={() => {
+                            handleCopyText(`【${currentKp.title}】${currentKp.definition}\n公式：${currentKp.formulaOrRule}`, `kp-${selectedKpIdx}`);
+                          }}
+                          className="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 flex items-center gap-1 transition-colors"
+                        >
+                          {copiedKey === `kp-${selectedKpIdx}` ? <Check size={13} className="text-emerald-500" /> : <Copy size={13} />}
+                          <span>複製</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right: Explicit Knowledge Point Details (5 cols) */}
+                  <div className="lg:col-span-5 flex flex-col gap-2.5">
+                    {/* Definition */}
+                    <div className="p-3.5 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50">
+                      <div className="text-xs font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5 mb-1">
+                        <Target size={13} />
+                        <span>明確定義與本質原理</span>
+                      </div>
+                      <p className="text-xs text-slate-700 dark:text-slate-200 leading-relaxed font-sans">
+                        {currentKp.definition}
+                      </p>
+                    </div>
+
+                    {/* Formula / Core tool */}
+                    {currentKp.formulaOrRule && (
+                      <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-mono text-xs text-blue-700 dark:text-blue-300">
+                        <strong className="block text-slate-500 text-[10px] uppercase tracking-wider mb-0.5">⚡ 核心心法與公式</strong>
+                        {currentKp.formulaOrRule}
+                      </div>
+                    )}
+
+                    {/* Trap Alert */}
+                    <div className="p-3 rounded-xl bg-red-50/70 dark:bg-red-950/40 border border-red-100 dark:border-red-900/50 text-xs">
+                      <div className="font-bold text-red-700 dark:text-red-300 flex items-center gap-1.5 mb-1">
+                        <ShieldAlert size={13} />
+                        <span>段考避雷警訊</span>
+                      </div>
+                      <p className="text-slate-700 dark:text-slate-200 text-xs leading-relaxed">
+                        {currentKp.trapAlert}
+                      </p>
+                    </div>
+
+                    {/* Real-world Practicality */}
+                    <div className="p-3 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/50 text-xs">
+                      <div className="font-bold text-emerald-700 dark:text-emerald-300 flex items-center gap-1.5 mb-1">
+                        <Compass size={13} />
+                        <span>生活實用性與素養</span>
+                      </div>
+                      <p className="text-slate-700 dark:text-slate-200 text-xs leading-relaxed">
+                        {currentKp.practicalUtility}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Bottom: Related Knowledge Points & Learning Ladder (12 cols) */}
+                  {currentKp.relatedPoints && currentKp.relatedPoints.length > 0 && (
+                    <div className="lg:col-span-12 mt-2 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                      <div className="flex items-center justify-between mb-2 px-1">
+                        <span className="text-xs font-black text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
+                          <Network size={14} className="text-blue-500" />
+                          <span>🔗 關聯知識點拓撲與學習階梯</span>
+                          <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-bold">
+                            {currentKp.relatedPoints.length} 個關聯節點
+                          </span>
+                        </span>
+                        <span className="text-[11px] text-slate-400">
+                          點擊同課節點原地切換 ｜ 跨課或先修喚起全域智庫
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+                        {currentKp.relatedPoints.map((rel, rIdx) => {
+                          const isSibling = rel.unitId === unitId && !rel.isBridge;
+                          return (
+                            <button
+                              key={rel.id || rIdx}
+                              onClick={() => {
+                                if (isSibling) {
+                                  const targetIdx = unitKnowledgePoints.findIndex(p => p.id === rel.id);
+                                  if (targetIdx !== -1) {
+                                    setSelectedKpIdx(targetIdx);
+                                    playSound('click');
+                                  }
+                                } else {
+                                  window.dispatchEvent(new CustomEvent('open_knowledge_hub', {
+                                    detail: {
+                                      subject: rel.subjectId || 'all',
+                                      unitId: rel.unitId || null,
+                                      kpId: rel.isBridge ? null : rel.id
+                                    }
+                                  }));
+                                  playSound('pop');
+                                }
+                              }}
+                              className="text-left p-2.5 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-white dark:bg-slate-800/80 hover:border-blue-400 hover:shadow-sm transition-all group flex flex-col justify-between"
+                            >
+                              <div>
+                                <div className="flex items-center justify-between gap-1 mb-1">
+                                  <span className={`text-[9.5px] font-bold px-1.5 py-0.5 rounded ${
+                                    rel.badgeType === 'step'
+                                      ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300'
+                                      : rel.badgeType === 'cross'
+                                      ? 'bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300'
+                                      : rel.badgeType === 'bridge'
+                                      ? 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300'
+                                      : 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300'
+                                  }`}>
+                                    {rel.relation}
+                                  </span>
+                                  <span className="text-[10px] text-blue-500 opacity-0 group-hover:opacity-100 font-bold flex items-center">
+                                    {isSibling ? '原地切換' : '智庫探索'} ➔
+                                  </span>
+                                </div>
+                                <h6 className="text-xs font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-1">
+                                  {rel.title}
+                                </h6>
+                              </div>
+                              <p className="text-[10px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1 leading-relaxed">
+                                {rel.desc}
+                              </p>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
           </div>
         )}
       </div>

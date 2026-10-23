@@ -24,11 +24,13 @@ import {
   ChevronDown,
   Award,
   FlaskConical,
-  BookmarkCheck
+  BookmarkCheck,
+  Lightbulb
 } from 'lucide-react';
 import GamificationWidget from '../common/GamificationWidget';
 import EyeCareToolbar from '../common/EyeCareToolbar';
 import SubjectIconBadge from '../common/SubjectIconBadge';
+import VisualKnowledgeHubModal from '../common/VisualKnowledgeHubModal';
 import { useTheme } from '../../context/ThemeContext';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
@@ -38,6 +40,22 @@ const Header = () => {
   const { theme, setTheme, fontSize, FONT_SIZES, increaseFontSize, decreaseFontSize } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [examToolsDropdownOpen, setExamToolsDropdownOpen] = useState(false);
+  const [isKnowledgeHubOpen, setIsKnowledgeHubOpen] = useState(false);
+  const [hubTarget, setHubTarget] = useState({ subject: 'all', unitId: null });
+
+  // 全域監聽 open_knowledge_hub 事件
+  useEffect(() => {
+    const handleOpenHub = (e) => {
+      setHubTarget({
+        subject: e?.detail?.subject || 'all',
+        unitId: e?.detail?.unitId || null,
+        kpId: e?.detail?.kpId || null
+      });
+      setIsKnowledgeHubOpen(true);
+    };
+    window.addEventListener('open_knowledge_hub', handleOpenHub);
+    return () => window.removeEventListener('open_knowledge_hub', handleOpenHub);
+  }, []);
 
   // Close mobile drawer & dropdowns when route changes
   useEffect(() => {
@@ -73,6 +91,12 @@ const Header = () => {
 
   // Grouped mobile drawer items
   const drawerGroups = [
+    {
+      title: '💡 視覺圖鑑與微知識點',
+      items: [
+        { path: '#knowledge-hub', label: '視覺知識庫・微知識點圖鑑 (192考點)', icon: Lightbulb, badge: '純向量', color: '#f59e0b', isCustomHub: true },
+      ]
+    },
     {
       title: '🎓 核心學程與段考講義',
       items: [
@@ -232,6 +256,46 @@ const Header = () => {
                 </Link>
               );
             })}
+
+            {/* 💡 視覺知識庫與微知識點圖鑑按鈕 */}
+            <button
+              onClick={() => {
+                playSound('ios_tap');
+                triggerHaptic('light');
+                setIsKnowledgeHubOpen(true);
+              }}
+              className="flex items-center gap-1.5 ios-pressable"
+              style={{
+                padding: '6px 11px',
+                borderRadius: 'var(--radius-md)',
+                fontWeight: 700,
+                fontSize: '0.84rem',
+                color: '#d97706',
+                backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                border: '1px solid rgba(245, 158, 11, 0.3)',
+                transition: 'all var(--transition-fast)',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                flexShrink: 0
+              }}
+              title="108 課綱全科 192 個微知識點與純向量 Infographics 圖鑑"
+            >
+              <Lightbulb size={15} style={{ color: '#f59e0b' }} />
+              <span>知識圖鑑</span>
+              <span 
+                style={{
+                  fontSize: '9px',
+                  padding: '1px 5px',
+                  borderRadius: '4px',
+                  fontWeight: 900,
+                  backgroundColor: '#f59e0b',
+                  color: '#ffffff',
+                  lineHeight: 1.2
+                }}
+              >
+                圖解
+              </span>
+            </button>
 
             {/* 段考利器下拉選單 (Dropdown) */}
             <div className="relative">
@@ -514,6 +578,62 @@ const Header = () => {
                       {group.items.map((item) => {
                         const Icon = item.icon;
                         const isActive = location.pathname === item.path;
+
+                        if (item.isCustomHub) {
+                          return (
+                            <button
+                              key={item.path}
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setIsKnowledgeHubOpen(true);
+                                playSound('ios_tap');
+                              }}
+                              className="w-full text-left flex items-center justify-between py-2 px-2.5 rounded-xl ios-pressable"
+                              style={{
+                                fontWeight: 700,
+                                fontSize: '0.88rem',
+                                color: 'var(--text-primary)',
+                                backgroundColor: 'transparent',
+                                border: 'none',
+                                cursor: 'pointer'
+                              }}
+                            >
+                              <div className="flex items-center gap-2.5">
+                                <div
+                                  style={{
+                                    width: '28px',
+                                    height: '28px',
+                                    borderRadius: '8px',
+                                    backgroundColor: `${item.color}15`,
+                                    color: item.color,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    flexShrink: 0
+                                  }}
+                                >
+                                  <Icon size={15} />
+                                </div>
+                                <span>{item.label}</span>
+                              </div>
+                              {item.badge && (
+                                <span 
+                                  style={{
+                                    fontSize: '9px',
+                                    padding: '1px 5px',
+                                    borderRadius: '4px',
+                                    fontWeight: 900,
+                                    backgroundColor: '#f59e0b',
+                                    color: '#ffffff'
+                                  }}
+                                >
+                                  {item.badge}
+                                </span>
+                              )}
+                            </button>
+                          );
+                        }
+
                         return (
                           <Link
                             key={item.path}
@@ -576,6 +696,15 @@ const Header = () => {
           </div>
         </div>
       )}
+
+      {/* 💡 全域視覺知識庫與微知識點圖鑑模態框 */}
+      <VisualKnowledgeHubModal
+        isOpen={isKnowledgeHubOpen}
+        onClose={() => setIsKnowledgeHubOpen(false)}
+        initialSubject={hubTarget.subject}
+        initialUnitId={hubTarget.unitId}
+        initialKpId={hubTarget.kpId}
+      />
 
       {/* Responsive media query styling rules for navigation */}
       <style>{`

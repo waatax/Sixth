@@ -1,0 +1,1251 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '..');
+
+const specialized = {
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🧮 數學領域 (Math)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-math-u1-1': {
+    title: '質數、合數與 1 的結構劃分',
+    subtitle: '原子積木・最小質數 2 是唯一偶數質數・1 既非質數亦非合數',
+    diagramType: 'concept-map',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="15" y="15" width="290" height="32" rx="6" fill="#3b82f6" />
+      <text x="160" y="36" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">自然數 (大於 0 的整數) 結構劃分</text>
+      <rect x="20" y="60" width="80" height="95" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="60" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#475569">數字 1</text>
+      <text x="60" y="102" text-anchor="middle" font-size="10" fill="#64748b">只有 1 個因數</text>
+      <text x="60" y="122" text-anchor="middle" font-size="10" font-weight="bold" fill="#ef4444">非質數・非合數</text>
+      <text x="60" y="142" text-anchor="middle" font-size="9" fill="#94a3b8">段考常考陷阱</text>
+      <rect x="110" y="60" width="95" height="95" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+      <text x="157" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">質數 (Primes)</text>
+      <text x="157" y="100" text-anchor="middle" font-size="10" fill="#2563eb">剛好 2 個因數</text>
+      <text x="157" y="118" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">2, 3, 5, 7, 11...</text>
+      <rect x="118" y="126" width="79" height="20" rx="4" fill="#dbeafe" />
+      <text x="157" y="140" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e3a8a">2 是唯一偶質數</text>
+      <rect x="215" y="60" width="85" height="95" rx="6" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5" />
+      <text x="257" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">合數 (Composites)</text>
+      <text x="257" y="100" text-anchor="middle" font-size="10" fill="#059669">3 個以上因數</text>
+      <text x="257" y="118" text-anchor="middle" font-size="10" font-weight="bold" fill="#065f46">4, 6, 8, 9, 10...</text>
+      <text x="257" y="140" text-anchor="middle" font-size="9" fill="#059669">4 是最小合數</text>
+      <text x="160" y="170" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">互質核心：兩數最大公因數為 1 (如 8 與 9 互質，但兩數皆非質數)</text>
+    </svg>`
+  },
+
+  'kp-math-u1-2': {
+    title: '短除法求 GCD 與 LCM 結構圖',
+    subtitle: '直列相乘為最大公因數・L型連乘為最小公倍數',
+    diagramType: 'algorithm',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <line x1="80" y1="45" x2="80" y2="135" stroke="#3b82f6" stroke-width="2.5" />
+      <line x1="80" y1="75" x2="220" y2="75" stroke="#3b82f6" stroke-width="2" />
+      <line x1="80" y1="105" x2="220" y2="105" stroke="#3b82f6" stroke-width="2" />
+      <line x1="80" y1="135" x2="220" y2="135" stroke="#3b82f6" stroke-width="2" />
+      <text x="120" y="65" font-size="13" font-weight="bold" fill="#1e293b">24</text>
+      <text x="175" y="65" font-size="13" font-weight="bold" fill="#1e293b">36</text>
+      <text x="55" y="65" font-size="13" font-weight="bold" fill="#ef4444">2</text>
+      <text x="120" y="95" font-size="13" fill="#334155">12</text>
+      <text x="175" y="95" font-size="13" fill="#334155">18</text>
+      <text x="55" y="95" font-size="13" font-weight="bold" fill="#ef4444">2</text>
+      <text x="122" y="125" font-size="13" fill="#334155">6</text>
+      <text x="178" y="125" font-size="13" fill="#334155">9</text>
+      <text x="55" y="125" font-size="13" font-weight="bold" fill="#ef4444">3</text>
+      <text x="122" y="152" font-size="13" font-weight="bold" fill="#10b981">2</text>
+      <text x="178" y="152" font-size="13" font-weight="bold" fill="#10b981">3</text>
+      <path d="M 45 45 L 45 160 L 210 160" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="3,3" />
+      <text x="215" y="152" font-size="10" font-weight="bold" fill="#10b981">互質(停止)</text>
+      <rect x="25" y="12" width="270" height="22" rx="4" fill="#dbeafe" />
+      <text x="160" y="27" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">GCD = 2 × 2 × 3 = 12 ｜ LCM = 12 × 2 × 3 = 72</text>
+    </svg>`
+  },
+
+  'kp-math-u1-3': {
+    title: '兩數乘積恆等式天平平衡圖',
+    subtitle: 'A × B ＝ GCD(A, B) × LCM(A, B) ｜ 僅限兩數適用',
+    diagramType: 'algebra',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">兩數乘積恆等式：天平兩側完全等值</text>
+      <rect x="30" y="45" width="115" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="87" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">左盤：原兩數相乘</text>
+      <text x="87" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">A × B</text>
+      <circle cx="160" cy="72" r="14" fill="#f59e0b" />
+      <text x="160" y="77" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">＝</text>
+      <rect x="175" y="45" width="115" height="55" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5" />
+      <text x="232" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">右盤：公因數乘公倍數</text>
+      <text x="232" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#065f46">GCD × LCM</text>
+      <rect x="25" y="115" width="270" height="50" rx="6" fill="#f1f5f9" />
+      <text x="160" y="133" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#334155">未知數秒解大招：若已知 A, GCD, LCM，則 B ＝ (GCD × LCM) ÷ A</text>
+      <text x="160" y="152" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#ef4444">防雷警訊：此定理三數以上不成立！切勿套用於三個數字！</text>
+    </svg>`
+  },
+
+  'kp-math-u2-1': {
+    title: '分數除法「乘以倒數」幾何分割模型',
+    subtitle: '除以 1/3 等於分成 3 倍的份數・單位量轉換',
+    diagramType: 'visual-model',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">算理：2 ÷ (2/3) ＝ 2 × (3/2) ＝ 3 份</text>
+      <rect x="30" y="40" width="120" height="26" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5" rx="4" />
+      <rect x="30" y="40" width="80" height="26" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5" rx="4" />
+      <text x="70" y="57" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">2/3 單位</text>
+      <text x="130" y="57" text-anchor="middle" font-size="10" fill="#64748b">1/3</text>
+      <path d="M 160 53 L 180 53" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow)" />
+      <rect x="190" y="40" width="100" height="26" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" rx="4" />
+      <text x="240" y="57" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">翻轉分子分母 × 3/2</text>
+      <rect x="25" y="80" width="270" height="85" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="35" y="100" font-size="11" font-weight="bold" fill="#1e40af">💡 倒數的本質：兩數相乘等於 1</text>
+      <text x="35" y="120" font-size="10.5" fill="#334155">例：(2/5) 的倒數是 (5/2) ｜ 帶分數 1又1/2 ＝ 3/2，倒數為 2/3</text>
+      <text x="35" y="138" font-size="10" font-weight="bold" fill="#ef4444">⚠️ 致命地雷：嚴禁帶分數直接顛倒（如 1又1/2 倒數絕非 1又2/1！）</text>
+      <text x="35" y="154" font-size="9.5" fill="#64748b">先化為假分數，再將分子分母對調！</text>
+    </svg>`
+  },
+
+  'kp-math-u2-2': {
+    title: '帶分數乘除法必先化為假分數',
+    subtitle: '運算基石・杜絕「整數乘整數、分數乘分數」嚴重錯誤',
+    diagramType: 'rule-card',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="15" width="280" height="30" rx="6" fill="#ef4444" />
+      <text x="160" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">帶分數乘除法黃金鐵則：一律化假分數</text>
+      <rect x="25" y="55" width="125" height="65" rx="6" fill="#fee2e2" stroke="#f87171" />
+      <text x="87" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">❌ 常見致命錯誤</text>
+      <text x="87" y="95" text-anchor="middle" font-size="10" fill="#b91c1c">2又1/3 × 1又1/2</text>
+      <text x="87" y="112" text-anchor="middle" font-size="9" fill="#ef4444">≠ (2×1)又(1/3×1/2)</text>
+      <rect x="170" y="55" width="125" height="65" rx="6" fill="#ecfdf5" stroke="#34d399" />
+      <text x="232" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#065f46">✓ 標準解題三部曲</text>
+      <text x="232" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#047857">7/3 × 3/2 ＝ 7/2</text>
+      <text x="232" y="112" text-anchor="middle" font-size="10" font-weight="bold" fill="#059669">＝ 3 又 1/2</text>
+      <rect x="20" y="130" width="280" height="38" rx="6" fill="#f1f5f9" />
+      <text x="160" y="146" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155">口訣：先化假、乘倒數、斜角約分、最後化簡！</text>
+      <text x="160" y="160" text-anchor="middle" font-size="9" fill="#64748b">約分在相乘前完成，能大幅降低計算錯誤率！</text>
+    </svg>`
+  },
+
+  'kp-math-u3-1': {
+    title: '小數除法小數點移動與餘數對齊圖',
+    subtitle: '除數移向右邊成整數・商對齊新小數點・餘數對齊原來的小數點',
+    diagramType: 'algorithm',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">小數直式除法雙軌對齊定則</text>
+      <rect x="25" y="38" width="130" height="80" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="90" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">商數 (Quotient)</text>
+      <text x="90" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">小數點對齊</text>
+      <text x="90" y="98" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">【新小數點】</text>
+      <rect x="165" y="38" width="130" height="80" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5" />
+      <text x="230" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">餘數 (Remainder)</text>
+      <text x="230" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626">小數點垂直對齊</text>
+      <text x="230" y="98" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">【原本小數點】</text>
+      <rect x="25" y="125" width="270" height="42" rx="6" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="160" y="142" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155">例：5.8 ÷ 1.2 ＝ 4 餘 1.0 (而非餘 10！)</text>
+      <text x="160" y="157" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">驗算金律：除數 × 商 ＋ 餘數 ＝ 被除數 (1.2 × 4 + 1.0 = 5.8)</text>
+    </svg>`
+  },
+
+  'kp-math-u4-1': {
+    title: '比與比值天平平衡模型',
+    subtitle: '前項與後項同乘同除不變・最簡整數比',
+    diagramType: 'balance',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">比值 ＝ 前項 ÷ 後項 (比值是一個數值)</text>
+      <rect x="35" y="45" width="100" height="50" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="85" y="66" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">前項 a</text>
+      <text x="85" y="84" text-anchor="middle" font-size="9" fill="#2563eb">分子位置</text>
+      <text x="160" y="75" text-anchor="middle" font-size="18" font-weight="bold" fill="#64748b">：</text>
+      <rect x="185" y="45" width="100" height="50" rx="6" fill="#ecfdf5" stroke="#10b981" />
+      <text x="235" y="66" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">後項 b</text>
+      <text x="235" y="84" text-anchor="middle" font-size="9" fill="#059669">分母位置 (≠ 0)</text>
+      <rect x="25" y="108" width="270" height="58" rx="6" fill="#f1f5f9" />
+      <text x="160" y="126" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1e40af">最簡整數比判定：前項與後項皆為整數且互質！</text>
+      <text x="160" y="143" text-anchor="middle" font-size="9.5" fill="#334155">小數比化整：同乘 10、100 ｜ 分數比化整：同乘分母最小公倍數</text>
+      <text x="160" y="158" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">注意：比值可以帶單位嗎？比與比值純為比例數值，無單位！</text>
+    </svg>`
+  },
+
+  'kp-math-u4-2': {
+    title: '比的內項積等於外項積定理',
+    subtitle: '若 a : b ＝ c : d，則 a × d ＝ b × c・解未知數秒殺',
+    diagramType: 'algebra',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="25" y="18" width="270" height="30" rx="6" fill="#3b82f6" />
+      <text x="160" y="38" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">比例式核心定理：內項乘積 ＝ 外項乘積</text>
+      <text x="65" y="80" font-size="16" font-weight="bold" fill="#1d4ed8">a</text>
+      <text x="95" y="80" font-size="16" fill="#64748b">：</text>
+      <text x="125" y="80" font-size="16" font-weight="bold" fill="#10b981">b</text>
+      <text x="160" y="80" font-size="16" fill="#64748b">＝</text>
+      <text x="195" y="80" font-size="16" font-weight="bold" fill="#10b981">c</text>
+      <text x="225" y="80" font-size="16" fill="#64748b">：</text>
+      <text x="255" y="80" font-size="16" font-weight="bold" fill="#1d4ed8">d</text>
+      <path d="M 68 88 C 68 120, 255 120, 255 88" fill="none" stroke="#2563eb" stroke-width="2.5" />
+      <text x="160" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">外項積：a × d</text>
+      <path d="M 128 65 C 128 48, 192 48, 192 65" fill="none" stroke="#059669" stroke-width="2.5" />
+      <text x="160" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#059669">內項積：b × c</text>
+      <rect x="25" y="138" width="270" height="32" rx="4" fill="#eff6ff" />
+      <text x="160" y="158" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">解未知數範例：3 : 5 ＝ x : 20 ➔ 5x ＝ 60 ➔ x ＝ 12</text>
+    </svg>`
+  },
+
+  'kp-math-u4-3': {
+    title: '正比關係三大核心特徵射線圖',
+    subtitle: '通過原點 (0,0) 的射線・比值 y/x 恆為定值・同倍數放大縮小',
+    diagramType: 'coordinate-chart',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="20" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">正比關係坐標圖形：必通過原點之直線</text>
+      <line x1="45" y1="145" x2="190" y2="145" stroke="#475569" stroke-width="2" />
+      <line x1="45" y1="145" x2="45" y2="35" stroke="#475569" stroke-width="2" />
+      <line x1="45" y1="145" x2="180" y2="45" stroke="#3b82f6" stroke-width="2.5" />
+      <circle cx="45" cy="145" r="3.5" fill="#ef4444" />
+      <text x="40" y="158" font-size="8.5" fill="#ef4444" font-weight="bold">(0,0)</text>
+      <circle cx="90" cy="112" r="3" fill="#3b82f6" />
+      <circle cx="135" cy="78" r="3" fill="#3b82f6" />
+      <circle cx="180" cy="45" r="3" fill="#3b82f6" />
+      <text x="185" y="155" font-size="9" fill="#475569">x (時間/數量)</text>
+      <text x="40" y="30" font-size="9" fill="#475569">y (距離/總價)</text>
+      <rect x="205" y="35" width="100" height="110" rx="6" fill="#eff6ff" stroke="#93c5fd" />
+      <text x="255" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">正比檢驗 3 條件</text>
+      <text x="212" y="75" font-size="8.5" fill="#334155">1. x 變 2倍，y 變 2倍</text>
+      <text x="212" y="95" font-size="8.5" fill="#334155">2. y ÷ x ＝ 固定常數</text>
+      <text x="212" y="115" font-size="8.5" fill="#334155">3. 圖形必通過 (0, 0)</text>
+      <text x="255" y="136" text-anchor="middle" font-size="8" font-weight="bold" fill="#ef4444">年齡與身高非正比</text>
+    </svg>`
+  },
+
+  'kp-math-u5-1': {
+    title: '圓周長與圓周率推導幾何圖',
+    subtitle: '圓周長 C ＝ 直徑 × π ＝ 半徑 × 2 × 3.14',
+    diagramType: 'geometry',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <circle cx="90" cy="90" r="50" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5" />
+      <line x1="40" y1="90" x2="140" y2="90" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3" />
+      <circle cx="90" cy="90" r="3" fill="#1e40af" />
+      <text x="90" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">直徑 d ＝ 2r</text>
+      <rect x="160" y="30" width="145" height="120" rx="6" fill="#f0fdf4" stroke="#86efac" />
+      <text x="232" y="52" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">圓周長公式心法</text>
+      <text x="170" y="75" font-size="10" font-weight="bold" fill="#166534">C ＝ 直徑 × π</text>
+      <text x="170" y="95" font-size="10" font-weight="bold" fill="#166534">C ＝ 半徑 × 2 × 3.14</text>
+      <rect x="168" y="108" width="130" height="32" rx="4" fill="#dcfce7" />
+      <text x="233" y="123" text-anchor="middle" font-size="9" font-weight="bold" fill="#14532d">滾動 1 圈前進距離</text>
+      <text x="233" y="134" text-anchor="middle" font-size="8.5" fill="#14532d">剛好等於 1 個圓周長！</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9" font-weight="bold" fill="#64748b">圓周率 π ＝ 圓周長 ÷ 直徑 ≈ 3.14159...</text>
+    </svg>`
+  },
+
+  'kp-math-u5-2': {
+    title: '扇形弧長與圓心角比例扇面圖',
+    subtitle: '扇形是圓的一部分・圓心角佔 360 度的幾分之幾',
+    diagramType: 'geometry',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <path d="M 90 120 L 90 50 A 70 70 0 0 1 155 100 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2" />
+      <text x="100" y="110" font-size="9" font-weight="bold" fill="#1e40af">θ</text>
+      <text x="65" y="85" font-size="9" fill="#64748b">半徑 r</text>
+      <text x="135" y="65" font-size="9.5" font-weight="bold" fill="#ef4444">弧長</text>
+      <rect x="175" y="30" width="130" height="120" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="240" y="52" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">扇形雙大核心公式</text>
+      <text x="182" y="75" font-size="9.5" font-weight="bold" fill="#1e40af">1. 弧長：</text>
+      <text x="182" y="90" font-size="9" fill="#1e3a8a">2r × 3.14 × (θ/360°)</text>
+      <text x="182" y="112" font-size="9.5" font-weight="bold" fill="#ef4444">2. 扇形周長：</text>
+      <text x="182" y="128" font-size="9" font-weight="bold" fill="#b91c1c">弧長 ＋ 2個半徑！</text>
+      <text x="240" y="142" text-anchor="middle" font-size="8" fill="#ef4444">⚠️ 周長切勿漏加 2r！</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#047857">幾分之幾圓判定：圓心角 ÷ 360° (如 90° 是 1/4 圓，60° 是 1/6 圓)</text>
+    </svg>`
+  },
+
+  'kp-math-u6-1': {
+    title: '圓面積無限割補矩形推導模型',
+    subtitle: '無窮細分拼成長方形・長為半周長 πr・寬為半徑 r',
+    diagramType: 'calculus-concept',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <circle cx="70" cy="80" r="42" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+      <path d="M 70 80 L 112 80" stroke="#ef4444" stroke-width="2" />
+      <text x="90" y="74" font-size="9" font-weight="bold" fill="#ef4444">r</text>
+      <text x="70" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">切成 16、32、64 等份</text>
+      <text x="135" y="80" font-size="16" fill="#64748b">→</text>
+      <rect x="155" y="55" width="135" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="3" />
+      <line x1="155" y1="55" x2="290" y2="55" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2" />
+      <text x="222" y="48" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#ef4444">底 ＝ 圓周長的一半 ＝ 半徑 × π</text>
+      <text x="298" y="83" font-size="9.5" font-weight="bold" fill="#1e40af">高 r</text>
+      <rect x="25" y="135" width="270" height="35" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="160" y="152" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">圓面積 ＝ 底 × 高 ＝ (半徑 × π) × 半徑 ＝ 半徑 × 半徑 × 3.14</text>
+    </svg>`
+  },
+
+  'kp-math-u6-2': {
+    title: '經典葉形鋪色面積速算大招',
+    subtitle: '兩四分之一圓重疊扣除正方形・速算大招 0.57 × r²',
+    diagramType: 'geometry',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="35" y="40" width="90" height="90" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5" />
+      <path d="M 35 130 A 90 90 0 0 1 125 40 A 90 90 0 0 1 35 130 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="2" />
+      <text x="80" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">葉形面積</text>
+      <rect x="145" y="35" width="150" height="105" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="220" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">葉形面積雙推導法</text>
+      <text x="152" y="75" font-size="9" fill="#334155">原理：2 個 1/4圓 － 正方形</text>
+      <text x="152" y="92" font-size="9" fill="#334155">＝ 2 × (1/4 × πr²) － r²</text>
+      <rect x="150" y="102" width="140" height="28" rx="4" fill="#fef08a" />
+      <text x="220" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="#854d0e">⚡ 秒殺大招：r² × 0.57</text>
+      <text x="160" y="160" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#047857">空白角落單個面積 ＝ 正方形 － 1/4圓 ＝ r² × 0.215</text>
+    </svg>`
+  },
+
+  'kp-math-u7-1': {
+    title: '四則混合運算絕對優先順序階梯',
+    subtitle: '先括號・先乘除後加減・同級運算由左至右',
+    diagramType: 'stepper',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">四則運算絕對優先級階梯</text>
+      <rect x="30" y="38" width="260" height="28" rx="5" fill="#ef4444" />
+      <text x="45" y="56" font-size="10" font-weight="bold" fill="#ffffff">第 1 級：括號內優先</text>
+      <text x="200" y="56" font-size="9.5" fill="#ffffff">小括號 ( ) ➔ 中括號 [ ]</text>
+      <rect x="50" y="70" width="240" height="28" rx="5" fill="#f59e0b" />
+      <text x="65" y="88" font-size="10" font-weight="bold" fill="#ffffff">第 2 級：先乘除</text>
+      <text x="180" y="88" font-size="9.5" fill="#ffffff">乘號 × 與 除號 ÷ 同級</text>
+      <rect x="70" y="102" width="220" height="28" rx="5" fill="#10b981" />
+      <text x="85" y="120" font-size="10" font-weight="bold" fill="#ffffff">第 3 級：後加減</text>
+      <text x="185" y="120" font-size="9.5" fill="#ffffff">加號 ＋ 與 減號 － 同級</text>
+      <rect x="25" y="136" width="270" height="34" rx="5" fill="#eff6ff" stroke="#93c5fd" />
+      <text x="160" y="152" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e40af">同級運算金律：完全由左至右依序計算！</text>
+      <text x="160" y="164" text-anchor="middle" font-size="8.5" fill="#64748b">例：24 ÷ 4 × 2 ＝ 6 × 2 ＝ 12 (切勿誤算為 24 ÷ 8 ＝ 3！)</text>
+    </svg>`
+  },
+
+  'kp-math-u7-2': {
+    title: '乘法分配律幾何矩形拼貼模型',
+    subtitle: 'a × (b ＋ c) ＝ a × b ＋ a × c・提取公因數大招',
+    diagramType: 'geometry-algebra',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">乘法分配律：大長方形面積等於兩小長方形相加</text>
+      <rect x="35" y="42" width="80" height="55" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5" />
+      <text x="75" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">a × b</text>
+      <text x="75" y="36" text-anchor="middle" font-size="9.5" fill="#475569">寬 b</text>
+      <rect x="115" y="42" width="60" height="55" fill="#86efac" stroke="#16a34a" stroke-width="1.5" />
+      <text x="145" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">a × c</text>
+      <text x="145" y="36" text-anchor="middle" font-size="9.5" fill="#475569">寬 c</text>
+      <text x="20" y="73" font-size="11" font-weight="bold" fill="#1e293b">高 a</text>
+      <rect x="190" y="42" width="105" height="55" rx="5" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="242" y="62" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1d4ed8">展開與逆用</text>
+      <text x="242" y="80" text-anchor="middle" font-size="9" fill="#1e40af">a×(b+c) ＝ ab+ac</text>
+      <text x="242" y="93" text-anchor="middle" font-size="8.5" fill="#047857">提取公因數逆運算</text>
+      <rect x="25" y="112" width="270" height="55" rx="6" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="160" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">考場秒解例：99 × 47 ＝ (100 － 1) × 47 ＝ 4700 － 47 ＝ 4653</text>
+      <text x="160" y="147" text-anchor="middle" font-size="9.5" fill="#334155">分數逆用例：3/7 × 18 ＋ 3/7 × 10 ＝ 3/7 × (18 ＋ 10) ＝ 3/7 × 28 ＝ 12</text>
+      <text x="160" y="160" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ef4444">注意：除法對加減法僅右分配律成立，左分配律不成立！</text>
+    </svg>`
+  },
+
+  'kp-math-u8-1': {
+    title: '直柱體通用體積黃金公式模型',
+    subtitle: '柱體體積 ＝ 底面積 × 柱高・圓柱與三角柱通用',
+    diagramType: '3d-geometry',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <ellipse cx="80" cy="50" rx="35" ry="14" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5" />
+      <line x1="45" y1="50" x2="45" y2="120" stroke="#2563eb" stroke-width="1.5" />
+      <line x1="115" y1="50" x2="115" y2="120" stroke="#2563eb" stroke-width="1.5" />
+      <ellipse cx="80" cy="120" rx="35" ry="14" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" />
+      <line x1="125" y1="50" x2="125" y2="120" stroke="#ef4444" stroke-width="2" />
+      <text x="135" y="88" font-size="9.5" font-weight="bold" fill="#ef4444">高 h</text>
+      <text x="80" y="52" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#1e40af">底面積 B</text>
+      <rect x="155" y="32" width="145" height="120" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="227" y="52" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">全柱體體積大一統</text>
+      <text x="165" y="74" font-size="10" font-weight="bold" fill="#1e40af">體積 V ＝ 底面積 × 高</text>
+      <text x="165" y="94" font-size="9" fill="#334155">1. 三角柱：(底×高÷2) × 柱高</text>
+      <text x="165" y="110" font-size="9" fill="#334155">2. 圓柱：(r × r × 3.14) × 柱高</text>
+      <text x="165" y="126" font-size="9" fill="#334155">3. 梯形柱：(上+下)×高÷2 × 柱高</text>
+      <text x="227" y="144" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ef4444">⚠️ 辨析：柱體高度與底面高度切勿混淆！</text>
+    </svg>`
+  },
+
+  'kp-math-u8-2': {
+    title: '柱體側面積展開為長方形結構圖',
+    subtitle: '展開長方形之長為「底面周長」・寬為「柱高」',
+    diagramType: 'unfolding',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <ellipse cx="60" cy="35" rx="20" ry="8" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5" />
+      <rect x="25" y="55" width="200" height="70" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="4" />
+      <text x="125" y="93" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">展開側面積 ＝ 底面周長 × 柱高</text>
+      <line x1="25" y1="48" x2="225" y2="48" stroke="#ef4444" stroke-width="2" />
+      <text x="125" y="42" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#ef4444">長 ＝ 底面周長</text>
+      <line x1="235" y1="55" x2="235" y2="125" stroke="#047857" stroke-width="2" />
+      <text x="245" y="93" font-size="9.5" font-weight="bold" fill="#047857">寬＝柱高</text>
+      <ellipse cx="60" cy="142" rx="20" ry="8" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5" />
+      <rect x="25" y="152" width="270" height="22" rx="4" fill="#f0fdf4" />
+      <text x="160" y="167" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#166534">總表面積 ＝ 側面積 ＋ 2 個底面積 (上下各一個底！)</text>
+    </svg>`
+  },
+
+  'kp-math-u9-1': {
+    title: '速率、距離、時間黃金三角度模型',
+    subtitle: '遮住求目標・距離在頂端・速率與時間在兩底角',
+    diagramType: 'triangle-formula',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <polygon points="90,30 30,140 150,140" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5" />
+      <line x1="55" y1="90" x2="125" y2="90" stroke="#2563eb" stroke-width="2" />
+      <line x1="90" y1="90" x2="90" y2="140" stroke="#2563eb" stroke-width="2" />
+      <text x="90" y="72" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">距離 D</text>
+      <text x="60" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">速率 S</text>
+      <text x="120" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">時間 T</text>
+      <rect x="165" y="30" width="135" height="120" rx="6" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="232" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">速記求算三大招</text>
+      <text x="175" y="72" font-size="9.5" fill="#1e40af">求距離：速率 × 時間</text>
+      <text x="175" y="92" font-size="9.5" fill="#047857">求速率：距離 ÷ 時間</text>
+      <text x="175" y="112" font-size="9.5" fill="#b91c1c">求時間：距離 ÷ 速率</text>
+      <rect x="172" y="122" width="120" height="22" rx="4" fill="#fee2e2" />
+      <text x="232" y="136" text-anchor="middle" font-size="8" font-weight="bold" fill="#991b1b">⚠️ 單位必須完全一致！</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#2563eb">平均速率 ＝ 總距離 ÷ 總時間 (切勿直接將兩個速率相加除以 2！)</text>
+    </svg>`
+  },
+
+  'kp-math-u9-2': {
+    title: '速率單位換算秒殺法則',
+    subtitle: '時速 km/h 與 秒速 m/s 轉換互化・除以 3.6 與 乘以 3.6',
+    diagramType: 'converter',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">速率單位換算秒殺雙向樞紐</text>
+      <rect x="30" y="45" width="100" height="60" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="80" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">時速 (km/h)</text>
+      <text x="80" y="90" text-anchor="middle" font-size="9" fill="#2563eb">公里 / 小時</text>
+      <rect x="190" y="45" width="100" height="60" rx="6" fill="#ecfdf5" stroke="#10b981" />
+      <text x="240" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">秒速 (m/s)</text>
+      <text x="240" y="90" text-anchor="middle" font-size="9" fill="#059669">公尺 / 秒</text>
+      <path d="M 135 60 L 185 60" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)" />
+      <text x="160" y="55" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#ef4444">÷ 3.6</text>
+      <path d="M 185 90 L 135 90" stroke="#047857" stroke-width="2" />
+      <text x="160" y="105" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#047857">× 3.6</text>
+      <rect x="25" y="120" width="270" height="48" rx="6" fill="#f1f5f9" />
+      <text x="160" y="138" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">推導本質：1 km ＝ 1000 m ｜ 1 h ＝ 3600 s</text>
+      <text x="160" y="154" text-anchor="middle" font-size="9.5" fill="#334155">1000 ÷ 3600 ＝ 1 ÷ 3.6 ➔ 時速 72 km/h ＝ 72 ÷ 3.6 ＝ 20 m/s</text>
+    </svg>`
+  },
+
+  'kp-math-u10-1': {
+    title: '基準量與比較量比值天平圖',
+    subtitle: '比較量 ÷ 基準量 ＝ 比值・基準量相當於「1」份',
+    diagramType: 'ratio-balance',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">基準量與比較量黃金對應關係</text>
+      <rect x="30" y="45" width="115" height="55" rx="6" fill="#f1f5f9" stroke="#64748b" />
+      <text x="87" y="68" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">基準量 (Base)</text>
+      <text x="87" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="#047857">當作「1」標準</text>
+      <rect x="175" y="45" width="115" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="232" y="68" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">比較量 (Compare)</text>
+      <text x="232" y="88" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">等於「比值」倍</text>
+      <rect x="25" y="112" width="270" height="55" rx="6" fill="#fef2f2" stroke="#fecaca" />
+      <text x="160" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#991b1b">💡 審題抓關鍵字：「的」字前面通常是【基準量】！</text>
+      <text x="160" y="146" text-anchor="middle" font-size="9" fill="#7f1d1d">例：「甲是乙的 1.5 倍」➔ 乙是基準量(1)，甲是比較量(1.5)</text>
+      <text x="160" y="159" text-anchor="middle" font-size="8.5" fill="#b91c1c">公式：比較量 ＝ 基準量 × 比值 ｜ 基準量 ＝ 比較量 ÷ 比值</text>
+    </svg>`
+  },
+
+  'kp-math-u10-3': {
+    title: '經典雞兔同籠假定法天平模型',
+    subtitle: '假定全是雞・算出腳的差額・每補換 1 隻兔多 2 隻腳',
+    diagramType: 'algorithm',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">經典雞兔同籠：四步假定法秒解</text>
+      <circle cx="55" cy="65" r="22" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" />
+      <text x="55" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#854d0e">雞 (2腳)</text>
+      <circle cx="115" cy="65" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" />
+      <text x="115" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">兔 (4腳)</text>
+      <rect x="150" y="42" width="145" height="50" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="222" y="62" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">每替換 1 隻</text>
+      <text x="222" y="78" text-anchor="middle" font-size="9.5" fill="#166534">腳數差：4 － 2 ＝ 2 隻</text>
+      <rect x="25" y="105" width="270" height="62" rx="6" fill="#eff6ff" stroke="#93c5fd" />
+      <text x="35" y="123" font-size="9.5" font-weight="bold" fill="#1e40af">STEP 1：假定全部是雞 ➔ 假定腳數 ＝ 總頭數 × 2</text>
+      <text x="35" y="139" font-size="9.5" font-weight="bold" fill="#1e40af">STEP 2：算缺腳數 ➔ 總腳數 － 假定腳數</text>
+      <text x="35" y="155" font-size="10" font-weight="bold" fill="#ef4444">STEP 3：兔子隻數 ＝ 缺腳數 ÷ (4 － 2) ｜ 雞數 ＝ 總頭數 － 兔數</text>
+    </svg>`
+  },
+
+  'kp-math-u11-1': {
+    title: '等量公理天平雙側平衡圖',
+    subtitle: '等號兩端同加、同減、同乘、同除以不為零的數，依然平衡',
+    diagramType: 'balance',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">等量公理：天平永保平衡的核心法則</text>
+      <line x1="50" y1="80" x2="270" y2="80" stroke="#334155" stroke-width="4" stroke-linecap="round" />
+      <polygon points="160,80 145,120 175,120" fill="#64748b" />
+      <rect x="55" y="48" width="55" height="30" rx="4" fill="#93c5fd" stroke="#2563eb" />
+      <text x="82" y="67" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">x ＋ 5</text>
+      <rect x="210" y="48" width="55" height="30" rx="4" fill="#86efac" stroke="#16a34a" />
+      <text x="237" y="67" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">12</text>
+      <rect x="25" y="125" width="270" height="45" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="160" y="142" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8">等量公理操作：兩邊同時 － 5 ➔ (x ＋ 5) － 5 ＝ 12 － 5 ➔ x ＝ 7</text>
+      <text x="160" y="158" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">移項口訣：跨過等號變相反運算（加變減、減變加、乘變除、除變乘）</text>
+    </svg>`
+  },
+
+  'kp-math-u12-1': {
+    title: '圓形圖與百分率圓心角換算模型',
+    subtitle: '百分率 P% × 360° ＝ 對應圓心角・全圓總和必等於 100%',
+    diagramType: 'pie-chart',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <circle cx="85" cy="90" r="50" fill="#e2e8f0" />
+      <path d="M 85 90 L 85 40 A 50 50 0 0 1 135 90 Z" fill="#3b82f6" />
+      <path d="M 85 90 L 135 90 A 50 50 0 0 1 85 140 Z" fill="#10b981" />
+      <path d="M 85 90 L 85 140 A 50 50 0 1 1 85 40 Z" fill="#f59e0b" />
+      <text x="110" y="65" font-size="8.5" font-weight="bold" fill="#ffffff">25% (90°)</text>
+      <text x="110" y="115" font-size="8.5" font-weight="bold" fill="#ffffff">25% (90°)</text>
+      <text x="55" y="95" font-size="8.5" font-weight="bold" fill="#ffffff">50% (180°)</text>
+      <rect x="155" y="35" width="145" height="110" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="227" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">圓心角核心換算定則</text>
+      <text x="165" y="75" font-size="9" fill="#1e40af">1. 圓心角 ＝ 360° × 百分率</text>
+      <text x="165" y="92" font-size="9" fill="#1e40af">2. 百分率 ＝ 圓心角 ÷ 360°</text>
+      <text x="165" y="110" font-size="9" font-weight="bold" fill="#047857">3. 全圓總和 ＝ 100% ＝ 360°</text>
+      <text x="227" y="132" text-anchor="middle" font-size="8" font-weight="bold" fill="#ef4444">⚠️ 四捨五入誤差配平至最大項！</text>
+      <text x="160" y="165" text-anchor="middle" font-size="9" fill="#64748b">繪圖順序：通常由 12 點鐘方向開始順時針依序劃分</text>
+    </svg>`
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🔬 自然科學領域 (Science)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-sci-u1-1': {
+    title: '高低氣壓空氣流動與海陸風剖面圖',
+    subtitle: '氣壓高流向氣壓低・熱空氣上升形成低壓・冷空氣下沉形成高壓',
+    diagramType: 'science-diagram',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="25" y="40" width="115" height="60" rx="6" fill="#fee2e2" stroke="#ef4444" />
+      <text x="82" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">低氣壓 (L)</text>
+      <text x="82" y="80" text-anchor="middle" font-size="9.5" fill="#b91c1c">空氣受熱膨脹上升</text>
+      <text x="82" y="94" text-anchor="middle" font-size="8.5" fill="#7f1d1d">易成雲致雨・天氣陰雨</text>
+      <rect x="180" y="40" width="115" height="60" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="237" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">高氣壓 (H)</text>
+      <text x="237" y="80" text-anchor="middle" font-size="9.5" fill="#1e40af">冷空氣冷卻下沉</text>
+      <text x="237" y="94" text-anchor="middle" font-size="8.5" fill="#1e3a8a">天氣晴朗乾燥</text>
+      <path d="M 180 120 L 140 120" stroke="#047857" stroke-width="2.5" marker-end="url(#arrow)" />
+      <text x="160" y="114" text-anchor="middle" font-size="9" font-weight="bold" fill="#047857">地表風向</text>
+      <rect x="25" y="132" width="270" height="38" rx="6" fill="#f1f5f9" />
+      <text x="160" y="148" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e293b">海陸風規律：白天陸熱升海風吹向陸地 ｜ 夜晚海熱升陸風吹向海面</text>
+      <text x="160" y="161" text-anchor="middle" font-size="9" fill="#64748b">關鍵物理量：水比熱大吸熱慢散熱慢，陸地比熱小升溫快降溫快！</text>
+    </svg>`
+  },
+
+  'kp-sci-u1-2': {
+    title: '冷鋒與暖鋒交會剖面結構圖',
+    subtitle: '冷空氣密度大下插・暖空氣被迫抬升・降雨主要落在冷鋒後方',
+    diagramType: 'front-profile',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">冷鋒面大氣剖面：冷空氣下插推升暖氣團</text>
+      <path d="M 20 130 L 150 130 L 120 40 L 20 40 Z" fill="#dbeafe" opacity="0.8" />
+      <text x="70" y="85" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">冷氣團 (強盛下插)</text>
+      <path d="M 150 130 L 300 130 L 300 40 L 120 40 Z" fill="#fee2e2" opacity="0.6" />
+      <text x="210" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">暖氣團 (被迫爬升)</text>
+      <line x1="120" y1="40" x2="150" y2="130" stroke="#2563eb" stroke-width="3" />
+      <circle cx="132" cy="75" r="4" fill="#2563eb" />
+      <text x="90" y="115" font-size="10" font-weight="bold" fill="#2563eb">🌧️ 降雨區 (鋒後)</text>
+      <rect x="25" y="138" width="270" height="34" rx="5" fill="#eff6ff" />
+      <text x="160" y="152" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e40af">冷鋒過境特徵：氣溫驟降、氣壓升高、風向偏北、出現短暫陣雨或雷雨</text>
+      <text x="160" y="165" text-anchor="middle" font-size="8.5" fill="#ef4444">天氣圖符號：藍色三角形尖端指向鋒面移動前進方向！</text>
+    </svg>`
+  },
+
+  'kp-sci-u1-3': {
+    title: '颱風逆時針旋轉氣流與中心颱風眼',
+    subtitle: '熱帶低氣壓・北半球科氏力作用呈「逆時針輻合上升」・颱風眼無風無雨',
+    diagramType: 'typhoon',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">北半球颱風氣流運動：逆時針向中心輻合</text>
+      <circle cx="95" cy="95" r="55" fill="none" stroke="#93c5fd" stroke-width="12" stroke-dasharray="25,10" opacity="0.6" />
+      <circle cx="95" cy="95" r="35" fill="none" stroke="#3b82f6" stroke-width="14" stroke-dasharray="20,8" opacity="0.8" />
+      <circle cx="95" cy="95" r="10" fill="#ffffff" stroke="#ef4444" stroke-width="2.5" />
+      <text x="95" y="99" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ef4444">颱風眼</text>
+      <rect x="170" y="40" width="130" height="110" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="235" y="58" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1d4ed8">颱風結構重點</text>
+      <text x="178" y="78" font-size="9" font-weight="bold" fill="#ef4444">1. 颱風眼：</text>
+      <text x="178" y="92" font-size="8.5" fill="#334155">氣流微弱下沉、無風無雨</text>
+      <text x="178" y="110" font-size="9" font-weight="bold" fill="#1e40af">2. 眼牆 (雲牆)：</text>
+      <text x="178" y="124" font-size="8.5" fill="#334155">風速最強、雨勢最猛烈！</text>
+      <text x="235" y="142" text-anchor="middle" font-size="8" font-weight="bold" fill="#047857">登陸陸地後摩擦減速減弱</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9" fill="#64748b">生成條件：熱帶廣闊溫暖洋面 (海溫 26.5°C 以上) 水氣大量蒸發上升</text>
+    </svg>`
+  },
+
+  'kp-sci-u2-1': {
+    title: '酸鹼指示劑色彩光譜對照圖',
+    subtitle: '石蕊試紙紅藍判酸鹼・酚酞鹼紅酸無・廣用試紙紅橙黃綠藍靛紫',
+    diagramType: 'chemistry-spectrum',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">酸鹼指示劑檢驗色彩速記大表</text>
+      <rect x="25" y="38" width="85" height="75" rx="5" fill="#fee2e2" stroke="#ef4444" />
+      <text x="67" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">酸性 (pH &lt; 7)</text>
+      <text x="67" y="74" text-anchor="middle" font-size="9" fill="#7f1d1d">石蕊：紅色</text>
+      <text x="67" y="90" text-anchor="middle" font-size="9" fill="#7f1d1d">酚酞：無色</text>
+      <text x="67" y="105" text-anchor="middle" font-size="8.5" fill="#991b1b">廣用：紅、橙、黃</text>
+      <rect x="117" y="38" width="85" height="75" rx="5" fill="#f0fdf4" stroke="#10b981" />
+      <text x="160" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">中性 (pH ＝ 7)</text>
+      <text x="160" y="74" text-anchor="middle" font-size="9" fill="#065f46">石蕊：不變色</text>
+      <text x="160" y="90" text-anchor="middle" font-size="9" fill="#065f46">酚酞：無色</text>
+      <text x="160" y="105" text-anchor="middle" font-size="8.5" fill="#047857">廣用：綠色 (純水)</text>
+      <rect x="210" y="38" width="85" height="75" rx="5" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="252" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">鹼性 (pH &gt; 7)</text>
+      <text x="252" y="74" text-anchor="middle" font-size="9" fill="#1e40af">石蕊：藍色</text>
+      <text x="252" y="90" text-anchor="middle" font-size="9" font-weight="bold" fill="#db2777">酚酞：粉紅色</text>
+      <text x="252" y="105" text-anchor="middle" font-size="8.5" fill="#1e3a8a">廣用：藍、靛、紫</text>
+      <rect x="25" y="122" width="270" height="48" rx="6" fill="#f1f5f9" />
+      <text x="160" y="138" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">速記大招：紅酸藍鹼 (酸紅酸紅、鹼藍鹼藍) ｜ 酚酞遇鹼才害羞變粉紅！</text>
+      <text x="160" y="154" text-anchor="middle" font-size="9" fill="#334155">生活水溶液：醋、檸檬汁為酸性 ｜ 小蘇打水、肥皂水、氨水為鹼性 ｜ 食鹽水、糖水為中性</text>
+    </svg>`
+  },
+
+  'kp-sci-u3-1': {
+    title: '奧斯特實驗與右手螺旋定則',
+    subtitle: '電流的磁效應・通電導線使磁針偏轉・安培右手螺旋判定磁場方向',
+    diagramType: 'physics-circuit',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">奧斯特實驗：通電導線產生環狀磁場</text>
+      <line x1="40" y1="80" x2="160" y2="80" stroke="#ef4444" stroke-width="4" />
+      <polygon points="120,74 135,80 120,86" fill="#ffffff" />
+      <text x="100" y="70" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#ef4444">電流方向 I</text>
+      <polygon points="100,80 85,95 100,110 115,95" fill="#ef4444" />
+      <polygon points="100,80 85,65 100,50 115,65" fill="#3b82f6" />
+      <text x="100" y="98" text-anchor="middle" font-size="8" font-weight="bold" fill="#ffffff">N</text>
+      <text x="100" y="66" text-anchor="middle" font-size="8" font-weight="bold" fill="#ffffff">S</text>
+      <rect x="180" y="38" width="120" height="120" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="240" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">安培右手定則</text>
+      <text x="188" y="80" font-size="9.5" font-weight="bold" fill="#b91c1c">大拇指：</text>
+      <text x="188" y="95" font-size="9" fill="#334155">指向電流方向</text>
+      <text x="188" y="115" font-size="9.5" font-weight="bold" fill="#1e40af">四指彎曲：</text>
+      <text x="188" y="130" font-size="9" fill="#334155">指向磁力線方向</text>
+      <text x="240" y="148" text-anchor="middle" font-size="8" font-weight="bold" fill="#047857">電流反向偏轉亦反向</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9" fill="#64748b">斷電瞬間磁針立即恢復指向地球南北極！</text>
+    </svg>`
+  },
+
+  'kp-sci-u3-3': {
+    title: '增強電磁鐵磁力三大關鍵變因',
+    subtitle: '增加線圈圈數・加大電池串聯電流・插入軟鐵芯',
+    diagramType: 'variable-control',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">電磁鐵磁力三要素控制變因實驗</text>
+      <rect x="25" y="40" width="85" height="80" rx="5" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="67" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8">1. 線圈圈數</text>
+      <text x="67" y="80" text-anchor="middle" font-size="9" fill="#334155">圈數越多</text>
+      <text x="67" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">磁力越強</text>
+      <text x="67" y="110" text-anchor="middle" font-size="8" fill="#64748b">吸迴紋針數倍增</text>
+      <rect x="117" y="40" width="85" height="80" rx="5" fill="#ecfdf5" stroke="#10b981" />
+      <text x="160" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#047857">2. 電流大小</text>
+      <text x="160" y="80" text-anchor="middle" font-size="9" fill="#334155">串聯電池增加</text>
+      <text x="160" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#059669">磁力越強</text>
+      <text x="160" y="110" text-anchor="middle" font-size="8" fill="#64748b">並聯電池磁力不變</text>
+      <rect x="210" y="40" width="85" height="80" rx="5" fill="#fef2f2" stroke="#ef4444" />
+      <text x="252" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">3. 鐵芯導磁</text>
+      <text x="252" y="80" text-anchor="middle" font-size="9" fill="#334155">放入軟鐵棒</text>
+      <text x="252" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626">磁力大幅激增</text>
+      <text x="252" y="110" text-anchor="middle" font-size="8" fill="#64748b">銅棒塑膠棒無效</text>
+      <rect x="25" y="130" width="270" height="38" rx="5" fill="#f1f5f9" />
+      <text x="160" y="146" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e293b">電磁鐵極性改變大招：只要改變【電池正負極方向】或【線圈纏繞方向】即可！</text>
+      <text x="160" y="159" text-anchor="middle" font-size="8.5" fill="#64748b">生活應用：電磁起重機、磁浮列車、揚聲器喇叭、繼電器電鈴</text>
+    </svg>`
+  },
+
+  'kp-sci-u5-1': {
+    title: '顯微鏡成像光學規律與玻片移動口訣',
+    subtitle: '上下顛倒、左右相反・想看哪裡，玻片就往「同方向」推移！',
+    diagramType: 'optics-microscope',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <circle cx="80" cy="90" r="45" fill="#f8fafc" stroke="#3b82f6" stroke-width="2.5" />
+      <text x="80" y="70" text-anchor="middle" font-size="28" font-weight="bold" fill="#ef4444">d</text>
+      <text x="80" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">視野中看到「d」</text>
+      <text x="80" y="125" text-anchor="middle" font-size="9" fill="#64748b">(實物實為「p」)</text>
+      <rect x="150" y="35" width="150" height="120" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="225" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">顯微鏡操作三大黃金口訣</text>
+      <text x="158" y="78" font-size="9.5" font-weight="bold" fill="#b91c1c">1. 成像：</text>
+      <text x="158" y="92" font-size="9" fill="#334155">上下顛倒、左右相反 (旋轉180°)</text>
+      <text x="158" y="110" font-size="9.5" font-weight="bold" fill="#047857">2. 移動玻片：</text>
+      <text x="158" y="124" font-size="9" font-weight="bold" fill="#047857">像在右上，玻片就往【右上】移！</text>
+      <text x="225" y="142" text-anchor="middle" font-size="8.5" fill="#ef4444">⚠️ 高倍鏡嚴禁動粗調節輪！</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9" fill="#64748b">高倍鏡特徵：放大倍率大、視野範圍變小、亮度變暗、需用細調節輪對焦</text>
+    </svg>`
+  },
+
+  'kp-sci-u6-1': {
+    title: '槓桿原理支點施力點天平平衡圖',
+    subtitle: '施力 × 施力臂 ＝ 抗力 × 抗力臂・順時針力矩等於逆時針力矩',
+    diagramType: 'physics-lever',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">槓桿原理平衡方程式：施力臂長則省力</text>
+      <line x1="30" y1="85" x2="290" y2="85" stroke="#334155" stroke-width="4" stroke-linecap="round" />
+      <polygon points="120,85 105,120 135,120" fill="#64748b" />
+      <text x="120" y="134" text-anchor="middle" font-size="9" font-weight="bold" fill="#64748b">支點 (Fulcrum)</text>
+      <line x1="45" y1="85" x2="45" y2="120" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow)" />
+      <text x="45" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#ef4444">抗力 W</text>
+      <line x1="260" y1="85" x2="260" y2="120" stroke="#10b981" stroke-width="2.5" />
+      <text x="260" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#047857">施力 F</text>
+      <line x1="45" y1="55" x2="120" y2="55" stroke="#ef4444" stroke-width="1.5" />
+      <text x="82" y="50" text-anchor="middle" font-size="9" fill="#ef4444">抗力臂 d1 (短)</text>
+      <line x1="120" y1="55" x2="260" y2="55" stroke="#10b981" stroke-width="1.5" />
+      <text x="190" y="50" text-anchor="middle" font-size="9" fill="#047857">施力臂 d2 (長)</text>
+      <rect x="25" y="140" width="270" height="32" rx="4" fill="#eff6ff" />
+      <text x="160" y="156" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e40af">省力槓桿：施力臂 ＞ 抗力臂 ➔ 省力但費距離 (如拔釘器、開瓶器)</text>
+      <text x="160" y="167" text-anchor="middle" font-size="8.5" fill="#64748b">費力槓桿：施力臂 ＜ 抗力臂 ➔ 費力但省距離/好操作 (如筷子、鑷子、掃帚)</text>
+    </svg>`
+  },
+
+  'kp-sci-u6-3': {
+    title: '定滑輪與動滑輪省力與方向比較圖',
+    subtitle: '定滑輪不省力但改變施力方向・動滑輪省力一半但費距離',
+    diagramType: 'pulley',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="25" y="30" width="130" height="110" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="90" y="48" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">定滑輪 (Fixed)</text>
+      <circle cx="90" cy="75" r="18" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+      <text x="90" y="105" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#b91c1c">施力 F ＝ 物重 W</text>
+      <text x="90" y="120" text-anchor="middle" font-size="8.5" fill="#1e40af">不省力、不省距離</text>
+      <text x="90" y="132" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#047857">能改變施力方向 (向下便於拉升)</text>
+      <rect x="165" y="30" width="130" height="110" rx="6" fill="#ecfdf5" stroke="#10b981" />
+      <text x="230" y="48" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">動滑輪 (Movable)</text>
+      <circle cx="230" cy="75" r="18" fill="#ffffff" stroke="#059669" stroke-width="2" />
+      <text x="230" y="105" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#047857">施力 F ＝ W ÷ 2</text>
+      <text x="230" y="120" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#059669">省力一半！</text>
+      <text x="230" y="132" text-anchor="middle" font-size="8.5" fill="#b91c1c">拉升繩長 ＝ 物高 2 倍 (費距離)</text>
+      <rect x="25" y="148" width="270" height="24" rx="4" fill="#f1f5f9" />
+      <text x="160" y="164" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">滑輪組大招：結合定滑輪與動滑輪，既能省力一半，又能改變拉繩方向！</text>
+    </svg>`
+  },
+
+  'kp-sci-u8-2': {
+    title: '生態系能量金字塔與 10% 傳遞定律',
+    subtitle: '能量逐級遞減約 90%・生產者位於底層能量最充沛・掠食者位於頂端',
+    diagramType: 'energy-pyramid',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <polygon points="160,35 125,70 195,70" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" />
+      <text x="160" y="58" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#991b1b">高級肉食 1 kcal</text>
+      <polygon points="125,70 100,105 220,105 195,70" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" />
+      <text x="160" y="92" text-anchor="middle" font-size="9" font-weight="bold" fill="#854d0e">初級消費者(草食) 100 kcal</text>
+      <polygon points="100,105 70,140 250,140 220,105" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" />
+      <text x="160" y="127" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532d">生產者(綠色植物) 1000 kcal (能量最多)</text>
+      <rect x="25" y="148" width="270" height="26" rx="4" fill="#eff6ff" />
+      <text x="160" y="164" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">10% 定律：僅約 10% 能量轉化為下一營養階層組織，其餘 90% 散失於呼吸排泄與熱能</text>
+    </svg>`
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 📚 國語文領域 (Mandarin)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-man-u1-1': {
+    title: '形近字結構辨析心法圖解',
+    subtitle: '部首表義・偏旁表音・圈出細微筆畫差異防粗心',
+    diagramType: 'character-analysis',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">形近字辨析法：形旁查字義・聲旁辨讀音</text>
+      <rect x="35" y="45" width="75" height="75" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+      <text x="72" y="85" text-anchor="middle" font-size="28" font-weight="bold" fill="#1d4ed8">拔</text>
+      <text x="72" y="110" text-anchor="middle" font-size="9" fill="#1e40af">手部・拔除</text>
+      <rect x="122" y="45" width="75" height="75" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+      <text x="160" y="85" text-anchor="middle" font-size="28" font-weight="bold" fill="#b91c1c">撥</text>
+      <text x="160" y="110" text-anchor="middle" font-size="9" fill="#7f1d1d">手部・撥打彈撥</text>
+      <rect x="210" y="45" width="75" height="75" rx="6" fill="#f0fdf4" stroke="#10b981" stroke-width="2" />
+      <text x="247" y="85" text-anchor="middle" font-size="28" font-weight="bold" fill="#047857">跋</text>
+      <text x="247" y="110" text-anchor="middle" font-size="9" fill="#065f46">足部・跋山涉水</text>
+      <rect x="25" y="132" width="270" height="38" rx="5" fill="#f1f5f9" />
+      <text x="160" y="148" text-anchor="middle" font-size="10" font-weight="bold" fill="#334155">破題心法：由部首推求詞性意義，足部與行走相關，手部與動作抓取相關！</text>
+      <text x="160" y="161" text-anchor="middle" font-size="9" fill="#ef4444">段考高頻雷區：「拔擢」非「撥擢」｜「挑撥」非「挑拔」！</text>
+    </svg>`
+  },
+
+  'kp-man-u2-1': {
+    title: '常用修辭格黃金光譜架構圖',
+    subtitle: '擬人化物為人・擬物化人為物・設問三法・映襯對比',
+    diagramType: 'rhetoric-map',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="12" width="280" height="26" rx="5" fill="#8b5cf6" />
+      <text x="160" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">國小高年級高頻必考修辭格光譜</text>
+      <rect x="25" y="46" width="65" height="70" rx="5" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="57" y="66" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1d4ed8">轉化</text>
+      <text x="57" y="85" text-anchor="middle" font-size="8.5" fill="#1e40af">擬人(物擬人)</text>
+      <text x="57" y="100" text-anchor="middle" font-size="8.5" fill="#1e40af">擬物(人擬物)</text>
+      <rect x="95" y="46" width="65" height="70" rx="5" fill="#fef2f2" stroke="#ef4444" />
+      <text x="127" y="66" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#b91c1c">設問</text>
+      <text x="127" y="82" text-anchor="middle" font-size="8" fill="#7f1d1d">提問(自問自答)</text>
+      <text x="127" y="94" text-anchor="middle" font-size="8" fill="#7f1d1d">激問(答案在反面)</text>
+      <text x="127" y="106" text-anchor="middle" font-size="8" fill="#7f1d1d">懸問(無確切答案)</text>
+      <rect x="165" y="46" width="65" height="70" rx="5" fill="#ecfdf5" stroke="#10b981" />
+      <text x="197" y="66" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#047857">映襯</text>
+      <text x="197" y="85" text-anchor="middle" font-size="8.5" fill="#065f46">反義對比</text>
+      <text x="197" y="100" text-anchor="middle" font-size="8.5" fill="#065f46">強烈對照凸顯</text>
+      <rect x="235" y="46" width="60" height="70" rx="5" fill="#fefce8" stroke="#ca8a04" />
+      <text x="265" y="66" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#854d0e">譬喻</text>
+      <text x="265" y="85" text-anchor="middle" font-size="8.5" fill="#854d0e">本體喻體喻詞</text>
+      <text x="265" y="100" text-anchor="middle" font-size="8.5" fill="#854d0e">明喻隱喻借喻</text>
+      <rect x="20" y="124" width="280" height="46" rx="5" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="160" y="142" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#334155">激問大招：「這難道不是人性的光輝嗎？」➔ 心中早有定見，語氣強烈！</text>
+      <text x="160" y="158" text-anchor="middle" font-size="9" fill="#64748b">轉化妙句：「微風溫柔地撫摸著金黃色的稻穗」➔ 人性化觸覺描摹</text>
+    </svg>`
+  },
+
+  'kp-man-u8-1': {
+    title: '漢字六書造字法則形音義架構圖',
+    subtitle: '象形指事為字之本 (獨體) ｜ 會意形聲為字之衍 (合體) ｜ 轉注假借為用字法',
+    diagramType: 'linguistics',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="15" width="280" height="28" rx="6" fill="#3b82f6" />
+      <text x="160" y="34" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">東漢許慎《說文解字》：六書形音義架構</text>
+      <rect x="25" y="52" width="65" height="70" rx="5" fill="#eff6ff" stroke="#93c5fd" />
+      <text x="57" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">1. 象形</text>
+      <text x="57" y="86" text-anchor="middle" font-size="8.5" fill="#334155">畫成其物</text>
+      <text x="57" y="102" text-anchor="middle" font-size="8.5" fill="#334155">隨體詰詘</text>
+      <text x="57" y="115" text-anchor="middle" font-size="8" font-weight="bold" fill="#1e40af">日、月、山、水</text>
+      <rect x="95" y="52" width="65" height="70" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+      <text x="127" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#047857">2. 指事</text>
+      <text x="127" y="86" text-anchor="middle" font-size="8.5" fill="#334155">視而可識</text>
+      <text x="127" y="102" text-anchor="middle" font-size="8.5" fill="#334155">察而見意</text>
+      <text x="127" y="115" text-anchor="middle" font-size="8" font-weight="bold" fill="#047857">上、下、本、末</text>
+      <rect x="165" y="52" width="65" height="70" rx="5" fill="#fef08a" stroke="#fde047" />
+      <text x="197" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#854d0e">3. 會意</text>
+      <text x="197" y="86" text-anchor="middle" font-size="8.5" fill="#334155">比類合誼</text>
+      <text x="197" y="102" text-anchor="middle" font-size="8.5" fill="#334155">以見指撝</text>
+      <text x="197" y="115" text-anchor="middle" font-size="8" font-weight="bold" fill="#854d0e">休、武、信、明</text>
+      <rect x="235" y="52" width="60" height="70" rx="5" fill="#fee2e2" stroke="#fca5a5" />
+      <text x="265" y="70" text-anchor="middle" font-size="10" font-weight="bold" fill="#991b1b">4. 形聲</text>
+      <text x="265" y="86" text-anchor="middle" font-size="8.5" fill="#334155">以事為名</text>
+      <text x="265" y="102" text-anchor="middle" font-size="8.5" fill="#334155">取譬相成</text>
+      <text x="265" y="115" text-anchor="middle" font-size="8" font-weight="bold" fill="#991b1b">湖、花、聞 (80%)</text>
+      <rect x="20" y="130" width="280" height="40" rx="5" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="160" y="146" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e293b">獨體為【文】（象形、指事） ｜ 合體為【字】（會意、形聲）</text>
+      <text x="160" y="160" text-anchor="middle" font-size="8.5" fill="#64748b">轉注與假借為「用字之法」而非「造字之法」，段考核心考題！</text>
+    </svg>`
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🏛️ 社會領域 (Social)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-soc-u4-1': {
+    title: '經濟學基礎：供需曲線與市場均衡價格模型',
+    subtitle: '需求法則價跌量增・供給法則價漲量增・交點形成市場均衡價格',
+    diagramType: 'economics-curve',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <line x1="45" y1="140" x2="190" y2="140" stroke="#334155" stroke-width="2" />
+      <line x1="45" y1="140" x2="45" y2="30" stroke="#334155" stroke-width="2" />
+      <text x="35" y="26" font-size="9" fill="#475569">價格 P</text>
+      <text x="195" y="144" font-size="9" fill="#475569">數量 Q</text>
+      <line x1="55" y1="45" x2="180" y2="130" stroke="#ef4444" stroke-width="2.5" />
+      <text x="185" y="125" font-size="9.5" font-weight="bold" fill="#ef4444">需求線 D (向右下)</text>
+      <line x1="55" y1="130" x2="180" y2="45" stroke="#3b82f6" stroke-width="2.5" />
+      <text x="185" y="52" font-size="9.5" font-weight="bold" fill="#3b82f6">供給線 S (向右上)</text>
+      <circle cx="117" cy="88" r="4.5" fill="#10b981" />
+      <text x="127" y="84" font-size="10" font-weight="bold" fill="#047857">均衡點 E</text>
+      <rect x="205" y="30" width="100" height="115" rx="6" fill="#f0fdf4" stroke="#86efac" />
+      <text x="255" y="48" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">市場機能機制</text>
+      <text x="212" y="68" font-size="8.5" fill="#334155">供過於求 ➔ 價格跌</text>
+      <text x="212" y="86" font-size="8.5" fill="#334155">供不應求 ➔ 價格漲</text>
+      <text x="212" y="104" font-size="8.5" font-weight="bold" fill="#166534">亞當斯密「看不見的手」</text>
+      <text x="255" y="128" text-anchor="middle" font-size="8" fill="#64748b">自發調節達最優配置</text>
+      <text x="160" y="165" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e293b">機會成本金律：選擇某方案所放棄代價中「價值最高者」！</text>
+    </svg>`
+  },
+
+  'kp-soc-u5-1': {
+    title: '中華民國法律位階金字塔階層圖',
+    subtitle: '憲法具最高性・法律不得牴觸憲法・命令不得牴觸憲法與法律',
+    diagramType: 'pyramid',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">我國法規範位階金字塔</text>
+      <polygon points="160,30 110,65 210,65" fill="#ef4444" />
+      <text x="160" y="52" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#ffffff">憲法 (最高性)</text>
+      <polygon points="110,65 75,105 245,105 210,65" fill="#3b82f6" />
+      <text x="160" y="88" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">法律 (立法院通過・總統公布)</text>
+      <polygon points="75,105 40,145 280,145 245,105" fill="#10b981" />
+      <text x="160" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">命令 (行政機關訂定・規程規則)</text>
+      <rect x="25" y="152" width="270" height="22" rx="4" fill="#eff6ff" />
+      <text x="160" y="167" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e40af">名稱識別：法律名為「法、律、條例、通則」 ｜ 命令名為「規程、規則、細則、辦法」</text>
+    </svg>`
+  },
+
+  'kp-soc-u5-2': {
+    title: '中央政府五院分立制衡星狀架構圖',
+    subtitle: '孫中山五權憲法・行政、立法、司法、考試、監察權力制衡',
+    diagramType: 'separation-of-powers',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <circle cx="160" cy="90" r="28" fill="#3b82f6" />
+      <text x="160" y="94" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">五院分工</text>
+      <rect x="130" y="20" width="60" height="28" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="160" y="38" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1d4ed8">行政院 (最高行政)</text>
+      <rect x="235" y="65" width="60" height="28" rx="4" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5" />
+      <text x="265" y="83" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#b91c1c">立法院 (立法質詢)</text>
+      <rect x="205" y="132" width="60" height="28" rx="4" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5" />
+      <text x="235" y="150" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#047857">司法院 (審判釋憲)</text>
+      <rect x="55" y="132" width="60" height="28" rx="4" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5" />
+      <text x="85" y="150" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#854d0e">考試院 (公務考銓)</text>
+      <rect x="25" y="65" width="60" height="28" rx="4" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5" />
+      <text x="55" y="83" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#7e22ce">監察院 (糾舉彈劾)</text>
+      <line x1="160" y1="48" x2="160" y2="62" stroke="#94a3b8" stroke-dasharray="2,2" />
+      <line x1="188" y1="90" x2="235" y2="79" stroke="#94a3b8" stroke-dasharray="2,2" />
+      <line x1="175" y1="115" x2="210" y2="132" stroke="#94a3b8" stroke-dasharray="2,2" />
+      <line x1="145" y1="115" x2="110" y2="132" stroke="#94a3b8" stroke-dasharray="2,2" />
+      <line x1="132" y1="90" x2="85" y2="79" stroke="#94a3b8" stroke-dasharray="2,2" />
+      <text x="160" y="172" text-anchor="middle" font-size="8.5" fill="#475569">立法院對行政院有質詢權與預算審查權 ｜ 監察院對公務人員有彈劾糾舉權</text>
+    </svg>`
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🔤 英語文領域 (English)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-eng-u1-1': {
+    title: 'Magic E 長母音發音規律模型',
+    subtitle: '字尾不發音 e 讓前方母音跳變為字母本音・CVC 到 CVCe',
+    diagramType: 'phonics-rule',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="24" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">Magic E (靜音 E) 魔法長母音變化法</text>
+      <rect x="25" y="42" width="125" height="75" rx="6" fill="#fee2e2" stroke="#ef4444" />
+      <text x="87" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">短母音 (Short)</text>
+      <text x="87" y="82" text-anchor="middle" font-size="10" fill="#334155">cap [æ] 帽子</text>
+      <text x="87" y="98" text-anchor="middle" font-size="10" fill="#334155">hop [ɑ] 單腳跳</text>
+      <text x="87" y="112" text-anchor="middle" font-size="9" fill="#64748b">閉音節結尾</text>
+      <path d="M 152 79 L 168 79" stroke="#f59e0b" stroke-width="3" />
+      <rect x="170" y="42" width="125" height="75" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="232" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">長母音 (Long + e)</text>
+      <text x="232" y="82" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">cape [e] 披風</text>
+      <text x="232" y="98" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">hope [o] 希望</text>
+      <text x="232" y="112" text-anchor="middle" font-size="9" fill="#2563eb">字母本音發音！</text>
+      <rect x="25" y="128" width="270" height="42" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="160" y="145" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#166534">口訣：字尾 e 不發音，把力量傳給前面的母音，發出字母自己的名字！</text>
+      <text x="160" y="159" text-anchor="middle" font-size="9" fill="#15803d">更多例子：kit ➔ kite ｜ pin ➔ pine ｜ tub ➔ tube ｜ pet ➔ Pete</text>
+    </svg>`
+  },
+
+  'kp-eng-u2-1': {
+    title: '英語核心空間介系詞立體空間圖',
+    subtitle: 'in 內部、on 接觸表面、under 下方、behind 後方、in front of 前方',
+    diagramType: 'prepositions',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="110" y="70" width="100" height="60" fill="#e2e8f0" stroke="#475569" stroke-width="2" rx="4" />
+      <text x="160" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#475569">the box</text>
+      <circle cx="160" cy="90" r="9" fill="#ef4444" />
+      <text x="160" y="94" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">in</text>
+      <circle cx="160" cy="52" r="9" fill="#3b82f6" />
+      <text x="160" y="56" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">on</text>
+      <circle cx="160" cy="148" r="9" fill="#10b981" />
+      <text x="160" y="152" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ffffff">under</text>
+      <circle cx="85" cy="100" r="9" fill="#f59e0b" />
+      <text x="85" y="104" text-anchor="middle" font-size="8" font-weight="bold" fill="#ffffff">next</text>
+      <circle cx="235" cy="100" r="9" fill="#8b5cf6" />
+      <text x="235" y="104" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#ffffff">behind</text>
+      <rect x="20" y="15" width="280" height="24" rx="4" fill="#eff6ff" />
+      <text x="160" y="31" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8">on 接觸表面 ｜ above 上方懸空 ｜ under 正下方 ｜ below 較低位置</text>
+    </svg>`
+  },
+
+  'kp-eng-u3-1': {
+    title: '現在進行式時態黃金公式與時間軸',
+    subtitle: '主詞 ＋ be 動詞 (am / is / are) ＋ V-ing ｜ 表示當下正在發生的動作',
+    diagramType: 'tense-timeline',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <line x1="30" y1="75" x2="290" y2="75" stroke="#94a3b8" stroke-width="3" />
+      <circle cx="80" cy="75" r="5" fill="#64748b" />
+      <text x="80" y="95" text-anchor="middle" font-size="10" fill="#64748b">Past (過去)</text>
+      <circle cx="160" cy="75" r="8" fill="#ef4444" />
+      <text x="160" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#ef4444">NOW (現在當下)</text>
+      <circle cx="240" cy="75" r="5" fill="#64748b" />
+      <text x="240" y="95" text-anchor="middle" font-size="10" fill="#64748b">Future (未來)</text>
+      <rect x="30" y="110" width="260" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="160" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">黃金公式：S ＋ be (am/is/are) ＋ V-ing</text>
+      <text x="160" y="145" text-anchor="middle" font-size="9.5" fill="#334155">關鍵時間副詞信號：now, right now, listen!, look!</text>
+      <text x="160" y="158" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">⚠️ 常見漏寫：He playing basketball (漏掉 is 扣光分數！)</text>
+    </svg>`
+  },
+
+  'kp-eng-u7-1': {
+    title: '形容詞比較級與最高級三階階梯',
+    subtitle: '原級 tall ➔ 比較級 taller than ➔ 最高級 the tallest of / in',
+    diagramType: 'stairs-grammar',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="30" y="120" width="80" height="35" fill="#93c5fd" rx="4" />
+      <text x="70" y="142" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">原級 (Positive)</text>
+      <text x="70" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">tall</text>
+      <rect x="120" y="85" width="80" height="70" fill="#60a5fa" rx="4" />
+      <text x="160" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">比較級 (-er)</text>
+      <text x="160" y="77" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">taller than</text>
+      <rect x="210" y="50" width="80" height="105" fill="#2563eb" rx="4" />
+      <text x="250" y="110" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">最高級 (-est)</text>
+      <text x="250" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#ef4444">the tallest</text>
+      <rect x="25" y="160" width="270" height="16" fill="#f1f5f9" />
+      <text x="160" y="172" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ef4444">鐵律：最高級前面【絕對不可漏掉 the】！兩者比較用 -er，三者以上用 the -est</text>
+    </svg>`
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🎨 藝術領域 (Arts)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-art-u1-1': {
+    title: '色彩三要素本質與色相環',
+    subtitle: '色相 (色彩名稱)・明度 (明暗深淺)・彩度 (鮮豔純度)',
+    diagramType: 'color-wheel',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <circle cx="85" cy="90" r="50" fill="none" stroke="#e2e8f0" stroke-width="14" />
+      <circle cx="85" cy="40" r="9" fill="#ef4444" />
+      <circle cx="125" cy="65" r="9" fill="#f97316" />
+      <circle cx="125" cy="115" r="9" fill="#eab308" />
+      <circle cx="85" cy="140" r="9" fill="#22c55e" />
+      <circle cx="45" cy="115" r="9" fill="#3b82f6" />
+      <circle cx="45" cy="65" r="9" fill="#a855f7" />
+      <text x="85" y="94" text-anchor="middle" font-size="9" font-weight="bold" fill="#475569">十二色相</text>
+      <rect x="155" y="30" width="145" height="120" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="227" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">色彩三屬性定義</text>
+      <text x="165" y="70" font-size="9.5" font-weight="bold" fill="#ef4444">1. 色相 (Hue)：</text>
+      <text x="165" y="83" font-size="8.5" fill="#334155">色彩的名字 (紅、黃、藍)</text>
+      <text x="165" y="100" font-size="9.5" font-weight="bold" fill="#eab308">2. 明度 (Value)：</text>
+      <text x="165" y="113" font-size="8.5" fill="#334155">色彩明暗，加白增高、加黑降低</text>
+      <text x="165" y="130" font-size="9.5" font-weight="bold" fill="#10b981">3. 彩度 (Chroma)：</text>
+      <text x="165" y="143" font-size="8.5" fill="#334155">色彩鮮豔純度，加灰降低</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9" fill="#64748b">三原色 (紅黃藍) 互混可得二次色，色相環相對 180° 為互補色 (強烈對比)</text>
+    </svg>`
+  },
+
+  'kp-art-u2-1': {
+    title: '單點透視空間規律與消失點架構',
+    subtitle: '消失點 VP (Vanishing Point)・視平線 HL (Horizon Line)・近大遠小',
+    diagramType: 'perspective',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <line x1="20" y1="80" x2="300" y2="80" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3" />
+      <text x="270" y="74" font-size="8.5" font-weight="bold" fill="#64748b">視平線 (HL)</text>
+      <circle cx="160" cy="80" r="4.5" fill="#ef4444" />
+      <text x="160" y="70" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">消失點 (VP)</text>
+      <line x1="160" y1="80" x2="30" y2="160" stroke="#3b82f6" stroke-width="2" />
+      <line x1="160" y1="80" x2="290" y2="160" stroke="#3b82f6" stroke-width="2" />
+      <rect x="40" y="110" width="30" height="45" fill="#93c5fd" stroke="#1d4ed8" />
+      <text x="55" y="137" text-anchor="middle" font-size="8" font-weight="bold" fill="#1e40af">近大</text>
+      <rect x="120" y="86" width="12" height="18" fill="#bfdbfe" stroke="#1d4ed8" />
+      <text x="126" y="99" text-anchor="middle" font-size="6.5" fill="#1e40af">遠小</text>
+      <rect x="25" y="152" width="270" height="22" rx="4" fill="#eff6ff" />
+      <text x="160" y="167" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e40af">透視法則：近大遠小、近實遠虛、近寬遠窄，營造二維平面之三維深度感！</text>
+    </svg>`
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🏃 健體領域 (Health & PE)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-pe-u4-2': {
+    title: '運動傷害急性處理最新 PEACE 原則',
+    subtitle: 'Protect 保護・Elevate 抬高・Avoid 避免消炎藥・Compress 加壓・Educate 衛教',
+    diagramType: 'first-aid-peace',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="20" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1e293b">運動傷害急性處置新思維：PEACE 準則</text>
+      <rect x="25" y="35" width="50" height="85" rx="5" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="50" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">P</text>
+      <text x="50" y="75" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#1e40af">保護</text>
+      <text x="50" y="95" text-anchor="middle" font-size="7.5" fill="#64748b">卸載保護</text>
+      <rect x="80" y="35" width="50" height="85" rx="5" fill="#ecfdf5" stroke="#10b981" />
+      <text x="105" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">E</text>
+      <text x="105" y="75" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#065f46">抬高</text>
+      <text x="105" y="95" text-anchor="middle" font-size="7.5" fill="#64748b">高於心臟</text>
+      <rect x="135" y="35" width="50" height="85" rx="5" fill="#fef2f2" stroke="#ef4444" />
+      <text x="160" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#b91c1c">A</text>
+      <text x="160" y="75" text-anchor="middle" font-size="8" font-weight="bold" fill="#991b1b">避免消炎</text>
+      <text x="160" y="95" text-anchor="middle" font-size="7.5" fill="#64748b">莫過度冰敷</text>
+      <rect x="190" y="35" width="50" height="85" rx="5" fill="#fefce8" stroke="#ca8a04" />
+      <text x="215" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#854d0e">C</text>
+      <text x="215" y="75" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#854d0e">加壓</text>
+      <text x="215" y="95" text-anchor="middle" font-size="7.5" fill="#64748b">彈性繃帶</text>
+      <rect x="245" y="35" width="50" height="85" rx="5" fill="#faf5ff" stroke="#a855f7" />
+      <text x="270" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#7e22ce">E</text>
+      <text x="270" y="75" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#7e22ce">衛教</text>
+      <text x="270" y="95" text-anchor="middle" font-size="7.5" fill="#64748b">主動復原</text>
+      <rect x="25" y="130" width="270" height="38" rx="5" fill="#f1f5f9" />
+      <text x="160" y="146" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#1e293b">新觀念升級：過度冰敷會抑制組織自然癒合與巨噬細胞修復！</text>
+      <text x="160" y="160" text-anchor="middle" font-size="8.5" fill="#ef4444">亞急性期遵循 LOVE 原則：Load (負荷)、Optimism (樂觀)、Vascular (心肺)、Exercise (運動)</text>
+    </svg>`
+  },
+
+  'kp-pe-u5-1': {
+    title: 'CPR 叫叫 CD 急救黃金口訣流程圖',
+    subtitle: '叫叫 CD・叫檢查意識・叫打119拿AED・C胸外按壓 100~120次/分・D電擊',
+    diagramType: 'cpr-algorithm',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">成人心肺復甦術 CPR「叫叫 CD」黃金口訣</text>
+      <rect x="25" y="35" width="60" height="60" rx="6" fill="#fee2e2" stroke="#ef4444" />
+      <text x="55" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">叫</text>
+      <text x="55" y="74" text-anchor="middle" font-size="8.5" fill="#7f1d1d">拍雙肩</text>
+      <text x="55" y="87" text-anchor="middle" font-size="8.5" fill="#7f1d1d">查呼吸</text>
+      <rect x="95" y="35" width="60" height="60" rx="6" fill="#fef08a" stroke="#ca8a04" />
+      <text x="125" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#854d0e">叫</text>
+      <text x="125" y="74" text-anchor="middle" font-size="8.5" fill="#854d0e">撥 119</text>
+      <text x="125" y="87" text-anchor="middle" font-size="8.5" fill="#854d0e">拿 AED</text>
+      <rect x="165" y="35" width="60" height="60" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="195" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">C</text>
+      <text x="195" y="74" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#1e40af">胸外按壓</text>
+      <text x="195" y="87" text-anchor="middle" font-size="8" fill="#1e40af">兩乳頭連線</text>
+      <rect x="235" y="35" width="60" height="60" rx="6" fill="#ecfdf5" stroke="#10b981" />
+      <text x="265" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">D</text>
+      <text x="265" y="74" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#065f46">去顫電擊</text>
+      <text x="265" y="87" text-anchor="middle" font-size="8" fill="#065f46">開貼插電</text>
+      <rect x="25" y="105" width="270" height="65" rx="6" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="160" y="122" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">C 按壓高品質規格：速率 100~120次/分 ｜ 深度至少 5 公分 ｜ 每次完全回彈</text>
+      <text x="160" y="138" text-anchor="middle" font-size="9" fill="#334155">AED 貼片位置：右上胸 (鎖骨下方) ＋ 左側乳頭外下方 (左側腋下前緣)</text>
+      <text x="160" y="152" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">⚠️ 分析心律與電擊時：大喊「大家離開，我離開，所有人離開！」嚴禁觸碰患者！</text>
+    </svg>`
+  },
+
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // 🌟 綜合活動領域 (Integrative)
+  // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-comp-u1-1': {
+    title: '時間管理艾森豪四象限決策矩陣',
+    subtitle: '重要性 vs 緊急性・第二象限 (重要不緊急) 才是卓越關鍵！',
+    diagramType: 'eisenhower-matrix',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="50" y="30" width="120" height="60" rx="4" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" />
+      <text x="110" y="48" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#b91c1c">I. 重要且緊急</text>
+      <text x="110" y="65" text-anchor="middle" font-size="8.5" fill="#7f1d1d">段考在即・突發危機</text>
+      <text x="110" y="78" text-anchor="middle" font-size="9" font-weight="bold" fill="#ef4444">立即執行！</text>
+      <rect x="175" y="30" width="120" height="60" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+      <text x="235" y="48" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#1d4ed8">II. 重要不緊急 ★</text>
+      <text x="235" y="65" text-anchor="middle" font-size="8.5" fill="#1e40af">深度閱讀・規律運動・先修</text>
+      <text x="235" y="78" text-anchor="middle" font-size="9" font-weight="bold" fill="#2563eb">規劃排程！(卓越關鍵)</text>
+      <rect x="50" y="95" width="120" height="60" rx="4" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" />
+      <text x="110" y="113" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#854d0e">III. 不重要但緊急</text>
+      <text x="110" y="130" text-anchor="middle" font-size="8.5" fill="#713f12">不速之客・即時訊息打擾</text>
+      <text x="110" y="143" text-anchor="middle" font-size="9" font-weight="bold" fill="#ca8a04">授權他人/委任！</text>
+      <rect x="175" y="95" width="120" height="60" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="235" y="113" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#475569">IV. 不重要不緊急</text>
+      <text x="235" y="130" text-anchor="middle" font-size="8.5" fill="#64748b">沉迷手遊・無目標刷短影片</text>
+      <text x="235" y="143" text-anchor="middle" font-size="9" font-weight="bold" fill="#64748b">堅決捨棄刪除！</text>
+      <text x="160" y="170" text-anchor="middle" font-size="9" font-weight="bold" fill="#1d4ed8">高效學習心法：把 70% 精力投資在「第二象限」，避免天天陷入第一象限救火！</text>
+    </svg>`
+  },
+
+  'kp-comp-u3-1': {
+    title: '費曼學習法四大步驟閉環模型',
+    subtitle: '確定概念 ➔ 教給小學生 ➔ 回溯查漏補缺 ➔ 簡化類比輸出',
+    diagramType: 'learning-loop',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e293b">諾貝爾獎得主費曼極簡學習法閉環</text>
+      <rect x="25" y="38" width="125" height="52" rx="5" fill="#eff6ff" stroke="#3b82f6" />
+      <text x="87" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8">1. 確立目標概念</text>
+      <text x="87" y="73" text-anchor="middle" font-size="8.5" fill="#334155">在白紙上寫下概念名稱</text>
+      <rect x="170" y="38" width="125" height="52" rx="5" fill="#f0fdf4" stroke="#10b981" />
+      <text x="232" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#047857">2. 假想教給十歲孩子</text>
+      <text x="232" y="73" text-anchor="middle" font-size="8.5" fill="#334155">杜絕術語、用白話大白話說清楚</text>
+      <rect x="170" y="100" width="125" height="52" rx="5" fill="#fee2e2" stroke="#ef4444" />
+      <text x="232" y="118" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">3. 卡殼處查漏補缺</text>
+      <text x="232" y="135" text-anchor="middle" font-size="8.5" fill="#334155">哪裡卡住就翻書重新理解</text>
+      <rect x="25" y="100" width="125" height="52" rx="5" fill="#fef08a" stroke="#ca8a04" />
+      <text x="87" y="118" text-anchor="middle" font-size="10" font-weight="bold" fill="#854d0e">4. 提煉簡化類比</text>
+      <text x="87" y="135" text-anchor="middle" font-size="8.5" fill="#334155">用生活比喻，形成永久記憶</text>
+      <text x="160" y="168" text-anchor="middle" font-size="9" font-weight="bold" fill="#2563eb">最高境界：如果你不能用最簡單的話向外行人解釋清楚，代表你還沒真正搞懂！</text>
+    </svg>`
+  }
+};
+
+const fileContent = `// 🎨 108 課綱六年級全科【知識點專屬全景向量資訊圖表庫】(Knowledge Infographics Catalog)
+// 專為微知識點提供高清純向量 SVG 資訊圖卡、算理模型與結構拓撲
+// 支援深淺色主題適配、無失真響應式縮放與語音導引
+
+import { unitDiagramCatalog } from './examNotes/unitDiagrams.js';
+
+// 專屬高頻微知識點純向量 SVG 資訊圖表庫
+export const specializedKnowledgeInfographics = ${JSON.stringify(specialized, null, 2)};
+
+/**
+ * 依據知識點物件取得其專屬的 SVG Infographic 資訊圖卡
+ * 1. 優先匹配專屬微知識點 Infographic (specializedKnowledgeInfographics)
+ * 2. 其次匹配該單元之精準高畫質向量架構圖 (unitDiagramCatalog)
+ * 3. 最後提供自適應高畫質核心微概念卡 (generic fallback)
+ */
+export function getKnowledgePointInfographic(knowledgePoint) {
+  if (!knowledgePoint) {
+    return {
+      title: '108 課綱核心圖解',
+      subtitle: '概念視覺化架構',
+      diagramType: 'default',
+      svg: \`<svg viewBox="0 0 240 140" width="100%" height="100%"><rect width="240" height="140" fill="#f8fafc" rx="8" /><text x="120" y="75" text-anchor="middle" fill="#64748b" font-size="13">108 課綱視覺化圖解</text></svg>\`
+    };
+  }
+
+  // 1. 優先檢查專屬微知識點 Infographic
+  if (specializedKnowledgeInfographics[knowledgePoint.id]) {
+    return specializedKnowledgeInfographics[knowledgePoint.id];
+  }
+
+  // 2. 檢查單元級向量圖示引擎 (unitDiagramCatalog)
+  const unitDiagram = unitDiagramCatalog[knowledgePoint.unitId];
+  if (unitDiagram && unitDiagram.svg) {
+    return {
+      title: \`\${knowledgePoint.title}・單元核心圖解\`,
+      subtitle: unitDiagram.subtitle || \`\${knowledgePoint.category} 考點精要\`,
+      diagramType: 'unit-diagram',
+      svg: unitDiagram.svg
+    };
+  }
+
+  // 3. 通用高畫質純向量 SVG 資訊圖表卡
+  return {
+    title: knowledgePoint.title,
+    subtitle: \`\${knowledgePoint.category}・核心微概念圖解\`,
+    diagramType: 'generic',
+    svg: \`<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" stroke="#e2e8f0" stroke-width="1.5" />
+      <rect x="20" y="16" width="280" height="32" rx="6" fill="#3b82f6" />
+      <text x="160" y="37" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">\${knowledgePoint.title}</text>
+      
+      <rect x="25" y="58" width="270" height="42" rx="5" fill="#eff6ff" stroke="#93c5fd" />
+      <text x="35" y="76" font-size="10" font-weight="bold" fill="#1e40af">【核心定律與推導】</text>
+      <text x="35" y="92" font-size="9" fill="#1e3a8a">\${(knowledgePoint.formulaOrRule || '掌握基本定義與解題步驟').slice(0, 48)}</text>
+      
+      <rect x="25" y="108" width="130" height="42" rx="4" fill="#ecfdf5" stroke="#10b981" />
+      <text x="90" y="124" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#047857">生活素養實用性</text>
+      <text x="90" y="139" text-anchor="middle" font-size="8" fill="#065f46">真實情境問題解決</text>
+
+      <rect x="165" y="108" width="130" height="42" rx="4" fill="#fee2e2" stroke="#ef4444" />
+      <text x="230" y="124" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#991b1b">段考防雷針</text>
+      <text x="230" y="139" text-anchor="middle" font-size="8" fill="#7f1d1d">圈出關鍵字避免粗心</text>
+
+      <text x="160" y="166" text-anchor="middle" font-size="9" font-weight="bold" fill="#64748b">108 課綱六年級素養微概念・國中七年級先修橋樑</text>
+    </svg>\`
+  };
+}
+`;
+
+fs.writeFileSync(path.join(rootDir, 'src/data/knowledgeInfographics.js'), fileContent, 'utf-8');
+console.log('Successfully wrote expanded src/data/knowledgeInfographics.js with 36+ specialized infographics!');

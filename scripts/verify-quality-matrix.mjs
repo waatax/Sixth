@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 console.log('========================================================================');
-console.log('🚀 最強小六 (Sixth) 全維度 12 層品質與零基礎學習體驗檢驗矩陣測試');
+console.log('🚀 最強小六 (Sixth) 全維度 13 層品質與零基礎學習體驗檢驗矩陣測試');
 console.log('========================================================================\n');
 
 const results = [];
@@ -385,6 +385,42 @@ results.push({
   target: `8科 × 2學期 × 3範圍 (48 份講義、${totalWalkthroughCount} 道真題步驟詳解)`,
   method: '無空缺檢驗 + 考點向量圖解 + 審題雷達表格 + 步驟級真題解答',
   result: validHandoutCombos === totalHandoutCombos ? `${validHandoutCombos} / ${totalHandoutCombos} 份講義 (100% 完美齊備)` : `${validHandoutCombos} / ${totalHandoutCombos} 份通過`
+});
+
+// ----------------------------------------------------
+// 13. 108 課綱全科微知識點與純向量 Infographics 完整度檢驗
+// ----------------------------------------------------
+const { knowledgePointsData } = await import('../src/data/knowledgePoints.js');
+const { getKnowledgePointInfographic } = await import('../src/data/knowledgeInfographics.js');
+
+let validKps = 0;
+let brokenKpSvgs = 0;
+let kpHavingAllFields = 0;
+let kpHavingTopology = 0;
+
+for (const kp of knowledgePointsData) {
+  const hasFields = kp.title && kp.definition && kp.formulaOrRule && kp.strategyTip && kp.trapAlert && kp.practicalUtility && kp.textbookFocus;
+  if (hasFields) kpHavingAllFields++;
+
+  if (Array.isArray(kp.relatedPoints) && kp.relatedPoints.length >= 3) {
+    kpHavingTopology++;
+  }
+
+  const info = getKnowledgePointInfographic(kp);
+  if (info && info.svg && info.svg.includes('<svg') && info.svg.includes('</svg>')) {
+    validKps++;
+  } else {
+    brokenKpSvgs++;
+  }
+}
+
+results.push({
+  layer: '微知識點與關聯圖卡',
+  target: `全站 64 單元、${knowledgePointsData.length} 個微知識點、四維關聯拓撲與專屬 SVG`,
+  method: '明確定義 + 算理心法 + 防雷避坑 + 關聯拓撲 (≥3點) + 純向量 SVG 閉合性檢查',
+  result: (validKps === knowledgePointsData.length && brokenKpSvgs === 0 && kpHavingAllFields === knowledgePointsData.length && kpHavingTopology === knowledgePointsData.length)
+    ? `${validKps} / ${knowledgePointsData.length} 點 (100% 齊備，拓撲網絡 100%，SVG 0 損壞)`
+    : `${validKps} / ${knowledgePointsData.length} 通過 (${brokenKpSvgs} 損壞)`
 });
 
 // ----------------------------------------------------

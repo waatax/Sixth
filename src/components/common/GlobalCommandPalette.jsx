@@ -20,10 +20,12 @@ import {
   Timer,
   CheckCircle2,
   BookmarkCheck,
-  Award
+  Award,
+  Lightbulb
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import { interactiveLabsList } from '../../data/interactiveLabsData';
+import { knowledgePointsData } from '../../data/knowledgePoints';
 import SubjectIconBadge from './SubjectIconBadge';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
@@ -184,6 +186,38 @@ export const GlobalCommandPalette = () => {
       });
     });
 
+    // 5. 108 課綱 192 個微知識點全量索引
+    list.push({
+      id: 'tool-knowledge-hub-entry',
+      type: 'tool',
+      category: 'tools',
+      title: '💡 108 課綱視覺知識庫與微知識點圖鑑 (192 考點全解)',
+      subtitle: '全科高清純向量 SVG 資訊圖表、核心算理、防雷避坑與生活實用性',
+      desc: '全科 192 個微知識點純向量資訊圖卡圖鑑',
+      badge: '純向量',
+      toolIcon: Lightbulb,
+      subjectColor: '#f59e0b',
+      action: () => window.dispatchEvent(new CustomEvent('open_knowledge_hub')),
+      keywords: '知識點 圖鑑 資訊圖 infographic 考點 避雷 心法 公式 定義 視覺知識庫'.toLowerCase()
+    });
+
+    knowledgePointsData.forEach(kp => {
+      const subMeta = coursesData.subjects.find(s => s.id === kp.subjectId) || coursesData.subjects[0];
+      list.push({
+        id: `kp-${kp.id}`,
+        type: 'kpoint',
+        category: 'kpoints',
+        title: `${kp.title}`,
+        subtitle: `${subMeta.name}・${kp.category}・${kp.semester}`,
+        desc: kp.definition,
+        badge: '微知識點',
+        subjectId: kp.subjectId,
+        subjectColor: subMeta.color,
+        action: () => window.dispatchEvent(new CustomEvent('open_knowledge_hub', { detail: { subject: kp.subjectId, unitId: kp.unitId, kpId: kp.id } })),
+        keywords: `${kp.title} ${kp.category} ${kp.definition} ${kp.formulaOrRule} ${kp.practicalUtility} ${kp.strategyTip} ${kp.trapAlert} ${subMeta.name}`.toLowerCase()
+      });
+    });
+
     return list;
   }, []);
 
@@ -232,7 +266,11 @@ export const GlobalCommandPalette = () => {
     triggerHaptic('selection');
     playSound('ios_tap');
     setIsOpen(false);
-    navigate(item.path);
+    if (item.action) {
+      item.action();
+    } else if (item.path) {
+      navigate(item.path);
+    }
   };
 
   const handleKeyDownInInput = (e) => {
@@ -396,6 +434,7 @@ export const GlobalCommandPalette = () => {
         >
           {[
             { id: 'all', label: `全部 (${filteredResults.length})` },
+            { id: 'kpoints', label: '💡 微知識點 (192)' },
             { id: 'lessons', label: '🧮 課程單元 (64)' },
             { id: 'subjects', label: '📚 八大領域' },
             { id: 'labs', label: '🔬 互動實驗 (14)' },
@@ -585,6 +624,23 @@ export const GlobalCommandPalette = () => {
                         }}
                       >
                         {item.toolIcon && <item.toolIcon size={18} />}
+                      </div>
+                    )}
+                    {item.type === 'kpoint' && (
+                      <div 
+                        style={{
+                          width: '32px',
+                          height: '32px',
+                          borderRadius: '10px',
+                          backgroundColor: `${item.subjectColor}18`,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: item.subjectColor,
+                          flexShrink: 0
+                        }}
+                      >
+                        <Lightbulb size={18} />
                       </div>
                     )}
 

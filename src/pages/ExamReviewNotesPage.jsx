@@ -8,7 +8,10 @@ import {
   normalizeHighlightItem
 } from '../data/examNotes';
 import { getUnitDiagram } from '../data/examNotes/unitDiagrams';
+import { getKnowledgePointsByUnit } from '../data/knowledgePoints';
+import { getKnowledgePointInfographic } from '../data/knowledgeInfographics';
 import KnowledgeMasteryModal from '../components/examNotes/KnowledgeMasteryModal';
+import VisualKnowledgeHubModal from '../components/common/VisualKnowledgeHubModal';
 import { 
   Printer, 
   Search, 
@@ -196,7 +199,10 @@ const ExamReviewNotesPage = () => {
   const [userAnswers, setUserAnswers] = useState({});
   // 考點圖解放大檢視模態框
   const [previewDiagram, setPreviewDiagram] = useState(null);
-  // 焦點衝刺模式: 'all' (全部) | 'highlights' (段考亮點) | 'versions' (三版本對照) | 'radar' (審題雷達) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (真題解析) | 'checklist' (自測清單)
+  // 全域視覺知識庫模態框目標單元 (null 為關閉)
+  const [hubModalUnitId, setHubModalUnitId] = useState(null);
+  const [hubModalKpId, setHubModalKpId] = useState(null);
+  // 焦點衝刺模式: 'all' (全部) | 'kpoints' (微知識點圖卡) | 'highlights' (段考亮點) | 'versions' (三版本對照) | 'radar' (審題雷達) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (真題解析) | 'checklist' (自測清單)
   const [focusSection, setFocusSection] = useState('all');
 
   // 當前學科資訊
@@ -800,6 +806,7 @@ const ExamReviewNotesPage = () => {
           <div className="focus-pills-list">
             {[
               { id: 'all', label: '🌟 完整全覽精讀', tag: null },
+              { id: 'kpoints', label: '💡 明確微知識點圖鑑', tag: '圖解' },
               { id: 'highlights', label: '💡 三大段考知識亮點', tag: '精華' },
               { id: 'radar', label: '🔍 審題關鍵字雷達', tag: '破題' },
               { id: 'versions', label: '📚 三版本測驗對照', tag: '對齊' },
@@ -959,6 +966,80 @@ const ExamReviewNotesPage = () => {
                       </div>
                     )}
                   </div>
+
+                  {/* 💡 108 課綱明確微知識點與純向量 Infographics 圖卡 */}
+                  {(focusSection === 'all' || focusSection === 'kpoints') && (
+                    <div className="unit-kpoints-section mb-4 p-4 rounded-2xl bg-gradient-to-r from-blue-50/80 via-emerald-50/50 to-indigo-50/60 dark:from-slate-900/80 dark:to-slate-800/80 border border-blue-200/60 dark:border-slate-700/80">
+                      <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
+                        <div className="flex items-center gap-2">
+                          <span className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold shadow-xs">
+                            <Lightbulb size={17} />
+                          </span>
+                          <div>
+                            <h3 className="text-sm font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
+                              <span>108 課綱明確微知識點與專屬向量圖卡</span>
+                              <span className="badge badge-accent text-[10px] font-bold">考點解碼</span>
+                            </h3>
+                            <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                              明確定義、核心公式算理、防雷避坑與生活實用性
+                            </p>
+                          </div>
+                        </div>
+
+                        <button
+                          onClick={() => { setHubModalUnitId(note.unitId); playSound('click'); }}
+                          className="px-2.5 py-1 rounded-lg text-xs font-bold bg-blue-600 text-white hover:bg-blue-700 transition-colors flex items-center gap-1 shadow-xs"
+                        >
+                          <ZoomIn size={13} />
+                          <span>展開本單元全景圖鑑</span>
+                        </button>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        {getKnowledgePointsByUnit(note.unitId).map((kp, kpIdx) => {
+                          return (
+                            <div 
+                              key={kp.id || kpIdx} 
+                              className="p-3 rounded-xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 shadow-xs flex flex-col justify-between"
+                            >
+                              <div>
+                                <div className="flex items-center justify-between gap-1 mb-1.5">
+                                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">
+                                    0{kpIdx + 1} {kp.category.split('・')[1] || kp.category}
+                                  </span>
+                                  <span className="text-[10px] text-slate-400 font-mono">
+                                    {kp.id}
+                                  </span>
+                                </div>
+                                <h4 className="text-xs font-bold text-slate-800 dark:text-slate-100 mb-1 leading-snug">
+                                  {kp.title}
+                                </h4>
+                                <p className="text-[11px] text-slate-600 dark:text-slate-300 line-clamp-3 leading-relaxed mb-2 font-sans">
+                                  {kp.definition}
+                                </p>
+                              </div>
+
+                              <div className="pt-2 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between gap-1">
+                                <span className="text-[10px] text-emerald-600 dark:text-emerald-400 truncate max-w-[130px]">
+                                  {kp.practicalUtility.replace('【生活實用】', '🌍 ')}
+                                </span>
+                                <button
+                                  onClick={() => { 
+                                    setHubModalUnitId(note.unitId); 
+                                    setHubModalKpId(kp.id); 
+                                    playSound('pop'); 
+                                  }}
+                                  className="text-[11px] text-blue-600 dark:text-blue-400 font-bold hover:underline flex items-center gap-0.5"
+                                >
+                                  查看圖卡 ➔
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
 
                   {/* 💡 三大段考核心知識亮點 (High-Yield Highlights) */}
                   {(focusSection === 'all' || focusSection === 'highlights') && note.highlights && note.highlights.length > 0 && (
@@ -1469,6 +1550,15 @@ const ExamReviewNotesPage = () => {
           setIsMasteryModalOpen(false);
           navigate(`/exam-notes/${subId}/${sem}/all#note-${uId}`);
         }}
+      />
+
+      {/* 💡 全域視覺知識庫與微知識點圖鑑模態框 */}
+      <VisualKnowledgeHubModal
+        isOpen={!!hubModalUnitId}
+        onClose={() => { setHubModalUnitId(null); setHubModalKpId(null); }}
+        initialSubject={currentSubject}
+        initialUnitId={hubModalUnitId}
+        initialKpId={hubModalKpId}
       />
 
       {/* 🎨 考點圖解高清向量放大檢視模態框 */}

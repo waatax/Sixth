@@ -21,7 +21,8 @@ import {
   Search,
   FlaskConical,
   BookmarkCheck,
-  Flame
+  Flame,
+  Lightbulb
 } from 'lucide-react';
 import GuidedStartWizard from '../components/common/GuidedStartWizard';
 import DailyQuestCard from '../components/common/DailyQuestCard';
@@ -262,6 +263,62 @@ const HomePage = () => {
       {/* 🧭 1.8 全科知識圖譜掌握儀表盤與每日自律三部曲 */}
       {/* ============================================================ */}
       <GlobalKnowledgeRadar />
+
+      {/* ============================================================ */}
+      {/* 💡 1.9 全科視覺知識庫與 192 微知識點純向量 Infographics 圖鑑 */}
+      {/* ============================================================ */}
+      <div 
+        className="card mb-6 p-4 sm:p-5 relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(59, 130, 246, 0.08) 50%, rgba(16, 185, 129, 0.08) 100%)',
+          border: '1.5px solid rgba(245, 158, 11, 0.3)',
+          borderRadius: 'var(--radius-xl)'
+        }}
+      >
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <div className="flex items-center gap-3.5">
+            <div 
+              className="w-12 h-12 rounded-2xl flex items-center justify-center text-white flex-shrink-0 shadow-md"
+              style={{ background: 'linear-gradient(135deg, #f59e0b, #ea580c)' }}
+            >
+              <Lightbulb size={24} className="animate-pulse" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-extrabold text-base sm:text-lg text-slate-800 dark:text-slate-100">
+                  💡 108 課綱全科視覺知識庫與微知識點圖鑑
+                </span>
+                <span className="badge badge-accent text-[11px] font-bold">
+                  192 微知識點
+                </span>
+                <span className="badge badge-success text-[11px] font-bold">
+                  純向量 Infographics
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-secondary m-0 mt-1 max-w-2xl leading-relaxed">
+                八大學科 64 單元深度教研解構・每個知識點皆具備<strong>明確定義原理</strong>、<strong>核心心法公式</strong>、<strong>避雷防錯警訊</strong>、<strong>生活實用性</strong>與<strong>高對比純向量 SVG 資訊圖表</strong>！
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => {
+              playSound('ios_tap');
+              triggerHaptic('medium');
+              window.dispatchEvent(new CustomEvent('open_knowledge_hub'));
+            }}
+            className="ios-pressable px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
+            style={{
+              background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+              border: 'none',
+              cursor: 'pointer'
+            }}
+          >
+            <span>開啟全科知識圖鑑</span>
+            <ArrowRight size={16} />
+          </button>
+        </div>
+      </div>
 
       {/* ============================================================ */}
       {/* 🎯 2. 【全新核心】全科知識主題探索與智能搜尋中心 (直覺找到感興趣主題) */}

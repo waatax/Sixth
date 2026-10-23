@@ -72,6 +72,7 @@ import ProblemSolvingScaffold from '../components/lesson/ProblemSolvingScaffold'
 import LessonCompletionModal from '../components/lesson/LessonCompletionModal';
 import LessonGlossaryModal from '../components/lesson/LessonGlossaryModal';
 import LessonVisualInfographicDeck from '../components/lesson/LessonVisualInfographicDeck';
+import VisualKnowledgeHubModal from '../components/common/VisualKnowledgeHubModal';
 import { findGlossaryTerm } from '../data/glossaryTerms';
 import './LessonPage.css';
 
@@ -185,6 +186,7 @@ const LessonPage = () => {
   const [isFlashcardsOpen, setIsFlashcardsOpen] = useState(false);
   const [isScratchpadOpen, setIsScratchpadOpen] = useState(false);
   const [isCheatSheetOpen, setIsCheatSheetOpen] = useState(false);
+  const [isKnowledgeHubOpen, setIsKnowledgeHubOpen] = useState(false);
   const [isTocDrawerOpen, setIsTocDrawerOpen] = useState(false);
   const [hasBookmarked, setHasBookmarked] = useState(false);
   const [showCompletionModal, setShowCompletionModal] = useState(false);
@@ -835,6 +837,14 @@ const LessonPage = () => {
         markdownContent={content}
       />
 
+      {/* 💡 Visual Knowledge Hub & Infographics Modal */}
+      <VisualKnowledgeHubModal
+        isOpen={isKnowledgeHubOpen}
+        onClose={() => setIsKnowledgeHubOpen(false)}
+        initialSubject={currentSubject?.id || 'all'}
+        initialUnitId={currentUnit.id}
+      />
+
       {/* Lesson Completion Milestone Modal */}
       <LessonCompletionModal
         isOpen={showCompletionModal}
@@ -1453,6 +1463,7 @@ const LessonPage = () => {
 
           {/* 📊 視覺化知識圖表與多維度比較矩陣 */}
           <LessonVisualInfographicDeck
+            unitId={currentUnit.id}
             unitTitle={currentUnit.title}
             subjectName={currentSubject?.shortName || currentSubject?.name || ''}
             keyConcepts={currentUnit.keyConcepts || []}
@@ -2648,6 +2659,16 @@ const LessonPage = () => {
             >
               <FileText size={16} />
               <span className="hidden md:inline">秘笈</span>
+            </button>
+
+            {/* Visual Knowledge Hub Trigger */}
+            <button
+              onClick={() => { setIsKnowledgeHubOpen(true); playSound('click'); }}
+              className="dock-btn text-emerald-500 font-bold"
+              title="108 課綱微知識點與純向量 Infographics 圖鑑"
+            >
+              <Lightbulb size={16} />
+              <span className="hidden md:inline">知識圖鑑</span>
             </button>
 
             {/* Reading Theme Toggle */}
