@@ -118,6 +118,24 @@ export const interactiveLabsList = [
     emoji: '❤️'
   },
   {
+    id: 'human-body-longevity',
+    title: '🧬 人體六大生命系統協同與細胞抗衰老沙盤',
+    subtitle: '即時調控 Zone 2 有氧、深層睡眠與抗炎飲食，探索細胞自噬與粒線體生化！',
+    subject: 'health_pe',
+    subjectName: '健康與體育',
+    color: '#059669',
+    emoji: '🧬'
+  },
+  {
+    id: 'fitness-hypertrophy-fatloss',
+    title: '🏋️ 體適能增肌超負荷與減脂能量代謝計算機',
+    subtitle: '掌握漸進超負荷 MPS 蛋白質合成閾值、TDEE 熱量赤字與體適能五基石！',
+    subject: 'health_pe',
+    subjectName: '健康與體育',
+    color: '#2563eb',
+    emoji: '🏋️'
+  },
+  {
     id: 'time-management-matrix',
     title: '🌱 艾森豪時間管理四象限決策分類機',
     subtitle: '分類重要度與緊急度，擺脫拖延焦慮，聚焦第二象限卓越人生！',

@@ -3279,7 +3279,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-2",
-        "title": "運動前後黃金配置",
+        "title": "漸進式超負荷與肌肥大 (Hyp…",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "跨域人體力學",
@@ -3346,7 +3346,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-2",
-        "title": "運動前後黃金配置",
+        "title": "漸進式超負荷與肌肥大 (Hyp…",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "跨域人體力學",
@@ -3413,7 +3413,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-2",
-        "title": "運動前後黃金配置",
+        "title": "漸進式超負荷與肌肥大 (Hyp…",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "跨域人體力學",
@@ -3681,7 +3681,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "跨域生命健康",
@@ -3748,7 +3748,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "跨域生命健康",
@@ -3815,7 +3815,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "跨域生命健康",
@@ -4083,7 +4083,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "跨域微觀健康",
@@ -4150,7 +4150,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "跨域微觀健康",
@@ -4217,7 +4217,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "跨域微觀健康",
@@ -9760,10 +9760,10 @@ export const knowledgePointsData = [
     "unitIndex": 0,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "青春期第二性徵個體差異",
+    "title": "青春期內分泌生長軸線 (HPG軸)",
     "category": "健體・觀念本質與定義",
     "badgeColor": "blue",
-    "definition": "青春期第二性徵個體差異：發育年齡受遺傳與營養影響各不相同，男生喉結變聲、女生乳房發育與月經來潮皆為正常健康里程碑。",
+    "definition": "青春期內分泌生長軸線 (HPG軸)：下視丘釋放 GnRH 促性腺激素釋放激素，驅動腦下垂體分泌生長激素 (GH) 與性腺激素，男女第二性徵（喉結變聲、乳房發育、月經來潮）皆為自然健康里程碑。",
     "formulaOrRule": "核心工具與心法：這是長大成熟的健康正常里程碑，不因生長速度快慢而自卑焦慮",
     "strategyTip": "【審題觸發】當題目出現「男女第二性徵出現時正確心理調適」時，立即啟動「這是長大成熟的健康正常里程碑，不因生長速度快慢而自卑焦慮」解題。考前速記：擁抱成長生理變化，尊重差異不嘲諷；保護身體隱私自主權，遇困擾勇於向師長求助！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -9774,7 +9774,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u1-2",
-        "title": "青春期個人衛生保養之道",
+        "title": "生長激素與深層睡眠修復機制",
         "unitId": "pe-u1",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -9783,7 +9783,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u1-3",
-        "title": "打破性別刻板印象與自我肯定",
+        "title": "打破體型焦慮與自我肯定",
         "unitId": "pe-u1",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -9792,7 +9792,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -9818,10 +9818,10 @@ export const knowledgePointsData = [
     "unitIndex": 0,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "青春期個人衛生保養之道",
+    "title": "生長激素與深層睡眠修復機制",
     "category": "健體・運算算理與公式",
     "badgeColor": "amber",
-    "definition": "青春期個人衛生保養之道：皮脂分泌旺盛需每日溫和潔面、養成更換貼身衣物習慣、正確認識月經與夢遺之生理調適。",
+    "definition": "生長激素與深層睡眠修復機制：醫學實證人體生長激素約 70% 集中於每晚 22:00~02:00 第 3~4 期慢波深層睡眠釋放，充足睡眠 8.5~9 小時是骨骼生長板縱向延伸的決定性關鍵。",
     "formulaOrRule": "核心工具與心法：定期更換衛生棉保持乾爽；保持生殖器官清潔；女生經期避免劇烈冷水刺激",
     "strategyTip": "【審題觸發】當題目出現「月經生理期與夢遺衛生護理」時，立即啟動「定期更換衛生棉保持乾爽；保持生殖器官清潔；女生經期避免劇烈冷水刺激」解題。考前速記：擁抱成長生理變化，尊重差異不嘲諷；保護身體隱私自主權，遇困擾勇於向師長求助！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -9832,7 +9832,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u1-1",
-        "title": "青春期第二性徵個體差異",
+        "title": "青春期內分泌生長軸線 (HPG軸)",
         "unitId": "pe-u1",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -9841,7 +9841,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u1-3",
-        "title": "打破性別刻板印象與自我肯定",
+        "title": "打破體型焦慮與自我肯定",
         "unitId": "pe-u1",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -9850,7 +9850,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -9876,10 +9876,10 @@ export const knowledgePointsData = [
     "unitIndex": 0,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "打破性別刻板印象與自我肯定",
+    "title": "打破體型焦慮與自我肯定",
     "category": "健體・生活實用與避雷",
     "badgeColor": "emerald",
-    "definition": "打破性別刻板印象與自我肯定：尊重彼此生長節奏與體型差異，建立健康正向身體意象 (Body Image)。",
+    "definition": "打破體型焦慮與自我肯定：荷爾蒙分泌受遺傳與體質差異影響生長節奏，遠離含糖飲料阻斷胰島素干擾生長激素，建立健康自律的正向身體意象 (Body Image)。",
     "formulaOrRule": "核心工具與心法：「我的身體我做主」：任何人未經同意觸碰隱私部位皆應大聲說「不」並立即告知信任師長",
     "strategyTip": "【審題觸發】當題目出現「個人身體自主權防線」時，立即啟動「「我的身體我做主」：任何人未經同意觸碰隱私部位皆應大聲說「不」並立即告知信任師長」解題。考前速記：擁抱成長生理變化，尊重差異不嘲諷；保護身體隱私自主權，遇困擾勇於向師長求助！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -9890,7 +9890,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u1-1",
-        "title": "青春期第二性徵個體差異",
+        "title": "青春期內分泌生長軸線 (HPG軸)",
         "unitId": "pe-u1",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -9899,7 +9899,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u1-2",
-        "title": "青春期個人衛生保養之道",
+        "title": "生長激素與深層睡眠修復機制",
         "unitId": "pe-u1",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -9908,7 +9908,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -9934,10 +9934,10 @@ export const knowledgePointsData = [
     "unitIndex": 1,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "六大類食物每天均衡攝取",
+    "title": "三大營養素代謝與食物熱效應",
     "category": "健體・觀念本質與定義",
     "badgeColor": "blue",
-    "definition": "六大類食物每天均衡攝取：全穀雜糧類、豆魚蛋肉類、乳品類、蔬菜類、水果類、油脂與堅果種子類。",
+    "definition": "三大營養素代謝與食物熱效應：碳水化合物 (4 kcal/g)、蛋白質 (4 kcal/g)、脂肪 (9 kcal/g)；蛋白質具有最高 20~30% 攝食熱效應 (TEF) 並提供肌肉合成必需胺基酸。",
     "formulaOrRule": "核心工具與心法：全穀雜糧類、豆魚蛋肉類、乳品類、蔬菜類、水果類、油脂與堅果種子類",
     "strategyTip": "【審題觸發】當題目出現「六大類食物完整清單」時，立即啟動「全穀雜糧類、豆魚蛋肉類、乳品類、蔬菜類、水果類、油脂與堅果種子類」解題。考前速記：「我的餐盤」聰明吃：飯跟蔬菜一樣多、豆魚蛋肉一掌心、堅果種子一茶匙；少油少鹽多纖維！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -9948,7 +9948,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u2-2",
-        "title": "衛福部「我的餐盤",
+        "title": "升糖指數 (GI) 與胰島素脂肪囤積機制",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -9957,7 +9957,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-3",
-        "title": "食品營養標示讀取三部曲",
+        "title": "衛福部「我的餐盤",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -9966,7 +9966,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -9992,10 +9992,10 @@ export const knowledgePointsData = [
     "unitIndex": 1,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "衛福部「我的餐盤",
+    "title": "升糖指數 (GI) 與胰島素脂肪囤積機制",
     "category": "健體・運算算理與公式",
     "badgeColor": "amber",
-    "definition": "衛福部「我的餐盤」口訣大招：每天早晚一杯奶、每餐水果拳頭大、菜比水果多一點、飯跟蔬菜一樣多、豆魚蛋肉一掌心、堅果種子一茶匙。",
+    "definition": "升糖指數 (GI) 與胰島素脂肪囤積機制：精緻高糖飲食造成血糖急升暴跌，促使胰島素大量分泌鎖住脂肪分解；原型低 GI 高纖食物維持平穩血糖，啟動升糖素促進體脂肪燃燒。",
     "formulaOrRule": "核心工具與心法：碳水化合物 (醣類) 4 大卡/克、蛋白質 4 大卡/克、脂肪 9 大卡/克",
     "strategyTip": "【審題觸發】當題目出現「三大產熱營養素熱量換算」時，立即啟動「碳水化合物 (醣類) 4 大卡/克、蛋白質 4 大卡/克、脂肪 9 大卡/克」解題。考前速記：「我的餐盤」聰明吃：飯跟蔬菜一樣多、豆魚蛋肉一掌心、堅果種子一茶匙；少油少鹽多纖維！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10006,7 +10006,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10015,7 +10015,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-3",
-        "title": "食品營養標示讀取三部曲",
+        "title": "衛福部「我的餐盤",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10024,7 +10024,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10050,10 +10050,10 @@ export const knowledgePointsData = [
     "unitIndex": 1,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "食品營養標示讀取三部曲",
+    "title": "衛福部「我的餐盤",
     "category": "健體・生活實用與避雷",
     "badgeColor": "emerald",
-    "definition": "食品營養標示讀取三部曲：檢視每一份量與總份數、計算總熱量卡路里、嚴格避開反式脂肪與過量精緻糖。",
+    "definition": "衛福部「我的餐盤」與腸道微生態抗炎：每天早晚一杯奶、每餐水果拳頭大、菜比水果多一點、飯跟蔬菜一樣多、豆魚蛋肉一掌心、堅果種子一茶匙；水溶性膳食纖維滋養腸道菌群產生短鏈脂肪酸抗衰老。",
     "formulaOrRule": "核心工具與心法：導致肥胖與蛀牙、抑制生長荷爾蒙分泌影響長高、引發專注力不集中與心血管負擔",
     "strategyTip": "【審題觸發】當題目出現「含糖手搖飲對身體發育三大危害」時，立即啟動「導致肥胖與蛀牙、抑制生長荷爾蒙分泌影響長高、引發專注力不集中與心血管負擔」解題。考前速記：「我的餐盤」聰明吃：飯跟蔬菜一樣多、豆魚蛋肉一掌心、堅果種子一茶匙；少油少鹽多纖維！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10064,7 +10064,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u2-1",
-        "title": "六大類食物每天均衡攝取",
+        "title": "三大營養素代謝與食物熱效應",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10073,7 +10073,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u2-2",
-        "title": "衛福部「我的餐盤",
+        "title": "升糖指數 (GI) 與胰島素脂肪囤積機制",
         "unitId": "pe-u2",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10082,7 +10082,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10108,10 +10108,10 @@ export const knowledgePointsData = [
     "unitIndex": 2,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "成人 CPR+AED 救命黃金口訣",
+    "title": "成人生命之鏈 CPR+AED「…",
     "category": "健體・觀念本質與定義",
     "badgeColor": "blue",
-    "definition": "成人 CPR+AED 救命黃金口訣：「叫、叫、C、D」！叫（確認意識與正常呼吸） ➔ 叫（大聲呼救指定旁人打 119 與取 AED） ➔ C（胸外按壓） ➔ D（電擊除顫）。",
+    "definition": "成人生命之鏈 CPR+AED「…：成人生命之鏈 CPR+AED「叫、叫、C、D」：叫（確認無意識與無正常呼吸） ➔ 叫（指定旁人打 119 拿 AED） ➔ C（胸外按壓維持腦部冠狀動脈微循環灌流） ➔ D（開機貼片依指示電擊除顫）。",
     "formulaOrRule": "核心工具與心法：兩乳頭連線中央胸骨處；深度 5~6 公分；速率每分鐘 100~120 下（口訣：快快壓、用力壓、莫中斷）",
     "strategyTip": "【審題觸發】當題目出現「成人 CPR 正確胸外按壓位置與頻率」時，立即啟動「兩乳頭連線中央胸骨處；深度 5~6 公分；速率每分鐘 100~120 下（口訣：快快壓、用力壓、莫中斷）」解題。考前速記：運動扭傷 PRICE：保護、休息、冰敷、加壓、抬高；CPR+AED 急救心法：叫叫壓電，按壓 100~120 次/分！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10122,7 +10122,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u3-2",
-        "title": "CPR 正確胸外按壓規範",
+        "title": "CPR 按壓血流力學金律",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10131,7 +10131,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-3",
-        "title": "運動傷害急性處理最新 PEACE 原則",
+        "title": "運動傷害急性處理最新醫學 PE…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10140,7 +10140,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-1",
-        "title": "健康體適能四大要素",
+        "title": "健康體適能五大基石",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10175,10 +10175,10 @@ export const knowledgePointsData = [
     "unitIndex": 2,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "CPR 正確胸外按壓規範",
+    "title": "CPR 按壓血流力學金律",
     "category": "健體・運算算理與公式",
     "badgeColor": "amber",
-    "definition": "CPR 正確胸外按壓規範：兩乳頭連線中央胸骨下半段；按壓深度 5~6 公分；頻率每分鐘 100~120 下；按壓用力且讓胸廓完全回彈，中斷不超過 10 秒。",
+    "definition": "CPR 按壓血流力學金律：兩乳頭連線中央胸骨下半段；按壓深度 5~6 公分；頻率每分鐘 100~120 下；每一次按壓必須讓胸廓「完全回彈」心室才能充分充血，中斷不可超過 10 秒！",
     "formulaOrRule": "核心工具與心法：一片貼在患者右鎖骨下方，另一片貼在左乳頭外側左下側肋骨處",
     "strategyTip": "【審題觸發】當題目出現「AED 貼片黏貼位置標準規範」時，立即啟動「一片貼在患者右鎖骨下方，另一片貼在左乳頭外側左下側肋骨處」解題。考前速記：運動扭傷 PRICE：保護、休息、冰敷、加壓、抬高；CPR+AED 急救心法：叫叫壓電，按壓 100~120 次/分！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10189,7 +10189,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10198,7 +10198,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-3",
-        "title": "運動傷害急性處理最新 PEACE 原則",
+        "title": "運動傷害急性處理最新醫學 PE…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10207,7 +10207,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-1",
-        "title": "健康體適能四大要素",
+        "title": "健康體適能五大基石",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10242,10 +10242,10 @@ export const knowledgePointsData = [
     "unitIndex": 2,
     "subjectId": "health_pe",
     "semester": "6A",
-    "title": "運動傷害急性處理最新 PEACE 原則",
+    "title": "運動傷害急性處理最新醫學 PE…",
     "category": "健體・生活實用與避雷",
     "badgeColor": "emerald",
-    "definition": "運動傷害急性處理最新 PEACE 原則：Protect（保護避免二次傷害）、Elevate（抬高患部高於心臟）、Avoid anti-inflammatory（避免過度消炎影響修復）、Compress（彈性繃帶加壓包紮）、Educate（衛教主動復健）。",
+    "definition": "運動傷害急性處理最新醫學 PE…：運動傷害急性處理最新醫學 PEACE 原則：Protect（保護防二次受傷）、Elevate（抬高患部過心臟促進靜脈回流）、Avoid anti-inflammatory（避免濫用消炎藥阻斷自體修復）、Compress（彈性繃帶加壓消腫）、Educate（主動衛教運動復健）。",
     "formulaOrRule": "核心工具與心法：哈姆立克急救法 (Heimlich Maneuver)：站在患者背後環抱，拇指握拳抵住肚臍上方快速向內上方推擠",
     "strategyTip": "【審題觸發】當題目出現「異物哽塞無法呼吸咳嗽急救法」時，立即啟動「哈姆立克急救法 (Heimlich Maneuver)：站在患者背後環抱，拇指握拳抵住肚臍上方快速向內上方推擠」解題。考前速記：運動扭傷 PRICE：保護、休息、冰敷、加壓、抬高；CPR+AED 急救心法：叫叫壓電，按壓 100~120 次/分！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10256,7 +10256,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u3-1",
-        "title": "成人 CPR+AED 救命黃金口訣",
+        "title": "成人生命之鏈 CPR+AED「…",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10265,7 +10265,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u3-2",
-        "title": "CPR 正確胸外按壓規範",
+        "title": "CPR 按壓血流力學金律",
         "unitId": "pe-u3",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10274,7 +10274,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-1",
-        "title": "健康體適能四大要素",
+        "title": "健康體適能五大基石",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10309,10 +10309,10 @@ export const knowledgePointsData = [
     "unitIndex": 3,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "健康體適能四大要素",
+    "title": "健康體適能五大基石",
     "category": "健體・觀念本質與定義",
     "badgeColor": "blue",
-    "definition": "健康體適能四大要素：心肺耐力（登階跑走）、肌力與肌耐力（仰臥起坐/引體向上）、柔軟度（坐姿體前彎）、身體組成（BMI 與體脂率）。",
+    "definition": "健康體適能五大基石：心肺耐力 (VO2 Max 基礎)、肌力 (最大張力)、肌耐力 (抗疲勞)、柔軟度 (關節筋膜活動度)、身體組成 (骨骼肌量 vs 體脂率)。骨骼肌是人體最大血糖代謝水槽與內分泌器官。",
     "formulaOrRule": "核心工具與心法：有氧運動（慢跑、游泳、跳繩、快走，每週至少3次、每次30分鐘、心跳達130下）",
     "strategyTip": "【審題觸發】當題目出現「提升心肺耐力之最佳運動方式」時，立即啟動「有氧運動（慢跑、游泳、跳繩、快走，每週至少3次、每次30分鐘、心跳達130下）」解題。考前速記：BMI = 體重 (kg) ÷ 身高平方 ($m^2$)；運動前動態熱身，運動後靜態伸展；運動家精神重在恆毅力！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10323,7 +10323,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u4-2",
-        "title": "運動前後黃金配置",
+        "title": "漸進式超負荷與肌肥大 (Hyp…",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10332,7 +10332,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-3",
-        "title": "運動家精神核心真諦",
+        "title": "Zone 2 有氧抗衰老與 T…",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10341,7 +10341,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10376,10 +10376,10 @@ export const knowledgePointsData = [
     "unitIndex": 3,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "運動前後黃金配置",
+    "title": "漸進式超負荷與肌肥大 (Hyp…",
     "category": "健體・運算算理與公式",
     "badgeColor": "amber",
-    "definition": "運動前後黃金配置：運動前實施「動態暖身」（提升體溫、關節活動度與神經反射）；運動後實施「靜態伸展」（拉伸放鬆緊繃肌群促進乳酸代謝）。",
+    "definition": "漸進式超負荷與肌肥大 (Hyp…：漸進式超負荷與肌肥大 (Hypertrophy) 生理機制：給予肌肉充分機械張力 ➔ 引發肌纖維微損傷 ➔ 攝取蛋白質 (1.4~1.8g/kg) 白胺酸觸發 MPS 蛋白質合成 ➔ 48 小時超量補償，使肌肉截面積增大力量增強。",
     "formulaOrRule": "核心工具與心法：運動前充分動態暖身 ➔ 運動中及時補充水分 ➔ 運動後確實靜態伸展拉筋",
     "strategyTip": "【審題觸發】當題目出現「運動傷害預防三步驟」時，立即啟動「運動前充分動態暖身 ➔ 運動中及時補充水分 ➔ 運動後確實靜態伸展拉筋」解題。考前速記：BMI = 體重 (kg) ÷ 身高平方 ($m^2$)；運動前動態熱身，運動後靜態伸展；運動家精神重在恆毅力！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10390,7 +10390,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u4-1",
-        "title": "健康體適能四大要素",
+        "title": "健康體適能五大基石",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10399,7 +10399,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-3",
-        "title": "運動家精神核心真諦",
+        "title": "Zone 2 有氧抗衰老與 T…",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10408,7 +10408,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10443,10 +10443,10 @@ export const knowledgePointsData = [
     "unitIndex": 3,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "運動家精神核心真諦",
+    "title": "Zone 2 有氧抗衰老與 T…",
     "category": "健體・生活實用與避雷",
     "badgeColor": "emerald",
-    "definition": "運動家精神核心真諦：勝不驕、敗不餒，服從裁判判決，尊重對手與隊友，在公平競爭中展現恆毅力與卓越。",
+    "definition": "Zone 2 有氧抗衰老與 T…：Zone 2 有氧抗衰老與 TDEE 減脂能量守恆：Zone 2 (最大心率 60~70%) 激發粒線體生物合成與細胞自噬 (Autophagy) 清除老舊蛋白；減脂維持每日 300~500 kcal 溫和熱量赤字 (TDEE - 飲食攝取)，優先燃燒內臟脂肪！",
     "formulaOrRule": "核心工具與心法：心肺耐力 (800公尺跑走)、肌力肌耐力 (仰臥捲腹)、柔軟度 (坐姿體前彎)、瞬發力 (立定跳遠)",
     "strategyTip": "【審題觸發】當題目出現「體適能四大指標與檢測項目對應」時，立即啟動「心肺耐力 (800公尺跑走)、肌力肌耐力 (仰臥捲腹)、柔軟度 (坐姿體前彎)、瞬發力 (立定跳遠)」解題。考前速記：BMI = 體重 (kg) ÷ 身高平方 ($m^2$)；運動前動態熱身，運動後靜態伸展；運動家精神重在恆毅力！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10457,7 +10457,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u4-1",
-        "title": "健康體適能四大要素",
+        "title": "健康體適能五大基石",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10466,7 +10466,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u4-2",
-        "title": "運動前後黃金配置",
+        "title": "漸進式超負荷與肌肥大 (Hyp…",
         "unitId": "pe-u4",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10475,7 +10475,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10510,10 +10510,10 @@ export const knowledgePointsData = [
     "unitIndex": 4,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "球類侵入性比賽空間製造",
+    "title": "人體運動生物力學與槓桿",
     "category": "健體・觀念本質與定義",
     "badgeColor": "blue",
-    "definition": "球類侵入性比賽空間製造：無球跑動拉開防線、隊友掩護擋拆、創造進攻空檔傳球投射。",
+    "definition": "人體運動生物力學與槓桿：骨骼為槓桿、關節為支點、骨骼肌為施力點；前臂屈肘為第三類費力但省時槓桿，動態熱身刺激神經肌肉徵召 (Neuromuscular Recruitment) 提升爆發力。",
     "formulaOrRule": "核心工具與心法：給了就跑 (Give and Go 傳切配合)、擋拆戰術 (Pick and Roll 掩護掩護)",
     "strategyTip": "【審題觸發】當題目出現「籃球團隊進攻基本戰術配合」時，立即啟動「給了就跑 (Give and Go 傳切配合)、擋拆戰術 (Pick and Roll 掩護掩護)」解題。考前速記：籃球防守保持在對手與籃框之間；排球接傳扣三步攻擊；遵守規則防衝撞！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10524,7 +10524,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u5-2",
-        "title": "傳切配合與區域防守心法",
+        "title": "球類侵入性戰術與空間創造",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10533,7 +10533,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-3",
-        "title": "運動競賽安全與裁判規則",
+        "title": "運動競賽安全與防護裝備",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10542,7 +10542,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u6-1",
-        "title": "壓力彈簧與情緒察覺三步驟",
+        "title": "自律神經與壓力荷爾蒙 (皮質醇)",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10568,10 +10568,10 @@ export const knowledgePointsData = [
     "unitIndex": 4,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "傳切配合與區域防守心法",
+    "title": "球類侵入性戰術與空間創造",
     "category": "健體・運算算理與公式",
     "badgeColor": "amber",
-    "definition": "傳切配合與區域防守心法：給了就跑 (Give and Go)；防守緊盯持球者與防守區域，雙手張開保持防守平衡步法。",
+    "definition": "球類侵入性戰術與空間創造：無球空切 (Give and Go)、掩護擋拆 (Pick and Roll) 製造進攻空檔；防守時降低身體重心維持核心肌群穩定，保護膝關節韌帶免於扭挫傷。",
     "formulaOrRule": "核心工具與心法：一傳接發球起球 ➔ 二傳托球舉球到位 ➔ 三傳攻擊扣殺或吊球過網",
     "strategyTip": "【審題觸發】當題目出現「排球比賽防守反擊標準三觸球流程」時，立即啟動「一傳接發球起球 ➔ 二傳托球舉球到位 ➔ 三傳攻擊扣殺或吊球過網」解題。考前速記：籃球防守保持在對手與籃框之間；排球接傳扣三步攻擊；遵守規則防衝撞！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10582,7 +10582,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10591,7 +10591,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-3",
-        "title": "運動競賽安全與裁判規則",
+        "title": "運動競賽安全與防護裝備",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10600,7 +10600,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u6-1",
-        "title": "壓力彈簧與情緒察覺三步驟",
+        "title": "自律神經與壓力荷爾蒙 (皮質醇)",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10626,10 +10626,10 @@ export const knowledgePointsData = [
     "unitIndex": 4,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "運動競賽安全與裁判規則",
+    "title": "運動競賽安全與防護裝備",
     "category": "健體・生活實用與避雷",
     "badgeColor": "emerald",
-    "definition": "運動競賽安全與裁判規則：掌握各類球類比賽觸球犯規、走步、出界等裁判手勢，配戴適當護具避免衝撞受傷。",
+    "definition": "運動競賽安全與防護裝備：熟練籃排羽球正確著地緩衝姿勢（屈髖屈膝而非直腿重著地），配戴護膝護踝，遵守運動員運動家精神與公平競爭。",
     "formulaOrRule": "核心工具與心法：穿著合適抓地防滑球鞋、修剪指甲、拿下手錶眼鏡吊飾等硬物、避免墊腳犯規",
     "strategyTip": "【審題觸發】當題目出現「預防球場運動傷害防護措施」時，立即啟動「穿著合適抓地防滑球鞋、修剪指甲、拿下手錶眼鏡吊飾等硬物、避免墊腳犯規」解題。考前速記：籃球防守保持在對手與籃框之間；排球接傳扣三步攻擊；遵守規則防衝撞！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10640,7 +10640,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10649,7 +10649,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-2",
-        "title": "傳切配合與區域防守心法",
+        "title": "球類侵入性戰術與空間創造",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10658,7 +10658,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u6-1",
-        "title": "壓力彈簧與情緒察覺三步驟",
+        "title": "自律神經與壓力荷爾蒙 (皮質醇)",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "學科進階階梯",
@@ -10684,10 +10684,10 @@ export const knowledgePointsData = [
     "unitIndex": 5,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "壓力彈簧與情緒察覺三步驟",
+    "title": "自律神經與壓力荷爾蒙 (皮質醇)",
     "category": "健體・觀念本質與定義",
     "badgeColor": "blue",
-    "definition": "壓力彈簧與情緒察覺三步驟：察覺身體壓力訊號（心跳加速、肌肉緊繃、失眠） ➔ 接納自己正常情緒 ➔ 轉化焦點尋求健康抒發管道。",
+    "definition": "自律神經與壓力荷爾蒙 (皮質醇)：慢性長期壓力導致腎上腺皮質醇過高，損害大腦海馬迴記憶神經元；正念 4-7-8 腹式深呼吸能刺激迷走神經，快速切換至副交感神經修復狀態。",
     "formulaOrRule": "核心工具與心法：4-7-8 腹式深呼吸法（吸氣4秒、屏息7秒、慢吐氣8秒）放鬆自律神經",
     "strategyTip": "【審題觸發】當題目出現「面臨重大考試前緊張焦慮心跳加速緩解法」時，立即啟動「4-7-8 腹式深呼吸法（吸氣4秒、屏息7秒、慢吐氣8秒）放鬆自律神經」解題。考前速記：腹式深呼吸放鬆身心，轉念面對挫折逆境；情緒沒有對錯，學會接納並尋找解決之道！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10698,7 +10698,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u6-2",
-        "title": "成長型思維 (Growth M…",
+        "title": "睡眠膠淋巴系統 (Glymph…",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10707,7 +10707,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u6-3",
-        "title": "身心減壓實用技法",
+        "title": "成長型思維 (Growth M…",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10716,7 +10716,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "先備知識回溯",
@@ -10742,10 +10742,10 @@ export const knowledgePointsData = [
     "unitIndex": 5,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "成長型思維 (Growth M…",
+    "title": "睡眠膠淋巴系統 (Glymph…",
     "category": "健體・運算算理與公式",
     "badgeColor": "amber",
-    "definition": "成長型思維 (Growth M…：成長型思維 (Growth Mindset) 賦能：「尚未 (Not Yet)」的力量，將考試挫折視為大腦神經元成長的契機，而非智力定型評判。",
+    "definition": "睡眠膠淋巴系統 (Glymph…：睡眠膠淋巴系統 (Glymphatic System) 腦部夜間排毒：人在第 3~4 期深層慢波睡眠時，腦細胞間隙擴大 60%，腦脊髓液加速沖刷清除白天累積的 β-澱粉樣蛋白等代謝毒素，是抗大腦衰老最強機制。",
     "formulaOrRule": "核心工具與心法：轉念成長型思維：「我只是『還沒』掌握正確方法，每次挫折都是大腦神經元成長的機會」",
     "strategyTip": "【審題觸發】當題目出現「當陷入「我怎麼這麼笨、我一定考不好」負面思維」時，立即啟動「轉念成長型思維：「我只是『還沒』掌握正確方法，每次挫折都是大腦神經元成長的機會」」解題。考前速記：腹式深呼吸放鬆身心，轉念面對挫折逆境；情緒沒有對錯，學會接納並尋找解決之道！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10756,7 +10756,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u6-1",
-        "title": "壓力彈簧與情緒察覺三步驟",
+        "title": "自律神經與壓力荷爾蒙 (皮質醇)",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10765,7 +10765,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u6-3",
-        "title": "身心減壓實用技法",
+        "title": "成長型思維 (Growth M…",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "同課避雷實用",
@@ -10774,7 +10774,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "先備知識回溯",
@@ -10800,10 +10800,10 @@ export const knowledgePointsData = [
     "unitIndex": 5,
     "subjectId": "health_pe",
     "semester": "6B",
-    "title": "身心減壓實用技法",
+    "title": "成長型思維 (Growth M…",
     "category": "健體・生活實用與避雷",
     "badgeColor": "emerald",
-    "definition": "身心減壓實用技法：4-7-8 腹式深呼吸法（吸氣 4 秒、屏息 7 秒、吐氣 8 秒啟動副交感神經）、適度運動與主動向輔導老師、家長傾訴求助。",
+    "definition": "成長型思維 (Growth M…：成長型思維 (Growth Mindset) 與神經可塑性：大腦神經元連結如肌肉越練越強壯，將挫折失敗視為「突觸生長與學習機會」，建立心理抗壓韌性 (Resilience) 與長遠幸福感。",
     "formulaOrRule": "核心工具與心法：輔導室諮商老師、班導師、衛福部安心專線 1925、反霸凌專線 1953",
     "strategyTip": "【審題觸發】當題目出現「遭遇霸凌或嚴重情緒低落校園求助管道」時，立即啟動「輔導室諮商老師、班導師、衛福部安心專線 1925、反霸凌專線 1953」解題。考前速記：腹式深呼吸放鬆身心，轉念面對挫折逆境；情緒沒有對錯，學會接納並尋找解決之道！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -10814,7 +10814,7 @@ export const knowledgePointsData = [
     "relatedPoints": [
       {
         "id": "kp-pe-u6-1",
-        "title": "壓力彈簧與情緒察覺三步驟",
+        "title": "自律神經與壓力荷爾蒙 (皮質醇)",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "同課觀念基石",
@@ -10823,7 +10823,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u6-2",
-        "title": "成長型思維 (Growth M…",
+        "title": "睡眠膠淋巴系統 (Glymph…",
         "unitId": "pe-u6",
         "subjectId": "health_pe",
         "relation": "同課算理推導",
@@ -10832,7 +10832,7 @@ export const knowledgePointsData = [
       },
       {
         "id": "kp-pe-u5-1",
-        "title": "球類侵入性比賽空間製造",
+        "title": "人體運動生物力學與槓桿",
         "unitId": "pe-u5",
         "subjectId": "health_pe",
         "relation": "先備知識回溯",

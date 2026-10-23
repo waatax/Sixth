@@ -885,8 +885,98 @@ const specialized = {
   },
 
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  // 💪 健康與體育領域 (PE & Health)
+  // 💪 健康與體育領域 (PE & Health) - 醫學、抗衰老、體適能、增肌減脂、人體系統
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  'kp-pe-u1-1': {
+    title: '青春期內分泌生長軸與荷爾蒙分泌圖',
+    subtitle: '下視丘 ➔ 腦下垂體 ➔ 生長激素(GH)與性腺激素・夜間深睡分泌高峰',
+    diagramType: 'endocrine-axis',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="14" width="280" height="26" rx="5" fill="#f43f5e" />
+      <text x="160" y="31" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">青春期內分泌 HPG 生長軸線與第二性徵啟動</text>
+      <rect x="25" y="48" width="80" height="60" rx="5" fill="#ffe4e6" stroke="#fb7185" />
+      <text x="65" y="66" text-anchor="middle" font-size="10" font-weight="bold" fill="#be123c">1. 下視丘中樞</text>
+      <text x="65" y="82" text-anchor="middle" font-size="8.5" fill="#9f1239">釋放 GnRH 激素</text>
+      <text x="65" y="96" text-anchor="middle" font-size="7.5" fill="#881337">生理時鐘感應</text>
+      <line x1="105" y1="78" x2="120" y2="78" stroke="#f43f5e" stroke-width="2" />
+      <polygon points="120,74 128,78 120,82" fill="#f43f5e" />
+      <rect x="128" y="48" width="80" height="60" rx="5" fill="#e0e7ff" stroke="#818cf8" />
+      <text x="168" y="66" text-anchor="middle" font-size="10" font-weight="bold" fill="#3730a3">2. 腦下垂體</text>
+      <text x="168" y="82" text-anchor="middle" font-size="8.5" fill="#4338ca">分泌 GH (生長素)</text>
+      <text x="168" y="96" text-anchor="middle" font-size="7.5" fill="#312e81">深層睡眠釋放 70%</text>
+      <line x1="208" y1="78" x2="223" y2="78" stroke="#6366f1" stroke-width="2" />
+      <polygon points="223,74 231,78 223,82" fill="#6366f1" />
+      <rect x="231" y="48" width="70" height="60" rx="5" fill="#dcfce7" stroke="#4ade80" />
+      <text x="266" y="66" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">3. 靶器官靶腺</text>
+      <text x="266" y="82" text-anchor="middle" font-size="8.5" fill="#166534">骨骼/肌肉生長</text>
+      <text x="266" y="96" text-anchor="middle" font-size="7.5" fill="#14532d">第二性徵成熟</text>
+      <rect x="20" y="118" width="280" height="52" rx="5" fill="#f1f5f9" stroke="#cbd5e1" />
+      <text x="160" y="134" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e293b">💡 醫學實證：生長激素在每晚 22:00 ~ 02:00 深睡期達到脈衝高峰！</text>
+      <text x="160" y="149" text-anchor="middle" font-size="8.5" fill="#475569">充足睡眠 8.5~9 小時 ＋ 充足跳躍伸展 ＝ 骨骼生長板極大化縱向發育</text>
+      <text x="160" y="162" text-anchor="middle" font-size="8" font-weight="bold" fill="#e11d48">避雷警訊：高糖含糖手搖飲會刺激胰島素急升，直接抑制生長激素分泌！</text>
+    </svg>`
+  },
+
+  'kp-pe-u2-1': {
+    title: '我的餐盤六大類與三大宏量營養素代謝圖',
+    subtitle: '碳水4kcal・蛋白質4kcal・脂肪9kcal・膳食纖維滋養腸道微生態',
+    diagramType: 'nutrition-metabolism',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="12" width="280" height="26" rx="5" fill="#16a34a" />
+      <text x="160" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">三大宏量營養素代謝與「我的餐盤」六口訣</text>
+      <rect x="20" y="44" width="88" height="75" rx="5" fill="#eff6ff" stroke="#93c5fd" />
+      <text x="64" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#1d4ed8">優質蛋白質 (4kcal)</text>
+      <text x="64" y="74" text-anchor="middle" font-size="8.5" fill="#1e40af">豆魚蛋肉類</text>
+      <text x="64" y="88" text-anchor="middle" font-size="8" fill="#334155">提供必需胺基酸</text>
+      <text x="64" y="102" text-anchor="middle" font-size="8" font-weight="bold" fill="#2563eb">掌心大小份量</text>
+      <text x="64" y="113" text-anchor="middle" font-size="7.5" fill="#64748b">肌肉免疫合成</text>
+      <rect x="116" y="44" width="88" height="75" rx="5" fill="#fefce8" stroke="#fde047" />
+      <text x="160" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#a16207">全穀複合碳水 (4kcal)</text>
+      <text x="160" y="74" text-anchor="middle" font-size="8.5" fill="#854d0e">糙米/燕麥/地瓜</text>
+      <text x="160" y="88" text-anchor="middle" font-size="8" fill="#334155">大腦紅血球首選</text>
+      <text x="160" y="102" text-anchor="middle" font-size="8" font-weight="bold" fill="#ca8a04">飯跟蔬菜一樣多</text>
+      <text x="160" y="113" text-anchor="middle" font-size="7.5" fill="#64748b">緩釋肌糖原</text>
+      <rect x="212" y="44" width="88" height="75" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="256" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">蔬菜水果纖維 (低卡)</text>
+      <text x="256" y="74" text-anchor="middle" font-size="8.5" fill="#166534">彩虹植化素多酚</text>
+      <text x="256" y="88" text-anchor="middle" font-size="8" fill="#334155">菜比水果多一點</text>
+      <text x="256" y="102" text-anchor="middle" font-size="8" font-weight="bold" fill="#16a34a">每餐水果拳頭大</text>
+      <text x="256" y="113" text-anchor="middle" font-size="7.5" fill="#64748b">養護腸道益生菌</text>
+      <rect x="20" y="126" width="280" height="46" rx="5" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="160" y="141" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">口訣：每天早晚一杯奶、每餐水果拳頭大、菜比水果多一點、</text>
+      <text x="160" y="154" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">飯跟蔬菜一樣多、豆魚蛋肉一掌心、堅果種子一茶匙！</text>
+      <text x="160" y="166" text-anchor="middle" font-size="8" font-weight="bold" fill="#16a34a">腸道微生態：70% 免疫系統在腸道，水溶性纖維發酵生成短鏈脂肪酸抗炎抗衰老！</text>
+    </svg>`
+  },
+
+  'kp-pe-u2-2': {
+    title: '升糖指數 (GI) 與胰島素燃脂/儲脂天平模型',
+    subtitle: '高GI暴起暴落囤積內臟脂肪・低GI平穩胰島素啟動升糖素分解脂肪',
+    diagramType: 'insulin-fat-metabolism',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="12" width="280" height="26" rx="5" fill="#ea580c" />
+      <text x="160" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">血糖震盪、胰島素分泌與脂肪細胞代謝天平</text>
+      <rect x="25" y="46" width="130" height="74" rx="5" fill="#fef2f2" stroke="#fca5a5" />
+      <text x="90" y="62" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626">⚠️ 高 GI 飲食 (精緻糖/油炸)</text>
+      <text x="90" y="76" text-anchor="middle" font-size="8.5" fill="#991b1b">血糖瞬間狂飆 (Spike)</text>
+      <text x="90" y="90" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#b91c1c">胰島素大量湧出 ➔ 儲脂模式</text>
+      <text x="90" y="104" text-anchor="middle" font-size="8" fill="#7f1d1d">鎖住脂肪分解酶，囤積內臟脂肪</text>
+      <text x="90" y="115" text-anchor="middle" font-size="7.5" fill="#991b1b">2小時後低血糖引發昏睡暴食</text>
+      <rect x="165" y="46" width="130" height="74" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="230" y="62" text-anchor="middle" font-size="10" font-weight="bold" fill="#16a34a">✅ 原型低 GI 飲食 (高纖/優質蛋白)</text>
+      <text x="230" y="76" text-anchor="middle" font-size="8.5" fill="#15803d">血糖穩定緩釋平原</text>
+      <text x="230" y="90" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#047857">胰島素低位 ➔ 升糖素工作</text>
+      <text x="230" y="104" text-anchor="middle" font-size="8" fill="#065f46">脂肪酶活性開啟，燃燒游離脂肪酸</text>
+      <text x="230" y="115" text-anchor="middle" font-size="7.5" fill="#047857">精神高度集中，飽足感長達 4~5 小時</text>
+      <rect x="20" y="128" width="280" height="44" rx="5" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="160" y="143" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">生理本質：胰島素是「合成儲存荷爾蒙」，升糖素是「分解燃脂荷爾蒙」！</text>
+      <text x="160" y="157" text-anchor="middle" font-size="8.5" fill="#334155">只要不喝含糖飲料、以水代糖，就能讓身體全天大部分時間處於高效燃脂狀態！</text>
+    </svg>`
+  },
+
   'kp-pe-u3-1': {
     title: '成人 CPR＋AED 急救黃金口訣流程圖',
     subtitle: '叫叫CD・胸外按壓 5~6cm・頻率 100~120次/分・電擊除顫',
@@ -915,6 +1005,131 @@ const specialized = {
       <text x="268" y="118" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#854d0e">分析電擊</text>
       <rect x="25" y="136" width="270" height="34" rx="4" fill="#fef2f2" stroke="#fca5a5" />
       <text x="160" y="152" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#dc2626">胸外按壓口訣：快快壓 (100~120/分)、用力壓 (5~6cm)、胸廓回彈、中斷不超過10秒！</text>
+    </svg>`
+  },
+
+  'kp-pe-u4-1': {
+    title: '體適能五要素與漸進式超負荷增肌生理圖',
+    subtitle: '機械張力 ➔ 肌纖維微損傷 ➔ 蛋白質合成(MPS) ➔ 超量補償肌肉成長',
+    diagramType: 'hypertrophy-mechanics',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="12" width="280" height="26" rx="5" fill="#2563eb" />
+      <text x="160" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">漸進式超負荷 (Progressive Overload) 與肌肥大機制</text>
+      <rect x="20" y="46" width="65" height="70" rx="5" fill="#eff6ff" stroke="#93c5fd" />
+      <text x="52" y="63" text-anchor="middle" font-size="9" font-weight="bold" fill="#1d4ed8">1. 阻力刺激</text>
+      <text x="52" y="78" text-anchor="middle" font-size="8" fill="#1e40af">機械張力刺激</text>
+      <text x="52" y="91" text-anchor="middle" font-size="7.5" fill="#334155">3~4組 8~12下</text>
+      <text x="52" y="104" text-anchor="middle" font-size="7.5" fill="#64748b">自覺疲勞RPE8</text>
+      <line x1="85" y1="81" x2="98" y2="81" stroke="#3b82f6" stroke-width="2" />
+      <polygon points="98,77 106,81 98,85" fill="#3b82f6" />
+      <rect x="106" y="46" width="65" height="70" rx="5" fill="#fef2f2" stroke="#fca5a5" />
+      <text x="138" y="63" text-anchor="middle" font-size="9" font-weight="bold" fill="#b91c1c">2. 微損傷訊號</text>
+      <text x="138" y="78" text-anchor="middle" font-size="8" fill="#991b1b">肌原纖維微撕裂</text>
+      <text x="138" y="91" text-anchor="middle" font-size="7.5" fill="#334155">啟動發炎修復</text>
+      <text x="138" y="104" text-anchor="middle" font-size="7.5" fill="#64748b">釋放肌動蛋白</text>
+      <line x1="171" y1="81" x2="184" y2="81" stroke="#ef4444" stroke-width="2" />
+      <polygon points="184,77 192,81 184,85" fill="#ef4444" />
+      <rect x="192" y="46" width="65" height="70" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="224" y="63" text-anchor="middle" font-size="9" font-weight="bold" fill="#15803d">3. 蛋白合成</text>
+      <text x="224" y="78" text-anchor="middle" font-size="8" fill="#166534">白胺酸 2.5g 觸發</text>
+      <text x="224" y="91" text-anchor="middle" font-size="7.5" fill="#334155">總量 1.5g/kg</text>
+      <text x="224" y="104" text-anchor="middle" font-size="7.5" fill="#64748b">衛星細胞修復</text>
+      <line x1="257" y1="81" x2="270" y2="81" stroke="#10b981" stroke-width="2" />
+      <polygon points="270,77 278,81 270,85" fill="#10b981" />
+      <rect x="278" y="46" width="32" height="70" rx="4" fill="#f5f3ff" stroke="#c4b5fd" />
+      <text x="294" y="75" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#6d28d9">超量</text>
+      <text x="294" y="92" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#6d28d9">補償</text>
+      <rect x="20" y="124" width="280" height="48" rx="5" fill="#f8fafc" stroke="#cbd5e1" />
+      <text x="160" y="139" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">超負荷金律：每 1~2 週略微增加重量、次數或縮短組間休息，強迫肌肉適應變強！</text>
+      <text x="160" y="153" text-anchor="middle" font-size="8.5" fill="#334155">骨骼肌生理水槽：全身骨骼肌佔體重 40%，更是吸收血糖最大緩衝池，終身防三高！</text>
+      <text x="160" y="165" text-anchor="middle" font-size="8" font-weight="bold" fill="#047857">五大體適能：心肺耐力、肌力、肌耐力、柔軟度、身體組成，缺一不可！</text>
+    </svg>`
+  },
+
+  'kp-pe-u4-2': {
+    title: 'Zone 2 有氧心率與粒線體自噬抗衰老圖',
+    subtitle: '最大心率 60~70%・粒線體生物合成・諾貝爾獎細胞自噬清廢機制',
+    diagramType: 'zone2-mitochondria',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="12" width="280" height="26" rx="5" fill="#0891b2" />
+      <text x="160" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">Zone 2 有氧耐力區間與細胞抗衰老生化引擎</text>
+      <rect x="25" y="46" width="130" height="74" rx="5" fill="#ecfeff" stroke="#a5f3fc" />
+      <text x="90" y="62" text-anchor="middle" font-size="10" font-weight="bold" fill="#0e7490">⚡ Zone 2 生理特徵 (最大心率60~70%)</text>
+      <text x="90" y="76" text-anchor="middle" font-size="8.5" fill="#155e75">可順暢說話但無法唱歌的強度</text>
+      <text x="90" y="90" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#0369a1">脂肪酸氧化供能比例達最高 70%</text>
+      <text x="90" y="104" text-anchor="middle" font-size="8" fill="#164e63">乳酸濃度平穩保持在 2.0 mmol/L 以下</text>
+      <text x="90" y="115" text-anchor="middle" font-size="7.5" fill="#0891b2">每週累積 150~180 分鐘最佳</text>
+      <rect x="165" y="46" width="130" height="74" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="230" y="62" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">🧬 粒線體與細胞自噬 (Autophagy)</text>
+      <text x="230" y="76" text-anchor="middle" font-size="8.5" fill="#166534">刺激 PGC-1α 促使粒線體增生分裂</text>
+      <text x="230" y="90" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#047857">溶酶體清除變異蛋白質與老化碎片</text>
+      <text x="230" y="104" text-anchor="middle" font-size="8" fill="#065f46">微血管床密度激增 30%，心肌強壯</text>
+      <text x="230" y="115" text-anchor="middle" font-size="7.5" fill="#15803d">逆轉生物年齡，提升 VO2 Max 壽命指標</text>
+      <rect x="20" y="128" width="280" height="44" rx="5" fill="#f1f5f9" stroke="#cbd5e1" />
+      <text x="160" y="143" text-anchor="middle" font-size="9" font-weight="bold" fill="#0e7490">醫學精華：Zone 2 運動是給全身「細胞發電機(粒線體)」洗澡升級的最佳處方！</text>
+      <text x="160" y="157" text-anchor="middle" font-size="8.5" fill="#475569">慢跑、快走、游泳或自行車，維持微喘但能聊天的速度，就是最頂級的抗衰老仙丹！</text>
+    </svg>`
+  },
+
+  'kp-pe-u4-3': {
+    title: 'TDEE 每日總能量消耗與科學減脂能量收支圖',
+    subtitle: 'BMR 70% + NEAT 15% + EAT 5% + TEF 10%・黃金赤字 300~500kcal 保肌減脂',
+    diagramType: 'tdee-energy-balance',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="12" width="280" height="26" rx="5" fill="#4f46e5" />
+      <text x="160" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">TDEE 每日能量支出結構與減脂能量守恆定律</text>
+      <rect x="25" y="46" width="60" height="74" rx="4" fill="#dbeafe" stroke="#93c5fd" />
+      <text x="55" y="62" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#1e40af">BMR 基礎代謝</text>
+      <text x="55" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">60~70%</text>
+      <text x="55" y="94" text-anchor="middle" font-size="7.5" fill="#334155">心跳呼吸體溫</text>
+      <text x="55" y="108" text-anchor="middle" font-size="7.5" fill="#64748b">絕不可節食</text>
+      <rect x="93" y="46" width="60" height="74" rx="4" fill="#dcfce7" stroke="#86efac" />
+      <text x="123" y="62" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#15803d">NEAT 日常活動</text>
+      <text x="123" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="#16a34a">15~20%</text>
+      <text x="123" y="94" text-anchor="middle" font-size="7.5" fill="#334155">走路爬樓梯做家事</text>
+      <text x="123" y="108" text-anchor="middle" font-size="7.5" fill="#15803d">減脂最大推手</text>
+      <rect x="161" y="46" width="60" height="74" rx="4" fill="#fef9c3" stroke="#fde047" />
+      <text x="191" y="62" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#a16207">TEF 攝食熱效應</text>
+      <text x="191" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="#ca8a04">8~10%</text>
+      <text x="191" y="94" text-anchor="middle" font-size="7.5" fill="#334155">消化食物耗能</text>
+      <text x="191" y="108" text-anchor="middle" font-size="7.5" fill="#854d0e">蛋白質熱效最高</text>
+      <rect x="229" y="46" width="65" height="74" rx="4" fill="#fae8ff" stroke="#e879f9" />
+      <text x="261" y="62" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#86198f">EAT 運動訓練</text>
+      <text x="261" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="#a21caf">5~10%</text>
+      <text x="261" y="94" text-anchor="middle" font-size="7.5" fill="#334155">重訓跑步球類</text>
+      <text x="261" y="108" text-anchor="middle" font-size="7.5" fill="#701a75">強化心肺骨骼肌</text>
+      <rect x="20" y="128" width="280" height="44" rx="5" fill="#fef2f2" stroke="#fca5a5" />
+      <text x="160" y="143" text-anchor="middle" font-size="9" font-weight="bold" fill="#b91c1c">能量方程式：熱量赤字 ＝ TDEE － 飲食攝取 ＝ 每日 300~500 kcal (黃金減脂期)</text>
+      <text x="160" y="157" text-anchor="middle" font-size="8.5" fill="#991b1b">⚠️ 致命地雷：極端節食低於 BMR 會導致肌肉流失、甲狀腺功能下降、停經與代謝崩潰！</text>
+    </svg>`
+  },
+
+  'kp-pe-u6-1': {
+    title: '壓力皮質醇調節與大腦睡眠膠淋巴排毒圖',
+    subtitle: '慢性壓力升高皮質醇損害海馬迴・深層慢波睡眠啟動膠淋巴清空大腦垃圾',
+    diagramType: 'glymphatic-cortisol',
+    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <rect width="320" height="180" fill="#f8fafc" rx="10" />
+      <rect x="20" y="12" width="280" height="26" rx="5" fill="#7c3aed" />
+      <text x="160" y="29" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#ffffff">自律神經平衡、壓力皮質醇與大腦夜間排毒機制</text>
+      <rect x="25" y="46" width="130" height="74" rx="5" fill="#fef2f2" stroke="#fca5a5" />
+      <text x="90" y="62" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">⚠️ 慢性壓力失衡 (交感過度)</text>
+      <text x="90" y="76" text-anchor="middle" font-size="8.5" fill="#991b1b">腎上腺皮質醇持續高企</text>
+      <text x="90" y="90" text-anchor="middle" font-size="8.5" fill="#334155">海馬迴神經元微萎縮</text>
+      <text x="90" y="104" text-anchor="middle" font-size="8" fill="#7f1d1d">專注力渙散、腹部脂肪囤積</text>
+      <text x="90" y="115" text-anchor="middle" font-size="7.5" fill="#b91c1c">免疫力低落易感冒</text>
+      <rect x="165" y="46" width="130" height="74" rx="5" fill="#f5f3ff" stroke="#c4b5fd" />
+      <text x="230" y="62" text-anchor="middle" font-size="10" font-weight="bold" fill="#6d28d9">🧠 睡眠膠淋巴系統 (Glymphatic)</text>
+      <text x="230" y="76" text-anchor="middle" font-size="8.5" fill="#5b21b6">第 3~4 期深層慢波睡眠啟動</text>
+      <text x="230" y="90" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#4c1d95">腦細胞間隙擴大 60%</text>
+      <text x="230" y="104" text-anchor="middle" font-size="8" fill="#6d28d9">腦脊髓液沖洗 β-澱粉樣蛋白廢物</text>
+      <text x="230" y="115" text-anchor="middle" font-size="7.5" fill="#4c1d95">重塑記憶突觸，大腦煥然一新</text>
+      <rect x="20" y="128" width="280" height="44" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="160" y="143" text-anchor="middle" font-size="9" font-weight="bold" fill="#15803d">抗壓秘訣：正念 4-7-8 腹式呼吸 ➔ 刺激迷走神經 ➔ 啟動副交感神經平撫壓力！</text>
+      <text x="160" y="157" text-anchor="middle" font-size="8.5" fill="#166534">睡前 1 小時遠離藍光螢幕，維持規律晝夜節律 (Circadian Rhythm)，守護一生大腦健康！</text>
     </svg>`
   },
 

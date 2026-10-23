@@ -16,10 +16,16 @@ import {
   BookOpen, 
   Layers, 
   ShieldCheck, 
-  ArrowRight,
-  ChevronRight,
-  Flame,
-  Award
+  ArrowRight, 
+  ChevronRight, 
+  Flame, 
+  Award,
+  Activity,
+  Dumbbell,
+  Moon,
+  Dna,
+  Droplets,
+  Apple
 } from 'lucide-react';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/soundEffects';
 import { useGamification } from '../../context/GamificationContext';
@@ -1316,6 +1322,886 @@ export const TimeManagementMatrixLab = () => {
           普通人每天疲於奔命處理象限 I 的危機（熬夜趕作業、臨時抱佛腳）；但真正的高效學習者，會把 60% 以上的時間投資在<strong>「第二象限（重要但不緊急）」</strong>：每天有計畫地預習、規律運動、閱讀思考。當第二象限做得越好，第一象限的危機就自然大幅減少！
         </p>
       </div>
+    </div>
+  );
+};
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🧬 6. 健康醫學：人體六大生命系統協同與細胞抗衰老沙盤 (Human Body Systems & Longevity Lab)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+export const HumanBodyLongevityLab = () => {
+  const { addCoins, addXp } = useGamification();
+  const [selectedSystem, setSelectedSystem] = useState('mitochondria'); // 'circulatory' | 'respiratory' | 'mitochondria' | 'brain' | 'immune' | 'musculoskeletal'
+  
+  // Lifestyle Intervention Inputs
+  const [zone2Hours, setZone2Hours] = useState(3.5); // 0 ~ 7 hours/week
+  const [strengthDays, setStrengthDays] = useState(3); // 0 ~ 5 days/week
+  const [sleepHours, setSleepHours] = useState(8.5); // 4 ~ 10 hours/night
+  const [nutritionScore, setNutritionScore] = useState(8); // 1 ~ 10 rating
+  const [hydrationMl, setHydrationMl] = useState(2000); // 800 ~ 3000 ml/day
+  const [hasTriggeredMilestone, setHasTriggeredMilestone] = useState(false);
+
+  // Biological Longevity Calculations
+  // 1. Autophagy (細胞自噬活性 %): Clears damaged proteins/organelles
+  const autophagyScore = Math.min(98, Math.max(15, Math.round(
+    20 + (zone2Hours * 5.5) + (sleepHours >= 8 ? 25 : sleepHours * 2.5) + (nutritionScore * 2.8)
+  )));
+
+  // 2. Mitochondrial Efficiency (粒線體產能與生物合成 %): ATP Engine
+  const mitoScore = Math.min(100, Math.max(25, Math.round(
+    30 + (zone2Hours * 6.5) + (strengthDays * 5) + (hydrationMl / 120)
+  )));
+
+  // 3. Systemic Inflammation Level (全身慢性發炎指數): Lower is better
+  const inflammationIndex = Math.max(10, Math.min(95, Math.round(
+    90 - (zone2Hours * 5) - (sleepHours * 4) - (nutritionScore * 4)
+  )));
+
+  // 4. Bio-Age Delta (抗衰老生理年齡差): negative = younger
+  const bioAgeDelta = Math.round(
+    (inflammationIndex / 15) - (autophagyScore / 25) - (mitoScore / 30)
+  );
+
+  // Milestone reward
+  useEffect(() => {
+    if (autophagyScore >= 80 && mitoScore >= 80 && !hasTriggeredMilestone) {
+      setHasTriggeredMilestone(true);
+      playSound('levelup');
+      triggerHaptic('heavy');
+      dispatchDynamicIsland({
+        title: '🧬 細胞抗衰老黃金巔峰達成！',
+        subtitle: '細胞自噬高效啟動・粒線體活力充沛・生理逆齡',
+        icon: '🧬'
+      });
+      addCoins(30);
+      addXp(50, 'longevity_master');
+      confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 } });
+    }
+  }, [autophagyScore, mitoScore, hasTriggeredMilestone, addCoins, addXp]);
+
+  const systemsData = {
+    circulatory: {
+      title: '🫀 心血管循環系統 (Cardiovascular)',
+      organ: '心臟、主動脈、微血管床',
+      mechanism: '心臟每日跳動約 10 萬次，推送 7,500 公升富氧血液。Zone 2 運動能刺激毛細血管密度增加 30%，並促使血管內皮細胞釋放一氧化氮 (NO)，維持動脈彈性，杜絕血管硬化！',
+      medicalKey: '靜息心率 (RHR) 越穩定、心率變異度 (HRV) 越高，心血管壽命越長！',
+      color: '#ef4444'
+    },
+    respiratory: {
+      title: '🫁 呼吸系統與肺泡氣體交換 (Respiratory)',
+      organ: '氣管、支氣管、3 億個肺泡、橫膈膜',
+      mechanism: '肺泡總表面積相當於半座網球場！吸入氧氣與紅血球血紅素結合，呼出二氧化碳。深長腹式呼吸能啟動副交感神經迷走神經，快速降低皮質醇，舒緩身心發炎。',
+      medicalKey: '最大攝氧量 (VO2 Max) 是全球醫學界公認預測壽命長度最強大的生理指標之一！',
+      color: '#06b6d4'
+    },
+    mitochondria: {
+      title: '🧬 細胞自噬與粒線體發電廠 (Cellular & Autophagy)',
+      organ: '細胞質、粒線體 (ATP生產)、溶酶體 (細胞垃圾車)',
+      mechanism: '大隅良典榮獲諾貝爾獎之「細胞自噬 (Autophagy)」：細胞在運動與健康代謝時，會主動吞噬分解老舊變異蛋白質與損壞粒線體，轉化為新生能量，是人體最根本的抗衰老清毒工程！',
+      medicalKey: '規律有氧運動促進粒線體生物合成 (Mitochondrial Biogenesis)，讓細胞永保青春電力！',
+      color: '#10b981'
+    },
+    brain: {
+      title: '🧠 大腦神經可塑性與膠淋巴排毒 (Brain & Glymphatic)',
+      organ: '大腦皮質、海馬迴 (記憶中樞)、膠淋巴系統 (Glymphatic)',
+      mechanism: '睡眠期間，腦脊髓液流速提升 10 倍，沖洗清除白天累積的代謝毒素（如 β-澱粉樣蛋白）。運動更能刺激海馬迴分泌腦源性神經營養因子 (BDNF)，讓神經元再生！',
+      medicalKey: '高年級青少年正處於前額葉皮質修剪黃金期，優質 8~9 小時睡眠是高智商與好心情的基石！',
+      color: '#8b5cf6'
+    },
+    immune: {
+      title: '🛡️ 免疫防禦與腸道微生態 (Immune & Gut Microbiome)',
+      organ: '胸腺、脾臟、淋巴結、腸道黏膜 (70% 免疫細胞集中地)',
+      mechanism: '人體 70% 的免疫抗體由腸道屏障維持。彩虹蔬果中的膳食纖維是益生菌的「益生元」，發酵產生的短鏈脂肪酸 (SCFA) 能修復腸道屏障，防止內毒素滲漏引發慢性低度發炎。',
+      medicalKey: '控制慢性微發炎 (Inflammaging) 是阻斷早衰與文明病的現代醫學核心防線！',
+      color: '#f59e0b'
+    },
+    musculoskeletal: {
+      title: '🦴 骨骼肌質量與代謝水槽 (Musculoskeletal & Endocrine)',
+      organ: '600 多塊骨骼肌、206 塊骨骼、關節軟骨',
+      mechanism: '骨骼肌不只是運動器官，更是人體最大的「內分泌與血糖代謝水槽 (Metabolic Sink)」！收縮時釋放抗炎肌動蛋白 (Myokines)。阻力訓練刺激造骨細胞，在青春期奠定一生最高骨峰值！',
+      medicalKey: '高肌肉量代表高基礎代謝率與高胰島素敏感度，預防肥胖與老年肌少症！',
+      color: '#d97706'
+    }
+  };
+
+  const currentSys = systemsData[selectedSystem];
+
+  return (
+    <div className="card p-5 space-y-5 animate-fade-in" style={{ backgroundColor: 'var(--bg-secondary)', borderRadius: 'var(--radius-xl)', border: '1.5px solid var(--border-light)' }}>
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-3 border-b border-light">
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="badge badge-accent text-xs font-bold px-2 py-0.5">🧬 醫學人體生理學</span>
+            <span className="badge badge-success text-xs font-bold px-2 py-0.5">抗衰老生活實驗室</span>
+          </div>
+          <h2 className="text-lg font-black text-primary mt-1">
+            人體六大生命系統協同與細胞抗衰老沙盤
+          </h2>
+          <p className="text-xs text-secondary">
+            親手調控 Zone 2 有氧、阻力重訓、深度睡眠與彩虹抗炎飲食，探索細胞自噬與粒線體生化機制
+          </p>
+        </div>
+
+        <button
+          onClick={() => {
+            setZone2Hours(3.5);
+            setStrengthDays(3);
+            setSleepHours(8.5);
+            setNutritionScore(8);
+            setHydrationMl(2000);
+            playSound('pop');
+            triggerHaptic('light');
+          }}
+          className="btn-outline text-xs px-2.5 py-1.5 flex items-center gap-1 rounded-lg"
+        >
+          <RotateCcw size={13} />
+          <span>重設最佳參數</span>
+        </button>
+      </div>
+
+      {/* Top 4 Realtime Bio-Metrics Dashboards */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {/* Metric 1: Autophagy */}
+        <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-center">
+          <div className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300 flex items-center justify-center gap-1">
+            <Dna size={13} />
+            <span>細胞自噬清除力</span>
+          </div>
+          <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-1">
+            {autophagyScore}%
+          </div>
+          <div className="text-[10px] text-emerald-700/80 mt-0.5">
+            {autophagyScore >= 75 ? '🌟 高效吞噬清除廢蛋白' : '⚠️ 堆積老舊受損細胞器'}
+          </div>
+        </div>
+
+        {/* Metric 2: Mitochondria */}
+        <div className="p-3.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-center">
+          <div className="text-[11px] font-bold text-blue-800 dark:text-blue-300 flex items-center justify-center gap-1">
+            <Zap size={13} />
+            <span>粒線體發電產能</span>
+          </div>
+          <div className="text-2xl font-black text-blue-600 dark:text-blue-400 mt-1">
+            {mitoScore}%
+          </div>
+          <div className="text-[10px] text-blue-700/80 mt-0.5">
+            {mitoScore >= 80 ? '⚡ ATP 能量滿載充沛' : '🔋 細胞供能效率較低'}
+          </div>
+        </div>
+
+        {/* Metric 3: Systemic Inflammation */}
+        <div className="p-3.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-center">
+          <div className="text-[11px] font-bold text-rose-800 dark:text-rose-300 flex items-center justify-center gap-1">
+            <Flame size={13} />
+            <span>慢性微發炎指數</span>
+          </div>
+          <div className="text-2xl font-black text-rose-600 dark:text-rose-400 mt-1">
+            {inflammationIndex}
+          </div>
+          <div className="text-[10px] text-rose-700/80 mt-0.5">
+            {inflammationIndex <= 35 ? '🛡️ 低發炎抗衰老最佳狀態' : '⚠️ 高發炎加速組織老化'}
+          </div>
+        </div>
+
+        {/* Metric 4: Bio-Age Delta */}
+        <div className="p-3.5 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800 text-center">
+          <div className="text-[11px] font-bold text-purple-800 dark:text-purple-300 flex items-center justify-center gap-1">
+            <Activity size={13} />
+            <span>細胞生理年齡差</span>
+          </div>
+          <div className="text-2xl font-black text-purple-600 dark:text-purple-400 mt-1">
+            {bioAgeDelta <= 0 ? `${bioAgeDelta} 歲` : `+${bioAgeDelta} 歲`}
+          </div>
+          <div className="text-[10px] text-purple-700/80 mt-0.5">
+            {bioAgeDelta <= -2 ? '✨ 生物逆齡活力充沛' : bioAgeDelta <= 1 ? '均衡正常' : '⚠️ 加速老化警訊'}
+          </div>
+        </div>
+      </div>
+
+      {/* Main Body: Left 5 Sliders + Right System Visualizer */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        {/* Left: 5 Lifestyle Intervention Controllers (6 cols) */}
+        <div className="lg:col-span-6 space-y-3.5 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-light">
+          <div className="flex items-center justify-between text-xs font-bold text-primary pb-1 border-b border-light">
+            <span className="flex items-center gap-1.5">
+              <Compass size={14} className="text-blue-500" />
+              <span>生活醫學干預變因調節</span>
+            </span>
+            <span className="text-[11px] text-secondary">即時連動細胞生理運算</span>
+          </div>
+
+          {/* Slider 1: Zone 2 Cardio */}
+          <div className="space-y-1">
+            <div className="flex justify-between text-xs">
+              <span className="font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200">
+                <Activity size={13} className="text-cyan-500" />
+                <span>Zone 2 低強度有氧訓練：</span>
+              </span>
+              <span className="font-mono font-bold text-cyan-600 dark:text-cyan-400">
+                {zone2Hours} 小時 / 週
+              </span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="7"
+              step="0.5"
+              value={zone2Hours}
+              onChange={(e) => { setZone2Hours(parseFloat(e.target.value)); triggerHaptic('light'); }}
+              className="w-full accent-cyan-500"
+            />
+            <div className="flex justify-between text-[10px] text-secondary">
+              <span>0 (久坐少動)</span>
+              <span>3~4h (心血管最佳刺激)</span>
+              <span>7h (耐力高手)</span>
+            </div>
+          </div>
+
+          {/* Slider 2: Strength Days */}
+          <div className="space-y-1">
+            <div className="flex justify-between text-xs">
+              <span className="font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200">
+                <Dumbbell size={13} className="text-amber-500" />
+                <span>阻力肌力抗阻訓練：</span>
+              </span>
+              <span className="font-mono font-bold text-amber-600 dark:text-amber-400">
+                {strengthDays} 天 / 週
+              </span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="5"
+              step="1"
+              value={strengthDays}
+              onChange={(e) => { setStrengthDays(parseInt(e.target.value)); triggerHaptic('light'); }}
+              className="w-full accent-amber-500"
+            />
+            <div className="flex justify-between text-[10px] text-secondary">
+              <span>0 (無肌力刺激)</span>
+              <span>2~3天 (刺激骨密度與增肌)</span>
+              <span>5天 (進階超負荷)</span>
+            </div>
+          </div>
+
+          {/* Slider 3: Sleep */}
+          <div className="space-y-1">
+            <div className="flex justify-between text-xs">
+              <span className="font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200">
+                <Moon size={13} className="text-indigo-500" />
+                <span>每晚深度優質睡眠：</span>
+              </span>
+              <span className="font-mono font-bold text-indigo-600 dark:text-indigo-400">
+                {sleepHours} 小時 / 夜
+              </span>
+            </div>
+            <input
+              type="range"
+              min="4"
+              max="10"
+              step="0.5"
+              value={sleepHours}
+              onChange={(e) => { setSleepHours(parseFloat(e.target.value)); triggerHaptic('light'); }}
+              className="w-full accent-indigo-500"
+            />
+            <div className="flex justify-between text-[10px] text-secondary">
+              <span>4h (腦毒素堆積)</span>
+              <span>8.5h (青春期生長激素黃金釋放)</span>
+              <span>10h (充足休眠)</span>
+            </div>
+          </div>
+
+          {/* Slider 4: Rainbow Nutrition */}
+          <div className="space-y-1">
+            <div className="flex justify-between text-xs">
+              <span className="font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200">
+                <Apple size={13} className="text-emerald-500" />
+                <span>彩虹蔬果與抗發炎飲食：</span>
+              </span>
+              <span className="font-mono font-bold text-emerald-600 dark:text-emerald-400">
+                {nutritionScore} / 10 分
+              </span>
+            </div>
+            <input
+              type="range"
+              min="1"
+              max="10"
+              step="1"
+              value={nutritionScore}
+              onChange={(e) => { setNutritionScore(parseInt(e.target.value)); triggerHaptic('light'); }}
+              className="w-full accent-emerald-500"
+            />
+            <div className="flex justify-between text-[10px] text-secondary">
+              <span>1 (高糖油炸促炎)</span>
+              <span>6 (一般外食)</span>
+              <span>10 (低GI富含多酚纖維)</span>
+            </div>
+          </div>
+
+          {/* Slider 5: Hydration */}
+          <div className="space-y-1">
+            <div className="flex justify-between text-xs">
+              <span className="font-bold flex items-center gap-1 text-slate-700 dark:text-slate-200">
+                <Droplets size={13} className="text-blue-500" />
+                <span>每日純水攝取量：</span>
+              </span>
+              <span className="font-mono font-bold text-blue-600 dark:text-blue-400">
+                {hydrationMl} ml
+              </span>
+            </div>
+            <input
+              type="range"
+              min="800"
+              max="3000"
+              step="100"
+              value={hydrationMl}
+              onChange={(e) => { setHydrationMl(parseInt(e.target.value)); triggerHaptic('light'); }}
+              className="w-full accent-blue-500"
+            />
+            <div className="flex justify-between text-[10px] text-secondary">
+              <span>800ml (缺水血稠)</span>
+              <span>2000ml (標準代謝排毒)</span>
+              <span>3000ml (運動足量)</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right: 6 Human Systems Visual Hub (6 cols) */}
+        <div className="lg:col-span-6 flex flex-col gap-3">
+          {/* 6 System Pills Navigator */}
+          <div className="grid grid-cols-3 gap-1.5">
+            {[
+              { id: 'mitochondria', label: '🧬 粒線體自噬', color: '#10b981' },
+              { id: 'circulatory', label: '🫀 心血管循環', color: '#ef4444' },
+              { id: 'respiratory', label: '🫁 肺泡氣體交換', color: '#06b6d4' },
+              { id: 'brain', label: '🧠 大腦膠淋巴', color: '#8b5cf6' },
+              { id: 'immune', label: '🛡️ 免疫腸道微生態', color: '#f59e0b' },
+              { id: 'musculoskeletal', label: '🦴 骨骼肌水槽', color: '#d97706' }
+            ].map(sys => {
+              const isSelected = selectedSystem === sys.id;
+              return (
+                <button
+                  key={sys.id}
+                  onClick={() => { setSelectedSystem(sys.id); playSound('click'); triggerHaptic('selection'); }}
+                  className={`p-2 rounded-xl text-xs font-bold transition-all border text-center ${
+                    isSelected 
+                      ? 'bg-blue-600 text-white shadow-sm border-blue-600' 
+                      : 'bg-white dark:bg-slate-800 text-secondary hover:border-blue-300 border-light'
+                  }`}
+                >
+                  {sys.label}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* System Deep-Dive Card */}
+          <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-light space-y-3 shadow-xs">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-black text-primary">
+                {currentSys.title}
+              </h3>
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-secondary font-bold">
+                器官架構：{currentSys.organ}
+              </span>
+            </div>
+
+            <p className="text-xs text-secondary leading-relaxed font-sans">
+              {currentSys.mechanism}
+            </p>
+
+            <div className="p-3 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 text-xs">
+              <strong className="text-blue-700 dark:text-blue-300 block mb-0.5">
+                🩺 醫學抗衰老與升學先修關鍵：
+              </strong>
+              <span className="text-slate-700 dark:text-slate-300">
+                {currentSys.medicalKey}
+              </span>
+            </div>
+
+            {/* Quick Action Test */}
+            <div className="flex items-center justify-between text-xs pt-1 border-t border-light">
+              <span className="text-[11px] text-secondary">
+                💡 108 課綱六年級健康體育 ➔ 國中生物循環與呼吸系統無縫銜接
+              </span>
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('open_knowledge_hub', {
+                    detail: { subject: 'health_pe', unitId: 'pe-u4' }
+                  }));
+                  playSound('pop');
+                }}
+                className="text-blue-600 dark:text-blue-400 font-bold hover:underline flex items-center gap-0.5"
+              >
+                <span>查閱課綱知識點</span>
+                <ArrowRight size={12} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🏋️ 7. 體適能：增肌超負荷、減脂與身體組成生理計算機 (Fitness, Hypertrophy & Fat Loss Engine)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+export const FitnessHypertrophyFatLossLab = () => {
+  const { addCoins, addXp } = useGamification();
+  const [activeTab, setActiveTab] = useState('hypertrophy'); // 'hypertrophy' | 'fatloss' | 'radar'
+
+  // User Profile States
+  const [weightKg, setWeightKg] = useState(50); // 35 ~ 85 kg
+  const [bodyFatPct, setBodyFatPct] = useState(20); // 10 ~ 35 %
+  
+  // Hypertrophy Variables
+  const [setsPerExercise, setSetsPerExercise] = useState(4); // 1 ~ 6 sets
+  const [repsPerSet, setRepsPerSet] = useState(10); // 5 ~ 20 reps
+  const [proteinGramsPerKg, setProteinGramsPerKg] = useState(1.6); // 0.8 ~ 2.4 g/kg
+  const [resistanceDaysPerWeek, setResistanceDaysPerWeek] = useState(3); // 1 ~ 5 days
+
+  // Fat Loss Variables
+  const [dailyNeatSteps, setDailyNeatSteps] = useState(8000); // 3000 ~ 16000 steps
+  const [cardioMinutesPerWeek, setCardioMinutesPerWeek] = useState(120); // 0 ~ 300 mins
+  const [dailyCalorieIntake, setDailyCalorieIntake] = useState(1800); // 1200 ~ 3200 kcal
+  const [hasCelebratedFatLoss, setHasCelebratedFatLoss] = useState(false);
+
+  // Calculations
+  // BMR (Mifflin-St Jeor formula approximation for 12-year-olds)
+  const bmr = Math.round(10 * weightKg + 6.25 * 152 - 5 * 12 + 5);
+  // NEAT calories from steps: ~0.04 kcal per step for 50kg student
+  const neatCalories = Math.round(dailyNeatSteps * 0.04 * (weightKg / 50));
+  // Exercise Activity Thermogenesis (EAT)
+  const eatCalories = Math.round((cardioMinutesPerWeek / 7) * 7 + (resistanceDaysPerWeek * 150 / 7));
+  // Thermic Effect of Food (TEF) ~ 10%
+  const tefCalories = Math.round(dailyCalorieIntake * 0.1);
+  // Total Daily Energy Expenditure (TDEE)
+  const tdee = Math.round(bmr + neatCalories + eatCalories + tefCalories);
+  // Caloric Deficit / Surplus
+  const calorieBalance = dailyCalorieIntake - tdee;
+  // Estimated Weekly Fat Change (grams): 1g fat ~ 7.7 kcal
+  const weeklyFatChangeGrams = Math.round((calorieBalance * 7) / 7.7);
+
+  // Muscle Protein Synthesis (MPS) Status
+  const isOptimalProtein = proteinGramsPerKg >= 1.5;
+  const isOptimalVolume = setsPerExercise >= 3 && repsPerSet >= 8 && repsPerSet <= 12;
+  const hypertrophyStatus = (isOptimalProtein && isOptimalVolume && resistanceDaysPerWeek >= 2)
+    ? { level: '🔥 黃金超量補償啟動', color: 'text-emerald-600 dark:text-emerald-400', desc: '白胺酸閾值達成，機械張力最佳化，肌纖維高效增生！' }
+    : { level: '⏳ 維持期或輕微刺激', color: 'text-amber-600 dark:text-amber-400', desc: '建議提高蛋白質攝取至每公斤 1.5g，並將組數提升至 3~4 組！' };
+
+  // Check Fat Loss Celebration (Deficit between -300 and -500 kcal)
+  useEffect(() => {
+    if (calorieBalance <= -250 && calorieBalance >= -500 && !hasCelebratedFatLoss) {
+      setHasCelebratedFatLoss(true);
+      playSound('levelup');
+      triggerHaptic('medium');
+      dispatchDynamicIsland({
+        title: '🎯 黃金健康減脂區間！',
+        subtitle: `每日赤字 ${Math.abs(calorieBalance)} kcal・保留肌肉高效燃脂`,
+        icon: '⚖️'
+      });
+      addCoins(25);
+      addXp(40, 'golden_fatloss_zone');
+      confetti({ particleCount: 50, spread: 60, origin: { y: 0.6 } });
+    } else if (calorieBalance > -100 || calorieBalance < -600) {
+      setHasCelebratedFatLoss(false);
+    }
+  }, [calorieBalance, hasCelebratedFatLoss, addCoins, addXp]);
+
+  return (
+    <div className="card p-5 space-y-5 animate-fade-in" style={{ backgroundColor: 'var(--bg-secondary)', borderRadius: 'var(--radius-xl)', border: '1.5px solid var(--border-light)' }}>
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-3 border-b border-light">
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="badge badge-accent text-xs font-bold px-2 py-0.5">🏋️ 運動生理學</span>
+            <span className="badge badge-success text-xs font-bold px-2 py-0.5">TDEE 能量平衡計算</span>
+          </div>
+          <h2 className="text-lg font-black text-primary mt-1">
+            體適能增肌超負荷、減脂與身體組成生理計算機
+          </h2>
+          <p className="text-xs text-secondary">
+            掌握漸進式超負荷、蛋白質合成 (MPS) 閾值、熱量赤字 (CICO) 與體適能五大基石
+          </p>
+        </div>
+
+        {/* 3 Mode Tabs */}
+        <div className="flex items-center gap-1 bg-white dark:bg-slate-800 p-1 rounded-xl border border-light">
+          {[
+            { id: 'hypertrophy', label: '💪 增肌超負荷', icon: Dumbbell },
+            { id: 'fatloss', label: '🔥 減脂能量代謝', icon: Flame },
+            { id: 'radar', label: '📊 體適能五要素', icon: Activity }
+          ].map(tab => {
+            const TabIcon = tab.icon;
+            const isSelected = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => { setActiveTab(tab.id); playSound('click'); triggerHaptic('selection'); }}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  isSelected ? 'bg-blue-600 text-white shadow-sm' : 'text-secondary hover:text-primary'
+                }`}
+              >
+                <TabIcon size={13} />
+                <span>{tab.label}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Profile Bar */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-light text-xs">
+        <div>
+          <span className="text-secondary block">模擬學生體重：</span>
+          <div className="flex items-center gap-1 mt-0.5">
+            <input
+              type="range"
+              min="35"
+              max="80"
+              step="1"
+              value={weightKg}
+              onChange={(e) => setWeightKg(parseInt(e.target.value))}
+              className="w-20 accent-blue-600"
+            />
+            <strong className="text-primary font-mono">{weightKg} kg</strong>
+          </div>
+        </div>
+        <div>
+          <span className="text-secondary block">體脂率與瘦肌肉量：</span>
+          <div className="flex items-center gap-1 mt-0.5">
+            <input
+              type="range"
+              min="10"
+              max="35"
+              step="1"
+              value={bodyFatPct}
+              onChange={(e) => setBodyFatPct(parseInt(e.target.value))}
+              className="w-20 accent-amber-600"
+            />
+            <strong className="text-amber-600 dark:text-amber-400 font-mono">{bodyFatPct}% ({Math.round(weightKg * (1 - bodyFatPct / 100))}kg瘦肉)</strong>
+          </div>
+        </div>
+        <div>
+          <span className="text-secondary block">基礎代謝 (BMR)：</span>
+          <strong className="text-blue-600 dark:text-blue-400 font-mono text-sm block mt-0.5">
+            {bmr} kcal / 天
+          </strong>
+        </div>
+        <div>
+          <span className="text-secondary block">每日總消耗 (TDEE)：</span>
+          <strong className="text-emerald-600 dark:text-emerald-400 font-mono text-sm block mt-0.5">
+            {tdee} kcal / 天
+          </strong>
+        </div>
+        <div>
+          <span className="text-secondary block">每日熱量差額：</span>
+          <strong className={`font-mono text-sm block mt-0.5 ${
+            calorieBalance < 0 ? 'text-amber-600 dark:text-amber-400' : 'text-purple-600 dark:text-purple-400'
+          }`}>
+            {calorieBalance > 0 ? `+${calorieBalance} kcal` : `${calorieBalance} kcal`}
+          </strong>
+        </div>
+      </div>
+
+      {/* MODE 1: Hypertrophy Engine */}
+      {activeTab === 'hypertrophy' && (
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 animate-fade-in">
+          {/* Left Controls (6 cols) */}
+          <div className="lg:col-span-6 space-y-3.5 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-light">
+            <h3 className="text-xs font-bold text-primary flex items-center gap-1.5 pb-1 border-b border-light">
+              <Dumbbell size={14} className="text-blue-600" />
+              <span>漸進式超負荷 (Progressive Overload) 參數調節</span>
+            </h3>
+
+            {/* Sets */}
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span>訓練組數 (Sets per exercise)：</span>
+                <strong className="font-mono text-blue-600">{setsPerExercise} 組</strong>
+              </div>
+              <input
+                type="range"
+                min="1"
+                max="6"
+                step="1"
+                value={setsPerExercise}
+                onChange={(e) => setSetsPerExercise(parseInt(e.target.value))}
+                className="w-full accent-blue-600"
+              />
+              <span className="text-[10px] text-secondary">推薦：3~4 組為最佳機械張力積累區間</span>
+            </div>
+
+            {/* Reps */}
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span>每組次數 (Reps per set)：</span>
+                <strong className="font-mono text-blue-600">{repsPerSet} 下</strong>
+              </div>
+              <input
+                type="range"
+                min="5"
+                max="20"
+                step="1"
+                value={repsPerSet}
+                onChange={(e) => setRepsPerSet(parseInt(e.target.value))}
+                className="w-full accent-blue-600"
+              />
+              <span className="text-[10px] text-secondary">8~12 下為肌肥大 (Hypertrophy) 經典刺激次數</span>
+            </div>
+
+            {/* Protein g/kg */}
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span>蛋白質攝取量 (g / kg 體重)：</span>
+                <strong className="font-mono text-emerald-600">{proteinGramsPerKg} g/kg (全天 {Math.round(weightKg * proteinGramsPerKg)}g)</strong>
+              </div>
+              <input
+                type="range"
+                min="0.8"
+                max="2.4"
+                step="0.1"
+                value={proteinGramsPerKg}
+                onChange={(e) => setProteinGramsPerKg(parseFloat(e.target.value))}
+                className="w-full accent-emerald-600"
+              />
+              <span className="text-[10px] text-secondary">青少年運動員建議 1.4~1.8g/kg，激活白胺酸 (Leucine) MPS 觸發點</span>
+            </div>
+
+            {/* Resistance frequency */}
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span>每週阻力訓練頻率：</span>
+                <strong className="font-mono text-indigo-600">{resistanceDaysPerWeek} 天 / 週</strong>
+              </div>
+              <input
+                type="range"
+                min="1"
+                max="5"
+                step="1"
+                value={resistanceDaysPerWeek}
+                onChange={(e) => setResistanceDaysPerWeek(parseInt(e.target.value))}
+                className="w-full accent-indigo-600"
+              />
+              <span className="text-[10px] text-secondary">每肌群間隔 48 小時超量補償修復效果最好</span>
+            </div>
+          </div>
+
+          {/* Right Muscle Physiology Output (6 cols) */}
+          <div className="lg:col-span-6 space-y-3 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-light">
+            <h3 className="text-xs font-bold text-primary flex items-center justify-between pb-1 border-b border-light">
+              <span>🧬 肌肉蛋白質合成 (MPS) 生理判定</span>
+              <span className={`text-xs font-bold ${hypertrophyStatus.color}`}>
+                {hypertrophyStatus.level}
+              </span>
+            </h3>
+
+            <p className="text-xs text-secondary leading-relaxed">
+              {hypertrophyStatus.desc}
+            </p>
+
+            {/* 3 Pillars of Hypertrophy Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+              <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-light text-center">
+                <span className="text-[11px] font-bold text-primary block">1. 機械張力</span>
+                <span className="text-[10px] text-secondary mt-0.5 block">
+                  {setsPerExercise >= 3 ? '✅ 負荷刺激充分' : '⚠️ 張力累積不足'}
+                </span>
+              </div>
+              <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-light text-center">
+                <span className="text-[11px] font-bold text-primary block">2. 白胺酸觸發</span>
+                <span className="text-[10px] text-secondary mt-0.5 block">
+                  {proteinGramsPerKg >= 1.5 ? '✅ MPS 充分啟動' : '⚠️ 蛋白質略低'}
+                </span>
+              </div>
+              <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-light text-center">
+                <span className="text-[11px] font-bold text-primary block">3. 骨骼肌修復</span>
+                <span className="text-[10px] text-secondary mt-0.5 block">
+                  {resistanceDaysPerWeek >= 2 ? '✅ 超量補償循環' : '⚠️ 頻率過低'}
+                </span>
+              </div>
+            </div>
+
+            {/* Medical Context */}
+            <div className="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900 text-xs space-y-1">
+              <strong className="text-amber-800 dark:text-amber-300 block">
+                💡 醫學觀點：為什麼青少年要增肌？
+              </strong>
+              <span className="text-slate-700 dark:text-slate-300 block leading-relaxed">
+                肌肉是人體最大的血糖儲存庫（肌糖原），高肌肉量能維持極佳的<strong>胰島素敏感度</strong>，杜絕脂肪囤積。抗阻訓練更能透過肌腱拉扯骨膜，刺激成骨細胞，在青春期衝刺一生最高骨質密度！
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODE 2: Fat Loss Energy Balance */}
+      {activeTab === 'fatloss' && (
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 animate-fade-in">
+          {/* Left Sliders (6 cols) */}
+          <div className="lg:col-span-6 space-y-3.5 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-light">
+            <h3 className="text-xs font-bold text-primary flex items-center gap-1.5 pb-1 border-b border-light">
+              <Flame size={14} className="text-rose-600" />
+              <span>能量守恆與每日熱量收支 (CICO) 調控</span>
+            </h3>
+
+            {/* Daily Calorie Intake */}
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span>每日飲食熱量攝取 (Energy Intake)：</span>
+                <strong className="font-mono text-purple-600">{dailyCalorieIntake} kcal</strong>
+              </div>
+              <input
+                type="range"
+                min="1300"
+                max="3000"
+                step="50"
+                value={dailyCalorieIntake}
+                onChange={(e) => setDailyCalorieIntake(parseInt(e.target.value))}
+                className="w-full accent-purple-600"
+              />
+              <span className="text-[10px] text-secondary">健康底線：切勿低於基礎代謝率 (BMR {bmr} kcal)，避免代謝損傷！</span>
+            </div>
+
+            {/* Daily NEAT Steps */}
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span>非運動性日常活動消耗 (NEAT 步數)：</span>
+                <strong className="font-mono text-emerald-600">{dailyNeatSteps} 步 / 天 (+{neatCalories} kcal)</strong>
+              </div>
+              <input
+                type="range"
+                min="4000"
+                max="16000"
+                step="500"
+                value={dailyNeatSteps}
+                onChange={(e) => setDailyNeatSteps(parseInt(e.target.value))}
+                className="w-full accent-emerald-600"
+              />
+              <span className="text-[10px] text-secondary">NEAT 佔全天總消耗 15~20%，多走樓梯、步行比單純跑步更持久！</span>
+            </div>
+
+            {/* Cardio Minutes */}
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span>每週 Zone 2 有氧運動：</span>
+                <strong className="font-mono text-cyan-600">{cardioMinutesPerWeek} 分鐘 / 週</strong>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="300"
+                step="15"
+                value={cardioMinutesPerWeek}
+                onChange={(e) => setCardioMinutesPerWeek(parseInt(e.target.value))}
+                className="w-full accent-cyan-600"
+              />
+              <span className="text-[10px] text-secondary">Zone 2 強度心率下，脂肪氧化供能比例最高達 70%！</span>
+            </div>
+          </div>
+
+          {/* Right Fat Loss Output (6 cols) */}
+          <div className="lg:col-span-6 space-y-3 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-light">
+            <h3 className="text-xs font-bold text-primary flex items-center justify-between pb-1 border-b border-light">
+              <span>📉 體態重塑與體脂趨勢預測</span>
+              <span className="font-mono text-xs font-bold text-rose-600 dark:text-rose-400">
+                每週預估變化：{weeklyFatChangeGrams > 0 ? `+${weeklyFatChangeGrams}g 增脂` : `${weeklyFatChangeGrams}g 脂肪`}
+              </span>
+            </h3>
+
+            {/* TDEE Decomposition Breakdown */}
+            <div className="space-y-2 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-light text-xs">
+              <div className="font-bold text-primary mb-1">每日能量支出分解 (TDEE: {tdee} kcal)：</div>
+              <div className="flex items-center gap-2">
+                <span className="w-20 text-[11px] text-secondary">1. 基礎代謝 (BMR):</span>
+                <div className="flex-1 bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-blue-500 h-full" style={{ width: `${Math.round((bmr / tdee) * 100)}%` }} />
+                </div>
+                <span className="font-mono font-bold text-blue-600 w-16 text-right">{bmr} kcal</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-20 text-[11px] text-secondary">2. 日常活動 (NEAT):</span>
+                <div className="flex-1 bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-emerald-500 h-full" style={{ width: `${Math.round((neatCalories / tdee) * 100)}%` }} />
+                </div>
+                <span className="font-mono font-bold text-emerald-600 w-16 text-right">{neatCalories} kcal</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-20 text-[11px] text-secondary">3. 運動消耗 (EAT):</span>
+                <div className="flex-1 bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-cyan-500 h-full" style={{ width: `${Math.round((eatCalories / tdee) * 100)}%` }} />
+                </div>
+                <span className="font-mono font-bold text-cyan-600 w-16 text-right">{eatCalories} kcal</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-20 text-[11px] text-secondary">4. 攝食熱效應 (TEF):</span>
+                <div className="flex-1 bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                  <div className="bg-amber-500 h-full" style={{ width: `${Math.round((tefCalories / tdee) * 100)}%` }} />
+                </div>
+                <span className="font-mono font-bold text-amber-600 w-16 text-right">{tefCalories} kcal</span>
+              </div>
+            </div>
+
+            {/* Visceral vs Subcutaneous Fat Insight */}
+            <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 text-xs space-y-1">
+              <strong className="text-blue-800 dark:text-blue-300 block">
+                🛡️ 醫學減脂核心：先減「內臟脂肪 (Visceral Fat)」！
+              </strong>
+              <span className="text-slate-700 dark:text-slate-300 block leading-relaxed">
+                包覆在肝臟、胰臟周圍的內臟脂肪會釋放發炎因子促使胰島素阻抗。只要維持 300~500 kcal 溫和熱量赤字，身體會優先燃燒危害最大的內臟脂肪，保護心臟血管！
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODE 3: 5 Fitness Components Radar */}
+      {activeTab === 'radar' && (
+        <div className="space-y-4 animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+            {[
+              { name: '1. 心肺耐力', test: '800m 跑走', target: '4分20秒以內', desc: '心臟送血與肺部氧氣利用效能，預防心血管病基石', color: '#06b6d4' },
+              { name: '2. 肌力', test: '握力 / 立定跳遠', target: '跳遠 150cm 以上', desc: '肌肉克服最大阻力之能力，支撐骨架維持良好體態', color: '#3b82f6' },
+              { name: '3. 肌耐力', test: '仰臥起坐 / 捲腹', target: '30~38 次 / 1分鐘', desc: '肌肉長時間維持收縮能力，確保讀書不駝背腰痠', color: '#8b5cf6' },
+              { name: '4. 柔軟度', test: '坐姿體前彎', target: '28cm 以上', desc: '關節活動幅度與肌肉肌腱筋膜延展性，防運動拉傷', color: '#10b981' },
+              { name: '5. 身體組成', test: 'BMI 與體脂率', target: 'BMI 15.5 ~ 21.5', desc: '肌肉組織與脂肪組織比例，維持最高代謝活性水槽', color: '#f59e0b' }
+            ].map(comp => (
+              <div 
+                key={comp.name} 
+                className="p-3.5 rounded-xl border bg-white dark:bg-slate-900 flex flex-col justify-between"
+                style={{ borderColor: 'var(--border-light)' }}
+              >
+                <div>
+                  <span className="font-black text-xs block mb-1" style={{ color: comp.color }}>
+                    {comp.name}
+                  </span>
+                  <span className="text-[11px] font-bold text-primary block">
+                    檢測：{comp.test}
+                  </span>
+                  <p className="text-[10px] text-secondary mt-1 leading-relaxed">
+                    {comp.desc}
+                  </p>
+                </div>
+                <div className="mt-2 pt-2 border-t border-light text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">
+                  六年級常模：{comp.target}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-300 dark:border-emerald-800 text-xs space-y-1.5">
+            <div className="font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
+              <Award size={15} />
+              <span>教育部體適能護照金銀銅牌目標</span>
+            </div>
+            <p className="text-secondary leading-relaxed">
+              健康體適能不是為了跟同學競爭，而是送給自己未來的健康資本！每週累積 150 分鐘中中度活動，全面均衡強化五大指標，就能在身心蛻變期擁有最強免疫力與挺拔體態！
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

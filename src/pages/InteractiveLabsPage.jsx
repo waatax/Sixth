@@ -22,6 +22,8 @@ import {
   FivePowersSandbox, 
   ColorWheelMixerLab, 
   CprRhythmMetronomeLab, 
+  HumanBodyLongevityLab,
+  FitnessHypertrophyFatLossLab,
   TimeManagementMatrixLab 
 } from '../components/labs/DomainInteractiveSimulators';
 import confetti from 'canvas-confetti';
@@ -996,7 +998,25 @@ const InteractiveLabsPage = () => {
         )}
 
         {/* ========================================================================= */}
-        {/* LAB 14: Time Management Matrix Lab (Integrative Activity) */}
+        {/* LAB 14: Human Body Systems & Longevity Metabolism Lab (Health & Medicine) */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'human-body-longevity' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <HumanBodyLongevityLab />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 15: Fitness, Hypertrophy & Fat Loss Lab (Exercise Physiology) */}
+        {/* ========================================================================= */}
+        {selectedLabId === 'fitness-hypertrophy-fatloss' && (
+          <div className="flex flex-col gap-4 animate-fade-in">
+            <FitnessHypertrophyFatLossLab />
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* LAB 16: Time Management Matrix Lab (Integrative Activity) */}
         {/* ========================================================================= */}
         {selectedLabId === 'time-management-matrix' && (
           <div className="flex flex-col gap-4 animate-fade-in">

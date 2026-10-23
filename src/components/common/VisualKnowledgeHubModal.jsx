@@ -160,7 +160,8 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
   const filteredPoints = useMemo(() => {
     let list = searchKnowledgePoints(searchQuery, activeSubject, activeSemester);
     if (activeTheme !== 'all') {
-      if (activeTheme === 'concept') list = list.filter(p => p.category.includes('觀念') || p.category.includes('本質'));
+      if (activeTheme === 'health_med') list = list.filter(p => p.subjectId === 'health_pe' || p.category.includes('體') || p.category.includes('健康') || p.definition.includes('細胞') || p.definition.includes('循環') || p.definition.includes('神經'));
+      else if (activeTheme === 'concept') list = list.filter(p => p.category.includes('觀念') || p.category.includes('本質'));
       else if (activeTheme === 'formula') list = list.filter(p => p.category.includes('算理') || p.category.includes('公式') || p.formulaOrRule.includes('$'));
       else if (activeTheme === 'trap') list = list.filter(p => p.trapAlert.includes('必背') || p.trapAlert.includes('防雷'));
       else if (activeTheme === 'life') list = list.filter(p => p.practicalUtility.length > 15);
@@ -442,6 +443,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
             <div className="flex items-center gap-1 overflow-x-auto scrollbar-none">
               {[
                 { id: 'all', label: '全部主題' },
+                { id: 'health_med', label: '🩺 醫學體適能' },
                 { id: 'concept', label: '📐 觀念本質' },
                 { id: 'formula', label: '⚡ 運算公式' },
                 { id: 'trap', label: '🛡️ 避雷防錯' },
