@@ -529,6 +529,27 @@ const QuizPage = () => {
           <ArrowLeft size={16} /> 返回單元列表
         </button>
 
+        <button
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent('open_quick_quiz_menu', {
+              detail: {
+                subject: currentUnit?.id?.split('-u')[0] || 'math',
+                semester: currentUnit?.semester || '6A',
+                scope: currentUnit?.term || 'midterm'
+              }
+            }));
+            playSound('ios_tap');
+          }}
+          className="px-3 py-1.5 rounded-full text-xs font-black text-white flex items-center gap-1 cursor-pointer"
+          style={{
+            background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
+            border: 'none'
+          }}
+        >
+          <Zap size={13} className="fill-white" />
+          <span>⚡ 快速切換學期 / 科目 / 期中期末測驗</span>
+        </button>
+
         <div className="flex items-center gap-3">
           <ComboFlameIndicator comboCount={combo} />
 

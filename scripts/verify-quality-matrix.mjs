@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 console.log('========================================================================');
-console.log('🚀 最強小六 (Sixth) 全維度 15 層品質、108課綱全版本與 Duolingo 遊戲化檢驗矩陣');
+console.log('🚀 最強小六 (Sixth) 全維度 16 層品質、108課綱全版本、Duolingo 與快速段考測驗檢驗矩陣');
 console.log('========================================================================\n');
 
 const results = [];
@@ -508,6 +508,39 @@ results.push({
   result: validDuolingoUnits === totalCatalogUnits
     ? `${validDuolingoUnits} / ${totalCatalogUnits} 關卡 (6大題型 100% 齊備)`
     : `${validDuolingoUnits} / ${totalCatalogUnits} 關卡通過`
+});
+
+// ----------------------------------------------------
+// 16. 快速段考測驗選單 (6上/6下 × 11大科目 × 期中/期末全組合覆蓋檢驗)
+// ----------------------------------------------------
+const quickQuizModalExists = fs.existsSync(path.join(rootDir, 'src/components/quiz/QuickQuizMenuModal.jsx'));
+let validQuizCombos = 0;
+let totalQuizCombos = 0;
+
+for (const sub of all108Subjects) {
+  const sUnits = getUnitsBySubject108(sub.id);
+  for (const sem of ['6A', '6B']) {
+    for (const sc of ['midterm', 'final']) {
+      totalQuizCombos++;
+      const matched = sUnits.filter(u => u.semester === sem && u.term === sc);
+      const hasQs = matched.some(u => {
+        const qKey = u.linkedUnitId || u.id;
+        return (quizData[qKey] || []).length > 0;
+      });
+      if (matched.length > 0 && hasQs) {
+        validQuizCombos++;
+      }
+    }
+  }
+}
+
+results.push({
+  layer: '快速段考測驗組卷矩陣',
+  target: `11大領域 × 2學期(6上/6下) × 2考期(期中/期末) = ${totalQuizCombos} 種段考測驗組合`,
+  method: 'QuickQuizMenuModal 全域啟動器 + MockExamPage 動態參數抽題檢驗',
+  result: (quickQuizModalExists && validQuizCombos === totalQuizCombos)
+    ? `${validQuizCombos} / ${totalQuizCombos} 組段考範圍 (100% 零空缺可測)`
+    : `${validQuizCombos} / ${totalQuizCombos} 組通過`
 });
 
 // ----------------------------------------------------

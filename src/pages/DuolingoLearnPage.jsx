@@ -132,38 +132,57 @@ const DuolingoLearnPage = () => {
             </p>
           </div>
 
-          {/* Switch View Tab: Winding Skill Tree vs Full Textbook & Reference Matrix */}
-          <div className="flex items-center gap-2 bg-white/80 dark:bg-slate-900/80 p-1.5 rounded-2xl border border-light flex-shrink-0">
+          {/* Switch View Tab: Winding Skill Tree vs Full Textbook & Reference Matrix + Quick Quiz */}
+          <div className="flex items-center gap-2 flex-wrap">
             <button
               onClick={() => {
-                setViewTab('skill_tree');
+                window.dispatchEvent(new CustomEvent('open_quick_quiz_menu', {
+                  detail: { subject: activeSubjectId, semester: selectedSemester === 'all' ? '6A' : selectedSemester, scope: 'midterm' }
+                }));
                 playSound('ios_tap');
               }}
-              className="px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer transition-all"
+              className="px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm text-white flex items-center gap-1.5 cursor-pointer"
               style={{
-                backgroundColor: viewTab === 'skill_tree' ? '#16a34a' : 'transparent',
-                color: viewTab === 'skill_tree' ? '#ffffff' : 'var(--text-secondary)',
+                background: 'linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)',
                 border: 'none',
-                boxShadow: viewTab === 'skill_tree' ? '0 3px 0 #15803d' : 'none'
+                boxShadow: '0 3px 0 #b91c1c'
               }}
             >
-              <span>🦉 蛇形闖關技能樹</span>
+              <span>⚡ 快速段考測驗選單</span>
             </button>
-            <button
-              onClick={() => {
-                setViewTab('master_catalog');
-                playSound('ios_tap');
-              }}
-              className="px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer transition-all"
-              style={{
-                backgroundColor: viewTab === 'master_catalog' ? '#4f46e5' : 'transparent',
-                color: viewTab === 'master_catalog' ? '#ffffff' : 'var(--text-secondary)',
-                border: 'none',
-                boxShadow: viewTab === 'master_catalog' ? '0 3px 0 #3730a3' : 'none'
-              }}
-            >
-              <span>📚 全版本課本＆參考書總表</span>
-            </button>
+
+            <div className="flex items-center gap-2 bg-white/80 dark:bg-slate-900/80 p-1.5 rounded-2xl border border-light flex-shrink-0">
+              <button
+                onClick={() => {
+                  setViewTab('skill_tree');
+                  playSound('ios_tap');
+                }}
+                className="px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer transition-all"
+                style={{
+                  backgroundColor: viewTab === 'skill_tree' ? '#16a34a' : 'transparent',
+                  color: viewTab === 'skill_tree' ? '#ffffff' : 'var(--text-secondary)',
+                  border: 'none',
+                  boxShadow: viewTab === 'skill_tree' ? '0 3px 0 #15803d' : 'none'
+                }}
+              >
+                <span>🦉 蛇形闖關技能樹</span>
+              </button>
+              <button
+                onClick={() => {
+                  setViewTab('master_catalog');
+                  playSound('ios_tap');
+                }}
+                className="px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm flex items-center gap-1.5 cursor-pointer transition-all"
+                style={{
+                  backgroundColor: viewTab === 'master_catalog' ? '#4f46e5' : 'transparent',
+                  color: viewTab === 'master_catalog' ? '#ffffff' : 'var(--text-secondary)',
+                  border: 'none',
+                  boxShadow: viewTab === 'master_catalog' ? '0 3px 0 #3730a3' : 'none'
+                }}
+              >
+                <span>📚 全版本課本＆參考書總表</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

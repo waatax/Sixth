@@ -152,6 +152,27 @@ const HomePage = () => {
                 <span>🦉 Duolingo 遊戲化全科闖關樹 (全版本課本＆參考書)</span>
               </Link>
 
+              {/* ⚡ 快速測驗選單 (上下學期 × 科目 × 期中/期末) */}
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('open_quick_quiz_menu'));
+                  triggerHaptic('medium');
+                  playSound('pop');
+                }}
+                className="ios-pressable flex items-center gap-1.5 text-xs font-black py-2 px-3.5"
+                style={{
+                  borderRadius: 'var(--radius-md)',
+                  background: 'linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)',
+                  color: '#ffffff',
+                  boxShadow: '0 3px 10px rgba(239, 68, 68, 0.35)',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                <Zap size={14} className="fill-white" />
+                <span>⚡ 快速段考測驗選單 (6上/6下・期中/期末)</span>
+              </button>
+
               {/* 🎯 智能主題探索快捷鍵 */}
               <button
                 onClick={() => scrollToSection('topic-discovery-section')}

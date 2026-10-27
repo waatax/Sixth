@@ -31,6 +31,7 @@ import GamificationWidget from '../common/GamificationWidget';
 import EyeCareToolbar from '../common/EyeCareToolbar';
 import SubjectIconBadge from '../common/SubjectIconBadge';
 import VisualKnowledgeHubModal from '../common/VisualKnowledgeHubModal';
+import QuickQuizMenuModal from '../quiz/QuickQuizMenuModal';
 import { useTheme } from '../../context/ThemeContext';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
@@ -42,8 +43,10 @@ const Header = () => {
   const [examToolsDropdownOpen, setExamToolsDropdownOpen] = useState(false);
   const [isKnowledgeHubOpen, setIsKnowledgeHubOpen] = useState(false);
   const [hubTarget, setHubTarget] = useState({ subject: 'all', unitId: null });
+  const [isQuickQuizOpen, setIsQuickQuizOpen] = useState(false);
+  const [quickQuizInitial, setQuickQuizInitial] = useState({ subject: 'math', semester: '6A', scope: 'midterm' });
 
-  // 全域監聽 open_knowledge_hub 事件
+  // 全域監聽 open_knowledge_hub 與 open_quick_quiz_menu 事件
   useEffect(() => {
     const handleOpenHub = (e) => {
       setHubTarget({
@@ -53,8 +56,20 @@ const Header = () => {
       });
       setIsKnowledgeHubOpen(true);
     };
+    const handleOpenQuickQuiz = (e) => {
+      setQuickQuizInitial({
+        subject: e?.detail?.subject || 'math',
+        semester: e?.detail?.semester || '6A',
+        scope: e?.detail?.scope || 'midterm'
+      });
+      setIsQuickQuizOpen(true);
+    };
     window.addEventListener('open_knowledge_hub', handleOpenHub);
-    return () => window.removeEventListener('open_knowledge_hub', handleOpenHub);
+    window.addEventListener('open_quick_quiz_menu', handleOpenQuickQuiz);
+    return () => {
+      window.removeEventListener('open_knowledge_hub', handleOpenHub);
+      window.removeEventListener('open_quick_quiz_menu', handleOpenQuickQuiz);
+    };
   }, []);
 
   // Close mobile drawer & dropdowns when route changes
@@ -258,6 +273,34 @@ const Header = () => {
                 </Link>
               );
             })}
+
+            {/* ⚡ 快速測驗選單按鈕 (6上/6下 × 科目 × 期中/期末) */}
+            <button
+              onClick={() => {
+                playSound('ios_tap');
+                triggerHaptic('light');
+                setIsQuickQuizOpen(true);
+              }}
+              className="flex items-center gap-1.5 ios-pressable"
+              style={{
+                padding: '6px 11px',
+                borderRadius: 'var(--radius-md)',
+                fontWeight: 800,
+                fontSize: '0.84rem',
+                color: '#ffffff',
+                background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
+                border: 'none',
+                boxShadow: '0 2px 8px rgba(124, 58, 237, 0.35)',
+                transition: 'all var(--transition-fast)',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                flexShrink: 0
+              }}
+              title="快速測驗選單：選擇上下學期、科目、期中考與期末考範圍"
+            >
+              <Zap size={14} className="fill-white" />
+              <span>快速測驗</span>
+            </button>
 
             {/* 💡 視覺知識庫與微知識點圖鑑按鈕 */}
             <button
@@ -706,6 +749,15 @@ const Header = () => {
         initialSubject={hubTarget.subject}
         initialUnitId={hubTarget.unitId}
         initialKpId={hubTarget.kpId}
+      />
+
+      {/* ⚡ 全域快速測驗選單模態框 (上下學期 × 科目 × 期中/期末) */}
+      <QuickQuizMenuModal
+        isOpen={isQuickQuizOpen}
+        onClose={() => setIsQuickQuizOpen(false)}
+        initialSubject={quickQuizInitial.subject}
+        initialSemester={quickQuizInitial.semester}
+        initialScope={quickQuizInitial.scope}
       />
 
       {/* Responsive media query styling rules for navigation */}

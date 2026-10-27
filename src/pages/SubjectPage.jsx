@@ -496,6 +496,22 @@ const SubjectPage = () => {
                 {s.label}
               </button>
             ))}
+
+            <button
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('open_quick_quiz_menu', {
+                  detail: { subject: subjectId, semester: selectedSemester === 'all' ? '6A' : selectedSemester, scope: 'midterm' }
+                }));
+                playSound('ios_tap');
+              }}
+              className="btn-pill text-xs px-3 py-1.5 font-black text-white"
+              style={{
+                background: 'linear-gradient(135deg, #ef4444 0%, #f59e0b 100%)',
+                border: 'none'
+              }}
+            >
+              ⚡ 本科期中/期末快速測驗選單
+            </button>
           </div>
 
           {/* Real-time search input */}
