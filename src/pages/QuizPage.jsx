@@ -605,7 +605,7 @@ const QuizPage = () => {
             borderColor: '#16a34a'
           }}
         >
-          🦉 Duolingo 多模態闖關 (字塊/配對/聽力)
+          🎮 互動學習遊戲 (字塊/配對/聽力)
         </button>
         <button
           onClick={() => {

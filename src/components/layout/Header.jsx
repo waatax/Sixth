@@ -88,7 +88,7 @@ const Header = () => {
   // Primary navigation links for desktop
   const primaryNavLinks = [
     { path: '/', label: '學習領域', icon: BookOpen },
-    { path: '/duolingo', label: 'Duolingo 闖關樹', icon: Sparkles, badge: 'NEW' },
+    { path: '/duolingo', label: '學習遊戲', icon: Sparkles, badge: 'HOT' },
     { path: '/exam-notes', label: '章節講義', icon: FileText, badge: 'PDF' },
     { path: '/labs', label: '互動實驗', icon: FlaskConical, badge: 'PhET' },
     { path: '/shorts', label: '知識短影音', icon: Zap, badge: 'HOT' },
@@ -117,7 +117,7 @@ const Header = () => {
       title: '🎓 核心學程與段考講義',
       items: [
         { path: '/', label: '八大學科領域', icon: BookOpen, badge: null, color: 'hsl(215, 85%, 52%)' },
-        { path: '/duolingo', label: '🦉 Duolingo 全科闖關樹＆課本參考書總表', icon: Sparkles, badge: 'NEW', color: '#16a34a' },
+        { path: '/duolingo', label: '🎮 全科學習遊戲＆課本參考書總表', icon: Sparkles, badge: 'HOT', color: '#16a34a' },
         { path: '/exam-notes', label: '章節段考講義 (64單元全覆蓋)', icon: FileText, badge: 'PDF', color: '#6366f1' },
       ]
     },

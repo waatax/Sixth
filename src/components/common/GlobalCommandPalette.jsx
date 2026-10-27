@@ -38,7 +38,7 @@ const HOT_SEARCH_CHIPS = [
 ];
 
 const QUICK_TOOLS = [
-  { id: 'tool-duolingo', title: '🦉 Duolingo 全科闖關樹＆課本參考書總表', path: '/duolingo', category: 'tools', icon: Sparkles, color: '#16a34a', badge: 'NEW' },
+  { id: 'tool-duolingo', title: '🎮 全科學習遊戲＆課本參考書總表', path: '/duolingo', category: 'tools', icon: Sparkles, color: '#16a34a', badge: 'HOT' },
   { id: 'tool-notes', title: '章節段考講義 (PDF 列印)', path: '/exam-notes', category: 'tools', icon: FileText, color: '#6366f1', badge: 'PDF' },
   { id: 'tool-labs', title: 'STEM 跨領域互動實驗室', path: '/labs', category: 'tools', icon: FlaskConical, color: '#10b981', badge: 'PhET' },
   { id: 'tool-shorts', title: '30秒知識短影音 (Reels)', path: '/shorts', category: 'tools', icon: Zap, color: '#ec4899', badge: 'HOT' },

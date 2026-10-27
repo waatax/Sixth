@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import {
   X,
@@ -22,18 +23,32 @@ import { playSound } from '../../utils/soundEffects';
 const TextbookReferenceCompendiumModal = ({ isOpen, onClose, unit, subject, onStartDuolingoLesson }) => {
   const [activeTab, setActiveTab] = useState('textbooks'); // 'textbooks' | 'references' | 'series'
 
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
+
   if (!isOpen || !unit) return null;
 
   const catalog = unit.catalog || getUnitCompleteCatalog(unit);
   const targetLessonUnitId = unit.linkedUnitId || unit.id;
 
-  return (
+  const modalNode = (
     <div
       style={{
         position: 'fixed',
-        inset: 0,
-        zIndex: 1080,
-        backgroundColor: 'rgba(15, 23, 42, 0.72)',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: '100vw',
+        height: '100vh',
+        zIndex: 9990,
+        backgroundColor: 'rgba(15, 23, 42, 0.76)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
         display: 'flex',
@@ -331,13 +346,18 @@ const TextbookReferenceCompendiumModal = ({ isOpen, onClose, unit, subject, onSt
               }}
             >
               <Play size={15} className="fill-white" />
-              <span>立即開始 Duolingo 遊戲化闖關 (+40 XP)</span>
+              <span>🎮 立即開始學習遊戲闖關 (+40 XP)</span>
             </button>
           )}
         </div>
       </div>
     </div>
   );
+
+  if (typeof document !== 'undefined') {
+    return createPortal(modalNode, document.body);
+  }
+  return modalNode;
 };
 
 export default TextbookReferenceCompendiumModal;

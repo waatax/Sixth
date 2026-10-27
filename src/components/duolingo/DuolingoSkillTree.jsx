@@ -140,12 +140,13 @@ const DuolingoSkillTree = ({
               }}
             >
               {/* Floating Callout Pill on Current Node */}
-              {idx === 0 && crowns === 0 && !isSelected && (
-                <div
-                  className="mb-2 px-3 py-1 rounded-full text-xs font-black bg-white dark:bg-slate-800 text-emerald-600 shadow-md border border-emerald-500 animate-bounce"
+              {idx === 0 && !isSelected && (
+                <button
+                  onClick={() => onStartLesson && onStartLesson(unit)}
+                  className="mb-2 px-3 py-1 rounded-full text-xs font-black bg-white dark:bg-slate-800 text-emerald-600 shadow-md border border-emerald-500 animate-bounce cursor-pointer"
                 >
-                  START 點擊闖關 👇
-                </div>
+                  🎮 點此立即玩第 1 關 👇
+                </button>
               )}
 
               {/* Outer Mastery Progress Ring + 3D Button */}
@@ -156,6 +157,7 @@ const DuolingoSkillTree = ({
                     triggerHaptic('medium');
                     setActivePopoverUnitId(isSelected ? null : unit.id);
                   }}
+                  onDoubleClick={() => onStartLesson && onStartLesson(unit)}
                   className="w-20 h-20 sm:w-24 sm:h-24 rounded-full flex flex-col items-center justify-center text-white cursor-pointer transition-transform active:translate-y-1 hover:scale-105 relative"
                   style={{
                     background: nodeBg,
@@ -186,17 +188,32 @@ const DuolingoSkillTree = ({
                 </button>
               </div>
 
-              {/* Compact Label Underneath Node */}
+              {/* Compact Label Underneath Node + 1-Click Direct Play Pill */}
               <div
                 onClick={() => setActivePopoverUnitId(isSelected ? null : unit.id)}
-                className="mt-3 max-w-[230px] text-center cursor-pointer"
+                className="mt-3 max-w-[230px] text-center cursor-pointer flex flex-col items-center gap-1"
               >
                 <div className="text-xs sm:text-sm font-black text-primary leading-snug">
                   {unit.badge || unit.title}
                 </div>
-                <div className="text-[11px] text-secondary font-semibold truncate">
+                <div className="text-[11px] text-secondary font-semibold truncate max-w-[210px]">
                   {versionChapterText}
                 </div>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onStartLesson && onStartLesson(unit);
+                  }}
+                  className="mt-1 px-3 py-1 rounded-full text-[11px] font-black text-white flex items-center gap-1 cursor-pointer transition-transform hover:scale-105"
+                  style={{
+                    backgroundColor: '#16a34a',
+                    border: 'none',
+                    boxShadow: '0 2px 0 #15803d'
+                  }}
+                >
+                  <Play size={11} className="fill-white" />
+                  <span>🎮 開始學習遊戲</span>
+                </button>
               </div>
             </div>
 
@@ -286,10 +303,10 @@ const DuolingoSkillTree = ({
                     <Play size={16} className="fill-white" />
                     <span>
                       {crowns === 0
-                        ? '開始 Duolingo 互動闖關 (+40 XP)'
+                        ? '🎮 開始互動學習遊戲 (+40 XP)'
                         : crowns < 5
-                        ? `繼續挑戰升冠 (Lv.${crowns} ➔ Lv.${crowns + 1} 👑)`
-                        : '傳奇金冠巔峰複習 (+50 XP)'}
+                        ? `🎮 繼續學習遊戲升冠 (Lv.${crowns} ➔ Lv.${crowns + 1} 👑)`
+                        : '🎮 傳奇金冠巔峰學習遊戲 (+50 XP)'}
                     </span>
                   </button>
 

@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import {
   X,
   Heart,
@@ -12,7 +13,9 @@ import {
   ArrowRight,
   HelpCircle,
   BookOpen,
-  ShieldCheck
+  ShieldCheck,
+  Gamepad2,
+  Lightbulb
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useGamification } from '../../context/GamificationContext';
@@ -21,6 +24,16 @@ import { quizData } from '../../data/quizData';
 import { knowledgePointsData } from '../../data/knowledgePoints';
 import { speechEngine } from '../../utils/speechHelper';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/soundEffects';
+
+const GAME_MODE_TABS = [
+  { id: 'all', label: '🌟 綜合 6 關大冒險' },
+  { id: 'word_bank', label: '🧩 字塊拼圖' },
+  { id: 'matching', label: '🔗 配對消消樂' },
+  { id: 'cloze', label: '✍️ 重點填空' },
+  { id: 'true_false', label: '⚡ 防雷是非' },
+  { id: 'listening', label: '🎧 聽力辨識' },
+  { id: 'mcq', label: '🎯 參考書實戰' }
+];
 
 const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
   const {
@@ -33,6 +46,7 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
     activePetTemplate
   } = useGamification();
 
+  const [gameModeFilter, setGameModeFilter] = useState('all');
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selectedTiles, setSelectedTiles] = useState([]);
   const [matchedIds, setMatchedIds] = useState([]);
@@ -45,24 +59,38 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
   const [correctCount, setCorrectCount] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
   const [showRefillMiniPractice, setShowRefillMiniPractice] = useState(false);
+  const [showRescueHint, setShowRescueHint] = useState(false);
 
-  // Generate multi-modal Duolingo exercises for this unit
-  const exercises = useMemo(() => {
+  // Generate multi-modal Learning Game exercises for this unit
+  const allExercises = useMemo(() => {
     if (!unit) return [];
     const targetQuizId = unit.linkedUnitId || unit.id;
     const uQuestions = quizData[targetQuizId] || [];
     return generateDuolingoExercisesForUnit(unit, uQuestions, knowledgePointsData);
   }, [unit]);
 
+  // Filter exercises by selected mini-game mode
+  const exercises = useMemo(() => {
+    if (gameModeFilter === 'all') return allExercises;
+    const filtered = allExercises.filter(ex => ex.type === gameModeFilter);
+    return filtered.length > 0 ? filtered : allExercises;
+  }, [allExercises, gameModeFilter]);
+
+  const resetCurrentStageInputs = () => {
+    setSelectedTiles([]);
+    setMatchedIds([]);
+    setSelectedLeftPair(null);
+    setSelectedRightPair(null);
+    setSelectedOption(null);
+    setFeedbackState(null);
+    setShowRescueHint(false);
+  };
+
   useEffect(() => {
     if (isOpen && unit) {
+      setGameModeFilter('all');
       setCurrentIdx(0);
-      setSelectedTiles([]);
-      setMatchedIds([]);
-      setSelectedLeftPair(null);
-      setSelectedRightPair(null);
-      setSelectedOption(null);
-      setFeedbackState(null);
+      resetCurrentStageInputs();
       setCombo(0);
       setMaxCombo(0);
       setCorrectCount(0);
@@ -71,11 +99,37 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
     }
   }, [isOpen, unit]);
 
+  // Lock background scroll and allow Escape key to close
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   if (!isOpen || !unit || exercises.length === 0) return null;
 
-  const currentEx = exercises[currentIdx];
-  const progressPercent = Math.round(((currentIdx + (feedbackState ? 1 : 0)) / exercises.length) * 100);
+  const safeIdx = Math.min(currentIdx, exercises.length - 1);
+  const currentEx = exercises[safeIdx];
+  const progressPercent = Math.round(((safeIdx + (feedbackState ? 1 : 0)) / exercises.length) * 100);
   const currentCrown = unitCrowns[unit.id] || 0;
+
+  const handleSelectGameMode = (modeId) => {
+    setGameModeFilter(modeId);
+    setCurrentIdx(0);
+    setIsCompleted(false);
+    resetCurrentStageInputs();
+    playSound('ios_tap');
+  };
 
   // Handle Matching Pairs selection
   const handleSelectPairItem = (side, pairObj) => {
@@ -162,7 +216,7 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
 
   // Check current exercise answer
   const handleCheckAnswer = () => {
-    if (feedbackState) return;
+    if (feedbackState || !currentEx) return;
 
     if (currentEx.type === 'word_bank') {
       const userJoined = selectedTiles.map(t => t.text).join('');
@@ -189,17 +243,12 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
 
   // Advance to next exercise or finish
   const handleNextStep = () => {
-    if (currentIdx + 1 < exercises.length) {
+    if (safeIdx + 1 < exercises.length) {
       setCurrentIdx(prev => prev + 1);
-      setSelectedTiles([]);
-      setMatchedIds([]);
-      setSelectedLeftPair(null);
-      setSelectedRightPair(null);
-      setSelectedOption(null);
-      setFeedbackState(null);
+      resetCurrentStageInputs();
       playSound('ios_tap');
     } else {
-      // Finish Lesson!
+      // Finish Learning Game!
       const xpEarned = 40 + maxCombo * 5;
       const coinsEarned = 20;
       earnUnitCrown(unit.id, xpEarned, coinsEarned);
@@ -212,8 +261,8 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
       });
       dispatchDynamicIsland({
         title: `👑 皇冠升級！(${Math.min(5, currentCrown + 1)}/5)`,
-        subtitle: `${unit.title} 獲得 +${xpEarned} XP`,
-        icon: '🦉'
+        subtitle: `${unit.title} 學習遊戲通關 +${xpEarned} XP`,
+        icon: '🎮'
       });
     }
   };
@@ -227,13 +276,18 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
     return !!selectedOption;
   };
 
-  return (
+  const modalNode = (
     <div
       style={{
         position: 'fixed',
-        inset: 0,
-        zIndex: 1100,
-        backgroundColor: 'rgba(15, 23, 42, 0.78)',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        width: '100vw',
+        height: '100vh',
+        zIndex: 9999,
+        backgroundColor: 'rgba(15, 23, 42, 0.8)',
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
         display: 'flex',
@@ -241,85 +295,118 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
         justifyContent: 'center',
         padding: '12px'
       }}
+      onClick={onClose}
     >
       <div
         className="card animate-fade-in flex flex-col justify-between"
+        onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',
-          maxWidth: '720px',
+          maxWidth: '760px',
           minHeight: '540px',
           maxHeight: '92vh',
           backgroundColor: 'var(--bg-secondary)',
           borderRadius: '28px',
           border: '2px solid var(--border-strong)',
-          boxShadow: '0 25px 60px rgba(0, 0, 0, 0.45)',
+          boxShadow: '0 25px 60px rgba(0, 0, 0, 0.5)',
           overflow: 'hidden',
           padding: 0,
           position: 'relative'
         }}
       >
         {/* ============================================================ */}
-        {/* 🔝 Top Duolingo Progress & Hearts Header */}
+        {/* 🔝 Top Learning Game Progress & Hearts Header */}
         {/* ============================================================ */}
         <div
-          className="flex items-center justify-between gap-3 px-5 py-4 border-b"
+          className="flex flex-col border-b"
           style={{ borderColor: 'var(--border-light)', backgroundColor: 'var(--bg-secondary)' }}
         >
-          <button
-            onClick={onClose}
-            className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-secondary transition-colors"
-            title="離開闖關"
-          >
-            <X size={20} />
-          </button>
-
-          {/* Animated Green Progress Bar */}
-          <div className="flex-1 h-4 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden relative p-0.5">
-            <div
-              style={{
-                width: `${isCompleted ? 100 : progressPercent}%`,
-                height: '100%',
-                background: 'linear-gradient(90deg, #22c55e 0%, #10b981 100%)',
-                borderRadius: '999px',
-                transition: 'width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                 position: 'relative'
-              }}
+          <div className="flex items-center justify-between gap-3 px-5 pt-4 pb-2.5">
+            <button
+              onClick={onClose}
+              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-secondary transition-colors cursor-pointer"
+              style={{ border: 'none' }}
+              title="離開學習遊戲"
             >
+              <X size={20} />
+            </button>
+
+            <div className="flex items-center gap-1.5 text-xs font-black text-emerald-600 dark:text-emerald-400">
+              <Gamepad2 size={16} />
+              <span className="hidden sm:inline">互動學習遊戲</span>
+            </div>
+
+            {/* Animated Green Progress Bar */}
+            <div className="flex-1 h-4 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden relative p-0.5">
               <div
                 style={{
-                  position: 'absolute',
-                  top: '2px',
-                  left: '8px',
-                  right: '8px',
-                  height: '4px',
-                  backgroundColor: 'rgba(255,255,255,0.35)',
-                  borderRadius: '999px'
+                  width: `${isCompleted ? 100 : progressPercent}%`,
+                  height: '100%',
+                  background: 'linear-gradient(90deg, #22c55e 0%, #10b981 100%)',
+                  borderRadius: '999px',
+                  transition: 'width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  position: 'relative'
                 }}
-              />
+              >
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '2px',
+                    left: '8px',
+                    right: '8px',
+                    height: '4px',
+                    backgroundColor: 'rgba(255,255,255,0.35)',
+                    borderRadius: '999px'
+                  }}
+                />
+              </div>
             </div>
+
+            {/* Combo Streak Badge */}
+            {combo >= 2 && !isCompleted && (
+              <div className="badge bg-amber-500 text-white font-black text-xs px-2.5 py-1 animate-bounce">
+                🔥 {combo} 連擊
+              </div>
+            )}
+
+            {/* Hearts / Stamina Indicator + Free Practice Refill */}
+            <button
+              onClick={() => setShowRefillMiniPractice(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-black text-xs cursor-pointer transition-transform hover:scale-105"
+              style={{
+                backgroundColor: 'rgba(239, 68, 68, 0.12)',
+                color: '#ef4444',
+                border: '1.5px solid rgba(239, 68, 68, 0.3)'
+              }}
+              title="點擊免費回血（練習即刻補滿 5 顆愛心）"
+            >
+              <Heart size={15} className="fill-red-500 text-red-500" />
+              <span>{hearts} / {maxHearts}</span>
+            </button>
           </div>
 
-          {/* Combo Streak Badge */}
-          {combo >= 2 && !isCompleted && (
-            <div className="badge bg-amber-500 text-white font-black text-xs px-2.5 py-1 animate-bounce">
-              🔥 {combo} 連擊
+          {/* Mini-Game Mode Switcher Bar */}
+          {!isCompleted && (
+            <div className="px-5 pb-2.5 flex items-center gap-1.5 overflow-x-auto">
+              {GAME_MODE_TABS.map((tab) => {
+                const active = gameModeFilter === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => handleSelectGameMode(tab.id)}
+                    className="px-2.5 py-1 rounded-xl text-[11px] font-black whitespace-nowrap cursor-pointer transition-all"
+                    style={{
+                      backgroundColor: active ? '#16a34a' : 'var(--bg-tertiary)',
+                      color: active ? '#ffffff' : 'var(--text-secondary)',
+                      border: active ? '1.5px solid #16a34a' : '1px solid var(--border-light)'
+                    }}
+                  >
+                    {tab.label}
+                  </button>
+                );
+              })}
             </div>
           )}
-
-          {/* Hearts / Stamina Indicator + Free Practice Refill */}
-          <button
-            onClick={() => setShowRefillMiniPractice(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-black text-xs cursor-pointer transition-transform hover:scale-105"
-            style={{
-              backgroundColor: 'rgba(239, 68, 68, 0.12)',
-              color: '#ef4444',
-              border: '1.5px solid rgba(239, 68, 68, 0.3)'
-            }}
-            title="點擊免費回血（練習即刻補滿 5 顆愛心）"
-          >
-            <Heart size={15} className="fill-red-500 text-red-500" />
-            <span>{hearts} / {maxHearts}</span>
-          </button>
         </div>
 
         {/* ============================================================ */}
@@ -375,7 +462,7 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
 
               <div>
                 <span className="badge badge-success font-black text-xs px-3 py-1 mb-2 inline-block">
-                  🎉 Duolingo 闖關特訓大成功！
+                  🎉 學習遊戲闖關特訓大成功！
                 </span>
                 <h2 className="h2 m-0" style={{ fontSize: '1.65rem' }}>
                   {unit.title}
@@ -423,9 +510,9 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
             </div>
           ) : (
             <div className="flex flex-col gap-4">
-              {/* Exercise Type & Reference Book Source Badge */}
+              {/* Exercise Type & Reference Book Source Badge + Stage Dots */}
               <div className="flex items-center justify-between flex-wrap gap-2">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
                   <span
                     className="badge font-black text-xs px-3 py-1"
                     style={{ backgroundColor: 'rgba(16, 185, 129, 0.14)', color: '#059669' }}
@@ -439,10 +526,45 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
                     {currentEx.sourceTag}
                   </span>
                 </div>
-                <span className="text-xs font-bold text-tertiary">
-                  關卡進度 {currentIdx + 1} / {exercises.length}
-                </span>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => {
+                      setShowRescueHint(prev => !prev);
+                      playSound('ios_tap');
+                    }}
+                    className="px-2.5 py-1 rounded-xl text-xs font-black flex items-center gap-1 cursor-pointer"
+                    style={{
+                      backgroundColor: showRescueHint ? 'rgba(245, 158, 11, 0.2)' : 'rgba(245, 158, 11, 0.1)',
+                      color: '#d97706',
+                      border: '1px solid rgba(245, 158, 11, 0.4)'
+                    }}
+                  >
+                    <Lightbulb size={13} />
+                    <span>{showRescueHint ? '收起秒殺提示' : '💡 錦囊提示'}</span>
+                  </button>
+                  <span className="text-xs font-bold text-tertiary">
+                    關卡 {safeIdx + 1} / {exercises.length}
+                  </span>
+                </div>
               </div>
+
+              {/* Instant Rescue Hint Drawer */}
+              {showRescueHint && (
+                <div
+                  className="p-3 rounded-2xl text-xs animate-fade-in"
+                  style={{
+                    backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                    border: '1.5px solid rgba(245, 158, 11, 0.4)'
+                  }}
+                >
+                  <div className="font-black text-amber-600 dark:text-amber-400 mb-0.5">
+                    💡 108 課綱跨版本秒殺口訣：
+                  </div>
+                  <div className="text-primary font-bold leading-relaxed">
+                    {unit.catalog?.quickRescue?.replace(/\$/g, '') || currentEx.explanation}
+                  </div>
+                </div>
+              )}
 
               {/* Mascot Speech Bubble Prompt */}
               <div className="flex items-start gap-3.5 my-1">
@@ -453,7 +575,7 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
                     borderColor: 'var(--border-strong)'
                   }}
                 >
-                  {activePetTemplate?.emoji || subject?.emoji || '🦉'}
+                  {activePetTemplate?.emoji || subject?.emoji || '🎮'}
                 </div>
                 <div
                   className="flex-1 p-3.5 rounded-2xl relative"
@@ -789,7 +911,7 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
         </div>
 
         {/* ============================================================ */}
-        {/* 👇 Bottom Duolingo Animated Feedback Sheet & Action Button */}
+        {/* 👇 Bottom Animated Feedback Sheet & Action Button */}
         {/* ============================================================ */}
         <div
           className="px-6 py-4 border-t transition-all"
@@ -811,16 +933,13 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
               <button
                 onClick={() => {
                   setCurrentIdx(0);
-                  setSelectedTiles([]);
-                  setMatchedIds([]);
-                  setSelectedOption(null);
-                  setFeedbackState(null);
+                  resetCurrentStageInputs();
                   setIsCompleted(false);
                 }}
-                className="btn-outline flex items-center gap-1.5 font-black text-xs sm:text-sm py-3 px-5 rounded-2xl"
+                className="btn-outline flex items-center gap-1.5 font-black text-xs sm:text-sm py-3 px-5 rounded-2xl cursor-pointer"
               >
                 <RotateCcw size={16} />
-                <span>再練一次衝金冠</span>
+                <span>再玩一次衝金冠</span>
               </button>
 
               <button
@@ -832,7 +951,7 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
                   boxShadow: '0 4px 0 #15803d'
                 }}
               >
-                <span>完成領獎・返回闖關地圖</span>
+                <span>完成領獎・返回學習遊戲地圖</span>
                 <ArrowRight size={17} />
               </button>
             </div>
@@ -867,14 +986,14 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
                   boxShadow: feedbackState.isCorrect ? '0 4px 0 #15803d' : '0 4px 0 #b91c1c'
                 }}
               >
-                繼續下一題 ➔
+                繼續下一關 ➔
               </button>
             </div>
           ) : (
             <div className="flex items-center justify-between gap-3">
               <div className="text-xs text-secondary font-semibold hidden sm:flex items-center gap-1.5">
                 <ShieldCheck size={15} className="text-emerald-500" />
-                <span>108課綱三大版本與參考書精選微練習</span>
+                <span>108課綱三大版本與參考書精選微遊戲</span>
               </div>
 
               <button
@@ -897,6 +1016,11 @@ const DuolingoLessonModal = ({ isOpen, onClose, unit, subject }) => {
       </div>
     </div>
   );
+
+  if (typeof document !== 'undefined') {
+    return createPortal(modalNode, document.body);
+  }
+  return modalNode;
 };
 
 export default DuolingoLessonModal;

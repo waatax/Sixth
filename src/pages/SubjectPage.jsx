@@ -562,9 +562,9 @@ const SubjectPage = () => {
               className={`px-2.5 py-1 text-xs font-black rounded-md flex items-center gap-1 transition-all ${
                 viewMode === 'duolingo' ? 'bg-emerald-600 text-white shadow-sm' : 'text-secondary hover:text-primary'
               }`}
-              title="Duolingo 蛇形技能闖關樹"
+              title="互動學習遊戲闖關地圖"
             >
-              <span>🦉 Duolingo 闖關樹</span>
+              <span>🎮 學習遊戲地圖</span>
             </button>
             <button
               onClick={() => { setViewMode('list'); playSound('ios_tap'); }}
@@ -989,7 +989,7 @@ const SubjectPage = () => {
                         boxShadow: '0 3px 0 #15803d'
                       }}
                     >
-                      🦉 Duolingo 闖關
+                      🎮 學習遊戲
                     </button>
                     <Link 
                       to={`/quiz/${unit.id}`} 

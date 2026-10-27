@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
 import {
   X,
@@ -107,14 +108,19 @@ const QuickQuizMenuModal = ({ isOpen, onClose, initialSubject = 'math', initialS
     navigate(`/mock-exam?${params.toString()}`);
   };
 
-  return (
+  const modalNode = (
     <>
       <div
         style={{
           position: 'fixed',
-          inset: 0,
-          zIndex: 1050,
-          backgroundColor: 'rgba(15, 23, 42, 0.75)',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 9980,
+          backgroundColor: 'rgba(15, 23, 42, 0.78)',
           backdropFilter: 'blur(14px)',
           WebkitBackdropFilter: 'blur(14px)',
           display: 'flex',
@@ -166,7 +172,7 @@ const QuickQuizMenuModal = ({ isOpen, onClose, initialSubject = 'math', initialS
                   </span>
                 </div>
                 <p className="text-xs text-secondary m-0 mt-0.5">
-                  自由組合<strong>學期 (6上/6下)</strong>、<strong>基本與專業科目</strong>及<strong>段考範圍 (期中/期末)</strong>，一鍵啟動計時段考模擬卷、單元測驗或 Duolingo 闖關！
+                  自由組合<strong>學期 (6上/6下)</strong>、<strong>基本與專業科目</strong>及<strong>段考範圍 (期中/期末)</strong>，一鍵啟動計時段考模擬卷、單元測驗或互動學習遊戲！
                 </p>
               </div>
             </div>
@@ -520,7 +526,7 @@ const QuickQuizMenuModal = ({ isOpen, onClose, initialSubject = 'math', initialS
                             border: 'none'
                           }}
                         >
-                          <span>🦉 Duolingo 闖關</span>
+                          <span>🎮 學習遊戲</span>
                         </button>
 
                         <button
@@ -601,6 +607,11 @@ const QuickQuizMenuModal = ({ isOpen, onClose, initialSubject = 'math', initialS
       />
     </>
   );
+
+  if (typeof document !== 'undefined') {
+    return createPortal(modalNode, document.body);
+  }
+  return modalNode;
 };
 
 export default QuickQuizMenuModal;

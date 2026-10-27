@@ -923,7 +923,7 @@ const LessonPage = () => {
             約 {readTimeMin} 分鐘
           </span>
 
-          {/* 🦉 Duolingo Interactive Practice Button */}
+          {/* 🎮 Interactive Learning Game Button */}
           <button
             onClick={() => {
               setIsDuolingoModalOpen(true);
@@ -934,9 +934,9 @@ const LessonPage = () => {
               background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
               border: 'none'
             }}
-            title="開啟本單元 Duolingo 6大題型遊戲化闖關"
+            title="開啟本單元 6 大題型互動學習遊戲"
           >
-            <span>🦉 Duolingo 闖關</span>
+            <span>🎮 學習遊戲</span>
           </button>
 
           {/* 📚 All Textbook Versions & Reference Books Button */}
@@ -1310,6 +1310,23 @@ const LessonPage = () => {
                   <span>實做實驗模擬</span>
                 </button>
               )}
+
+              <button
+                onClick={() => {
+                  setIsDuolingoModalOpen(true);
+                  playSound('ios_tap');
+                }}
+                className="hero-action-chip flex-1 md:flex-initial"
+                style={{
+                  backgroundColor: 'rgba(22, 163, 74, 0.14)',
+                  borderColor: 'rgba(22, 163, 74, 0.4)',
+                  color: '#16a34a',
+                  fontWeight: 800
+                }}
+                title="開啟本單元互動學習遊戲 (字塊/配對/填空/聽力)"
+              >
+                <span>🎮 互動學習遊戲</span>
+              </button>
 
               <button
                 onClick={() => navigate(`/quiz/${unitId}`)}

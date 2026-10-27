@@ -2,7 +2,7 @@
 > 最強小六 (Sixth) 原創數位學習研發核心團隊 × 5 位外聘跨領域教育專家 聯合研發・專為已被手機遊戲、短影音成癮之學童量身打造的「高互動・微學習・多巴胺正向回饋」全科教學與國中先修平台
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Online-emerald?style=for-the-badge&logo=github)](https://waatax.github.io/Sixth/)
-[![Version](https://img.shields.io/badge/Version-2.6.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
+[![Version](https://img.shields.io/badge/Version-2.7.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
 [![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
 [![Vite 8](https://img.shields.io/badge/Vite-8-purple?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![108 Curriculum](https://img.shields.io/badge/108課綱-國小六年級全科+專業素養+國中先修-orange?style=for-the-badge)](https://waatax.github.io/Sixth/)
@@ -92,6 +92,10 @@
   - **全域視覺知識庫 (`VisualKnowledgeHubModal.jsx`) UI/UX 拓撲重構**：新增「🔗 相關知識點拓撲網絡」互動卡片群，支援一鍵點擊切換關聯知識點、國中先修橋樑預覽、跨學科自動切換、高對比主題自適應與 SVG 高清下載。
   - **課堂圖表中樞 (`LessonVisualInfographicDeck.jsx`) 雙向無縫互通**：在微知識點圖卡視圖中注入關聯知識點拓撲卡片，同課節點原地平滑切換，跨課與先修節點一鍵喚起全域視覺知識庫。
   - **全系統 13 層品質驗證矩陣 100% 通過**：新增第 13 層「四維關聯拓撲 (≥3點) 與專屬 SVG 閉合性」嚴格檢驗，192 點全量具備四維關聯、SVG 0 損壞、KaTeX 公式 100% 編譯通過、生產建置 1.32s 極速構建通過，正式發布 v2.2.0！
+- **Round 23【108 課綱全科互動學習遊戲、全版本課本參考書完整編列、快速段考測驗選單與 Portal 視窗渲染優化・v2.7.0 旗艦發布】**：
+  - **修復 `position: fixed` 彈窗遭父層 `.animate-fade-in` `transform` 捕獲導致空白遮罩之問題 (`index.css` & `createPortal`)**：修正 `@keyframes fadeIn` 結束狀態為 `transform: none`，並將 `DuolingoLessonModal`、`TextbookReferenceCompendiumModal` 與 `QuickQuizMenuModal` 全面透過 React `createPortal(..., document.body)` 掛載至頂層視窗 (`z-index: 9999`)，確保在任何滾動位置點擊「🎮 學習遊戲」皆能 100% 置中秒開！
+  - **全面升級並更名為「🎮 學習遊戲」**：全站導航列 (`Header.jsx`)、行動底欄 (`CupertinoTabBar.jsx`)、首頁 (`HomePage.jsx`)、學科頁 (`SubjectPage.jsx`)、單元課堂頁 (`LessonPage.jsx`)、測驗頁 (`QuizPage.jsx`) 與快速測驗選單統一將「Duolingo 闖關」更名為直覺親切的 **「🎮 學習遊戲」**。
+  - **學習遊戲 7 大微遊戲模式自由切換 (`DuolingoLessonModal.jsx`)**：在原本 6 關綜合冒險基礎上，新增頂部「🌟 綜合 6 關大冒險」、「🧩 字塊拼圖」、「🔗 配對消消樂」、「✍️ 重點填空」、「⚡ 防雷是非」、「🎧 聽力辨識」、「🎯 參考書實戰」模式切換器與「💡 錦囊提示」即時口訣抽屜，並支援技能樹節點一鍵直玩與首頁 `?play=1` 立即試玩。
 
 ---
 

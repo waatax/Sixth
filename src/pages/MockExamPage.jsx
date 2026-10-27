@@ -505,7 +505,7 @@ const MockExamPage = () => {
                           className="py-1.5 px-2.5 rounded-lg text-[11px] font-black text-white cursor-pointer"
                           style={{ backgroundColor: '#16a34a', border: 'none' }}
                         >
-                          🦉 闖關
+                          🎮 學習遊戲
                         </button>
                       </div>
                     </div>

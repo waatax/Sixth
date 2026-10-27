@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
   Sparkles,
@@ -14,7 +14,8 @@ import {
   CheckCircle2,
   ShieldCheck,
   ArrowRight,
-  Compass
+  Compass,
+  Gamepad2
 } from 'lucide-react';
 import {
   TEXTBOOK_VERSIONS_108,
@@ -54,6 +55,20 @@ const DuolingoLearnPage = () => {
 
   const currentSubject = allSubjects.find(s => s.id === activeSubjectId) || allSubjects[0];
   const rawSubjectUnits = useMemo(() => getUnitsBySubject108(currentSubject.id), [currentSubject.id]);
+
+  // Support ?play=1 or ?unit=xxx query params to auto-launch the Learning Game immediately
+  useEffect(() => {
+    const playParam = searchParams.get('play');
+    const unitParam = searchParams.get('unit');
+    if (unitParam && rawSubjectUnits.length > 0) {
+      const targetUnit = rawSubjectUnits.find(u => u.id === unitParam || u.linkedUnitId === unitParam);
+      if (targetUnit) {
+        setActiveLessonUnit(targetUnit);
+      }
+    } else if (playParam === '1' && rawSubjectUnits.length > 0 && !activeLessonUnit) {
+      setActiveLessonUnit(rawSubjectUnits[0]);
+    }
+  }, [searchParams, rawSubjectUnits]);
 
   // Filter subjects by Basic vs Specialized group
   const visibleSubjects = useMemo(() => {
@@ -114,7 +129,7 @@ const DuolingoLearnPage = () => {
                 className="badge font-black text-xs px-3 py-1 text-white"
                 style={{ backgroundColor: '#16a34a' }}
               >
-                🦉 Duolingo 遊戲化技能闖關中心
+                🎮 108 課綱互動學習遊戲中心
               </span>
               <span className="badge badge-accent font-black text-xs">
                 108 課綱六年級上下學期 (6上 / 6下) 全科目
@@ -125,7 +140,7 @@ const DuolingoLearnPage = () => {
             </div>
 
             <h1 className="h1 m-0" style={{ fontSize: '1.85rem', lineHeight: 1.3 }}>
-              108 課綱全科目・全版本課本與參考書 Duolingo 闖關樹
+              108 課綱全科目・全版本課本與參考書互動學習遊戲
             </h1>
             <p className="text-secondary text-xs sm:text-sm mt-2 mb-0 leading-relaxed">
               涵蓋<strong>部定基本科目（國、數、自、社、英）</strong>與<strong>專業素養科目（藝術、健體、綜合、資訊科技運算思維、本土語與雙語、國中七年級先修）</strong>共 11 大領域 76 關卡！每關皆整合<strong>字塊拼圖、配對消消樂、重點填空、聽力辨識、防雷是非與參考書實戰題</strong>。
@@ -134,6 +149,24 @@ const DuolingoLearnPage = () => {
 
           {/* Switch View Tab: Winding Skill Tree vs Full Textbook & Reference Matrix + Quick Quiz */}
           <div className="flex items-center gap-2 flex-wrap">
+            {filteredUnits.length > 0 && (
+              <button
+                onClick={() => {
+                  setActiveLessonUnit(filteredUnits[0]);
+                  playSound('levelup');
+                }}
+                className="px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm text-white flex items-center gap-1.5 cursor-pointer"
+                style={{
+                  background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+                  border: 'none',
+                  boxShadow: '0 3px 0 #15803d'
+                }}
+              >
+                <Gamepad2 size={16} />
+                <span>🎮 立即開始本課學習遊戲</span>
+              </button>
+            )}
+
             <button
               onClick={() => {
                 window.dispatchEvent(new CustomEvent('open_quick_quiz_menu', {
@@ -165,7 +198,7 @@ const DuolingoLearnPage = () => {
                   boxShadow: viewTab === 'skill_tree' ? '0 3px 0 #15803d' : 'none'
                 }}
               >
-                <span>🦉 蛇形闖關技能樹</span>
+                <span>🗺️ 學習遊戲地圖</span>
               </button>
               <button
                 onClick={() => {
@@ -457,7 +490,7 @@ const DuolingoLearnPage = () => {
                         }}
                       >
                         <Play size={13} className="fill-white" />
-                        <span>Duolingo 闖關</span>
+                        <span>🎮 學習遊戲</span>
                       </button>
                     </div>
                   </div>

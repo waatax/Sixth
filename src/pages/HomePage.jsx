@@ -135,9 +135,9 @@ const HomePage = () => {
 
             {/* Quick Fast Jump Action Buttons */}
             <div className="flex flex-wrap gap-2.5 mt-4">
-              {/* 🦉 Duolingo 遊戲化全科闖關樹快捷鍵 */}
+              {/* 🎮 學習遊戲 (全科闖關＆課本參考書) */}
               <Link
-                to="/duolingo"
+                to="/duolingo?play=1"
                 onClick={() => { triggerHaptic('medium'); playSound('ios_tap'); }}
                 className="ios-pressable flex items-center gap-1.5 text-xs font-black py-2 px-3.5"
                 style={{
@@ -149,7 +149,7 @@ const HomePage = () => {
                   textDecoration: 'none'
                 }}
               >
-                <span>🦉 Duolingo 遊戲化全科闖關樹 (全版本課本＆參考書)</span>
+                <span>🎮 學習遊戲 (108課綱全科闖關＆課本參考書)</span>
               </Link>
 
               {/* ⚡ 快速測驗選單 (上下學期 × 科目 × 期中/期末) */}
@@ -323,7 +323,7 @@ const HomePage = () => {
       <GlobalKnowledgeRadar />
 
       {/* ============================================================ */}
-      {/* 🦉 1.85 Duolingo 遊戲化全科技能樹 ＆ 108課綱全版本課本參考書旗艦卡 */}
+      {/* 🎮 1.85 108課綱全科互動學習遊戲 ＆ 全版本課本參考書旗艦卡 */}
       {/* ============================================================ */}
       <div
         className="card p-4 sm:p-5 relative overflow-hidden"
@@ -339,12 +339,12 @@ const HomePage = () => {
               className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 shadow-md"
               style={{ background: 'linear-gradient(135deg, #22c55e, #16a34a)' }}
             >
-              🦉
+              🎮
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="font-extrabold text-base sm:text-lg text-slate-800 dark:text-slate-100">
-                  🦉 Duolingo 遊戲化全科闖關技能樹 ＆ 108 課綱全版本課本・參考書資料庫
+                  🎮 108 課綱全科互動學習遊戲 ＆ 全版本課本・參考書資料庫
                 </span>
                 <span className="badge badge-success text-[11px] font-black">
                   6上 / 6下 11大領域
@@ -359,22 +359,39 @@ const HomePage = () => {
             </div>
           </div>
 
-          <Link
-            to="/duolingo"
-            onClick={() => {
-              playSound('ios_tap');
-              triggerHaptic('medium');
-            }}
-            className="ios-pressable px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm text-white flex items-center gap-2 shadow-md"
-            style={{
-              background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-              textDecoration: 'none',
-              boxShadow: '0 4px 0 #15803d'
-            }}
-          >
-            <span>進入 Duolingo 闖關樹</span>
-            <ArrowRight size={16} />
-          </Link>
+          <div className="flex items-center gap-2 flex-wrap">
+            <Link
+              to="/duolingo?play=1"
+              onClick={() => {
+                playSound('levelup');
+                triggerHaptic('medium');
+              }}
+              className="ios-pressable px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm text-white flex items-center gap-1.5 shadow-md"
+              style={{
+                background: 'linear-gradient(135deg, #16a34a, #059669)',
+                textDecoration: 'none',
+                boxShadow: '0 4px 0 #065f46'
+              }}
+            >
+              <span>⚡ 立即試玩學習遊戲</span>
+            </Link>
+            <Link
+              to="/duolingo"
+              onClick={() => {
+                playSound('ios_tap');
+                triggerHaptic('medium');
+              }}
+              className="ios-pressable px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm text-white flex items-center gap-2 shadow-md"
+              style={{
+                background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+                textDecoration: 'none',
+                boxShadow: '0 4px 0 #15803d'
+              }}
+            >
+              <span>進入學習遊戲地圖</span>
+              <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </div>
 

@@ -502,9 +502,9 @@ for (const sub of all108Subjects) {
 }
 
 results.push({
-  layer: 'Duolingo 遊戲化學習引擎',
+  layer: '互動學習遊戲引擎',
   target: `${totalCatalogUnits} 座技能樹關卡、${totalGeneratedExercises} 道多模態互動微練習`,
-  method: '字塊拼圖 + 配對消消樂 + 重點填空 + 防雷是非 + 語音聽力 + 參考書選答',
+  method: '字塊拼圖 + 配對消消樂 + 重點填空 + 防雷是非 + 語音聽力 + 參考書選答 (createPortal 視窗鎖定)',
   result: validDuolingoUnits === totalCatalogUnits
     ? `${validDuolingoUnits} / ${totalCatalogUnits} 關卡 (6大題型 100% 齊備)`
     : `${validDuolingoUnits} / ${totalCatalogUnits} 關卡通過`
