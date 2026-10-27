@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 console.log('========================================================================');
-console.log('🚀 最強小六 (Sixth) 全維度 13 層品質與零基礎學習體驗檢驗矩陣測試');
+console.log('🚀 最強小六 (Sixth) 全維度 15 層品質、108課綱全版本與 Duolingo 遊戲化檢驗矩陣');
 console.log('========================================================================\n');
 
 const results = [];
@@ -421,6 +421,93 @@ results.push({
   result: (validKps === knowledgePointsData.length && brokenKpSvgs === 0 && kpHavingAllFields === knowledgePointsData.length && kpHavingTopology === knowledgePointsData.length)
     ? `${validKps} / ${knowledgePointsData.length} 點 (100% 齊備，拓撲網絡 100%，SVG 0 損壞)`
     : `${validKps} / ${knowledgePointsData.length} 通過 (${brokenKpSvgs} 損壞)`
+});
+
+// ----------------------------------------------------
+// 14. 108 課綱基本與專業全科目 (6上/6下) 所有版本課本與參考書資料完整度檢驗
+// ----------------------------------------------------
+const {
+  TEXTBOOK_VERSIONS_108,
+  REFERENCE_BOOK_SERIES_108,
+  getAll108Subjects,
+  getUnitsBySubject108,
+  generateDuolingoExercisesForUnit
+} = await import('../src/data/curriculumCatalog108.js');
+
+const all108Subjects = getAll108Subjects();
+let totalCatalogUnits = 0;
+let validCatalogUnits = 0;
+let count6A = 0;
+let count6B = 0;
+
+for (const sub of all108Subjects) {
+  const sUnits = getUnitsBySubject108(sub.id);
+  for (const u of sUnits) {
+    totalCatalogUnits++;
+    if (u.semester === '6A') count6A++;
+    if (u.semester === '6B') count6B++;
+    const cat = u.catalog;
+    const hasAllVersions =
+      cat &&
+      cat.textbooks?.kangHsuan?.chapterTitle &&
+      cat.textbooks?.nanI?.chapterTitle &&
+      cat.textbooks?.hanLin?.chapterTitle &&
+      cat.textbooks?.hessLongman?.chapterTitle;
+    const hasAllRefs =
+      cat &&
+      cat.referenceBooks?.selfStudy &&
+      cat.referenceBooks?.workbook &&
+      cat.referenceBooks?.lecture &&
+      cat.referenceBooks?.examTrap;
+    if (hasAllVersions && hasAllRefs) {
+      validCatalogUnits++;
+    }
+  }
+}
+
+results.push({
+  layer: '108課綱全版本與參考書',
+  target: `基本5科+專業6科共 ${all108Subjects.length} 領域、${totalCatalogUnits} 單元 (6上:${count6A} / 6下:${count6B})`,
+  method: `檢驗 ${TEXTBOOK_VERSIONS_108.length} 大課本版本對照 + ${REFERENCE_BOOK_SERIES_108.length} 大參考書系列 (自修/評量/講義/考卷)`,
+  result: validCatalogUnits === totalCatalogUnits
+    ? `${validCatalogUnits} / ${totalCatalogUnits} 單元 (100% 完整編列)`
+    : `${validCatalogUnits} / ${totalCatalogUnits} 單元通過`
+});
+
+// ----------------------------------------------------
+// 15. Duolingo 遊戲化技能樹、皇冠熟練度與 6 大互動題型引擎檢驗
+// ----------------------------------------------------
+let totalGeneratedExercises = 0;
+let validDuolingoUnits = 0;
+
+for (const sub of all108Subjects) {
+  const sUnits = getUnitsBySubject108(sub.id);
+  for (const u of sUnits) {
+    const targetQuizId = u.linkedUnitId || u.id;
+    const uQuestions = quizData[targetQuizId] || [];
+    const exList = generateDuolingoExercisesForUnit(u, uQuestions, knowledgePointsData);
+    totalGeneratedExercises += exList.length;
+    const types = new Set(exList.map(e => e.type));
+    if (
+      types.has('word_bank') &&
+      types.has('matching') &&
+      types.has('cloze') &&
+      types.has('true_false') &&
+      types.has('listening') &&
+      types.has('mcq')
+    ) {
+      validDuolingoUnits++;
+    }
+  }
+}
+
+results.push({
+  layer: 'Duolingo 遊戲化學習引擎',
+  target: `${totalCatalogUnits} 座技能樹關卡、${totalGeneratedExercises} 道多模態互動微練習`,
+  method: '字塊拼圖 + 配對消消樂 + 重點填空 + 防雷是非 + 語音聽力 + 參考書選答',
+  result: validDuolingoUnits === totalCatalogUnits
+    ? `${validDuolingoUnits} / ${totalCatalogUnits} 關卡 (6大題型 100% 齊備)`
+    : `${validDuolingoUnits} / ${totalCatalogUnits} 關卡通過`
 });
 
 // ----------------------------------------------------

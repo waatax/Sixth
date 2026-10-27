@@ -28,12 +28,14 @@ const CupertinoTabBar = () => {
 
   const mainTabs = [
     { path: '/', label: '學習領域', icon: BookOpen },
+    { path: '/duolingo', label: '闖關樹', icon: Award },
     { path: '/shorts', label: '短影音', icon: Zap },
     { path: '/labs', label: '實驗室', icon: FlaskConical },
-    { path: '/boss-battle', label: '魔王戰', icon: Swords },
   ];
 
   const moreItems = [
+    { path: '/duolingo', label: '🦉 Duolingo 全科闖關樹', icon: Award, color: '#16a34a', desc: '108課綱全版本課本與參考書闖關' },
+    { path: '/boss-battle', label: '⚔️ 魔王城堡挑戰賽', icon: Swords, color: '#8b5cf6', desc: '擊敗四大學期段考魔王' },
     { path: '#knowledge-hub', label: '💡 視覺知識庫圖鑑', icon: Lightbulb, color: '#f59e0b', desc: '192個微知識點純向量圖解', isHub: true },
     { path: '/exam-notes', label: '章節講義 (PDF)', icon: FileText, color: '#6366f1', desc: '八科段考重點與A4講義' },
     { path: '/flashcards', label: '速記翻翻卡', icon: BookmarkCheck, color: '#f59e0b', desc: '考前重點高效速記' },

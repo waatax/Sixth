@@ -30,21 +30,30 @@ import { speechEngine } from '../utils/speechHelper';
 import { useGamification } from '../context/GamificationContext';
 import SubjectIconBadge from '../components/common/SubjectIconBadge';
 import { triggerHaptic, playSound, dispatchDynamicIsland } from '../utils/soundEffects';
+import { TEXTBOOK_VERSIONS_108, getUnitCompleteCatalog } from '../data/curriculumCatalog108';
+import DuolingoSkillTree from '../components/duolingo/DuolingoSkillTree';
+import DuolingoLessonModal from '../components/duolingo/DuolingoLessonModal';
+import TextbookReferenceCompendiumModal from '../components/duolingo/TextbookReferenceCompendiumModal';
 
 const SubjectPage = () => {
   const { subjectId } = useParams();
   const navigate = useNavigate();
   const { 
     unitStars = {}, 
+    unitCrowns = {},
     readLessons = {}, 
     bookmarks = [], 
     toggleBookmark, 
-    isBookmarked 
+    isBookmarked,
+    selectedTextbookVersion = 'all',
+    setPreferredTextbookVersion
   } = useGamification();
   const [selectedSemester, setSelectedSemester] = useState('all'); // 'all' | '6A' | '6B'
   const [selectedTier, setSelectedTier] = useState('all'); // 'all' | 'tier1' | 'tier2' | 'tier3'
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState('list'); // 'list' | 'roadmap'
+  const [viewMode, setViewMode] = useState('duolingo'); // 'duolingo' | 'list' | 'roadmap'
+  const [activeDuolingoUnit, setActiveDuolingoUnit] = useState(null);
+  const [compendiumUnit, setCompendiumUnit] = useState(null);
 
   const subject = coursesData.subjects.find(s => s.id === subjectId);
   const units = coursesData.units[subjectId] || [];
@@ -74,7 +83,12 @@ const SubjectPage = () => {
 
   // Filtered units
   const filteredUnits = useMemo(() => {
-    return units.map((u, idx) => ({ ...u, originalIndex: idx, tier: getTierInfo(idx, units.length) })).filter(u => {
+    return units.map((u, idx) => ({
+      ...u,
+      originalIndex: idx,
+      tier: getTierInfo(idx, units.length),
+      catalog: getUnitCompleteCatalog(u)
+    })).filter(u => {
       const matchSemester = selectedSemester === 'all' || u.semester === selectedSemester;
       const matchTier = selectedTier === 'all' || u.tier.id === selectedTier;
       const q = searchQuery.trim().toLowerCase();
@@ -506,27 +520,36 @@ const SubjectPage = () => {
           </div>
         </div>
 
-        {/* Row 2: Learning Tier Stepper pills & View Mode switcher */}
+        {/* Row 2: Learning Tier Stepper pills, Textbook Version Filter & View Mode switcher */}
         <div className="flex items-center justify-between gap-2 pt-2 border-t border-light flex-wrap">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-[11px] font-bold text-tertiary">學習階梯：</span>
-            {[
-              { id: 'all', label: '全部階梯' },
-              { id: 'tier1', label: '🌱 基礎加固 (暖身)' },
-              { id: 'tier2', label: '🌿 核心觀念 (必考)' },
-              { id: 'tier3', label: '🌳 實戰高分 (壓軸)' }
-            ].map(t => (
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <span className="text-[11px] font-bold text-tertiary">版本對照：</span>
+            {TEXTBOOK_VERSIONS_108.map(ver => (
               <button
-                key={t.id}
-                onClick={() => setSelectedTier(t.id)}
-                className={`btn-pill text-[11px] px-2.5 py-1 font-semibold ${selectedTier === t.id ? 'active' : ''}`}
+                key={ver.id}
+                onClick={() => { setPreferredTextbookVersion(ver.id); playSound('ios_tap'); }}
+                className="px-2.5 py-1 rounded-full text-[11px] font-black transition-all cursor-pointer"
+                style={{
+                  backgroundColor: selectedTextbookVersion === ver.id ? ver.color : 'var(--bg-tertiary)',
+                  color: selectedTextbookVersion === ver.id ? '#ffffff' : 'var(--text-secondary)',
+                  border: selectedTextbookVersion === ver.id ? `1px solid ${ver.color}` : '1px solid var(--border-light)'
+                }}
               >
-                {t.label}
+                {ver.shortName}
               </button>
             ))}
           </div>
 
           <div className="flex items-center p-0.5 rounded-lg bg-tertiary border border-light">
+            <button
+              onClick={() => { setViewMode('duolingo'); playSound('ios_tap'); }}
+              className={`px-2.5 py-1 text-xs font-black rounded-md flex items-center gap-1 transition-all ${
+                viewMode === 'duolingo' ? 'bg-emerald-600 text-white shadow-sm' : 'text-secondary hover:text-primary'
+              }`}
+              title="Duolingo 蛇形技能闖關樹"
+            >
+              <span>🦉 Duolingo 闖關樹</span>
+            </button>
             <button
               onClick={() => { setViewMode('list'); playSound('ios_tap'); }}
               className={`px-2.5 py-1 text-xs font-bold rounded-md flex items-center gap-1 transition-all ${
@@ -551,7 +574,7 @@ const SubjectPage = () => {
         </div>
       </div>
 
-      {/* Unit Cards List vs Adventure Roadmap View */}
+      {/* Unit Cards List vs Duolingo Skill Tree vs Adventure Roadmap View */}
       {filteredUnits.length === 0 ? (
         <div className="card text-center py-12">
           <p className="text-secondary mb-2">沒有找到符合搜尋條件的單元。</p>
@@ -561,6 +584,23 @@ const SubjectPage = () => {
           >
             清除搜尋條件
           </button>
+        </div>
+      ) : viewMode === 'duolingo' ? (
+        <div
+          className="card p-4 sm:p-6"
+          style={{
+            backgroundColor: 'var(--bg-secondary)',
+            borderRadius: 'var(--radius-xl)',
+            border: '1.5px solid var(--border-light)'
+          }}
+        >
+          <DuolingoSkillTree
+            units={filteredUnits}
+            subject={subject}
+            selectedVersion={selectedTextbookVersion}
+            onStartLesson={(u) => setActiveDuolingoUnit(u)}
+            onOpenCompendium={(u) => setCompendiumUnit(u)}
+          />
         </div>
       ) : viewMode === 'roadmap' ? (
         <div className="adventure-roadmap-container py-4 relative">
@@ -916,6 +956,25 @@ const SubjectPage = () => {
 
                   {/* Primary Core Actions */}
                   <div className="flex gap-2 flex-wrap ml-auto">
+                    <button
+                      onClick={() => setCompendiumUnit(unit)}
+                      className="btn-outline flex items-center gap-1 text-xs font-bold cursor-pointer"
+                      style={{ padding: '8px 12px' }}
+                    >
+                      📚 課本＆參考書
+                    </button>
+                    <button
+                      onClick={() => setActiveDuolingoUnit(unit)}
+                      className="flex items-center gap-1.5 text-xs md:text-sm font-black text-white rounded-xl cursor-pointer"
+                      style={{
+                        padding: '8px 15px',
+                        background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+                        border: 'none',
+                        boxShadow: '0 3px 0 #15803d'
+                      }}
+                    >
+                      🦉 Duolingo 闖關
+                    </button>
                     <Link 
                       to={`/quiz/${unit.id}`} 
                       className="btn-outline flex items-center gap-1.5 text-xs md:text-sm font-bold" 
@@ -944,6 +1003,22 @@ const SubjectPage = () => {
           })}
         </div>
       )}
+
+      {/* Duolingo Interactive Lesson & Textbook/Reference Compendium Modals */}
+      <DuolingoLessonModal
+        isOpen={!!activeDuolingoUnit}
+        onClose={() => setActiveDuolingoUnit(null)}
+        unit={activeDuolingoUnit}
+        subject={subject}
+      />
+
+      <TextbookReferenceCompendiumModal
+        isOpen={!!compendiumUnit}
+        onClose={() => setCompendiumUnit(null)}
+        unit={compendiumUnit}
+        subject={subject}
+        onStartDuolingoLesson={(u) => setActiveDuolingoUnit(u)}
+      />
     </div>
   );
 };

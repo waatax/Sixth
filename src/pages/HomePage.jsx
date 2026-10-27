@@ -135,6 +135,23 @@ const HomePage = () => {
 
             {/* Quick Fast Jump Action Buttons */}
             <div className="flex flex-wrap gap-2.5 mt-4">
+              {/* 🦉 Duolingo 遊戲化全科闖關樹快捷鍵 */}
+              <Link
+                to="/duolingo"
+                onClick={() => { triggerHaptic('medium'); playSound('ios_tap'); }}
+                className="ios-pressable flex items-center gap-1.5 text-xs font-black py-2 px-3.5"
+                style={{
+                  borderRadius: 'var(--radius-md)',
+                  background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+                  color: '#ffffff',
+                  boxShadow: '0 3px 10px rgba(22, 163, 74, 0.38)',
+                  border: 'none',
+                  textDecoration: 'none'
+                }}
+              >
+                <span>🦉 Duolingo 遊戲化全科闖關樹 (全版本課本＆參考書)</span>
+              </Link>
+
               {/* 🎯 智能主題探索快捷鍵 */}
               <button
                 onClick={() => scrollToSection('topic-discovery-section')}
@@ -283,6 +300,62 @@ const HomePage = () => {
       {/* 🧭 1.8 全科知識圖譜掌握儀表盤與每日自律三部曲 */}
       {/* ============================================================ */}
       <GlobalKnowledgeRadar />
+
+      {/* ============================================================ */}
+      {/* 🦉 1.85 Duolingo 遊戲化全科技能樹 ＆ 108課綱全版本課本參考書旗艦卡 */}
+      {/* ============================================================ */}
+      <div
+        className="card p-4 sm:p-5 relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.12) 0%, rgba(37, 99, 235, 0.08) 55%, rgba(168, 85, 247, 0.08) 100%)',
+          border: '1.5px solid rgba(34, 197, 94, 0.45)',
+          borderRadius: 'var(--radius-xl)'
+        }}
+      >
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <div className="flex items-center gap-3.5">
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 shadow-md"
+              style={{ background: 'linear-gradient(135deg, #22c55e, #16a34a)' }}
+            >
+              🦉
+            </div>
+            <div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-extrabold text-base sm:text-lg text-slate-800 dark:text-slate-100">
+                  🦉 Duolingo 遊戲化全科闖關技能樹 ＆ 108 課綱全版本課本・參考書資料庫
+                </span>
+                <span className="badge badge-success text-[11px] font-black">
+                  6上 / 6下 11大領域
+                </span>
+                <span className="badge badge-accent text-[11px] font-bold">
+                  康軒・南一・翰林・何嘉仁・自修評量講義
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-secondary m-0 mt-1 max-w-3xl leading-relaxed">
+                完整編列<strong>基本核心科目（國、數、自、社、英）</strong>與<strong>專業素養科目（藝術、健體、綜合、資訊科技、本土雙語、國中先修）</strong>！支援<strong>字塊拼圖、配對消消樂、重點填空、聽力辨識、防雷是非</strong>與<strong>皇冠升級系統 (Lv.1~Lv.5)</strong>！
+              </p>
+            </div>
+          </div>
+
+          <Link
+            to="/duolingo"
+            onClick={() => {
+              playSound('ios_tap');
+              triggerHaptic('medium');
+            }}
+            className="ios-pressable px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm text-white flex items-center gap-2 shadow-md"
+            style={{
+              background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+              textDecoration: 'none',
+              boxShadow: '0 4px 0 #15803d'
+            }}
+          >
+            <span>進入 Duolingo 闖關樹</span>
+            <ArrowRight size={16} />
+          </Link>
+        </div>
+      </div>
 
       {/* ============================================================ */}
       {/* 💡 1.9 全科視覺知識庫與 192 微知識點純向量 Infographics 圖鑑 */}

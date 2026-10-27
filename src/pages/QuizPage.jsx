@@ -32,6 +32,9 @@ import ComboFlameIndicator from '../components/gamification/ComboFlameIndicator'
 import LessonCheatSheetModal from '../components/lesson/LessonCheatSheetModal';
 import LessonScratchpadModal from '../components/lesson/LessonScratchpadModal';
 import QuestionDiagram from '../components/quiz/QuestionDiagram';
+import DuolingoLessonModal from '../components/duolingo/DuolingoLessonModal';
+import TextbookReferenceCompendiumModal from '../components/duolingo/TextbookReferenceCompendiumModal';
+import { getUnitCompleteCatalog } from '../data/curriculumCatalog108';
 
 // 智能三階提示鷹架提取演算法（不洩漏標準答案，循序漸進啟發思考）
 const extractQuestionHints = (question) => {
@@ -73,6 +76,8 @@ const QuizPage = () => {
   const [searchParams] = useSearchParams();
   const { recordQuizResult, inventory, consumeItem } = useGamification();
   const [showCheatSheet, setShowCheatSheet] = useState(false);
+  const [isDuolingoOpen, setIsDuolingoOpen] = useState(false);
+  const [isCompendiumOpen, setIsCompendiumOpen] = useState(false);
 
   // Locate unit metadata for Cheat Sheet
   let currentUnit = null;
@@ -567,6 +572,34 @@ const QuizPage = () => {
           <Flame size={13} className="inline mr-1" />
           ⚔️ 模擬挑戰圖解 ({allQuestions.filter(q => q.isMockChallenge).length || 2}題)
         </button>
+        <button
+          onClick={() => {
+            setIsDuolingoOpen(true);
+            playSound('ios_tap');
+          }}
+          className="btn-pill text-xs font-black"
+          style={{
+            background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+            color: '#ffffff',
+            borderColor: '#16a34a'
+          }}
+        >
+          🦉 Duolingo 多模態闖關 (字塊/配對/聽力)
+        </button>
+        <button
+          onClick={() => {
+            setIsCompendiumOpen(true);
+            playSound('ios_tap');
+          }}
+          className="btn-pill text-xs font-black"
+          style={{
+            backgroundColor: 'rgba(79, 70, 229, 0.14)',
+            color: '#4f46e5',
+            borderColor: 'rgba(79, 70, 229, 0.4)'
+          }}
+        >
+          📚 課本三版本＆參考書
+        </button>
       </div>
 
       <div className="card flex flex-col gap-6" style={{ padding: '32px', borderRadius: 'var(--radius-xl)', border: '1.5px solid var(--border-light)', backgroundColor: 'var(--bg-secondary)' }}>
@@ -918,6 +951,23 @@ const QuizPage = () => {
         onClose={() => setIsScratchpadOpen(false)}
         unitId={unitId}
         unitTitle={currentUnit?.title || ''}
+      />
+
+      {/* Duolingo Interactive Multi-Modal Lesson */}
+      <DuolingoLessonModal
+        isOpen={isDuolingoOpen}
+        onClose={() => setIsDuolingoOpen(false)}
+        unit={{ ...currentUnit, catalog: getUnitCompleteCatalog(currentUnit) }}
+        subject={{ name: currentSubjectName, emoji: '🦉' }}
+      />
+
+      {/* Textbook & Reference Book Compendium Modal */}
+      <TextbookReferenceCompendiumModal
+        isOpen={isCompendiumOpen}
+        onClose={() => setIsCompendiumOpen(false)}
+        unit={{ ...currentUnit, catalog: getUnitCompleteCatalog(currentUnit) }}
+        subject={{ name: currentSubjectName, emoji: '📚' }}
+        onStartDuolingoLesson={() => setIsDuolingoOpen(true)}
       />
     </div>
   );

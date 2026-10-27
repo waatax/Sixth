@@ -2,11 +2,11 @@
 > 最強小六 (Sixth) 原創數位學習研發核心團隊 × 5 位外聘跨領域教育專家 聯合研發・專為已被手機遊戲、短影音成癮之學童量身打造的「高互動・微學習・多巴胺正向回饋」全科教學與國中先修平台
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Online-emerald?style=for-the-badge&logo=github)](https://waatax.github.io/Sixth/)
-[![Version](https://img.shields.io/badge/Version-2.2.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
+[![Version](https://img.shields.io/badge/Version-2.5.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
 [![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
 [![Vite 8](https://img.shields.io/badge/Vite-8-purple?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![108 Curriculum](https://img.shields.io/badge/108課綱-國小六年級全科+國中英數理先修-orange?style=for-the-badge)](https://waatax.github.io/Sixth/)
-[![Textbook Versions](https://img.shields.io/badge/教科書對齊-康軒_|_南一_|_翰林-blueviolet?style=for-the-badge)](https://waatax.github.io/Sixth/)
+[![108 Curriculum](https://img.shields.io/badge/108課綱-國小六年級全科+專業素養+國中先修-orange?style=for-the-badge)](https://waatax.github.io/Sixth/)
+[![Textbook Versions](https://img.shields.io/badge/課本與參考書-康軒_|_南一_|_翰林_|_何嘉仁_|_自修評量講義-blueviolet?style=for-the-badge)](https://waatax.github.io/Sixth/)
 
 ---
 
@@ -348,6 +348,8 @@ flowchart TD
 | **11. 三階自適應提示鷹架** | 全題庫 1,408 道試題自適應提示 | Level 1 觀念提點 + Level 2 步驟指引 + Level 3 完整詳解 | **1,408 題 (100% 零死角覆蓋)** |
 | **12. 段考講義 48 組合檢驗** | 8科 × 2學期 × 3範圍 (48 份講義、128 道真題步驟詳解) | 無空缺檢驗 + 考點向量圖解 + 審題雷達表格 + 步驟級真題解答 | **48 / 48 份講義 (100% 完美齊備)** |
 | **13. 微知識點與向量圖卡** | 全站 64 單元、192 個明確微知識點與專屬 Infographics | 明確定義 + 算理心法 + 防雷避坑 + 生活實用 + 純向量 SVG 閉合性檢查 | **192 / 192 點 (100% 完整齊備，SVG 0 損壞)** |
+| **14. 108課綱全版本與參考書** | 基本5科+專業6科共 11 領域、76 單元 (6上:37 / 6下:39) | 檢驗 5 大課本版本對照 (康軒/南一/翰林/何嘉仁/全版本) + 4 大參考書系列 (自修/評量/講義/考卷) | **76 / 76 單元 (100% 完整編列)** |
+| **15. Duolingo 遊戲化學習引擎** | 76 座技能樹關卡、608 道多模態互動微練習 | 字塊拼圖 + 配對消消樂 + 重點填空 + 防雷是非 + 語音聽力 + 參考書選答 + 皇冠升級 | **76 / 76 關卡 (6大題型 100% 齊備)** |
 
 ---
 

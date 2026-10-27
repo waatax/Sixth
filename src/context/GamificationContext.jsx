@@ -241,6 +241,21 @@ const INITIAL_STATE = {
     'eng-u1': 3
   },
 
+  // Duolingo-style Crown Mastery Levels per unit (0 ~ 5 Crowns; 5 = Legendary Golden Crown 👑)
+  unitCrowns: {
+    'math-u1': 3,
+    'math-u2': 2,
+    'sci-u1': 3,
+    'man-u1': 2,
+    'eng-u1': 3
+  },
+
+  // Duolingo-style Hearts / Stamina (Max 5, 100% free refill via practice or coins)
+  hearts: 5,
+  maxHearts: 5,
+  dailyXpGoal: 50,
+  selectedTextbookVersion: 'all',
+
   // Boss defeats
   bossRecords: {
     ghost: { defeatedCount: 2, bestTimeSec: 42 },
@@ -756,11 +771,95 @@ export const GamificationProvider = ({ children }) => {
     }
   }, [addCoins, addGems, addXp]);
 
+  // 🦉 Duolingo-style: Upgrade Unit Crown Level (Lv.1 ~ Lv.5 Legendary)
+  const earnUnitCrown = useCallback((unitId, xpEarned = 40, coinsEarned = 15) => {
+    setState(prev => {
+      const currentCrown = prev.unitCrowns?.[unitId] || 0;
+      const nextCrown = Math.min(5, currentCrown + 1);
+      const prevStars = prev.unitStars?.[unitId] || 0;
+      const today = new Date().toISOString().slice(0, 10);
+      const currentHistory = prev.activityHistory || {};
+      const todayAct = currentHistory[today] || { count: 0, xp: 0 };
+
+      const newBadges = [...(prev.badges || [])];
+      if (nextCrown >= 5 && !newBadges.includes('👑 傳奇金冠宗師')) {
+        newBadges.push('👑 傳奇金冠宗師');
+      }
+
+      return {
+        ...prev,
+        unitCrowns: {
+          ...(prev.unitCrowns || {}),
+          [unitId]: nextCrown
+        },
+        unitStars: {
+          ...(prev.unitStars || {}),
+          [unitId]: Math.max(prevStars, Math.min(3, nextCrown))
+        },
+        badges: newBadges,
+        activityHistory: {
+          ...currentHistory,
+          [today]: {
+            count: todayAct.count + 1,
+            xp: todayAct.xp + xpEarned
+          }
+        }
+      };
+    });
+
+    addXp(xpEarned, `duolingo_crown_${unitId}`);
+    addCoins(coinsEarned);
+  }, [addCoins, addXp]);
+
+  // 🦉 Duolingo-style: Lose 1 Heart on mistake
+  const loseHeart = useCallback(() => {
+    setState(prev => ({
+      ...prev,
+      hearts: Math.max(0, (prev.hearts ?? 5) - 1)
+    }));
+  }, []);
+
+  // 🦉 Duolingo-style: Practice to Refill Hearts (100% Free & Green Educational)
+  const refillHearts = useCallback((amount = 5) => {
+    playSound('levelup');
+    setState(prev => ({
+      ...prev,
+      hearts: Math.min(prev.maxHearts || 5, (prev.hearts ?? 0) + amount)
+    }));
+  }, []);
+
+  // 🦉 Duolingo-style: Set Preferred Textbook Version & Daily Goal
+  const setPreferredTextbookVersion = useCallback((versionId) => {
+    setState(prev => ({ ...prev, selectedTextbookVersion: versionId }));
+  }, []);
+
+  const setDailyXpGoal = useCallback((goalXp) => {
+    setState(prev => ({ ...prev, dailyXpGoal: goalXp }));
+  }, []);
+
+  // Calculate today's earned XP and League Tier
+  const todayKey = new Date().toISOString().slice(0, 10);
+  const todayXp = state.activityHistory?.[todayKey]?.xp || 0;
+
+  const LEAGUE_TIERS = [
+    { id: 'bronze', name: '青銅聯賽', icon: '🥉', minXp: 0, color: '#b45309' },
+    { id: 'silver', name: '白銀聯賽', icon: '🥈', minXp: 150, color: '#64748b' },
+    { id: 'gold', name: '黃金聯賽', icon: '🥇', minXp: 350, color: '#eab308' },
+    { id: 'sapphire', name: '藍寶石聯賽', icon: '🔷', minXp: 600, color: '#2563eb' },
+    { id: 'emerald', name: '翡翠聯賽', icon: '🟢', minXp: 900, color: '#10b981' },
+    { id: 'obsidian', name: '黑曜石聯賽', icon: '🔮', minXp: 1300, color: '#7c3aed' },
+    { id: 'diamond', name: '傳奇鑽石聯賽', icon: '💎', minXp: 1800, color: '#06b6d4' }
+  ];
+  const currentLeague = LEAGUE_TIERS.slice().reverse().find(l => state.xp >= l.minXp) || LEAGUE_TIERS[0];
+
   // Current Player Title calculation
   const currentTitle = TITLES.slice().reverse().find(t => state.level >= t.minLevel)?.title || '🌱 知識萌新';
 
   const value = {
     ...state,
+    todayXp,
+    currentLeague,
+    leagueTiers: LEAGUE_TIERS,
     currentTitle,
     allAchievements: ALL_ACHIEVEMENTS,
     activePetTemplate: PET_TEMPLATES[state.activePetId],
@@ -779,7 +878,12 @@ export const GamificationProvider = ({ children }) => {
     buyItem,
     consumeItem,
     recordBossVictory,
-    claimDailySpin
+    claimDailySpin,
+    earnUnitCrown,
+    loseHeart,
+    refillHearts,
+    setPreferredTextbookVersion,
+    setDailyXpGoal
   };
 
 

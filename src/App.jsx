@@ -16,6 +16,7 @@ import MemoryGamePage from './pages/MemoryGamePage';
 import ShortsReelsPage from './pages/ShortsReelsPage';
 import InteractiveLabsPage from './pages/InteractiveLabsPage';
 import ExamReviewNotesPage from './pages/ExamReviewNotesPage';
+import DuolingoLearnPage from './pages/DuolingoLearnPage';
 import { GamificationProvider } from './context/GamificationContext';
 import PetCompanionWidget from './components/gamification/PetCompanionWidget';
 import './App.css';
@@ -26,6 +27,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="duolingo" element={<DuolingoLearnPage />} />
+          <Route path="learn-path" element={<DuolingoLearnPage />} />
           <Route path="subject/:subjectId" element={<SubjectPage />} />
           <Route path="lesson/:unitId" element={<LessonPage />} />
           <Route path="quiz/:unitId" element={<QuizPage />} />

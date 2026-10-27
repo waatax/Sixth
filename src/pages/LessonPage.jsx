@@ -73,6 +73,9 @@ import LessonCompletionModal from '../components/lesson/LessonCompletionModal';
 import LessonGlossaryModal from '../components/lesson/LessonGlossaryModal';
 import LessonVisualInfographicDeck from '../components/lesson/LessonVisualInfographicDeck';
 import VisualKnowledgeHubModal from '../components/common/VisualKnowledgeHubModal';
+import DuolingoLessonModal from '../components/duolingo/DuolingoLessonModal';
+import TextbookReferenceCompendiumModal from '../components/duolingo/TextbookReferenceCompendiumModal';
+import { getUnitCompleteCatalog } from '../data/curriculumCatalog108';
 import { findGlossaryTerm } from '../data/glossaryTerms';
 import './LessonPage.css';
 
@@ -388,6 +391,8 @@ const LessonPage = () => {
 
   const [hasCelebrated, setHasCelebrated] = useState(false);
   const [showFloatingDock, setShowFloatingDock] = useState(false);
+  const [isDuolingoModalOpen, setIsDuolingoModalOpen] = useState(false);
+  const [isCompendiumModalOpen, setIsCompendiumModalOpen] = useState(false);
 
   // Track scroll reading progress
   useEffect(() => {
@@ -863,6 +868,23 @@ const LessonPage = () => {
         onClose={() => setActiveGlossary(null)}
       />
 
+      {/* Duolingo Interactive Lesson Modal */}
+      <DuolingoLessonModal
+        isOpen={isDuolingoModalOpen}
+        onClose={() => setIsDuolingoModalOpen(false)}
+        unit={{ ...currentUnit, catalog: getUnitCompleteCatalog(currentUnit) }}
+        subject={currentSubject}
+      />
+
+      {/* 108 Curriculum All Textbooks & Reference Books Compendium Modal */}
+      <TextbookReferenceCompendiumModal
+        isOpen={isCompendiumModalOpen}
+        onClose={() => setIsCompendiumModalOpen(false)}
+        unit={{ ...currentUnit, catalog: getUnitCompleteCatalog(currentUnit) }}
+        subject={currentSubject}
+        onStartDuolingoLesson={() => setIsDuolingoModalOpen(true)}
+      />
+
       {/* Top Navigation & Fast Control Bar */}
       <div
         className="card mb-4 flex justify-between items-center flex-wrap gap-3"
@@ -900,6 +922,40 @@ const LessonPage = () => {
             <Timer size={13} />
             約 {readTimeMin} 分鐘
           </span>
+
+          {/* 🦉 Duolingo Interactive Practice Button */}
+          <button
+            onClick={() => {
+              setIsDuolingoModalOpen(true);
+              playSound('ios_tap');
+            }}
+            className="badge cursor-pointer flex items-center gap-1.5 text-white font-black"
+            style={{
+              background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+              border: 'none'
+            }}
+            title="開啟本單元 Duolingo 6大題型遊戲化闖關"
+          >
+            <span>🦉 Duolingo 闖關</span>
+          </button>
+
+          {/* 📚 All Textbook Versions & Reference Books Button */}
+          <button
+            onClick={() => {
+              setIsCompendiumModalOpen(true);
+              playSound('ios_tap');
+            }}
+            className="badge cursor-pointer flex items-center gap-1.5 font-black"
+            style={{
+              backgroundColor: 'rgba(79, 70, 229, 0.14)',
+              color: '#4f46e5',
+              border: '1px solid rgba(79, 70, 229, 0.35)'
+            }}
+            title="對照本單元康軒、南一、翰林課本與自修評量參考書重點"
+          >
+            <Layers size={12} />
+            <span>課本＆參考書</span>
+          </button>
 
           {/* Quick Cheat Sheet Modal Button */}
           <button 
