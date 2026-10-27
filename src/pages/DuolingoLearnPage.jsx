@@ -51,6 +51,7 @@ const DuolingoLearnPage = () => {
 
   // Modals state
   const [activeLessonUnit, setActiveLessonUnit] = useState(null);
+  const [activeLessonStage, setActiveLessonStage] = useState('lesson');
   const [compendiumUnit, setCompendiumUnit] = useState(null);
 
   const currentSubject = allSubjects.find(s => s.id === activeSubjectId) || allSubjects[0];
@@ -387,7 +388,10 @@ const DuolingoLearnPage = () => {
               units={filteredUnits}
               subject={currentSubject}
               selectedVersion={selectedTextbookVersion}
-              onStartLesson={(u) => setActiveLessonUnit(u)}
+              onStartLesson={(u, stage = 'lesson') => {
+                setActiveLessonStage(stage);
+                setActiveLessonUnit(u);
+              }}
               onOpenCompendium={(u) => setCompendiumUnit(u)}
             />
           </div>
@@ -396,6 +400,14 @@ const DuolingoLearnPage = () => {
           <div className="lg:col-span-4">
             <DuolingoLeagueSidebar
               onOpenCompendiumOverview={() => setViewTab('master_catalog')}
+              onQuickPractice={() => {
+                if (filteredUnits.length > 0) {
+                  const randomUnit =
+                    filteredUnits[Math.floor(Math.random() * filteredUnits.length)];
+                  setActiveLessonStage('practice');
+                  setActiveLessonUnit(randomUnit);
+                }
+              }}
             />
           </div>
         </div>
@@ -549,6 +561,7 @@ const DuolingoLearnPage = () => {
         onClose={() => setActiveLessonUnit(null)}
         unit={activeLessonUnit}
         subject={currentSubject}
+        initialStage={activeLessonStage}
       />
 
       <TextbookReferenceCompendiumModal
@@ -556,7 +569,10 @@ const DuolingoLearnPage = () => {
         onClose={() => setCompendiumUnit(null)}
         unit={compendiumUnit}
         subject={currentSubject}
-        onStartDuolingoLesson={(u) => setActiveLessonUnit(u)}
+        onStartDuolingoLesson={(u) => {
+          setActiveLessonStage('lesson');
+          setActiveLessonUnit(u);
+        }}
       />
     </div>
   );

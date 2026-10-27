@@ -2,7 +2,7 @@
 > 最強小六 (Sixth) 原創數位學習研發核心團隊 × 5 位外聘跨領域教育專家 聯合研發・專為已被手機遊戲、短影音成癮之學童量身打造的「高互動・微學習・多巴胺正向回饋」全科教學與國中先修平台
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Online-emerald?style=for-the-badge&logo=github)](https://waatax.github.io/Sixth/)
-[![Version](https://img.shields.io/badge/Version-2.7.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
+[![Version](https://img.shields.io/badge/Version-2.8.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
 [![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
 [![Vite 8](https://img.shields.io/badge/Vite-8-purple?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![108 Curriculum](https://img.shields.io/badge/108課綱-國小六年級全科+專業素養+國中先修-orange?style=for-the-badge)](https://waatax.github.io/Sixth/)

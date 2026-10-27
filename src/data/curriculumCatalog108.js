@@ -500,13 +500,395 @@ export function getUnitCompleteCatalog(unit) {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // 🦉 五、Duolingo 遊戲化多元互動題型自動生成引擎 (Multi-Modal Exercise Generator)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// 為每一個單元生成 6 種 Duolingo 經典互動微練習：
-// 1. word_bank (字塊/公式拼圖)
-// 2. matching (配對消消樂)
-// 3. cloze (核心觀念填空)
-// 4. true_false (迷思是非快判)
-// 5. listening (語音聽力辨識)
-// 6. mcq (參考書壓軸實戰選答)
+// 為每一個單元生成 6 種語意完整、觀念清晰的 Duolingo 經典互動微練習：
+// 1. word_bank (步驟排序與英語語塊重組 — 嚴禁按字元硬切詞彙！)
+// 2. matching (核心概念與公式定義配對消消樂 — 左右兩欄獨立隨機洗牌)
+// 3. cloze (段考真實情境克漏字填空)
+// 4. true_false (真偽雙向概念是非快判 — 兼含 ⭕正確 與 ❌錯誤 題)
+// 5. listening (沉浸式雙語/語音考點聽力辨識)
+// 6. mcq (課本與參考書實戰四選一 — 選項確定性洗牌)
+
+function hashSeed(str = '') {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+export function deterministicShuffle(list = [], seedStr = 'sixth') {
+  const out = [...list];
+  let s = (hashSeed(seedStr) || 1) >>> 0;
+  for (let i = out.length - 1; i > 0; i--) {
+    s = (Math.imul(s, 1664525) + 1013904223) >>> 0;
+    const j = s % (i + 1);
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  // 確保洗牌後順序不會剛好跟正確答案完全一模一樣（避免不需排序就能過關）
+  if (out.length > 1 && out.every((item, idx) => item === list[idx])) {
+    [out[0], out[1]] = [out[1], out[0]];
+  }
+  return out;
+}
+
+function cleanLatexText(text = '') {
+  return String(text || '')
+    .replace(/\$/g, '')
+    .replace(/\\times/g, '×')
+    .replace(/\\div/g, '÷')
+    .replace(/\\pm/g, '±')
+    .replace(/\\text\{([^}]+)\}/g, '$1')
+    .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1/$2')
+    .replace(/\^\\circ/g, '°')
+    .trim();
+}
+
+// 76 單元專屬「步驟排序 / 英文句子重組」題庫（100% 完整語意步驟或英文單字，零斷詞！）
+const UNIT_ORDER_PUZZLES = {
+  'math-u1': {
+    prompt: '請依序排列「用短除法求最大公因數 (GCD) 與最小公倍數 (LCM)」的正確解題步驟：',
+    steps: [
+      '① 找出兩數共同的質因數當除數',
+      '② 持續短除直到兩數互質為止',
+      '③ 左側除數全部相乘 = 最大公因數 (GCD)',
+      '④ 左側除數乘上底部兩商 = 最小公倍數 (LCM)'
+    ],
+    distractors: ['直接將兩數相加除以 2'],
+    explanation: '短除法口訣：除到兩數互質（最大公因數為 1）為止；直線左側相乘為 GCD，L 型全乘為 LCM！'
+  },
+  'math-u2': {
+    prompt: '請依序排列「帶分數除以帶分數」的標準計算步驟：',
+    steps: [
+      '① 將被除數與除數都先化為假分數',
+      '② 把除號「÷」改成乘號「×」，並將除數分子分母顛倒（取倒數）',
+      '③ 分子與分母先進行交叉約分',
+      '④ 分子乘分子、分母乘分母，化為最簡分數'
+    ],
+    distractors: ['整數除整數、分數除分數'],
+    explanation: '帶分數相除切記不可把整數部分直接相除！必先化為假分數，再乘以除數的倒數。'
+  },
+  'math-u3': {
+    prompt: '請依序排列「小數除以小數並求商與餘數」的直式計算步驟：',
+    steps: [
+      '① 將除數的小數點向右移，化為整數',
+      '② 被除數的小數點同步向右移動相同位數',
+      '③ 商的小數點對齊被除數「移動後的新小數點」',
+      '④ 餘數的小數點對齊被除數「原來的舊小數點」'
+    ],
+    distractors: ['餘數小數點對齊新小數點'],
+    explanation: '小數除法防雷關鍵：商對新點、餘數對舊點，且算出的餘數必定小於原來的除數！'
+  },
+  'math-u4': {
+    prompt: '請依序排列將「分數比或小數比」化為「最簡整數比」的解題步驟：',
+    steps: [
+      '① 觀察前項與後項是否為小數或分數',
+      '② 前後項同乘以 10 的倍數或分母的最小公倍數化為整數',
+      '③ 前後項再同除以兩數的最大公因數 (GCD)',
+      '④ 確認前後項已互質，寫出「a : b」最簡整數比'
+    ],
+    distractors: ['把冒號省略寫成單一數字'],
+    explanation: '注意「最簡整數比」中間必須保留比號「:」，而「比值」則是前項除以後項的單一數值。'
+  },
+  'math-u5': {
+    prompt: '請依序排列計算「扇形周長」的完整步驟：',
+    steps: [
+      '① 確認扇形的半徑 r（直徑 = 半徑 × 2）與圓心角度數',
+      '② 計算完整圓周長 = 直徑 × 3.14',
+      '③ 乘上「圓心角 ÷ 360°」求出扇形的圓弧長',
+      '④ 圓弧長再加上「2 條半徑 (+ 2r)」得到扇形周長'
+    ],
+    distractors: ['只算圓弧長不加兩條半徑'],
+    explanation: '段考頭號陷阱：扇形周長是由「1 條圓弧 + 2 條半徑」圍成，算完弧長務必加上 2r！'
+  },
+  'math-u6': {
+    prompt: '請依序排列計算「扇形面積」的完整步驟：',
+    steps: [
+      '① 先找出扇形的半徑 r（若題目給直徑需先除以 2）',
+      '② 計算完整圓面積 = 半徑 × 半徑 × 3.14',
+      '③ 算出扇形佔全圓的幾分之幾（圓心角 ÷ 360°）',
+      '④ 將圓面積乘以扇形比例，得出扇形面積'
+    ],
+    distractors: ['直接用直徑乘以 3.14'],
+    explanation: '圓面積公式為 r × r × 3.14，再乘以 (圓心角 / 360°) 即為扇形面積。'
+  },
+  'math-u7': {
+    prompt: '請依序排列計算「上山、下山來回平均速率」的正確步驟：',
+    steps: [
+      '① 分別求出上山距離與下山距離，相加得「來回總距離」',
+      '② 分別求出上山花費時間與下山花費時間',
+      '③ 將上山時間與下山時間相加得「來回總時間」',
+      '④ 用「來回總距離 ÷ 來回總時間」算出平均速率'
+    ],
+    distractors: ['上山速率加下山速率直接除以 2'],
+    explanation: '平均速率永遠等於「總距離 ÷ 總時間」，絕對不可將兩個速率直接相加除以 2！'
+  },
+  'math-u8': {
+    prompt: '請依序排列計算「圓柱體表面積」的完整步驟：',
+    steps: [
+      '① 計算 1 個圓形底面積 = 半徑 × 半徑 × 3.14',
+      '② 將底面積乘以 2，得到「上下兩個底面積總和」',
+      '③ 計算側面展開長方形面積 = 底面圓周長 × 柱高',
+      '④ 將「上下兩底面積」加上「側面積」得出圓柱表面積'
+    ],
+    distractors: ['只算一個底面積加側面積'],
+    explanation: '柱體表面積 = 底面積 × 2 + 底面周長 × 柱高；圓柱側面展開圖的長正好等於底面圓周長！'
+  },
+  'math-u9': {
+    prompt: '請依序排列利用「地圖比例尺 1 : 5000」求實際距離（公尺）的步驟：',
+    steps: [
+      '① 用尺量出地圖上兩地的「圖上距離（公分）」',
+      '② 將圖上距離乘以 5000，得出實際距離（公分）',
+      '③ 將公分除以 100（刪去 2 個 0）換算成「公尺」',
+      '④ 檢查題目要求單位（公尺或公里）並寫出答案'
+    ],
+    distractors: ['將角度也乘以 5000 倍'],
+    explanation: '比例尺 1:5000 代表圖上 1 公分等於實際 5000 公分（即 50 公尺）；且放大縮小圖的對應角永遠不變！'
+  },
+  'math-u10': {
+    prompt: '請依序排列「雞兔同籠問題」假設法的標準破題步驟：',
+    steps: [
+      '① 先假設籠子裡全部都是雞（每隻 2 隻腳）',
+      '② 算出假設總腳數，並與題目實際總腳數相減求「總腳數差」',
+      '③ 用「總腳數差 ÷ (4 - 2)」求出兔子的數量',
+      '④ 用「總隻數 - 兔子數量」求出雞的數量並代回驗算'
+    ],
+    distractors: ['總腳數直接除以 6'],
+    explanation: '全假設為雞時，每把 1 隻雞換成 1 隻兔會多出 2 隻腳，故「總腳數差 ÷ 2 = 兔數」！'
+  },
+  'math-u11': {
+    prompt: '請依序排列利用「等量公理與未知數 x」解應用題的步驟：',
+    steps: [
+      '① 依題目所求設未知數為 x',
+      '② 根據題意找出相等關係，列出含有 x 的等式',
+      '③ 運用等量公理，等號兩邊同加減、再同乘除求出 x',
+      '④ 將求出的 x 代回原題目驗算是否符合題意'
+    ],
+    distractors: ['移項時加號不用變減號'],
+    explanation: '等號兩邊同做相同運算等式仍成立；求出未知數 x 後代回驗算是拿滿分的黃金習慣！'
+  },
+  'math-u12': {
+    prompt: '請依序排列繪製「百分率圓形圖」的正確步驟：',
+    steps: [
+      '① 算出各項目占總數量的百分率（四捨五入取到整數位）',
+      '② 檢查各項百分率總和是否為 100%（若差 1% 於最大項調整）',
+      '③ 將各項百分率乘以 3.6°（或 360° × 百分率）算出圓心角',
+      '④ 用量角器依圓心角畫出扇形，並標註項目名稱與百分率'
+    ],
+    distractors: ['直接將百分率當成圓心角度數'],
+    explanation: '全圓為 100% 對應 360°，因此每 1% 對應 3.6°！'
+  },
+  'eng-u1': {
+    prompt: '請依序排列單字，完成正確的英文問句：「你通常幾點起床？」',
+    steps: ['What', 'time', 'do', 'you', 'usually', 'get', 'up?'],
+    distractors: ['does', 'gets'],
+    explanation: '詢問日常作息時間句型：What time do you usually get up? 頻率副詞 usually 放在一般動詞 get 之前！'
+  },
+  'eng-u2': {
+    prompt: '請依序排列單字，完成正確的英文過去式問句：「你上週末去了哪裡？」',
+    steps: ['Where', 'did', 'you', 'go', 'last', 'weekend?'],
+    distractors: ['went', 'goes'],
+    explanation: '過去式疑問句出現助動詞 did 時，後方的動詞必須恢復為原形動詞 go！'
+  },
+  'eng-u3': {
+    prompt: '請依序排列單字，完成禮貌問路的英文句型：「請問我要怎麼去博物館？」',
+    steps: ['Excuse me,', 'how', 'can', 'I', 'get', 'to', 'the museum?'],
+    distractors: ['where', 'going'],
+    explanation: '問路必背黃金句型：Excuse me, how can I get to + 地點？'
+  },
+  'eng-u4': {
+    prompt: '請依序排列單字，完成表達身體不適與建議的英文句子：「我頭痛，你應該多休息。」',
+    steps: ['I have', 'a headache.', 'You', 'should', 'take', 'a rest.'],
+    distractors: ['takes', 'has'],
+    explanation: '表達症狀用 have a headache；給建議用助動詞 should + 原形動詞 take a rest！'
+  },
+  'eng-u5': {
+    prompt: '請依序排列單字，完成節慶與日期的英文句子：「聖誕節在十二月二十五日。」',
+    steps: ['Christmas', 'is', 'on', 'December', 'twenty-fifth.'],
+    distractors: ['in', 'at'],
+    explanation: '特定某一天（含幾月幾日）的時間介系詞必須用 on！若只有月份才用 in。'
+  },
+  'eng-u6': {
+    prompt: '請依序排列英文閱讀理解「先略讀、再掃讀解題」的高分四步驟：',
+    steps: [
+      '① 先快速略讀 (Skim) 標題與首尾句掌握文章主旨',
+      '② 仔細閱讀題目，圈出 5W1H 疑問詞與關鍵字',
+      '③ 回到文章掃讀 (Scan) 定位關鍵字所在句子',
+      '④ 比對前後文語意與時態，選出最符合文意的選項'
+    ],
+    distractors: ['遇到一個生字就放棄整篇閱讀'],
+    explanation: '善用 Skimming 抓大意與 Scanning 找細節，是攻克長篇素養題的關鍵策略！'
+  },
+  'eng-u7': {
+    prompt: '請依序排列單字，完成詢問未來夢想職業的英文問句：「你未來想成為什麼？」',
+    steps: ['What', 'do', 'you', 'want', 'to be', 'in the future?'],
+    distractors: ['wants', 'are'],
+    explanation: '詢問未來志向：What do you want to be in the future? 回答：I want to be a/an + 職業。'
+  },
+  'eng-u8': {
+    prompt: '請依序排列單字，完成英文比較級句子：「藍鯨比大象更大。」',
+    steps: ['The', 'blue whale', 'is', 'bigger', 'than', 'the elephant.'],
+    distractors: ['biggest', 'more big'],
+    explanation: '兩者比較使用「形容詞比較級 (-er) + than」，big 為短母音加子音，需重複字尾 g 加 er (bigger)！'
+  },
+  'biling-u1': {
+    prompt: '請依序排列推廣與傳承「臺灣多元本土語文」的四個實踐層次：',
+    steps: [
+      '① 從家庭日常問候與長輩對話開始開口說母語',
+      '② 認識本土語文中的節慶習俗與生活智慧俗諺',
+      '③ 欣賞臺灣台語、客語與原住民族語的多元文化之美',
+      '④ 響應 2 月 21 日世界母語日，落實族群平權與尊重'
+    ],
+    distractors: ['嘲笑不同族群的口音'],
+    explanation: '每種母語都是珍貴的文化資產，多說多聽、彼此尊重才能讓本土語文世代傳承。'
+  },
+  'biling-u2': {
+    prompt: '請依序排列雙語科學實驗課（CLIL）探究物質三態變化的英文邏輯順序：',
+    steps: [
+      '① Ice is a solid (冰是固體，形狀與體積固定)',
+      '② When heated, ice melts into liquid water (受熱融化成液態水)',
+      '③ When boiled, liquid water evaporates into gas (沸騰蒸發成氣態水蒸氣)',
+      '④ Cooling gas condenses back into liquid droplets (遇冷凝結回液態小水滴)'
+    ],
+    distractors: ['Solid directly becomes fire'],
+    explanation: '掌握雙語科學核心字彙：Solid (固體) ➔ Liquid (液體) ➔ Gas (氣體)。'
+  },
+  'biling-u3': {
+    prompt: '請依序排列全民英檢初級 (GEPT) 聽力測驗「看圖辨義與問答」的高分步驟：',
+    steps: [
+      '① 播音前先快速瀏覽圖片中的人物動作、地點與方位',
+      '② 專注聽開頭第一個疑問詞 (Who / What / Where / When / How)',
+      '③ 捕捉動詞時態（現在進行式、過去式或未來式）',
+      '④ 排除主詞或時態不符的干擾項，選出最佳回應'
+    ],
+    distractors: ['不聽完題目就隨便亂猜'],
+    explanation: 'GEPT 聽力決勝關鍵在於「預覽圖片特徵」與「鎖定開頭 5W1H 疑問詞」！'
+  },
+  'biling-u4': {
+    prompt: '請依序排列單字，完成正確的英文句子重組：「她昨天早上在圖書館讀了一本書。」',
+    steps: ['She', 'read', 'a book', 'in the library', 'yesterday morning.'],
+    distractors: ['reads', 'tomorrow'],
+    explanation: '英文標準語序為「主詞 (She) + 動詞 (read) + 受詞 (a book) + 地點 (in the library) + 時間 (yesterday morning)」！'
+  }
+};
+
+function buildUnitOrderExercise(unit, kps, catalog) {
+  const custom = UNIT_ORDER_PUZZLES[unit.id];
+  if (custom) {
+    const isWordSentence = custom.steps.every(s => /^[A-Za-z,\.\?!'\s]+$/.test(s));
+    const allRaw = [...custom.steps, ...(custom.distractors || [])];
+    const shuffled = deterministicShuffle(allRaw, `${unit.id}-order`);
+    return {
+      id: `${unit.id}-ex-wordbank`,
+      type: 'word_bank',
+      typeLabel: isWordSentence ? '🧩 英語句子語序重組' : '🧩 解題與觀念步驟排序',
+      sourceTag: '📘 課本核心算理與步驟',
+      prompt: custom.prompt,
+      targetHint: `提示：請依序選出 ${custom.steps.length} 個正確步驟（含 ${custom.distractors?.length || 0} 個陷阱干擾項）！`,
+      correctOrder: custom.steps,
+      allTiles: shuffled.map((text, idx) => ({ id: `tile-${idx}-${text}`, text })),
+      joinSeparator: isWordSentence ? ' ' : ' ➔ ',
+      explanation: custom.explanation
+    };
+  }
+
+  // 為國語、自然、社會、藝術、健體、綜合、資訊、先修等單元建立清晰的 4 步驟邏輯排序（絕不切斷字詞！）
+  const rawConcepts = (unit.keyConcepts || []).map(c => cleanLatexText(c)).filter(Boolean);
+  const steps = rawConcepts.slice(0, 4).map((concept, idx) => `步驟 ${idx + 1}：${concept}`);
+  while (steps.length < 4) {
+    steps.push(`步驟 ${steps.length + 1}：綜合應用與驗算檢核`);
+  }
+  const distractors = ['忽略題目關鍵字直接猜測'];
+  const allRaw = [...steps, ...distractors];
+  const shuffled = deterministicShuffle(allRaw, `${unit.id}-order-steps`);
+
+  return {
+    id: `${unit.id}-ex-wordbank`,
+    type: 'word_bank',
+    typeLabel: '🧩 核心觀念步驟排序',
+    sourceTag: '📘 三大版本重點脈絡',
+    prompt: `請依序排列學習「${unit.title}」的 4 個核心知識脈絡步驟：`,
+    targetHint: `提示：請依步驟 1 到步驟 4 的順序點擊排列（內含 1 個錯誤干擾項）！`,
+    correctOrder: steps,
+    allTiles: shuffled.map((text, idx) => ({ id: `tile-${idx}-${text}`, text })),
+    joinSeparator: ' ➔ ',
+    explanation: `完整學習脈絡：${steps.join(' ➔ ')}。核心心法：${cleanLatexText(catalog.quickRescue)}`
+  };
+}
+
+function buildUnitMatchingExercise(unit, quizQuestions, kps, catalog) {
+  const pairs = [];
+  const usedLeft = new Set();
+
+  // 優先從該單元的真實考題或微知識點擷取乾淨的「概念 ↔ 關鍵解題結論」配對
+  kps.forEach((kp, idx) => {
+    if (pairs.length >= 4) return;
+    const cleanTitle = cleanLatexText(kp.title).replace(/^[^：:]+[：:]/, '').trim();
+    const cleanDef = cleanLatexText(kp.definition || kp.formulaOrRule)
+      .replace(/^[^：:]+[：:]/, '')
+      .replace(/^核心工具與心法[：:]?/, '')
+      .split(/[；。！]/)[0]
+      .trim();
+    if (cleanTitle && cleanDef && !usedLeft.has(cleanTitle)) {
+      usedLeft.add(cleanTitle);
+      pairs.push({
+        id: `pair-kp-${idx}`,
+        left: cleanTitle.slice(0, 18),
+        right: cleanDef.slice(0, 26)
+      });
+    }
+  });
+
+  // 再從真實題庫 quizQuestions 補充高品質配對（題幹核心詞 ↔ 正確答案）
+  (quizQuestions || []).forEach((q, qIdx) => {
+    if (pairs.length >= 4) return;
+    const ansIdx = q.answerIndex ?? q.answer ?? 0;
+    const correctOpt = cleanLatexText(q.options?.[ansIdx] || '');
+    const stemShort = cleanLatexText(q.question)
+      .replace(/^【[^】]+】/, '')
+      .replace(/^請問/, '')
+      .replace(/[？\?]$/, '')
+      .trim();
+    if (stemShort && correctOpt && !usedLeft.has(stemShort.slice(0, 18))) {
+      usedLeft.add(stemShort.slice(0, 18));
+      pairs.push({
+        id: `pair-q-${qIdx}`,
+        left: stemShort.length > 18 ? `${stemShort.slice(0, 17)}…` : stemShort,
+        right: correctOpt.length > 24 ? `${correctOpt.slice(0, 23)}…` : correctOpt
+      });
+    }
+  });
+
+  // 保底補滿 4 組配對
+  const fallbackLabels = [
+    { left: cleanLatexText((unit.keyConcepts && unit.keyConcepts[0]) || unit.badge), right: cleanLatexText(catalog.textbooks.kangHsuan.focus).split(/[，。]/)[0] },
+    { left: cleanLatexText((unit.keyConcepts && unit.keyConcepts[1]) || '算理與定義本質'), right: cleanLatexText(catalog.textbooks.nanI.focus).split(/[，。]/)[0] },
+    { left: cleanLatexText((unit.keyConcepts && unit.keyConcepts[2]) || '圖表與結構推導'), right: cleanLatexText(catalog.textbooks.hanLin.focus).split(/[，。]/)[0] },
+    { left: '考前秒殺口訣', right: cleanLatexText(catalog.quickRescue).split(/[；！。]/)[0] }
+  ];
+  let fbIdx = 0;
+  while (pairs.length < 4 && fbIdx < fallbackLabels.length) {
+    const item = fallbackLabels[fbIdx++];
+    if (!usedLeft.has(item.left)) {
+      usedLeft.add(item.left);
+      pairs.push({
+        id: `pair-fb-${fbIdx}`,
+        left: item.left.slice(0, 18),
+        right: item.right.slice(0, 26)
+      });
+    }
+  }
+
+  return {
+    id: `${unit.id}-ex-matching`,
+    type: 'matching',
+    typeLabel: '🔗 觀念配對消消樂',
+    sourceTag: '📗 核心觀念與實戰對照',
+    prompt: `請點擊左欄的「題目或概念」，再點擊右欄對應的「正確答案或定義」完成配對：`,
+    pairs: pairs.slice(0, 4),
+    explanation: `配對完全正確！將核心概念與正確解答建立直覺連結，作答速度就能倍增。`
+  };
+}
 
 export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowledgePoints = []) {
   const catalog = getUnitCompleteCatalog(unit);
@@ -520,168 +902,184 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
     strategyTip: catalog.textbooks.kangHsuan.focus
   };
 
-  // 1. 🧩 字塊/公式拼圖 (Word / Formula Tile Bank)
-  const rescueClean = (primaryKp.formulaOrRule || catalog.quickRescue || unit.description)
-    .replace(/\$/g, '')
-    .replace(/\\times/g, '×')
-    .replace(/\\div/g, '÷')
-    .replace(/[！!。]/g, '')
-    .split(/[；;，,]/)[0]
-    .trim();
-
-  // 將句子切分為 4~6 個有意義的語塊
-  let chunks = [];
-  if (rescueClean.includes(' ')) {
-    const words = rescueClean.split(/\s+/).filter(Boolean);
-    if (words.length >= 3 && words.length <= 8) {
-      chunks = words;
-    }
-  }
-  if (chunks.length === 0) {
-    const len = rescueClean.length;
-    const step = Math.max(2, Math.ceil(len / 4));
-    for (let i = 0; i < len; i += step) {
-      chunks.push(rescueClean.slice(i, i + step));
-    }
-  }
-  const distractors = ['忽略單位', '直接相加', '顛倒順序'].filter(d => !chunks.includes(d)).slice(0, 2);
-
-  exercises.push({
-    id: `${unit.id}-ex-wordbank`,
-    type: 'word_bank',
-    typeLabel: '🧩 觀念字塊拼圖',
-    sourceTag: '📘 各版本自修核心口訣',
-    prompt: `請依序點擊下方字塊，拼出「${unit.badge || unit.title}」的黃金秒殺心法：`,
-    targetHint: `提示：共有 ${chunks.length} 個核心語塊，注意先後邏輯順序！`,
-    correctOrder: chunks,
-    allTiles: [...chunks, ...distractors].map((text, idx) => ({ id: `tile-${idx}-${text}`, text })),
-    explanation: `完整心法：「${chunks.join('')}」。熟記此口訣可於段考 5 秒內破題！`
+  // Normalize quiz questions (handle both answerIndex and answer)
+  const normalizedQs = (quizQuestions || []).map((q, idx) => {
+    const ansIdx = typeof q.answerIndex === 'number' ? q.answerIndex : (typeof q.answer === 'number' ? q.answer : 0);
+    const rawOpts = Array.isArray(q.options) && q.options.length > 0 ? q.options : ['選項 A', '選項 B', '選項 C', '選項 D'];
+    const correctAns = rawOpts[ansIdx] ?? rawOpts[0];
+    return {
+      ...q,
+      idx,
+      question: cleanLatexText(q.question),
+      options: rawOpts.map(o => cleanLatexText(o)),
+      correctAnswer: cleanLatexText(correctAns),
+      explanation: cleanLatexText(q.explanation || catalog.quickRescue)
+    };
   });
 
-  // 2. 🔗 配對消消樂 (Tap Matching Pairs)
-  const pairs = [];
-  if (kps.length >= 2) {
-    kps.slice(0, 3).forEach((kp, idx) => {
-      const shortTitle = kp.title.replace(/^[^：:]+[：:]/, '').slice(0, 14);
-      const shortRule = (kp.formulaOrRule || kp.definition)
-        .replace(/\$/g, '')
-        .replace(/\\times/g, '×')
-        .replace(/\\div/g, '÷')
-        .split(/[；。！]/)[0]
-        .slice(0, 22);
-      pairs.push({ id: `pair-kp-${idx}`, left: shortTitle, right: shortRule });
+  // 1. 🧩 步驟排序 / 語塊重組 (Word / Step Order Builder — 零斷詞)
+  exercises.push(buildUnitOrderExercise(unit, kps, catalog));
+
+  // 2. 🔗 觀念配對消消樂 (Matching Pairs)
+  exercises.push(buildUnitMatchingExercise(unit, normalizedQs, kps, catalog));
+
+  // 3. ✍️ 實戰觀念填空挑戰 (Interactive Cloze — 優先採用真實考題轉換)
+  if (normalizedQs.length > 0) {
+    const qCloze = normalizedQs[normalizedQs.length > 3 ? 3 : 0];
+    const shuffledOpts = deterministicShuffle(qCloze.options, `${unit.id}-cloze`);
+    exercises.push({
+      id: `${unit.id}-ex-cloze`,
+      type: 'cloze',
+      typeLabel: '✍️ 關鍵觀念填空',
+      sourceTag: '📙 講義核心考點填空',
+      prompt: `請選出正確答案填入空格，完成這道核心觀念題：`,
+      sentenceBefore: `${qCloze.question} 正確答案應為【`,
+      sentenceAfter: `】。`,
+      options: shuffledOpts,
+      correctAnswer: qCloze.correctAnswer,
+      explanation: qCloze.explanation
+    });
+  } else {
+    const keyTerm = cleanLatexText((unit.keyConcepts && unit.keyConcepts[0]) || unit.badge || '核心規則');
+    const rawOpts = [
+      keyTerm,
+      '忽略單位直接相加',
+      '不考慮題目限制條件',
+      '跳過驗算直接猜測'
+    ];
+    exercises.push({
+      id: `${unit.id}-ex-cloze`,
+      type: 'cloze',
+      typeLabel: '✍️ 關鍵觀念填空',
+      sourceTag: '📙 講義核心考點填空',
+      prompt: `請選出正確答案填入空格：`,
+      sentenceBefore: `在「${unit.title}」單元中，最重要的核心考點是【`,
+      sentenceAfter: `】。`,
+      options: deterministicShuffle(rawOpts, `${unit.id}-cloze-fb`),
+      correctAnswer: keyTerm,
+      explanation: cleanLatexText(catalog.quickRescue)
     });
   }
-  while (pairs.length < 4) {
-    const idx = pairs.length;
-    const concept = (unit.keyConcepts && unit.keyConcepts[idx]) || `核心重點 ${idx + 1}`;
-    const matchDesc = idx === 0
-      ? '康軒版生活素養必考焦點'
-      : idx === 1
-      ? '南一版算理與定義本質'
-      : idx === 2
-      ? '翰林版圖表與結構推導'
-      : '段考滿分必備檢核關鍵';
-    pairs.push({ id: `pair-kc-${idx}`, left: concept.slice(0, 15), right: matchDesc });
+
+  // 4. ⚡ 迷思是非快判 (True/False Misconception Blitz — 包含真題與陷阱假題！)
+  if (normalizedQs.length >= 2) {
+    const qTrue = normalizedQs[0];
+    const qFalse = normalizedQs[1];
+    const wrongOpt = qFalse.options.find(o => o !== qFalse.correctAnswer) || qFalse.options[0];
+
+    // 4A: 錯誤迷思題 (correctBool: false) — 訓練學生揪出錯誤敘述！
+    exercises.push({
+      id: `${unit.id}-ex-tf-false`,
+      type: 'true_false',
+      typeLabel: '⚡ 段考迷思是非快判',
+      sourceTag: '📕 易錯陷阱揪錯挑戰',
+      prompt: `請判斷下列關於「${unit.badge || unit.title}」的敘述是否正確：`,
+      statement: `題目：「${qFalse.question}」 ➔ 小明回答答案是「${wrongOpt}」，請問小明的回答是否正確？`,
+      correctBool: false,
+      explanation: `這題應該選「❌ 觀念有誤」！正確答案其實是「${qFalse.correctAnswer}」。${qFalse.explanation}`
+    });
+
+    // 4B: 正確觀念題 (correctBool: true)
+    exercises.push({
+      id: `${unit.id}-ex-tf-true`,
+      type: 'true_false',
+      typeLabel: '⚡ 核心觀念是非快判',
+      sourceTag: '📘 課本核心規則驗證',
+      prompt: `請判斷下列解題結論是否正確：`,
+      statement: `題目：「${qTrue.question}」 ➔ 標準答案是「${qTrue.correctAnswer}」。`,
+      correctBool: true,
+      explanation: `完全正確（⭕）！${qTrue.explanation}`
+    });
+  } else {
+    const trapText = cleanLatexText(primaryKp.trapAlert || catalog.referenceBooks.examTrap).replace(/⚠️/g, '').trim();
+    exercises.push({
+      id: `${unit.id}-ex-tf`,
+      type: 'true_false',
+      typeLabel: '⚡ 段考防雷是非快判',
+      sourceTag: '📕 學習評量易錯陷阱',
+      prompt: `請判斷下列關於「${unit.title}」的防雷敘述是否正確：`,
+      statement: `${trapText}`,
+      correctBool: true,
+      explanation: `完全正確（⭕）！牢記這條防雷守則就能避開段考常見陷阱。`
+    });
   }
 
-  exercises.push({
-    id: `${unit.id}-ex-matching`,
-    type: 'matching',
-    typeLabel: '🔗 觀念配對消消樂',
-    sourceTag: '📗 三大版本與參考書對照',
-    prompt: `請將左側的「核心概念」與右側對應的「關鍵定義或版本特色」配對消除：`,
-    pairs: pairs.slice(0, 4),
-    explanation: `恭喜全部配對成功！融會貫通各概念的對應關係，遇到綜合題也能輕鬆秒殺。`
-  });
+  // 5. 🎧 語音聽力與記憶辨識 (Audio Listening Challenge — 結合真實題庫語音作答)
+  if (normalizedQs.length > 0) {
+    const qListen = normalizedQs[normalizedQs.length > 2 ? 2 : 0];
+    const listenOpts = deterministicShuffle(qListen.options, `${unit.id}-listen`);
+    exercises.push({
+      id: `${unit.id}-ex-listening`,
+      type: 'listening',
+      typeLabel: '🎧 語音聽力挑戰',
+      sourceTag: '🔊 聽題辨析實戰',
+      prompt: `請點擊喇叭聆聽題目（或閱讀題幹），選出正確的答案：${qListen.question}`,
+      audioText: qListen.question,
+      audioLang: unit.id.startsWith('eng-') ? 'en-US' : 'zh-TW',
+      options: listenOpts,
+      correctAnswer: qListen.correctAnswer,
+      explanation: qListen.explanation
+    });
+  } else {
+    const speechText = unit.id.startsWith('eng-') || unit.id.startsWith('biling-')
+      ? (unit.keyConcepts && unit.keyConcepts[0]) || unit.title
+      : `${unit.badge || unit.title}：${(unit.keyConcepts && unit.keyConcepts[0]) || ''}`;
+    const listenOptions = [
+      (unit.keyConcepts && unit.keyConcepts[0]) || unit.badge || unit.title,
+      (unit.keyConcepts && unit.keyConcepts[1]) || '忽略題目單位條件',
+      (unit.keyConcepts && unit.keyConcepts[2]) || '顛倒先後運算順序',
+      '以上皆非'
+    ];
+    exercises.push({
+      id: `${unit.id}-ex-listening`,
+      type: 'listening',
+      typeLabel: '🎧 語音聽力辨識',
+      sourceTag: '🔊 沉浸式語音伴學',
+      prompt: `請點擊喇叭按鈕聆聽語音播報，選出你聽到的核心考點內容：`,
+      audioText: speechText,
+      audioLang: unit.id.startsWith('eng-') ? 'en-US' : 'zh-TW',
+      options: deterministicShuffle(listenOptions, `${unit.id}-listen-fb`),
+      correctAnswer: listenOptions[0],
+      explanation: `聽力正解：「${listenOptions[0]}」。`
+    });
+  }
 
-  // 3. ✍️ 核心觀念填空挑戰 (Interactive Cloze)
-  const keyTerm = (unit.keyConcepts && unit.keyConcepts[0]) || unit.badge || '核心規則';
-  const wrongTerms = [
-    (unit.keyConcepts && unit.keyConcepts[1]) ? `忽略${unit.keyConcepts[1].slice(0, 6)}` : '隨意估計數值',
-    '不考慮單位與前提條件',
-    '顛倒因果與先後順序'
-  ];
-  exercises.push({
-    id: `${unit.id}-ex-cloze`,
-    type: 'cloze',
-    typeLabel: '✍️ 參考書重點填空',
-    sourceTag: '📙 麻辣/滿分講義精選',
-    prompt: `完成下列《名師講義》重點摘要填空：`,
-    sentenceBefore: `在攻克「${unit.title}」時，最關鍵的第一步是精準掌握【`,
-    sentenceAfter: `】，並結合「${catalog.quickRescue.replace(/\$/g, '').slice(0, 28)}...」進行驗算。`,
-    options: [keyTerm, ...wrongTerms],
-    correctAnswer: keyTerm,
-    explanation: `正解為「${keyTerm}」！這是康軒、南一、翰林三大版本共同列為第一優先的核心指標。`
-  });
-
-  // 4. ⚡ 迷思是非快判 (True/False Misconception Blitz)
-  const trapText = (primaryKp.trapAlert || catalog.referenceBooks.examTrap).replace(/⚠️/g, '').trim();
-  exercises.push({
-    id: `${unit.id}-ex-tf`,
-    type: 'true_false',
-    typeLabel: '⚡ 段考防雷是非快判',
-    sourceTag: '📕 學習評量易錯陷阱',
-    prompt: `請判斷下列關於「${unit.title}」的防雷敘述是否正確：`,
-    statement: `【名師防雷守則】${trapText}`,
-    correctBool: true,
-    explanation: `完全正確（⭕）！這正是各校段考最常設計的陷阱題防禦心法，牢記就能保住關鍵分數！`
-  });
-
-  // 5. 🎧 語音聽力與記憶辨識 (Audio Listening Challenge)
-  const speechText = unit.id.startsWith('eng-') || unit.id.startsWith('biling-')
-    ? (unit.keyConcepts && unit.keyConcepts[0]) || unit.title
-    : `${unit.badge || unit.title}：${(unit.keyConcepts && unit.keyConcepts[0]) || ''}`;
-  const listenOptions = [
-    (unit.keyConcepts && unit.keyConcepts[0]) || unit.badge || unit.title,
-    (unit.keyConcepts && unit.keyConcepts[1]) || '無關的干擾選項 A',
-    (unit.keyConcepts && unit.keyConcepts[2]) || '無關的干擾選項 B',
-    '以上皆非'
-  ];
-  exercises.push({
-    id: `${unit.id}-ex-listening`,
-    type: 'listening',
-    typeLabel: '🎧 雙語/語音聽力辨識',
-    sourceTag: '🔊 沉浸式語音伴學',
-    prompt: `請點擊喇叭按鈕聆聽語音播報，選出你聽到的核心考點內容：`,
-    audioText: speechText,
-    audioLang: unit.id.startsWith('eng-') ? 'en-US' : 'zh-TW',
-    options: listenOptions,
-    correctAnswer: listenOptions[0],
-    explanation: `聽力正解：「${listenOptions[0]}」。結合聽覺與視覺雙重記憶，學習效率提升 200%！`
-  });
-
-  // 6. 🎯 經典參考書壓軸選答 (Reference Book Challenge MCQ - 取自真實題庫)
-  if (quizQuestions && quizQuestions.length > 0) {
-    quizQuestions.slice(0, 3).forEach((q, qIdx) => {
+  // 6. 🎯 經典參考書實戰選答 (Reference Book Challenge MCQ - 取自真實題庫並打亂選項順序)
+  if (normalizedQs.length > 0) {
+    normalizedQs.slice(0, 6).forEach((q, qIdx) => {
+      const shuffledOptions = deterministicShuffle(q.options, `${unit.id}-mcq-${qIdx}`);
+      const newCorrectIndex = shuffledOptions.indexOf(q.correctAnswer);
       exercises.push({
         id: `${unit.id}-ex-mcq-${qIdx}`,
         type: 'mcq',
-        typeLabel: `🎯 評量實戰選答 #${qIdx + 1}`,
-        sourceTag: qIdx === 0 ? '📘 課堂自修基礎題' : qIdx === 1 ? '📗 學習評量進階題' : '📕 段考壓軸素養題',
+        typeLabel: `🎯 實戰選擇題 #${qIdx + 1}`,
+        sourceTag: qIdx === 0 ? '📘 課本基礎必考題' : qIdx === 1 ? '📗 評量進階應用題' : '📕 段考素養壓軸題',
         prompt: q.question,
-        options: q.options,
-        correctIndex: q.answer,
-        correctAnswer: q.options[q.answer],
-        explanation: q.explanation || catalog.quickRescue
+        options: shuffledOptions,
+        correctIndex: newCorrectIndex >= 0 ? newCorrectIndex : 0,
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation
       });
     });
   } else {
+    const ans = cleanLatexText((unit.keyConcepts && unit.keyConcepts[0]) || unit.description);
+    const rawFallbackOpts = [
+      ans,
+      '完全不需要理解算理，直接猜測答案',
+      '忽略題目單位與條件限制',
+      '跳過驗算步驟直接作答'
+    ];
+    const shuffledFallback = deterministicShuffle(rawFallbackOpts, `${unit.id}-mcq-fb`);
     exercises.push({
       id: `${unit.id}-ex-mcq-fallback`,
       type: 'mcq',
       typeLabel: '🎯 評量實戰選答',
       sourceTag: '📗 學習評量必考題',
       prompt: `在「${unit.title}」的段考命題中，下列哪一項是三大版本（康軒/南一/翰林）共同強調的核心考點？`,
-      options: [
-        (unit.keyConcepts && unit.keyConcepts[0]) || unit.description,
-        '完全不需要理解算理，直接猜測答案',
-        '忽略題目單位與條件限制',
-        '跳過驗算步驟直接作答'
-      ],
-      correctIndex: 0,
-      correctAnswer: (unit.keyConcepts && unit.keyConcepts[0]) || unit.description,
-      explanation: catalog.quickRescue
+      options: shuffledFallback,
+      correctIndex: shuffledFallback.indexOf(ans),
+      correctAnswer: ans,
+      explanation: cleanLatexText(catalog.quickRescue)
     });
   }
 

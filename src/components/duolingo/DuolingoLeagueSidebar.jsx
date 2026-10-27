@@ -14,7 +14,7 @@ import { useGamification } from '../../context/GamificationContext';
 import { REFERENCE_BOOK_SERIES_108 } from '../../data/curriculumCatalog108';
 import { playSound } from '../../utils/soundEffects';
 
-const DuolingoLeagueSidebar = ({ onOpenCompendiumOverview }) => {
+const DuolingoLeagueSidebar = ({ onOpenCompendiumOverview, onQuickPractice }) => {
   const {
     xp = 180,
     todayXp = 80,
@@ -91,6 +91,20 @@ const DuolingoLeagueSidebar = ({ onOpenCompendiumOverview }) => {
             style={{ backgroundColor: '#10b981', border: 'none' }}
           >
             💖 點擊免費溫習回滿 5 顆愛心
+          </button>
+        )}
+
+        {onQuickPractice && (
+          <button
+            onClick={onQuickPractice}
+            className="w-full mt-3 py-2.5 px-4 rounded-xl font-black text-xs sm:text-sm text-white flex items-center justify-center gap-1.5 cursor-pointer transition-transform active:translate-y-0.5"
+            style={{
+              backgroundColor: '#58cc02',
+              border: 'none',
+              boxShadow: '0 4px 0 #3f9102'
+            }}
+          >
+            <span>🏋️ 隨機進階特訓（強化記憶）</span>
           </button>
         )}
       </div>
