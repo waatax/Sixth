@@ -396,7 +396,7 @@ const SubjectPage = () => {
                 <span className="badge badge-accent text-[10px]">Reels</span>
               </div>
               <div className="text-[11px] text-secondary mt-0.5">
-                語音伴學、重點口訣與多巴胺快問答
+                語音伴學、重點口訣與趣味快問答
               </div>
             </div>
           </div>

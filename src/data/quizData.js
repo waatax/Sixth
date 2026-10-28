@@ -4,6 +4,8 @@
 
 import { mockChallengesData } from './mockChallengesData.js';
 import { thousandQuestionsData } from './questionBank/index.js';
+import { balanceQuestionList } from '../utils/balanceOptions.js';
+import { explanationEnrichments } from './explanationEnrichments.js';
 
 const baseQuizData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2078,6 +2080,14 @@ Object.keys(thousandQuestionsData).forEach(unitId => {
   } else {
     quizData[unitId] = [...thousandQuestionsData[unitId]];
   }
+});
+
+// 四選一正確答案位置平衡：原始題庫約 80% 答案在 (A)，平衡後 A~D 各約 25%
+Object.keys(quizData).forEach(unitId => {
+  quizData[unitId] = balanceQuestionList(quizData[unitId].map(q => {
+    const rich = explanationEnrichments[`${unitId}|${q.id}`];
+    return rich ? { ...q, explanation: rich } : q;
+  }));
 });
 
 export { thousandQuestionsData };

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MathText from '../components/common/MathText';
 import { Link } from 'react-router-dom';
 import { 
   ArrowLeft, Award, Zap, 
@@ -187,7 +188,7 @@ const PrepPage = () => {
             </div>
 
             <p className="text-secondary text-sm mb-4 font-medium" style={{ lineHeight: 1.7 }}>
-              {item.summary}
+              <MathText text={item.summary} />
             </p>
 
             {/* Micro-Ladder tags */}
@@ -214,7 +215,7 @@ const PrepPage = () => {
                   style={{ backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-light)' }}
                 >
                   <h4 className="text-sm font-bold text-primary mb-1.5">{c.name}</h4>
-                  <p className="text-xs text-secondary leading-relaxed whitespace-pre-line">{c.content}</p>
+                  <p className="text-xs text-secondary leading-relaxed whitespace-pre-line"><MathText text={c.content} /></p>
                 </div>
               ))}
             </div>
@@ -628,7 +629,7 @@ const PrepPage = () => {
                     {st.title}
                   </h3>
                   <p className="text-xs text-secondary leading-relaxed whitespace-pre-line">
-                    {st.detail}
+                    <MathText text={st.detail} />
                   </p>
                 </div>
               ))}
@@ -648,7 +649,7 @@ const PrepPage = () => {
               <div>
                 <h2 className="text-2xl font-black text-primary mb-2">國中先修全科自適應闖關體檢</h2>
                 <p className="text-sm text-secondary max-w-lg mx-auto leading-relaxed">
-                  涵蓋<strong>英、數、理、國、社</strong>五大領域共 35 題核心銜接題。支援原創<strong>「三階提示鷹架」</strong>（觀念提點 ➔ 步驟引導 ➔ 完整詳解），測驗後即時生成<strong>「個人化弱點處方箋」</strong>！
+                  涵蓋<strong>英、數、理、國、社</strong>五大領域共 35 題核心銜接題。支援<strong>「三段式提示」</strong>（觀念提點 ➔ 步驟引導 ➔ 完整詳解），測驗後即時生成<strong>「個人化弱點處方箋」</strong>！
                 </p>
               </div>
               <div className="flex items-center gap-3 text-xs text-secondary font-medium flex-wrap justify-center">
@@ -721,14 +722,14 @@ const PrepPage = () => {
                       }}
                     >
                       <div className="flex items-center justify-between font-bold text-sm mb-1 text-primary">
-                        <span>第 {i + 1} 題 ({q.subject})：{q.question}</span>
+                        <span>第 {i + 1} 題 ({q.subject})：<MathText text={q.question} /></span>
                         {isCorrect ? <CheckCircle2 size={16} className="text-emerald-500" /> : <XCircle size={16} className="text-rose-500" />}
                       </div>
                       <div className="text-secondary my-1">
                         <strong>你的答案：</strong> {userAns !== undefined ? q.options[userAns] : '未作答'} | <strong className="text-emerald-600">正確答案：</strong> {q.options[q.answerIndex]}
                       </div>
                       <div className="text-secondary leading-relaxed bg-white/60 dark:bg-black/20 p-2.5 rounded-xl mt-1 border border-slate-200/50 dark:border-slate-800">
-                        💡 <strong>解析：</strong> {q.explanation}
+                        💡 <strong>解析：</strong> <MathText text={q.explanation} />
                       </div>
                     </div>
                   );
@@ -776,7 +777,7 @@ const PrepPage = () => {
                           }}
                           onClick={() => handleSelectQuizOption(optIdx)}
                         >
-                          <span>{String.fromCharCode(65 + optIdx)}. {opt}</span>
+                          <span>{String.fromCharCode(65 + optIdx)}. <MathText text={opt} /></span>
                           {isSelected && <CheckCircle2 size={16} className="text-primary" />}
                         </button>
                       );
@@ -789,7 +790,7 @@ const PrepPage = () => {
                       <div className="flex items-center justify-between flex-wrap gap-2">
                         <div className="text-xs font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5">
                           <HelpCircle size={14} />
-                          <span>三階解題思考鷹架（先提示不扣分）：</span>
+                          <span>卡住了嗎？一步一步看提示（看提示不扣分）：</span>
                         </div>
                         <div className="flex gap-1.5">
                           <button

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
@@ -20,7 +21,10 @@ const MainLayout = () => {
           paddingBottom: 'calc(88px + env(safe-area-inset-bottom, 20px))' 
         }}
       >
-        <Outlet />
+        {/* 各頁面分開載入：切換頁面時先顯示提示，避免手機第一次開啟要等整包程式下載 */}
+        <Suspense fallback={<div className="flex items-center justify-center py-20 text-secondary font-bold" role="status">📖 頁面載入中，請稍候…</div>}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
 

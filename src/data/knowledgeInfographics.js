@@ -410,57 +410,81 @@ const subjectPalettes = {
   integrative: { primary: '#0d9488', bg: '#f0fdfa', border: '#99f6e4', text: '#134e4a', tag: '🌱 綜合自律實踐' }
 };
 
+// 依字寬估算自動換行：中文字約 1 個字寬，英數約 0.55 個字寬
+function wrapSvgText(text, maxUnits, maxLines) {
+  const lines = [];
+  let line = '';
+  let units = 0;
+  for (const ch of text) {
+    const w = /[\x00-\xff]/.test(ch) ? 0.55 : 1;
+    if (units + w > maxUnits) {
+      lines.push(line);
+      line = '';
+      units = 0;
+      if (lines.length === maxLines) break;
+    }
+    line += ch;
+    units += w;
+  }
+  if (lines.length < maxLines && line) lines.push(line);
+  const used = [...lines.join('')].length;
+  if (used < [...text].length && lines.length) {
+    lines[lines.length - 1] = lines[lines.length - 1].slice(0, -1) + '…';
+  }
+  return lines;
+}
+
+function svgSafe(text) {
+  return String(text || '')
+    .replace(/\$([^$]+)\$/g, '$1')
+    .replace(/\\text\{([^}]*)\}/g, '$1')
+    .replace(/\\times/g, '×')
+    .replace(/\\div/g, '÷')
+    .replace(/\\/g, '')
+    .replace(/【[^】]*】/g, '')
+    .replace(/&/g, '＆')
+    .replace(/[<>"']/g, '')
+    .trim();
+}
+
+function svgLines(lines, x, y, lineHeight, attrs) {
+  return lines
+    .map((l, i) => `<text x="${x}" y="${y + i * lineHeight}" ${attrs}>${l}</text>`)
+    .join('\n      ');
+}
+
 /**
- * 依據知識點物件取得其專屬的 SVG Infographic 資訊圖卡
- * 1. 優先匹配專屬微知識點 Infographic (specializedKnowledgeInfographics)
- * 2. 其次匹配該單元之精準高畫質向量架構圖 (unitDiagramCatalog)
- * 3. 智慧動態產生量身定制的高畫質多層純向量 SVG 資訊圖卡 (Dynamic Tailored Vector Infographic)
- */
-/**
- * 智慧取得該微知識點之動態量身定制純向量 SVG 資訊圖卡
+ * 小六友善知識圖卡：標題、重點規則、生活例子、易錯提醒，文字自動換行不溢出
  */
 export function getDynamicTailoredInfographic(knowledgePoint) {
   if (!knowledgePoint) return null;
   const palette = subjectPalettes[knowledgePoint.subjectId] || subjectPalettes.math;
-  const safeTitle = (knowledgePoint.title || '108 課綱微概念').replace(/[<>&"']/g, '');
-  const rawRule = (knowledgePoint.formulaOrRule || '掌握核心定義與解題步驟').replace(/[<>&"']/g, '').replace(/\\/g, '');
-  const safeRule = rawRule.slice(0, 42);
-  const rawDef = (knowledgePoint.definition || '深度理解觀念本質與心智模型').replace(/[<>&"']/g, '').replace(/\\/g, '');
-  const safeDef = rawDef.slice(0, 36);
-  const rawTrap = (knowledgePoint.trapAlert || '審題先圈出單位與關鍵字').replace(/【避雷防錯】|【避雷提醒】/g, '').replace(/[<>&"']/g, '').replace(/\\/g, '');
-  const safeTrap = rawTrap.slice(0, 32);
+  const title = svgSafe(knowledgePoint.title || '108 課綱微概念');
+  const titleLines = wrapSvgText(title, 21, 1);
+  const ruleLines = wrapSvgText(svgSafe(knowledgePoint.formulaOrRule || knowledgePoint.keyFact || '掌握核心定義與解題步驟'), 24, 2);
+  const exampleLines = wrapSvgText(svgSafe(knowledgePoint.example || knowledgePoint.definition || ''), 26, 3);
+  const trapLines = wrapSvgText(svgSafe(knowledgePoint.trapAlert || '審題先圈出關鍵字'), 26, 2);
 
   return {
-    title: `${knowledgePoint.title}・微概念心法圖解`,
-    subtitle: `${knowledgePoint.category}・定制純向量圖卡`,
+    title: `${knowledgePoint.title}・知識圖卡`,
+    subtitle: `${knowledgePoint.category}・重點、例子、易錯一次看`,
     diagramType: 'tailored-vector',
-    svg: `<svg viewBox="0 0 320 180" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <!-- 背景卡片 -->
-      <rect width="320" height="180" fill="#f8fafc" rx="10" stroke="#e2e8f0" stroke-width="1.5" />
-      
-      <!-- 頂部領域色標旗幟 -->
-      <rect x="18" y="14" width="284" height="30" rx="6" fill="${palette.primary}" />
-      <text x="160" y="34" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">${safeTitle}</text>
-      
-      <!-- 核心算理 / 定律導航條 -->
-      <rect x="22" y="52" width="276" height="38" rx="5" fill="${palette.bg}" stroke="${palette.border}" stroke-width="1.2" />
-      <text x="32" y="68" font-size="9" font-weight="bold" fill="${palette.text}">【核心規律與定律】</text>
-      <text x="32" y="82" font-size="8.5" fill="#334155">${safeRule}</text>
-      
-      <!-- 雙核心支柱卡片 (觀念本質 vs 防雷避坑) -->
-      <rect x="22" y="96" width="134" height="48" rx="5" fill="#eff6ff" stroke="#bfdbfe" />
-      <text x="30" y="112" font-size="9" font-weight="bold" fill="#1e40af">🧠 觀念本質心法</text>
-      <text x="30" y="126" font-size="8" fill="#334155">${safeDef}</text>
-      <text x="30" y="137" font-size="7.5" fill="#64748b">108 素養情境導引</text>
+    svg: `<svg viewBox="0 0 320 236" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${title} 知識圖卡">
+      <rect width="320" height="236" fill="#f8fafc" rx="10" stroke="#e2e8f0" stroke-width="1.5" />
+      <rect x="14" y="12" width="292" height="30" rx="7" fill="${palette.primary}" />
+      <text x="160" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">${titleLines[0]}</text>
 
-      <rect x="164" y="96" width="134" height="48" rx="5" fill="#fef2f2" stroke="#fca5a5" />
-      <text x="172" y="112" font-size="9" font-weight="bold" fill="#b91c1c">⚠️ 考場避雷警訊</text>
-      <text x="172" y="126" font-size="8" fill="#7f1d1d">${safeTrap}</text>
-      <text x="172" y="137" font-size="7.5" fill="#991b1b">圈出審題關鍵字</text>
+      <rect x="14" y="50" width="292" height="50" rx="6" fill="${palette.bg}" stroke="${palette.border}" stroke-width="1.2" />
+      <text x="24" y="65" font-size="10" font-weight="bold" fill="${palette.text}">📌 重點規則</text>
+      ${svgLines(ruleLines, 24, 80, 13, 'font-size="10.5" font-weight="bold" fill="#1e293b"')}
 
-      <!-- 底部國中先修與學科銜接標注 -->
-      <rect x="22" y="150" width="276" height="20" rx="4" fill="#f1f5f9" />
-      <text x="160" y="164" text-anchor="middle" font-size="8" font-weight="bold" fill="#475569">${palette.tag} ｜ 國中七年級先修銜接橋樑</text>
+      <rect x="14" y="108" width="292" height="62" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.2" />
+      <text x="24" y="123" font-size="10" font-weight="bold" fill="#166534">🌱 舉個例子</text>
+      ${svgLines(exampleLines, 24, 137, 12.5, 'font-size="9.5" fill="#14532d"')}
+
+      <rect x="14" y="178" width="292" height="48" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.2" />
+      <text x="24" y="192" font-size="10" font-weight="bold" fill="#b91c1c">⚠️ 小心別犯錯</text>
+      ${svgLines(trapLines, 24, 206, 12, 'font-size="9.5" fill="#7f1d1d"')}
     </svg>`
   };
 }
@@ -518,8 +542,8 @@ export function getKnowledgePointInfographic(knowledgePoint, options = {}) {
     return getDynamicTailoredInfographic(kpObj);
   }
 
-  // 3. 專屬微知識點 Infographic (最高優先度)
-  if (kpObj.id && specializedKnowledgeInfographics[kpObj.id]) {
+  // 3. 專屬微知識點 Infographic (最高優先度；內容不符小六程度者改用知識圖卡)
+  if (kpObj.id && specializedKnowledgeInfographics[kpObj.id] && !kpObj.useTailoredCard) {
     return specializedKnowledgeInfographics[kpObj.id];
   }
 

@@ -135,7 +135,15 @@ const preprocessLessonMarkdown = (raw) => {
     // 1. 若數學公式中誤將 \frac, \div, \times 包在 \textbf{} (文本模式) 中，自動轉為 \mathbf{} (數學模式)
     .replace(/\\textbf\{([^{}]*\\(?:frac|div|times|sqrt|pi|approx|cdot|pm)[^{}]*)\}/g, '\\mathbf{$1}')
     // 2. 若公式核心被 \textcolor 外層包覆可能導致報錯，自動安全提取內部數學算式
-    .replace(/\$\$\s*\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\(?:textbf|mathbf)\{([\s\S]*?)\}\}\s*\$\$/g, '$$ $1 $$')
+    //    只處理單一公式（不跨越 $$），且內容括號必須成對，否則保留原式交給 KaTeX
+    .replace(/\$\$\s*\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\(?:textbf|mathbf)\{([^$]*?)\}\}\s*\$\$/g, (whole, inner) => {
+      let depth = 0;
+      for (const ch of inner) {
+        if (ch === '{') depth++;
+        else if (ch === '}' && --depth < 0) return whole;
+      }
+      return depth === 0 ? `$$ ${inner} $$` : whole;
+    })
     .replace(/\\textcolor\{#[a-fA-F0-9]{3,8}\}\{\\textbf\{([^{}]*\\frac[^{}]*)\}\}/g, '$1')
     // 3. 淨化可能殘留的 non-math unicode symbols inside inline math
     .replace(/\$\s*\\mathbf\{([^a-zA-Z0-9\s\\+\-*/=<>^_{}()]+)\}\s*\$/g, '**$1**');
@@ -2012,14 +2020,16 @@ const LessonPage = () => {
                   );
                 }
 
+                // 圖片會被渲染成 <figure>，不能放在 <p> 裡，改用 <div> 包裝
+                const ParagraphTag = node?.children?.some(c => c.type === 'element' && c.tagName === 'img') ? 'div' : 'p';
                 return (
-                  <p 
-                    onDoubleClick={handleParagraphDoubleClick} 
-                    title="💡 雙擊為此段落飄心點讚 ❤️" 
+                  <ParagraphTag
+                    onDoubleClick={handleParagraphDoubleClick}
+                    title="💡 雙擊為此段落飄心點讚 ❤️"
                     {...props}
                   >
                     {children}
-                  </p>
+                  </ParagraphTag>
                 );
               },
               details: ({ _node, children, ...props }) => {
@@ -2601,7 +2611,7 @@ const LessonPage = () => {
             <span>隨堂觀念測驗</span>
           </div>
           <p className="text-[11px] text-secondary mb-3 leading-relaxed">
-            學完立即檢測！三階提示鷹架陪伴，答對獲 +20 XP。
+            學完馬上小測驗！卡住可以看提示，答對獲 +20 XP。
           </p>
           <button
             onClick={() => navigate(`/quiz/${unitId}`)}
@@ -2754,7 +2764,7 @@ const LessonPage = () => {
             <button
               onClick={() => { setIsKnowledgeHubOpen(true); playSound('click'); }}
               className="dock-btn text-emerald-500 font-bold"
-              title="108 課綱微知識點與純向量 Infographics 圖鑑"
+              title="108 課綱知識點圖解卡"
             >
               <Lightbulb size={16} />
               <span className="hidden md:inline">知識圖鑑</span>

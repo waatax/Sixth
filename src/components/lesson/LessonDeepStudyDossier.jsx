@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import MathText from '../common/MathText';
 import { 
   GraduationCap, 
   ChevronDown, 
@@ -173,7 +174,7 @@ const LessonDeepStudyDossier = ({
   const handleCopySummary = () => {
     const lines = [
       `📌 【${unitTitle}・深度研經考點錦囊】`,
-      `🎯 課綱指標：${competencyCode} | 核心心智模型：${bridgeData?.coreMentalModel || '核心概念本質理解'}`,
+      `🎯 課綱指標：${competencyCode} | 最重要的想法：${bridgeData?.coreMentalModel || '核心概念本質理解'}`,
       `⚠️ 段考三大避坑焦點：`,
       ...synthesizedPitfalls.map((p, i) => `${i + 1}. 陷阱：${p.trap} ➔ 防雷心法：${p.fix}`),
       `🪜 國中銜接：${bridgeData?.juniorHighBridge || '七年級核心先修銜接'}`
@@ -330,7 +331,7 @@ const LessonDeepStudyDossier = ({
               }`}
             >
               <Target size={13} />
-              <span>🎯 課綱素養與心智模型</span>
+              <span>🎯 課綱素養與重要想法</span>
             </button>
 
             <button
@@ -353,7 +354,7 @@ const LessonDeepStudyDossier = ({
                 <span>根據 108 課綱與三大版本（康軒・翰林・南一）歷年段考命題分析：</span>
                 {versionFocus.quickRescue && (
                   <span className="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-700 flex items-center gap-1">
-                    <Zap size={11} /> 5秒口訣：“{versionFocus.quickRescue}”
+                    <Zap size={11} /> 5秒口訣：“<MathText text={versionFocus.quickRescue} />”
                   </span>
                 )}
               </div>
@@ -372,7 +373,7 @@ const LessonDeepStudyDossier = ({
                     <span>🟢 康軒版 (Kang Hsuan)</span>
                   </div>
                   <p className="text-xs text-secondary leading-relaxed m-0">
-                    {versionFocus.kangHsuan}
+                    <MathText text={versionFocus.kangHsuan} />
                   </p>
                 </div>
 
@@ -389,7 +390,7 @@ const LessonDeepStudyDossier = ({
                     <span>🔵 翰林版 (Han Lin)</span>
                   </div>
                   <p className="text-xs text-secondary leading-relaxed m-0">
-                    {versionFocus.hanLin}
+                    <MathText text={versionFocus.hanLin} />
                   </p>
                 </div>
 
@@ -406,7 +407,7 @@ const LessonDeepStudyDossier = ({
                     <span>🟣 南一版 (Nan I)</span>
                   </div>
                   <p className="text-xs text-secondary leading-relaxed m-0">
-                    {versionFocus.nanI}
+                    <MathText text={versionFocus.nanI} />
                   </p>
                 </div>
               </div>
@@ -421,7 +422,7 @@ const LessonDeepStudyDossier = ({
                     <span>段考審題雷達：</span>
                   </span>
                   <span className="font-mono text-indigo-600 dark:text-indigo-400 font-bold">
-                    {versionFocus.hotKeywords}
+                    <MathText text={versionFocus.hotKeywords} />
                   </span>
                 </div>
               )}
@@ -464,7 +465,7 @@ const LessonDeepStudyDossier = ({
                     {h.trapAlert && (
                       <div className="mt-3 pt-2 border-t border-amber-200 dark:border-amber-800/40 text-[11px] font-bold text-rose-500 flex items-center gap-1">
                         <AlertTriangle size={11} />
-                        <span>{h.trapAlert}</span>
+                        <span><MathText text={h.trapAlert} /></span>
                       </div>
                     )}
                   </div>
@@ -497,7 +498,7 @@ const LessonDeepStudyDossier = ({
                         <span className="line-clamp-1">{item.trap}</span>
                       </div>
                       <p className="text-xs text-secondary mb-3 leading-relaxed">
-                        {item.desc}
+                        <MathText text={item.desc} />
                       </p>
                     </div>
 
@@ -561,7 +562,7 @@ const LessonDeepStudyDossier = ({
               >
                 <div className="text-xs font-bold text-blue-600 dark:text-blue-400 mb-1 flex items-center gap-1.5">
                   <BookOpen size={14} />
-                  <span>核心心智模型 (Mental Model)：</span>
+                  <span>最重要的想法：</span>
                 </div>
                 <p className="text-xs sm:text-sm text-primary font-medium m-0 leading-relaxed">
                   {bridgeData?.coreMentalModel || '建立跨章節的本質幾何與數量抽象概念，看見算理背後的生活現實意義。'}

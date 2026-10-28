@@ -96,14 +96,14 @@ export const GlobalConceptGalaxyModal = ({ isOpen, onClose }) => {
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <h2 className="text-base sm:text-lg font-black text-primary m-0 tracking-tight">
-                  🌌 全科融會貫通知識網絡・星空概念拓撲圖
+                  🌌 知識星空・看看知識怎麼連在一起
                 </h2>
                 <span className="badge badge-accent text-[11px] font-bold px-2 py-0.5">
                   8 領域 • 64 單元 • 跨學段銜接
                 </span>
               </div>
               <p className="text-xs text-secondary m-0 mt-0.5 hidden sm:block">
-                看見概念如何前呼後應：國小舊經驗 ➔ 本課心智模型 ➔ 破題雷達 ➔ 國中會考延伸
+                看見知識怎麼連起來：以前學過的 ➔ 這一課的重點 ➔ 解題關鍵字 ➔ 國中會學到的
               </p>
             </div>
           </div>
@@ -154,7 +154,7 @@ export const GlobalConceptGalaxyModal = ({ isOpen, onClose }) => {
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" />
             <input
               type="text"
-              placeholder="搜尋微概念、心智模型、關鍵字..."
+              placeholder="搜尋概念或關鍵字..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="input-field pl-8 pr-7 py-1 text-xs w-full rounded-full"
@@ -175,7 +175,7 @@ export const GlobalConceptGalaxyModal = ({ isOpen, onClose }) => {
           {/* Left: Unit Nodes List (5 cols) */}
           <div className="md:col-span-5 overflow-y-auto pr-1 space-y-1.5 max-h-[35vh] md:max-h-full border-r border-light">
             <div className="text-[11px] font-bold text-tertiary mb-1 px-1">
-              找到 {filteredUnits.length} 個知識節點（點擊查看全息拓撲）：
+              找到 {filteredUnits.length} 個知識節點（點一下看詳細）：
             </div>
 
             {filteredUnits.length === 0 ? (
@@ -303,7 +303,7 @@ export const GlobalConceptGalaxyModal = ({ isOpen, onClose }) => {
                 >
                   <div className="flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 mb-1">
                     <Sparkles size={14} />
-                    <span>② 本課核心心智模型（直觀破題錨點）</span>
+                    <span>② 這一課最重要的想法</span>
                   </div>
                   <p className="text-xs text-primary font-medium m-0 leading-relaxed">
                     {currentDetail.bridge?.coreMentalModel || currentDetail.description}

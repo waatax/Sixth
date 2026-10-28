@@ -2,7 +2,9 @@
 // 涵蓋 8 大學科領域、64 個教學單元、192 個明確微概念知識點 (Micro-Knowledge Points)
 // 每個知識點均具備：明確定義、核心公式/規律、破題攻略、防雷避坑、生活實用性、專屬 Infographic 與四維關聯知識點拓撲網絡
 
-export const knowledgePointsData = [
+import { applyKidOverlay } from './knowledgePointsKid/index.js';
+
+export const knowledgePointsData = applyKidOverlay([
   {
     "id": "kp-math-u1-1",
     "pointIndex": 0,
@@ -3643,7 +3645,7 @@ export const knowledgePointsData = [
     "title": "食物鏈箭號嚴格標準",
     "category": "自然・觀念本質與定義",
     "badgeColor": "blue",
-    "definition": "食物鏈箭號嚴格標準：箭頭代表「能量與養分的流動路徑」，必為「被吃者 ➔ 掠食者」，綠色植物永遠在食物鏈頂端（生產者）。",
+    "definition": "食物鏈箭號嚴格標準：箭頭代表「能量與養分的流動路徑」，必為「被吃者 ➔ 掠食者」，綠色植物（生產者）永遠在食物鏈的最開頭。",
     "formulaOrRule": "核心工具與心法：分解者（真菌、細菌、蚯蚓腐生生物）",
     "strategyTip": "【審題觸發】當題目出現「扮演物質循環關鍵終點、將有機物分解為無機物」時，立即啟動「分解者（真菌、細菌、蚯蚓腐生生物）」解題。考前速記：食物鏈能量單向流動逐級遞減；生產者為基石，外來入侵種威脅本土生物多樣性！",
     "trapAlert": "【避雷提醒】審題時先圈出單位與關鍵字，切勿因跳步心算而粗心失分。",
@@ -11949,7 +11951,7 @@ export const knowledgePointsData = [
       }
     ]
   }
-];
+]);
 
 // 依照單元 ID 查詢知識點清單
 export function getKnowledgePointsByUnit(unitId) {

@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import MathText from '../common/MathText';
 import {
   BarChart3,
   GitBranch,
@@ -644,7 +645,7 @@ const LessonVisualInfographicDeck = ({
                 id: `kp-${unitId}-1`,
                 title: `${unitTitle} 核心觀念`,
                 category: `${subjectName}・核心觀念突破`,
-                definition: '精準掌握 108 課綱定義與運算算理，建立完整心智模型。',
+                definition: '看懂這一課的定義和算法，知道為什麼要這樣算。',
                 formulaOrRule: '循序推導，嚴謹審題，代入驗算。',
                 strategyTip: '【審題觸發】抓住題幹條件關鍵字，套用對應模型。',
                 trapAlert: '【避雷提醒】注意單位換算與題意正負方向。',
@@ -735,12 +736,12 @@ const LessonVisualInfographicDeck = ({
 
                     <div className="flex items-center justify-between gap-2 px-1">
                       <span className="text-[11px] text-slate-400">
-                        108 課綱高對比純向量圖解 ｜ 支援自適應縮放
+                        108 課綱圖解卡 ｜ 可放大檢視
                       </span>
                       <div className="flex items-center gap-1.5">
                         <button
                           onClick={() => {
-                            speechEngine.speak(`${currentKp.title}。${currentKp.definition}`, { lang: 'zh-TW' });
+                            speechEngine.speak(`${currentKp.title}。${currentKp.definition}${currentKp.example ? '。舉個例子：' + currentKp.example : ''}`.replace(/$/g, ''), { lang: 'zh-TW' });
                           }}
                           className="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 flex items-center gap-1 transition-colors"
                         >
@@ -766,18 +767,23 @@ const LessonVisualInfographicDeck = ({
                     <div className="p-3.5 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50">
                       <div className="text-xs font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5 mb-1">
                         <Target size={13} />
-                        <span>明確定義與本質原理</span>
+                        <span>白話解釋</span>
                       </div>
-                      <p className="text-xs text-slate-700 dark:text-slate-200 leading-relaxed font-sans">
-                        {currentKp.definition}
+                      <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed font-sans">
+                        <MathText text={currentKp.definition} />
                       </p>
+                      {currentKp.example && (
+                        <p className="mt-2 p-2 rounded-lg bg-white/80 dark:bg-slate-900/60 text-sm text-emerald-900 dark:text-emerald-200 leading-relaxed">
+                          <strong>🌱 舉個例子：</strong><MathText text={currentKp.example} />
+                        </p>
+                      )}
                     </div>
 
                     {/* Formula / Core tool */}
                     {currentKp.formulaOrRule && (
-                      <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-mono text-xs text-blue-700 dark:text-blue-300">
-                        <strong className="block text-slate-500 text-[10px] uppercase tracking-wider mb-0.5">⚡ 核心心法與公式</strong>
-                        {currentKp.formulaOrRule}
+                      <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-blue-700 dark:text-blue-300">
+                        <strong className="block text-slate-500 text-xs mb-0.5">📌 重點規則</strong>
+                        <MathText text={currentKp.formulaOrRule} />
                       </div>
                     )}
 
@@ -785,10 +791,10 @@ const LessonVisualInfographicDeck = ({
                     <div className="p-3 rounded-xl bg-red-50/70 dark:bg-red-950/40 border border-red-100 dark:border-red-900/50 text-xs">
                       <div className="font-bold text-red-700 dark:text-red-300 flex items-center gap-1.5 mb-1">
                         <ShieldAlert size={13} />
-                        <span>段考避雷警訊</span>
+                        <span>小心別犯錯</span>
                       </div>
-                      <p className="text-slate-700 dark:text-slate-200 text-xs leading-relaxed">
-                        {currentKp.trapAlert}
+                      <p className="text-slate-700 dark:text-slate-200 text-sm leading-relaxed">
+                        <MathText text={currentKp.trapAlert} />
                       </p>
                     </div>
 
@@ -810,7 +816,7 @@ const LessonVisualInfographicDeck = ({
                       <div className="flex items-center justify-between mb-2 px-1">
                         <span className="text-xs font-black text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
                           <Network size={14} className="text-blue-500" />
-                          <span>🔗 關聯知識點拓撲與學習階梯</span>
+                          <span>🔗 和它有關的知識點</span>
                           <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 font-bold">
                             {currentKp.relatedPoints.length} 個關聯節點
                           </span>
@@ -897,7 +903,7 @@ const LessonVisualInfographicDeck = ({
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="badge badge-accent text-xs font-bold">{subjectName || '課堂知識'}</span>
-                  <span className="text-xs text-slate-400">108 課綱高清純向量 SVG</span>
+                  <span className="text-xs text-slate-400">108 課綱圖解卡</span>
                 </div>
                 <h3 className="text-lg font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
                   <Sparkles size={16} className="text-amber-500" />

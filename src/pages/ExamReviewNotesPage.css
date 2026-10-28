@@ -497,14 +497,14 @@
 /* 主體兩欄佈局（目錄 + 筆記內容） */
 .notes-main-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 260px minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
 }
 
 @media (max-width: 960px) {
   .notes-main-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .notes-toc-sidebar {
     display: none;
@@ -567,6 +567,15 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  min-width: 0;
+}
+
+/* 手機窄螢幕：工具列子元素可換行，不撐破版面 */
+.notes-actions-row > *,
+.reading-tools-group > * {
+  min-width: 0;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .unit-note-card {
@@ -1175,7 +1184,7 @@
 
 /* 焦點單欄模式 */
 .unit-dual-grid.focus-single-col {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .unit-focus-empty-hint {
@@ -1192,7 +1201,7 @@
 /* 高密度雙欄排版 (左欄觀念與大招，右欄考點向量圖解與防雷陷阱) */
 .unit-dual-grid {
   display: grid;
-  grid-template-columns: 1.12fr 0.88fr;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   gap: 1.5rem;
   align-items: start;
   margin-bottom: 1rem;
@@ -1200,7 +1209,7 @@
 
 @media (max-width: 900px) {
   .unit-dual-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.2rem;
   }
 }

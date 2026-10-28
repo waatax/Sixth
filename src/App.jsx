@@ -1,25 +1,28 @@
+import { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import HomePage from './pages/HomePage';
-import SubjectPage from './pages/SubjectPage';
-import LessonPage from './pages/LessonPage';
-import QuizPage from './pages/QuizPage';
-import QuestionBankPage from './pages/QuestionBankPage';
-import ResourcesPage from './pages/ResourcesPage';
-import PrepPage from './pages/PrepPage';
-import FlashcardsPage from './pages/FlashcardsPage';
-import MockExamPage from './pages/MockExamPage';
-import MistakesPage from './pages/MistakesPage';
-import GeptPage from './pages/GeptPage';
-import BossBattlePage from './pages/BossBattlePage';
-import MemoryGamePage from './pages/MemoryGamePage';
-import ShortsReelsPage from './pages/ShortsReelsPage';
-import InteractiveLabsPage from './pages/InteractiveLabsPage';
-import ExamReviewNotesPage from './pages/ExamReviewNotesPage';
-import DuolingoLearnPage from './pages/DuolingoLearnPage';
 import { GamificationProvider } from './context/GamificationContext';
 import PetCompanionWidget from './components/gamification/PetCompanionWidget';
 import './App.css';
+
+// 首頁以外的頁面按需載入，縮小第一次開啟要下載的程式
+const SubjectPage = lazy(() => import('./pages/SubjectPage'));
+const LessonPage = lazy(() => import('./pages/LessonPage'));
+const QuizPage = lazy(() => import('./pages/QuizPage'));
+const QuestionBankPage = lazy(() => import('./pages/QuestionBankPage'));
+const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
+const PrepPage = lazy(() => import('./pages/PrepPage'));
+const FlashcardsPage = lazy(() => import('./pages/FlashcardsPage'));
+const MockExamPage = lazy(() => import('./pages/MockExamPage'));
+const MistakesPage = lazy(() => import('./pages/MistakesPage'));
+const GeptPage = lazy(() => import('./pages/GeptPage'));
+const BossBattlePage = lazy(() => import('./pages/BossBattlePage'));
+const MemoryGamePage = lazy(() => import('./pages/MemoryGamePage'));
+const ShortsReelsPage = lazy(() => import('./pages/ShortsReelsPage'));
+const InteractiveLabsPage = lazy(() => import('./pages/InteractiveLabsPage'));
+const ExamReviewNotesPage = lazy(() => import('./pages/ExamReviewNotesPage'));
+const DuolingoLearnPage = lazy(() => import('./pages/DuolingoLearnPage'));
 
 function App() {
   return (

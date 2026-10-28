@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
+import MathText from './MathText';
 import { 
   X, 
   Lightbulb, 
@@ -124,7 +125,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
 
     setIsSpeakingId(kp.id);
     playSound('click');
-    const textToRead = `${kp.title}。${kp.definition}。${kp.strategyTip}`;
+    const textToRead = `${kp.title}。${kp.definition}。${kp.example ? '舉個例子：' + kp.example : ''}`.replace(/$/g, '');
     speechEngine.speak(textToRead, {
       lang: kp.subjectId === 'english' ? 'en-US' : 'zh-TW',
       onEnd: () => setIsSpeakingId(null),
@@ -135,7 +136,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
   // 複製知識點摘要筆記
   const handleCopyNote = (kp, e) => {
     if (e) e.stopPropagation();
-    const text = `【${kp.category}】${kp.title}\n定義：${kp.definition}\n公式/心法：${kp.formulaOrRule}\n避雷防錯：${kp.trapAlert}\n生活實用：${kp.practicalUtility}\n三大版本命題焦點：${kp.textbookFocus}\n升國中銜接：${kp.juniorHighBridge}\n—— 來自《最強小六》108 課綱全科旗艦智庫`;
+    const text = `【${kp.category}】${kp.title}\n白話解釋：${kp.definition}\n舉個例子：${kp.example || ''}\n重點規則：${kp.formulaOrRule}\n易錯提醒：${kp.trapAlert}\n生活實用：${kp.practicalUtility}\n三大版本命題焦點：${kp.textbookFocus}\n升國中銜接：${kp.juniorHighBridge}\n—— 來自《最強小六》108 課綱全科旗艦智庫`;
     
     navigator.clipboard.writeText(text).then(() => {
       setCopiedId(kp.id);
@@ -162,8 +163,8 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
     if (activeTheme !== 'all') {
       if (activeTheme === 'health_med') list = list.filter(p => p.subjectId === 'health_pe' || p.category.includes('體') || p.category.includes('健康') || p.definition.includes('細胞') || p.definition.includes('循環') || p.definition.includes('神經'));
       else if (activeTheme === 'concept') list = list.filter(p => p.category.includes('觀念') || p.category.includes('本質'));
-      else if (activeTheme === 'formula') list = list.filter(p => p.category.includes('算理') || p.category.includes('公式') || p.formulaOrRule.includes('$'));
-      else if (activeTheme === 'trap') list = list.filter(p => p.trapAlert.includes('必背') || p.trapAlert.includes('防雷'));
+      else if (activeTheme === 'formula') list = list.filter(p => p.category.includes('算理') || p.category.includes('公式') || /[=×÷]/.test(p.formulaOrRule));
+      else if (activeTheme === 'trap') list = list.filter(p => /陷阱|不要|不能|不是|錯|別/.test(p.trapAlert));
       else if (activeTheme === 'life') list = list.filter(p => p.practicalUtility.length > 15);
     }
     if (masteryFilter === 'mastered') {
@@ -313,7 +314,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                   192 微考點全覆蓋
                 </span>
                 <span className="badge badge-success text-[11px] font-bold px-2 py-0.5">
-                  純向量 Infographics
+                  圖解卡
                 </span>
               </div>
               <p className={`text-xs mt-0.5 ${
@@ -620,7 +621,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                       <span className="w-1.5 h-3 bg-blue-500 rounded-full inline-block shrink-0" />
                       <span className="truncate">{kp.title}</span>
                     </h3>
-                    <p className={`text-[11.5px] line-clamp-2 leading-relaxed mb-1.5 ${
+                    <p className={`text-[13px] line-clamp-2 leading-relaxed mb-1.5 ${
                       isEyeCare ? 'text-stone-700' : 'text-slate-600 dark:text-slate-300'
                     }`}>
                       {kp.definition}
@@ -628,8 +629,8 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
 
                     {/* 核心工具或公式 */}
                     {kp.formulaOrRule && (
-                      <div className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 text-[10.5px] font-mono text-blue-700 dark:text-blue-300 mb-1.5 truncate">
-                        <strong>⚡ 心法：</strong>{kp.formulaOrRule}
+                      <div className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 text-[12px] text-blue-700 dark:text-blue-300 mb-1.5 line-clamp-2">
+                        <strong>📌 重點：</strong><MathText text={kp.formulaOrRule} />
                       </div>
                     )}
 
@@ -662,10 +663,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                         {currentFocusedPoint.category}
                       </span>
                       <span className="text-xs text-slate-400">
-                        單元 ID: {currentFocusedPoint.unitId}
-                      </span>
-                      <span className="text-xs text-slate-400">
-                        點索引: 0{currentFocusedPoint.pointIndex + 1}
+                        第 {currentFocusedPoint.pointIndex + 1} 個重點
                       </span>
                     </div>
                     <h3 className={`text-base sm:text-lg font-black ${
@@ -759,7 +757,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
 
                   <div className="flex items-center justify-between text-[11px] text-slate-400 mt-2 px-1">
                     <span>{currentInfographic?.subtitle || '108 課綱向量圖解'}</span>
-                    <span>純向量無失真渲染 ｜ 支援縮放與下載</span>
+                    <span>可放大檢視、下載或列印</span>
                   </div>
                 </div>
 
@@ -767,11 +765,11 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                 <div className="flex items-center gap-1 overflow-x-auto pb-0.5 scrollbar-none border-b border-slate-100 dark:border-slate-800">
                   {[
                     { id: 'all', label: '全部維度', icon: <Layers size={12} /> },
-                    { id: 'essence', label: '🧠 觀念本質', icon: <Target size={12} /> },
-                    { id: 'formula', label: '⚡ 算理心法', icon: <Zap size={12} /> },
-                    { id: 'trap', label: '🛡️ 避雷攻略', icon: <ShieldAlert size={12} /> },
+                    { id: 'essence', label: '🧠 白話解釋', icon: <Target size={12} /> },
+                    { id: 'formula', label: '📌 重點規則', icon: <Zap size={12} /> },
+                    { id: 'trap', label: '⚠️ 易錯提醒', icon: <ShieldAlert size={12} /> },
                     { id: 'life', label: '🌍 生活實用', icon: <Compass size={12} /> },
-                    { id: 'network', label: '🔗 關聯拓撲', icon: <Network size={12} /> }
+                    { id: 'network', label: '🔗 相關知識', icon: <Network size={12} /> }
                   ].map(dim => (
                     <button
                       key={dim.id}
@@ -795,13 +793,24 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                     <div className="p-3.5 rounded-xl bg-blue-50/70 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900/40">
                       <div className="text-xs font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5 mb-1.5">
                         <Target size={14} />
-                        <span>明確說明・觀念本質與核心原理</span>
+                        <span>白話解釋・這個知識點在說什麼？</span>
                       </div>
-                      <p className={`text-xs leading-relaxed font-sans ${
+                      <p className={`text-sm leading-relaxed font-sans ${
                         isEyeCare ? 'text-stone-800' : 'text-slate-700 dark:text-slate-200'
                       }`}>
-                        {currentFocusedPoint.definition}
+                        <MathText text={currentFocusedPoint.definition} />
                       </p>
+                      {currentFocusedPoint.example && (
+                        <div className="mt-2.5 p-2.5 rounded-lg bg-white/80 dark:bg-slate-900/60 border border-emerald-200/70 dark:border-emerald-800/40 text-sm leading-relaxed text-emerald-900 dark:text-emerald-200">
+                          <strong className="block mb-0.5">🌱 舉個例子</strong>
+                          <MathText text={currentFocusedPoint.example} />
+                        </div>
+                      )}
+                      {currentFocusedPoint.keyFact && (
+                        <div className="mt-2 text-[13px] leading-relaxed text-blue-800 dark:text-blue-200">
+                          <strong>📘 課本重點：</strong><MathText text={currentFocusedPoint.keyFact} />
+                        </div>
+                      )}
                     </div>
                   )}
 
@@ -810,17 +819,17 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                     <div className="p-3.5 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-100 dark:border-amber-900/40">
                       <div className="text-xs font-bold text-amber-700 dark:text-amber-300 flex items-center gap-1.5 mb-1.5">
                         <Sparkles size={14} />
-                        <span>算理心法・審題雷達與破題工具</span>
+                        <span>重點規則・解題小撇步</span>
                       </div>
                       {currentFocusedPoint.formulaOrRule && (
-                        <div className="p-2 rounded-lg bg-white/80 dark:bg-slate-900/60 border border-amber-200/60 dark:border-amber-800/40 text-xs font-mono text-amber-900 dark:text-amber-300 mb-2">
-                          <strong>⚡ 運算公式/法則：</strong>{currentFocusedPoint.formulaOrRule}
+                        <div className="p-2 rounded-lg bg-white/80 dark:bg-slate-900/60 border border-amber-200/60 dark:border-amber-800/40 text-sm font-bold text-amber-900 dark:text-amber-300 mb-2">
+                          <strong>📌 一定要記：</strong><MathText text={currentFocusedPoint.formulaOrRule} />
                         </div>
                       )}
-                      <p className={`text-xs leading-relaxed ${
+                      <p className={`text-[13px] leading-relaxed ${
                         isEyeCare ? 'text-stone-800' : 'text-slate-700 dark:text-slate-200'
                       }`}>
-                        {currentFocusedPoint.strategyTip}
+                        <MathText text={currentFocusedPoint.strategyTip} />
                       </p>
                     </div>
                   )}
@@ -830,12 +839,12 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                     <div className="p-3.5 rounded-xl bg-red-50/70 dark:bg-red-950/30 border border-red-100 dark:border-red-900/40">
                       <div className="text-xs font-bold text-red-700 dark:text-red-300 flex items-center gap-1.5 mb-1.5">
                         <ShieldAlert size={14} />
-                        <span>考場避雷・歷屆高頻陷阱指南</span>
+                        <span>小心別犯錯・常見錯誤提醒</span>
                       </div>
-                      <p className={`text-xs leading-relaxed ${
+                      <p className={`text-sm leading-relaxed ${
                         isEyeCare ? 'text-stone-800' : 'text-slate-700 dark:text-slate-200'
                       }`}>
-                        {currentFocusedPoint.trapAlert}
+                        <MathText text={currentFocusedPoint.trapAlert} />
                       </p>
                     </div>
                   )}
@@ -847,7 +856,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                         <Compass size={14} />
                         <span>生活實用性與素養實踐</span>
                       </div>
-                      <p className={`text-xs leading-relaxed mb-2 ${
+                      <p className={`text-[13px] leading-relaxed mb-2 ${
                         isEyeCare ? 'text-stone-800' : 'text-slate-700 dark:text-slate-200'
                       }`}>
                         {currentFocusedPoint.practicalUtility}
@@ -865,7 +874,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                       <span className="font-bold text-slate-800 dark:text-slate-200 block mb-1">
                         📚 三大教科書版本（康軒・翰林・南一）命題焦點比對：
                       </span>
-                      {currentFocusedPoint.textbookFocus}
+                      <MathText text={currentFocusedPoint.textbookFocus} />
                     </div>
                   )}
 
@@ -879,7 +888,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                           </div>
                           <div>
                             <h4 className="text-xs font-black text-slate-800 dark:text-slate-100 flex items-center gap-1.5">
-                              <span>🔗 相關知識點拓撲網絡</span>
+                              <span>🔗 和它有關的知識點</span>
                               <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 font-bold">
                                 {currentFocusedPoint.relatedPoints.length} 個關聯節點
                               </span>
@@ -958,7 +967,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="badge badge-accent text-xs font-bold">{currentFocusedPoint?.category}</span>
-                  <span className="text-xs text-slate-400">108 課綱高清純向量 SVG</span>
+                  <span className="text-xs text-slate-400">108 課綱圖解卡</span>
                 </div>
                 <h3 className="text-lg font-black text-slate-800 dark:text-slate-100 flex items-center gap-2">
                   <Sparkles size={16} className="text-amber-500" />

@@ -198,7 +198,7 @@ export const TopicDiscoveryExplorer = () => {
           <div className="flex items-center gap-2 mb-1.5 flex-wrap">
             <span className="badge badge-accent font-extrabold flex items-center gap-1">
               <Sparkles size={13} />
-              信達雅智能主題搜尋儀
+              🔎 找主題
             </span>
             <span className="text-xs text-secondary font-medium">
               涵蓋全站 8 大領域・64 個精選單元地圖

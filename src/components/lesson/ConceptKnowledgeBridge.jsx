@@ -27,7 +27,7 @@ const ConceptKnowledgeBridge = ({ unitId, subjectId, unitTitle }) => {
 
   const speakOverview = (e) => {
     e.stopPropagation();
-    const text = `${unitTitle}。先備知識：${bridgeData.prerequisite}。本課核心心智模型：${bridgeData.coreMentalModel}。國中先修銜接：${bridgeData.juniorHighBridge}`;
+    const text = `${unitTitle}。先備知識：${bridgeData.prerequisite}。這一課最重要的想法：${bridgeData.coreMentalModel}。國中先修銜接：${bridgeData.juniorHighBridge}`;
     speechEngine.speak(text, { lang: 'zh-TW' });
   };
 
@@ -124,7 +124,7 @@ const ConceptKnowledgeBridge = ({ unitId, subjectId, unitTitle }) => {
               <div>
                 <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400 mb-1.5">
                   <Sparkles size={14} />
-                  <span>🎯 2. 本單元核心心智模型</span>
+                  <span>🎯 2. 這一課最重要的想法</span>
                 </div>
                 <p className="text-xs text-secondary leading-relaxed m-0">
                   {bridgeData.coreMentalModel}

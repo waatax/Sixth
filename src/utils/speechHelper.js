@@ -99,7 +99,17 @@ class SpeechEngine {
     // Strip markdown formatting, symbols, LaTeX math tags
     return text
       .replace(/\$\\[a-zA-Z]+\{[^}]*\}\{([^}]*)\}\$/g, '$1') // e.g. $\textcolor{#fff}{\textbf{word}}$ -> word
-      .replace(/\$[^$]*\$/g, '') // remove remaining math
+      // 數學式改成念得出來的中文，而不是整段略過（小六學生要聽得到數字）
+      .replace(/\$([^$]*)\$/g, (_, tex) => tex
+        .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '$2分之$1')
+        .replace(/\\text\{([^}]*)\}/g, '$1')
+        .replace(/\\times/g, ' 乘 ')
+        .replace(/\\div/g, ' 除以 ')
+        .replace(/\\pi/g, '圓周率')
+        .replace(/\^\{?2\}?/g, '平方')
+        .replace(/\^\\circ/g, '度')
+        .replace(/\\[a-zA-Z]+/g, '')
+        .replace(/[{}]/g, ''))
       .replace(/[*_#`~[\]]/g, '') // remove markdown marks
       .replace(/\\text\{([^}]*)\}/g, '$1')
       .replace(/[\n\r]+/g, ' ')
@@ -243,8 +253,24 @@ export function extractTextFromNode(node) {
     val = val.replace(/\$+/g, '');
     return val;
   }
+  // rehype-katex 已把數學式轉成「畫面文字 + MathML + TeX 原始碼」三份，只取 TeX 並包回 $...$，避免文字重複成亂碼
+  const classes = node.properties?.className;
+  if (Array.isArray(classes) && classes.includes('katex')) {
+    const tex = findKatexAnnotation(node);
+    return tex ? `$${tex}$` : '';
+  }
   if (node.children && Array.isArray(node.children)) {
     return node.children.map(extractTextFromNode).join('');
+  }
+  return '';
+}
+
+function findKatexAnnotation(node) {
+  if (!node) return '';
+  if (node.tagName === 'annotation') return (node.children || []).map(c => c.value || '').join('');
+  for (const child of node.children || []) {
+    const found = findKatexAnnotation(child);
+    if (found) return found;
   }
   return '';
 }

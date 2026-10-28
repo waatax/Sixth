@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
+import MathText from '../common/MathText';
 import { createPortal } from 'react-dom';
 import {
   X,
@@ -39,7 +40,7 @@ const STAGE_META = {
   lesson: {
     id: 'lesson',
     title: '⭐ 新觀念入門 (四選一)',
-    subtitle: '先看 3 條核心重點與純向量圖解，再完成 5 題標準四選一基礎練習',
+    subtitle: '先看 3 個重點和圖解，再完成 5 題四選一練習',
     xpBase: 30,
     xpMultiplier: 1,
     hasIntro: true
@@ -558,7 +559,8 @@ const DuolingoLessonModal = ({
     ...(unitKps.slice(0, 3).map((kp) => ({
       title: kp.title,
       body: (kp.definition || kp.formulaOrRule || '').replace(/\$/g, ''),
-      tip: (kp.trapAlert || '').replace(/⚠️/g, '')
+      example: kp.example || '',
+      tip: (kp.trapAlert || '').replace(/⚠️/g, '').replace(/^【[^】]*】/, '')
     })) || [])
   ];
   if (guidePoints.length === 0 && catalog) {
@@ -1287,7 +1289,7 @@ const DuolingoLessonModal = ({
                   <span>{activeKp?.title || currentInfographic?.title}</span>
                 </div>
                 <span className="text-[11px] text-secondary font-bold">
-                  108 課綱純向量圖卡
+                  108 課綱圖解卡
                 </span>
               </div>
 
@@ -1301,27 +1303,32 @@ const DuolingoLessonModal = ({
               )}
 
               {/* 五維知識點微架構 (定義、算理/公式、防雷、技巧) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                 {activeKp?.definition && (
                   <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary">
                     <div className="font-black text-slate-700 dark:text-slate-300 mb-0.5">
-                      📌 觀念定義
+                      🧠 白話解釋
                     </div>
                     <div className="text-secondary leading-relaxed">
-                      {activeKp.definition}
+                      <MathText text={activeKp.definition} />
                     </div>
+                    {activeKp.example && (
+                      <div className="mt-1.5 text-emerald-700 dark:text-emerald-300 leading-relaxed">
+                        <strong>🌱 例子：</strong><MathText text={activeKp.example} />
+                      </div>
+                    )}
                   </div>
                 )}
                 {activeKp?.formulaOrRule && (
                   <div className="p-2.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-700 dark:text-blue-300">
-                    <div className="font-black mb-0.5">🧮 核心算理 / 定則</div>
-                    <div className="leading-relaxed">{activeKp.formulaOrRule}</div>
+                    <div className="font-black mb-0.5">📌 重點規則</div>
+                    <div className="leading-relaxed"><MathText text={activeKp.formulaOrRule} /></div>
                   </div>
                 )}
                 {activeKp?.trapAlert && (
                   <div className="p-2.5 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-700 dark:text-rose-300 sm:col-span-2">
-                    <div className="font-black mb-0.5">⚠️ 段考易錯陷阱防雷</div>
-                    <div className="leading-relaxed">{activeKp.trapAlert}</div>
+                    <div className="font-black mb-0.5">⚠️ 小心別犯錯</div>
+                    <div className="leading-relaxed"><MathText text={activeKp.trapAlert} /></div>
                   </div>
                 )}
               </div>
@@ -1494,7 +1501,7 @@ const DuolingoLessonModal = ({
                     {unit.title}
                   </h2>
                   <p className="text-xs text-secondary m-0 mt-0.5">
-                    花 20 秒速覽核心觀念與純向量圖解，等等作答一擊必殺！
+                    先花 20 秒看看重點和圖解，等一下作答更有把握！
                   </p>
                 </div>
               </div>
@@ -1505,9 +1512,9 @@ const DuolingoLessonModal = ({
                   <div className="w-full text-xs font-black text-secondary flex items-center justify-between mb-1 px-1">
                     <span className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400">
                       <Sparkles size={14} />
-                      <span>{unit.title}・單元架構純向量圖解</span>
+                      <span>{unit.title}・單元重點圖解</span>
                     </span>
-                    <span className="text-[10px] text-tertiary">108 課綱完整拓撲</span>
+                    <span className="text-[10px] text-tertiary">單元全貌</span>
                   </div>
                   <div 
                     className="w-full flex items-center justify-center max-h-[160px] overflow-hidden"
@@ -1541,6 +1548,11 @@ const DuolingoLessonModal = ({
                         <p className="text-xs sm:text-sm text-secondary mt-1 mb-0 leading-relaxed">
                           {pt.body}
                         </p>
+                        {pt.example && (
+                          <p className="text-xs sm:text-sm mt-1.5 mb-0 leading-relaxed text-emerald-700 dark:text-emerald-300">
+                            🌱 舉個例子：{pt.example}
+                          </p>
+                        )}
                         {pt.tip && (
                           <div
                             className="mt-2 px-3 py-1.5 rounded-xl text-xs font-bold"
@@ -1549,7 +1561,7 @@ const DuolingoLessonModal = ({
                               color: '#d97706'
                             }}
                           >
-                            💡 考前防雷：{pt.tip}
+                            ⚠️ 小心別犯錯：{pt.tip}
                           </div>
                         )}
                       </div>

@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import MathText from '../components/common/MathText';
 import { resourcesData } from '../data/resourcesData';
 import { 
   ExternalLink, 
@@ -383,7 +384,7 @@ const ResourcesPage = () => {
 
                   {/* Description */}
                   <p className="text-sm text-secondary" style={{ marginTop: '10px', lineHeight: 1.65 }}>
-                    {res.desc}
+                    <MathText text={res.desc} />
                   </p>
 
                   {/* Tags */}

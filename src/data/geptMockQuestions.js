@@ -1,8 +1,10 @@
+import { balanceDeep } from '../utils/balanceOptions.js';
+import { explanationEnrichments } from './explanationEnrichments.js';
 // 全民英檢 (GEPT) 全真模擬測驗題庫（共 200 題選擇題）
 // 涵蓋字彙片語、核心文法、日常情境會話、克漏字段落填空、長文閱讀理解
 // 支援 5 題、10 題、20 題、30 題隨機模擬測驗
 
-export const geptMockQuestions = [
+const rawGeptMockQuestions = [
   {
     "id": 1,
     "category": "字彙與片語",
@@ -2804,3 +2806,9 @@ export const geptMockQuestions = [
     "explanation": "邀請函細節題：Dress Code 欄位註明「Formal attire (正式服裝)」。"
   }
 ];
+
+// 四選一正確答案位置平衡（避免答案集中在同一個選項）
+export const geptMockQuestions = balanceDeep(rawGeptMockQuestions.map(q => {
+  const rich = explanationEnrichments[`gept|${q.id}`];
+  return rich ? { ...q, explanation: rich } : q;
+}));

@@ -79,7 +79,7 @@ export const LessonCompletionModal = ({
             恭喜讀完第 {unitNumber} 關：{unitTitle}
           </h2>
           <p className="text-xs sm:text-sm text-secondary mt-1 mb-0 max-w-sm">
-            你已成功吸收本課核心心智模型與考點架構，自主學習力 +100！
+            你已經學會這一課的重點了，自主學習力 +100！
           </p>
         </div>
 

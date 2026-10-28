@@ -191,7 +191,7 @@ export const GlobalKnowledgeRadar = () => {
               </span>
             </div>
             <p className="text-xs text-secondary m-0 mt-0.5">
-              可視化學習進度追蹤與每日正向多巴胺反饋閉環
+              看看自己每天進步了多少
             </p>
           </div>
         </div>
@@ -558,7 +558,7 @@ export const GlobalKnowledgeRadar = () => {
                     3. 標記打卡 1 個核心考點
                   </div>
                   <div className="text-[11px] text-secondary">
-                    在課堂中點擊「30秒考點自評」打卡膠囊，建立主動回想心智模型
+                    在課堂中點擊「30秒考點自評」打卡膠囊，幫自己想一想學會了沒
                   </div>
                 </div>
               </div>

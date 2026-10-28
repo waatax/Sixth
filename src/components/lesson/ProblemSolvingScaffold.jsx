@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MathText from '../common/MathText';
 import { 
   Sparkles, 
   Search, 
@@ -87,7 +88,7 @@ const ProblemSolvingScaffold = ({ rawText = '', children, isEnglish = false }) =
     },
     {
       num: 2,
-      title: '第二步：提取解題心智模型',
+      title: '第二步：想想要用哪個方法',
       sub: '該用哪一個工具或觀念？',
       icon: Compass,
       color: '#10b981',
@@ -140,7 +141,7 @@ const ProblemSolvingScaffold = ({ rawText = '', children, isEnglish = false }) =
           <div>
             <div className="flex items-center gap-2">
               <span className="text-xs font-bold" style={{ color: 'var(--text-primary)' }}>
-                4 步解題思維鷹架工作台
+                4 步驟解題練習
               </span>
               <span className="badge badge-accent text-[10px] py-0.5 px-2 font-bold">
                 實戰解題法
@@ -224,7 +225,7 @@ const ProblemSolvingScaffold = ({ rawText = '', children, isEnglish = false }) =
                 className="text-xs text-secondary leading-relaxed pl-7 whitespace-pre-line"
                 style={{ color: 'var(--text-primary)' }}
               >
-                {step.content}
+                <MathText text={step.content} />
               </div>
             </div>
           );

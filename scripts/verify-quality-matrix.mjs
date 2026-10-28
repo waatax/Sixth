@@ -1,4 +1,5 @@
 import fs from 'fs';
+import process from 'node:process';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
@@ -592,6 +593,55 @@ results.push({
 });
 
 // ----------------------------------------------------
+// 小六學習成效檢驗：答案位置平衡、說明完整度、知識點白話化
+// ----------------------------------------------------
+let kidLearningFailed = false;
+{
+  const { quizData } = await import('../src/data/quizData.js');
+  const { geptMockQuestions } = await import('../src/data/geptMockQuestions.js');
+  const { knowledgePointsData } = await import('../src/data/knowledgePoints.js');
+
+  const allQs = [...Object.values(quizData).flat(), ...geptMockQuestions];
+  const dist = [0, 0, 0, 0];
+  allQs.forEach(q => dist[q.answerIndex]++);
+  const shares = dist.map(d => d / allQs.length);
+  const balanced = shares.every(s => s >= 0.2 && s <= 0.3);
+  results.push({
+    layer: '四選一答案位置平衡',
+    target: `題庫 + GEPT 共 ${allQs.length.toLocaleString()} 題`,
+    method: '正確答案落在 A/B/C/D 的比例各需介於 20%~30%（避免「全選 A」也能高分）',
+    result: balanced
+      ? `通過 (A ${(shares[0] * 100).toFixed(1)}% / B ${(shares[1] * 100).toFixed(1)}% / C ${(shares[2] * 100).toFixed(1)}% / D ${(shares[3] * 100).toFixed(1)}%)`
+      : `不合格 (${dist.join('/')})`
+  });
+
+  const shortExp = allQs.filter(q => (q.explanation || '').length < 30);
+  results.push({
+    layer: '測驗說明完整度',
+    target: `題庫 + GEPT 共 ${allQs.length.toLocaleString()} 題`,
+    method: '每題說明 ≥ 30 字，需包含解題理由（不只寫答案）',
+    result: shortExp.length === 0 ? '100% 完整說明' : `不合格 (${shortExp.length} 題說明過短)`
+  });
+
+  const genericTrap = /審題時先圈出單位與關鍵字/;
+  const rawLatex = /\\(times|frac|text|div)|\$/;
+  const badKp = knowledgePointsData.filter(kp =>
+    !kp.example || !kp.formulaOrRule || !kp.trapAlert ||
+    genericTrap.test(kp.trapAlert) ||
+    [kp.definition, kp.example, kp.formulaOrRule, kp.trapAlert].some(t => rawLatex.test(t)) ||
+    kp.title.includes('…')
+  );
+  results.push({
+    layer: '知識點白話完整解釋',
+    target: `全站 ${knowledgePointsData.length} 個微知識點`,
+    method: '每點需有白話解釋 + 生活例子 + 專屬重點規則 + 專屬易錯提醒，無通用罐頭提醒、無 LaTeX 原始碼、標題不截斷',
+    result: badKp.length === 0 ? `${knowledgePointsData.length} / ${knowledgePointsData.length} 點 (100% 完整)` : `不合格 (${badKp.length} 點：${badKp.slice(0, 3).map(k => k.id).join(', ')})`
+  });
+
+  kidLearningFailed = !balanced || shortExp.length > 0 || badKp.length > 0;
+}
+
+// ----------------------------------------------------
 // Print Markdown Table
 // ----------------------------------------------------
 console.log('| 檢驗層次 | 檢驗標的 | 測試與驗證方式 | 驗證結果 |');
@@ -600,3 +650,5 @@ results.forEach(r => {
   console.log(`| ${r.layer} | ${r.target} | ${r.method} | ${r.result} |`);
 });
 console.log('\n========================================================================\n');
+
+if (kidLearningFailed) process.exit(1);

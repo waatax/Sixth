@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
+import MathText from '../components/common/MathText';
 import { coursesData } from '../data/courses';
 import { playSound, toggleMute, getMuteState, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
@@ -76,6 +77,10 @@ const parseExplanationSections = (text) => {
   const regex = /【([^】]+)】\s*([^【]+)/g;
   const sections = [];
   let match;
+  // 第一個【標籤】之前若還有文字，也要顯示，不能漏掉
+  const firstTag = text.indexOf('【');
+  const preamble = firstTag > 0 ? text.slice(0, firstTag).trim() : '';
+  if (preamble) sections.push({ rawTag: '解題說明', label: '【解題說明】', content: preamble, icon: '💡', theme: 'blue' });
   while ((match = regex.exec(text)) !== null) {
     const rawTag = match[1].trim();
     const content = match[2].trim();
@@ -83,7 +88,19 @@ const parseExplanationSections = (text) => {
     let label = `【${rawTag}】`;
     let theme = 'blue';
 
-    if (rawTag.includes('步驟') || rawTag.includes('計算') || rawTag.includes('推導') || rawTag.includes('解題步驟')) {
+    if (rawTag.includes('驗算') || rawTag.includes('檢查')) {
+      icon = '✅';
+      label = '【驗算檢查】';
+      theme = 'emerald';
+    } else if (rawTag.includes('其他選項') || rawTag.includes('比較')) {
+      icon = '🔍';
+      label = '【其他選項為什麼不對】';
+      theme = 'amber';
+    } else if (rawTag.includes('提醒')) {
+      icon = '⚠️';
+      label = '【小心別犯錯】';
+      theme = 'rose';
+    } else if (rawTag.includes('步驟') || rawTag.includes('計算') || rawTag.includes('推導') || rawTag.includes('解題步驟')) {
       icon = '📝';
       label = `【解題步驟與算理】`;
       theme = 'indigo';
@@ -108,7 +125,7 @@ const parseExplanationSections = (text) => {
     sections.push({ rawTag, label, content, icon, theme });
   }
 
-  if (sections.length === 0) {
+  if (sections.length === (preamble ? 1 : 0) && !text.includes('【')) {
     const sentences = text.split(/(?<=[。！？])/).filter(s => s.trim().length > 0);
     if (sentences.length <= 1) {
       sections.push({ rawTag: '名師解題觀念', label: '【名師解題觀念】', content: text, icon: '💡', theme: 'blue' });
@@ -233,7 +250,7 @@ const QuizPage = () => {
         triggerHaptic('heavy');
         dispatchDynamicIsland({
           title: `🔥 ${nextCombo} 連擊狂暴達成！`,
-          subtitle: '多巴胺經驗加倍觸發',
+          subtitle: '連續答對，經驗值加倍！',
           icon: '🔥'
         });
       } else {
@@ -719,7 +736,7 @@ const QuizPage = () => {
             {quizMode === 'challenge' ? '⚔️ 單元模擬挑戰・會考素養' : quizMode === 'representative' ? '📘 課綱精選代表題・實戰衝刺' : quizMode === 'foundation' ? '✏️ 單元重點測驗・基礎驗收' : '🏆 全單元大滿貫測驗'}
           </span>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap justify-end">
             <button
               onClick={() => {
                 setIsScratchpadOpen(true);
@@ -844,7 +861,7 @@ const QuizPage = () => {
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-1.5 text-xs font-bold" style={{ color: 'var(--text-primary)' }}>
                   <HelpCircle size={15} style={{ color: 'var(--accent-primary)' }} />
-                  <span>卡題了？點擊漸進式思考鷹架（引導自主破題）：</span>
+                  <span>卡住了嗎？先看提示，自己想想看：</span>
                 </div>
                 <div className="flex items-center gap-1.5 flex-wrap">
                   <button
@@ -855,7 +872,7 @@ const QuizPage = () => {
                     title="開啟 Level 1 核心觀念線索（不劇透答案）"
                   >
                     <Lightbulb size={13} />
-                    <span>💡 Level 1 觀念提點</span>
+                    <span>💡 提示 1：想想觀念</span>
                   </button>
                   <button
                     onClick={() => toggleHint(2)}
@@ -865,7 +882,7 @@ const QuizPage = () => {
                     title="開啟 Level 2 步驟指引（算式或關鍵字拆解）"
                   >
                     <Compass size={13} />
-                    <span>📝 Level 2 步驟指引</span>
+                    <span>📝 提示 2：第一步怎麼做</span>
                   </button>
                 </div>
               </div>
@@ -875,7 +892,7 @@ const QuizPage = () => {
                 <div className="mt-2.5 p-3 rounded-xl bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs animate-fade-in flex items-start gap-2">
                   <Lightbulb size={15} className="text-amber-500 flex-shrink-0 mt-0.5" />
                   <div className="leading-relaxed">
-                    <strong className="text-amber-700 dark:text-amber-300 font-bold">💡 Level 1 觀念提點：</strong>
+                    <strong className="text-amber-700 dark:text-amber-300 font-bold">💡 提示 1：想想觀念：</strong>
                     <span className="text-secondary">{hints.level1}</span>
                   </div>
                 </div>
@@ -886,7 +903,7 @@ const QuizPage = () => {
                 <div className="mt-2.5 p-3 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-xs animate-fade-in flex items-start gap-2">
                   <Compass size={15} className="text-blue-500 flex-shrink-0 mt-0.5" />
                   <div className="leading-relaxed">
-                    <strong className="text-blue-700 dark:text-blue-300 font-bold">📝 Level 2 步驟指引：</strong>
+                    <strong className="text-blue-700 dark:text-blue-300 font-bold">📝 提示 2：第一步怎麼做：</strong>
                     <span className="text-secondary">{hints.level2}</span>
                   </div>
                 </div>
@@ -902,7 +919,6 @@ const QuizPage = () => {
             const isUserSelected = i === selectedOption;
             const isDisabled = disabledOptions.includes(i);
             const letterLabel = ['A', 'B', 'C', 'D'][i];
-            const numLabel = ['①', '②', '③', '④'][i];
 
             let bgColor = 'var(--bg-secondary)';
             let borderColor = 'var(--border-strong)';
@@ -958,11 +974,13 @@ const QuizPage = () => {
                   boxShadow: isUserSelected ? '0 3px 12px rgba(59, 130, 246, 0.15)' : 'none'
                 }}
                 onClick={() => handleSelect(i)}
+                aria-label={`選項 ${letterLabel}：${opt}`}
+                aria-pressed={isUserSelected}
               >
                 <div className="flex items-center gap-3" style={{ flex: 1 }}>
                   {/* Option Badge */}
                   <div
-                    className="flex items-center justify-center font-black rounded-xl text-xs flex-shrink-0 transition-colors"
+                    className="flex items-center justify-center font-black rounded-xl text-base flex-shrink-0 transition-colors"
                     style={{
                       width: '36px',
                       height: '36px',
@@ -973,12 +991,11 @@ const QuizPage = () => {
                     }}
                   >
                     <span className="font-extrabold">{letterLabel}</span>
-                    <span className="text-[10px] ml-0.5 opacity-80">{numLabel}</span>
                   </div>
 
                   {/* Option Text */}
                   <span className="leading-snug text-base" style={{ flex: 1 }}>
-                    {opt}
+                    <MathText text={opt} />
                   </span>
 
                   {unitId?.startsWith('eng-') && (
@@ -1004,7 +1021,7 @@ const QuizPage = () => {
                   )}
                   {showResult && isUserSelected && !isAnswer && (
                     <span className="flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400">
-                      <XCircle size={16} /> 陷阱
+                      <XCircle size={16} /> 你選的
                     </span>
                   )}
                   {!showResult && (
@@ -1059,7 +1076,7 @@ const QuizPage = () => {
                     setIsSpeakingExplanation(false);
                   } else {
                     setIsSpeakingExplanation(true);
-                    speechEngine.speak(question.explanation, {
+                    speechEngine.speak(question.explanation.replace(/$/g, '').replace(/【([^】]*)】/g, '$1：'), {
                       lang: unitId?.startsWith('eng-') ? 'en-US' : 'zh-TW',
                       onEnd: () => setIsSpeakingExplanation(false),
                       onError: () => setIsSpeakingExplanation(false)
@@ -1092,7 +1109,7 @@ const QuizPage = () => {
                   <CheckCircle2 size={16} /> 正確解答：
                 </span>
                 <span className="font-black px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300">
-                  {['A', 'B', 'C', 'D'][question.answerIndex]} {['①', '②', '③', '④'][question.answerIndex]}
+                  {['A', 'B', 'C', 'D'][question.answerIndex]}
                 </span>
                 <span className="font-semibold text-primary">{question.options[question.answerIndex]}</span>
               </div>
@@ -1103,7 +1120,7 @@ const QuizPage = () => {
                     <XCircle size={16} /> 你的選擇：
                   </span>
                   <span className="font-black px-2 py-0.5 rounded bg-rose-500/15 text-rose-700 dark:text-rose-300">
-                    {['A', 'B', 'C', 'D'][selectedOption]} {['①', '②', '③', '④'][selectedOption]}
+                    {['A', 'B', 'C', 'D'][selectedOption]}
                   </span>
                   <span className="text-secondary line-through">{question.options[selectedOption]}</span>
                 </div>
@@ -1141,7 +1158,7 @@ const QuizPage = () => {
                 return (
                   <div
                     key={idx}
-                    className="p-3 rounded-xl flex flex-col gap-1 text-xs sm:text-sm"
+                    className="p-3 rounded-xl flex flex-col gap-1 text-sm sm:text-base"
                     style={{
                       backgroundColor: bgCol,
                       border: `1.5px solid ${borderCol}`
@@ -1151,8 +1168,8 @@ const QuizPage = () => {
                       <span>{sec.icon}</span>
                       <span>{sec.label}</span>
                     </div>
-                    <p className="text-secondary m-0 leading-relaxed font-normal" style={{ color: 'var(--text-primary)' }}>
-                      {sec.content}
+                    <p className="text-secondary m-0 leading-relaxed font-normal" style={{ color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>
+                      <MathText text={sec.content} />
                     </p>
                   </div>
                 );

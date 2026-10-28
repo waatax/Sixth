@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MathText from '../common/MathText';
 import { HelpCircle, ChevronDown, ChevronUp, CheckCircle2, XCircle, Volume2, Sparkles } from 'lucide-react';
 import { speechEngine } from '../../utils/speechHelper';
 import { playSound } from '../../utils/soundEffects';
@@ -54,7 +55,7 @@ const InteractiveMisconceptionCard = ({ mythText, truthText, id = null, isEnglis
               </span>
             </div>
             <div className="font-bold text-sm leading-relaxed" style={{ color: 'var(--text-primary)' }}>
-              {mythText}
+              <MathText text={mythText} />
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@ const InteractiveMisconceptionCard = ({ mythText, truthText, id = null, isEnglis
               </div>
 
               <div className="text-xs sm:text-sm leading-relaxed" style={{ color: 'var(--text-primary)' }}>
-                {truthText}
+                <MathText text={truthText} />
               </div>
             </div>
           </div>

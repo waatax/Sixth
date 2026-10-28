@@ -171,7 +171,7 @@ const ShortsReelsPage = () => {
       triggerHaptic('heavy');
       dispatchDynamicIsland({
         title: '🎯 5秒突擊快問答對！',
-        subtitle: '多巴胺金幣 +35 🪙 | 經驗 +60 XP',
+        subtitle: '獎勵金幣 +35 🪙 | 經驗 +60 XP',
         icon: '⚡'
       });
       addCoins(35);

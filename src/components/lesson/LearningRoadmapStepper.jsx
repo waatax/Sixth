@@ -16,7 +16,7 @@ const STAGES = [
     step: 2,
     id: 'stage-2',
     label: '直觀核心圖解',
-    subLabel: '建立心智模型・告別死背',
+    subLabel: '先看懂，不用死背',
     icon: Lightbulb,
     color: '#10b981',
     matcher: (secTitle) => secTitle.includes('觀念')
@@ -24,7 +24,7 @@ const STAGES = [
   {
     step: 3,
     id: 'stage-3',
-    label: '題型 4 步鷹架',
+    label: '解題 4 步驟',
     subLabel: '破題關鍵字・防雷解法',
     icon: Zap,
     color: '#f59e0b',

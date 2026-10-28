@@ -2,14 +2,14 @@
 // 匯整 8 大學科、16 個學期專頁、全數 64 單元深度教學筆記與歷年真題實戰
 // 支援依「期中考（第1次段考）」、「期末考／畢業考（第2次段考）」與「全學期」動態篩選與 PDF 導出
 
-import { mathNotes } from './mathNotes.js';
-import { sciNotes } from './sciNotes.js';
-import { manNotes } from './manNotes.js';
-import { socNotes } from './socNotes.js';
-import { engNotes } from './engNotes.js';
-import { artNotes } from './artNotes.js';
-import { peNotes } from './peNotes.js';
-import { compNotes } from './compNotes.js';
+import { mathNotes as rawMathNotes } from './mathNotes.js';
+import { sciNotes as rawSciNotes } from './sciNotes.js';
+import { manNotes as rawManNotes } from './manNotes.js';
+import { socNotes as rawSocNotes } from './socNotes.js';
+import { engNotes as rawEngNotes } from './engNotes.js';
+import { artNotes as rawArtNotes } from './artNotes.js';
+import { peNotes as rawPeNotes } from './peNotes.js';
+import { compNotes as rawCompNotes } from './compNotes.js';
 import {
   unitHighlightsMap,
   normalizeHighlightItem,
@@ -18,6 +18,17 @@ import {
   getUnitVersionFocus
 } from './unitHighlights.js';
 import { conceptBridges } from '../conceptBridges.js';
+import { balanceDeep } from '../../utils/balanceOptions.js';
+
+// 段考講義真題：四選一正確答案位置平衡
+const mathNotes = balanceDeep(rawMathNotes);
+const sciNotes = balanceDeep(rawSciNotes);
+const manNotes = balanceDeep(rawManNotes);
+const socNotes = balanceDeep(rawSocNotes);
+const engNotes = balanceDeep(rawEngNotes);
+const artNotes = balanceDeep(rawArtNotes);
+const peNotes = balanceDeep(rawPeNotes);
+const compNotes = balanceDeep(rawCompNotes);
 
 export {
   mathNotes,

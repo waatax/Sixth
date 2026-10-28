@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   BookOpen, 
@@ -30,8 +30,9 @@ import {
 import GamificationWidget from '../common/GamificationWidget';
 import EyeCareToolbar from '../common/EyeCareToolbar';
 import SubjectIconBadge from '../common/SubjectIconBadge';
-import VisualKnowledgeHubModal from '../common/VisualKnowledgeHubModal';
-import QuickQuizMenuModal from '../quiz/QuickQuizMenuModal';
+// 兩個大型視窗內含全部題庫與知識點資料，打開時才載入
+const VisualKnowledgeHubModal = lazy(() => import('../common/VisualKnowledgeHubModal'));
+const QuickQuizMenuModal = lazy(() => import('../quiz/QuickQuizMenuModal'));
 import { useTheme } from '../../context/ThemeContext';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
@@ -110,7 +111,7 @@ const Header = () => {
     {
       title: '💡 視覺圖鑑與微知識點',
       items: [
-        { path: '#knowledge-hub', label: '視覺知識庫・微知識點圖鑑 (192考點)', icon: Lightbulb, badge: '純向量', color: '#f59e0b', isCustomHub: true },
+        { path: '#knowledge-hub', label: '視覺知識庫・微知識點圖鑑 (192考點)', icon: Lightbulb, badge: '圖解', color: '#f59e0b', isCustomHub: true },
       ]
     },
     {
@@ -212,11 +213,11 @@ const Header = () => {
                 >
                   最強小六
                 </span>
-                <span className="badge badge-accent" style={{ fontSize: '0.68rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
+                <span className="badge badge-accent brand-extra" style={{ fontSize: '0.68rem', padding: '1px 6px', fontWeight: 800, whiteSpace: 'nowrap' }}>
                   2026 旗艦版 🌱
                 </span>
               </div>
-              <span style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', display: 'block', marginTop: '1px', whiteSpace: 'nowrap' }}>
+              <span className="brand-extra" style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', display: 'block', marginTop: '1px', whiteSpace: 'nowrap' }}>
                 遊戲化全科自主學習護照
               </span>
             </div>
@@ -257,6 +258,7 @@ const Header = () => {
                   <span>{item.label}</span>
                   {item.badge && (
                     <span 
+                      className="nav-badge"
                       style={{
                         fontSize: '9px',
                         padding: '1px 5px',
@@ -323,11 +325,12 @@ const Header = () => {
                 whiteSpace: 'nowrap',
                 flexShrink: 0
               }}
-              title="108 課綱全科 192 個微知識點與純向量 Infographics 圖鑑"
+              title="108 課綱全科 192 個知識點圖解卡"
             >
               <Lightbulb size={15} style={{ color: '#f59e0b' }} />
               <span>知識圖鑑</span>
               <span 
+                className="nav-badge"
                 style={{
                   fontSize: '9px',
                   padding: '1px 5px',
@@ -736,41 +739,60 @@ const Header = () => {
             {/* Drawer Footer */}
             <div className="pt-3 border-t text-[11px] text-secondary text-center" style={{ borderTop: '1px solid var(--border-light)' }}>
               2026 新學期・108 課綱遊戲化自主學習平台<br />
-              <span style={{ color: 'var(--text-tertiary)', fontSize: '0.7rem' }}>信達雅圖騰設計・響應式沉浸體驗</span>
+              <span style={{ color: 'var(--text-tertiary)', fontSize: '0.7rem' }}>手機、平板、電腦都能用</span>
             </div>
           </div>
         </div>
       )}
 
       {/* 💡 全域視覺知識庫與微知識點圖鑑模態框 */}
-      <VisualKnowledgeHubModal
-        isOpen={isKnowledgeHubOpen}
-        onClose={() => setIsKnowledgeHubOpen(false)}
-        initialSubject={hubTarget.subject}
-        initialUnitId={hubTarget.unitId}
-        initialKpId={hubTarget.kpId}
-      />
+      {isKnowledgeHubOpen && (
+        <Suspense fallback={null}>
+          <VisualKnowledgeHubModal
+            isOpen={isKnowledgeHubOpen}
+            onClose={() => setIsKnowledgeHubOpen(false)}
+            initialSubject={hubTarget.subject}
+            initialUnitId={hubTarget.unitId}
+            initialKpId={hubTarget.kpId}
+          />
+        </Suspense>
+      )}
 
       {/* ⚡ 全域快速測驗選單模態框 (上下學期 × 科目 × 期中/期末) */}
-      <QuickQuizMenuModal
-        isOpen={isQuickQuizOpen}
-        onClose={() => setIsQuickQuizOpen(false)}
-        initialSubject={quickQuizInitial.subject}
-        initialSemester={quickQuizInitial.semester}
-        initialScope={quickQuizInitial.scope}
-      />
+      {isQuickQuizOpen && (
+        <Suspense fallback={null}>
+          <QuickQuizMenuModal
+            isOpen={isQuickQuizOpen}
+            onClose={() => setIsQuickQuizOpen(false)}
+            initialSubject={quickQuizInitial.subject}
+            initialSemester={quickQuizInitial.semester}
+            initialScope={quickQuizInitial.scope}
+          />
+        </Suspense>
+      )}
 
       {/* Responsive media query styling rules for navigation */}
       <style>{`
-        @media (min-width: 1024px) {
+        /* 寬度不足時收合為漢堡選單，避免頁首撐破畫面造成整頁左右捲動 */
+        @media (min-width: 1280px) {
           .desktop-nav { display: flex !important; }
-          .desktop-controls { display: flex !important; }
           .mobile-hamburger-btn { display: none !important; }
         }
-        @media (max-width: 1023px) {
+        @media (max-width: 1279px) {
           .desktop-nav { display: none !important; }
           .desktop-controls { display: none !important; }
           .mobile-hamburger-btn { display: flex !important; }
+        }
+        /* 手機上等級與金幣已顯示在頂部動態島，隱藏重複的徽章，確保選單按鈕留在畫面內 */
+        @media (max-width: 639px) {
+          .header .gamification-widget { display: none !important; }
+        }
+        @media (min-width: 1680px) {
+          .desktop-controls { display: flex !important; }
+        }
+        @media (max-width: 1679px) {
+          .desktop-controls { display: none !important; }
+          .header .nav-badge, .header .brand-extra { display: none !important; }
         }
       `}</style>
     </>

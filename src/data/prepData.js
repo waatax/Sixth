@@ -1,8 +1,9 @@
+import { balanceDeep } from '../utils/balanceOptions.js';
 // 國中先修 (Junior High Prep Courses) 最強小六原創旗艦版教材資料庫
 // 嚴格對標 108 課綱與 康軒 (Kang Hsuan)、南一 (Nan I)、翰林 (Han Lin) 三大版本七年級教科書
 // 配備：版本對照標籤、小六先備知識、微概念螺旋階梯、常犯迷思防雷 (Misconception Buster)、三階提示自適應診斷題庫
 
-export const prepData = {
+const rawPrepData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   // 🧮 1. 國一數學代數與幾何銜接 (Math)
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2150,3 +2151,6 @@ strategies: [
     }
   ]
 };
+
+// 四選一正確答案位置平衡（避免答案集中在同一個選項）
+export const prepData = balanceDeep(rawPrepData);

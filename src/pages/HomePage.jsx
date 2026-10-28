@@ -126,15 +126,30 @@ const HomePage = () => {
             </div>
             
             <h1 className="h1" style={{ margin: 0, fontSize: '1.9rem', letterSpacing: '-0.02em', lineHeight: 1.3 }}>
-              歡迎回來，{currentTitle}！直覺探索八大學科與主題課堂
+              歡迎回來，{currentTitle}！今天想學什麼呢？
             </h1>
 
             <p className="text-secondary" style={{ marginTop: '10px', fontSize: '0.96rem', lineHeight: 1.65 }}>
-              每個單元皆具備 <strong style={{ color: 'var(--accent-primary)' }}>「視覺概念圖解」</strong>、<strong style={{ color: '#6366f1' }}>「章節段考講義 (PDF)」</strong> 與 <strong style={{ color: '#10b981' }}>「互動探究模擬」</strong>。立即從下方智能搜尋感興趣的主題，或直接展開科目闖關！
+              不管你現在程度如何，照著下面 3 個步驟，每一課都能學會：
             </p>
+            <ol className="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2 mb-0 p-0" style={{ listStyle: 'none' }}>
+              {[
+                { n: '1', t: '看圖解課文', d: '先看白話解釋和圖解，看不懂可以按朗讀', c: 'var(--accent-primary)' },
+                { n: '2', t: '做四選一小測驗', d: '每題都有完整詳解，錯了也沒關係', c: '#7c3aed' },
+                { n: '3', t: '複習錯題本', d: '把錯的題目再做一次，直到全對', c: '#10b981' }
+              ].map(step => (
+                <li key={step.n} className="flex items-start gap-2 p-2.5 rounded-xl" style={{ backgroundColor: 'var(--bg-tertiary)', border: '1px solid var(--border-light)' }}>
+                  <span className="flex items-center justify-center font-black text-white rounded-full flex-shrink-0" style={{ width: 26, height: 26, backgroundColor: step.c, fontSize: '0.9rem' }}>{step.n}</span>
+                  <span className="min-w-0">
+                    <strong className="block text-sm" style={{ color: 'var(--text-primary)' }}>{step.t}</strong>
+                    <span className="block text-xs text-secondary leading-relaxed">{step.d}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
 
-            {/* Quick Fast Jump Action Buttons */}
-            <div className="flex flex-wrap gap-2.5 mt-4">
+            {/* Quick Fast Jump Action Buttons：手機兩欄等大按鈕，觸控範圍至少 44px */}
+            <div className="hero-actions grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 mt-4">
               {/* 🎮 學習遊戲 (全科闖關＆課本參考書) */}
               <Link
                 to="/duolingo?play=1"
@@ -149,7 +164,7 @@ const HomePage = () => {
                   textDecoration: 'none'
                 }}
               >
-                <span>🎮 學習遊戲 (108課綱全科闖關＆課本參考書)</span>
+                <span>🎮 學習遊戲闖關</span>
               </Link>
 
               {/* ⚡ 快速測驗選單 (上下學期 × 科目 × 期中/期末) */}
@@ -170,7 +185,7 @@ const HomePage = () => {
                 }}
               >
                 <Zap size={14} className="fill-white" />
-                <span>⚡ 快速段考測驗選單 (6上/6下・期中/期末)</span>
+                <span>⚡ 段考小測驗</span>
               </button>
 
               {/* 🎯 智能主題探索快捷鍵 */}
@@ -187,7 +202,7 @@ const HomePage = () => {
                 }}
               >
                 <Sparkles size={14} />
-                <span>🎯 探索感興趣主題</span>
+                <span>🎯 找有興趣的主題</span>
               </button>
 
               <button
@@ -223,7 +238,7 @@ const HomePage = () => {
                 }}
               >
                 <Lightbulb size={14} className="animate-pulse" />
-                <span>💡 視覺知識圖鑑 (192微考點)</span>
+                <span>💡 知識點圖解卡</span>
               </button>
 
               <button
@@ -239,7 +254,7 @@ const HomePage = () => {
                 }}
               >
                 <Download size={14} />
-                <span>📑 下載章節講義 (57份PDF)</span>
+                <span>📑 下載講義 PDF</span>
               </button>
 
               <Link
@@ -423,11 +438,11 @@ const HomePage = () => {
                   192 微知識點
                 </span>
                 <span className="badge badge-success text-[11px] font-bold">
-                  純向量 Infographics
+                  圖解卡
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-secondary m-0 mt-1 max-w-2xl leading-relaxed">
-                八大學科 64 單元深度教研解構・每個知識點皆具備<strong>明確定義原理</strong>、<strong>核心心法公式</strong>、<strong>避雷防錯警訊</strong>、<strong>生活實用性</strong>與<strong>高對比純向量 SVG 資訊圖表</strong>！
+                八大學科 64 單元，每個知識點都有<strong>白話解釋</strong>、<strong>生活例子</strong>、<strong>重點規則</strong>、<strong>易錯提醒</strong>和<strong>一張圖解卡</strong>，看不懂的地方還能按「朗讀」聽一遍！
               </p>
             </div>
           </div>
@@ -464,8 +479,8 @@ const HomePage = () => {
           <div>
             <div className="flex items-center gap-2">
               <span className="badge badge-accent font-bold">系統課綱</span>
-              <h2 className="h2" style={{ margin: 0, fontSize: '1.4rem', whiteSpace: 'nowrap' }}>
-                📖 八大學科學習領域・直覺闖關入口
+              <h2 className="h2" style={{ margin: 0, fontSize: '1.4rem' }}>
+                📖 八大學科・選一科開始學
               </h2>
             </div>
             <p className="text-xs text-secondary mt-1 mb-0">

@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import MathText from '../components/common/MathText';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import katex from 'katex';
 import { coursesData } from '../data/courses';
@@ -380,7 +381,7 @@ const ExamReviewNotesPage = () => {
 
       ${n.coreMentalModel ? `
         <div style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border: 1.5px solid #ddd6fe; border-left: 4px solid #7c3aed; border-radius: 6px; padding: 8px 12px; margin-bottom: 12px; font-size: 11.5px; line-height: 1.5;">
-          <strong style="color: #6d28d9;">🧠 本單元核心心智模型與直觀生活比喻：</strong>
+          <strong style="color: #6d28d9;">🧠 這一課最重要的想法與生活比喻：</strong>
           <span style="color: #374151;">${n.coreMentalModel}</span>
         </div>
       ` : ''}
@@ -958,7 +959,7 @@ const ExamReviewNotesPage = () => {
                       <div className="mental-model-callout">
                         <div className="mental-model-badge">
                           <Sparkles size={12} />
-                          <span>🧠 核心心智模型</span>
+                          <span>🧠 最重要的想法</span>
                         </div>
                         <div className="mental-model-content">
                           <strong>直觀建構：</strong>{note.coreMentalModel}
@@ -1140,7 +1141,7 @@ const ExamReviewNotesPage = () => {
                             <span className="version-dot"></span>
                             <span>🟢 康軒版 (Kang Hsuan)</span>
                           </div>
-                          <p className="version-card-text">{note.versionFocus.kangHsuan}</p>
+                          <p className="version-card-text"><MathText text={note.versionFocus.kangHsuan} /></p>
                         </div>
 
                         <div className="version-card version-card-hl">
@@ -1148,7 +1149,7 @@ const ExamReviewNotesPage = () => {
                             <span className="version-dot"></span>
                             <span>🔵 翰林版 (Han Lin)</span>
                           </div>
-                          <p className="version-card-text">{note.versionFocus.hanLin}</p>
+                          <p className="version-card-text"><MathText text={note.versionFocus.hanLin} /></p>
                         </div>
 
                         <div className="version-card version-card-ni">
@@ -1156,7 +1157,7 @@ const ExamReviewNotesPage = () => {
                             <span className="version-dot"></span>
                             <span>🟣 南一版 (Nan I)</span>
                           </div>
-                          <p className="version-card-text">{note.versionFocus.nanI}</p>
+                          <p className="version-card-text"><MathText text={note.versionFocus.nanI} /></p>
                         </div>
                       </div>
                     </div>
@@ -1231,7 +1232,7 @@ const ExamReviewNotesPage = () => {
                                     />
                                     {f.detail && (
                                       <div className="formula-detail">
-                                        💡 <strong>解題應用：</strong>{f.detail}
+                                        💡 <strong>解題應用：</strong><MathText text={f.detail} />
                                       </div>
                                     )}
                                   </div>
@@ -1465,7 +1466,7 @@ const ExamReviewNotesPage = () => {
                                 onChange={() => {}}
                               />
                               <span className={`checklist-text ${isChecked ? 'checked' : ''}`}>
-                                {item}
+                                <MathText text={item} />
                               </span>
                             </label>
                           );

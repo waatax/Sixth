@@ -25,7 +25,6 @@ import {
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import { interactiveLabsList } from '../../data/interactiveLabsData';
-import { knowledgePointsData } from '../../data/knowledgePoints';
 import SubjectIconBadge from './SubjectIconBadge';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
@@ -111,6 +110,13 @@ export const GlobalCommandPalette = () => {
     }
   }, [isOpen]);
 
+  // 知識點資料較大，第一次打開搜尋時才載入
+  const [knowledgePointsData, setKnowledgePointsData] = useState([]);
+  useEffect(() => {
+    if (!isOpen || knowledgePointsData.length) return;
+    import('../../data/knowledgePoints').then(m => setKnowledgePointsData(m.knowledgePointsData));
+  }, [isOpen, knowledgePointsData.length]);
+
   // Build searchable items catalogue
   const allSearchItems = useMemo(() => {
     const list = [];
@@ -193,9 +199,9 @@ export const GlobalCommandPalette = () => {
       type: 'tool',
       category: 'tools',
       title: '💡 108 課綱視覺知識庫與微知識點圖鑑 (192 考點全解)',
-      subtitle: '全科高清純向量 SVG 資訊圖表、核心算理、防雷避坑與生活實用性',
-      desc: '全科 192 個微知識點純向量資訊圖卡圖鑑',
-      badge: '純向量',
+      subtitle: '每個知識點都有白話解釋、例子、重點規則和易錯提醒',
+      desc: '全科 192 個知識點圖解卡',
+      badge: '圖解',
       toolIcon: Lightbulb,
       subjectColor: '#f59e0b',
       action: () => window.dispatchEvent(new CustomEvent('open_knowledge_hub')),
@@ -220,7 +226,7 @@ export const GlobalCommandPalette = () => {
     });
 
     return list;
-  }, []);
+  }, [knowledgePointsData]);
 
   // Filter items based on query and selectedCategory
   const filteredResults = useMemo(() => {

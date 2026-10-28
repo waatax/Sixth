@@ -168,7 +168,7 @@ const LessonPulseCheck = ({ unitId, unitTitle = '', keyConcepts = [] }) => {
           <Zap size={15} className="fill-amber-500" />
           <span>⚡ 5秒概念脈搏快測 (Concept Pulse Check)</span>
         </div>
-        <span className="badge badge-accent text-[10px]">即時多巴胺反饋</span>
+        <span className="badge badge-accent text-[10px]">馬上知道對不對</span>
       </div>
 
       <div className="text-sm font-bold text-slate-800 dark:text-slate-200 mb-3">

@@ -1,5 +1,12 @@
+/* 圖層順序：Tailwind theme → 舊版工具類 → Tailwind utilities；未分層的元件與護眼覆寫樣式優先於全部圖層 */
+@layer theme, legacy, utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Fira+Code:wght@400;500&display=swap');
 @import 'katex/dist/katex.min.css';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+/* 深色模式跟隨 ThemeContext 設定的 data-theme，而非系統偏好 */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 /* ==========================================================================
    1. Eye-Care Color Tokens & Theme System (Light, Dark, Sepia)
@@ -251,6 +258,8 @@ html {
   font-size: calc(16px * var(--font-scale));
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
+  /* clip 連程式捲動也擋下，避免寬元素把整頁推向左右 */
+  overflow-x: clip;
 }
 
 body {
@@ -264,6 +273,7 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Scrollbar Customization */
@@ -345,10 +355,13 @@ img {
   color: var(--text-primary);
 }
 
+/* 舊版字級工具類放在 legacy 層 */
+@layer legacy {
 .text-lg { font-size: 1.125rem; }
 .text-base { font-size: 1rem; }
 .text-sm { font-size: 0.875rem; }
 .text-xs { font-size: 0.75rem; }
+}
 
 .text-secondary { color: var(--text-secondary); }
 .text-tertiary { color: var(--text-tertiary); }
@@ -365,6 +378,8 @@ img {
   padding: 0 24px;
 }
 
+/* 舊版手寫工具類放在 legacy 層：Tailwind 的響應式寫法 (sm:/md:/lg:) 才能正確覆蓋 */
+@layer legacy {
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
@@ -477,6 +492,7 @@ img {
   .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .lg\:grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
 }
+}
 
 /* Universal Eye-Care Compatibility & Rounded Utilities */
 .bg-white {
@@ -534,6 +550,29 @@ img {
   box-shadow: var(--shadow-lg) !important;
 }
 
+
+/* 首頁快速入口按鈕：大小一致、好點擊 */
+.hero-actions > * {
+  min-height: 44px;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.875rem !important;
+  padding: 10px 14px !important;
+  border-radius: var(--radius-md) !important;
+}
+@media (max-width: 639px) {
+  /* 已有表情符號，手機上省略重複的線條圖示，讓文字一行放得下 */
+  .hero-actions > * > svg { display: none; }
+}
+
+/* 手機上可左右滑動的分頁列：本身不超出父容器 */
+.mobile-scroll-row {
+  max-width: 100%;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+}
+.mobile-scroll-row::-webkit-scrollbar { display: none; }
 
 /* ==========================================================================
    5. UI Components: Cards, Buttons, Badges, Modals

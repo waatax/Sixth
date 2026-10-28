@@ -1,5 +1,6 @@
+import { balanceDeep } from '../utils/balanceOptions.js';
 // TikTok / Shorts-Style Micro-Learning Data for 6th Grade & Junior High Prep (18 Reels Full Coverage)
-export const shortsReelsData = [
+const rawShortsReelsData = [
   {
     id: 'reel-math-1',
     subject: 'math',
@@ -473,3 +474,6 @@ export const shortsReelsData = [
     tags: ['#國中數學先修', '#等量公理', '#一元一次方程式', '#移項法則']
   }
 ];
+
+// 四選一正確答案位置平衡（避免答案集中在同一個選項）
+export const shortsReelsData = balanceDeep(rawShortsReelsData);

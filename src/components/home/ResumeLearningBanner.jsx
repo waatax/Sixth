@@ -89,7 +89,7 @@ export const ResumeLearningBanner = () => {
     >
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         {/* Left Section: Subject Badge + Unit Details */}
-        <div className="flex items-start sm:items-center gap-3.5 flex-1 min-w-0">
+        <div className="flex items-start sm:items-center gap-3.5 flex-1 min-w-0 w-full md:w-auto">
           <div className="flex-shrink-0">
             <SubjectIconBadge id={subject.id} size="md" />
           </div>
