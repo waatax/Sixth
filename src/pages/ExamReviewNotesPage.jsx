@@ -615,7 +615,7 @@ const ExamReviewNotesPage = () => {
       <div className="notes-hero-banner">
         <div className="flex items-center gap-2 mb-2">
           <Link to="/" className="text-xs text-secondary hover:text-primary flex items-center gap-1">
-            <ArrowLeft size={13} /> 返回首頁
+            <ArrowLeft size={13} /> 返回 Sixth 主頁
           </Link>
           <span className="text-xs text-tertiary">/</span>
           <span className="text-xs text-secondary font-bold">教科書考前筆記大複習</span>

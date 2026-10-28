@@ -228,7 +228,7 @@ const ShortsReelsPage = () => {
       {/* Top Header & Breadcrumb */}
       <div className="flex justify-between items-center px-1">
         <Link to="/" className="flex items-center gap-1.5 text-xs text-secondary hover:text-primary transition-colors">
-          <ArrowLeft size={15} /> 返回首頁
+          <ArrowLeft size={15} /> 返回 Sixth 主頁
         </Link>
         <div className="flex items-center gap-2">
           <span className="badge badge-accent text-[11px] font-bold">

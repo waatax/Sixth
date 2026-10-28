@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 console.log('========================================================================');
-console.log('🚀 最強小六 (Sixth) 全維度 16 層品質、108課綱全版本、Duolingo 與快速段考測驗檢驗矩陣');
+console.log('🚀 最強小六 (Sixth) 全維度 17 層品質、108課綱全版本、Duolingo 與小六四選一測驗導航檢驗矩陣');
 console.log('========================================================================\n');
 
 const results = [];
@@ -207,10 +207,10 @@ let buildSuccess = false;
 let buildTime = '0s';
 try {
   const buildOut = execSync('npm run build', { cwd: rootDir, encoding: 'utf8' });
-  const timeMatch = buildOut.match(/✓ built in ([\d\.]+s)/);
+  const timeMatch = buildOut.match(/✓ built in ([\d.]+s)/);
   if (timeMatch) buildTime = timeMatch[1];
   buildSuccess = true;
-} catch (e) {
+} catch (_e) {
   buildSuccess = false;
 }
 
@@ -229,7 +229,7 @@ try {
   const lintOut = execSync('npm run lint', { cwd: rootDir, encoding: 'utf8' });
   const m = lintOut.match(/Found \d+ warnings and (\d+) errors/);
   if (m) lintErrors = parseInt(m[1], 10);
-} catch (e) {
+} catch (_e) {
   lintErrors = 1;
 }
 
@@ -541,6 +541,54 @@ results.push({
   result: (quickQuizModalExists && validQuizCombos === totalQuizCombos)
     ? `${validQuizCombos} / ${totalQuizCombos} 組段考範圍 (100% 零空缺可測)`
     : `${validQuizCombos} / ${totalQuizCombos} 組通過`
+});
+
+// ----------------------------------------------------
+// 17. 6年級四選一題型與導航無死角檢驗 (Grade 6 4-Choice Quiz & Root Navigation Matrix)
+// ----------------------------------------------------
+const { thousandQuestionsData } = await import('../src/data/questionBank/index.js');
+const { mockChallengesData } = await import('../src/data/mockChallengesData.js');
+
+let totalTestedQuestions = 0;
+let nonFourOptionCount = 0;
+let incompleteExpCount = 0;
+
+const allBanks = [quizData, thousandQuestionsData, mockChallengesData];
+for (const bank of allBanks) {
+  for (const list of Object.values(bank)) {
+    if (!Array.isArray(list)) continue;
+    for (const q of list) {
+      totalTestedQuestions++;
+      if (!q.options || q.options.length !== 4) nonFourOptionCount++;
+      if (!q.explanation || q.explanation.length < 15) incompleteExpCount++;
+    }
+  }
+}
+
+// 檢驗 src/ 底下 navigate(-1) 殘留度（確保全面導向 Sixth 主頁）
+let navigateMinusOneCount = 0;
+function scanNavigateMinusOne(dir) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      scanNavigateMinusOne(full);
+    } else if (/\.(jsx?|tsx?)$/.test(entry.name)) {
+      const code = fs.readFileSync(full, 'utf8');
+      const matches = code.match(/navigate\(\s*-1\s*\)/g);
+      if (matches) navigateMinusOneCount += matches.length;
+    }
+  }
+}
+scanNavigateMinusOne(path.join(rootDir, 'src'));
+
+results.push({
+  layer: '小六四選一與導航檢驗',
+  target: `全題庫 ${totalTestedQuestions.toLocaleString()} 道試題、src/ 程式碼導航`,
+  method: '四選項 (options===4) + 完整說明 (len≥15) + 0 處 navigate(-1) 殘留',
+  result: (nonFourOptionCount === 0 && incompleteExpCount === 0 && navigateMinusOneCount === 0)
+    ? `100% 四選一 (${totalTestedQuestions}題合格)、0 導航遺漏`
+    : `不合格 (非四選一: ${nonFourOptionCount}, 簡略解析: ${incompleteExpCount}, 舊導航: ${navigateMinusOneCount})`
 });
 
 // ----------------------------------------------------

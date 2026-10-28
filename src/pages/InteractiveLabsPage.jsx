@@ -147,7 +147,7 @@ const InteractiveLabsPage = () => {
       {/* Top Breadcrumb */}
       <div className="flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors">
-          <ArrowLeft size={16} /> 返回課程首頁
+          <ArrowLeft size={16} /> 返回 Sixth 主頁
         </Link>
         <span className="badge badge-accent font-bold text-xs">
           🔬 PhET 風格・動態互動探究實驗室

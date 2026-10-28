@@ -124,8 +124,8 @@ const SubjectPage = () => {
     <div className="flex flex-col gap-6 py-3 pb-16 animate-fade-in">
       {/* Top Breadcrumb */}
       <div>
-        <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors font-bold">
-          <ArrowLeft size={16} /> 返回八大學習領域首頁
+        <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors font-bold" title="返回 Sixth Project 主頁">
+          <ArrowLeft size={16} /> 返回 Sixth 主頁 (八大學習領域)
         </Link>
       </div>
 

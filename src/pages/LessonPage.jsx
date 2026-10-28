@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -895,12 +895,28 @@ const LessonPage = () => {
           borderRadius: 'var(--radius-lg)'
         }}
       >
-        <button 
-          className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors font-bold" 
-          onClick={() => navigate(-1)}
-        >
-          <ArrowLeft size={16} /> 返回單元列表
-        </button>
+        {/* Breadcrumb Navigation: Back to Sixth Home & Subject */}
+        <div className="flex items-center gap-2 text-sm text-secondary font-bold flex-wrap">
+          <button 
+            className="flex items-center gap-1.5 text-sm text-secondary hover:text-primary transition-colors font-bold cursor-pointer bg-transparent border-none p-0" 
+            onClick={() => navigate('/')}
+            title="返回 Sixth Project 主頁"
+          >
+            <ArrowLeft size={16} /> 返回 Sixth 主頁 (單元列表)
+          </button>
+          {currentSubject && (
+            <>
+              <span className="text-muted opacity-40">/</span>
+              <Link 
+                to={`/subject/${currentSubject.id}`} 
+                className="hover:text-primary transition-colors text-xs text-secondary font-semibold"
+                title={`查看 ${currentSubject.name} 單元總覽`}
+              >
+                {currentSubject.name}
+              </Link>
+            </>
+          )}
+        </div>
 
         {/* Center Badges & Quick Action Hub */}
         <div className="flex items-center gap-2 flex-wrap">

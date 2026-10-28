@@ -1,7 +1,9 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import { quizData } from '../data/quizData';
 import { 
+  ArrowLeft,
   FileText, 
   Download, 
   ExternalLink, 
@@ -128,6 +130,13 @@ const QuestionBankPage = () => {
 
   return (
     <div className="flex flex-col gap-6 py-4 max-w-5xl mx-auto pb-16">
+      {/* Top Navigation */}
+      <div>
+        <Link to="/" className="flex items-center gap-2 text-sm text-secondary hover:text-primary transition-colors font-bold" title="返回 Sixth Project 主頁">
+          <ArrowLeft size={16} /> 返回 Sixth 主頁 (考古題庫中心)
+        </Link>
+      </div>
+
       {/* Top Title Banner */}
       <div className="text-center max-w-3xl mx-auto">
         <span className="badge badge-accent mb-2" style={{ padding: '6px 14px', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
