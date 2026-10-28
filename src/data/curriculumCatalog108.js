@@ -895,6 +895,7 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
   const exercises = [];
   const kps = knowledgePoints.filter(k => k.unitId === unit.id);
   const primaryKp = kps[0] || {
+    id: `kp-${unit.id}-1`,
     title: unit.badge || unit.title,
     definition: unit.description,
     formulaOrRule: catalog.quickRescue,
@@ -902,42 +903,83 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
     strategyTip: catalog.textbooks.kangHsuan.focus
   };
 
+  // Helper to ensure exactly 4 options for standard 4-option MCQ
+  const ensureFourOptions = (opts, correctAns, seed) => {
+    let unique = Array.from(new Set(opts.filter(Boolean)));
+    if (!unique.includes(correctAns)) {
+      unique.unshift(correctAns);
+    }
+    const distractors = [
+      '以上皆非',
+      '條件不足無法判斷',
+      '忽略題目單位限制',
+      '顛倒先後運算順序',
+      '直接相加不考慮算理'
+    ];
+    let dIdx = 0;
+    while (unique.length < 4 && dIdx < distractors.length) {
+      if (!unique.includes(distractors[dIdx])) {
+        unique.push(distractors[dIdx]);
+      }
+      dIdx++;
+    }
+    if (unique.length > 4) {
+      // Keep correct answer and trim to 4
+      const others = unique.filter(o => o !== correctAns).slice(0, 3);
+      unique = [correctAns, ...others];
+    }
+    return deterministicShuffle(unique, seed);
+  };
+
   // Normalize quiz questions (handle both answerIndex and answer)
   const normalizedQs = (quizQuestions || []).map((q, idx) => {
     const ansIdx = typeof q.answerIndex === 'number' ? q.answerIndex : (typeof q.answer === 'number' ? q.answer : 0);
     const rawOpts = Array.isArray(q.options) && q.options.length > 0 ? q.options : ['選項 A', '選項 B', '選項 C', '選項 D'];
     const correctAns = rawOpts[ansIdx] ?? rawOpts[0];
+    const cleanedCorrect = cleanLatexText(correctAns);
+    const fourOptions = ensureFourOptions(rawOpts.map(o => cleanLatexText(o)), cleanedCorrect, `${unit.id}-opt-${idx}`);
     return {
       ...q,
       idx,
       question: cleanLatexText(q.question),
-      options: rawOpts.map(o => cleanLatexText(o)),
-      correctAnswer: cleanLatexText(correctAns),
+      options: fourOptions,
+      correctAnswer: cleanedCorrect,
       explanation: cleanLatexText(q.explanation || catalog.quickRescue)
     };
   });
 
-  // 1. 🧩 步驟排序 / 語塊重組 (Word / Step Order Builder — 零斷詞)
-  exercises.push(buildUnitOrderExercise(unit, kps, catalog));
+  // 1. 🧩 步驟排序 / 語塊重組 (Word / Step Order Builder)
+  const orderEx = buildUnitOrderExercise(unit, kps, catalog);
+  orderEx.relatedKp = primaryKp;
+  orderEx.kpId = primaryKp.id;
+  orderEx.kpTitle = primaryKp.title;
+  exercises.push(orderEx);
 
   // 2. 🔗 觀念配對消消樂 (Matching Pairs)
-  exercises.push(buildUnitMatchingExercise(unit, normalizedQs, kps, catalog));
+  const matchEx = buildUnitMatchingExercise(unit, normalizedQs, kps, catalog);
+  matchEx.relatedKp = primaryKp;
+  matchEx.kpId = primaryKp.id;
+  matchEx.kpTitle = primaryKp.title;
+  exercises.push(matchEx);
 
-  // 3. ✍️ 實戰觀念填空挑戰 (Interactive Cloze — 優先採用真實考題轉換)
+  // 3. ✍️ 實戰觀念填空挑戰 (Interactive Cloze — 標準四選一單選題)
   if (normalizedQs.length > 0) {
     const qCloze = normalizedQs[normalizedQs.length > 3 ? 3 : 0];
-    const shuffledOpts = deterministicShuffle(qCloze.options, `${unit.id}-cloze`);
+    const clozeKp = kps[1] || primaryKp;
     exercises.push({
       id: `${unit.id}-ex-cloze`,
       type: 'cloze',
-      typeLabel: '✍️ 關鍵觀念填空',
-      sourceTag: '📙 講義核心考點填空',
-      prompt: `請選出正確答案填入空格，完成這道核心觀念題：`,
-      sentenceBefore: `${qCloze.question} 正確答案應為【`,
+      typeLabel: '✍️ 觀念填空 (四選一)',
+      sourceTag: '📙 核心考點填空選答',
+      prompt: `請選出正確答案填入空格，完成核心觀念題：`,
+      sentenceBefore: `${qCloze.question} 正確答案應填入【`,
       sentenceAfter: `】。`,
-      options: shuffledOpts,
+      options: qCloze.options,
       correctAnswer: qCloze.correctAnswer,
-      explanation: qCloze.explanation
+      explanation: qCloze.explanation,
+      relatedKp: clozeKp,
+      kpId: clozeKp.id,
+      kpTitle: clozeKp.title
     });
   } else {
     const keyTerm = cleanLatexText((unit.keyConcepts && unit.keyConcepts[0]) || unit.badge || '核心規則');
@@ -950,24 +992,26 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
     exercises.push({
       id: `${unit.id}-ex-cloze`,
       type: 'cloze',
-      typeLabel: '✍️ 關鍵觀念填空',
-      sourceTag: '📙 講義核心考點填空',
+      typeLabel: '✍️ 觀念填空 (四選一)',
+      sourceTag: '📙 核心考點填空選答',
       prompt: `請選出正確答案填入空格：`,
       sentenceBefore: `在「${unit.title}」單元中，最重要的核心考點是【`,
       sentenceAfter: `】。`,
       options: deterministicShuffle(rawOpts, `${unit.id}-cloze-fb`),
       correctAnswer: keyTerm,
-      explanation: cleanLatexText(catalog.quickRescue)
+      explanation: cleanLatexText(catalog.quickRescue),
+      relatedKp: primaryKp,
+      kpId: primaryKp.id,
+      kpTitle: primaryKp.title
     });
   }
 
-  // 4. ⚡ 迷思是非快判 (True/False Misconception Blitz — 包含真題與陷阱假題！)
+  // 4. ⚡ 迷思是非快判 (True/False Misconception Blitz)
   if (normalizedQs.length >= 2) {
     const qTrue = normalizedQs[0];
     const qFalse = normalizedQs[1];
     const wrongOpt = qFalse.options.find(o => o !== qFalse.correctAnswer) || qFalse.options[0];
 
-    // 4A: 錯誤迷思題 (correctBool: false) — 訓練學生揪出錯誤敘述！
     exercises.push({
       id: `${unit.id}-ex-tf-false`,
       type: 'true_false',
@@ -976,10 +1020,12 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
       prompt: `請判斷下列關於「${unit.badge || unit.title}」的敘述是否正確：`,
       statement: `題目：「${qFalse.question}」 ➔ 小明回答答案是「${wrongOpt}」，請問小明的回答是否正確？`,
       correctBool: false,
-      explanation: `這題應該選「❌ 觀念有誤」！正確答案其實是「${qFalse.correctAnswer}」。${qFalse.explanation}`
+      explanation: `這題應該選「❌ 觀念有誤」！正確答案其實是「${qFalse.correctAnswer}」。${qFalse.explanation}`,
+      relatedKp: kps[1] || primaryKp,
+      kpId: (kps[1] || primaryKp).id,
+      kpTitle: (kps[1] || primaryKp).title
     });
 
-    // 4B: 正確觀念題 (correctBool: true)
     exercises.push({
       id: `${unit.id}-ex-tf-true`,
       type: 'true_false',
@@ -988,7 +1034,10 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
       prompt: `請判斷下列解題結論是否正確：`,
       statement: `題目：「${qTrue.question}」 ➔ 標準答案是「${qTrue.correctAnswer}」。`,
       correctBool: true,
-      explanation: `完全正確（⭕）！${qTrue.explanation}`
+      explanation: `完全正確（⭕）！${qTrue.explanation}`,
+      relatedKp: kps[0] || primaryKp,
+      kpId: (kps[0] || primaryKp).id,
+      kpTitle: (kps[0] || primaryKp).title
     });
   } else {
     const trapText = cleanLatexText(primaryKp.trapAlert || catalog.referenceBooks.examTrap).replace(/⚠️/g, '').trim();
@@ -1000,25 +1049,31 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
       prompt: `請判斷下列關於「${unit.title}」的防雷敘述是否正確：`,
       statement: `${trapText}`,
       correctBool: true,
-      explanation: `完全正確（⭕）！牢記這條防雷守則就能避開段考常見陷阱。`
+      explanation: `完全正確（⭕）！牢記這條防雷守則就能避開段考常見陷阱。`,
+      relatedKp: primaryKp,
+      kpId: primaryKp.id,
+      kpTitle: primaryKp.title
     });
   }
 
-  // 5. 🎧 語音聽力與記憶辨識 (Audio Listening Challenge — 結合真實題庫語音作答)
+  // 5. 🎧 語音聽力挑戰 (四選一)
   if (normalizedQs.length > 0) {
     const qListen = normalizedQs[normalizedQs.length > 2 ? 2 : 0];
-    const listenOpts = deterministicShuffle(qListen.options, `${unit.id}-listen`);
+    const listenKp = kps[2] || primaryKp;
     exercises.push({
       id: `${unit.id}-ex-listening`,
       type: 'listening',
-      typeLabel: '🎧 語音聽力挑戰',
+      typeLabel: '🎧 語音聽力挑戰 (四選一)',
       sourceTag: '🔊 聽題辨析實戰',
-      prompt: `請點擊喇叭聆聽題目（或閱讀題幹），選出正確的答案：${qListen.question}`,
+      prompt: `請點擊喇叭聆聽題目，選出正確的答案：`,
       audioText: qListen.question,
       audioLang: unit.id.startsWith('eng-') ? 'en-US' : 'zh-TW',
-      options: listenOpts,
+      options: qListen.options,
       correctAnswer: qListen.correctAnswer,
-      explanation: qListen.explanation
+      explanation: qListen.explanation,
+      relatedKp: listenKp,
+      kpId: listenKp.id,
+      kpTitle: listenKp.title
     });
   } else {
     const speechText = unit.id.startsWith('eng-') || unit.id.startsWith('biling-')
@@ -1033,32 +1088,43 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
     exercises.push({
       id: `${unit.id}-ex-listening`,
       type: 'listening',
-      typeLabel: '🎧 語音聽力辨識',
+      typeLabel: '🎧 語音聽力辨識 (四選一)',
       sourceTag: '🔊 沉浸式語音伴學',
       prompt: `請點擊喇叭按鈕聆聽語音播報，選出你聽到的核心考點內容：`,
       audioText: speechText,
       audioLang: unit.id.startsWith('eng-') ? 'en-US' : 'zh-TW',
       options: deterministicShuffle(listenOptions, `${unit.id}-listen-fb`),
       correctAnswer: listenOptions[0],
-      explanation: `聽力正解：「${listenOptions[0]}」。`
+      explanation: `聽力正解：「${listenOptions[0]}」。`,
+      relatedKp: primaryKp,
+      kpId: primaryKp.id,
+      kpTitle: primaryKp.title
     });
   }
 
-  // 6. 🎯 經典參考書實戰選答 (Reference Book Challenge MCQ - 取自真實題庫並打亂選項順序)
+  // 6. 🎯 經典實戰選擇題 (四選一) — 涵蓋三大版本課本、自修評量與歷屆段考
   if (normalizedQs.length > 0) {
-    normalizedQs.slice(0, 6).forEach((q, qIdx) => {
-      const shuffledOptions = deterministicShuffle(q.options, `${unit.id}-mcq-${qIdx}`);
-      const newCorrectIndex = shuffledOptions.indexOf(q.correctAnswer);
+    // 提取最多 12 題真實選擇題，全面覆蓋四選一
+    normalizedQs.slice(0, 12).forEach((q, qIdx) => {
+      const assignedKp = kps.length > 0 ? kps[qIdx % kps.length] : primaryKp;
+      const newCorrectIndex = q.options.indexOf(q.correctAnswer);
       exercises.push({
         id: `${unit.id}-ex-mcq-${qIdx}`,
         type: 'mcq',
-        typeLabel: `🎯 實戰選擇題 #${qIdx + 1}`,
-        sourceTag: qIdx === 0 ? '📘 課本基礎必考題' : qIdx === 1 ? '📗 評量進階應用題' : '📕 段考素養壓軸題',
+        typeLabel: `🎯 實戰選擇題 (四選一) #${qIdx + 1}`,
+        sourceTag: qIdx < 3 
+          ? '📘 課本基礎題 (四選一)' 
+          : qIdx < 7 
+          ? '📗 評量進階題 (四選一)' 
+          : '📕 段考素養壓軸題 (四選一)',
         prompt: q.question,
-        options: shuffledOptions,
+        options: q.options,
         correctIndex: newCorrectIndex >= 0 ? newCorrectIndex : 0,
         correctAnswer: q.correctAnswer,
-        explanation: q.explanation
+        explanation: q.explanation,
+        relatedKp: assignedKp,
+        kpId: assignedKp.id,
+        kpTitle: assignedKp.title
       });
     });
   } else {
@@ -1073,13 +1139,16 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
     exercises.push({
       id: `${unit.id}-ex-mcq-fallback`,
       type: 'mcq',
-      typeLabel: '🎯 評量實戰選答',
-      sourceTag: '📗 學習評量必考題',
+      typeLabel: '🎯 評量實戰選擇題 (四選一)',
+      sourceTag: '📗 學習評量必考題 (四選一)',
       prompt: `在「${unit.title}」的段考命題中，下列哪一項是三大版本（康軒/南一/翰林）共同強調的核心考點？`,
       options: shuffledFallback,
       correctIndex: shuffledFallback.indexOf(ans),
       correctAnswer: ans,
-      explanation: cleanLatexText(catalog.quickRescue)
+      explanation: cleanLatexText(catalog.quickRescue),
+      relatedKp: primaryKp,
+      kpId: primaryKp.id,
+      kpTitle: primaryKp.title
     });
   }
 

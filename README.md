@@ -2,7 +2,7 @@
 > 最強小六 (Sixth) 原創數位學習研發核心團隊 × 5 位外聘跨領域教育專家 聯合研發・專為已被手機遊戲、短影音成癮之學童量身打造的「高互動・微學習・多巴胺正向回饋」全科教學與國中先修平台
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Online-emerald?style=for-the-badge&logo=github)](https://waatax.github.io/Sixth/)
-[![Version](https://img.shields.io/badge/Version-2.8.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
+[![Version](https://img.shields.io/badge/Version-2.9.0-brightgreen?style=for-the-badge)](https://waatax.github.io/Sixth/)
 [![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
 [![Vite 8](https://img.shields.io/badge/Vite-8-purple?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![108 Curriculum](https://img.shields.io/badge/108課綱-國小六年級全科+專業素養+國中先修-orange?style=for-the-badge)](https://waatax.github.io/Sixth/)
@@ -355,6 +355,29 @@ flowchart TD
 | **14. 108課綱全版本與參考書** | 基本5科+專業6科共 11 領域、76 單元 (6上:37 / 6下:39) | 檢驗 5 大課本版本對照 (康軒/南一/翰林/何嘉仁/全版本) + 4 大參考書系列 (自修/評量/講義/考卷) | **76 / 76 單元 (100% 完整編列)** |
 | **15. Duolingo 遊戲化學習引擎** | 76 座技能樹關卡、608 道多模態互動微練習 | 字塊拼圖 + 配對消消樂 + 重點填空 + 防雷是非 + 語音聽力 + 參考書選答 + 皇冠升級 | **76 / 76 關卡 (6大題型 100% 齊備)** |
 | **16. 快速段考測驗組卷矩陣** | 11大領域 × 2學期(6上/6下) × 2考期(期中/期末) = 44 種段考測驗組合 | QuickQuizMenuModal 全域啟動器 + MockExamPage 動態參數抽題檢驗 | **44 / 44 組段考範圍 (100% 零空缺可測)** |
+| **17. 向量圖解與四選一適配引擎** | 數學 36 個微考點專屬純向量 SVG 圖卡 + 手機全螢幕與直橫自適應 | 題目全面規範為標準四選一 (MCQ 4 options: A/B/C/D)・橫屏 50/50 雙欄零滑動・直屏手風琴展開 | **100% 覆蓋 (896 道四選一題目・36 數學圖解全覆蓋)** |
+
+---
+
+### 🎨 v2.9.0 旗艦更新：全科知識點純向量圖解、手機全螢幕與直式 / 橫式自動調適 UI/UX
+
+1. **各科目微知識點圖解與算理解析全覆蓋（特別強化數學科）**：
+   - 深入建置 6 年級數學 36 個微概念專屬高對比、純向量 SVG 圖表（質因數分解、短除法 L 型、兩數乘積天平、分數倒數分割、生活分裝餘數真實換算、小數直式除法雙軌對齊、正比射線、扇形弧長與周長防雷 +2r、正方形內葉形 0.57 秒殺圖、圓環平方差提取、往返平均速率陷阱、柱體表面積展開圖、空心水泥管、比例尺刪0秘笈、雞兔同籠假設法、代數移項變號心法、圓形圖 1%=3.6° 等）。
+   - 每個題目與關卡均綁定微知識點，隨時可一鍵查看 5 維解構（定義、算理公式、段考防雷、解題技巧）。
+
+2. **手機全螢幕 (Fullscreen) 與直式 (Portrait) / 橫式 (Landscape) 智慧調適**：
+   - **一鍵全螢幕**：整合 HTML5 Fullscreen API (`requestFullscreen` / `exitFullscreen`)，適配行動裝置安全視口 (`100dvh`)。
+   - **橫屏 (Landscape) 50/50 雙欄無遮擋佈局**：
+     - 左欄：題幹、吉祥物、聽力播放、即時嵌入式純向量 SVG 知識點圖解與算理速記條。
+     - 右欄：標準四選一選項卡片 (A, B, C, D) 與內嵌式 Action Bar (檢查答案 / 繼續)。
+     - **手機橫拿時零垂直滾動，題目、圖表、選項與按鈕一覽無遺！**
+   - **直屏 (Portrait) 流暢縱向卡片**：
+     - 題目下方配備「💡 查看本題微知識點圖示與算理解釋」手風琴按鈕，點擊順暢展開向量圖卡與五維解析。
+
+3. **題目主幹全面規範為標準「四選一 (四選一，A, B, C, D)」**：
+   - 全單元 1,152 道練習題目中，選擇題型（MCQ、觀念填空、聽力辨析）全面規範為標準 4 個選項。
+   - 選項標籤清晰標示 `[A]`, `[B]`, `[C]`, `[D]`，並支援鍵盤 `1~4` 與 `A~D` 瞬發作答。
+
 
 ---
 
