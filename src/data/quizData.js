@@ -6,6 +6,7 @@ import { mockChallengesData } from './mockChallengesData.js';
 import { thousandQuestionsData } from './questionBank/index.js';
 import { balanceQuestionList } from '../utils/balanceOptions.js';
 import { explanationEnrichments } from './explanationEnrichments.js';
+import { getExpansionQuestions } from './expansion/index.js';
 
 const baseQuizData = {
   // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2082,9 +2083,10 @@ Object.keys(thousandQuestionsData).forEach(unitId => {
   }
 });
 
+// 每單元再加 3 題「延伸應用」練習（對應第 4 個知識點），全庫達 1,600 題
 // 四選一正確答案位置平衡：原始題庫約 80% 答案在 (A)，平衡後 A~D 各約 25%
 Object.keys(quizData).forEach(unitId => {
-  quizData[unitId] = balanceQuestionList(quizData[unitId].map(q => {
+  quizData[unitId] = balanceQuestionList([...quizData[unitId], ...getExpansionQuestions(unitId)].map(q => {
     const rich = explanationEnrichments[`${unitId}|${q.id}`];
     return rich ? { ...q, explanation: rich } : q;
   }));

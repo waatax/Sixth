@@ -163,12 +163,13 @@ const QuizPage = () => {
     currentSubjectName = '重點單元';
   }
 
-  // Quiz Mode: 'all' | 'representative' | 'foundation' | 'challenge'
+  // Quiz Mode: 'all' | 'representative' | 'foundation' | 'expansion' | 'challenge'
   const urlMode = searchParams.get('mode');
   const [quizMode, setQuizMode] = useState(
-    urlMode === 'challenge' ? 'challenge' : 
-    urlMode === 'representative' ? 'representative' : 
-    urlMode === 'foundation' ? 'foundation' : 'all'
+    urlMode === 'challenge' ? 'challenge' :
+    urlMode === 'representative' ? 'representative' :
+    urlMode === 'foundation' ? 'foundation' :
+    urlMode === 'expansion' ? 'expansion' : 'all'
   );
 
   const allQuestions = useMemo(() => quizData[unitId] || [], [unitId]);
@@ -183,7 +184,11 @@ const QuizPage = () => {
       return list.length > 0 ? list : allQuestions;
     }
     if (quizMode === 'foundation') {
-      const list = allQuestions.filter(q => !q.isMockChallenge && !q.isRepresentative);
+      const list = allQuestions.filter(q => !q.isMockChallenge && !q.isRepresentative && !q.isExpansion);
+      return list.length > 0 ? list : allQuestions;
+    }
+    if (quizMode === 'expansion') {
+      const list = allQuestions.filter(q => q.isExpansion);
       return list.length > 0 ? list : allQuestions;
     }
     return allQuestions;
@@ -681,7 +686,14 @@ const QuizPage = () => {
           className={`btn-pill text-xs font-bold ${quizMode === 'foundation' ? 'active' : ''}`}
           onClick={() => changeMode('foundation')}
         >
-          📝 基礎核心驗收 ({allQuestions.filter(q => !q.isMockChallenge && !q.isRepresentative).length || 4}題)
+          📝 基礎核心驗收 ({allQuestions.filter(q => !q.isMockChallenge && !q.isRepresentative && !q.isExpansion).length || 4}題)
+        </button>
+        <button
+          className={`btn-pill text-xs font-bold ${quizMode === 'expansion' ? 'active' : ''}`}
+          onClick={() => changeMode('expansion')}
+          style={quizMode === 'expansion' ? { backgroundColor: '#7c3aed', color: '#fff', borderColor: '#7c3aed' } : {}}
+        >
+          🌱 延伸應用 ({allQuestions.filter(q => q.isExpansion).length || 3}題)
         </button>
         <button
           className={`btn-pill text-xs font-bold ${quizMode === 'challenge' ? 'active' : ''}`}
@@ -733,7 +745,7 @@ const QuizPage = () => {
               border: quizMode === 'challenge' ? '1px solid rgba(255, 149, 0, 0.3)' : quizMode === 'representative' ? '1px solid rgba(59, 130, 246, 0.3)' : undefined
             }}
           >
-            {quizMode === 'challenge' ? '⚔️ 單元模擬挑戰・會考素養' : quizMode === 'representative' ? '📘 課綱精選代表題・實戰衝刺' : quizMode === 'foundation' ? '✏️ 單元重點測驗・基礎驗收' : '🏆 全單元大滿貫測驗'}
+            {quizMode === 'challenge' ? '⚔️ 單元模擬挑戰・會考素養' : quizMode === 'representative' ? '📘 課綱精選代表題・實戰衝刺' : quizMode === 'foundation' ? '✏️ 單元重點測驗・基礎驗收' : quizMode === 'expansion' ? '🌱 延伸應用・生活中用得到' : '🏆 全單元大滿貫測驗'}
           </span>
 
           <div className="flex items-center gap-2 flex-wrap justify-end">

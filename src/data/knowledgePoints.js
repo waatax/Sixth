@@ -1,10 +1,11 @@
 // 🎓 最強小六 (Sixth) 2026 旗艦版・108 課綱全科 64 單元【明確微知識點旗艦數據庫】
-// 涵蓋 8 大學科領域、64 個教學單元、192 個明確微概念知識點 (Micro-Knowledge Points)
+// 涵蓋 8 大學科領域、64 個教學單元、256 個明確微概念知識點（每單元 3 個基礎重點 + 1 個延伸應用）
 // 每個知識點均具備：明確定義、核心公式/規律、破題攻略、防雷避坑、生活實用性、專屬 Infographic 與四維關聯知識點拓撲網絡
 
 import { applyKidOverlay } from './knowledgePointsKid/index.js';
+import { appendExpansionPoints } from './expansion/index.js';
 
-export const knowledgePointsData = applyKidOverlay([
+export const knowledgePointsData = appendExpansionPoints(applyKidOverlay([
   {
     "id": "kp-math-u1-1",
     "pointIndex": 0,
@@ -11951,7 +11952,7 @@ export const knowledgePointsData = applyKidOverlay([
       }
     ]
   }
-]);
+]));
 
 // 依照單元 ID 查詢知識點清單
 export function getKnowledgePointsByUnit(unitId) {

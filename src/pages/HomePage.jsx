@@ -411,7 +411,7 @@ const HomePage = () => {
       </div>
 
       {/* ============================================================ */}
-      {/* 💡 1.9 全科視覺知識庫與 192 微知識點純向量 Infographics 圖鑑 */}
+      {/* 💡 1.9 全科視覺知識庫與 256 微知識點純向量 Infographics 圖鑑 */}
       {/* ============================================================ */}
       <div 
         className="card mb-6 p-4 sm:p-5 relative overflow-hidden"
@@ -435,7 +435,7 @@ const HomePage = () => {
                   💡 108 課綱全科視覺知識庫與微知識點圖鑑
                 </span>
                 <span className="badge badge-accent text-[11px] font-bold">
-                  192 微知識點
+                  256 微知識點
                 </span>
                 <span className="badge badge-success text-[11px] font-bold">
                   圖解卡

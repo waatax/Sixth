@@ -111,7 +111,7 @@ const Header = () => {
     {
       title: '💡 視覺圖鑑與微知識點',
       items: [
-        { path: '#knowledge-hub', label: '視覺知識庫・微知識點圖鑑 (192考點)', icon: Lightbulb, badge: '圖解', color: '#f59e0b', isCustomHub: true },
+        { path: '#knowledge-hub', label: '視覺知識庫・微知識點圖鑑 (256考點)', icon: Lightbulb, badge: '圖解', color: '#f59e0b', isCustomHub: true },
       ]
     },
     {
@@ -325,7 +325,7 @@ const Header = () => {
                 whiteSpace: 'nowrap',
                 flexShrink: 0
               }}
-              title="108 課綱全科 192 個知識點圖解卡"
+              title="108 課綱全科 256 個知識點圖解卡"
             >
               <Lightbulb size={15} style={{ color: '#f59e0b' }} />
               <span>知識圖鑑</span>

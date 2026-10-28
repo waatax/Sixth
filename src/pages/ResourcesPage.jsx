@@ -189,10 +189,10 @@ const ResourcesPage = () => {
               color: '#ffffff',
               borderColor: '#2563eb'
             }}
-            title="開啟 108 課綱六年級全科 192 個微考點全景視覺圖鑑庫"
+            title="開啟 108 課綱六年級全科 256 個微考點全景視覺圖鑑庫"
           >
             <Lightbulb size={16} className="text-amber-300 animate-pulse" />
-            <span>💡 視覺知識圖鑑庫 (192微考點)</span>
+            <span>💡 視覺知識圖鑑庫 (256微考點)</span>
           </button>
           <button
             className={`btn-outline flex items-center gap-2 text-sm ${showOnlyFavorites ? 'active' : ''}`}

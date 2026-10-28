@@ -37,7 +37,7 @@ import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/sou
 
 /**
  * 💡 全域視覺知識庫與微知識點圖鑑 (Visual Knowledge Hub & Infographics Explorer)
- * 深度整合 108 課綱六年級 8 大領域、64 單元、192 個核心微知識點與純向量 SVG 資訊圖表
+ * 深度整合 108 課綱六年級 8 大領域、64 單元、256 個核心微知識點與純向量 SVG 資訊圖表
  * 具備：五維知識架構抽屜、雙軌向量圖表切換、舒眼暖色溫模式、全景燈箱、一鍵下載與鍵盤快捷導航
  */
 const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', initialUnitId = null, initialKpId = null }) => {
@@ -311,7 +311,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                   108 課綱全科視覺知識庫與微知識點圖鑑
                 </h2>
                 <span className="badge badge-accent text-[11px] font-bold px-2 py-0.5">
-                  192 微考點全覆蓋
+                  {knowledgePointsData.length} 個知識點全覆蓋
                 </span>
                 <span className="badge badge-success text-[11px] font-bold px-2 py-0.5">
                   圖解卡
@@ -347,11 +347,11 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                 : 'bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200'
             }`}>
               <CheckCircle2 size={15} className="text-emerald-500" />
-              <span>掌握：{Object.values(masteredPoints).filter(Boolean).length} / 192</span>
+              <span>掌握：{Object.values(masteredPoints).filter(Boolean).length} / {knowledgePointsData.length}</span>
               <div className="w-14 h-2 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden ml-1">
                 <div 
                   className="h-full bg-emerald-500 rounded-full transition-all duration-300"
-                  style={{ width: `${Math.round((Object.values(masteredPoints).filter(Boolean).length / 192) * 100)}%` }}
+                  style={{ width: `${Math.round((Object.values(masteredPoints).filter(Boolean).length / knowledgePointsData.length) * 100)}%` }}
                 />
               </div>
             </div>
@@ -382,7 +382,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700'
               }`}
             >
-              🌟 全科 (192)
+              🌟 全科 ({knowledgePointsData.length})
             </button>
             {coursesData.subjects.map(sub => {
               const subCount = knowledgePointsData.filter(kp => kp.subjectId === sub.id).length;
@@ -528,7 +528,7 @@ const VisualKnowledgeHubModal = ({ isOpen, onClose, initialSubject = 'all', init
               <span>共 <strong>{filteredPoints.length}</strong> 個精選微知識點</span>
               <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-bold">
                 <CheckCircle2 size={13} />
-                掌握 {Object.values(masteredPoints).filter(Boolean).length} / 192
+                掌握 {Object.values(masteredPoints).filter(Boolean).length} / {knowledgePointsData.length}
               </span>
             </div>
 

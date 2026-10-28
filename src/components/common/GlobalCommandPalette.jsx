@@ -193,14 +193,14 @@ export const GlobalCommandPalette = () => {
       });
     });
 
-    // 5. 108 課綱 192 個微知識點全量索引
+    // 5. 108 課綱 256 個微知識點全量索引
     list.push({
       id: 'tool-knowledge-hub-entry',
       type: 'tool',
       category: 'tools',
-      title: '💡 108 課綱視覺知識庫與微知識點圖鑑 (192 考點全解)',
+      title: '💡 108 課綱視覺知識庫與微知識點圖鑑 (256 考點全解)',
       subtitle: '每個知識點都有白話解釋、例子、重點規則和易錯提醒',
-      desc: '全科 192 個知識點圖解卡',
+      desc: '全科 256 個知識點圖解卡',
       badge: '圖解',
       toolIcon: Lightbulb,
       subjectColor: '#f59e0b',
@@ -441,7 +441,7 @@ export const GlobalCommandPalette = () => {
         >
           {[
             { id: 'all', label: `全部 (${filteredResults.length})` },
-            { id: 'kpoints', label: '💡 微知識點 (192)' },
+            { id: 'kpoints', label: '💡 微知識點 (256)' },
             { id: 'lessons', label: '🧮 課程單元 (64)' },
             { id: 'subjects', label: '📚 八大領域' },
             { id: 'labs', label: '🔬 互動實驗 (14)' },

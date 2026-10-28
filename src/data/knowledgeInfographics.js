@@ -415,15 +415,17 @@ function wrapSvgText(text, maxUnits, maxLines) {
   const lines = [];
   let line = '';
   let units = 0;
-  for (const ch of text) {
-    const w = /[\x00-\xff]/.test(ch) ? 0.55 : 1;
-    if (units + w > maxUnits) {
+  // 數字與英文單字（如 100、0.75、quarter）視為一整塊，不在中間斷行
+  const tokens = text.match(/[A-Za-z0-9.,%/:'-]+|[\s\S]/g) || [];
+  for (const token of tokens) {
+    const w = [...token].reduce((sum, ch) => sum + (/[\x00-\xff]/.test(ch) ? 0.55 : 1), 0);
+    if (units + w > maxUnits && line) {
       lines.push(line);
       line = '';
       units = 0;
       if (lines.length === maxLines) break;
     }
-    line += ch;
+    line += token;
     units += w;
   }
   if (lines.length < maxLines && line) lines.push(line);
