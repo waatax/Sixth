@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeLessonDisclosures from '../utils/rehypeLessonDisclosures';
 import confetti from 'canvas-confetti';
 import { 
   ArrowLeft, 
@@ -1868,7 +1869,7 @@ const LessonPage = () => {
 
           <ReactMarkdown
             remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[[rehypeKatex, { strict: false, throwOnError: false }]]}
+            rehypePlugins={[rehypeLessonDisclosures, [rehypeKatex, { strict: false, throwOnError: false }]]}
             components={{
               h2: ({ node, children, ...props }) => {
                 const rawText = extractTextFromNode(node) || String(children);

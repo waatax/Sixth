@@ -38,6 +38,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Verify learning content and speech regression
+        run: node scripts/verify-learning-upgrade.mjs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

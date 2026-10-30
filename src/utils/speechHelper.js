@@ -16,7 +16,8 @@ class SpeechEngine {
         if (stored) savedRate = parseFloat(stored) || 1.0;
       } catch (e) {}
     }
-    this.rate = savedRate;
+    this.rate = Math.min(1.5, Math.max(0.5, savedRate));
+    this.sequence = 0;
     this.listeners = new Set();
     this.voices = [];
 
@@ -64,6 +65,8 @@ class SpeechEngine {
     const chineseVoices = this.voices.filter(v => v.lang.startsWith('zh'));
     if (chineseVoices.length === 0) return null;
 
+    const taiwanVoice = chineseVoices.find(v => v.lang.toLowerCase() === 'zh-tw');
+    if (taiwanVoice) return taiwanVoice;
     const preferred = chineseVoices.find(v => 
       v.name.includes('Google') || 
       v.name.includes('Taiwan') ||
@@ -98,7 +101,7 @@ class SpeechEngine {
     if (!text) return '';
     // Strip markdown formatting, symbols, LaTeX math tags
     return text
-      .replace(/\$\\[a-zA-Z]+\{[^}]*\}\{([^}]*)\}\$/g, '$1') // e.g. $\textcolor{#fff}{\textbf{word}}$ -> word
+      .replace(/\\textcolor\{[^}]*\}\{([^{}]*)\}/g, '$1')
       // 數學式改成念得出來的中文，而不是整段略過（小六學生要聽得到數字）
       .replace(/\$([^$]*)\$/g, (_, tex) => tex
         .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '$2分之$1')
@@ -126,7 +129,7 @@ class SpeechEngine {
       id = null,
       rate = this.rate || 1.0,
       pitch = 1.0,
-      lang = 'en-US',
+      lang = /[\u3400-\u9fff]/.test(text) ? 'zh-TW' : 'en-US',
       onStart = null,
       onEnd = null,
       onError = null,
@@ -156,6 +159,7 @@ class SpeechEngine {
     this.notifyListeners();
 
     utterance.onstart = () => {
+      if (this.currentUtterance !== utterance) return;
       this.isPlaying = true;
       this.activeId = id;
       this.notifyListeners();
@@ -163,6 +167,7 @@ class SpeechEngine {
     };
 
     utterance.onend = () => {
+      if (this.currentUtterance !== utterance) return;
       this.isPlaying = false;
       this.activeId = null;
       this.currentUtterance = null;
@@ -171,6 +176,7 @@ class SpeechEngine {
     };
 
     utterance.onerror = (event) => {
+      if (this.currentUtterance !== utterance) return;
       // Don't treat user-cancelled speech as an application error
       if (event.error !== 'canceled' && event.error !== 'interrupted') {
         console.warn('SpeechSynthesis error:', event.error);
@@ -188,11 +194,31 @@ class SpeechEngine {
       console.error('Failed to trigger speech synthesis', e);
       this.isPlaying = false;
       this.activeId = null;
+      this.currentUtterance = null;
       this.notifyListeners();
+      if (onError) onError(e);
     }
   }
 
+  // Read mixed-language teaching material in order, with a voice for each segment.
+  speakMixed(text, options = {}) {
+    this.stop();
+    const sequence = this.sequence;
+    const parts = this.cleanText(text).match(/[A-Za-z]+(?:[A-Za-z0-9 ,.'’?!:;\/-]*[A-Za-z0-9.!?])?|[^A-Za-z]+/g) || [];
+    let index = 0;
+    const next = () => {
+      if (sequence !== this.sequence || index >= parts.length) return;
+      const part = parts[index++];
+      if (!part.trim()) return next();
+      this.speak(part, { ...options, interrupt: false,
+        lang: /[A-Za-z]/.test(part) ? 'en-US' : 'zh-TW', onEnd: next });
+    };
+    next();
+  }
+
   stop() {
+    this.sequence++;
+    this.currentUtterance = null;
     if (this.synth) {
       try {
         this.synth.cancel();
@@ -217,10 +243,10 @@ class SpeechEngine {
   }
 
   setRate(newRate) {
-    this.rate = newRate;
+    this.rate = Number.isFinite(Number(newRate)) ? Math.min(1.5, Math.max(0.5, Number(newRate))) : 1;
     if (typeof window !== 'undefined') {
       try {
-        localStorage.setItem('sixth_speech_rate', String(newRate));
+        localStorage.setItem('sixth_speech_rate', String(this.rate));
       } catch (e) {}
     }
     this.notifyListeners();

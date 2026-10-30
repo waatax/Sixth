@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import MathText from '../common/MathText';
+import LearningCoach, { questionSpeech } from './LearningCoach';
 import { createPortal } from 'react-dom';
 import {
   X,
@@ -81,6 +82,7 @@ const DuolingoLessonModal = ({
   const {
     unitCrowns = {},
     earnUnitCrown,
+    addXp,
     todayXp = 0,
     dailyXpGoal = 50,
     activePetTemplate
@@ -91,6 +93,7 @@ const DuolingoLessonModal = ({
   const [queue, setQueue] = useState([]);
   const [pos, setPos] = useState(0);
   const [retryMap, setRetryMap] = useState({});
+  const [unresolved, setUnresolved] = useState({});
 
   // Mobile Fullscreen & Orientation Adaptation States
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -103,6 +106,7 @@ const DuolingoLessonModal = ({
   const [selectedLeftPair, setSelectedLeftPair] = useState(null);
   const [selectedRightPair, setSelectedRightPair] = useState(null);
   const [wrongPairFlash, setWrongPairFlash] = useState(false);
+  const [pairExplanation, setPairExplanation] = useState('');
   const [selectedOption, setSelectedOption] = useState(null);
   const [feedbackState, setFeedbackState] = useState(null); // null | { isCorrect, message, correctText, detail, isRetryQueued }
   const [showHint, setShowHint] = useState(false);
@@ -112,6 +116,7 @@ const DuolingoLessonModal = ({
   const [maxCombo, setMaxCombo] = useState(0);
   const [firstTryCorrect, setFirstTryCorrect] = useState(0);
   const startTimeRef = useRef(Date.now());
+  const completionRef = useRef(false);
   const [elapsedSec, setElapsedSec] = useState(1);
 
   const catalog = useMemo(() => (unit ? unit.catalog || getUnitCompleteCatalog(unit) : null), [unit]);
@@ -228,6 +233,7 @@ const DuolingoLessonModal = ({
     setSelectedLeftPair(null);
     setSelectedRightPair(null);
     setWrongPairFlash(false);
+    setPairExplanation('');
     setSelectedOption(null);
     setFeedbackState(null);
     setShowHint(false);
@@ -243,6 +249,8 @@ const DuolingoLessonModal = ({
       setQueue(q.length > 0 ? q : allExercises.slice(0, 6));
       setPos(0);
       setRetryMap({});
+      setUnresolved({});
+      completionRef.current = false;
       resetInputs();
       setCombo(0);
       setMaxCombo(0);
@@ -259,6 +267,8 @@ const DuolingoLessonModal = ({
     setQueue(q.length > 0 ? q : allExercises.slice(0, 6));
     setPos(0);
     setRetryMap({});
+    setUnresolved({});
+    completionRef.current = false;
     resetInputs();
     setCombo(0);
     setMaxCombo(0);
@@ -325,7 +335,15 @@ const DuolingoLessonModal = ({
   };
 
   const commitResult = (isCorrect, correctText, explanationText) => {
-    const isFirstTry = pos < baseTotal;
+    speechEngine.stop();
+    explanationText = explanationText || activeKp?.definition || `請對照題目條件，正確答案為「${correctText}」。再讀一次本單元重點，說出答案符合哪個條件。`;
+    setUnresolved(previous => {
+      const next = { ...previous };
+      if (isCorrect) delete next[currentEx.id];
+      else next[currentEx.id] = true;
+      return next;
+    });
+    const isFirstTry = pos < baseTotal && !retryMap[currentEx.id];
     if (isCorrect) {
       const nextCombo = combo + 1;
       setCombo(nextCombo);
@@ -398,6 +416,8 @@ const DuolingoLessonModal = ({
   };
 
   const handleNextStep = () => {
+    if (phase !== 'feedback' || completionRef.current) return;
+    speechEngine.stop();
     if (pos + 1 < queue.length) {
       setPos((p) => p + 1);
       resetInputs();
@@ -405,12 +425,14 @@ const DuolingoLessonModal = ({
       playSound('ios_tap');
     } else {
       // Completed entire lesson!
+      completionRef.current = true;
       const sec = Math.max(1, Math.round((Date.now() - startTimeRef.current) / 1000));
       setElapsedSec(sec);
       const meta = STAGE_META[stageMode] || STAGE_META.lesson;
       const xpEarned = Math.round((meta.xpBase + maxCombo * 3) * meta.xpMultiplier);
       const coinsEarned = 20;
-      earnUnitCrown(unit.id, xpEarned, coinsEarned);
+      if (Object.keys(unresolved).length === 0) earnUnitCrown(unit.id, xpEarned, coinsEarned);
+      else addXp(Math.round(xpEarned / 2), `duolingo_practice_${unit.id}`);
       setPhase('done');
       playSound('levelup');
       confetti({
@@ -420,8 +442,8 @@ const DuolingoLessonModal = ({
       });
       const currentCrown = unitCrowns[unit.id] || 0;
       dispatchDynamicIsland({
-        title: `👑 皇冠升等！(${Math.min(5, currentCrown + 1)}/5)`,
-        subtitle: `${unit.badge || unit.title} 完成 +${xpEarned} XP`,
+        title: Object.keys(unresolved).length ? '🌱 完成練習，再接再厲！' : `👑 皇冠升等！(${Math.min(5, currentCrown + 1)}/5)`,
+        subtitle: `${unit.badge || unit.title} 完成 +${Object.keys(unresolved).length ? Math.round(xpEarned / 2) : xpEarned} XP`,
         icon: '🦉'
       });
     }
@@ -429,7 +451,8 @@ const DuolingoLessonModal = ({
 
   // Handle Matching Pairs selection
   const handleSelectPairItem = (side, pairObj) => {
-    if (phase !== 'answer' || matchedIds.includes(pairObj.id)) return;
+    if (phase !== 'answer' || wrongPairFlash || matchedIds.includes(pairObj.id)) return;
+    setPairExplanation('');
     playSound('ios_tap');
     triggerHaptic('light');
 
@@ -446,6 +469,8 @@ const DuolingoLessonModal = ({
             commitResult(true, '全部配對正確', currentEx.explanation);
           }
         } else {
+          setPairExplanation(`「${pairObj.left}」對應的是「${pairObj.right}」。請先讀完整概念與定義，再重新配對。`);
+          setRetryMap(previous => ({ ...previous, [currentEx.id]: 1 }));
           setWrongPairFlash(true);
           playSound('wrong');
           setTimeout(() => {
@@ -468,6 +493,8 @@ const DuolingoLessonModal = ({
             commitResult(true, '全部配對正確', currentEx.explanation);
           }
         } else {
+          setPairExplanation(`「${selectedLeftPair.left}」對應的是「${selectedLeftPair.right}」。請先讀完整概念與定義，再重新配對。`);
+          setRetryMap(previous => ({ ...previous, [currentEx.id]: 1 }));
           setWrongPairFlash(true);
           playSound('wrong');
           setTimeout(() => {
@@ -487,6 +514,7 @@ const DuolingoLessonModal = ({
     document.body.style.overflow = 'hidden';
 
     const onKeyDown = (e) => {
+      if (e.target.closest?.('button, select, input, textarea, [contenteditable="true"]')) return;
       if (e.key === 'Escape') {
         onClose();
         return;
@@ -675,7 +703,7 @@ const DuolingoLessonModal = ({
           {currentEx.type === 'listening' && !isCompact && (
             <div className="flex justify-center py-1">
               <button
-                onClick={() => speechEngine.speak(currentEx.audioText)}
+                onClick={() => speechEngine.speakMixed(currentEx.audioText)}
                 className="px-6 py-3 rounded-2xl flex items-center gap-2.5 font-black text-sm text-white cursor-pointer transition-transform active:translate-y-0.5"
                 style={{
                   background: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
@@ -908,6 +936,7 @@ const DuolingoLessonModal = ({
     if (currentEx.type === 'matching') {
       return (
         <div className="grid grid-cols-2 gap-2 text-xs">
+          {pairExplanation && <p role="status" className="col-span-2 rounded-xl bg-amber-500/10 p-3 text-sm leading-relaxed"><MathText text={pairExplanation} /></p>}
           <div className="space-y-1.5">
             <div className="text-[10px] font-black text-secondary uppercase">
               📌 左欄概念
@@ -971,6 +1000,7 @@ const DuolingoLessonModal = ({
         {/* 左欄 50%：題幹、聽力、吉祥物、即時純向量 SVG 知識點資訊圖解 */}
         <div className="col-span-6 flex flex-col justify-between overflow-y-auto pr-3 border-r border-slate-200 dark:border-slate-800">
           <div className="space-y-2">
+            <LearningCoach exercise={currentEx} feedback={feedbackState} point={activeKp} retry={isRetrying} />
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-2">
                 <span className="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
@@ -1016,7 +1046,7 @@ const DuolingoLessonModal = ({
                 )}
               </div>
               <button
-                onClick={() => speechEngine.speak(currentEx.audioText || currentEx.statement || currentEx.prompt)}
+                onClick={() => speechEngine.speakMixed(questionSpeech(currentEx))}
                 className="p-1.5 rounded-lg bg-sky-500/15 text-sky-600 dark:text-sky-400 shrink-0 cursor-pointer"
                 style={{ border: 'none' }}
                 title="朗讀題目"
@@ -1130,6 +1160,7 @@ const DuolingoLessonModal = ({
   const renderPortraitQuestionView = () => {
     return (
       <div className="space-y-5 animate-fade-in">
+        <LearningCoach exercise={currentEx} feedback={feedbackState} point={activeKp} retry={isRetrying} />
         {/* Top Pill Row */}
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <div className="flex items-center gap-2 flex-wrap">
@@ -1226,9 +1257,7 @@ const DuolingoLessonModal = ({
               </h2>
               <button
                 onClick={() =>
-                  speechEngine.speak(
-                    currentEx.audioText || currentEx.statement || currentEx.prompt
-                  )
+                  speechEngine.speakMixed(questionSpeech(currentEx))
                 }
                 className="p-2 rounded-xl bg-sky-500/15 text-sky-600 dark:text-sky-400 hover:bg-sky-500/25 shrink-0 cursor-pointer"
                 style={{ border: 'none' }}
@@ -1644,9 +1673,9 @@ const DuolingoLessonModal = ({
                     太棒了！你完成了「{unit.badge || unit.title}」
                   </h2>
                   <p className="text-xs sm:text-sm text-secondary m-0">
-                    單元皇冠熟練度提升至{' '}
+                    {Object.keys(unresolved).length ? '先複習還不熟的觀念，皇冠保留在' : '單元皇冠熟練度提升至'}{' '}
                     <strong className="text-amber-500">
-                      👑 Lv.{Math.min(5, currentCrown + 1)} / 5
+                      👑 Lv.{Math.min(5, currentCrown)} / 5
                     </strong>
                   </p>
                 </div>
@@ -1666,7 +1695,7 @@ const DuolingoLessonModal = ({
                       獲得 XP
                     </div>
                     <div className="text-lg sm:text-xl font-black text-amber-500 mt-0.5">
-                      +{Math.round((stageInfo.xpBase + maxCombo * 3) * stageInfo.xpMultiplier)}
+                      +{Object.keys(unresolved).length ? Math.round(Math.round((stageInfo.xpBase + maxCombo * 3) * stageInfo.xpMultiplier) / 2) : Math.round((stageInfo.xpBase + maxCombo * 3) * stageInfo.xpMultiplier)}
                     </div>
                   </div>
 
