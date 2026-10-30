@@ -258,162 +258,142 @@ In our daily lives, we are always comparing things:
 
 <!-- learning-practice-v1 -->
 
-## 🌱 學以致用：理解、回想、遷移
+## 🌱 學以致用：看懂、試試、記住
 
-選一個適合自己的起點：初學先讀示範，再遮住示範說一次；已有基礎先作答，再核對；熟練者補充反例與使用限制。每次完成一個小任務即可，不必一次做完。
+照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
-### 比較級：兩者比較：把知識變成自己的工具
+### 1. 比較級：兩者比較
 
-**任務一｜先預測，再核對**
+- 🧠 **一句話記住**：短字 -er ＋ than；長字 more ＋ than；短母音字尾子音重複（big → bigger）。
+- 🌱 **生活例子**：Tom is taller than Ben. / A dog is bigger than a cat. / This book is more interesting than that one.
 
-閱讀這個情境：「【生活實用】用英語比較兩款智慧型手機性價比、向外國友人介紹臺灣最高峰玉山與台北101大樓。」先不看下方解說，寫下你會如何運用「比較級：兩者比較」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「比較級：兩者比較」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 比較兩個人或兩樣東西時用比較級：短的形容詞加 -er，再加 than；長的形容詞前面加 more。
 
-示範：Tom is taller than Ben. / A dog is bigger than a cat. / This book is more interesting than that one.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：good 的比較級是 better，不是 gooder。
 
 </details>
 
-**任務二｜當一次小老師**
+### 2. 最高級：三者以上比較
 
-有人提醒你：「【易錯提醒】good 的比較級是 better，不是 gooder。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：the ＋ -est；the most ＋ 長形容詞；good → the best。
+- 🌱 **生活例子**：Tom is the tallest in our class. / This is the most exciting game of all.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：短字 -er ＋ than；長字 more ＋ than；短母音字尾子音重複（big → bigger）。
-
-解題策略：【審題觸發】當題目出現「比較級關鍵信號詞與字尾規則」時，立即啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。考前速記：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「比較級：兩者比較」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 最高級：三者以上比較：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】用英語比較兩款智慧型手機性價比、向外國友人介紹臺灣最高峰玉山與台北101大樓。」先不看下方解說，寫下你會如何運用「最高級：三者以上比較」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「最高級：三者以上比較」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 三個以上比較出「最…的」時用最高級：短的形容詞加 -est，前面要加 the；長的形容詞用 the most。
 
-示範：Tom is the tallest in our class. / This is the most exciting game of all.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：最高級前面一定要加 the。
 
 </details>
 
-**任務二｜當一次小老師**
+### 3. 世界之最
 
-有人提醒你：「【易錯提醒】最高級前面一定要加 the。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：the ＋ 最高級 ＋ in the world。
+- 🌱 **生活例子**：Mount Everest is the highest mountain in the world. / The Pacific Ocean is the largest ocean.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：the ＋ -est；the most ＋ 長形容詞；good → the best。
-
-解題策略：【審題觸發】當題目出現「最高級關鍵信號詞」時，立即啟動「前面必加 the；單音節加 -est，三音節以上加 most；範圍片語 in the world / of all」解題。考前速記：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「最高級：三者以上比較」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 世界之最：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】用英語比較兩款智慧型手機性價比、向外國友人介紹臺灣最高峰玉山與台北101大樓。」先不看下方解說，寫下你會如何運用「世界之最」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「世界之最」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 用最高級可以介紹世界上最特別的地方或東西。
 
-示範：Mount Everest is the highest mountain in the world. / The Pacific Ocean is the largest ocean.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：「在世界上」要用 in the world，不是 of the world。
 
 </details>
 
-**任務二｜當一次小老師**
+### 4. 不規則的比較級和最高級（延伸應用）
 
-有人提醒你：「【易錯提醒】「在世界上」要用 in the world，不是 of the world。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：good / well → better → best；bad → worse → worst；many / much → more → most。
+- 🌱 **生活例子**：My English is better than last year.（我的英文比去年好。）This is the best day of my life.（這是我人生中最棒的一天。）
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：the ＋ 最高級 ＋ in the world。
-
-解題策略：【審題觸發】當題目出現「不規則三級變化大考必考天王」時，立即啟動「good ➔ better ➔ best；bad ➔ worse ➔ worst；many/much ➔ more ➔ most」解題。考前速記：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「世界之最」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 不規則的比較級和最高級：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】比較兩樣東西、說出自己最喜歡的東西。」先不看下方解說，寫下你會如何運用「不規則的比較級和最高級」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「不規則的比較級和最高級」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 大部分的形容詞加 er、est 就變成比較級、最高級，但有幾個常用字是「不規則變化」，要特別背起來：good → better → best；bad → worse → worst；many / much → more → most；little → less → least。
 
-示範：My English is better than last year.（我的英文比去年好。）This is the best day of my life.（這是我人生中最棒的一天。）
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：不能說 gooder、goodest 或 more good。
 
 </details>
 
-**任務二｜當一次小老師**
+## ✍️ 小試身手（附答案與解說）
 
-有人提醒你：「【易錯提醒】不能說 gooder、goodest 或 more good。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+先自己作答，再打開「看答案與解說」核對。
+
+**第 1 題**　The blue whale is the ______ animal that has ever lived on Earth.
+
+**A.** big  
+**B.** bigger  
+**C.** biggest  
+**D.** most big
 
 <details>
-<summary>檢查自己的解說</summary>
+<summary>看答案與解說</summary>
 
-用這條規則核對：good / well → better → best；bad → worse → worst；many / much → more → most。
+✅ **正確答案** C. biggest
 
-解題策略：【什麼時候用】看到 than 用比較級；看到 the…of / in 用最高級。
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
+【短母音+單一子音字尾雙寫】big 為單音節短母音單字，字尾子音 g 必須雙寫再加 est：the biggest。
 
 </details>
 
-**任務三｜換情境也能用**
+**第 2 題**　A: "Which subject do you like ______ , math or English?"  B: "I like English more."
 
-以「不規則的比較級和最高級」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
+**A.** best  
+**B.** better  
+**C.** good  
+**D.** well
 
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. better
+
+【兩者二選一用比較級】在兩者之間做選擇（math or English），應使用比較級 better。
+
+</details>
+
+**第 3 題**　Taipei 101 was once the ______ building in the world from 2004 to 2010.
+
+**A.** tallest  
+**B.** taller  
+**C.** tall  
+**D.** most tall
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. tallest
+
+【歷史最高建築】tall ➔ the tallest。台北 101 曾是全世界最高的摩天大樓。
+
+</details>
+
+**第 4 題**　His test score this time was ______ than last time because he didn't study hard.
+
+**A.** worse  
+**B.** bad  
+**C.** worst  
+**D.** more bad
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. worse
+
+【bad 的不規則比較級】bad ➔ worse ➔ worst。兩次考試成績相比，這次更差用 worse than。
+
+</details>
 
 ### 🗓️ 讓記憶留下來
 
-今天結束前，關上解說，用一句話說出最重要的規則。明天重新回答其中一個任務，三天後改做另一個，一週後混合舊單元練習。這是可調整的複習起點：容易忘就縮短間隔，能獨立解釋就拉長。每次先回想，再核對與修正，比只重讀更能看出自己哪裡還不熟。
+今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。

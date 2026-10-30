@@ -314,162 +314,142 @@
 
 <!-- learning-practice-v1 -->
 
-## 🌱 學以致用：理解、回想、遷移
+## 🌱 學以致用：看懂、試試、記住
 
-選一個適合自己的起點：初學先讀示範，再遮住示範說一次；已有基礎先作答，再核對；熟練者補充反例與使用限制。每次完成一個小任務即可，不必一次做完。
+照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
-### 重要節慶的英文：把知識變成自己的工具
+### 1. 重要節慶的英文
 
-**任務一｜先預測，再核對**
+- 🧠 **一句話記住**：節日名稱第一個字母要大寫。
+- 🌱 **生活例子**：Lunar New Year（農曆新年）、Dragon Boat Festival（端午節）、Moon Festival（中秋節）、Halloween（萬聖節）、Christmas（聖誕節）。
 
-閱讀這個情境：「【生活實用】接待國外交換學生參訪臺灣傳統民俗節慶、製作全英語跨文化新年電子賀卡。」先不看下方解說，寫下你會如何運用「重要節慶的英文」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「重要節慶的英文」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 認識中西方節日的英文名稱，可以介紹自己的文化，也能了解別人的文化。
 
-示範：Lunar New Year（農曆新年）、Dragon Boat Festival（端午節）、Moon Festival（中秋節）、Halloween（萬聖節）、Christmas（聖誕節）。
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：中秋節也可說 Mid-Autumn Festival，兩種說法都對。
 
 </details>
 
-**任務二｜當一次小老師**
+### 2. 節慶活動的說法
 
-有人提醒你：「【易錯提醒】中秋節也可說 Mid-Autumn Festival，兩種說法都對。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）
+- 🌱 **生活例子**：eat mooncakes（吃月餅）、give red envelopes（給紅包）、wear costumes（穿裝扮服）、decorate the Christmas tree（裝飾聖誕樹）、eat rice dumplings（吃粽子）。
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：節日名稱第一個字母要大寫。
-
-解題策略：【審題觸發】當題目出現「西方三大節慶特色標誌」時，立即啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「重要節慶的英文」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 節慶活動的說法：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】接待國外交換學生參訪臺灣傳統民俗節慶、製作全英語跨文化新年電子賀卡。」先不看下方解說，寫下你會如何運用「節慶活動的說法」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「節慶活動的說法」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 每個節日有不同的傳統活動，用「動詞 ＋ 名詞」就能說出來。
 
-示範：eat mooncakes（吃月餅）、give red envelopes（給紅包）、wear costumes（穿裝扮服）、decorate the Christmas tree（裝飾聖誕樹）、eat rice dumplings（吃粽子）。
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：粽子是 rice dumplings，月餅是 mooncakes，不要混淆。
 
 </details>
 
-**任務二｜當一次小老師**
+### 3. 節日祝福語
 
-有人提醒你：「【易錯提醒】粽子是 rice dumplings，月餅是 mooncakes，不要混淆。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：聖誕節常用 Merry，其他節日多用 Happy。
+- 🌱 **生活例子**：Happy New Year! / Merry Christmas! / Happy Halloween! / Happy Moon Festival!
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）
-
-解題策略：【審題觸發】當題目出現「臺灣傳統節慶英語介紹」時，立即啟動「Lunar New Year (red envelopes), Dragon Boat Festival (dragon boat race/rice dumplings)」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「節慶活動的說法」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 節日祝福語：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】接待國外交換學生參訪臺灣傳統民俗節慶、製作全英語跨文化新年電子賀卡。」先不看下方解說，寫下你會如何運用「節日祝福語」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「節日祝福語」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 節日見面或寫卡片時，可以用祝福語向別人問候。
 
-示範：Happy New Year! / Merry Christmas! / Happy Halloween! / Happy Moon Festival!
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：別人祝福你時，可以回答 Thank you! The same to you!
 
 </details>
 
-**任務二｜當一次小老師**
+### 4. 日期的說法：序數與 on / in（延伸應用）
 
-有人提醒你：「【易錯提醒】別人祝福你時，可以回答 Thank you! The same to you!」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：1st first、2nd second、3rd third，其他 + th；日期用 on，月份用 in。
+- 🌱 **生活例子**：Christmas is on December 25th.（聖誕節在 12 月 25 日。）My birthday is in July.（我的生日在七月。）
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：聖誕節常用 Merry，其他節日多用 Happy。
-
-解題策略：【審題觸發】當題目出現「節慶祝賀語」時，立即啟動「Merry Christmas! / Happy New Year! / Wishing you joy and prosperity!」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「節日祝福語」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 日期的說法：序數與 on / in：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】說自己的生日、寫英文日記的日期、介紹節慶。」先不看下方解說，寫下你會如何運用「日期的說法：序數與 on / in」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「日期的說法：序數與 on / in」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 英文說日期要用「序數」（第幾）：first、second、third，其他大多是數字加 th（fourth、fifth…）。具體日期前面用 on，例如 on May 1st；只說月份用 in，例如 in May。
 
-示範：Christmas is on December 25th.（聖誕節在 12 月 25 日。）My birthday is in July.（我的生日在七月。）
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：fifth、twelfth、twentieth 拼法特別，不是 fiveth、twelveth、twentyth。
 
 </details>
 
-**任務二｜當一次小老師**
+## ✍️ 小試身手（附答案與解說）
 
-有人提醒你：「【易錯提醒】fifth、twelfth、twentieth 拼法特別，不是 fiveth、twelveth、twentyth。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+先自己作答，再打開「看答案與解說」核對。
+
+**第 1 題**　On Halloween, people carve scary faces into orange pumpkins. These glowing lantern decorations are called ______.
+
+**A.** sky lanterns  
+**B.** moon lanterns  
+**C.** jack-o'-lanterns  
+**D.** paper lanterns
 
 <details>
-<summary>檢查自己的解說</summary>
+<summary>看答案與解說</summary>
 
-用這條規則核對：1st first、2nd second、3rd third，其他 + th；日期用 on，月份用 in。
+✅ **正確答案** C. jack-o'-lanterns
 
-解題策略：【什麼時候用】介系詞題先看後面有沒有「幾號」：有幾號用 on，只有月份用 in。
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
+【南瓜燈專用單字】萬聖節挖空的南瓜燈籠英文專有名詞稱為 "jack-o'-lantern"（傑克南瓜燈）。
 
 </details>
 
-**任務三｜換情境也能用**
+**第 2 題**　In Thailand, the famous Songkran Festival in April is also known as the ______ Festival, where people splash water on each other to wash away bad luck.
 
-以「日期的說法：序數與 on / in」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
+**A.** Wind  
+**B.** Fire  
+**C.** Water Splashing  
+**D.** Snow
 
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. Water Splashing
+
+【泰國潑水節】泰國宋干節即舉世聞名的「潑水節 (Water Splashing Festival)」，互相潑水象徵洗滌過去一年的不順與厄運。
+
+</details>
+
+**第 3 題**　People celebrate the New Year countdown on December 31st, which is known as ______.
+
+**A.** Boxing Day  
+**B.** New Year's Eve  
+**C.** Easter  
+**D.** Labor Day
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. New Year's Eve
+
+【跨年夜英文】一年的最後一天（12 月 31 日）跨年倒數之夜稱為 "New Year's Eve"（跨年夜/元旦前夕）。
+
+</details>
+
+**第 4 題**　At Pingxi in northern Taiwan, people write their wishes on colorful ______ and release them into the night sky during the Lantern Festival.
+
+**A.** sky lanterns  
+**B.** balloons  
+**C.** kites  
+**D.** airplanes
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. sky lanterns
+
+【平溪天燈國際盛事】在天燈 (sky lanterns) 上寫下心願祈福並冉冉升空，是平溪國際馳名的元宵觀光盛會。
+
+</details>
 
 ### 🗓️ 讓記憶留下來
 
-今天結束前，關上解說，用一句話說出最重要的規則。明天重新回答其中一個任務，三天後改做另一個，一週後混合舊單元練習。這是可調整的複習起點：容易忘就縮短間隔，能獨立解釋就拉長。每次先回想，再核對與修正，比只重讀更能看出自己哪裡還不熟。
+今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。

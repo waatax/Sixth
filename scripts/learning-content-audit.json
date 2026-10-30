@@ -4,450 +4,578 @@
     {
       "unitId": "art-u1",
       "baselineCharacters": 12089,
-      "addedCharacters": 3534,
-      "growthPercent": 29.23,
-      "practiceTasks": 12
+      "addedCharacters": 2369,
+      "growthPercent": 19.6,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "art-u2",
       "baselineCharacters": 10761,
-      "addedCharacters": 3572,
-      "growthPercent": 33.19,
-      "practiceTasks": 12
+      "addedCharacters": 2266,
+      "growthPercent": 21.06,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "art-u3",
       "baselineCharacters": 10301,
-      "addedCharacters": 3521,
-      "growthPercent": 34.18,
-      "practiceTasks": 12
+      "addedCharacters": 2382,
+      "growthPercent": 23.12,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "art-u4",
       "baselineCharacters": 9686,
-      "addedCharacters": 3534,
-      "growthPercent": 36.49,
-      "practiceTasks": 12
+      "addedCharacters": 2579,
+      "growthPercent": 26.63,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "art-u5",
       "baselineCharacters": 8087,
-      "addedCharacters": 3608,
-      "growthPercent": 44.61,
-      "practiceTasks": 12
+      "addedCharacters": 2514,
+      "growthPercent": 31.09,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "art-u6",
       "baselineCharacters": 7857,
-      "addedCharacters": 3573,
-      "growthPercent": 45.48,
-      "practiceTasks": 12
+      "addedCharacters": 2427,
+      "growthPercent": 30.89,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "comp-u1",
       "baselineCharacters": 9931,
-      "addedCharacters": 3619,
-      "growthPercent": 36.44,
-      "practiceTasks": 12
+      "addedCharacters": 2735,
+      "growthPercent": 27.54,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "comp-u2",
       "baselineCharacters": 9846,
-      "addedCharacters": 3658,
-      "growthPercent": 37.15,
-      "practiceTasks": 12
+      "addedCharacters": 2668,
+      "growthPercent": 27.1,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "comp-u3",
       "baselineCharacters": 9394,
-      "addedCharacters": 3682,
-      "growthPercent": 39.2,
-      "practiceTasks": 12
+      "addedCharacters": 2753,
+      "growthPercent": 29.31,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "comp-u4",
       "baselineCharacters": 10041,
-      "addedCharacters": 3505,
-      "growthPercent": 34.91,
-      "practiceTasks": 12
+      "addedCharacters": 2509,
+      "growthPercent": 24.99,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "comp-u5",
       "baselineCharacters": 8151,
-      "addedCharacters": 3652,
-      "growthPercent": 44.8,
-      "practiceTasks": 12
+      "addedCharacters": 2685,
+      "growthPercent": 32.94,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "comp-u6",
       "baselineCharacters": 8452,
-      "addedCharacters": 3613,
-      "growthPercent": 42.75,
-      "practiceTasks": 12
+      "addedCharacters": 2707,
+      "growthPercent": 32.03,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u1",
       "baselineCharacters": 12915,
-      "addedCharacters": 3987,
-      "growthPercent": 30.87,
-      "practiceTasks": 12
+      "addedCharacters": 2775,
+      "growthPercent": 21.49,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u2",
       "baselineCharacters": 14168,
-      "addedCharacters": 3721,
-      "growthPercent": 26.26,
-      "practiceTasks": 12
+      "addedCharacters": 2480,
+      "growthPercent": 17.5,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u3",
       "baselineCharacters": 11333,
-      "addedCharacters": 4063,
-      "growthPercent": 35.85,
-      "practiceTasks": 12
+      "addedCharacters": 2768,
+      "growthPercent": 24.42,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u4",
       "baselineCharacters": 12281,
-      "addedCharacters": 3945,
-      "growthPercent": 32.12,
-      "practiceTasks": 12
+      "addedCharacters": 2885,
+      "growthPercent": 23.49,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u5",
       "baselineCharacters": 12478,
-      "addedCharacters": 3956,
-      "growthPercent": 31.7,
-      "practiceTasks": 12
+      "addedCharacters": 2801,
+      "growthPercent": 22.45,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u6",
       "baselineCharacters": 13566,
-      "addedCharacters": 3679,
-      "growthPercent": 27.12,
-      "practiceTasks": 12
+      "addedCharacters": 2562,
+      "growthPercent": 18.89,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u7",
       "baselineCharacters": 9219,
-      "addedCharacters": 3804,
-      "growthPercent": 41.26,
-      "practiceTasks": 12
+      "addedCharacters": 2622,
+      "growthPercent": 28.44,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "eng-u8",
       "baselineCharacters": 9050,
-      "addedCharacters": 3856,
-      "growthPercent": 42.61,
-      "practiceTasks": 12
+      "addedCharacters": 2502,
+      "growthPercent": 27.65,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u1",
       "baselineCharacters": 9008,
-      "addedCharacters": 3607,
-      "growthPercent": 40.04,
-      "practiceTasks": 12
+      "addedCharacters": 2572,
+      "growthPercent": 28.55,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u2",
       "baselineCharacters": 8500,
-      "addedCharacters": 3540,
-      "growthPercent": 41.65,
-      "practiceTasks": 12
+      "addedCharacters": 2513,
+      "growthPercent": 29.56,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u3",
       "baselineCharacters": 9162,
-      "addedCharacters": 3559,
-      "growthPercent": 38.85,
-      "practiceTasks": 12
+      "addedCharacters": 2459,
+      "growthPercent": 26.84,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u4",
       "baselineCharacters": 8309,
-      "addedCharacters": 3592,
-      "growthPercent": 43.23,
-      "practiceTasks": 12
+      "addedCharacters": 2444,
+      "growthPercent": 29.41,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u5",
       "baselineCharacters": 8243,
-      "addedCharacters": 3498,
-      "growthPercent": 42.44,
-      "practiceTasks": 12
+      "addedCharacters": 2373,
+      "growthPercent": 28.79,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u6",
       "baselineCharacters": 8664,
-      "addedCharacters": 3458,
-      "growthPercent": 39.91,
-      "practiceTasks": 12
+      "addedCharacters": 2534,
+      "growthPercent": 29.25,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u7",
       "baselineCharacters": 9001,
-      "addedCharacters": 3553,
-      "growthPercent": 39.47,
-      "practiceTasks": 12
+      "addedCharacters": 2596,
+      "growthPercent": 28.84,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "man-u8",
       "baselineCharacters": 8606,
-      "addedCharacters": 3602,
-      "growthPercent": 41.85,
-      "practiceTasks": 12
+      "addedCharacters": 2516,
+      "growthPercent": 29.24,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u1",
       "baselineCharacters": 10897,
-      "addedCharacters": 3726,
-      "growthPercent": 34.19,
-      "practiceTasks": 12
+      "addedCharacters": 2472,
+      "growthPercent": 22.69,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u10",
       "baselineCharacters": 9615,
-      "addedCharacters": 3609,
-      "growthPercent": 37.54,
-      "practiceTasks": 12
+      "addedCharacters": 2359,
+      "growthPercent": 24.53,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u11",
       "baselineCharacters": 7693,
-      "addedCharacters": 3505,
-      "growthPercent": 45.56,
-      "practiceTasks": 12
+      "addedCharacters": 2098,
+      "growthPercent": 27.27,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u12",
       "baselineCharacters": 8686,
-      "addedCharacters": 3715,
-      "growthPercent": 42.77,
-      "practiceTasks": 12
+      "addedCharacters": 2357,
+      "growthPercent": 27.14,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u2",
       "baselineCharacters": 9970,
-      "addedCharacters": 3634,
-      "growthPercent": 36.45,
-      "practiceTasks": 12
+      "addedCharacters": 2269,
+      "growthPercent": 22.76,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u3",
       "baselineCharacters": 7932,
-      "addedCharacters": 3636,
-      "growthPercent": 45.84,
-      "practiceTasks": 12
+      "addedCharacters": 2232,
+      "growthPercent": 28.14,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u4",
       "baselineCharacters": 8820,
-      "addedCharacters": 3619,
-      "growthPercent": 41.03,
-      "practiceTasks": 12
+      "addedCharacters": 2235,
+      "growthPercent": 25.34,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u5",
       "baselineCharacters": 9341,
-      "addedCharacters": 3556,
-      "growthPercent": 38.07,
-      "practiceTasks": 12
+      "addedCharacters": 2250,
+      "growthPercent": 24.09,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u6",
       "baselineCharacters": 8164,
-      "addedCharacters": 3798,
-      "growthPercent": 46.52,
-      "practiceTasks": 12
+      "addedCharacters": 2408,
+      "growthPercent": 29.5,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u7",
       "baselineCharacters": 8064,
-      "addedCharacters": 3684,
-      "growthPercent": 45.68,
-      "practiceTasks": 12
+      "addedCharacters": 2379,
+      "growthPercent": 29.5,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u8",
       "baselineCharacters": 8694,
-      "addedCharacters": 3604,
-      "growthPercent": 41.45,
-      "practiceTasks": 12
+      "addedCharacters": 2282,
+      "growthPercent": 26.25,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "math-u9",
       "baselineCharacters": 8395,
-      "addedCharacters": 3672,
-      "growthPercent": 43.74,
-      "practiceTasks": 12
+      "addedCharacters": 2422,
+      "growthPercent": 28.85,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "pe-u1",
       "baselineCharacters": 7990,
-      "addedCharacters": 3538,
-      "growthPercent": 44.28,
-      "practiceTasks": 12
+      "addedCharacters": 2581,
+      "growthPercent": 32.3,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "pe-u2",
       "baselineCharacters": 8913,
-      "addedCharacters": 3557,
-      "growthPercent": 39.91,
-      "practiceTasks": 12
+      "addedCharacters": 2429,
+      "growthPercent": 27.25,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "pe-u3",
       "baselineCharacters": 9529,
-      "addedCharacters": 3709,
-      "growthPercent": 38.92,
-      "practiceTasks": 12
+      "addedCharacters": 2557,
+      "growthPercent": 26.83,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "pe-u4",
       "baselineCharacters": 7917,
-      "addedCharacters": 3639,
-      "growthPercent": 45.96,
-      "practiceTasks": 12
+      "addedCharacters": 2485,
+      "growthPercent": 31.39,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "pe-u5",
       "baselineCharacters": 7860,
-      "addedCharacters": 3585,
-      "growthPercent": 45.61,
-      "practiceTasks": 12
+      "addedCharacters": 2551,
+      "growthPercent": 32.46,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "pe-u6",
       "baselineCharacters": 8480,
-      "addedCharacters": 3635,
-      "growthPercent": 42.87,
-      "practiceTasks": 12
+      "addedCharacters": 2740,
+      "growthPercent": 32.31,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u1",
       "baselineCharacters": 11260,
-      "addedCharacters": 3524,
-      "growthPercent": 31.3,
-      "practiceTasks": 12
+      "addedCharacters": 2251,
+      "growthPercent": 19.99,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u10",
       "baselineCharacters": 8587,
-      "addedCharacters": 3634,
-      "growthPercent": 42.32,
-      "practiceTasks": 12
+      "addedCharacters": 2346,
+      "growthPercent": 27.32,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u2",
       "baselineCharacters": 11566,
-      "addedCharacters": 3519,
-      "growthPercent": 30.43,
-      "practiceTasks": 12
+      "addedCharacters": 2228,
+      "growthPercent": 19.26,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u3",
       "baselineCharacters": 10499,
-      "addedCharacters": 3491,
-      "growthPercent": 33.25,
-      "practiceTasks": 12
+      "addedCharacters": 2387,
+      "growthPercent": 22.74,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u4",
       "baselineCharacters": 10667,
-      "addedCharacters": 3578,
-      "growthPercent": 33.54,
-      "practiceTasks": 12
+      "addedCharacters": 2243,
+      "growthPercent": 21.03,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u5",
       "baselineCharacters": 10270,
-      "addedCharacters": 3589,
-      "growthPercent": 34.95,
-      "practiceTasks": 12
+      "addedCharacters": 2331,
+      "growthPercent": 22.7,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u6",
       "baselineCharacters": 10960,
-      "addedCharacters": 3574,
-      "growthPercent": 32.61,
-      "practiceTasks": 12
+      "addedCharacters": 2349,
+      "growthPercent": 21.43,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u7",
       "baselineCharacters": 10426,
-      "addedCharacters": 3502,
-      "growthPercent": 33.59,
-      "practiceTasks": 12
+      "addedCharacters": 2312,
+      "growthPercent": 22.18,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u8",
       "baselineCharacters": 10695,
-      "addedCharacters": 3642,
-      "growthPercent": 34.05,
-      "practiceTasks": 12
+      "addedCharacters": 2470,
+      "growthPercent": 23.09,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "sci-u9",
       "baselineCharacters": 8700,
-      "addedCharacters": 3583,
-      "growthPercent": 41.18,
-      "practiceTasks": 12
+      "addedCharacters": 2530,
+      "growthPercent": 29.08,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u1",
       "baselineCharacters": 9978,
-      "addedCharacters": 3648,
-      "growthPercent": 36.56,
-      "practiceTasks": 12
+      "addedCharacters": 2463,
+      "growthPercent": 24.68,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u2",
       "baselineCharacters": 8749,
-      "addedCharacters": 3560,
-      "growthPercent": 40.69,
-      "practiceTasks": 12
+      "addedCharacters": 2421,
+      "growthPercent": 27.67,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u3",
       "baselineCharacters": 8398,
-      "addedCharacters": 3567,
-      "growthPercent": 42.47,
-      "practiceTasks": 12
+      "addedCharacters": 2483,
+      "growthPercent": 29.57,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u4",
       "baselineCharacters": 8825,
-      "addedCharacters": 3636,
-      "growthPercent": 41.2,
-      "practiceTasks": 12
+      "addedCharacters": 2668,
+      "growthPercent": 30.23,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u5",
       "baselineCharacters": 8135,
-      "addedCharacters": 3605,
-      "growthPercent": 44.31,
-      "practiceTasks": 12
+      "addedCharacters": 2510,
+      "growthPercent": 30.85,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u6",
       "baselineCharacters": 8643,
-      "addedCharacters": 3556,
-      "growthPercent": 41.14,
-      "practiceTasks": 12
+      "addedCharacters": 2626,
+      "growthPercent": 30.38,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u7",
       "baselineCharacters": 8274,
-      "addedCharacters": 3607,
-      "growthPercent": 43.59,
-      "practiceTasks": 12
+      "addedCharacters": 2426,
+      "growthPercent": 29.32,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     },
     {
       "unitId": "soc-u8",
       "baselineCharacters": 7925,
-      "addedCharacters": 3594,
-      "growthPercent": 45.35,
-      "practiceTasks": 12
+      "addedCharacters": 2634,
+      "growthPercent": 33.24,
+      "knowledgePoints": 4,
+      "workedQuestions": 4,
+      "disclosures": 8
     }
   ]
 }

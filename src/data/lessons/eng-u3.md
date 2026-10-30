@@ -293,162 +293,146 @@
 
 <!-- learning-practice-v1 -->
 
-## 🌱 學以致用：理解、回想、遷移
+## 🌱 學以致用：看懂、試試、記住
 
-選一個適合自己的起點：初學先讀示範，再遮住示範說一次；已有基礎先作答，再核對；熟練者補充反例與使用限制。每次完成一個小任務即可，不必一次做完。
+照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
-### 表示位置的介系詞：把知識變成自己的工具
+### 1. 表示位置的介系詞
 
-**任務一｜先預測，再核對**
+- 🧠 **一句話記住**：next to 旁邊、across from 對面、between…and… 之間。
+- 🌱 **生活例子**：The bank is next to the park. / The library is between the school and the hospital.
 
-閱讀這個情境：「【生活實用】在臺北捷運站或觀光景點用流暢英語為外國觀光客指引正確方向。」先不看下方解說，寫下你會如何運用「表示位置的介系詞」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「表示位置的介系詞」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 描述地點的位置時常用：next to（在旁邊）、across from（在對面）、between A and B（在 A 和 B 之間）、on the corner（在轉角）。
 
-示範：The bank is next to the park. / The library is between the school and the hospital.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：between 後面要接「兩個」地點，中間用 and 連接。
 
 </details>
 
-**任務二｜當一次小老師**
+### 2. 問路和指路的說法
 
-有人提醒你：「【易錯提醒】between 後面要接「兩個」地點，中間用 and 連接。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…
+- 🌱 **生活例子**：A: Excuse me. How can I get to the train station? B: Go straight for two blocks and turn right.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：next to 旁邊、across from 對面、between…and… 之間。
-
-解題策略：【審題觸發】當題目出現「禮貌詢問路線開場句型」時，立即啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「表示位置的介系詞」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 問路和指路的說法：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】在臺北捷運站或觀光景點用流暢英語為外國觀光客指引正確方向。」先不看下方解說，寫下你會如何運用「問路和指路的說法」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「問路和指路的說法」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 問路時先說 Excuse me 表示禮貌，再問 How can I get to…? 或 Where is…? 指路時常用 go straight（直走）、turn left/right（左轉／右轉）。
 
-示範：A: Excuse me. How can I get to the train station? B: Go straight for two blocks and turn right.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：turn left 是「左轉」，on your left 是「在你的左邊」，意思不同。
 
 </details>
 
-**任務二｜當一次小老師**
+### 3. 交通工具的說法
 
-有人提醒你：「【易錯提醒】turn left 是「左轉」，on your left 是「在你的左邊」，意思不同。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：by bus / by car / by train；走路 on foot。
+- 🌱 **生活例子**：I go to school by bus. / My dad goes to work by MRT. / I walk to school. = I go to school on foot.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…
-
-解題策略：【審題觸發】當題目出現「精確方位介系詞判定」時，立即啟動「next to (旁邊), across from (對面), between A and B (在兩者之間), on the corner of (轉角處)」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「問路和指路的說法」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 交通工具的說法：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】在臺北捷運站或觀光景點用流暢英語為外國觀光客指引正確方向。」先不看下方解說，寫下你會如何運用「交通工具的說法」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「交通工具的說法」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 說「搭什麼交通工具」用 by ＋ 交通工具，中間不加 a 或 the；但「走路」要說 on foot。
 
-示範：I go to school by bus. / My dad goes to work by MRT. / I walk to school. = I go to school on foot.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：不能說 by foot，也不要說 by a bus。
 
 </details>
 
-**任務二｜當一次小老師**
+### 4. There is / There are：說「某地方有某東西」（延伸應用）
 
-有人提醒你：「【易錯提醒】不能說 by foot，也不要說 by a bus。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：There is + 單數或不可數名詞；There are + 複數名詞。
+- 🌱 **生活例子**：There is a park near my house.（我家附近有一座公園。）There are two banks on Main Street.（大街上有兩家銀行。）
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：by bus / by car / by train；走路 on foot。
-
-解題策略：【審題觸發】當題目出現「祈使句指引路線」時，立即啟動「Go straight (直走), Turn left/right at the second light (在第二個紅綠燈左/右轉)」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「交通工具的說法」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### There is / There are：說「某地方有某東西」：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】問路、介紹自己的社區和房間。」先不看下方解說，寫下你會如何運用「There is / There are：說「某地方有某東西」」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「There is / There are：說「某地方有某東西」」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 想說「某個地方有某樣東西」時，用 There is 或 There are。後面接一個（單數）或不可數的東西用 There is；兩個以上（複數）的東西用 There are。問句把 is / are 移到前面：Is there…? / Are there…?
 
-示範：There is a park near my house.（我家附近有一座公園。）There are two banks on Main Street.（大街上有兩家銀行。）
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：要看後面第一個名詞的單複數，There are a book 是錯的，要說 There is a book。
 
 </details>
 
-**任務二｜當一次小老師**
+## ✍️ 小試身手（附答案與解說）
 
-有人提醒你：「【易錯提醒】要看後面第一個名詞的單複數，There are a book 是錯的，要說 There is a book。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+先自己作答，再打開「看答案與解說」核對。
+
+**第 1 題**　A: "Can you tell me the way to the night market?"  B: "Sure. Walk along this road, and you ______ miss it!"
+
+**A.** should  
+**B.** must  
+**C.** can't  
+**D.** don't
 
 <details>
-<summary>檢查自己的解說</summary>
+<summary>看答案與解說</summary>
 
-用這條規則核對：There is + 單數或不可數名詞；There are + 複數名詞。
+✅ **正確答案** C. can't
 
-解題策略：【什麼時候用】先找出後面的名詞，有 a / an / one 用 is，有 two / many / some 加複數名詞用 are。
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
+【道地英文慣用語】"You can't miss it!" 是一句極為常見的指路慣用語，意思是「目標非常顯眼好找，你絕不會錯過的！」
 
 </details>
 
-**任務三｜換情境也能用**
+**第 2 題**　The car is parked ______ the tall tree, so it is in the shade.
 
-以「There is / There are：說「某地方有某東西」」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
+**A.** on  
+**B.** under  
+**C.** between  
+**D.** above
 
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. under
+
+【觀念】車子停在高大的樹「下面」，所以在陰影裡。表示「在…下方」用 under。
+
+【比較】on 是「在…上面（有接觸）」；in 是「在…裡面」；next to 是「在…旁邊」。
+
+【句意】這輛車停在高大的樹下，所以在陰涼處。
+
+</details>
+
+**第 3 題**　When the traffic light turns red, all vehicles and pedestrians must ______.
+
+**A.** stop  
+**B.** go straight  
+**C.** turn quickly  
+**D.** speed up
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. stop
+
+【交通安全常識】紅燈停、綠燈行：When the traffic light turns red, you must stop.
+
+</details>
+
+**第 4 題**　Where can people borrow books and study quietly for free?
+
+**A.** In a department store  
+**B.** In a restaurant  
+**C.** In a cinema  
+**D.** In a library
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. In a library
+
+【場所功能字彙】borrow books（借書）、study quietly（安靜自習）的公立場所為圖書館 (library)。
+
+</details>
 
 ### 🗓️ 讓記憶留下來
 
-今天結束前，關上解說，用一句話說出最重要的規則。明天重新回答其中一個任務，三天後改做另一個，一週後混合舊單元練習。這是可調整的複習起點：容易忘就縮短間隔，能獨立解釋就拉長。每次先回想，再核對與修正，比只重讀更能看出自己哪裡還不熟。
+今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。

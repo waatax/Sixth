@@ -941,12 +941,48 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
     return {
       ...q,
       idx,
+      sourceSet: q.isExpansion ? 'expansion' : q.isMockChallenge ? 'mock' : q.isRepresentative ? 'representative' : 'foundation',
       question: cleanLatexText(q.question),
       options: fourOptions,
       correctAnswer: cleanedCorrect,
       explanation: cleanLatexText(q.explanation || catalog.quickRescue)
     };
   });
+
+  // 填空、是非、聽力題取「課綱精選代表題」的最後幾題，避免和各關卡的選擇題重複出現
+  const repQs = normalizedQs.filter(q => q.sourceSet === 'representative');
+  const pickSpare = (n, fallbackIdx) => repQs[repQs.length - 1 - n] || normalizedQs[fallbackIdx] || normalizedQs[0];
+  // 有指定知識點的題目（延伸應用題）連到該知識點；其餘依「題目＋解析」與知識點文字重疊最多者對應，
+  // 讓答錯時顯示的易錯提醒和例子真的跟這一題有關
+  const bigrams = (text) => {
+    const set = new Set();
+    for (const run of String(text || '').match(/[一-鿿]+|[A-Za-z]{2,}|\d+/g) || []) {
+      if (/^[A-Za-z\d]/.test(run)) set.add(run.toLowerCase());
+      else for (let i = 0; i < run.length - 1; i++) set.add(run.slice(i, i + 2));
+    }
+    return set;
+  };
+  const kpGrams = kps.map(k => ({ kp: k, title: bigrams(k.title), body: bigrams(`${k.formulaOrRule} ${k.definition} ${k.keyFact || ''}`) }));
+  // 同單元多個知識點都有的詞（如「受熱」）權重較低，只出現在一個知識點的詞（如「對流」）權重較高
+  const spread = new Map();
+  for (const { title, body } of kpGrams) for (const g of new Set([...title, ...body])) spread.set(g, (spread.get(g) || 0) + 1);
+  const weight = (g) => 1 / (spread.get(g) || 1);
+  const kpForQuestion = (q, qIdx) => {
+    const explicit = kps.find(k => k.id === q.kpId);
+    if (explicit) return explicit;
+    const target = bigrams(`${q.question} ${q.explanation}`);
+    let best = null;
+    let bestScore = 0;
+    for (const { kp, title, body } of kpGrams) {
+      let hits = 0;
+      for (const g of title) if (target.has(g)) hits += 2 * weight(g);
+      for (const g of body) if (target.has(g)) hits += weight(g);
+      const score = hits / Math.sqrt(title.size * 2 + body.size || 1);
+      if (score > bestScore) { bestScore = score; best = kp; }
+    }
+    const baseKps = kps.filter(k => !k.isExpansion);
+    return best || (baseKps.length > 0 ? baseKps[qIdx % baseKps.length] : primaryKp);
+  };
 
   // 1. 🧩 步驟排序 / 語塊重組 (Word / Step Order Builder)
   const orderEx = buildUnitOrderExercise(unit, kps, catalog);
@@ -964,7 +1000,7 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
 
   // 3. ✍️ 實戰觀念填空挑戰 (Interactive Cloze — 標準四選一單選題)
   if (normalizedQs.length > 0) {
-    const qCloze = normalizedQs[normalizedQs.length > 3 ? 3 : 0];
+    const qCloze = pickSpare(0, 3);
     const clozeKp = kps[1] || primaryKp;
     exercises.push({
       id: `${unit.id}-ex-cloze`,
@@ -1008,8 +1044,8 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
 
   // 4. ⚡ 迷思是非快判 (True/False Misconception Blitz)
   if (normalizedQs.length >= 2) {
-    const qTrue = normalizedQs[0];
-    const qFalse = normalizedQs[1];
+    const qTrue = pickSpare(2, 0);
+    const qFalse = pickSpare(3, 1);
     const wrongOpt = qFalse.options.find(o => o !== qFalse.correctAnswer) || qFalse.options[0];
 
     exercises.push({
@@ -1058,7 +1094,7 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
 
   // 5. 🎧 語音聽力挑戰 (四選一)
   if (normalizedQs.length > 0) {
-    const qListen = normalizedQs[normalizedQs.length > 2 ? 2 : 0];
+    const qListen = pickSpare(1, 2);
     const listenKp = kps[2] || primaryKp;
     exercises.push({
       id: `${unit.id}-ex-listening`,
@@ -1104,14 +1140,15 @@ export function generateDuolingoExercisesForUnit(unit, quizQuestions = [], knowl
 
   // 6. 🎯 經典實戰選擇題 (四選一) — 涵蓋三大版本課本、自修評量與歷屆段考
   if (normalizedQs.length > 0) {
-    // 提取最多 12 題真實選擇題，全面覆蓋四選一
-    normalizedQs.slice(0, 12).forEach((q, qIdx) => {
-      const assignedKp = kps.length > 0 ? kps[qIdx % kps.length] : primaryKp;
+    // 單元全部題目都可進入闖關（基礎、精選、模擬挑戰、延伸應用），由各關卡挑選不重複的題目
+    normalizedQs.forEach((q, qIdx) => {
+      const assignedKp = kpForQuestion(q, qIdx);
       const newCorrectIndex = q.options.indexOf(q.correctAnswer);
       exercises.push({
         id: `${unit.id}-ex-mcq-${qIdx}`,
         type: 'mcq',
-        typeLabel: `🎯 實戰選擇題 (四選一) #${qIdx + 1}`,
+        typeLabel: q.sourceSet === 'expansion' ? '🌱 延伸應用 (四選一)' : `🎯 實戰選擇題 (四選一) #${qIdx + 1}`,
+        sourceSet: q.sourceSet,
         sourceTag: qIdx < 3 
           ? '📘 課本基礎題 (四選一)' 
           : qIdx < 7 

@@ -204,14 +204,34 @@ class SpeechEngine {
   speakMixed(text, options = {}) {
     this.stop();
     const sequence = this.sequence;
-    const parts = this.cleanText(text).match(/[A-Za-z]+(?:[A-Za-z0-9 ,.'’?!:;\/-]*[A-Za-z0-9.!?])?|[^A-Za-z]+/g) || [];
+    const rawParts = this.cleanText(text).match(/[A-Za-z]+(?:[A-Za-z0-9 ,.'’?!:;\/-]*[A-Za-z0-9.!?])?|[^A-Za-z]+/g) || [];
+    // 只有真正的英文單字或句子才換英文語音；選項字母 A～D、GCD 這類縮寫留在中文語句裡一起念，避免聲音一直切換
+    const merged = [];
+    for (const raw of rawParts) {
+      const lang = /[a-z]{2,}/.test(raw) ? 'en-US' : 'zh-TW';
+      const last = merged.at(-1);
+      if (last && last.lang === lang) last.text += raw;
+      else merged.push({ text: raw, lang });
+    }
+    // 長段落依句號切成短句依序念（部分瀏覽器念太長的一句會中途停止）
+    const parts = [];
+    for (const { text: segment, lang } of merged) {
+      let chunk = '';
+      for (const sentence of segment.replace(/([。！？；])\1+/g, '$1').split(/(?<=[。！？；])/)) {
+        if (chunk && chunk.length + sentence.length > 120) {
+          parts.push({ text: chunk, lang });
+          chunk = '';
+        }
+        chunk += sentence;
+      }
+      if (chunk) parts.push({ text: chunk, lang });
+    }
     let index = 0;
     const next = () => {
       if (sequence !== this.sequence || index >= parts.length) return;
       const part = parts[index++];
-      if (!part.trim()) return next();
-      this.speak(part, { ...options, interrupt: false,
-        lang: /[A-Za-z]/.test(part) ? 'en-US' : 'zh-TW', onEnd: next });
+      if (!part.text.trim()) return next();
+      this.speak(part.text, { ...options, interrupt: false, lang: part.lang, onEnd: next });
     };
     next();
   }

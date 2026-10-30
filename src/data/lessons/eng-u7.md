@@ -265,162 +265,146 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 <!-- learning-practice-v1 -->
 
-## 🌱 學以致用：理解、回想、遷移
+## 🌱 學以致用：看懂、試試、記住
 
-選一個適合自己的起點：初學先讀示範，再遮住示範說一次；已有基礎先作答，再核對；熟練者補充反例與使用限制。每次完成一個小任務即可，不必一次做完。
+照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
-### 未來式：will 與 be going to：把知識變成自己的工具
+### 1. 未來式：will 與 be going to
 
-**任務一｜先預測，再核對**
+- 🧠 **一句話記住**：will ＋ 原形；am/is/are going to ＋ 原形。
+- 🌱 **生活例子**：It's cold. I will close the window.（臨時決定）/ I am going to visit my grandma this weekend.（已經計畫）
 
-閱讀這個情境：「【生活實用】撰寫全英語國中學習先修計畫目標、用英語向師長分享自己的未來志向與職業抱負。」先不看下方解說，寫下你會如何運用「未來式：will 與 be going to」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「未來式：will 與 be going to」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 說未來的事有兩種：will ＋ 原形動詞，常用在當下決定或預測；be going to ＋ 原形動詞，常用在事先計畫好的事。
 
-示範：It's cold. I will close the window.（臨時決定）/ I am going to visit my grandma this weekend.（已經計畫）
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：be going to 的 be 要配合主詞：I am、He is、They are。
 
 </details>
 
-**任務二｜當一次小老師**
+### 2. 未來時間詞
 
-有人提醒你：「【易錯提醒】be going to 的 be 要配合主詞：I am、He is、They are。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：未來時間詞 → will 或 be going to。
+- 🌱 **生活例子**：tomorrow（明天）、next week（下週）、this weekend（這個週末）、in the future（將來）。
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：will ＋ 原形；am/is/are going to ＋ 原形。
-
-解題策略：【審題觸發】當題目出現「未來時間副詞關鍵信號」時，立即啟動「tomorrow, next week, in the future, soon」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「未來式：will 與 be going to」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 未來時間詞：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】撰寫全英語國中學習先修計畫目標、用英語向師長分享自己的未來志向與職業抱負。」先不看下方解說，寫下你會如何運用「未來時間詞」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「未來時間詞」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 看到表示未來的時間詞，句子就要用未來式。
 
-示範：tomorrow（明天）、next week（下週）、this weekend（這個週末）、in the future（將來）。
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：this weekend 可能是未來或現在，要看前後文判斷。
 
 </details>
 
-**任務二｜當一次小老師**
+### 3. 談論夢想的職業
 
-有人提醒你：「【易錯提醒】this weekend 可能是未來或現在，要看前後文判斷。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：母音開頭的職業用 an（an engineer、an artist）。
+- 🌱 **生活例子**：I want to be a teacher. / I want to be an engineer.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：未來時間詞 → will 或 be going to。
-
-解題策略：【審題觸發】當題目出現「will vs be going to 語意辨析」時，立即啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「未來時間詞」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 談論夢想的職業：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】撰寫全英語國中學習先修計畫目標、用英語向師長分享自己的未來志向與職業抱負。」先不看下方解說，寫下你會如何運用「談論夢想的職業」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「談論夢想的職業」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 問別人將來想做什麼工作，可以說 What do you want to be in the future? 回答 I want to be a/an ＋ 職業。
 
-示範：I want to be a teacher. / I want to be an engineer.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：要說 I want to be a doctor，不能省略 be。
 
 </details>
 
-**任務二｜當一次小老師**
+### 4. I want to be a / an + 職業（延伸應用）
 
-有人提醒你：「【易錯提醒】要說 I want to be a doctor，不能省略 be。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：母音開頭的音 → an；子音開頭的音 → a；want to 後面接原形動詞 be。
+- 🌱 **生活例子**：I want to be a doctor. / I want to be an engineer. / She wants to be an artist.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：母音開頭的職業用 an（an engineer、an artist）。
-
-解題策略：【審題觸發】當題目出現「詢問未來的夢想與計畫句型」時，立即啟動「What do you want to be in the future? / I want to be an engineer.」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「談論夢想的職業」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### I want to be a / an + 職業：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】用英文介紹自己的夢想職業。」先不看下方解說，寫下你會如何運用「I want to be a / an + 職業」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「I want to be a / an + 職業」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 說「我想當……」要用 I want to be a / an + 職業。職業是單數時，前面要加 a 或 an：開頭是母音的「音」（像 a、e、i、o、u 的音）用 an，其他用 a。主詞是 he、she 時，want 要加 s。
 
-示範：I want to be a doctor. / I want to be an engineer. / She wants to be an artist.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：看的是「發音」不是字母：an hour（h 不發音），a university（u 唸起來像 you）。
 
 </details>
 
-**任務二｜當一次小老師**
+## ✍️ 小試身手（附答案與解說）
 
-有人提醒你：「【易錯提醒】看的是「發音」不是字母：an hour（h 不發音），a university（u 唸起來像 you）。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+先自己作答，再打開「看答案與解說」核對。
+
+**第 1 題**　When we graduate from elementary school, we ______ junior high school students next September.
+
+**A.** are becoming yesterday  
+**B.** became  
+**C.** become already  
+**D.** will become
 
 <details>
-<summary>檢查自己的解說</summary>
+<summary>看答案與解說</summary>
 
-用這條規則核對：母音開頭的音 → an；子音開頭的音 → a；want to 後面接原形動詞 be。
+✅ **正確答案** D. will become
 
-解題策略：【什麼時候用】把職業的第一個音唸出來，判斷是母音還是子音。
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
+【未來事實】明年九月將成為國中生是未來發生的事實，使用 will become。
 
 </details>
 
-**任務三｜換情境也能用**
+**第 2 題**　A: "What do you want to be when you grow up?"  B: "I want to be a ______ because I love cooking delicious meals for people."
 
-以「I want to be a / an + 職業」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
+**A.** postman  
+**B.** police officer  
+**C.** chef  
+**D.** bus driver
 
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. chef
+
+【線索】B 說「因為我很喜歡為別人煮好吃的料理」，所以想當廚師 chef。
+
+【句意】A：你長大想做什麼？B：我想當廚師，因為我喜歡為大家煮美味的餐點。
+
+【延伸】cook 也可以指廚師，但 chef 通常指餐廳的主廚。
+
+</details>
+
+**第 3 題**　Mark is practicing hard every day. He ______ participate in the national swimming competition next month.
+
+**A.** went  
+**B.** was  
+**C.** is going to  
+**D.** did
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. is going to
+
+【事前規劃之未來計畫】主詞 Mark 是單數，表示事前已決定的計畫用 is going to。
+
+</details>
+
+**第 4 題**　A: "The phone is ringing!"  B: "Don't worry, I ______ answer it."
+
+**A.** am going to  
+**B.** will  
+**C.** was  
+**D.** have
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. will
+
+【臨時決定用 will】電話突然響起，說話當下瞬間做出的決定與反應，習慣用 will："I'll answer it."
+
+</details>
 
 ### 🗓️ 讓記憶留下來
 
-今天結束前，關上解說，用一句話說出最重要的規則。明天重新回答其中一個任務，三天後改做另一個，一週後混合舊單元練習。這是可調整的複習起點：容易忘就縮短間隔，能獨立解釋就拉長。每次先回想，再核對與修正，比只重讀更能看出自己哪裡還不熟。
+今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。

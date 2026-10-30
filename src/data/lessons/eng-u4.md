@@ -330,162 +330,142 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 <!-- learning-practice-v1 -->
 
-## 🌱 學以致用：理解、回想、遷移
+## 🌱 學以致用：看懂、試試、記住
 
-選一個適合自己的起點：初學先讀示範，再遮住示範說一次；已有基礎先作答，再核對；熟練者補充反例與使用限制。每次完成一個小任務即可，不必一次做完。
+照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
-### 可數名詞與不可數名詞：把知識變成自己的工具
+### 1. 可數名詞與不可數名詞
 
-**任務一｜先預測，再核對**
+- 🧠 **一句話記住**：可數：a/an、加 s；不可數：a cup of / a glass of / a piece of。
+- 🌱 **生活例子**：an apple、two bananas；a cup of tea、a bottle of water、a slice of pizza。
 
-閱讀這個情境：「【生活實用】在國外西餐廳點餐確認餐點分量、在國外藥局向藥劑師清楚描述個人身體不適症狀。」先不看下方解說，寫下你會如何運用「可數名詞與不可數名詞」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「可數名詞與不可數名詞」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 可以一個一個數的東西是可數名詞，可以加 a/an 或加 -s 變複數；水、茶、牛奶這類沒辦法直接數的是不可數名詞，要用容器或單位來計算。
 
-示範：an apple、two bananas；a cup of tea、a bottle of water、a slice of pizza。
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：不可數名詞不能加 s，不能說 two waters，要說 two bottles of water。
 
 </details>
 
-**任務二｜當一次小老師**
+### 2. 說出身體哪裡不舒服
 
-有人提醒你：「【易錯提醒】不可數名詞不能加 s，不能說 two waters，要說 two bottles of water。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：head ＋ ache = 頭痛；tooth ＋ ache = 牙痛。
+- 🌱 **生活例子**：I have a headache（頭痛）. / I have a stomachache（肚子痛）. / I have a fever（發燒）. / I have a sore throat（喉嚨痛）.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：可數：a/an、加 s；不可數：a cup of / a glass of / a piece of。
-
-解題策略：【審題觸發】當題目出現「不可數名詞食物判定」時，立即啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。考前速記：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「可數名詞與不可數名詞」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 說出身體哪裡不舒服：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】在國外西餐廳點餐確認餐點分量、在國外藥局向藥劑師清楚描述個人身體不適症狀。」先不看下方解說，寫下你會如何運用「說出身體哪裡不舒服」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「說出身體哪裡不舒服」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 身體不舒服時，可以用 I have a ＋ 症狀 來表達。很多疼痛的字是「部位 ＋ ache」組成的。
 
-示範：I have a headache（頭痛）. / I have a stomachache（肚子痛）. / I have a fever（發燒）. / I have a sore throat（喉嚨痛）.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：要說 I have a headache，不是 I am headache。
 
 </details>
 
-**任務二｜當一次小老師**
+### 3. 用 should 給建議
 
-有人提醒你：「【易錯提醒】要說 I have a headache，不是 I am headache。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：should / shouldn't ＋ 原形動詞。
+- 🌱 **生活例子**：You should drink more water. / He should see a doctor. / You shouldn't eat too much candy.
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：head ＋ ache = 頭痛；tooth ＋ ache = 牙痛。
-
-解題策略：【審題觸發】當題目出現「表達身體生病不舒服」時，立即啟動「I have a fever / headache / stomachache / toothache」解題。考前速記：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「說出身體哪裡不舒服」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### 用 should 給建議：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】在國外西餐廳點餐確認餐點分量、在國外藥局向藥劑師清楚描述個人身體不適症狀。」先不看下方解說，寫下你會如何運用「用 should 給建議」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「用 should 給建議」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 想給別人建議時用 should（應該），不建議時用 shouldn't（不應該）。should 後面接原形動詞，不管主詞是誰都一樣。
 
-示範：You should drink more water. / He should see a doctor. / You shouldn't eat too much candy.
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：不能說 He should sees a doctor，should 後面不加 s。
 
 </details>
 
-**任務二｜當一次小老師**
+### 4. How many 與 How much（延伸應用）
 
-有人提醒你：「【易錯提醒】不能說 He should sees a doctor，should 後面不加 s。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+- 🧠 **一句話記住**：How many + 複數可數名詞；How much + 不可數名詞；How much is / are…? = 多少錢？
+- 🌱 **生活例子**：How many apples do you want?（你要幾顆蘋果？）How much milk do you drink?（你喝多少牛奶？）How much is this hamburger?（這個漢堡多少錢？）
 
-<details>
-<summary>檢查自己的解說</summary>
-
-用這條規則核對：should / shouldn't ＋ 原形動詞。
-
-解題策略：【審題觸發】當題目出現「給予保健建議句型」時，立即啟動「You should drink plenty of water and take a good rest.」解題。考前速記：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
-
-</details>
-
-**任務三｜換情境也能用**
-
-以「用 should 給建議」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
-
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
-
-### How many 與 How much：把知識變成自己的工具
-
-**任務一｜先預測，再核對**
-
-閱讀這個情境：「【生活實用】買東西問價錢、點餐說要幾份。」先不看下方解說，寫下你會如何運用「How many 與 How much」。至少說出一個判斷依據，避免只猜答案。
+**先想想看**：遮住下面的說明，用自己的話說說「How many 與 How much」是什麼意思，再想一個你身邊的例子。
 
 <details>
-<summary>看示範與判斷依據</summary>
+<summary>對照白話說明與易錯提醒</summary>
 
 問「有多少」時，可以一個一個數的東西（可數名詞）用 How many，後面接複數名詞；不能一個一個數的東西（例如水、牛奶、米）用 How much。問價錢也用 How much。
 
-示範：How many apples do you want?（你要幾顆蘋果？）How much milk do you drink?（你喝多少牛奶？）How much is this hamburger?（這個漢堡多少錢？）
-
-核對時，找出自己的答案與示範相同的一步，再指出需要修改的一步。表達方式可以不同，但判斷必須符合題目的條件。
+⚠️ **小心別犯錯**：How many 後面要用複數名詞，How many apple 是錯的。
 
 </details>
 
-**任務二｜當一次小老師**
+## ✍️ 小試身手（附答案與解說）
 
-有人提醒你：「【易錯提醒】How many 後面要用複數名詞，How many apple 是錯的。」請用自己的話說明：這個錯誤為什麼容易發生？要檢查哪個條件才能避免？把說明錄下來，或用兩句話寫給同學。
+先自己作答，再打開「看答案與解說」核對。
+
+**第 1 題**　Eating colorful vegetables such as carrots and broccoli provides our body with rich ______.
+
+**A.** harmful chemicals  
+**B.** sugar and salt  
+**C.** vitamins and minerals  
+**D.** fat and oil
 
 <details>
-<summary>檢查自己的解說</summary>
+<summary>看答案與解說</summary>
 
-用這條規則核對：How many + 複數可數名詞；How much + 不可數名詞；How much is / are…? = 多少錢？
+✅ **正確答案** C. vitamins and minerals
 
-解題策略：【什麼時候用】先判斷後面的東西能不能一個一個數，能數用 many，不能數用 much。
-
-自評三項：是否說出關鍵條件、是否指出容易混淆的地方、是否用例子支持答案？如果只能背出名詞，回到示範找出「為什麼」，再試一次。
+【蔬菜營養成分】胡蘿蔔與花椰菜等深綠黃蔬菜富含人體必需的「維生素與礦物質 (vitamins and minerals)」。
 
 </details>
 
-**任務三｜換情境也能用**
+**第 2 題**　When you cough or sneeze, you should cover your mouth with a tissue or your ______.
 
-以「How many 與 How much」為主題，把示範中的一個條件改掉：可以改數字、人物、材料或使用情境。寫下哪些結論仍成立、哪些需要重新判斷，並用本節規則說明；不是每個條件都能任意更換。
+**A.** neighbor's face  
+**B.** bare hands  
+**C.** elbow  
+**D.** dirty shoe
 
-**完成標準：**能說明原情境、指出一個錯誤原因，並解釋改動條件後的影響。如果還不確定，先標記問號，對照上方規則修正；不需要為了拿分假裝懂了。
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. elbow
+
+【公衛禮儀與防疫】咳嗽或打噴嚏時，若無衛生紙應以「手肘內側 (elbow)」遮掩口鼻，避免雙手沾滿飛沫病菌傳染他人。
+
+</details>
+
+**第 3 題**　A: "I have a running nose and I keep sneezing."  B: "You might have ______."
+
+**A.** the flu (influenza)  
+**B.** a broken arm  
+**C.** a toothache  
+**D.** a sunburn
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. the flu (influenza)
+
+【流感典型症狀】流鼻水 (runny nose) 與持續打噴嚏 (sneezing) 是感冒或流行性感冒 (the flu) 的常見症狀。
+
+</details>
+
+**第 4 題**　Which of the following is an example of healthy eating habits?
+
+**A.** Drinking 1500 to 2000 mL of plain water every day  
+**B.** Drinking three large cups of boba milk tea daily  
+**C.** Skipping breakfast every morning  
+**D.** Eating fried chicken for dinner every night
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Drinking 1500 to 2000 mL of plain water every day
+
+【健康飲食生活好習慣】每天攝取充足的白開水（約 1500~2000 毫升），避免高糖手搖飲，維持良好新陳代謝。
+
+</details>
 
 ### 🗓️ 讓記憶留下來
 
-今天結束前，關上解說，用一句話說出最重要的規則。明天重新回答其中一個任務，三天後改做另一個，一週後混合舊單元練習。這是可調整的複習起點：容易忘就縮短間隔，能獨立解釋就拉長。每次先回想，再核對與修正，比只重讀更能看出自己哪裡還不熟。
+今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。

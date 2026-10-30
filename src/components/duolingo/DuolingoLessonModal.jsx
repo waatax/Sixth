@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import MathText from '../common/MathText';
-import LearningCoach, { questionSpeech } from './LearningCoach';
+import LearningCoach from './LearningCoach';
+import { questionSpeech } from './coachSpeech';
 import { createPortal } from 'react-dom';
 import {
   X,
@@ -192,36 +193,42 @@ const DuolingoLessonModal = ({
     const matches = pool.filter((e) => e.type === 'matching');
     const clozes = pool.filter((e) => e.type === 'cloze');
     const listens = pool.filter((e) => e.type === 'listening');
+    // 依題目來源分組，讓三個關卡由淺入深、題目不重複
+    const bySet = (set) => mcqs.filter((e) => e.sourceSet === set);
+    const foundation = bySet('foundation');
+    const representative = bySet('representative');
+    const mock = bySet('mock');
+    const expansion = bySet('expansion');
+    // 某一組題目不夠時，用還沒出現過的選擇題補足
+    const fill = (picked, size) => {
+      const unique = [...new Set(picked.filter(Boolean))];
+      for (const e of mcqs) {
+        if (unique.length >= size) break;
+        if (!unique.includes(e)) unique.push(e);
+      }
+      return unique.slice(0, size);
+    };
 
     if (mode === 'lesson') {
-      // 第 1 關（新觀念入門）：4 題四選一選擇題 + 1 題四選一觀念填空（100% 四選一題型）
-      return [
-        ...mcqs.slice(0, 4),
-        ...(clozes.length > 0 ? clozes.slice(0, 1) : mcqs.slice(4, 5))
-      ].filter(Boolean);
+      // 第 1 關（新觀念入門）：基礎題 4 題 + 觀念填空 + 1 題延伸應用（全部四選一）
+      return fill([...foundation.slice(0, 4), ...clozes.slice(0, 1), expansion[0]], 6);
     }
     if (mode === 'practice') {
-      // 第 2 關（進階實戰練習）：5 題四選一選擇題 + 1 題四選一聽力/填空（100% 四選一題型）
-      return [
-        ...mcqs.slice(2, 6),
-        ...(listens.length > 0 ? listens.slice(0, 1) : mcqs.slice(6, 7)),
-        ...(clozes.length > 0 ? clozes.slice(0, 1) : mcqs.slice(7, 8))
-      ].filter(Boolean).slice(0, 6);
+      // 第 2 關（進階實戰練習）：精選代表題 4 題 + 語音聽力 + 1 題延伸應用（全部四選一）
+      return fill([...representative.slice(0, 4), ...listens.slice(0, 1), expansion[1]], 6);
     }
     if (mode === 'challenge') {
-      // 第 3 關（單元王牌挑戰）：6 題四選一選擇題 + 1 題四選一壓軸題（100% 四選一題型）
-      return [
-        ...mcqs.slice(0, 6),
-        ...(clozes.length > 0 ? clozes.slice(0, 1) : mcqs.slice(6, 7))
-      ]
-        .filter(Boolean)
-        .slice(0, 7);
+      // 第 3 關（單元王牌挑戰）：模擬挑戰題 + 精選代表題後段 + 1 題延伸應用（全部四選一）
+      return fill([...mock.slice(0, 2), ...representative.slice(4, 8), expansion[2]], 7);
     }
-    // 'all': 8 題完整特訓（以四選一為核心，搭配少數綜合互動題）
+    // 'all': 綜合特訓（四選一為主，搭配步驟排序、配對與是非題）
     return [
-      ...mcqs.slice(0, 4),
-      ...(clozes.length > 0 ? clozes.slice(0, 1) : []),
-      ...(listens.length > 0 ? listens.slice(0, 1) : []),
+      ...representative.slice(8, 10),
+      ...foundation.slice(0, 1),
+      ...expansion.slice(0, 1),
+      ...clozes.slice(0, 1),
+      ...listens.slice(0, 1),
+      ...tfs.slice(0, 1),
       ...orders.slice(0, 1),
       ...matches.slice(0, 1)
     ].filter(Boolean);
@@ -584,7 +591,7 @@ const DuolingoLessonModal = ({
 
   // Prepare Guidebook points for Intro phase
   const guidePoints = [
-    ...(unitKps.slice(0, 3).map((kp) => ({
+    ...(unitKps.map((kp) => ({
       title: kp.title,
       body: (kp.definition || kp.formulaOrRule || '').replace(/\$/g, ''),
       example: kp.example || '',
@@ -1132,8 +1139,8 @@ const DuolingoLessonModal = ({
                     </div>
                   )}
                   {feedbackState.detail && (
-                    <div className="text-[10px] text-secondary truncate mt-0.5">
-                      {feedbackState.detail}
+                    <div className="text-xs text-secondary mt-0.5 whitespace-pre-line max-h-24 overflow-y-auto">
+                      <MathText text={feedbackState.detail} />
                     </div>
                   )}
                 </div>
@@ -1552,7 +1559,23 @@ const DuolingoLessonModal = ({
                 </div>
               )}
 
-              {/* 3 Crisp Key Takeaway Cards */}
+              {/* Key Takeaway Cards（基礎重點 + 延伸應用），可一鍵朗讀 */}
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => speechEngine.speakMixed(guidePoints.map((pt, i) => `第 ${i + 1} 個重點：${pt.title}。${pt.body}${pt.example ? `。舉個例子：${pt.example}` : ''}${pt.tip ? `。小心別犯錯：${pt.tip}` : ''}`).join('。'))}
+                  className="rounded-xl border border-sky-300 px-3 py-2 text-sm font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 cursor-pointer"
+                >
+                  🔊 朗讀全部重點
+                </button>
+                <button
+                  type="button"
+                  onClick={() => speechEngine.stop()}
+                  className="rounded-xl border border-sky-300 px-3 py-2 text-sm font-bold text-sky-700 dark:text-sky-300 bg-sky-500/10 cursor-pointer"
+                >
+                  停止朗讀
+                </button>
+              </div>
               <div className="space-y-2.5">
                 {guidePoints.map((pt, i) => (
                   <div
@@ -1891,8 +1914,8 @@ const DuolingoLessonModal = ({
                         ✅ 正確答案：{feedbackState.correctText}
                       </div>
                     )}
-                    <div className="text-xs text-secondary mt-1 leading-relaxed">
-                      {feedbackState.detail}
+                    <div className="text-xs sm:text-sm text-secondary mt-1 leading-relaxed whitespace-pre-line max-h-40 overflow-y-auto">
+                      <MathText text={feedbackState.detail} />
                     </div>
                     {feedbackState.isRetryQueued && (
                       <div className="text-[11px] font-bold text-rose-500 mt-1">
