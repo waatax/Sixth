@@ -16,7 +16,7 @@ IES / What Works Clearinghouse: [Organizing Instruction and Study to Improve Stu
 
 ## 已知驗證限制
 
-本機 in-app 預覽連線逾時；本機 Chrome 的電腦操作未獲工具授權。故不能把響應式 CSS 或程式測試宣稱為已完成真實手機／桌機端到端視覺測試。現有題庫與教材之學校考試範圍仍需依任課老師調整。
+本機預覽連線逾時後改用 GitHub Pages；線上新版首頁、選答與確認後解析已實際驗證。檢查時修正首頁頁內跳轉與 HashRouter 衝突。尚未完成實體手機驗證。現有題庫與教材之學校考試範圍仍需依任課老師調整。
 
 ## 檢查
 
