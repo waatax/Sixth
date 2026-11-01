@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import EyeCareToolbar from '../common/EyeCareToolbar';
@@ -9,6 +9,8 @@ import GlobalCommandPalette from '../common/GlobalCommandPalette';
 import './Layout.css';
 
 const MainLayout = () => {
+  const { pathname } = useLocation();
+  if (pathname === '/' || pathname === '/practice') return <main style={{background:'#f8f9f2', minHeight:'100vh'}}><Suspense fallback={<p role="status">載入練習室…</p>}><Outlet /></Suspense></main>;
   return (
     <div className="layout-wrapper flex flex-col min-h-screen relative">
       {/* iOS 18 Dynamic Island Pill (Top HUD) */}
