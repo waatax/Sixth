@@ -258,7 +258,8 @@ export function getExamHandoutInfo(subjectId, semester = '6A', scope = 'all') {
   }
 
   const pdfFileName = `${subjectId}_${semKey}_${scope}.pdf`;
-  const pdfUrl = `/downloads/pdf/${pdfFileName}`;
+  const baseUrl = (import.meta.env?.BASE_URL || '/Sixth/').replace(/\/$/, '');
+  const pdfUrl = `${baseUrl}/downloads/pdf/${pdfFileName}`;
 
   return {
     subjectId,
