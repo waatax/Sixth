@@ -570,7 +570,7 @@ function buildHandoutHtml(handoutInfo, notesList) {
     .highlight-desc { font-size: 11px; line-height: 1.8; }
     .highlight-point { font-size: 12px; }
     .unit-diagram-container { max-width: 450px; margin: 12px auto; }
- 
+
   </style>
 </head>
 <body>
