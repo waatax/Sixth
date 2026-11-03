@@ -38,6 +38,10 @@ jobs:
         run: npm ci
       - name: Verify study studio
         run: node scripts/verify-study-studio.mjs
+      - name: Verify elementary learning garden
+        run: node scripts/verify-learning-garden.mjs
+      - name: Verify learning garden route rendering
+        run: node scripts/verify-garden-render.mjs
       - name: Build
         run: npm run build
       - name: Verify learning content and speech regression
