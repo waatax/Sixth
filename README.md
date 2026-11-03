@@ -43,9 +43,13 @@ node scripts/verify-study-studio.mjs
 node scripts/verify-print-assets.mjs
 npm run build
 node scripts/verify-learning-upgrade.mjs
+npx playwright install chromium
+npm run test:responsive
 ```
 
 `verify-island-content` 驗算課文中所有數字等式、檢查 131 條數學條目都有對應微課、每題可正確判分、遊戲產生器與獎勵規則。它不能取代教師的內容編審。
+
+`test:responsive` 使用 Chromium 檢查 `npm run build` 的正式產物：逐課檢查 271 堂課、546 題與解答，在 320px 手機搭配放大字級時不超出畫面；另檢查 390px、橫向手機與桌機的兩種字級、提示、答錯回饋與主要頁面。可設定 `RESPONSIVE_BASE_URL` 改測已啟動的本機伺服器。
 
 推送 `main` 後，GitHub Actions 執行上述檢查與建置，再部署 `dist/` 至 GitHub Pages。
 

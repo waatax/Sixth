@@ -31,8 +31,13 @@
 }
 /* The legacy theme paints body dark; the island must not show it on overscroll. */
 html:has(.isl), html:has(.isl) body { background: #f2fafc !important; }
+/* Keep iOS landscape text sizing consistent with the explicit Aa preference. */
+html:has(.isl) { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .isl.isl-large { font-size: 18.5px; }
 .isl *, .isl *::before, .isl *::after { box-sizing: border-box; }
+/* Nested flex/grid items must shrink inside phone-sized tracks. Explicit
+   minimums on individual controls below still take precedence. */
+.isl :where(*) { min-width: 0; }
 .isl h1, .isl h2, .isl h3, .isl p, .isl ul, .isl ol, .isl figure { margin: 0; padding: 0; }
 .isl ul, .isl ol { list-style: none; }
 .isl h1, .isl h2, .isl h3 { font-family: var(--head); color: var(--ink); line-height: 1.3; font-weight: 700; letter-spacing: 0; }
@@ -60,9 +65,12 @@ html:has(.isl), html:has(.isl) body { background: #f2fafc !important; }
 .isl-tab.active { color: var(--sea-dark); font-weight: 800; }
 .isl-tab.active svg { background: var(--sea-soft); border-radius: 12px; padding: 2px 8px; width: 42px; }
 .isl-top { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 16px; padding-top: calc(8px + env(safe-area-inset-top)); background: rgba(242, 250, 252, .94); backdrop-filter: blur(8px); }
-.isl-brand { display: flex; align-items: center; gap: 8px; font-family: var(--head); font-size: 1.05em; min-width: 0; white-space: nowrap; }
+.isl-brand { display: flex; align-items: center; gap: 8px; font-family: var(--head); font-size: 1.05em; min-width: 0; }
+.isl-brand b { line-height: 1.35; text-wrap: balance; }
 .isl-logo { width: 36px; height: 36px; flex: none; display: grid; place-items: center; color: #fff; background: var(--sea); border-radius: 12px; box-shadow: 0 3px 0 var(--sea-dark); }
 .isl-top-stats { display: flex; align-items: center; gap: 6px; flex: none; }
+.isl-top .isl-brand { flex: 1; }
+.isl-top-stats .isl-icon-btn, .isl-pill svg { flex-shrink: 0; }
 .isl-pill { display: inline-flex; align-items: center; gap: 4px; min-height: 36px; padding: 0 10px; border-radius: 99px; font-weight: 800; font-size: .86em; }
 .isl-pill-streak { background: #ffece6; color: var(--coral-dark); }
 .isl-pill-xp { background: var(--sun-soft); color: #7d5400; }
@@ -284,12 +292,18 @@ html:has(.isl), html:has(.isl) body { background: #f2fafc !important; }
 
 /* Questions */
 .isl-q-wrap { max-width: 680px; margin: 0 auto; }
-.isl-q { display: grid; gap: 12px; background: #fff; border: 2px solid var(--line); border-radius: var(--r); padding: 16px; }
+.isl-q { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; background: #fff; border: 2px solid var(--line); border-radius: var(--r); padding: 16px; }
+/* Grid's auto minimum otherwise lets native input widths and long equations
+   expand the track beyond the card. Shrink the content, then wrap the text. */
+.isl-q > *, .isl-feedback > *, .isl-options button > span:nth-child(2),
+.isl-pairs > div, .isl-pairs button, .isl-result-list li > div { min-width: 0; }
+.isl-q button { white-space: normal; overflow-wrap: anywhere; }
+.isl-q button svg { flex-shrink: 0; }
 .isl-q-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .isl-q-kind { color: var(--sc); font-weight: 800; font-size: .86em; }
 .isl-q-title { font-size: 1.28em; line-height: 1.5; }
 .isl-options { display: grid; gap: 8px; }
-.isl-options.is-tf { grid-template-columns: 1fr 1fr; }
+.isl-options.is-tf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .isl-options button { display: flex; align-items: center; gap: 10px; min-height: 58px; padding: 8px 12px; text-align: left; background: #fff; border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 14px; font-weight: 600; line-height: 1.4; }
 .isl-options button > span:nth-child(2) { flex: 1; }
 .isl-options.is-tf button { justify-content: center; font-size: 1.1em; font-weight: 800; }
@@ -302,14 +316,14 @@ html:has(.isl), html:has(.isl) body { background: #f2fafc !important; }
 .isl-options .wrong { border-color: var(--again); background: var(--again-soft); color: var(--again); }
 .isl-options .wrong .isl-letter { background: var(--again); color: #fff; }
 .isl-num { display: flex; align-items: center; gap: 10px; }
-.isl-num input { flex: 1; min-width: 0; height: 60px; padding: 0 14px; font-size: 1.5em; font-weight: 800; text-align: center; border: 2px solid var(--line); border-radius: 14px; outline: none; background: #fff; }
+.isl-num input { flex: 1; width: 100%; min-width: 0; height: 60px; padding: 0 14px; font-size: 1.5em; font-weight: 800; text-align: center; border: 2px solid var(--line); border-radius: 14px; outline: none; background: #fff; }
 .isl-num input:focus { border-color: var(--sc); }
 .isl-num span:last-child:not(.sr-only) { font-weight: 700; }
-.isl-q-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.isl-q-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
 .isl-q-actions .isl-btn { flex: 1; max-width: 240px; margin-left: auto; }
 .isl-hint { display: grid; gap: 6px; background: var(--sun-soft); padding: 10px 12px; border-radius: 12px; font-size: .94em; }
 .isl-hint button { display: inline-flex; align-items: center; gap: 4px; color: var(--sea-dark); font-weight: 700; justify-self: start; min-height: 36px; padding: 0; }
-.isl-feedback { display: grid; gap: 6px; padding: 12px; border-radius: 14px; }
+.isl-feedback { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 12px; border-radius: 14px; }
 .isl-feedback.good { background: var(--good-soft); }
 .isl-feedback.again { background: var(--again-soft); }
 .isl-feedback strong { font-family: var(--head); font-weight: 700; font-size: 1.1em; }
@@ -326,7 +340,7 @@ html:has(.isl), html:has(.isl) body { background: #f2fafc !important; }
 .isl-order-slots small { width: 100%; color: var(--again); font-weight: 700; }
 .isl-order-pool { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .isl-order-pool button { min-height: 50px; padding: 6px 16px; background: #fff; border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 14px; font-weight: 700; }
-.isl-pairs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.isl-pairs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .isl-pairs > div { display: grid; gap: 7px; align-content: start; }
 .isl-pairs button { display: flex; align-items: center; justify-content: center; gap: 4px; min-height: 56px; padding: 6px 8px; background: #fff; border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 12px; font-weight: 700; line-height: 1.3; font-size: .96em; }
 .isl-pairs .on { border-color: var(--sc); background: var(--ss); }
@@ -519,7 +533,7 @@ html:has(.isl), html:has(.isl) body { background: #f2fafc !important; }
   .isl-in-lesson .isl-rail { display: flex; }
   .isl-main { padding: 6px 20px 28px; }
   .isl-rocket { grid-template-columns: 72px 1fr; }
-  .isl-options:not(.is-tf) { grid-template-columns: 1fr 1fr; }
+  .isl-options:not(.is-tf) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .isl-cards { grid-template-columns: repeat(4, 1fr); }
   .isl-result-actions .isl-btn { width: auto; flex: 1 1 100%; }
   .isl-game-list { grid-template-columns: repeat(3, 1fr); }

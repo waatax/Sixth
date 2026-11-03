@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "validate": "node scripts/verify-quality-matrix.mjs"
+    "validate": "node scripts/verify-quality-matrix.mjs",
+    "test:responsive": "node scripts/verify-island-responsive.mjs"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "oxlint": "^1.75.0",
+    "playwright": "1.61.1",
     "tailwindcss": "^4.3.3",
     "vite": "^8.2.0"
   }
