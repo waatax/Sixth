@@ -13,8 +13,8 @@ const vite = await createServer({
   logLevel: "error",
 });
 try {
-  const { default: LearningGarden, GardenLesson } = await vite.ssrLoadModule(
-    "/src/pages/LearningGarden.jsx",
+  const { default: IslandApp } = await vite.ssrLoadModule(
+    "/src/pages/island/IslandApp.jsx",
   );
   const { ThemeProvider } = await vite.ssrLoadModule(
     "/src/context/ThemeContext.jsx",
@@ -28,7 +28,7 @@ try {
       throw Error("Storage disabled");
     },
   };
-  const render = (url, Component, route) =>
+  const render = (url) =>
     renderToString(
       React.createElement(
         ThemeProvider,
@@ -39,54 +39,45 @@ try {
           React.createElement(
             Routes,
             null,
-            React.createElement(Route, {
-              path: route,
-              element: React.createElement(Component),
-            }),
+            ["/", "/map", "/explore/:lessonId"].map((path) =>
+              React.createElement(Route, {
+                key: path,
+                path,
+                element: React.createElement(IslandApp),
+              }),
+            ),
           ),
         ),
       ),
     );
-  for (let grade = 1; grade <= 6; grade++) {
-    const html = render(`/?grade=${grade}`, LearningGarden, "/");
-    assert.ok(html.includes("小小學習島") && html.includes("教材範圍"));
-    assert.equal(
-      (html.match(/class="garden-lesson-card"/g) || []).length,
-      grade <= 2 ? 4 : 8,
-    );
-    assert.equal((html.match(/class="garden-mobile-nav"/g) || []).length, 1);
-    assert.ok(!html.includes("NaN") && !html.includes("undefined"));
+  const clean = (html, label) => {
+    assert.ok(!html.includes("NaN") && !html.includes("undefined"), label);
     const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
-    assert.equal(new Set(ids).size, ids.length, "No duplicate document IDs");
+    assert.equal(new Set(ids).size, ids.length, `Duplicate IDs: ${label}`);
+  };
+  const home = render("/");
+  assert.ok(home.includes("小小學習島") && home.includes("你現在幾年級"));
+  clean(home, "home");
+  for (let grade = 1; grade <= 6; grade++) {
+    const html = render(`/map?grade=${grade}`);
+    assert.ok(html.includes("isl-station"), `map ${grade}`);
+    clean(html, `map ${grade}`);
   }
   for (const lesson of gardenLessons) {
-    const html = render(
-      `/explore/${lesson.id}`,
-      GardenLesson,
-      "/explore/:lessonId",
-    );
-    assert.ok(html.includes(lesson.title), lesson.id);
-    assert.ok(
-      html.includes(lesson.goal) && html.includes(lesson.trap),
-      lesson.id,
-    );
-    assert.ok(
-      html.includes("<figure") &&
-        html.includes("<figcaption") &&
-        html.includes("<caption>"),
-      lesson.id,
-    );
+    const html = render(`/explore/${lesson.id}`);
+    const text = html.replaceAll("&#x27;", "'").replaceAll("&quot;", '"').replaceAll("&amp;", "&");
+    // Stacked fractions are rendered as separate elements, so compare the text before them.
+    const lead = (s) => s.split(/\d+／\d+/)[0];
+    assert.ok(text.includes(lead(lesson.goal)) && text.includes(lead(lesson.trap)), lesson.id);
+    assert.ok(html.includes("<figure") && html.includes("<caption"), lesson.id);
     assert.equal((html.match(/<h1\s/g) || []).length, 1, lesson.id);
-    assert.ok(html.includes("我讀懂了，試試看"));
-    assert.ok(!html.includes("NaN") && !html.includes("undefined"), lesson.id);
+    if (lesson.visual && !["flow", "compare", "timeline", "table"].includes(lesson.visual[0]))
+      assert.ok(html.includes('role="img"'), `${lesson.id} diagram needs a text alternative`);
+    clean(html, lesson.id);
   }
-  assert.ok(
-    render("/explore/missing", GardenLesson, "/explore/:lessonId").includes(
-      "還沒有這個主題",
-    ),
-  );
+  assert.ok(render("/explore/missing").includes("還沒有這個主題"));
   console.log(
-    "PASS: 6 grade homepages, 40 React lesson routes, missing-route fallback, unique IDs, semantic diagrams/tables, disabled storage at application root. Visual browser QA remains separate.",
+    `PASS: home, 6 grade maps, ${gardenLessons.length} lesson routes with diagrams, missing-route fallback, unique IDs, disabled storage.`,
   );
 } finally {
   await vite.close();

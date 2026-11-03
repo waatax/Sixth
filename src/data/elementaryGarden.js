@@ -1,78 +1,85 @@
-// Original, representative micro-lessons. Grade placement is a suggested learning route,
-// not a publisher's table of contents or a claim of complete curriculum coverage.
+// Island lessons: the original representative micro-lessons plus the curriculum-mapped library.
+// Grade placement is a suggested route, not a publisher's table of contents.
 import { balanceQuestion } from "../utils/balanceOptions.js";
+import { buildLesson } from "./garden/build.js";
+import { mathG1, mathG2 } from "./garden/mathLower.js";
+import { mathG3, mathG4 } from "./garden/mathMiddle.js";
+import { mathG5, mathG6 } from "./garden/mathUpper.js";
+import { scienceLessons } from "./garden/science.js";
+import { socialLessons, mandarinLessons, englishLessons } from "./garden/socialLanguage.js";
+import { artsLessons, healthLessons, integrativeLessons, lifeLessons } from "./garden/artsHealthLife.js";
 
 export const gardenSubjects = [
   {
     id: "math",
     name: "數學",
     icon: "Calculator",
-    color: "#3865a0",
-    soft: "#eaf1fb",
+    color: "#2a64bf",
+    soft: "#e8f1ff",
     motto: "把想法，一步步算清楚",
   },
   {
     id: "mandarin",
     name: "國語",
     icon: "BookOpen",
-    color: "#a55b31",
-    soft: "#fcf0e5",
+    color: "#ab4c14",
+    soft: "#fff0e2",
     motto: "讀懂故事，也說出自己",
   },
   {
     id: "life",
     name: "生活",
     icon: "Sprout",
-    color: "#477449",
-    soft: "#edf5e7",
+    color: "#237545",
+    soft: "#e6f7e8",
     motto: "從身邊的小發現開始",
   },
   {
     id: "science",
     name: "自然",
     icon: "FlaskConical",
-    color: "#36766a",
-    soft: "#e7f4ee",
+    color: "#0a7364",
+    soft: "#e0f7f1",
     motto: "用觀察，找到好問題",
   },
   {
     id: "social",
     name: "社會",
     icon: "Globe2",
-    color: "#7b5b9e",
-    soft: "#f2ecf9",
+    color: "#7346bd",
+    soft: "#f1eafd",
     motto: "認識我們生活的世界",
   },
   {
     id: "english",
     name: "英語",
     icon: "Languages",
-    color: "#337589",
-    soft: "#e6f4f8",
+    color: "#096d8e",
+    soft: "#e0f4fb",
     motto: "一句一句，和世界打招呼",
   },
   {
     id: "arts",
     name: "藝術",
     icon: "Palette",
-    color: "#a14e70",
-    soft: "#fbeaf1",
+    color: "#ad3570",
+    soft: "#fde9f3",
     motto: "讓色彩與節奏說故事",
   },
   {
     id: "health_pe",
     name: "健體",
     icon: "HeartPulse",
-    color: "#a45837",
-    soft: "#fff0e8",
+    color: "#b53d25",
+    soft: "#ffece6",
     motto: "照顧自己，也尊重別人",
   },
   {
     id: "integrative",
     name: "綜合",
     icon: "Compass",
-    color: "#667238",
-    soft: "#f1f3e3",
+    color: "#616e18",
+    soft: "#f3f6dc",
     motto: "把學到的，用在生活裡",
   },
 ];
@@ -1063,7 +1070,24 @@ const rows = [
   ],
 ];
 
-export const gardenLessons = rows.map(
+// Legacy lessons keep their ids and storage keys so existing progress survives.
+const legacyCodes = {
+  "g1-math": ["N-1-1"],
+  "g2-math": ["N-2-6"],
+  "g3-math": ["N-3-9"],
+  "g4-math": ["S-4-3"],
+  "g5-math": ["N-5-4"],
+  "g6-math": ["S-6-2"],
+  "g4-science": ["INc-Ⅱ-6"],
+  "g5-science": ["INa-Ⅲ-10"],
+  "g6-science": ["INb-Ⅲ-4"],
+};
+const legacyVisuals = {
+  "g1-math": ["blocks", 13],
+  "g2-math": ["groups", 4, 3],
+  "g4-math": ["grid", 5, 3],
+};
+const legacyLessons = rows.map(
   (
     [grade, subject, title, goal, explanation, trap, panels, recall, transfer],
     index,
@@ -1075,6 +1099,9 @@ export const gardenLessons = rows.map(
     goal,
     explanation,
     trap,
+    codes: legacyCodes[`g${grade}-${subject}`] || [],
+    keywords: "",
+    visual: legacyVisuals[`g${grade}-${subject}`] || null,
     stage:
       grade <= 2
         ? "第一學習階段"
@@ -1094,6 +1121,7 @@ export const gardenLessons = rows.map(
           answerIndex: 0,
           explanation: answerExplanation,
         }),
+        type: "mcq",
         key: `garden:${grade}:${subject}:${i}`,
         unitId: `g${grade}-${subject}`,
         kind: i ? "換個情境試試" : "把觀念想起來",
@@ -1103,6 +1131,33 @@ export const gardenLessons = rows.map(
     order: index,
   }),
 );
+
+const library = {
+  math: [...mathG1, ...mathG2, ...mathG3, ...mathG4, ...mathG5, ...mathG6],
+  science: scienceLessons,
+  social: socialLessons,
+  mandarin: mandarinLessons,
+  english: englishLessons,
+  arts: artsLessons,
+  health_pe: healthLessons,
+  integrative: integrativeLessons,
+  life: lifeLessons,
+};
+const subjectOrder = gardenSubjects.map((s) => s.id);
+// Legacy lessons open each grade and subject; the library follows in curriculum order.
+export const gardenLessons = [
+  ...legacyLessons,
+  ...Object.entries(library).flatMap(([subject, rows]) =>
+    rows.map((row, i) => buildLesson(row, subject, 1000 + i)),
+  ),
+]
+  .sort(
+    (a, b) =>
+      a.grade - b.grade ||
+      subjectOrder.indexOf(a.subject) - subjectOrder.indexOf(b.subject) ||
+      a.order - b.order,
+  )
+  .map((lesson, order) => ({ ...lesson, order }));
 
 export function subjectsForGrade(grade) {
   return gardenSubjects.filter((s) =>

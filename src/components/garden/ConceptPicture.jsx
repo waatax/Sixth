@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, Minus, Plus } from "lucide-react";
+import Visual from "./Visual";
 
 // Code-native diagrams stay crisp at every size and have text equivalents.
 export default function ConceptPicture({ lesson }) {
@@ -116,6 +117,15 @@ export default function ConceptPicture({ lesson }) {
           </div>
         </div>
         <p>乙班的數值是甲班兩倍。這裡是練習資料，不是學習成效統計。</p>
+      </figure>
+    );
+  if (lesson.visual)
+    return (
+      <figure className="concept-picture">
+        <figcaption>
+          <b>看圖就懂</b>
+        </figcaption>
+        <Visual key={lesson.id} spec={lesson.visual} />
       </figure>
     );
   return (
