@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 10：基準量與比較量、雞兔問題與間隔怎樣解題</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 11：等量公理與未知數方程式求解</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 12：統計圖表判讀、圓形圖與圓心角換算</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 35%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第4單元 / 南一第4單元 / 翰林第4單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 10：基準量與比較量、雞兔問題與間隔怎樣解題</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級倍數概念、比率與分數乘法</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>基準量 (1) 與比較量判定、和倍與差倍問題線段圖分析</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：小數分數乘除法、百分率 (%)、母子和差初探。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>基準量 (1) 與比較量判定、和倍與差倍問題線段圖分析、雞兔同籠假設法</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">基準量與比較量核心定理</div>
+                  <div class="highlight-desc"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>比較量</mtext><mo>=</mo><mtext>基準量</mtext><mo>×</mo><mtext>比值（倍數）</mtext></mrow><annotation encoding="application/x-tex">\text{比較量} = \text{基準量} \times \text{比值（倍數）}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">比較量</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">基準量</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">比值（倍數）</span></span></span></span></span>；「被比的為比較量，當標準的為基準量 (1)」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">和倍問題大招</div>
+                  <div class="highlight-desc"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>基準量</mtext><mo>=</mo><mtext>兩量總和</mtext><mo>÷</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>倍數</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\text{基準量} = \text{兩量總和} \div (1 + \text{倍數})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">基準量</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">兩量總和</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord cjk_fallback">倍數</span></span><span class="mclose">)</span></span></span></span>；差倍問題除以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mn>1</mn><mo>−</mo><mtext>倍數</mtext><mi mathvariant="normal">∣</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(|1 - \text{倍數}|)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">∣1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord cjk_fallback">倍數</span></span><span class="mord">∣</span><span class="mclose">)</span></span></span></span>。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">經典雞兔同籠假設法</div>
+                  <div class="highlight-desc">全假設為雞（2腳），則少算的腳數全部補給兔子（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>兔數</mtext><mo>=</mo><mfrac><mtext>少算腳數</mtext><mrow><mn>4</mn><mo>−</mo><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{兔數} = \frac{\text{少算腳數}}{4-2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">兔數</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1.2757em;vertical-align:-0.4033em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cjk_fallback mtight">少算腳數</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>）。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -519,31 +554,31 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 母子和與母子差公式</div>
                       <div class="formula-body"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>基準量</mtext><mo>=</mo><mfrac><mtext>總和</mtext><mrow><mn>1</mn><mo>+</mo><mtext>倍數</mtext></mrow></mfrac><mspace width="1em"/><mo separator="true">,</mo><mspace width="1em"/><mtext>基準量</mtext><mo>=</mo><mfrac><mtext>差額</mtext><mrow><mi mathvariant="normal">∣</mi><mn>1</mn><mo>−</mo><mtext>倍數</mtext><mi mathvariant="normal">∣</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{基準量} = \frac{\text{總和}}{1 + \text{倍數}} \quad , \quad \text{基準量} = \frac{\text{差額}}{|1 - \text{倍數}|}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">基準量</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord cjk_fallback">倍數</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">總和</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord cjk_fallback">基準量</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.2963em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">∣1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord cjk_fallback">倍數</span></span><span class="mord">∣</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">差額</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>求出基準量後，再乘以倍數即可得到比較量。</div>
                     </div>
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 雞兔同籠差額除法公式</div>
                       <div class="formula-body"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>兔數</mtext><mo>=</mo><mfrac><mrow><mtext>總腳數</mtext><mo>−</mo><mn>2</mn><mo>×</mo><mtext>總頭數</mtext></mrow><mrow><mn>4</mn><mo>−</mo><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{兔數} = \frac{\text{總腳數} - 2 \times \text{總頭數}}{4 - 2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">兔數</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">總腳數</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord cjk_fallback">總頭數</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>假設全部是雞，多出來的腳全是因為把兔子當成雞，每隻少算 2 隻腳。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">等量公理天平兩側對稱運算</div>
@@ -569,153 +604,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 等號如天平：兩邊同加、同減、同乘、同除 (≠0)，天平依然平衡</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 基準量看錯對象：「哥哥的錢是弟弟的 1.5 倍」，弟弟是基準量 1，哥哥是 1.5，許多學生把哥哥當基準量。</div><div class="pitfall-item">❌ 植樹問題兩端都種忘記加 1：長 100 公尺每 5 公尺種一棵，兩端都種是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mo>÷</mo><mn>5</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">100 \div 5 + 1 = 21</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">21</span></span></span></span> 棵，直接寫 20 棵會被扣分。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】籠子裡有雞和兔子共 35 隻，數一數牠們的腳一共有 94 隻。請問籠子裡有幾隻兔子？幾隻雞？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】籠子裡有雞和兔子共 35 隻，數一數牠們的腳一共有 94 隻。請問籠子裡有幾隻兔子？幾隻雞？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       A. 兔子 12 隻，雞 23 隻
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 兔子 15 隻，雞 20 隻
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 兔子 23 隻，雞 12 隻
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 兔子 20 隻，雞 15 隻
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 A</strong><br>
                   【解題步驟】：<br>1. 假設 35 隻全部都是雞：<br>   應有的腳數 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mo>×</mo><mn>2</mn><mo>=</mo><mn>70</mn></mrow><annotation encoding="application/x-tex">35 \times 2 = 70</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">35</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">70</span></span></span></span> 隻腳。<br>2. 實際腳數比假設多出的腳數：<br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>94</mn><mo>−</mo><mn>70</mn><mo>=</mo><mn>24</mn></mrow><annotation encoding="application/x-tex">94 - 70 = 24</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">94</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">70</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">24</span></span></span></span> 隻腳。<br>3. 每將一隻雞換回兔子，腳數增加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>−</mo><mn>2</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">4 - 2 = 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 隻：<br>   兔子隻數 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>24</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">24 \div 2 = 12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">24</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">12</span></span></span></span> 隻。<br>4. 雞的隻數 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>35</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">35 - 12 = 23</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">35</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">12</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">23</span></span></span></span> 隻。<br>5. 代回驗算：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>×</mo><mn>4</mn><mo>+</mo><mn>23</mn><mo>×</mo><mn>2</mn><mo>=</mo><mn>48</mn><mo>+</mo><mn>46</mn><mo>=</mo><mn>94</mn></mrow><annotation encoding="application/x-tex">12 \times 4 + 23 \times 2 = 48 + 46 = 94</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">12</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">23</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">48</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">46</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">94</span></span></span></span> 隻腳，完全符合！<br>故正確答案選 A。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】父子兩人的年齡和是 56 歲，父親的年齡恰好是兒子年齡的 3 倍。請問父親和兒子各是幾歲？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】父子兩人的年齡和是 56 歲，父親的年齡恰好是兒子年齡的 3 倍。請問父親和兒子各是幾歲？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 兒子 12 歲，父親 44 歲
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 兒子 14 歲，父親 42 歲
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 兒子 16 歲，父親 40 歲
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 兒子 18 歲，父親 38 歲
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>1. 以兒子年齡為基準量「1」，父親年齡為比較量「3」。<br>2. 兩人和對應的倍數 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">1 + 3 = 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 倍。<br>3. 兒子年齡（基準量）= 總和 ÷ (1 + 倍數) = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>56</mn><mo>÷</mo><mn>4</mn><mo>=</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">56 \div 4 = 14</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">56</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">14</span></span></span></span> 歲。<br>4. 父親年齡 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>14</mn><mo>×</mo><mn>3</mn><mo>=</mo><mn>42</mn></mrow><annotation encoding="application/x-tex">14 \times 3 = 42</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">14</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">42</span></span></span></span> 歲。<br>故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能在題意中迅速找出誰是基準量「1」（通常在「的」字後方）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟練運用母子和 $S \div (1 + k)$ 與母子差 $D \div (1 - k)$ 解題</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能用假設法秒解雞兔同籠與不同面額郵票問題</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 35%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第5單元 / 南一第5單元 / 翰林第5單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 11：等量公理與未知數方程式求解</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級等式與算式填充題、加減互逆與乘除互逆</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：四則運算規則、乘除互逆、用未知數符號 (x, y) 記錄問題。</span>
               <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>等量公理（加減乘除）符號代數運算、生活應用題列式求解</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">等量公理本質</div>
+                  <div class="highlight-desc">等號兩邊同時加、減、乘、除以同一個不為 0 的數，等式依然成立。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">移項法則直觀心法</div>
+                  <div class="highlight-desc">左加移右變減、左乘移右變除；嚴格遵循符號變號原則。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">列式應用題標準三步驟</div>
+                  <div class="highlight-desc">1. 設未知數 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> ➔ 2. 依題意列出等式 ➔ 3. 移項求出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 並帶回驗算。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -737,25 +772,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 一元一次方程式求解步驟</div>
                       <div class="formula-body"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>a</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>c</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mi>a</mi><mi>x</mi><mo>=</mo><mi>c</mi><mo>−</mo><mi>b</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mi>x</mi><mo>=</mo><mfrac><mrow><mi>c</mi><mo>−</mo><mi>b</mi></mrow><mi>a</mi></mfrac></mrow><annotation encoding="application/x-tex">ax + b = c \implies ax = c - b \implies x = \frac{c - b}{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7184em;vertical-align:-0.024em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>先處理常數項加減，再處理未知數係數乘除。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">圓形百分率統計圖與圓心角換算</div>
@@ -777,153 +812,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 百分率 100% = 圓周 360° ｜ 1% = 3.6°</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 除以 0 的觀念題：判斷題「若 a = b，則 a ÷ c 必等於 b ÷ c」，答案是【錯誤】，因為題目未限定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo mathvariant="normal">≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c \neq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord katex-vbox"><span class="katex-thinbox"><span class="rlap"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="katex-inner"><span class="mord"><span class="mrel"></span></span></span><span class="katex-fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。</div><div class="pitfall-item">❌ 減號與除號順序反過來：如 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>−</mo><mi>x</mi><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">50 - x = 20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">50</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">20</span></span></span></span>，解得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>50</mn><mo>−</mo><mn>20</mn><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">x = 50 - 20 = 30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">50</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">20</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">30</span></span></span></span>；若誤算成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>20</mn><mo>−</mo><mn>50</mn></mrow><annotation encoding="application/x-tex">x = 20 - 50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">20</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">50</span></span></span></span> 則出錯。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】小華買了 3 枝相同的自動鉛筆和一個 45 元的立可帶，結帳時共付了 105 元。若設每枝自動鉛筆為 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 元，請問正確的方程式列式為何？每枝自動鉛筆是多少元？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小華買了 3 枝相同的自動鉛筆和一個 45 元的立可帶，結帳時共付了 105 元。若設每枝自動鉛筆為 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 元，請問正確的方程式列式為何？每枝自動鉛筆是多少元？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
-                      A. $3x - 45 = 105$；每枝 50 元
+                      A. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>x</mi><mo>−</mo><mn>45</mn><mo>=</mo><mn>105</mn></mrow><annotation encoding="application/x-tex">3x - 45 = 105</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">105</span></span></span></span>；每枝 50 元
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
-                      B. $3x + 45 = 105$；每枝 20 元
+                      B. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>45</mn><mo>=</mo><mn>105</mn></mrow><annotation encoding="application/x-tex">3x + 45 = 105</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">105</span></span></span></span>；每枝 20 元
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
-                      C. $3x + 105 = 45$；每枝 20 元
+                      C. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>105</mn><mo>=</mo><mn>45</mn></mrow><annotation encoding="application/x-tex">3x + 105 = 45</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">105</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span></span></span></span>；每枝 20 元
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
-                      D. $x + 45 = 105$；每枝 60 元
+                      D. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mn>45</mn><mo>=</mo><mn>105</mn></mrow><annotation encoding="application/x-tex">x + 45 = 105</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">105</span></span></span></span>；每枝 60 元
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>1. 3 枝鉛筆價格為 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">3x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mord mathnormal">x</span></span></span></span> 元，加上立可帶 45 元，總價 105 元：<br>   列式：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>45</mn><mo>=</mo><mn>105</mn></mrow><annotation encoding="application/x-tex">3x + 45 = 105</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">105</span></span></span></span>。<br>2. 解方程式（等量減法）：<br>   兩邊同減 45：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>45</mn><mo>−</mo><mn>45</mn><mo>=</mo><mn>105</mn><mo>−</mo><mn>45</mn><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mn>3</mn><mi>x</mi><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">3x + 45 - 45 = 105 - 45 \implies 3x = 60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">105</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6684em;vertical-align:-0.024em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">60</span></span></span></span>。<br>3. 解方程式（等量除法）：<br>   兩邊同除以 3：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>60</mn><mo>÷</mo><mn>3</mn><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">x = 60 \div 3 = 20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">60</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">20</span></span></span></span> 元。<br>4. 代入驗算：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>×</mo><mn>20</mn><mo>+</mo><mn>45</mn><mo>=</mo><mn>60</mn><mo>+</mo><mn>45</mn><mo>=</mo><mn>105</mn></mrow><annotation encoding="application/x-tex">3 \times 20 + 45 = 60 + 45 = 105</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">20</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">60</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">45</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">105</span></span></span></span> 元，計算無誤。<br>故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】解方程式 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>x</mi><mo>−</mo><mn>18</mn><mo>=</mo><mn>42</mn></mrow><annotation encoding="application/x-tex">4x - 18 = 42</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">18</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">42</span></span></span></span>，求未知數 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 的值是多少？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】解方程式 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>x</mi><mo>−</mo><mn>18</mn><mo>=</mo><mn>42</mn></mrow><annotation encoding="application/x-tex">4x - 18 = 42</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">18</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">42</span></span></span></span>，求未知數 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 的值是多少？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 6
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 10
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 15
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 24
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>1. 兩邊同加 18（等量加法公理）：<br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>x</mi><mo>−</mo><mn>18</mn><mo>+</mo><mn>18</mn><mo>=</mo><mn>42</mn><mo>+</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">4x - 18 + 18 = 42 + 18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">18</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">18</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">42</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">18</span></span></span></span><br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>x</mi><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">4x = 60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">4</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">60</span></span></span></span><br>2. 兩邊同除以 4（等量除法公理）：<br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>60</mn><mo>÷</mo><mn>4</mn><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">x = 60 \div 4 = 15</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">60</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">15</span></span></span></span>。<br>代回驗算：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mn>15</mn><mo>−</mo><mn>18</mn><mo>=</mo><mn>60</mn><mo>−</mo><mn>18</mn><mo>=</mo><mn>42</mn></mrow><annotation encoding="application/x-tex">4 \times 15 - 18 = 60 - 18 = 42</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">15</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">18</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">60</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">18</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">42</span></span></span></span>，完全相符！<br>故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我清楚知道等量除法公理中，除數絕對不能為 0</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握先消常數項加減、再消未知數係數乘除的解題順序</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能將生活情境題目設未知數 x 並正確列出一元一次方程式</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (國中先修)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">先修評量約佔 30%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第6單元 / 南一第6單元 / 翰林第6單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 12：統計圖表判讀、圓形圖與圓心角換算</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級折線圖與長條圖、五年級圓心角與百分率</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：長條圖與折線圖繪製、百分率 (%) 意義。</span>
               <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>圓形圖百分率與圓心角互換、統計圖表綜合判讀與先修銜接</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">圓形圖圓心角計算定理</div>
+                  <div class="highlight-desc"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>圓心角</mtext><mo>=</mo><msup><mn>360</mn><mo>∘</mo></msup><mo>×</mo><mtext>該項所佔百分率</mtext></mrow><annotation encoding="application/x-tex">\text{圓心角} = 360^\circ \times \text{該項所佔百分率}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">圓心角</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7574em;vertical-align:-0.0833em;"></span><span class="mord">36</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">該項所佔百分率</span></span></span></span></span>。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">全圓各項比例總和必須恰好等於 …</div>
+                  <div class="highlight-desc">全圓各項比例總和必須恰好等於 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">100\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">100%</span></span></span></span>（圓心角總和恰好等於 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>360</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6741em;"></span><span class="mord">36</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span>）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">四捨五入配平陷阱</div>
+                  <div class="highlight-desc">各百分率總和若出現 99% 或 101%，將差額 1% 補在所佔比例最大的那一項。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -941,25 +976,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 圓心角計算公式</div>
                       <div class="formula-body"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>圓心角</mtext><mo>=</mo><msup><mn>360</mn><mo>∘</mo></msup><mo>×</mo><mfrac><mtext>該項數量</mtext><mtext>總數量</mtext></mfrac><mo>=</mo><msup><mn>360</mn><mo>∘</mo></msup><mo>×</mo><mtext>百分率</mtext></mrow><annotation encoding="application/x-tex">\text{圓心角} = 360^\circ \times \frac{\text{該項數量}}{\text{總數量}} = 360^\circ \times \text{百分率}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">圓心角</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8074em;vertical-align:-0.0833em;"></span><span class="mord">36</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7241em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">總數量</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">該項數量</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8074em;vertical-align:-0.0833em;"></span><span class="mord">36</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7241em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">百分率</span></span></span></span></span></span></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>已知圓心角求百分率：百分率 = 圓心角 ÷ 360° × 100%。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">國中先修：數線正負數走步機</div>
@@ -991,114 +1026,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 原點 0 為界：正數向右、負數向左 ｜ 減負即是加正</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 百分率總和不為 100%：繪製圓形圖時，計算完各項目百分率後必須加總檢查是否等於 100%。</div><div class="pitfall-item">❌ 圓心角算成 100°：誤將整個圓當作 100 度，記住整個圓是 360 度！</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 1】六年級某班調查全班 40 位學生最喜愛的球類運動，繪製成圓形圖。其中喜歡籃球的人數有 16 人，請問在圓形圖中，代表喜歡籃球的扇形「圓心角」是幾度？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】六年級某班調查全班 40 位學生最喜愛的球類運動，繪製成圓形圖。其中喜歡籃球的人數有 16 人，請問在圓形圖中，代表喜歡籃球的扇形「圓心角」是幾度？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 72°
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 90°
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 144°
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 160°
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>1. 計算喜歡籃球人數佔全班的比例：<br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>16</mn><mn>40</mn></mfrac><mo>=</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>=</mo><mn>40</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\frac{16}{40} = \frac{2}{5} = 40\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">40</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">16</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">5</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">40%</span></span></span></span>。<br>2. 計算對應的圓心角：<br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>圓心角</mtext><mo>=</mo><msup><mn>360</mn><mo>∘</mo></msup><mo>×</mo><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>=</mo><msup><mn>144</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">\text{圓心角} = 360^\circ \times \frac{2}{5} = 144^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">圓心角</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7574em;vertical-align:-0.0833em;"></span><span class="mord">36</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">5</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6741em;"></span><span class="mord">14</span><span class="mord"><span class="mord">4</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span>。<br>故選 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台北市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 2】若要觀察並記錄臺北市一年 12 個月每個月平均氣溫的上升與下降變化趨勢，下列哪一種統計圖表最適合呈現？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】若要觀察並記錄臺北市一年 12 個月每個月平均氣溫的上升與下降變化趨勢，下列哪一種統計圖表最適合呈現？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 長條圖
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 折線圖
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 圓形圖
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 散布圖
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>折線圖的核心優勢在於呈現「隨時間連續變化的增減走勢」，記錄一年四季氣溫升降走勢最適合採用折線圖；長條圖適合比較靜態多寡，圓形圖適合呈現組成比例。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握圓心角 = 360° × 百分率 的計算方法</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚依據數據需求挑選最適合的統計圖表（長條圖比大小、折線圖看趨勢、圓形圖看比例）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道圓形圖繪製時百分率總和必須恰好等於 100%</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

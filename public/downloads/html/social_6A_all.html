@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 1：臺灣的自然地理環境、五大地形與氣候水資源</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 2：臺灣歷史重大轉折、日治現代化基礎與戰後民主深化</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 3：現代民主憲政、中央政府五院職權制衡與地方自治</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 4：生活法律常識、兒少權利保障與公民參與</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 1：臺灣的自然地理環境、五大地形與氣候水資源</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級臺灣地名由來、臺灣五大地形</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>板塊擠壓地形分布、經緯度坐標判讀、臺灣氣候南北季風特徵</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：班級自治自治市選舉、臺灣民主歷史沿革初識。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>憲法最高性、五權分立機關權限相互監督制衡、臺灣民主轉型三大歷程</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">中華民國五權分立制衡體系</div>
+                  <div class="highlight-desc">行政院（最高行政機關）、立法院（審查預算法律）、司法院（違憲審查解釋法律）、考試院（公務員考選）、監察院（糾舉彈劾）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">臺灣民主化關鍵三部曲</div>
+                  <div class="highlight-desc">1987 解除戒嚴開放黨禁報禁 ➔ 1996 首次總統公民直選 ➔ 2000 首次政黨和平輪替。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">憲法最高性與權利義務</div>
+                  <div class="highlight-desc">憲法保障人民平等權、自由權、受益權、參政權；行政院長由總統任命並向立法院負責。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -517,25 +552,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 臺灣氣候與地形核心口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">北回歸線分熱副，板塊擠出五大山；冬吹東北北濕冷，夏吹西南全島熱！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>降雨時空不均：夏秋多颱風與對流雨，冬季南部為枯水期。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">臺灣地形等高線與三大降水類型</div>
@@ -556,153 +591,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 地形雨 (迎風坡多雨、背風坡乾燥) ｜ 鋒面雨 (梅雨) ｜ 對流雨 (午後雷陣雨)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 誤以為臺灣不缺水：臺灣降雨總量多，但因為「坡陡流急」雨水迅速奔流入海加上「降雨集中夏秋」，因此人均可用水量極低，是缺水地區！</div><div class="pitfall-item">❌ 北回歸線穿越縣市搞錯：北回歸線穿越「嘉義縣（水上鄉）」與「花蓮縣（瑞穗鄉、豐濱鄉）」，並未穿越臺南或臺東。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】臺灣本島雖然年降雨量高達 2500 毫米，約為世界平均值的 3 倍，卻依然被聯合國列為全球相對缺水的地區之一。造成臺灣水資源留存不易的主要自然原因「不包括」下列哪一項？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】臺灣本島雖然年降雨量高達 2500 毫米，約為世界平均值的 3 倍，卻依然被聯合國列為全球相對缺水的地區之一。造成臺灣水資源留存不易的主要自然原因「不包括」下列哪一項？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 臺灣地勢起伏劇烈，河川坡陡流急，雨水迅速奔流入海
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 降雨在季節上分佈不均，中南部冬季常面臨長達數月的枯水期
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 臺灣四面環海，全年幾乎沒有任何降雨雲層通過
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 人口稠密，每人平均所能分配到的雨水量相對有限
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>臺灣年降雨量充沛，迎風面降雨多，絕非「全年沒有降雨雲層」；缺水的主因在於地形陡峻導致河水留不住、降雨季節過度集中於夏秋，以及地狹人稠。故錯誤選項為 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】冬天造訪臺灣時，基隆與宜蘭常常陰雨綿綿好幾個星期，中南部的高雄與屏東卻多半陽光普照、乾燥舒適。造成這種南北冬季氣候顯著差異的最主要原因是什麼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】冬天造訪臺灣時，基隆與宜蘭常常陰雨綿綿好幾個星期，中南部的高雄與屏東卻多半陽光普照、乾燥舒適。造成這種南北冬季氣候顯著差異的最主要原因是什麼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 冬季西南季風帶來的暖濕水氣
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 冬季東北季風受到中央山脈阻擋，北部為迎風面多雨，南部為背風面乾燥
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 南部地勢比北部高出許多
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 颱風都集中在冬季侵襲臺灣北部
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>冬季臺灣受強烈東北季風吹拂，水氣在北部、東北部迎風面抬升降雨；越過中央山脈後水氣散失下沉，中南部處於背風坡，呈現晴朗乾爽天氣。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我清楚知道臺灣是歐亞板塊與菲律賓海板塊擠壓形成的</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記北回歸線穿越嘉義與花蓮，劃分副熱帶與熱帶氣候</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能說出臺灣水資源缺乏的兩大自然主因（坡陡流急、夏豐冬枯）</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 2：臺灣歷史重大轉折、日治現代化基礎與戰後民主深化</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級荷西鄭氏清領前期臺灣歷史變遷</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>日治時期三階段統治、總督府專制政策、臺灣抗日武裝與非武裝文化抗爭</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：臺灣不同族群節慶風俗、歷史移民背景認識。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>臺灣多元族群光譜特徵、文化相對論精神、有形與無形文化資產保存</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">臺灣多元族群光譜</div>
+                  <div class="highlight-desc">原住民族（法定16族南島語系）、閩南人、客家人、外省族群、新住民共同構成文化馬賽克。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">文化相對論精神</div>
+                  <div class="highlight-desc">各種族群文化皆具獨特價值與歷史脈絡，以包容尊重取代刻板印象與文化偏見。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">文化資產保存與傳承</div>
+                  <div class="highlight-desc">有形文化資產（古蹟、歷史建築）與無形文化資產（原住民祭典、傳統工藝）之永續守護。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -722,25 +757,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 臺灣民主化關鍵年代口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">1987 解除戒嚴、1996 總統直選、2000 政黨輪替！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>八田與一設計建造烏山頭水庫與嘉南大圳。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">臺灣近現代歷史五大時期時間軸</div>
@@ -774,153 +809,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 原住民 ➔ 荷西 ➔ 鄭氏 ➔ 清領 ➔ 日治 ➔ 中華民國戰後民主化</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 水利工程人物混淆：嘉南大圳與烏山頭水庫的工程師是「八田與一」；清代興建瑠公圳的是郭錫瑠、八堡圳是施世榜。</div><div class="pitfall-item">❌ 第一次總統直選年份：臺灣第一次公民直選總統是在「西元 1996 年」（李登輝當選），非 1987 解嚴年。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】日治時期有一位日本水利技師，耗費十餘年心血主持興建「烏山頭水庫」與「嘉南大圳」，將乾旱貧瘠的嘉南平原徹底改造成為臺灣最重要的農產穀倉，至今嘉南地區人民依然感念他的貢獻。請問這位偉大的技師是誰？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】日治時期有一位日本水利技師，耗費十餘年心血主持興建「烏山頭水庫」與「嘉南大圳」，將乾旱貧瘠的嘉南平原徹底改造成為臺灣最重要的農產穀倉，至今嘉南地區人民依然感念他的貢獻。請問這位偉大的技師是誰？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       A. 八田與一
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 兒玉源太郎
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 後藤新平
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 新渡戶稻造
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 A</strong><br>
                   【解題步驟】：<br>八田與一被譽為「嘉南大圳之父」，親自勘查設計並建造烏山頭水庫與綿密灌溉渠道，徹底解決嘉南平原缺水之苦。故正確答案選 A。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】中華民國在臺灣走向現代民主化國家的歷程中，下列哪一個歷史事件標誌著長達 38 年的非常戒嚴狀態正式終結，全面恢復人民集會、結社與言論自由？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】中華民國在臺灣走向現代民主化國家的歷程中，下列哪一個歷史事件標誌著長達 38 年的非常戒嚴狀態正式終結，全面恢復人民集會、結社與言論自由？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 1968 年實施九年國民義務教育
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 1987 年政府正式宣布「解除戒嚴」
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 1979 年十大建設全數完工
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 1996 年舉行第一次總統全民直接選舉
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>1987 年蔣經國總統正式宣布解除臺灣地區戒嚴令，解除報禁與黨禁，宣告臺灣正式邁入憲政民主新紀元。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記八田與一建造嘉南大圳與烏山頭水庫的功績</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握解嚴 (1987)、第一次總統直選 (1996)、政黨輪替 (2000) 的民主進程</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能列舉十大建設與新竹科學園區對臺灣高科技經濟的貢獻</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 3：現代民主憲政、中央政府五院職權制衡與地方自治</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級民國成立與抗日戰爭歷史</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>戰後二二八事件與戒嚴體制、臺灣民主化重大里程碑（解嚴/直選/輪替）</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：買賣交易、貨幣功能、臺灣早期農業與現代工業概念。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>臺灣產業三階段轉型歷程、市場供求法則與均衡價格、機會成本與聰明理財</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">臺灣產業三階段升級</div>
+                  <div class="highlight-desc">1950年代以農業培養工業 ➔ 1960-70年代加工出口輕重工業 ➔ 1980年代後竹科半導體與高科技矽島。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">市場供需法則與均衡價格</div>
+                  <div class="highlight-desc">價格上漲需求減少供給增加；價格下跌需求增加供給減少；交會點為市場均衡價格。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">機會成本與理性理財</div>
+                  <div class="highlight-desc">做出一項選擇時所放棄的代價中價值最高者；聰明理財落實「收入 - 儲蓄 = 支出」先存後花原則。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -941,25 +976,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 五院職權記憶口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">行政推施政、立院審預算、司法掌審判、考試拔人才、監察查弊案！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>立法院負責制定「法律」與審查「預算案」；行政院負責提送預算案。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">市場供需曲線與均衡價格模型</div>
@@ -982,153 +1017,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 需求法則 (價跌量增) ｜ 供給法則 (價漲量增) ｜ 交點為市場均衡價格</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 審核國家總預算的機關看錯：行政院是「編列提出預算」，真正負責「審核通過預算」的是「立法院」！</div><div class="pitfall-item">❌ 糾正與彈劾的對象搞反：監察院對「機關」提「糾正案」；對違法失職的「個人（公務員）」提「彈劾案」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】中央政府各機關分工合作且相互制衡。如果行政院擬定推動了一項重大國家建設計畫，需要大筆政府經費預算，此項預算案必須送交哪一個中央機關審查並通過後，行政院才能合法動支經費？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】中央政府各機關分工合作且相互制衡。如果行政院擬定推動了一項重大國家建設計畫，需要大筆政府經費預算，此項預算案必須送交哪一個中央機關審查並通過後，行政院才能合法動支經費？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 司法院
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 考試院
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 監察院
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       D. 立法院
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 D</strong><br>
                   【解題步驟】：<br>立法院代表全體人民監督政府荷包，憲法規定行政院編列的國家年度總預算案，必須送交「立法院」三讀審議通過後方得動支。故正確答案為 D。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】某市政府公務員在辦理公共工程採購標案時涉嫌收受廠商賄賂，嚴重違法失職。依據憲法規定，哪一個中央機關具有調查事實並提出「彈劾案」移送懲戒的職權？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】某市政府公務員在辦理公共工程採購標案時涉嫌收受廠商賄賂，嚴重違法失職。依據憲法規定，哪一個中央機關具有調查事實並提出「彈劾案」移送懲戒的職權？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 行政院
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 監察院
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 考試院
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 立法院
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>監察院掌管監察權，負責監督各級政府公務人員，當公務員違法失職時，得行使調查權並提出「彈劾案」。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚說出五院（行政、立法、司法、考試、監察）的核心職責</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道憲法是位階最高的根本大法，法律命令違憲一律無效</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握地方自治中行政首長（執行）與議會（審查預算）的監督關係</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第4單元 / 南一第4單元 / 翰林第4單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 4：生活法律常識、兒少權利保障與公民參與</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>中年級家庭生活理財、買賣商品貨幣使用</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>市場經濟供求曲線與均衡價格、機會成本與比較利益、消費理財觀</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：世界地圖大洲大洋、國際新聞初探、聯合國概念。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>全球化經濟文化網絡、政府間組織 (IGO) vs 非政府組織 (NGO)、臺灣實質外交</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">全球化網絡雙刃效應</div>
+                  <div class="highlight-desc">國際貿易分工與文化交流深化，但也帶來貧富差距擴大、流行傳染病跨國傳播與環境外部性挑戰。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">國際組織兩大類型</div>
+                  <div class="highlight-desc">政府間國際組織 (IGO，如 UN、WHO、WTO) 以主權國家為主體；非政府組織 (NGO，如紅十字會、無國界醫生、世界展望會) 以民間力量跨國援助。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">臺灣實質外交與世界公民責任</div>
+                  <div class="highlight-desc">積極參與國際人道救援、醫療公衛奉獻，推動實質外交實踐地球村互助。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -1150,25 +1185,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 兒少保護黃金口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">未滿 6 歲不可獨留在家，家暴虐待撥打 113，選舉權 20 歲、被選舉權 23 歲！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>兒虐事件法定通報時限為 24 小時之內。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">中央政府五院相互制衡架構圖</div>
@@ -1200,114 +1235,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 行政院(政令施政) ｜ 立法院(立法預算) ｜ 司法院(釋憲裁判) ｜ 考試監察</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 獨留兒童年齡限制：法律規定不可獨留的是「未滿 6 歲」之兒童，常有考題出「未滿 12 歲」作為陷阱。</div><div class="pitfall-item">❌ 選舉權與被選舉權年齡搞反：去投票選別人是「20 歲」；自己出來登記參選是「23 歲」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】依據我國《兒童及少年福利與權益保障法》的明確規定，父母、監護人或其他實際照顧兒童之人，絕對「不得將幾歲以下之兒童單獨留置於家中」或易發生危險的環境？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】依據我國《兒童及少年福利與權益保障法》的明確規定，父母、監護人或其他實際照顧兒童之人，絕對「不得將幾歲以下之兒童單獨留置於家中」或易發生危險的環境？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 未滿 3 歲
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 未滿 6 歲
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 未滿 10 歲
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 未滿 12 歲
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>《兒少法》第 51 條明定，不得使「未滿 6 歲」之兒童獨處，或使兒童處於易發生危險之環境。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】小玲在網路上原創繪製了一套非常可愛的插畫貼圖，發表在個人社群網站上。下列哪一種行為符合《著作權法》的正當規範？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】小玲在網路上原創繪製了一套非常可愛的插畫貼圖，發表在個人社群網站上。下列哪一種行為符合《著作權法》的正當規範？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 某文具商家未經小玲同意，擅自將插畫印在書包上公開販售賺錢
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 同學阿強將插畫下載後塗改簽名，在學校比賽中宣稱是自己的原創作品
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 學校師生在課堂報告中引用該插畫說明構圖，並清楚標註作者姓名與出處來源
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 某社群論壇將插畫製成盜版素材包供所有人付費下載
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>在合理解釋教學研究範圍內引用他人公開著作，並誠實「註明出處與作者姓名」，符合《著作權法》合理使用之規定；其餘未經授權之改作、商用皆屬侵權行為。故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道兒少法禁止獨留未滿 6 歲幼童，通報家暴撥打 113</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記選舉權 20 歲、被選舉權 23 歲的法定門檻</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我清楚引用網路圖文創作必須尊重著作權並標註出處來源</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

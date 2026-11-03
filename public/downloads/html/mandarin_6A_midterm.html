@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 1：字詞形音義辨析、多音字破音與錯別字診斷</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 2：修辭技巧精講、句型結構與優美文句賞析</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1~3課 / 南一第1~3課 / 翰林第1~3課</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 1：字詞形音義辨析、多音字破音與錯別字診斷</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級常用國字辨析、部首與查字典法</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>形近字與多音字辨析、常用成語典故與語境運用</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：段落大意歸納、字典部首檢索、閱讀筆記圈關鍵字。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>PIRLS 閱讀理解四層次、Skimming 與 Scanning 雙讀法、5W1H 脈絡心智圖</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">PIRLS 閱讀理解四層次階梯</div>
+                  <div class="highlight-desc">直接提取訊息 ➔ 直接推論 ➔ 詮釋整合 ➔ 比較評估批判。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">高年級長文雙閱讀策略</div>
+                  <div class="highlight-desc">略讀 (Skimming) 抓取文章大意與各段主題句；掃讀 (Scanning) 定位關鍵人名、年代與數字。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">六何法 (5W1H) 提煉文本主旨</div>
+                  <div class="highlight-desc">Who（人物）、When（時間）、Where（地點）、What（事件）、Why（成因）、How（經過與結果）。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -523,25 +558,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 破音字記憶口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">字音跟隨字義走，裝載承載讀四聲 (zài)，年載記載讀三聲 (zǎi)！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>考試判定字音先看詞性與詞義，絕不死背單字。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">形近字與多音破音字辨析思維圖</div>
@@ -564,153 +599,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 辨形看部首偏旁 ｜ 辨音隨字義詞性轉換</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 「再接再厲」寫成「勵」：「厲」是指磨刀石，磨快長矛繼續奮戰，非激勵之勵。</div><div class="pitfall-item">❌ 「名列前茅」寫成「矛」：「茅」是指古代楚國行軍在前面開路的茅草信號旗，非武器長矛。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】下列文句中，哪一個成語完全「沒有」錯別字？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】下列文句中，哪一個成語完全「沒有」錯別字？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 只要我們按步就班地複習，段考必定能取得佳績
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 他在運動會大隊接力賽中表現優異，使全班同學士氣大振，決定再接再厲爭取總冠軍
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 聽到下課鐘聲響起，大家迫不急待地衝向球場打球
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 他在團隊中根本沒有真才實學，只不過是濫芋充數罷了
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>• A 項：按「步」就班 ➔ 應更正為按「部」就班（部指門類部門）。<br>• B 項：再接再厲 ➔ 完全正確無誤！<br>• C 項：迫「不急」待 ➔ 應更正為迫「不及」待（及是趕得上）。<br>• D 項：濫「芋」充數 ➔ 應更正為濫「竽」充數（竽是古代竹製簧管樂器）。<br>故正確答案選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】下列各組「」中的字音，何者前後「完全相同」？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】下列各組「」中的字音，何者前後「完全相同」？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 滿「載」而歸 ／ 三年五「載」
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 「稱」心如意 ／ 「稱」兄道弟
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 參「差」不齊 ／ 陰錯陽「差」
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       D. 氣喘「吁」吁 ／ 長「吁」短嘆
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 D</strong><br>
                   【解題步驟】：<br>• A 項：滿「載」zài（裝載）／ 三年五「載」zǎi（年）。<br>• B 項：「稱」心 chèn（適合相符）／ 「稱」兄 chēng（稱呼）。<br>• C 項：參「差」cī ／ 陽「差」chā。<br>• D 項：氣喘「吁」吁 xū ／ 長「吁」短嘆 xū ➔ 兩者皆讀 xū，完全相同！<br>故選 D。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記「按部就班、再接再厲、名列前茅、迫不及待」四個高頻成語的正確寫法</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能根據字義精確判斷「載、稱、差、咽」的多音讀音</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握部首與形旁對辨析形近字字義的關鍵作用</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第4~6課 / 南一第4~6課 / 翰林第4~6課</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 2：修辭技巧精講、句型結構與優美文句賞析</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級基本修辭（譬喻、擬人、感嘆）</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>高階修辭（映襯、排比、轉化、設問三式、借代）精準辨析</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：記敘文六要素（人、事、時、地、物、情）、標點符號基本用法。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>起承轉合四段結構、倒敘與插敘時空切換、人物心理與外貌刻畫細節</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">記敘文起承轉合黃金架構</div>
+                  <div class="highlight-desc">起（破題引出情境） ➔ 承（鋪陳發展細節） ➔ 轉（高潮矛盾衝突） ➔ 合（感悟總結昇華）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">敘事時序靈活切換</div>
+                  <div class="highlight-desc">順敘（時間正常推進）、倒敘（先寫結果再回溯過往懸念）、插敘（插入相關往事豐富人物背景）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">以細節刻畫取代抽象形容</div>
+                  <div class="highlight-desc">善用人物動作、神態眼神、心理獨白與環境烘托，展現真實生命張力。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -729,25 +764,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 設問三兄弟判斷口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">自問自答是提問，答案反面是激問，心中不知是懸問！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>激問（反問）句末通常帶有強烈語氣，答案早已蘊含在問題中。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">段考四大修辭手法思維架構圖</div>
@@ -772,114 +807,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 映襯(對立反差) ｜ 轉化(擬人物化) ｜ 借代(特徵替代) ｜ 設問(自問自答)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 混淆提問與激問：提問後面「必有自己回答的答案」；激問後面「沒有直接答案，讀者一讀即知反向意涵」。</div><div class="pitfall-item">❌ 借代詞彙混淆：「杏林」借代醫學界；「杏壇」借代教育界（孔子講學於杏壇，不可混淆！）。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】「誰說小學生的力量微小？只要大家團結一心，也能為地球減碳做出巨大貢獻！」這句話運用了哪一種設問修辭？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】「誰說小學生的力量微小？只要大家團結一心，也能為地球減碳做出巨大貢獻！」這句話運用了哪一種設問修辭？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 提問
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 激問（反詰）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 懸問
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 設問中的直問
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>「誰說小學生的力量微小？」表面提問，實際意思是「小學生的力量一點也不微小！」答案在問題的反面，沒有自問自答，屬於強烈肯定的「激問（反問）」。故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】古代文學常用「借代」修辭，下列借代詞語與所指稱對象的配對，何者完全正確？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】古代文學常用「借代」修辭，下列借代詞語與所指稱對象的配對，何者完全正確？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 杏林 ➔ 教育界與學校教師
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 巾幗 ➔ 戰場上的勇猛男子漢
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 白衣天使 ➔ 善良的天神
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       D. 絲竹 ➔ 音樂與樂器
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 D</strong><br>
                   【解題步驟】：<br>• A 項：杏林借代醫界（杏壇借代教育界）。<br>• B 項：巾幗指古代婦女頭飾，借代女性（如巾幗不讓鬚眉）。<br>• C 項：白衣天使借代護理師。<br>• D 項：絲指弦樂器，竹指管樂器，合稱絲竹借代音樂，配對正確！故選 D。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能精確分辨設問三法：提問（有自答）、激問（反詰強烈）、懸問（真問無答）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我清楚「杏壇」代教育界、「杏林」代醫界，絕不張冠李戴</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能識別轉化（擬人、擬物）與映襯（正反對比）修辭</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

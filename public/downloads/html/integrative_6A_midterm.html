@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 1：時間管理四象限、理性金錢規劃與 631 儲蓄法則</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 2：人際溝通雙贏藝術、「我訊息」與情緒紅綠燈</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 1：時間管理四象限、理性金錢規劃與 631 儲蓄法則</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級訂定個人學習作息時間表</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>時間管理艾森豪四象限矩陣、專注力番茄工作法、兒童理財儲蓄觀念</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：日常作息時間表規劃、個人零用錢使用經驗。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>艾森豪時間管理四象限矩陣、番茄鐘工作法、需要 vs 想要辨別與 631 理財儲蓄</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">艾森豪時間四象限矩陣</div>
+                  <div class="highlight-desc">優先投入「重要但不緊急（第二象限）」如健康、自主深度學習、長遠規劃，擺脫整天救火之焦慮陷阱。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">番茄鐘自律專注法</div>
+                  <div class="highlight-desc">專注工作 25 分鐘 ➔ 徹底休息 5 分鐘；完成 4 個循環後長休息 15~30 分鐘，維持高敏捷大腦狀態。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">需要</div>
+                  <div class="highlight-desc">vs「想要」及 631 理財儲蓄金字塔：收入 60% 生活必需支出、30% 儲蓄投資、10% 彈性消費；拒絕衝動購物。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -517,25 +552,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 時間管理與儲蓄鐵律口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">重要不急（第二象限）最關鍵，先存再花（收入-儲蓄=支出）積少成多！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>專注番茄鐘：專注學習 25 分鐘，放鬆休息 5 分鐘，杜絕多工分心。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">艾森豪時間管理四象限矩陣圖</div>
@@ -560,153 +595,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 優先做第二象限「重要但不緊急」(防患未然) ｜ 杜絕無效刷題與分心</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 誤以為第一象限花最多時間最好：整天忙於第一象限（重要且緊急）的人會疲於奔命滅火；真正高效能者會投資時間在「第二象限（重要不緊急）」，做好預防規畫。</div><div class="pitfall-item">❌ 儲蓄順序錯誤：「收入 - 支出 = 儲蓄」常導致到月底所剩無幾；正確為「收入 - 儲蓄 = 支出（先存後花）」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】在時間管理「艾森豪四象限法則」中，下列哪一項事件屬於「重要但目前不具急迫性（第二象限）」，對個人的長期成長最為關鍵，卻往往最容易被學生拖延忽視？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】在時間管理「艾森豪四象限法則」中，下列哪一項事件屬於「重要但目前不具急迫性（第二象限）」，對個人的長期成長最為關鍵，卻往往最容易被學生拖延忽視？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 突然響起的手機廣告來電通知
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 每天固定閱讀 30 分鐘優良課外書籍與規律運動鍛鍊體魄
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 馬上要交給班長評分的數學作業簿
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 漫無目的地連續刷兩個小時短影音
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>第二象限（重要但不緊急）包含規律閱讀、自我充實與運動等，雖然沒有迫在眉睫的期限，卻是決定長期素養高低的基石，需要高度自律安排執行。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】小華每月有 600 元零用錢，若他依照「631 理財儲蓄法則」來合理配置個人的開銷與存款，下列哪一種分配金額是正確的？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】小華每月有 600 元零用錢，若他依照「631 理財儲蓄法則」來合理配置個人的開銷與存款，下列哪一種分配金額是正確的？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       A. 日常必要開銷 360 元、儲蓄 180 元、風險或自我充實 60 元
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 全部 600 元拿去買最新的限量公仔玩具
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 儲蓄 0 元、日常開銷 500 元、娛樂 100 元
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 儲蓄 400 元、日常開銷 200 元
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 A</strong><br>
                   【解題步驟】：<br>631 法則：60% 日常生活必需（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mo>×</mo><mn>0.6</mn><mo>=</mo><mn>360</mn></mrow><annotation encoding="application/x-tex">600 \times 0.6 = 360</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">600</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">0.6</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">360</span></span></span></span> 元）、30% 儲蓄投資（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mo>×</mo><mn>0.3</mn><mo>=</mo><mn>180</mn></mrow><annotation encoding="application/x-tex">600 \times 0.3 = 180</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">600</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">0.3</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">180</span></span></span></span> 元）、10% 彈性自我充實或備用金（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>600</mn><mo>×</mo><mn>0.1</mn><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">600 \times 0.1 = 60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">600</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">0.1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">60</span></span></span></span> 元）。故選 A。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握時間四象限，知道第二象限（重要不緊急）是自我成長的核心</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚區分「需要」與「想要」，購物前會列出清單</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記「先存再花」的 631 儲蓄法則</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 2：人際溝通雙贏藝術、「我訊息」與情緒紅綠燈</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級情緒紅綠燈辨識</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>我訊息 (I-Message) 溝通四部曲、非暴力溝通、同理心傾聽與衝突調解</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：同儕人際相處、班級衝突調解經驗。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>我訊息 (I-Message) 溝通黃金公式、同理心積極傾聽技術、同儕人際衝突化解三部曲</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">我訊息溝通黃金公式</div>
+                  <div class="highlight-desc">「當你【客觀事實】時，我覺得【真實感受】，因為【對我的實質影響】，我希望【具體期待】」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">同理心傾聽四大原則</div>
+                  <div class="highlight-desc">眼神專注接觸、點頭給予回饋、不急著插話評判、以「你的意思是...」複述對話確認感受。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">人際衝突化解三部曲</div>
+                  <div class="highlight-desc">先降溫（暫停離開情緒現場） ➔ 釐清雙方真正需求與界線 ➔ 共同尋找雙贏 (Win-Win) 替代方案。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -726,25 +761,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 我訊息公式</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">當你【客觀事實】時，我覺得【真實感受】，因為【影響】，我希望【具體期待】！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>對比：你訊息（你怎麼這麼自私討厭）只會引發防衛反擊；我訊息促進彼此真誠同理。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">「需要」與「想要」及 631 理財儲蓄金字塔</div>
@@ -771,114 +806,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 收入 100% ➔ 60% 生活必須 ｜ 30% 儲蓄投資 ｜ 10% 彈性娛樂</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 假我訊息帶有人身攻擊：「我覺得你這個人真是無藥可救」，表面用我覺得，實際是人身攻擊，不合乎我訊息規範。</div><div class="pitfall-item">❌ 同理心不等於完全認同對方的過錯：同理心是理解對方的「情緒感受」，不代表贊同或縱容錯誤行為。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】好朋友向小明借了精美整理的筆記本，歸還時封面不小心被果汁弄髒了。小明若採用健康的「我訊息 (I-message)」來與對方溝通，下列哪一句話最適當且有助於維繫友誼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】好朋友向小明借了精美整理的筆記本，歸還時封面不小心被果汁弄髒了。小明若採用健康的「我訊息 (I-message)」來與對方溝通，下列哪一句話最適當且有助於維繫友誼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 「你這個人怎麼這麼粗心大意，真是有夠討厭！」
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 「當我看見筆記封面被弄髒時，我覺得很心疼難過，因為我花了很多心血整理，我希望你下次借閱時能多加小心。」
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 「算了，算我倒楣，我以後再也不會理你了！」
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 「你一定是故意嫉妒我成績好才這樣做的！」
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>選項 B 完整符合我訊息三要素：客觀陳述封面被弄髒事實、真誠表達心疼難過、說明心血影響並提出未來期望，不帶侮辱性字眼，具備高度溝通素養。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】在人際互動中當感到自己即將因憤怒而失控時，「情緒紅綠燈」技巧的第一步「紅燈」所代表的核心意義是什麼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】在人際互動中當感到自己即將因憤怒而失控時，「情緒紅綠燈」技巧的第一步「紅燈」所代表的核心意義是什麼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 立刻揮動拳頭給對方致命反擊
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 停下來 (Stop)，覺察自己的憤怒生理反應，深呼吸冷靜情緒
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 大聲召集同學一起排擠對方
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 轉身逃跑曠課回家
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>紅燈代表「Stop（停下來）」，覺察情緒、踩下煞車，讓理智腦有時間接管衝動的杏仁核。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能熟練寫出我訊息句型（當...我覺得...因為...我希望...）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握情緒紅綠燈三步驟（紅燈停、黃燈想、綠燈行）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我懂得積極傾聽，能在對話中以同理心換位思考</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

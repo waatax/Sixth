@@ -18,17 +18,17 @@ import {
   getUnitVersionFocus
 } from './unitHighlights.js';
 import { conceptBridges } from '../conceptBridges.js';
-import { balanceDeep } from '../../utils/balanceOptions.js';
+// Keep original option letters aligned with worked explanations in printable notes.
 
 // 段考講義真題：四選一正確答案位置平衡
-const mathNotes = balanceDeep(rawMathNotes);
-const sciNotes = balanceDeep(rawSciNotes);
-const manNotes = balanceDeep(rawManNotes);
-const socNotes = balanceDeep(rawSocNotes);
-const engNotes = balanceDeep(rawEngNotes);
-const artNotes = balanceDeep(rawArtNotes);
-const peNotes = balanceDeep(rawPeNotes);
-const compNotes = balanceDeep(rawCompNotes);
+const mathNotes = rawMathNotes;
+const sciNotes = rawSciNotes;
+const manNotes = rawManNotes;
+const socNotes = rawSocNotes;
+const engNotes = rawEngNotes;
+const artNotes = rawArtNotes;
+const peNotes = rawPeNotes;
+const compNotes = rawCompNotes;
 
 export {
   mathNotes,

@@ -4,7 +4,7 @@
 // 1. 48 份講義無空缺組合
 // 2. 全 64 單元 100% 覆蓋
 // 3. 每個知識點確保至少有 1 個對應視覺圖示/圖表/表格 (SVG 考點圖解 + 審題雷達速查表 + 三版本對照 Deck)
-// 4. 每個單元至少有 2 道歷屆段考真題步驟級教學詳解 (共 128 道真題)
+// 4. 每個單元至少有 2 道觀念應用練習步驟級教學詳解 (共 128 道練習)
 
 import process from 'process';
 import { getNotesBySubjectSemesterAndScope, allExamNotes } from '../src/data/examNotes/index.js';
@@ -65,7 +65,7 @@ for (const sub of subjects) {
         }
 
         if (!n.pastExamWalkthroughs || n.pastExamWalkthroughs.length < 2) {
-          errors.push(`[真題詳解缺失] 單元 ${n.unitId} 真題實戰解析不足 2 題！`);
+          errors.push(`[真題詳解缺失] 單元 ${n.unitId} 觀念應用解析不足 2 題！`);
         } else {
           totalWalkthroughCount += n.pastExamWalkthroughs.length;
         }
@@ -82,13 +82,13 @@ console.log(`✓ 48 種段考講義組合檢查完畢：共 ${totalCombinations}
 console.log(`✓ 全 64 單元覆蓋度：${checkedUnits.size} / 64 單元 (100% 完整涵蓋)`);
 console.log(`✓ 考點視覺向量圖解：全數具備 (SVG 完整無缺)`);
 console.log(`✓ 審題關鍵字破題雷達表格：全 64 單元對照健全`);
-console.log(`✓ 歷屆段考真題步驟級詳解：共 ${Object.values(allExamNotes).reduce((acc, n) => acc + (n.pastExamWalkthroughs?.length || 0), 0)} 道真題，皆附步驟推導教學與正解`);
+console.log(`✓ 觀念應用練習步驟級詳解：共 ${Object.values(allExamNotes).reduce((acc, n) => acc + (n.pastExamWalkthroughs?.length || 0), 0)} 道練習，皆附步驟推導教學與正解`);
 
 if (errors.length > 0) {
   console.error(`❌ 檢驗發現 ${errors.length} 項錯誤：`);
   errors.forEach(e => console.error('  - ' + e));
   process.exit(1);
 } else {
-  console.log('🎉 48 份段考講義全數通過最高規格品質檢驗！零瑕疵！');
+  console.log('🎉 48 份段考講義全數通過資料結構檢查；不代表內容、版本或考題來源已完成專業查核。');
   console.log('========================================================================');
 }

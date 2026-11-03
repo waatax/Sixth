@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 5：市場經濟運作、貨幣四大職能、供需法則與理性消費</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 6：現代投資理財、風險管理、國際貿易與全球分工</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 7：全球化地球村、世界七大洲四大洋與多元文化尊重</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 8：資訊素養、數位公民責任、防詐與聯合國 SDGs 永續藍圖</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 5：市場經濟運作、貨幣四大職能、供需法則與理性消費</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級班級幹部選舉、公民參與概念</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>憲法最高性、中央政府五院分立制衡架構、總統職權與地方自治</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：校規、守法概念、常見違法行為討論。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>法律位階金字塔、聯合國兒童權利公約四大原則、少年事件保護法治防線</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">法律位階金字塔</div>
+                  <div class="highlight-desc">憲法（最高根本大法） > 法律（立法院三讀） > 命令（行政機關訂定）；下位階牴觸上位階者「無效」！</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">聯合國兒童權利公約 (CRC)…</div>
+                  <div class="highlight-desc">聯合國兒童權利公約 (CRC) 四大核心原則：禁止歧視原則、兒童最佳利益原則、生命生存及發展權、尊重兒童意見權。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">兒少權益保障與數位安全防線</div>
+                  <div class="highlight-desc">未滿 6 歲兒童不得獨留家中（家暴撥打 113）；保護個人數位足跡，嚴禁轉傳未成年私密影像與網路霸凌。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -519,25 +554,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 供需法則口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">價高買方少、賣方拚命產；供需交會處，就是均衡價！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>機會成本是所放棄選擇中「價值最高者」，並非所有放棄項目的總和。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">少年保護事件與法律權益階梯</div>
@@ -560,153 +595,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 兒少法保護 ｜ 12~18歲非行少年處置 ｜ 審前調查與保護處分</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 機會成本全部相加：選擇讀書放棄了打電動（價值100）和睡覺（價值80），機會成本是「100（最高者）」，不是 100+80=180！</div><div class="pitfall-item">❌ 貨幣職能混淆：商品標籤上寫「定價 100 元」是「價值衡量標準」；掏出 100 元付給收銀員是「交易媒介」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】小美逛文具店時，看見筆記本架上的價格標籤明確印著「特價 45 元」。此時「45 元」最能具體體現貨幣的哪一項主要職能？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小美逛文具店時，看見筆記本架上的價格標籤明確印著「特價 45 元」。此時「45 元」最能具體體現貨幣的哪一項主要職能？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 交易媒介
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 價值衡量標準（計價單位）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 價值儲存
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 延期支付工具
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>標籤標示「45 元」是用貨幣單位來客觀衡量並標示筆記本的商品價值，體現貨幣的「價值衡量標準（價值尺度）」職能。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】某年夏天連續數個強烈颱風重創臺灣中南部蔬菜主要產地，導致市場上的葉菜類供應量劇烈暴減。在消費者需求依然旺盛的情況下，市場上的蔬菜價格通常會產生什麼變化？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】某年夏天連續數個強烈颱風重創臺灣中南部蔬菜主要產地，導致市場上的葉菜類供應量劇烈暴減。在消費者需求依然旺盛的情況下，市場上的蔬菜價格通常會產生什麼變化？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       A. 蔬菜價格會大幅上漲
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 蔬菜價格會劇烈下跌
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 蔬菜價格絕對維持完全不變
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 政府會強迫所有菜農免費贈送蔬菜
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 A</strong><br>
                   【解題步驟】：<br>依據市場供需法則：當商品供給量大量減少（供不應求、物以稀為貴）時，消費者彼此競價爭取購買，市場均衡價格會「明顯上漲」。故選 A。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚分辨貨幣四大功能（交易媒介、價值衡量、價值儲存、延期支付）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握供需法則（價高需少供多，價低需多供少）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能正確算出機會成本是「所放棄選擇中價值最高者」</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 6：現代投資理財、風險管理、國際貿易與全球分工</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>中年級校園校規與家庭生活常識</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>人權保障四權利、民法刑法基本常識、兒少福利與權益保障法</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：環境污染問題、減塑環保行動、氣候變遷。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>聯合國 SDGs 17 項永續指標、淨零碳排氣候行動、循環經濟與綠色生活實踐</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">聯合國 2030 永續發展 1…</div>
+                  <div class="highlight-desc">聯合國 2030 永續發展 17 項目標 (SDGs)：兼顧「環境保護、經濟發展、社會共融」三支柱。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">淨零碳排與全球氣候行動</div>
+                  <div class="highlight-desc">減少溫室氣體排放、選購具「碳足跡標籤」與「節能標章」商品、推動綠色能源轉型。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">循環經濟與永續消費</div>
+                  <div class="highlight-desc">源頭減量 (Reduce)、重複使用 (Reuse)、資源回收 (Recycle)，守護地球有限資源。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -728,25 +763,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 理財風險口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">不把所有雞蛋放在同一個籃子裡（分散投資、控制風險）！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>高報酬必有高風險，天下沒有「保證獲利又零風險」的投資。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">全球化與七大洲四大洋經緯座標圖</div>
@@ -766,153 +801,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 赤道為緯度 0° ｜ 本初子午線為經度 0° ｜ 經度定時差、緯度定氣候</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 保險誤當賺錢工具：保險的本質是「轉移人生無法承受之重大風險」，而非高獲利金融工具。</div><div class="pitfall-item">❌ 零風險高獲利詐騙陷阱：只要看見標榜「保證穩賺不賠、月領高利息」必定是投資詐騙！</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】理財名言說：「不要把所有的雞蛋放在同一個籃子裡。」這句話主要在提醒投資人進行資產配置時，必須高度重視哪一個觀念？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】理財名言說：「不要把所有的雞蛋放在同一個籃子裡。」這句話主要在提醒投資人進行資產配置時，必須高度重視哪一個觀念？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 盡可能將所有的儲蓄全部買同一家公司的股票以賺取最大暴利
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 透過多元化投資工具分散風險，避免單一投資失利造成全盤毀滅
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 絕對不要把錢存在任何銀行裡
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 買雞蛋時一定要使用多個堅固的塑膠籃子
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>把雞蛋分散在不同籃子比喻將資金分散在銀行定存、債券、基金等不同風險等級的標的，核心意涵是「分散投資風險」。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】臺灣本地缺乏石油與天然氣等天然礦產能源，但擁有世界頂尖的半導體晶圓代工製造技術。臺灣進口原油提煉並大量出口高科技晶片到全球各國，這種國際經貿現象最能體現下列何種經濟原理？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】臺灣本地缺乏石油與天然氣等天然礦產能源，但擁有世界頂尖的半導體晶圓代工製造技術。臺灣進口原油提煉並大量出口高科技晶片到全球各國，這種國際經貿現象最能體現下列何種經濟原理？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 地方自治制度
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 國際分工與比較利益互惠貿易
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 外部負效益與環境污染
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 閉關自守保護政策
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>各國發揮自身資源優勢進行專業化生產，並透過自由貿易互通有無、各取所需，屬於典型的「國際專業分工與比較利益」實踐。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記「高報酬伴隨高風險」，分散投資能降低風險</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我清楚保險的本質是危險分擔與保障</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我理解國際分工與進出口貿易讓各國資源互補的原理</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 7：全球化地球村、世界七大洲四大洋與多元文化尊重</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級原住民族群文化特色、漢人移民生活</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>多元文化內涵、新住民多元融入、消除族群歧視與文化平權</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：世界地圖大洲大洋認識、東西方重要文明初探。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>經緯度座標與時區計算（東加西減）、世界三大板塊構造與地形氣候、世界文化遺產</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">經緯度座標與時區換算</div>
+                  <div class="highlight-desc">緯度決定氣候帶（熱帶、溫帶、寒帶）；經度決定時區，經度每差 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>15</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">15^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6741em;"></span><span class="mord">1</span><span class="mord"><span class="mord">5</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span> 相差 1 小時，口訣「東加西減」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">世界三大地形與板塊構造</div>
+                  <div class="highlight-desc">環太平洋火山地震帶、阿爾卑斯-喜馬拉雅造山帶；山脈、平原、高原之地形分布。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">聯合國教科文組織世界遺產</div>
+                  <div class="highlight-desc">自然遺產與文化遺產保護，促進多元世界文明互信包容。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -935,25 +970,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 世界古文明母親河配對口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">埃及伴尼羅、兩河出美索、印度臨恆河、華夏起黃長！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>伊斯蘭教嚴禁豬肉、印度教尊崇牛為神聖。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">聯合國 17 項 SDGs 永續發展核心架構</div>
@@ -975,153 +1010,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 經濟成長 ｜ 社會包容 ｜ 環境永續三位一體</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 阿拉伯數字的真正發明國：阿拉伯數字是「古印度人」發明的，後經由阿拉伯商人傳入歐洲並發揚光大，許多人誤以為是阿拉伯人發明。</div><div class="pitfall-item">❌ 世界最大洲與最大洋：大洲最大是「亞洲」；大洋最大是「太平洋」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】班上新轉來一位來自印尼信奉伊斯蘭教（回教）的新同學。學校在為他準備營養午餐與日常相處時，下列哪一種做法最能展現「多元文化包容與尊重」的核心素養？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】班上新轉來一位來自印尼信奉伊斯蘭教（回教）的新同學。學校在為他準備營養午餐與日常相處時，下列哪一種做法最能展現「多元文化包容與尊重」的核心素養？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 強迫他跟大家吃一樣的滷排骨與炸豬排，認為不應搞特殊
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 尊重其宗教信仰，主動避免提供豬肉食材，並體諒其齋戒月習俗
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 在班上當眾嘲弄他的宗教禁忌與生活方式
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 完全孤立他不跟他進行任何溝通交流
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>伊斯蘭教信徒嚴禁食用豬肉製品；多元文化的核心在於同理接納他人的文化與宗教背景，主動提供清真飲食考量與生活尊重。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】古希臘歷史學家希羅多德曾說：「埃及是尼羅河的贈禮。」這句話深刻闡明了哪一條河流在古埃及文明孕育過程中所扮演的關鍵決定性角色？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】古希臘歷史學家希羅多德曾說：「埃及是尼羅河的贈禮。」這句話深刻闡明了哪一條河流在古埃及文明孕育過程中所扮演的關鍵決定性角色？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 亞馬遜河
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 尼羅河
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 剛果河
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 多瑙河
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>尼羅河每年定期的氾濫帶來極為肥沃的黑色淤泥，使得兩岸農業蓬勃發展，進而孕育出壯麗的古埃及文明。故正確答案為 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記七大洲（亞洲最大、大洋洲最小）與三大洋（太平洋最大）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握四大古文明發源河川（埃及尼羅河、美索不達米亞底格里斯與幼發拉底河）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我尊重伊斯蘭教禁食豬肉與印度教敬牛的宗教文化習俗</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第4單元 / 南一第4單元 / 翰林第4單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 8：資訊素養、數位公民責任、防詐與聯合國 SDGs 永續藍圖</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級地球儀與世界七大洲三大洋</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>全球化浪潮優缺點、國際組織功能（聯合國/WTO/WHO）、聯合國 SDGs 指標</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：電腦網路使用守則、智慧型手機生活影響。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>AI 人工智慧與演算法衝擊、假訊息事實查核三部曲、數位足跡與科技公民倫理</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">人工智慧 (AI) 革命與演算法透明度</div>
+                  <div class="highlight-desc">大數據機器學習帶來生活便利，同時需防範演算法偏誤、深度偽造 (Deepfake) 與個資濫用。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">數位公民資訊查證三部曲</div>
+                  <div class="highlight-desc">不輕信、不轉傳、多查證（善用台灣事實查核中心與 MyGoPen 等第三方事實查核工具）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">數位素養與科技倫理</div>
+                  <div class="highlight-desc">尊重智慧財產權與原創作者授權，拒絕網路霸凌，建構友善健康的數位網路社群。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -1140,25 +1175,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 反詐與查核緊急專線</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">反詐騙撥 165、反霸凌撥 1953、保護婦幼撥 113！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>假訊息止於智者，未經查證絕不隨手轉發親友群組。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">數位公民素養與假訊息查核三步驟</div>
@@ -1183,114 +1218,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 查核出處 ｜ 交叉驗證 ｜ 停看聽不轉傳 ｜ 資訊同溫層防範</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 誤以為匿名上網就不會被查到：所有網路連線皆有 IP 記錄，在網路留言恐嚇、侮辱造謠均需負《刑法》公然侮辱罪與妨害名譽法律責任。</div><div class="pitfall-item">❌ 轉傳不實訊息免責：在通訊軟體散播足以危害公共安全之不實謠言，依法可處《社會秩序維護法》罰鍰。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 1】小明的爺爺在手機通訊軟體收到一則標題聳動的訊息：「緊急轉發！吃這三種水果會立刻導致急性毒發身亡！」小明看見後，最適當且具備良好媒體素養的協助做法是？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小明的爺爺在手機通訊軟體收到一則標題聳動的訊息：「緊急轉發！吃這三種水果會立刻導致急性毒發身亡！」小明看見後，最適當且具備良好媒體素養的協助做法是？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 立刻幫爺爺轉發到全家族所有群組，寧可信其有
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 提醒爺爺暫緩轉發，並運用「台灣事實查核中心」或向衛福部官方網站查驗訊息真偽
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 大聲嘲笑爺爺缺乏常識
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 幫爺爺打電話罵水果攤老闆
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>面對聳動可疑的網路轉傳訊息，正確的媒體素養是「停、看、查」，先暫緩轉發並主動透過權威官方或客觀事實查核機構求證，杜絕謠言擴散。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 2】學校舉辦「綠色減塑愛地球」校園無塑園遊會，鼓勵全體師生自備環保餐具與保溫瓶，減少一次性塑膠垃圾的產生。這項行動主要符合聯合國哪一項永續發展目標 (SDGs)？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】學校舉辦「綠色減塑愛地球」校園無塑園遊會，鼓勵全體師生自備環保餐具與保溫瓶，減少一次性塑膠垃圾的產生。這項行動主要符合聯合國哪一項永續發展目標 (SDGs)？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       A. SDG 12：促進綠色經濟，確保永續的消費與生產模式
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. SDG 8：促進體面工作與經濟增長
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. SDG 16：創建和平正義的制度
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. SDG 17：加強全球夥伴關係
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 A</strong><br>
                   【解題步驟】：<br>減少免洗餐具、自備容器以降低廢棄物產生，是落實資源永續循環利用、實踐「負責任的消費與生產模式（SDG 12）」的代表性行動。故選 A。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記反詐騙專線 165，面對可疑連結絕不點擊</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握假訊息查證三步驟（停、看、查）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道聯合國 17 項 SDGs 旨在實現全球環境與人類社會永續共榮</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 6：臺灣傳統偶戲戲曲行當、剪黏工藝與動畫定格原理</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業評量 100%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 6：臺灣傳統偶戲戲曲行當、剪黏工藝與動畫定格原理</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>生活手工勞作與玩具製作</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>臺灣傳統偶戲（布袋戲/皮影戲/傀儡戲）、定格動畫與數位影像美學</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：鄉土文化活動、參觀廟宇雕刻、傳統節慶舞龍舞獅初識。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>臺灣傳統三大偶戲行當角色、剪紙陶藝傳統工藝技法、世界偶戲文化遺產傳承</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">臺灣傳統三大偶戲</div>
+                  <div class="highlight-desc">掌中布袋戲（巧手布偶）、皮影戲（透光剪影牛皮製偶）、傀儡戲（絲線提動懸絲偶）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">布袋戲五大行當角色分類</div>
+                  <div class="highlight-desc">生（溫文儒雅男子）、旦（端莊柔美女子）、淨（花臉剛烈勇猛）、末（白髯老者）、丑（詼諧幽默丑角）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">傳統工藝與現代文創新生</div>
+                  <div class="highlight-desc">將剪紙窗花、交趾陶、刺繡融入現代文創商品，傳承臺灣在地美學文化資產。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -515,25 +550,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 戲曲行當臉譜速記口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">生男旦女淨花臉，丑角鼻白真詼諧；紅忠黑剛白臉奸！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>定格動畫核心原理為人眼的「視覺暫留」。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">黃金比例與費氏黃金螺旋曲線</div>
@@ -551,114 +586,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 長寬比 1 : 1.618 ｜ 廣泛運用於帕德嫩神廟、名畫構圖與向日葵種子</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 淨與丑的角色混淆：臉譜畫滿彩色濃烈圖騰、個性勇猛的是「淨（花臉）」；鼻樑塗一小塊白粉、搞笑逗趣的是「丑（三花）」。</div><div class="pitfall-item">❌ 剪黏與交趾陶辨析：剪黏是「剪碎陶瓷碗片拼貼鑲嵌」；交趾陶是「捏塑低溫彩釉燒製的立體陶塑」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 1】傳統布袋戲與京劇將角色分為「生、旦、淨、丑」四大行當。其中在鼻樑中央塗上一塊白色豆腐乾形狀的白粉、專門負責搞笑與調節氣氛的詼諧角色屬於哪一行當？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】傳統布袋戲與京劇將角色分為「生、旦、淨、丑」四大行當。其中在鼻樑中央塗上一塊白色豆腐乾形狀的白粉、專門負責搞笑與調節氣氛的詼諧角色屬於哪一行當？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 生
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 旦
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 淨
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       D. 丑
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 D</strong><br>
                   【解題步驟】：<br>戲曲中的「丑角（小丑、三花）」專門扮演詼諧風趣的滑稽人物，其最具辨識度的造型特徵便是鼻樑塗抹一塊白粉。故選 D。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 2】定格動畫（如黏土動畫、樂高動畫）之所以能在我們眼中呈現出活靈活現的連續流暢動態，主要是利用了人類視覺系統的哪一項生理特性？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】定格動畫（如黏土動畫、樂高動畫）之所以能在我們眼中呈現出活靈活現的連續流暢動態，主要是利用了人類視覺系統的哪一項生理特性？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 雙眼立體盲點
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 視覺暫留
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 睫狀肌近視疲勞
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 色彩對比錯覺
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>當靜態畫面以每秒 12 格以上的速率快速連續切換時，大腦利用前一個影像在視網膜停留約 0.1 秒的「視覺暫留」效應，將獨立靜止畫面融合成連續運動的影像。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚指出生（男）、旦（女）、淨（花臉）、丑（搞笑鼻抹白粉）的特徵</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道剪黏是將彩色瓷碗碎片鑲嵌在灰泥胚體上的廟宇屋脊工藝</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我理解定格動畫流暢播放的生理科學基礎是「視覺暫留」</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 4：社會服務學習四部曲、視障人導法與公民實踐</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 5：數位素養、假訊息查核、反網路霸凌與健康上網指南</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 4：社會服務學習四部曲、視障人導法與公民實踐</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級校園環境清潔與志工服務體驗</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>服務學習四部曲（準備/服務/反思/慶賀）、在地社區關懷與社會公民行動</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：校園打掃志工、愛心跳蚤市場義賣捐款體驗。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>服務學習完整循環四部曲（準備/服務/反思/慶賀）、社區弱勢關懷與社會公民實踐</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">服務學習完整四階段</div>
+                  <div class="highlight-desc">準備（調查需求與規劃） ➔ 服務（動手實踐） ➔ 反思（回顧感受與學習收穫） ➔ 慶賀（成果分享表揚）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">服務學習與單純勞動之本質差異</div>
+                  <div class="highlight-desc">服務學習強調「動手做」與「深層反思 (Reflection)」並重，從付出中深化社會公民責任感。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">社區參與與弱勢關懷行動</div>
+                  <div class="highlight-desc">走入在地社區、關懷獨居長者與育幼院兒童，用同理心與實際行動溫暖社會。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -518,25 +553,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 人導法四字金訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">問（主動問） ➔ 拍（手背碰） ➔ 引（握手肘走半步前） ➔ 報（預告路況）！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>切忌強拉視障者的手杖或硬拖對方往前走。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">加德納八大多元智能探索與費曼學習法</div>
@@ -556,153 +591,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 人人皆有優勢智能 ｜ 費曼學習法：能用自己的話教會別人才是真懂</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 人導法拉著對方走：正確是「讓視障者輕握引導者的手肘上方」，引導者走在半步之前，絕不是拉扯對方的手或盲杖。</div><div class="pitfall-item">❌ 逗弄執勤導盲犬：執勤中的導盲犬佩戴導盲鞍，隨意拍打餵食會分散其注意力，威脅視障主人安全。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】在路上看見視障朋友需要協助引導過馬路時，正確的「人導法」標準安全操作規範是下列何者？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】在路上看見視障朋友需要協助引導過馬路時，正確的「人導法」標準安全操作規範是下列何者？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 直接從背後用力推對方往前走
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 用力拉扯對方的白色導盲手杖帶路
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 先禮貌詢問，若同意則讓對方輕握自己的手肘上方，引導者走在半步之前平穩前進並預告路況
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 牽著對方的導盲犬奔跑
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>視障人導法標準口訣為「問、拍、引、報」，讓對方握住手肘上方半步引導，並口頭提示上下台階障礙，既尊重又安全。故選 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】在學校組織的「服務學習」專案實踐中，哪一個環節被教育專家視為「將實踐經驗轉化為深刻智慧、實現自我生命成長」的最關鍵靈魂步驟？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】在學校組織的「服務學習」專案實踐中，哪一個環節被教育專家視為「將實踐經驗轉化為深刻智慧、實現自我生命成長」的最關鍵靈魂步驟？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 準備階段
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 服務行動階段
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 深入反思 (Reflection) 階段
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 吃便當階段
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>反思（Reflection）是服務學習的靈魂所在，透過內省服務經驗、思考社會問題本質與個人公民責任，才能真正達成教育目標。故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記服務學習四部曲（準備、服務、反思、慶賀）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能熟練示範視障人導法四步驟（問、拍、引、報）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握導盲犬四不一問原則（不餵、不摸、不叫、不拒、主動問）</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 5：數位素養、假訊息查核、反網路霸凌與健康上網指南</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級電腦網路使用守則、個資防護</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>假訊息查核查證、網路數位足跡、防範網路霸凌與健康數位素養</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：手機網路使用、YouTube影片觀看、社群留言守則。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>假訊息事實查核三部曲（停看聽）、辨識 AI 深度偽造 (Deepfake)、數位足跡與隱私防護</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">假訊息查核三步驟</div>
+                  <div class="highlight-desc">停（先別急著轉發） ➔ 看（檢查來源網址與發布日期） ➔ 查（透過台灣事實查核中心/MyGoPen 交叉比對）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">辨識 AI 深度偽造 (Dee…</div>
+                  <div class="highlight-desc">辨識 AI 深度偽造 (Deepfake) 破綻：觀察眨眼頻率是否異常、臉頰光影與頭髮邊緣是否模糊扭曲、牙齒手指數量是否正確。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">網路霸凌防制與數位安全三不一要</div>
+                  <div class="highlight-desc">不輕信、不轉傳、不拍攝私密照；遇到網路霸凌要勇敢截圖存證並向師長或 iWIN 檢舉申訴。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -725,25 +760,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 數位公民反霸凌與護眼口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">假訊息停看查，反霸凌三不一留（通報撥 1953），用眼 20-20-20 遠眺 6 米防近視！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>網路霸凌留痕跡，公然侮辱與誹謗需負法律責任。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">服務學習完整循環四部曲</div>
@@ -773,114 +808,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 準備 (Preparation) ➔ 服務 (Service) ➔ 反思 (Reflection) ➔ 慶賀 (Celebration)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 誤以為匿名留言不負法律責任：網路並非法外之地，警察可透過 IP 地址追查發文者真實身分。</div><div class="pitfall-item">❌ 看到聳動健康訊息直接轉發：切忌「寧可信其有」心態隨手轉發，應查證無誤再分享。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】眼科醫師極力推崇在日常數位學習中落實「20-20-20 護眼法則」以防範兒童近視急速惡化。這項法則的具體內容是指？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】眼科醫師極力推崇在日常數位學習中落實「20-20-20 護眼法則」以防範兒童近視急速惡化。這項法則的具體內容是指？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       A. 每連續看螢幕 20 分鐘，應將視線遠眺至少 20 呎（約 6 公尺）遠的地方放鬆至少 20 秒
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 每天打電動 20 小時，睡覺 20 分鐘
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 螢幕亮度調到 20%，眨眼 20 次
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 每 20 個月才能看一次手機
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 A</strong><br>
                   【解題步驟】：<br>國際通行的「20-20-20」護眼黃金原則：每用眼 20 分鐘，遠眺 20 呎（約 6 公尺）外遠處綠景至少 20 秒，讓眼睛睫狀肌充分放鬆。故選 A。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】如果在網路通訊群組目睹有同學正遭受惡意文字攻擊、被排擠侮辱時，身為正義勇敢的數位公民，最適當的應對作為是下列何者？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】如果在網路通訊群組目睹有同學正遭受惡意文字攻擊、被排擠侮辱時，身為正義勇敢的數位公民，最適當的應對作為是下列何者？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 一起跟著起鬨罵對方，以求融入群體
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 恪守「不跟風、不轉發、不冷漠」，並將完整對話截圖留證，主動向老師通報或撥打 1953 專線
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 覺得很好笑，轉發到全校更多群組讓大家看熱鬧
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 假裝沒看見，完全不關自己的事
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>反網路霸凌應堅守「三不一留（不跟風、不轉發、不冷漠、截圖留證）」，並及時通報師長或撥打教育部 1953 反霸凌專線，瓦解霸凌惡意。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握假訊息查證三步驟（停、看、查）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記反霸凌專線 1953 與截圖留證原則</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能落實 20-20-20 或 3010 護眼守則保護視力</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 1：自然拼讀 (Phonics) 發音規則與核心生活字彙</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 2：社區探索、問路指引與方位介系詞應用</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 1：自然拼讀 (Phonics) 發音規則與核心生活字彙</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>字母發音、短母音與長母音發音常識</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>自然拼讀 Phonics 字母拼讀規律、常見雙子音與複合母音辨音</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：基礎時間英語讀法、常見日常作息動詞片語 (get up, go to bed)。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>整點半點時間說法、時間介系詞 (at/on/in)、頻率副詞位置與第三人稱單數動詞變化</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">時間說法與時間介系詞</div>
+                  <div class="highlight-desc">整點用 at (at 7:00)、日期與星期用 on (on Monday, on October 10th)、月份與時段用 in (in the morning, in July)。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">頻率副詞百分比階梯</div>
+                  <div class="highlight-desc">always (100%) > usually (80%) > often (60%) > sometimes (40%) > never (0%)；位置在「be 動詞之後、一般動詞之前」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">現在簡單式主詞一致性</div>
+                  <div class="highlight-desc">主詞為第三人稱單數（He / She / It）時，一般動詞必須字尾加 -s 或 -es (watches, brushes, plays)。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -523,25 +558,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 Magic e 發音魔法口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">字尾有個 e，前面母音發原音！cap ➔ cape, hop ➔ hope, kit ➔ kite！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>考試辨析題：找劃底線母音發音與眾不同者（如 pin vs pine）。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">自然拼讀 Phonics 母音長短音發音對照圖</div>
@@ -564,153 +599,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 Short Vowels (短母音) vs Long Vowels (Magic e 長母音)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。</div><div class="pitfall-item">❌ ea 的短音例外：bread, head, ready 中的 ea 發短音 /ɛ/，與 clean, read 中的長音 /i/ 不同。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】Which of the following words has a DIFFERENT vowel sound from the other three?</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】Which of the following words has a DIFFERENT vowel sound from the other three?</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. cake
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. lake
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. back
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. name
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>• cake, lake, name 的 a_e 結構皆發長母音 /e/。<br>• back 的 a 處於閉音節，發短母音 /æ/。<br>故發音與眾不同的是 C（back）。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】Read the sentence: "The dolphin took a photo with the smart elephant." How is the letter combination "ph" pronounced in these words?</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】Read the sentence: "The dolphin took a photo with the smart elephant." How is the letter combination "ph" pronounced in these words?</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. /p/
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. /f/
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. /b/
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. /h/
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>在英語拼讀規則中，子音組合「ph」固定發 /f/ 的聲音（如 phone, photo, dolphin, elephant）。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握 Magic e 規則（短音變長音：tap ➔ tape, pin ➔ pine）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能辨析 th 的有聲 /ð/（this, father）與無聲 /θ/（three, mouth）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道 ph 發 /f/ 的聲音（phone, dolphin）</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 2：社區探索、問路指引與方位介系詞應用</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級日常問候、顏色數字生活名詞</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>日常校園教室生活情境詞彙、常見介系詞（in/on/under/next to）</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：現在簡單式句構、一般動詞基本形。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>過去式核心定義、規則動詞 (+ed) 與不規則動詞變化、did/didn't 助動詞疑問句</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">過去簡單式核心定義與時間信號</div>
+                  <div class="highlight-desc">表達過去已經結束之事件，常伴隨 yesterday, last night, two days ago, in 2020。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">規則與高頻不規則動詞變化</div>
+                  <div class="highlight-desc">規則動詞加 -ed (play-played, watch-watched)；不規則動詞需牢記 (go-went, see-saw, eat-ate, have-had)。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">疑問句與否定句大助動詞 did</div>
+                  <div class="highlight-desc">使用 did 或 didn't 後面動詞「必須打回原形」 (Did you go...? / I didn't see...)。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -734,25 +769,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 問路指引句構公式</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">Go straight ➔ Turn left/right at... ➔ It's on your left/right (next to / across from...)</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>禮貌開場必用 "Excuse me"，回答最後常附帶 "You can't miss it!"（你絕對不會錯過它的！）。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">問路與方位介系詞地圖 (Town Navigation)</div>
@@ -779,116 +814,117 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 between A and B ｜ next to ｜ across from ｜ turn right/left</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。</div><div class="pitfall-item">❌ on your right 介系詞用錯：在你的右手邊介系詞用「on」，不可用 in 或 at。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】Dialogue Practice:
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】Dialogue Practice:
 Tourist: "Excuse me, how can I get to the Central Library?"
 Police Officer: "Go straight along Sun Street for one block. Turn right at the traffic light. The library is _____ the post office and the bank."</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. next
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. between
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. across
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. under
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>句型中後面出現了 "the post office AND the bank"（兩者之間），標準句型為「between A and B」（在 A 與 B 之間）。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】Choose the correct sentence:</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】Choose the correct sentence:</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. Turn to left at the second corner.
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. The museum is on your right side. You cannot miss it.
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. How do I get the train station?
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. Go straight and turning right.
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>• A 項：Turn left 即可，不加 to。<br>• B 項："The museum is on your right side. You cannot miss it." 文法語意完全正確！<br>• C 項：get to the train station 缺少 to。<br>• D 項：祈使句對等連接，應為 Turn right。<br>故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記問路句型 "How can I get to...?"</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握方位介系詞：next to, between...and..., across from, on the corner</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能聽懂並讀懂指引方向（Go straight, Turn left/right）</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 9：聲音的產生、三要素（音調/響度/音色）與樂器發聲</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 10：生態系的平衡、食物網能量流動與環境永續</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第4單元 / 南一第4單元 / 翰林第4單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 9：聲音的產生、三要素（音調/響度/音色）與樂器發聲</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級天氣變化、五年級太陽地表能量</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>溫室效應成因、全球暖化連鎖衝擊、碳足跡減量與能源轉型</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：發聲敲擊振動感受、耳朵構造聽覺保護。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>聲音三要素（響度/音調/音色）、調音變因控制（弦長粗細鬆緊）、聲波傳播介質規律</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">聲音三要素全解構</div>
+                  <div class="highlight-desc">響度（看振幅大小，敲擊用力越大響度越大）、音調（看振動頻率高低）、音色（看聲波波形）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">音調高低調音心法</div>
+                  <div class="highlight-desc">弦樂器「弦越短、越細、越緊」振動越快音調越高；管樂器「空氣柱越短」音調越高。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">聲音傳播需要介質</div>
+                  <div class="highlight-desc">聲音在固體傳播最快，其次為液體、氣體，在「真空」中完全無法傳播。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -517,26 +552,26 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 樂器音調高低黃金定律</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">發聲體【短、細、緊、小】 ➔ 振動快（頻率高） ➔ 音調【高】！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>吹水瓶（空氣柱振動）：水越多，空氣柱越短，吹奏音調越【高】！
 敲水瓶（水與瓶子振動）：水越少，整體越輕，敲擊音調越【高】！（兩者正好相反，大考最愛陷阱題！）</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">生物適應環境：保護色、警戒色與擬態</div>
@@ -561,10 +596,10 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 達爾文天擇說：適者生存，不適者淘汰</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
@@ -573,143 +608,143 @@
    • 敲擊是敲【水與瓶】：水越少 ➔ 質量越輕越容易振動 ➔ 音調越【高】。</div><div class="pitfall-item">❌ 大聲說話不等於音調高：大聲喊叫是「振幅大、響度大」，不代表「頻率高、音調高」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 1】小明將四個相同的玻璃杯分別裝入不同容量的水（甲杯裝 1/4 水、乙杯裝 2/4 水、丙杯裝 3/4 水、丁杯裝滿水）。小明用嘴對著四個杯子的瓶口水平吹氣，請問哪一個杯子吹奏出的「音調最高」？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小明將四個相同的玻璃杯分別裝入不同容量的水（甲杯裝 1/4 水、乙杯裝 2/4 水、丙杯裝 3/4 水、丁杯裝滿水）。小明用嘴對著四個杯子的瓶口水平吹氣，請問哪一個杯子吹奏出的「音調最高」？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 甲杯
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 乙杯
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 丙杯
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       D. 丁杯
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 D</strong><br>
                   【解題步驟】：<br>1. 用嘴對著瓶口吹氣時，發聲振動的物體是瓶內的水上方的「空氣柱」。<br>2. 丁杯的水裝得最滿，使得剩餘的「空氣柱最短」。<br>3. 空氣柱越短，氣流振動頻率越快（每秒振動次數越多），發出的音調就越「高」！<br>故正確答案選 D。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 2】在音樂會上，我們即使閉上眼睛，也能清楚分辨出正在演奏的是「鋼琴」還是「小提琴」。這主要是依據聲音的哪一項特性？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】在音樂會上，我們即使閉上眼睛，也能清楚分辨出正在演奏的是「鋼琴」還是「小提琴」。這主要是依據聲音的哪一項特性？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 音調（頻率）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 響度（振幅）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 音色（波形與材質）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 音速（傳播快慢）
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>鋼琴的琴弦與共鳴箱、小提琴的琴木與琴弦材質結構不同，發聲時產生的複合聲波「波形」各具特色，這個獨特的聲音特性稱為「音色（音品）」。故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚區別音調（頻率高低）、響度（振幅大小）、音色（波形特色）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記吹水瓶（空氣柱短音高）與敲水瓶（水少音高）的差異</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道聲音無法在真空中傳播，太空中聽不到聲音</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第5單元 / 南一第5單元 / 翰林第5單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 10：生態系的平衡、食物網能量流動與環境永續</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級動物分類、五年級繁衍下一代方式</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>生物多樣性三層次（基因/物種/生態系）、外來入侵種衝擊與保育行動</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：肉眼觀察昆蟲植物、放大鏡使用技巧。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>複式光學顯微鏡操作、上下顛倒左右相反成像規律、玻片向偏向方向推移</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">複式光學顯微鏡成像光學</div>
+                  <div class="highlight-desc">目鏡與物鏡雙重凸透鏡放大，呈現「上下顛倒、左右相反」的倒立放大虛像；放大倍率 = 目鏡倍數 × 物鏡倍數。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">載玻片移動必背口訣</div>
+                  <div class="highlight-desc">「物像偏在視野何處，載玻片就朝該方向推移（物在哪偏，片朝哪追）」！</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">低倍鏡換高倍鏡四變化</div>
+                  <div class="highlight-desc">視野變「暗」、觀察範圍變「小」、細胞影像變「大」、細胞數量變「少」。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -728,25 +763,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 食物鏈箭號標準指向法則</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">被吃者 ➔ 掠食者（能量由箭尾流向箭頭）</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>能量在食物鏈傳遞中逐階遞減（約只有 10% 傳到下一營養階層），因此頂級掠食者數量最稀少。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">生態系能量流動與生物放大效應</div>
@@ -772,114 +807,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 能量逐層遞減 (約 10% 傳遞) ｜ 脂溶性重金屬毒素逐層放大！</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 食物鏈箭號方向畫反：箭頭代表「能量與養分的流向」，草被羊吃，箭號必須是「草 ➔ 羊」，不可寫成「羊 ➔ 草」。</div><div class="pitfall-item">❌ 分解者的歸屬：蚯蚓屬於分解有機碎屑的「清除者/食碎屑者」，真正的微生物分解者主要是「細菌與真菌（黴菌、蕈類）」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 1】在一個健康的森林生態系中，下列關於生態系成分與食物網運作的敘述，何者完全正確？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】在一個健康的森林生態系中，下列關於生態系成分與食物網運作的敘述，何者完全正確？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 食物鏈中箭頭方向代表誰吃誰，例如「青蛙 ➔ 蝗蟲」
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 生態系中的食物網越錯綜複雜，其維持生態平衡與自我調節的能力就越強
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 分解者在生態系中不重要，就算全部消失對生態系也沒有影響
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 引進外來種生物一定能增加臺灣的生物多樣性，應該大力推廣引進
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>食物網錯綜複雜意味著捕食關係多元，單一物種受衝擊時系統不易崩潰，穩定度高；食物鏈箭頭代表能量流向（蝗蟲 ➔ 青蛙）；分解者是物質循環關鍵；引進外來入侵種會重創本土生態。故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 2】在臺灣被稱為「綠色殺手」的外來入侵植物，會大量攀爬纏繞在原生樹木上，搶奪陽光導致大片森林枯萎死亡。這指的是下列哪一種植物？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】在臺灣被稱為「綠色殺手」的外來入侵植物，會大量攀爬纏繞在原生樹木上，搶奪陽光導致大片森林枯萎死亡。這指的是下列哪一種植物？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 布袋蓮
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 小花蔓澤蘭
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 大王椰子
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 銀合歡
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>小花蔓澤蘭原產於中南美洲，生長繁殖速度驚人，會覆蓋包覆樹冠阻絕陽光使樹木窒息死亡，因此被冠以「綠色殺手」或「植物殺手」之稱。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記食物鏈箭號永遠從「被吃的植物」指向「捕食的動物」</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道食物網越複雜多樣，生態系自我調節與抵抗力越強</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能列舉常見外來入侵種（福壽螺、綠鬣蜥、小花蔓澤蘭、琵琶鼠魚）</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

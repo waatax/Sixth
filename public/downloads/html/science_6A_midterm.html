@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 1：多變的天氣、氣團鋒面與颱風防災</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 2：水溶液的性質、酸鹼檢驗與酸鹼中和</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 3：電磁鐵原理、安培右手定則與電動機馬達</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 35%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 1：多變的天氣、氣團鋒面與颱風防災</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級水的蒸發凝結、天氣觀測氣溫計使用</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：水的三態變化（冰、水、水蒸氣）、氣溫計使用、風向風力初步。</span>
               <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>水循環三態、高低氣壓氣流垂直運動、冷暖鋒面與颱風路徑</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">高低氣壓空氣流動法則</div>
+                  <div class="highlight-desc">高壓中心氣流下沉多晴朗；低壓中心氣流上升膨脹冷凝多陰雨。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">鋒面符號與特徵</div>
+                  <div class="highlight-desc">冷鋒（尖銳三角形、移動快降暴雨）、暖鋒（圓弧半圓形、持續連續降雨）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">颱風氣流逆時針向中心旋轉輻合</div>
+                  <div class="highlight-desc">臺灣梅雨季主要由「冷暖氣團勢均力敵之滯留鋒」引起。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -519,31 +554,31 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 天氣現象水態速記口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">浮空為雲地為霧，冷凝為露凍為霜；高壓晴朗天下沉，低壓上升多風雨！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>考試判定物理狀態：露水是液態水，霜是固態冰晶。</div>
                     </div>
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 鋒面符號識別</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">冷鋒標三角形 ➔ 尖端指向移動方向；暖鋒標半圓形；滯留鋒交替標於兩側。</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>冷鋒過境後氣溫大幅下降，風向常轉為偏北風。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">臺灣常見冷暖鋒面與高低氣壓圖</div>
@@ -567,153 +602,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 冷鋒三角形朝東南推進 ｜ 冷氣團主動推擠暖氣團致降雨</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 誤以為「颱風眼風雨最大」：歷屆段考最愛考！「颱風眼內部無風無雨甚至可見藍天陽光」，風雨最強的是「颱風眼周圍的眼牆」。</div><div class="pitfall-item">❌ 誤以為「露水是固態」：露水是液態水滴，霜才是固態冰晶；兩者都是地表附近的凝結/凝華現象。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】中央氣象署發布地面天氣圖，圖中標示一條藍色帶有尖銳三角形符號的線段正由北方快速朝臺灣移動。請問：該線段代表何種天氣系統？當它通過臺灣上空後，當地的氣溫與天氣通常會產生什麼變化？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】中央氣象署發布地面天氣圖，圖中標示一條藍色帶有尖銳三角形符號的線段正由北方快速朝臺灣移動。請問：該線段代表何種天氣系統？當它通過臺灣上空後，當地的氣溫與天氣通常會產生什麼變化？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 暖鋒；氣溫驟升，轉為晴朗炎熱
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 冷鋒；氣溫驟降，伴隨降雨與強陣風
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 滯留鋒；氣溫不變，形成連續兩週梅雨
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 高氣壓中心；天氣晴朗無雲
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>1. 藍色尖銳三角形符號代表「冷鋒」。<br>2. 冷氣團推向暖氣團時，暖空氣被迫劇烈抬升，形成積雨雲，帶來短暫陣雨。<br>3. 冷鋒過境後，臺灣受強烈冷空氣籠罩，氣溫會「明顯下降」，風向轉為東北風。<br>故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】關於熱帶氣旋「颱風」的結構與防颱知識，下列哪一項敘述是完全正確的？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】關於熱帶氣旋「颱風」的結構與防颱知識，下列哪一項敘述是完全正確的？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 颱風是形成在極地大陸上的強大高氣壓系統
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 颱風眼中心是全颱風風雨最猛烈危險的區域
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 颱風眼內部空氣下沉，氣壓極低但通常風平浪靜、雲層稀少
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 颱風來襲時應前往海邊觀看巨浪以增廣見聞
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>颱風是熱帶海洋上的強烈低氣壓；颱風眼中心氣流下沉，無風無雨；風雨最劇烈處在眼周雲牆；防颱應嚴禁前往山區與海邊。故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚區分雲、霧、雨、露、霜的水態與成因</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能看懂地面天氣圖上的 H (高壓)、L (低壓)、冷鋒、暖鋒與滯留鋒符號</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記颱風中心颱風眼風平浪靜、周圍眼牆風雨最強</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 35%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 2：水溶液的性質、酸鹼檢驗與酸鹼中和</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級光的水溶液透光性、三年級溶解現象</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：物質溶解於水、溶液透明均勻、沉澱概念。</span>
               <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>石蕊試紙、酚酞指示劑變色規律、水溶液酸鹼導電性</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">酸鹼指示劑記憶大招</div>
+                  <div class="highlight-desc">藍變紅是酸性（酸溜溜臉紅）；紅變藍是鹼性（鹼大人穿藍袍）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">酚酞指示劑特徵</div>
+                  <div class="highlight-desc">酸性與中性皆為「無色」，只有遇到「鹼性」才會呈現鮮豔「粉紅色」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">導電性本質</div>
+                  <div class="highlight-desc">酸性（醋、檸檬酸）、鹼性（小蘇打、氨水）與中性電解質（食鹽水）皆能導電；純水與糖水不導電。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -735,25 +770,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 石蕊試紙變色口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">藍變紅是酸性（酸溜溜臉紅了）；紅變藍是鹼性（鹼大人穿藍袍）；都不變是中性！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>做實驗時切記使用玻璃棒沾取液體滴在試紙上，不可直接將試紙整張丟進試劑瓶中。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">聲音的三要素與振動頻率波形圖</div>
@@ -774,153 +809,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 振幅決定響度(音量分貝) ｜ 頻率決定音調(高低音頻赫茲)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 誤以為「糖水會導電」：許多學生直覺以為有溶質就會導電，糖水是非電解質，完全不導電！</div><div class="pitfall-item">❌ 中性溶液判斷陷阱：中性溶液滴在紅色石蕊試紙上仍為紅色，滴在藍色上仍為藍色，需兩張試紙同時檢驗都不變色才能斷定為中性。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】小明手邊有三瓶無色透明的水溶液：甲瓶是純水、乙瓶是檸檬汁、丙瓶是小蘇打水。小明用紅色與藍色石蕊試紙進行檢驗，下列哪一項實驗結果是正確的？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小明手邊有三瓶無色透明的水溶液：甲瓶是純水、乙瓶是檸檬汁、丙瓶是小蘇打水。小明用紅色與藍色石蕊試紙進行檢驗，下列哪一項實驗結果是正確的？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 甲瓶使紅色石蕊試紙變藍色
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 乙瓶使藍色石蕊試紙變紅色
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 丙瓶使藍色石蕊試紙變紅色
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 乙瓶使紅色與藍色石蕊試紙都不變色
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>1. 甲瓶是純水（中性）➔ 兩張試紙皆不變色。<br>2. 乙瓶是檸檬汁（酸性）➔ 使「藍色石蕊試紙變紅色」，紅色試紙不變。<br>3. 丙瓶是小蘇打水（鹼性）➔ 使「紅色石蕊試紙變藍色」，藍色試紙不變。<br>故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】將鹽酸溶液與氫氧化鈉溶液進行混合，發生「酸鹼中和」反應。下列關於此反應過程的敘述何者正確？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】將鹽酸溶液與氫氧化鈉溶液進行混合，發生「酸鹼中和」反應。下列關於此反應過程的敘述何者正確？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 混合反應過程中溶液溫度會持續下降吸熱
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 反應後會產生水與鹽類，且會釋放出熱量使水溫升高
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 混合後一定會產生大量二氧化碳氣泡
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 中和反應後的水溶液絕對無法導電
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>酸鹼中和必為「放熱反應」，使溶液溫度上升，產生水與可溶性鹽類（食鹽氯化鈉），生成物仍具導電性。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記「藍變紅為酸、紅變藍為鹼、不變為中性」的石蕊口訣</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道食鹽水、醋、小蘇打水可導電，但砂糖水不導電</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我清楚酸鹼中和會放熱使水溫上升，且產物是鹽和水</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 30%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 3：電磁鐵原理、安培右手定則與電動機馬達</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級磁鐵磁極同極相斥異極相吸、四年級通路與斷路</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：電路開關、燈泡串聯並聯、指針與磁鐵相吸相斥。</span>
               <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>通電長直導線磁場、右手開掌定則、電磁鐵強弱控制與馬達構造</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">奧斯特實驗核心發現</div>
+                  <div class="highlight-desc">通電導線四周會產生磁場，使指北針偏轉（電能生磁）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">安培右手螺旋定則</div>
+                  <div class="highlight-desc">右手四指彎曲順著線圈電流方向，大拇指所指的方向即為「N 極」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">增強電磁鐵磁力三大法寶</div>
+                  <div class="highlight-desc">1. 增加線圈纏繞圈數、2. 增加串聯電池數（加大電流）、3. 填入鐵芯。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -937,25 +972,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 電磁鐵磁極與磁力三定律</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">磁極判定：右手四指隨電流，大拇指直指 N 極！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>電池反接（電流方向倒轉）➔ 電磁鐵 N/S 極對調；繞線方向反向 ➔ N/S 極對調。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">複式顯微鏡成像光學與載玻片移動</div>
@@ -979,114 +1014,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 倒立放大像 (上下顛倒、左右相反) ｜ 物在何處，玻片就往何處移！</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 電池並聯無法增強磁力：許多學生以為電池接越多磁力越強，若是「電池並聯」電壓不變，磁力幾乎不變，必須「串聯」才能增強！</div><div class="pitfall-item">❌ 鐵芯材質陷阱：鐵芯必須使用「軟鐵」，若插入木棒、塑膠棒或銅棒，磁力完全不會大幅增強。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】小組進行自製電磁鐵實驗，若想讓電磁鐵吸引更多數量的迴紋針，下列哪一種做法是「無效」的？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小組進行自製電磁鐵實驗，若想讓電磁鐵吸引更多數量的迴紋針，下列哪一種做法是「無效」的？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 將漆包線圈由 30 圈增加至 80 圈
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 將線圈內部的鐵釘取出來，改換成粗塑膠吸管
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 在電路中再串聯一顆同規格的新乾電池
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 將漆包線緊密纏繞在直徑更粗的軟鐵棒上
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>鐵釘是導磁材料，能大幅集中磁力線；抽掉鐵釘換成非磁性材質的塑膠吸管，會導致電磁鐵磁力劇烈減弱，無法吸引更多迴紋針。故無效做法選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】關於生活中的家電「電動機（馬達）」與「電磁鐵」，下列敘述何者錯誤？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】關於生活中的家電「電動機（馬達）」與「電磁鐵」，下列敘述何者錯誤？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 電扇、吹風機、洗衣機內部都裝有電動機來帶動旋轉
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 電動機運轉是利用磁鐵同極相斥、異極相吸的磁力推動旋轉
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 電磁鐵若將電池正負極倒過來接，產生的磁力大小會立刻變成零
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 磁浮列車與工廠吊運廢鐵的大吊車都是電磁鐵的科技應用
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>電池正負極倒接時，電流方向反轉，只會使電磁鐵的「N 極與 S 極對調」，磁力大小維持不變，並不會變成零！故錯誤選項為 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能用安培右手定則精確判定電磁鐵的 N 極與 S 極</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記增強磁力的三大方法：增圈數、串電池、加鐵芯</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道馬達旋轉的原理是電磁鐵與磁鐵間的「同極相斥、異極相吸」</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

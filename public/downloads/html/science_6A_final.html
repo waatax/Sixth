@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 4：大地的變動、地表地形與三大類岩石礦物</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 5：微觀生物世界、複式顯微鏡操作與有益微生物</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第4單元 / 南一第4單元 / 翰林第4單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 4：大地的變動、地表地形與三大類岩石礦物</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級土壤植物生長、四年級流水侵蝕現象</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：岩石與土壤觀察、雨水沖刷泥土現象。</span>
               <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>河流三大營力（侵蝕搬運堆積）、三大岩類特徵與化石地層沉積</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">河流上中下游地貌</div>
+                  <div class="highlight-desc">上游侵蝕強形成 V 型峽谷；下游堆積強形成平原三角洲。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">三大岩類成因</div>
+                  <div class="highlight-desc">火成岩（岩漿冷卻，玄武岩/花崗岩）、沉積岩（水層沉積，砂岩/頁岩）、變質岩（高溫高壓，大理岩）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">地層疊置定律與化石</div>
+                  <div class="highlight-desc">未受地殼變動翻轉的地層，越底層年齡越老；化石必存在於「沉積岩」中。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -519,25 +554,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 三大岩石轉化速記表</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">火成岩（玄武、安山、花崗）➔ 沉積岩（砂岩、頁岩、石灰岩）➔ 變質岩（石灰變大理、頁岩變板岩）</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>只有「沉積岩」中最容易找到完整生物化石（火成岩與變質岩經高溫破壞難存化石）。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">岩石三大類成因循環圖解</div>
@@ -564,153 +599,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 火成岩 (岩漿冷卻) ｜ 沉積岩 (層狀流水沉積) ｜ 變質岩 (高溫高壓)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 遇到稀鹽酸冒泡的岩石與礦物：礦物是「方解石」，岩石是「石灰岩」及其變質的「大理岩」，因為成分皆為碳酸鈣。花崗岩與玄武岩遇酸不會冒泡。</div><div class="pitfall-item">❌ 鵝卵石的形成位置：鵝卵石是中游經長途搬運碰撞磨圓而成，上游都是巨大有尖銳稜角的巨石。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】小華在野外採集到一塊白色岩石標本，他將稀鹽酸滴在岩石表面，發現立刻產生劇烈的「二氧化碳氣泡」；此外，臺灣花蓮太魯閣國家公園以壯麗高聳的該種岩石峽谷聞名世界。請問這塊岩石最可能是下列何者？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小華在野外採集到一塊白色岩石標本，他將稀鹽酸滴在岩石表面，發現立刻產生劇烈的「二氧化碳氣泡」；此外，臺灣花蓮太魯閣國家公園以壯麗高聳的該種岩石峽谷聞名世界。請問這塊岩石最可能是下列何者？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 玄武岩
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 花崗岩
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 大理岩
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 安山岩
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>大理岩由石灰岩經高溫高壓變質而成，主成分為碳酸鈣 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>a</mi><mi>C</mi><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">CaCO_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>)，遇稀鹽酸會釋放二氧化碳氣體；花蓮太魯閣峽谷是世界上最著名的大理岩峽谷地形。故選 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】在河流的不同河段進行地質地貌調查，下列關於河流各河段特徵的配對，何者最為正確？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】在河流的不同河段進行地質地貌調查，下列關於河流各河段特徵的配對，何者最為正確？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 河流下游 ➔ 以強烈下切侵蝕為主，河床布滿巨大尖銳岩石
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 河流中游 ➔ 水流急遽奔騰，容易形成高落差的垂直大瀑布
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 河流出海口 ➔ 水流平緩泥沙沉積，容易形成三角洲或沖積平原
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 河流上游 ➔ 地勢平坦開闊，主要進行沉積作用
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>上游坡陡流急侵蝕強，形成 V 型谷與瀑布；中游流速緩和形成鵝卵石；下游與出海口水流最慢，大量沉積泥沙形成沖積平原與三角洲。故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚指出三大岩石（火成岩、沉積岩、變質岩）的成因與代表性岩石</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道只有沉積岩最容易找到完整化石</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記大理岩與方解石遇稀鹽酸會產生二氧化碳氣泡</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第5單元 / 南一第5單元 / 翰林第5單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 5：微觀生物世界、複式顯微鏡操作與有益微生物</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級水域動植物與昆蟲構造、三年級動植物特徵</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>光學顯微鏡構造操作、倒立虛像成像規律與微生物真菌分類</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：熱脹冷縮現象、水與空氣體積隨溫度變化。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>傳導對流輻射三途徑、保溫瓶隔熱構造、比熱與海陸風成因</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">熱傳播三途徑本質</div>
+                  <div class="highlight-desc">傳導（固體接觸分子振動碰擊）、對流（液體與氣體熱升冷降流動）、輻射（不需介質，如陽光與紅外線）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">保溫瓶隔熱五層防線</div>
+                  <div class="highlight-desc">雙層不鏽鋼抽真空阻絕「傳導與對流」；內膽鍍銀反射鏡面阻絕「熱輻射」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">日夜海陸風成因</div>
+                  <div class="highlight-desc">陸地比熱小升降溫快，白天吹海風（陸熱海涼），夜晚吹陸風（海溫陸涼）。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -727,31 +762,31 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 顯微鏡切換視野變化四字口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">高倍視野：【暗】（光線暗）、【小】（範圍小）、【大】（細胞大）、【少】（數量少）</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>由低倍切至高倍時，若畫面模糊，只能微調「細調節輪」，切忌大幅旋轉粗調節輪以免壓碎玻片！</div>
                     </div>
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 玻片追蹤口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">物往哪偏，片往哪追！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>物在右上偏，玻片往右上推；物在左下偏，玻片往左下推。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">電磁鐵安培右手定則與磁力變因</div>
@@ -782,114 +817,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 大拇指指 N 極 ｜ 四指隨線圈電流方向旋繞</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 高倍鏡下轉動粗調節輪：高倍鏡物鏡長度長、離載玻片極近，嚴禁轉動粗調節輪，只能轉動「細調節輪」校正焦點。</div><div class="pitfall-item">❌ 玻片移動方向反向推理錯誤：很多學生背了倒立成像就想反著推，記住最直接口訣「物往哪偏，玻片往哪追」絕不出錯！</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 1】小芳使用複式顯微鏡觀察池塘水滴中的草履蟲。當她將物鏡由「低倍鏡 (10X)」切換為「高倍鏡 (40X)」時，顯微鏡視野中會出現下列哪一種變化？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小芳使用複式顯微鏡觀察池塘水滴中的草履蟲。當她將物鏡由「低倍鏡 (10X)」切換為「高倍鏡 (40X)」時，顯微鏡視野中會出現下列哪一種變化？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 視野變亮、觀察範圍變廣、草履蟲數量變多
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 視野變暗、觀察範圍變窄、單隻草履蟲影像變大且數量變少
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 視野亮度完全不變，影像縮小
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 視野變成黑白且無法調整清晰度
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>換至高倍鏡後，鏡頭通光孔徑變小，視野會「變暗」；放大倍率增加，使得「觀察範圍變小」、「草履蟲個體影像變大」，但「看到的隻數變少」。故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 2】小強在顯微鏡視野中看見一隻眼蟲正在往「左下角」快速游動離開視野，若想將這隻眼蟲重新移回視野正中央，小強應該將載玻片往哪一個方向推動？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】小強在顯微鏡視野中看見一隻眼蟲正在往「左下角」快速游動離開視野，若想將這隻眼蟲重新移回視野正中央，小強應該將載玻片往哪一個方向推動？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 往右上角移動
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 往左下角移動
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 往正右方移動
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 往正上方移動
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>雖然複式顯微鏡呈現倒立成像，但依據「物往哪偏，玻片就往哪追」的操作規律：物像在視野左下方游動，將載玻片朝「左下角」推進，就能讓實物朝向鏡頭光軸中央靠攏。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記高倍鏡視野四字訣：暗、小、大、少</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟練玻片定位口訣「物往哪偏，玻片往哪推」</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道麵包發酵是酵母菌放二氧化碳、優酪乳發酵是乳酸菌</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

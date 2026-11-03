@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
-import { execFileSync } from 'node:child_process';
+import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import katex from 'katex';
 import {
@@ -65,6 +65,7 @@ function safeCopyFileSync(src, dest) {
 // Chrome / Edge 執行檔路徑搜尋
 function getBrowserExecutablePath() {
   const possiblePaths = [
+    'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
     'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
     'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
     'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
@@ -545,6 +546,31 @@ function buildHandoutHtml(handoutInfo, notesList) {
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+ 
   </style>
 </head>
 <body>
@@ -566,6 +592,16 @@ function buildHandoutHtml(handoutInfo, notesList) {
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    ${notesList.map(n => `<tr><td>${n.title}</td><td>□</td><td>□</td><td>□</td></tr>`).join('')}
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
     ${notesList.map((note) => {
@@ -576,8 +612,8 @@ function buildHandoutHtml(handoutInfo, notesList) {
           <div class="handout-badge-row">
             <span class="badge badge-primary">${note.examScopeLabel || '段考重點'}</span>
             <span class="badge badge-accent">${note.term}</span>
-            ${note.examWeight ? `<span class="badge" style="background: #dcfce7; color: #15803d;">${note.examWeight}</span>` : ''}
-            <span style="font-size: 10px; color: #64748b;">${note.textbookCoverage}</span>
+            ${false && note.examWeight ? `<span class="badge" style="background: #dcfce7; color: #15803d;">${note.examWeight}</span>` : ''}
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">${note.title}</h2>
           ${note.priorConcept || note.masterySkill ? `
@@ -595,8 +631,8 @@ function buildHandoutHtml(handoutInfo, notesList) {
               ${note.highlights.map((h, hIdx) => `
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 0${hIdx + 1}</div>
-                  <div class="highlight-point">${h.point}</div>
-                  <div class="highlight-desc">${h.detail}</div>
+                  <div class="highlight-point">${renderMathText(h.point)}</div>
+                  <div class="highlight-desc">${renderMathText(h.detail)}</div>
                 </div>
               `).join('')}
             </div>
@@ -657,15 +693,15 @@ function buildHandoutHtml(handoutInfo, notesList) {
         <!-- 4. 各校歷年真題實戰詳解 -->
         ${note.pastExamWalkthroughs && note.pastExamWalkthroughs.length > 0 ? `
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
             ${note.pastExamWalkthroughs.map((w, wIdx) => `
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ ${w.examSource}</div>
-                <div class="walkthrough-question">【真題 ${wIdx + 1}】${renderMathText(w.question)}</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 ${wIdx + 1}】${renderMathText(w.question)}</div>
                 <div class="walkthrough-options">
                   ${w.options.map((opt, optIdx) => `
                     <div class="walkthrough-option-item" style="${optIdx === w.answerIndex ? 'border-color: #10b981; font-weight: 700;' : ''}">
-                      ${opt}
+                      ${renderMathText(opt)}
                     </div>
                   `).join('')}
                 </div>
@@ -697,8 +733,9 @@ function buildHandoutHtml(handoutInfo, notesList) {
     }).join('')}
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>`;
@@ -740,7 +777,9 @@ async function main() {
 
         // 1. 生成 standalone HTML
         const htmlContent = buildHandoutHtml(handoutInfo, notesList);
-        safeWriteFileSync(htmlFilePath, htmlContent, 'utf8');
+        const cleanHtml = htmlContent.replace(/[ \t]+$/gm, '');
+        if (!fs.existsSync(htmlFilePath) || fs.readFileSync(htmlFilePath, 'utf8') !== cleanHtml) safeWriteFileSync(htmlFilePath, cleanHtml, 'utf8');
+        if (process.argv.includes('--html-only')) continue;
 
         // 2. 調用 Edge / Chrome Headless 編譯為真實 PDF
         let compiled = false;
@@ -759,7 +798,7 @@ async function main() {
             title: handoutInfo.fullTitle,
             unitCount: notesList.length,
             pdfFileName,
-            pdfUrl: `/downloads/pdf/${pdfFileName}`,
+            pdfUrl: `/Sixth/downloads/pdf/${pdfFileName}`,
             sizeBytes: stat.size
           });
 
@@ -771,15 +810,22 @@ async function main() {
 
         for (let attempt = 1; attempt <= 2 && !compiled; attempt++) {
           try {
-            execFileSync(browserPath, [
-              '--headless',
-              '--disable-gpu',
-              '--no-sandbox',
-              '--disable-dev-shm-usage',
-              '--no-pdf-header-footer',
-              `--print-to-pdf=${pdfFilePath}`,
-              htmlFilePath
-            ], { stdio: 'ignore', timeout: 90000 });
+            if (fs.existsSync(pdfFilePath)) fs.unlinkSync(pdfFilePath);
+            const child = spawn(browserPath, [
+              '--headless', '--disable-gpu',
+              `--user-data-dir=${path.join(projectRoot, 'Local', 'pdf-isolated-' + baseFileName)}`,
+              '--no-pdf-header-footer', `--print-to-pdf=${pdfFilePath}`, htmlFilePath
+            ], {stdio:'ignore', windowsHide:true});
+            child.on('error', () => {});
+            child.unref();
+            let previous = 0;
+            for (let tick = 0; tick < 40; tick++) {
+              await new Promise(resolve => setTimeout(resolve, 500));
+              const size = fs.existsSync(pdfFilePath) ? fs.statSync(pdfFilePath).size : 0;
+              if (size > 1000 && size === previous) break;
+              previous = size;
+            }
+            child.kill();
 
             if (fs.existsSync(pdfFilePath) && fs.statSync(pdfFilePath).size > 1000) {
               compiled = true;
@@ -793,7 +839,7 @@ async function main() {
                 title: handoutInfo.fullTitle,
                 unitCount: notesList.length,
                 pdfFileName,
-                pdfUrl: `/downloads/pdf/${pdfFileName}`,
+                pdfUrl: `/Sixth/downloads/pdf/${pdfFileName}`,
                 sizeBytes: stat.size
               });
 
@@ -809,7 +855,7 @@ async function main() {
         }
 
         if (!compiled) {
-          console.error(`❌ 生成 PDF 失敗: ${pdfFileName}`, lastErr ? lastErr.message : 'Unknown error');
+          process.exitCode = 1; console.error(`❌ 生成 PDF 失敗: ${pdfFileName}`, lastErr ? lastErr.message : 'Unknown error');
         }
       }
     }
@@ -817,11 +863,14 @@ async function main() {
 
   // 寫入 manifest.json
   const manifestPath = path.join(PDF_OUTPUT_DIR, 'manifest.json');
-  safeWriteFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
+  if (!process.argv.includes('--html-only')) safeWriteFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
   console.log(`\n🎉 全部完成！共成功編譯 ${generatedCount} 套段考 PDF 講義檔案至 public/downloads/pdf/！`);
 }
 
-main().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+if (process.argv.includes('--html-only')) {
+  main().catch(err => { console.error(err); process.exitCode = 1; });
+} else {
+  const job = spawn('powershell.exe', ['-NoProfile', '-File', path.join(__dirname, 'build-white-handouts.ps1'), ...(process.argv.includes('--force') ? ['-Force'] : [])], {stdio:'inherit', windowsHide:true});
+  job.on('error', error => {console.error(error); process.exitCode=1;});
+  job.on('exit', code => {process.exitCode=code || 0;});
+}

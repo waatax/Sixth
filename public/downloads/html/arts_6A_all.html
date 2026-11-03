@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 1：色彩三要素、伊登色相環與對比互補配色美學</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 2：造形元素點線面、單點透視與空氣透視空間深度</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 3：世界名畫欣賞、西洋美術史經典流派與大師風格</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 1：色彩三要素、伊登色相環與對比互補配色美學</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三原色基本認識（紅黃藍）</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>色彩三要素（色相/明度/彩度）、十二色相環冷暖對比、互補色視覺張力</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：三原色概念、水彩調色基本技巧、簡單線條繪畫。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>色彩三要素（色相/明度/彩度）、12色相環互補色對比、三分構圖法美感營造</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">色彩三要素本質</div>
+                  <div class="highlight-desc">色相（色彩名稱相貌）、明度（色彩明暗程度，加白變亮/加黑變暗）、彩度（色彩純度飽和度）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">十二色相環與互補色對比</div>
+                  <div class="highlight-desc">紅黃藍為色料三原色；色相環對角線 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>180</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">180^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6741em;"></span><span class="mord">18</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span> 相對者為「互補色」（紅配綠、黃配紫、藍配橙），視覺對比最為強烈。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">視覺構圖經典三分法則</div>
+                  <div class="highlight-desc">將畫面橫直各畫兩條線分成九宮格，將視覺主體置於「黃金交叉點」最具生動美感。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -521,25 +556,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 三大互補色配對速記口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">紅配綠（聖誕樹）、黃配紫（夜空月）、藍配橙（夕陽海）！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>加白提明度，加黑降明度；混色必降彩度。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">12 色相環與三原色互補對比色圖</div>
@@ -563,153 +598,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 紅黃藍三原色 ｜ 對角 180° 為互補色 (如紅配綠、黃配紫、藍配橙)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 混淆明度與彩度：加入白色會讓「明度變高」，但會讓「彩度（鮮豔純度）降低」，不可認為加白顏色變鮮豔。</div><div class="pitfall-item">❌ 互補色誤認為相鄰：相鄰的顏色是「類似色（如紅與橙紅）」；色相環正對面 180° 的才是「互補色」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】在伊登十二色相環中，兩色位置相距 180 度正相對的顏色稱為「互補色」。下列哪一組顏色屬於互補色配對？並置時能產生最鮮明強烈的視覺對比？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】在伊登十二色相環中，兩色位置相距 180 度正相對的顏色稱為「互補色」。下列哪一組顏色屬於互補色配對？並置時能產生最鮮明強烈的視覺對比？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 紅色與黃色
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 藍色與綠色
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 黃色與紫色
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 橙色與紅色
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>在伊登色相環中，經典三大互補色配對為：紅配綠、黃配紫、藍配橙。黃色與紫色在色相環上正對 180°，並列時對比最鮮明強烈。故選 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】畫家在紅色顏料中不斷加入白色顏料調和，請問調出的淡紅色顏料，其「明度」與「彩度」分別會產生什麼變化？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】畫家在紅色顏料中不斷加入白色顏料調和，請問調出的淡紅色顏料，其「明度」與「彩度」分別會產生什麼變化？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 明度變高，彩度變高
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 明度變高，彩度變低
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 明度變低，彩度變高
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 明度變低，彩度變低
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>白色能反射最多光線，加入白色使顏色變亮，因此「明度變高」；但加入了非原色顏料使其純度稀釋，因此「彩度（飽和度）必定降低」。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記色彩三要素：色相（名字）、明度（明暗）、彩度（純度）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握三大互補色（紅綠、黃紫、藍橙）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道加入黑白灰都會使顏色的「彩度降低」</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期中考 (第1次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 2：造形元素點線面、單點透視與空氣透視空間深度</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級線條素描、平面塗色技巧</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>透視法（單點消失點與兩點透視）、點線面構圖視角</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：直笛吹奏、基本拍子（四二拍、四三拍、四四拍）拍打。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>五線譜高低音譜號、音符時值樹拍子換算、管弦樂四大樂器家族辨識</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">音樂三要素黃金三角</div>
+                  <div class="highlight-desc">旋律（音符高低起伏如歌聲線條）、節奏（拍子長短強弱脈動）、和聲（多個音同時響起之和諧色彩）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">五線譜音符時值樹</div>
+                  <div class="highlight-desc">全音符（4 拍） ➔ 二分音符（2 拍） ➔ 四分音符（1 拍） ➔ 八分音符（半拍 0.5 拍）；附點音符延長原音符時值一半。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">管弦樂團四大樂器家族</div>
+                  <div class="highlight-desc">弦樂家族（小提琴/中提琴/大提琴/低音提琴）、木管家族（長笛/單簧管/雙簧管）、銅管家族（小號/圓號/長號）、打擊樂家族（定音鼓/三角鐵）。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -733,25 +768,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 透視空間營造法則</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">線條匯聚消失點（單點透視近大遠小），遠山偏藍輪廓虛（空氣透視近濃遠淡）！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>達文西《蒙娜麗莎》背景遠山呈現朦朧淡藍色，正是空氣透視法的極致典範。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">音樂五線譜拍號與音符時值樹</div>
@@ -783,153 +818,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 全音符(4拍) ➔ 二分音符(2拍) ➔ 四分音符(1拍) ➔ 八分音符(半拍)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 消失點的位置：單點透視中，所有縱深線的消失點必定匯聚在「視平線（地平線）」上，不會隨意漂浮。</div><div class="pitfall-item">❌ 遠景畫得過於鮮豔清晰：遠處景物因大氣遮蔽，輪廓模糊且色彩偏藍灰，畫得太清晰會失去空間深度感。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】文藝復興時期畫家達文西創作舉世聞名的《最後的晚餐》，畫中兩側牆壁與天花板的透視線條，全部筆直匯聚在耶穌頭部的單一點上。這種在平面畫布上營造深邃空間感的科學繪畫技法稱為什麼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】文藝復興時期畫家達文西創作舉世聞名的《最後的晚餐》，畫中兩側牆壁與天花板的透視線條，全部筆直匯聚在耶穌頭部的單一點上。這種在平面畫布上營造深邃空間感的科學繪畫技法稱為什麼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 空氣透視法
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 單點透視法（焦點透視法）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 散點透視法
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 幾何立體分割法
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>所有縱深線條匯聚於視平線上單一滅點的空間表現技法，稱為「單點透視法（One-point Perspective）」，達文西藉此將觀眾的視覺焦點完美導向中心人物耶穌。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】繪製風景畫時，若想運用「空氣透視法」表現遠處綿延不絕的高山山脈，下列哪一種色彩與筆觸處理方式最為恰當？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】繪製風景畫時，若想運用「空氣透視法」表現遠處綿延不絕的高山山脈，下列哪一種色彩與筆觸處理方式最為恰當？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 用最濃黑粗重的線條描繪遠山輪廓，並填滿鮮紅色的高彩度顏料
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 遠山使用偏藍灰色的淡雅色調，且邊界輪廓呈現柔和朦朧的虛化效果
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 將遠處的山畫得比近處的樹木還要巨大鮮豔十倍
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 遠山完全不需要著色直接塗黑
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>空氣透視法模擬光線被大氣散射的物理現象，遠處物體呈現近濃遠淡、彩度降低、偏向冷調藍灰色且輪廓虛化的特徵。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握單點透視近大遠小、消失點落於視平線的幾何原理</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能說出空氣透視近濃遠淡、遠景偏藍灰模糊的特性</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能辨析點線面在視覺造形中的心理感受（垂直挺拔、曲線優美）</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">期末評量 100%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 3：世界名畫欣賞、西洋美術史經典流派與大師風格</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級名畫初步欣賞</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>西洋重要藝術流派（古典/印象派/立體派）、臺灣前輩名畫家作品特色</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：班級短劇表演、朗讀課文帶有表情動作。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>舞台九宮格空間方位術語、肢體語言與聲音表情、即興戲劇合作同理心</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">舞台九宮格方位指引</div>
+                  <div class="highlight-desc">Upstage（舞台後方遠離觀眾）、Downstage（舞台前方靠近觀眾）、Center Stage（舞台中央舞台焦點）、Stage Left/Right（演員視角的左/右）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">肢體語言與聲音表情三度空間</div>
+                  <div class="highlight-desc">透過身體姿勢、眼神交流、走位節奏與語氣抑揚頓挫傳遞角色內在情緒。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">即興表演與同理心角色塑造</div>
+                  <div class="highlight-desc">秉持「Yes, and...（是的，而且...）」原則接納夥伴提議，換位思考深入體會不同角色生命經驗。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -951,25 +986,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 西洋藝術大師代表作口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">文藝復興達米拉（達文西、米開朗基羅、拉斐爾），莫內光影睡蓮畫，梵谷星夜燃熱情，畢卡立體達利鐘！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>印象派名稱源自莫內的畫作《日出·印象》。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">傳統戲曲角色行當與臉譜文化</div>
@@ -998,114 +1033,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 生 (男性) ｜ 旦 (女性) ｜ 淨 (花臉剛烈) ｜ 丑 (逗趣幽默)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 混淆印象派與立體派特色：印象派是「戶外捕捉光影色彩瞬間」；立體派是「打破單一視角將物體拆解重組」。</div><div class="pitfall-item">❌ 《星夜》作者誤記：燃燒扭曲漩渦筆觸的《星夜》是後印象派大師「梵谷」的作品，非達文西或畢卡索。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 1】十九世紀末興起於法國的「印象派」畫家，走出畫室來到戶外大自然中寫生。他們最重視且致力於在畫布上捕捉的是下列何者？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】十九世紀末興起於法國的「印象派」畫家，走出畫室來到戶外大自然中寫生。他們最重視且致力於在畫布上捕捉的是下列何者？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 嚴格對稱的幾何線條與神話故事題材
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 陽光在物體表面隨時間產生的瞬息萬變的光影與色彩效果
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 將人體完全扭曲拆解成碎裂的立體積木
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 照相機般的精確細節工筆描摹
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>印象派以莫內為代表，核心觀念在於「光影造就色彩」，畫家走出戶外以碎筆直接在畫布上捕捉太陽光線映照下的瞬間視覺印象。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 2】西班牙超現實主義大師達利的著名代表作《記憶的堅持》中，出現了許多軟綿綿、如同起司般融化癱掛在枯枝與平台邊緣的物品。請問這些融化的物品是什麼？象徵對時間流逝的夢境探索？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】西班牙超現實主義大師達利的著名代表作《記憶的堅持》中，出現了許多軟綿綿、如同起司般融化癱掛在枯枝與平台邊緣的物品。請問這些融化的物品是什麼？象徵對時間流逝的夢境探索？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 書本
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 懷表（時鐘）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 鏡子
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 面具
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>達利在《記憶的堅持》中描繪融化變形的柔軟「時鐘（懷表）」，借夢境超現實意象顛覆客觀物理世界的堅硬剛性，探索主觀時間意識。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記文藝復興三傑（達文西、米開朗基羅、拉斐爾）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握印象派（莫內《日出印象》捕捉光影）、立體派（畢卡索多角度重組）的藝術革命</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能認出梵谷《星夜》的強烈情感筆觸與達利融化時鐘的超現實風格</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

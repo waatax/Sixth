@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 3：日常生活作息與現在進行式 (Present Continuous) 句型</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 3：日常生活作息與現在進行式 (Present Continuous) 句型</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>基本 be 動詞 am/is/are 搭配代名詞</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>現在進行式時態句構（主詞 + be + V-ing）、現在分詞規則變化</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：常見城市公共設施單字 (bank, park, school, hospital)。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>城鎮街道地圖判讀、方位介系詞精準運用、問路與指路生活實用語境</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">空間方位介系詞地圖指南</div>
+                  <div class="highlight-desc">across from（在...對面）、next to（在...旁邊）、between A and B（在 A 與 B 之間）、on the corner of（在...轉角）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">禮貌問路指路金句</div>
+                  <div class="highlight-desc">"Excuse me, how can I get to the train station?" / "Go straight for two blocks and turn right."</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">交通工具搭配介系詞</div>
+                  <div class="highlight-desc">by bus / by train / by MRT / on foot (走路用 on foot，切勿誤用 by foot)！</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -517,26 +552,26 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 現在進行式口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">主詞 + be動詞 + V-ing，兩者缺一不可！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>問句：What are you doing? ➔ I am studying.
 否定句：He is not playing games now.</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">現在進行式時態結構圖 (Present Continuous)</div>
@@ -557,154 +592,154 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 S + be (am/is/are) + V-ing ｜ 正在發生的動作</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！</div><div class="pitfall-item">❌ 忘記重複字尾：swim 寫成 swiming（漏了 m），run 寫成 runing（漏了 n），大考扣分重點！</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】Look! The students _____ on the playground. They are having a great time.</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】Look! The students _____ on the playground. They are having a great time.</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. is running
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. are runing
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. are running
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. run
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>1. 句首有 "Look!"（看啊！），表示此刻正在發生的動作，使用現在進行式。<br>2. 主詞 "The students" 是複數，be 動詞使用 "are"。<br>3. 動詞 "run" 是短母音配單子音結尾，必須「重複字尾 n 再加 ing」➔ "running"。<br>故正確答案為 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級上學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】Tom: "Where is your sister?"
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】Tom: "Where is your sister?"
 Amy: "She is in her bedroom. She _____ a letter to her pen pal now."</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. write
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. writing
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. is writeing
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       D. is writing
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 D</strong><br>
                   【解題步驟】：<br>主詞是 She，進行式需要 "is + V-ing"；動詞 write 字尾是不發音的 e，必須「去 e 加 ing」➔ "is writing"。故選 D。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記現在進行式公式：主詞 + be動詞 + V-ing（be動詞絕不漏掉）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握動詞字尾加 ing 規則（去 e 加 ing、重複字尾加 ing）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能敏銳察覺提示詞（Look!, Listen!, now）並使用現在進行式</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第4單元 / 南一第4單元 / 翰林第4單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>一般動詞現在式肯定句</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>現在簡單式、第三人稱單數動詞變化規則（-s/-es/ies）、助動詞 do/does</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：常見食物水果單字、身體部位單字 (head, stomach, leg)。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>可數名詞與不可數名詞容器量詞、身體病痛表達、情態助動詞 should/shouldn't</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">可數名詞與不可數名詞判斷</div>
+                  <div class="highlight-desc">可數名詞加 a/an 或複數 -s (apples, bananas)；不可數液體與粉末用量詞 (a cup of tea, a bottle of water, a slice of pizza)。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">身體不適症狀表達</div>
+                  <div class="highlight-desc">I have a headache / toothache / stomachache / sore throat / fever.</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">照顧與就醫給予建議</div>
+                  <div class="highlight-desc">情態助動詞 should / shouldn't 後接「原形動詞」 (You should drink more water and take a rest)。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -725,25 +760,25 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."</div>
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 過去式助動詞 did 黃金鐵律</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">Did + 主詞 + 原形動詞 (V) ? ➔ Yes, 主詞 + did. / No, 主詞 + didn't.</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>只要有助動詞 did 出現，後面的動詞必須「打回原形」！否定句：主詞 + didn't + 原形動詞！</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">過去式規則與不規則動詞時間軸 (Past Tense)</div>
@@ -767,115 +802,116 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."</div>
     </svg></div>
                 <div class="diagram-subtitle">💡 時間副詞標誌：yesterday, last night, ... ago ｜ 不規則變化必背</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。</div><div class="pitfall-item">❌ 否定句 didn't 後接過去式："He didn't ate dinner"，正確為 "He didn't eat dinner"。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 1】Leo: "_____ you see the famous movie last weekend?"
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】Leo: "_____ you see the famous movie last weekend?"
 Ken: "Yes, I did. It was really exciting!"</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. Do
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. Are
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. Did
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. Were
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>句尾有過去時間副詞 "last weekend"，且動詞是原形動詞 "see"，詢問過去發生的動作使用助動詞 "Did"；答句中也是 "Yes, I did."。故選 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 2】My grandparents _____ in Tainan three years ago, but now they live in Taipei.</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】My grandparents _____ in Tainan three years ago, but now they live in Taipei.</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. live
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. lived
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. are living
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. will live
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>時間副詞是 "three years ago"（三年前），表示過去存在的狀態，動詞 live 的過去式直接加 d 變成 "lived"。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記不規則動詞過去式：go➔went, eat➔ate, see➔saw, buy➔bought, have➔had</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記「did / didn't 後面的動詞必須用【原形動詞】」</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能熟練使用 yesterday, last..., ...ago 等過去時間副詞</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

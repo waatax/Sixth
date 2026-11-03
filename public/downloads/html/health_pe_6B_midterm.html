@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 4：運動傷害預防與急性軟組織處置最新原則（PEACE）</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 5：急救心肺復甦術 (CPR) 與自動體外心臟電擊去顫器 (AED)</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 4：運動傷害預防與急性軟組織處置最新原則（PEACE）</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>運動前後做體操伸展</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>動態暖身與靜態收操、運動傷害預防、PEACE & LOVE 急救最新準則</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：教育部體適能檢測（坐姿體前彎、仰臥起坐、立定跳遠、跑走）。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>健康體適能五大要素、漸進式超負荷 (Progressive Overload) 增肌原理、Zone 2 有氧粒線體抗衰老與 TDEE 減脂</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">健康體適能五大基石</div>
+                  <div class="highlight-desc">心肺耐力 (VO2 Max 基礎)、肌力 (最大張力)、肌耐力 (抗疲勞)、柔軟度 (關節筋膜活動度)、身體組成 (骨骼肌量 vs 體脂率)。骨骼肌是人體最大血糖代謝水槽與內分泌器官。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">漸進式超負荷與肌肥大 (Hyp…</div>
+                  <div class="highlight-desc">漸進式超負荷與肌肥大 (Hypertrophy) 生理機制：給予肌肉充分機械張力 ➔ 引發肌纖維微損傷 ➔ 攝取蛋白質 (1.4~1.8g/kg) 白胺酸觸發 MPS 蛋白質合成 ➔ 48 小時超量補償，使肌肉截面積增大力量增強。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">Zone 2 有氧抗衰老與 T…</div>
+                  <div class="highlight-desc">Zone 2 有氧抗衰老與 TDEE 減脂能量守恆：Zone 2 (最大心率 60~70%) 激發粒線體生物合成與細胞自噬 (Autophagy) 清除老舊蛋白；減脂維持每日 300~500 kcal 溫和熱量赤字 (TDEE - 飲食攝取)，優先燃燒內臟脂肪！</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -523,25 +558,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 防溺救生黃金五步</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">大聲呼【叫】 ➔ 撥打【叫】119 ➔ 善用物【伸】 ➔ 投擲浮【拋】 ➔ 乘浮具【划】！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>切記：岸上救援遠重於下水冒險救援，未受專業水上救生訓練絕不下水！</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">運動傷害急性處理最新 PEACE 原則</div>
@@ -574,153 +609,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 Protect 保護 ➔ Elevate 抬高 ➔ Avoid NSAIDs 避免消炎 ➔ Compress 加壓 ➔ Educate 教育</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 遇到同學溺水立刻跳下水：大錯特錯！許多溺水悲劇都是同伴貿然下水遭抱緊溺斃，第一步必須是大聲呼叫並撥打 119，使用長竿漂浮物岸上救援。</div><div class="pitfall-item">❌ 扭傷腳踝抬高位置不夠高：抬高肢體必須「高於心臟」，才能有效讓血液與組織液回流消腫。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】夏天在溪流邊戲水時，若突然發現同行的同學不慎跌入深潭溺水呼救，下列哪一項是岸上人員最安全且合乎規範的第一步處置？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】夏天在溪流邊戲水時，若突然發現同行的同學不慎跌入深潭溺水呼救，下列哪一項是岸上人員最安全且合乎規範的第一步處置？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 不管自己會不會游泳，立刻奮不顧身跳入深潭中救人
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 轉身裝作沒看見悄悄離開
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 大聲向周遭呼救（叫），請大人立刻撥打 119（叫），並尋找長竹竿或樹枝伸過去救援（伸）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 拿手機拍照錄影上傳網路
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>救溺五步首重「岸上救援」，大聲呼叫大人支援、撥打 119/118 報警，並善用竹竿、樹枝伸展或拋擲漂浮物救援，嚴禁未受訓學童跳水救人。故選 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】體育課打籃球不慎扭傷腳踝，現場急救處置時將患肢「抬高高於心臟水平面」，其主要的生理功能是什麼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】體育課打籃球不慎扭傷腳踝，現場急救處置時將患肢「抬高高於心臟水平面」，其主要的生理功能是什麼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 增加血液往腳踝充血
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 促進靜脈與淋巴回流，有效減少局部腫脹與組織液堆積
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 讓骨頭立刻長好
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 降低全身心跳速率
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>抬高受傷患處高於心臟，利用重力原理促進受傷部位的血液與淋巴液順利回流，達到顯著減輕水腫與局部充血的目的。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記救生五步「叫、叫、伸、拋、划」，絕不盲目跳水救人</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握運動扭傷急性處置 PEACE 原則（保護、抬高、避免過度消炎、加壓、衛教）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道患處抬高必須「高於心臟高度」以利消腫</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">評量約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 5：急救心肺復甦術 (CPR) 與自動體外心臟電擊去顫器 (AED)</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>撥打 119 火警急救電話常識</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>心肺復甦術 CPR + 自動體外心臟去顫器 AED 標準操作流程、防溺十招</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：籃球運球投籃、排球低手擊球、足球帶球射門基礎動作。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>運動生物力學、骨骼關節槓桿與核心肌群穩定、神經肌肉徵召 (Neuromuscular Recruitment)</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">人體運動生物力學與槓桿</div>
+                  <div class="highlight-desc">骨骼為槓桿、關節為支點、骨骼肌為施力點；前臂屈肘為第三類費力但省時槓桿，動態熱身刺激神經肌肉徵召 (Neuromuscular Recruitment) 提升爆發力。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">球類侵入性戰術與空間創造</div>
+                  <div class="highlight-desc">無球空切 (Give and Go)、掩護擋拆 (Pick and Roll) 製造進攻空檔；防守時降低身體重心維持核心肌群穩定，保護膝關節韌帶免於扭挫傷。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">運動競賽安全與防護裝備</div>
+                  <div class="highlight-desc">熟練籃排羽球正確著地緩衝姿勢（屈髖屈膝而非直腿重著地），配戴護膝護踝，遵守運動員運動家精神與公平競爭。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -746,25 +781,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 CPR 叫叫CD 操作口訣</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">一叫檢查意識、二叫呼叫119拿AED、C胸外按壓快快壓（深度5cm/頻率100~120）、D開啟AED聽指令！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>AED 分析與電擊時，任何人絕對不能碰觸病人，避免觸電與干擾心電圖分析！</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">CPR+AED 急救口訣「叫、叫、C、D」流程圖</div>
@@ -799,114 +834,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 按壓深度 5~6cm ｜ 頻率 100~120次/分 ｜ 雙手交疊垂直用力壓</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 按壓深度與頻率記錯：按壓深度是「5~6 公分」，頻率是「每分鐘 100~120 次」，常有題目出每分鐘 60 次作為錯誤干擾。</div><div class="pitfall-item">❌ AED 電擊時碰觸患者：當 AED 充電放電時，施救者必須確認所有人離開，碰觸會導致觸電危險。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】對失去呼吸與意識的倒地成人實施高品質心肺復甦術 (CPR) 的「胸外按壓 (C)」時，下列哪一項操作規範是完全符合國際急救指引的？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】對失去呼吸與意識的倒地成人實施高品質心肺復甦術 (CPR) 的「胸外按壓 (C)」時，下列哪一項操作規範是完全符合國際急救指引的？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 按壓位置在肚臍上方，手肘彎曲輕輕按壓
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 按壓深度至少 5 公分（不超過 6 公分），每分鐘速率維持在 100 至 120 次
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 按壓速率每分鐘 50 次，中途隨意停下來聊天休息
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 按壓時每次按下去都不可以讓胸壁回彈
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>高品質 CPR 標準規範：兩乳頭連線胸骨中下段、掌根垂直施力、手肘打直、深度 5~6 公分、頻率每分鐘 100~120 次、每次按壓充分回彈、盡量避免中斷。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】當旁人取來「AED（自動體外心臟電擊去顫器）」送達急救現場時，施救者所應執行的「第一個動作」是什麼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】當旁人取來「AED（自動體外心臟電擊去顫器）」送達急救現場時，施救者所應執行的「第一個動作」是什麼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 停下來等待救護車抵達再打開
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 立即打開 AED 電源開關，並仔細聆聽機器的語音指示步驟
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 先把病人的衣服全部縫緊
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 直接按下紅色電擊按鈕
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>AED 設計極為人性化，取得後第一步是「立即打開電源（按開關或掀開上蓋）」，隨後機器會發出清晰中文語音，引導貼片位置與後續步驟。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記急救四步流程「叫、叫、C、D」</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握胸外按壓位置（胸骨中下段）、深度（5~6公分）、頻率（100~120次/分）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道 AED 兩貼片位置（右胸上方、左肋骨下方），電擊時全員離開</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

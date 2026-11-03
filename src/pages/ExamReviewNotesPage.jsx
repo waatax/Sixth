@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import ExamReviewPlanner from '../components/examNotes/ExamReviewPlanner';
 import MathText from '../components/common/MathText';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import katex from 'katex';
@@ -82,7 +83,7 @@ function renderDisplayFormula(formula) {
   return `<div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">${formula}</span><span class="mnemonic-quote-mark">”</span></div>`;
 }
 
-// 渲染結構化段考真題步驟解答教學
+// 渲染結構化段考練習題步驟解答教學
 function renderStructuredWalkthroughExplanation(explanation) {
   if (!explanation) return '';
   const lines = explanation.split('\n');
@@ -196,14 +197,14 @@ const ExamReviewNotesPage = () => {
   });
   const [allSolutionsExpanded, setAllSolutionsExpanded] = useState(false);
   const [isMasteryModalOpen, setIsMasteryModalOpen] = useState(false);
-  // 用戶真題自測選答狀態: { [walkthroughKey]: optIdx }
+  // 用戶練習題自測選答狀態: { [walkthroughKey]: optIdx }
   const [userAnswers, setUserAnswers] = useState({});
   // 考點圖解放大檢視模態框
   const [previewDiagram, setPreviewDiagram] = useState(null);
   // 全域視覺知識庫模態框目標單元 (null 為關閉)
   const [hubModalUnitId, setHubModalUnitId] = useState(null);
   const [hubModalKpId, setHubModalKpId] = useState(null);
-  // 焦點衝刺模式: 'all' (全部) | 'kpoints' (微知識點圖卡) | 'highlights' (段考亮點) | 'versions' (三版本對照) | 'radar' (審題雷達) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (真題解析) | 'checklist' (自測清單)
+  // 焦點衝刺模式: 'all' (全部) | 'kpoints' (微知識點圖卡) | 'highlights' (段考亮點) | 'versions' (三版本對照) | 'radar' (審題雷達) | 'formulas' (名師公式口訣) | 'pitfalls' (避雷陷阱) | 'walkthroughs' (練習題解析) | 'checklist' (自測清單)
   const [focusSection, setFocusSection] = useState('all');
 
   // 當前學科資訊
@@ -246,7 +247,7 @@ const ExamReviewNotesPage = () => {
     playSound('pop');
   };
 
-  // 真題互動自測點選答題
+  // 練習題互動自測點選答題
   const handleSelectOption = (walkthroughKey, optIdx, isCorrect) => {
     setUserAnswers(prev => ({
       ...prev,
@@ -285,7 +286,7 @@ const ExamReviewNotesPage = () => {
     });
   };
 
-  // 一鍵展開／收合所有段考真題詳解
+  // 一鍵展開／收合所有段考練習題詳解
   const toggleAllSolutions = () => {
     setAllSolutionsExpanded(prev => {
       const next = !prev;
@@ -348,6 +349,7 @@ const ExamReviewNotesPage = () => {
     .explanation { background: #ecfdf5; border: 1px solid #a7f3d0; padding: 6px 10px; margin-top: 6px; border-radius: 4px; color: #065f46; font-size: 11.5px; }
     .checklist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 6px; }
     @media print {
+      html, body, body * { background: #fff !important; box-shadow: none !important; text-shadow: none !important; }
       @page { size: A4 portrait; margin: 12mm 14mm; }
       body { max-width: 100%; margin: 0; padding: 0; }
       .card { page-break-inside: avoid; break-inside: avoid; }
@@ -367,8 +369,8 @@ const ExamReviewNotesPage = () => {
       <div style="margin-bottom: 8px;">
         <span class="badge">${n.examScopeLabel || '段考重點'}</span>
         <span class="badge" style="background: #fef3c7; color: #b45309;">${n.term}</span>
-        ${n.examWeight ? `<span class="badge" style="background: #dcfce7; color: #15803d;">${n.examWeight}</span>` : ''}
-        <span style="font-size: 11px; color: #64748b;">${n.textbookCoverage}</span>
+        ${false && n.examWeight ? `<span class="badge" style="background: #dcfce7; color: #15803d;">${n.examWeight}</span>` : ''}
+        <span style="font-size: 11px; color: #64748b;">共同概念整理・版本冊次待核對</span>
       </div>
       <h2 style="font-size: 16px; margin: 0 0 10px 0; color: #0f172a; border-left: 3.5px solid #2563eb; padding-left: 6px;">${n.title}</h2>
       
@@ -498,11 +500,11 @@ const ExamReviewNotesPage = () => {
       </div>
 
       ${n.pastExamWalkthroughs && n.pastExamWalkthroughs.length > 0 ? `
-        <div style="font-size: 12px; font-weight: bold; margin: 12px 0 6px 0; color: #059669;">📝 各校歷年段考／畢業考經典真題與步驟級教學解答</div>
+        <div style="font-size: 12px; font-weight: bold; margin: 12px 0 6px 0; color: #059669;">📝 各校歷年段考／畢業考經典練習題與步驟級教學解答</div>
         ${n.pastExamWalkthroughs.map((w, idx) => `
           <div class="walkthrough">
             <div style="font-size: 10.5px; color: #64748b; font-weight: bold; display: flex; justify-content: space-between;">
-              <span>🏛️ ${w.examSource}</span>
+              <span>🏛️ 本站練習題・來源待核實</span>
               <span style="color: #059669; font-weight: bold;">範例 0${idx + 1}</span>
             </div>
             <div style="font-weight: bold; margin: 5px 0; font-size: 12px; color: #0f172a;">【範例 ${idx + 1}】${w.question}</div>
@@ -601,7 +603,7 @@ const ExamReviewNotesPage = () => {
           🎓 最強小六 108 課綱 【{handoutInfo.scopeName}】考前重點筆記總複習講義
         </div>
         <div className="print-header-subtitle">
-          科目：{currentSubjectMeta.name} ｜ 學期：{handoutInfo.semesterLabel} ｜ 範圍單元：共 {notesList.length} 個單元 ｜ 適用三大版本（康軒・南一・翰林）
+          科目：{currentSubjectMeta.name} ｜ 學期：{handoutInfo.semesterLabel} ｜ 範圍單元：共 {notesList.length} 個單元 ｜ 共同概念整理・各版本冊次請核對
         </div>
         <div className="print-header-fields">
           <span>學校：____________________</span>
@@ -634,10 +636,11 @@ const ExamReviewNotesPage = () => {
         </h1>
 
         <p className="notes-hero-desc">
-          {handoutInfo.description} 由最強小六研發團隊與教科書編審名師聯合編撰，深度拆解核心觀念突破、名師必背公式、歷屆名校高頻陷阱與段考真題步驟級詳解。學會後可直擊歷年各校段考題目！
+          {handoutInfo.description} 先整理觀念，再試做與訂正。請以老師公告與實際課本目次確認本次範圍。
         </p>
       </div>
 
+      <ExamReviewPlanner notes={notesList} info={handoutInfo} />
       {/* 控制工具列：學期切換、段考範圍選擇、學科切換、搜尋與 PDF 下載 */}
       <div className="notes-controls-bar">
         {/* 1. 學期切換與 PDF / 列印操作按鈕群 */}
@@ -780,7 +783,7 @@ const ExamReviewNotesPage = () => {
             <button
               className={`btn-reading-tool ${allSolutionsExpanded ? 'active' : ''}`}
               onClick={toggleAllSolutions}
-              title={allSolutionsExpanded ? '收合所有題目之名師詳解（切換為自我檢核模式）' : '一鍵展開所有歷年段考真題步驟解析（快速考前衝刺）'}
+              title={allSolutionsExpanded ? '收合所有題目之名師詳解（切換為自我檢核模式）' : '一鍵展開所有歷年段考練習題步驟解析（快速考前衝刺）'}
             >
               {allSolutionsExpanded ? <EyeOff size={15} /> : <Eye size={15} />}
               <span>{allSolutionsExpanded ? '收合全部解析' : '一鍵全開解析'}</span>
@@ -810,11 +813,11 @@ const ExamReviewNotesPage = () => {
               { id: 'kpoints', label: '💡 明確微知識點圖鑑', tag: '圖解' },
               { id: 'highlights', label: '💡 三大段考知識亮點', tag: '精華' },
               { id: 'radar', label: '🔍 審題關鍵字雷達', tag: '破題' },
-              { id: 'versions', label: '📚 三版本測驗對照', tag: '對齊' },
+              { id: 'versions', label: '📚 版本學習建議（待核對）', tag: '對齊' },
               { id: 'rescue', label: '⏱️ 5秒瞬解急救卡', tag: '口訣' },
               { id: 'formulas', label: '⚡ 名師公式口訣', tag: '速解' },
               { id: 'pitfalls', label: '⚠️ 歷屆避雷陷阱', tag: '防錯' },
-              { id: 'walkthroughs', label: '📝 各校真題步驟', tag: '實戰' },
+              { id: 'walkthroughs', label: '📝 各校練習題步驟', tag: '實戰' },
               { id: 'checklist', label: '📋 考前自測檢核', tag: '自評' }
             ].map(f => (
               <button
@@ -841,7 +844,7 @@ const ExamReviewNotesPage = () => {
             <span className="badge badge-accent text-xs font-bold">{handoutInfo.badgeText}</span>
           </div>
           <p className="handout-scope-desc">
-            涵蓋 <strong>{notesList.length}</strong> 個核心單元 ｜ 包含 <strong>{notesList.reduce((acc, n) => acc + (n.pastExamWalkthroughs?.length || 0), 0)}</strong> 道各校歷年段考精選真題 ｜ <strong>{notesList.reduce((acc, n) => acc + (n.keyFormulas?.length || 0), 0)}</strong> 條名師秒解口訣
+            涵蓋 <strong>{notesList.length}</strong> 個核心單元 ｜ 包含 <strong>{notesList.reduce((acc, n) => acc + (n.pastExamWalkthroughs?.length || 0), 0)}</strong> 道各校歷年段考精選練習題 ｜ <strong>{notesList.reduce((acc, n) => acc + (n.keyFormulas?.length || 0), 0)}</strong> 條名師秒解口訣
           </p>
         </div>
       </div>
@@ -911,13 +914,13 @@ const ExamReviewNotesPage = () => {
                         <span className="badge badge-accent font-bold">
                           {note.examScopeLabel || note.term}
                         </span>
-                        {note.examWeight && (
+                        {false && note.examWeight && (
                           <span className="badge badge-success font-bold text-xs">
                             {note.examWeight}
                           </span>
                         )}
                         <span className="badge badge-secondary text-xs">
-                          {note.textbookCoverage}
+                          共同概念整理・版本冊次待核對
                         </span>
                       </div>
 
@@ -1310,13 +1313,13 @@ const ExamReviewNotesPage = () => {
                     </div>
                   )}
 
-                  {/* 4. 📝 各校歷年段考/畢業考經典真題實戰 */}
+                  {/* 4. 📝 各校歷年段考/畢業考經典練習題實戰 */}
                   {(focusSection === 'all' || focusSection === 'walkthroughs') && note.pastExamWalkthroughs && note.pastExamWalkthroughs.length > 0 && (
                     <div className="note-section-block unit-full-section">
                       <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
                         <h3 className="note-section-title" style={{ margin: 0 }}>
                           <HelpCircle size={18} style={{ color: 'var(--accent-success)' }} />
-                          <span>📝 各校歷年段考／畢業考經典真題與步驟級教學解答</span>
+                          <span>📝 各校歷年段考／畢業考經典練習題與步驟級教學解答</span>
                         </h3>
                         <span className="text-xs text-secondary font-bold">
                           點選選項可即時自測 ｜ 附名師步驟推導與解析
@@ -1335,7 +1338,7 @@ const ExamReviewNotesPage = () => {
                             <div key={idx} className="walkthrough-box">
                               <div className="flex items-center justify-between mb-2">
                                 <span className="walkthrough-source">
-                                  🏛️ {walk.examSource}
+                                  🏛️ 本站練習題・來源待核實
                                 </span>
                                 <span className="badge badge-secondary text-xs">
                                   範例 0{idx + 1}

@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 7：實用應用文寫作規範（書信格式、便條啟事與生活題辭）</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 8：漢字造字六書體系、書體演變與古典文學名家常識</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第7~9課 / 南一第7~9課 / 翰林第7~9課</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 7：實用應用文寫作規範（書信格式、便條啟事與生活題辭）</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>五年級便條留言寫作、日常信件格式</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>書信正文結構、提稱語與祝道詞稱謂對應、常用婚喪喜慶題辭</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：便條書寫、感謝信製作、校園活動請帖認識。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>書信格式五大部位、信封中欄啟封詞對稱稱謂、便條與請帖禮儀規範</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">書信提稱語稱謂禮貌</div>
+                  <div class="highlight-desc">對祖父母與父母用「膝下、尊前」；對師長用「函丈、尊前」；對平輩朋友用「足下、大鑒」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">信封中欄啟封詞大考魔王陷阱</div>
+                  <div class="highlight-desc">寫給長輩用「安啟、福啟」；寫給平輩用「台啟、大啟」；切勿在信封寫「敬啟」（敬啟意思是請對方恭敬打開，極為失禮）！</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">信末祝候語對象搭配</div>
+                  <div class="highlight-desc">對祖父母用「敬請 福安」；對師長用「敬請 誨安」；對平輩用「即請 大安」。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -522,25 +557,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 信封與題辭黃金鐵律</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">信封萬萬不可寫「敬啟」（大不敬）！賀醫界是「杏林春暖」，賀教師是「杏壇之光」！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>男弄璋（玉璋貴氣），女弄瓦（紡錘織布）。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">應用文信封格式與啟封詞稱謂天平</div>
@@ -567,153 +602,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 中行受信人 + 稱謂 + 啟封詞 ｜ 給長輩用「安啟/福啟」絕不可用「敬啟」！</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 信封封面寫「某某老師 敬啟」：歷屆段考最經典考題！信封封面萬萬不可寫「敬啟」，應寫「某某老師 道啟」或「大啟」。</div><div class="pitfall-item">❌ 題辭混淆：朋友搬新家送「弄璋之喜」（那是生兒子），新居應送「喬遷之喜」或「華廈鼎新」。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】小明寫了一封感謝信寄給班導師林老師。在直式信封的中央收件人欄位，下列哪一種寫法「最為禮貌且完全合乎傳統書信禮儀」？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小明寫了一封感謝信寄給班導師林老師。在直式信封的中央收件人欄位，下列哪一種寫法「最為禮貌且完全合乎傳統書信禮儀」？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       A. 林老師 大啟
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 林老師 敬啟
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 林老師 學生小明敬上
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 林老師 收到
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 A</strong><br>
                   【解題步驟】：<br>• 信封中央是請收信人拆信，「大啟」或「道啟」表示請對方拆開。<br>• B 項「敬啟」意為請老師恭敬打開，是大不敬。<br>• C 項把寄信人的「敬上」寫在收信人位置，格式錯誤。<br>故合乎禮儀的是 A（林老師 大啟/道啟）。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】李醫師仁心仁術，在新社區開設小兒科診所造福鄉里。若要致贈賀匾誌慶，下列哪一句祝賀題辭最為貼切得體？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】李醫師仁心仁術，在新社區開設小兒科診所造福鄉里。若要致贈賀匾誌慶，下列哪一句祝賀題辭最為貼切得體？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 桃李滿門
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 華廈鼎新
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 妙手回春（或杏林春暖）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 弄璋之喜
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>• A 項「桃李滿門」祝賀教育界教師。<br>• B 項「華廈鼎新」祝賀新居落成。<br>• C 項「妙手回春 / 杏林春暖」頌揚醫術精湛救人無數，專用於醫界。<br>• D 項「弄璋之喜」祝賀生男嬰。<br>故正確答案選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我牢記信封封面絕對不可以寫「敬啟」</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能熟練區分醫界（杏林春暖、妙手回春）與教育界（桃李滿門、杏壇之光）題辭</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道生男孩是弄璋、生女孩是弄瓦，新居是華廈鼎新</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下畢業考 (期末考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">畢業考約佔 50%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第10~12課 / 南一第10~12課 / 翰林第10~12課</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 8：漢字造字六書體系、書體演變與古典文學名家常識</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>中年級象形造字由來、漢字部首概念</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>六書造字法則（象形/指事/會意/形聲/轉注/假借）、國中文言先修銜接</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：造字故事初探、漢字部首分類、形近字辨析。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>漢字六書造字法則辨析、獨體文與合體字分野、國中先修國學常識常考題型</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">六書造字心智模型前四者造字法</div>
+                  <div class="highlight-desc">象形（獨體繪實物，日/月/木）；指事（獨體加符號表示抽象，上/下/本/刃）；會意（合體會合字義，休/森/武）；形聲（合體一半表形一半表音，江/河/晴）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">獨體為「文」、合體為「字」</div>
+                  <div class="highlight-desc">象形與指事為獨體文（不可拆分）；會意與形聲為合體字（形音組合）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">國中會考國文高頻字形字音</div>
+                  <div class="highlight-desc">形近字字音辨正、六書造字比例（漢字 85% 以上皆為形聲字）。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -737,25 +772,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 六書造字判斷速記表</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">具體物體是象形，抽象標記指事明；兩字合意是會意，一邊表音形聲形！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>六書前四者為造字法，後兩者（轉注、假借）為用字法。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">六書造字法則演進架構圖</div>
@@ -787,114 +822,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 四體 (造字：象形/指事/會意/形聲) ＋ 二用 (用字：轉注/假借)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 混淆「指事」與「會意」：「本」是在木字底下標註一點代表樹根，是指事；「休」是人站在樹木旁，是會意。</div><div class="pitfall-item">❌ 四大奇書與四大名著區別：明代四大奇書包括《金瓶梅》，不含清代才問世的《紅樓夢》。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 1】漢字造字法則中，「休」字由「人」倚靠在「木」旁表示休息；「明」字由「日」與「月」共同發光表示光明。請問這兩個字均屬於六書中的哪一種造字法則？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】漢字造字法則中，「休」字由「人」倚靠在「木」旁表示休息；「明」字由「日」與「月」共同發光表示光明。請問這兩個字均屬於六書中的哪一種造字法則？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 象形
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 指事
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 會意
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 形聲
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>會意字是將兩個或兩個以上的字組合在一起，將各自的含義融合成一個全新的概念。人+木=休，日+月=明，均屬於「會意字」。故選 C。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期畢業考精選題</div>
-                <div class="walkthrough-question">【真題 2】秦始皇統一六國後，推行「書同文」政策，廢除各國異體字，統一推行的官方文字字體是下列何者？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】秦始皇統一六國後，推行「書同文」政策，廢除各國異體字，統一推行的官方文字字體是下列何者？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 甲骨文
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 金文
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 小篆
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 楷書
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>秦始皇命丞相李斯簡化六國文字，創制「小篆」作為全國統一的標準官方法定文字。隸書在漢代大興，楷書魏晉成形。故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚分辨象形（日、月）、指事（本、刃）、會意（休、明）、形聲（江、河）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記漢字演變順序：甲骨文 ➔ 金文 ➔ 小篆 ➔ 隸書 ➔ 楷書</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握李白詩仙、杜甫詩聖、王維詩佛的封號與詩風</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 6：簡單機械（槓桿、輪軸、滑輪與齒輪）力矩平衡</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 7：熱的傳播方式（傳導、對流、輻射）與保溫散熱科技</td><td>□</td><td>□</td><td>□</td></tr><tr><td>單元 8：生物對環境的適應、演化天擇與臺灣特有種保育</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 35%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第1單元 / 南一第1單元 / 翰林第1單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 6：簡單機械（槓桿、輪軸、滑輪與齒輪）力矩平衡</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級力的作用力與形變、四年級彈簧秤測量</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：腳踏車傳動結構、開瓶器與剪刀操作經驗。</span>
               <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>槓桿原理力矩平衡計算、省力與費力槓桿辨析、動滑輪與定滑輪</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">槓桿平衡核心定理</div>
+                  <div class="highlight-desc"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>施力</mtext><mo>×</mo><mtext>施力臂</mtext><mo>=</mo><mtext>抗力</mtext><mo>×</mo><mtext>抗力臂</mtext></mrow><annotation encoding="application/x-tex">\text{施力} \times \text{施力臂} = \text{抗力} \times \text{抗力臂}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">施力</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">施力臂</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">抗力</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">抗力臂</span></span></span></span></span>（順時針力矩 = 逆時針力矩）。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">省力與費力判定</div>
+                  <div class="highlight-desc">施力臂大於抗力臂為「省力（如開瓶器、指甲剪）」；施力臂小於抗力臂為「費力但省時（如鑷子、筷子）」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">滑輪機構</div>
+                  <div class="highlight-desc">定滑輪「不省力但改變施力方向（旗桿）」；動滑輪「省力一半但費距離（起重機吊鉤）」。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -520,31 +555,31 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 槓桿平衡方程式</div>
                       <div class="formula-body"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>F</mi><mn>1</mn></msub><mo>×</mo><msub><mi>L</mi><mn>1</mn></msub><mo>=</mo><msub><mi>F</mi><mn>2</mn></msub><mo>×</mo><msub><mi>L</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">F_1 \times L_1 = F_2 \times L_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>施力 × 施力臂 = 抗力 × 抗力臂。施力臂越長，所需要的施力就越小（越省力）。</div>
                     </div>
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 滑輪受力換算</div>
                       <div class="formula-body"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>定滑輪：</mtext><mi>F</mi><mo>=</mo><mi>W</mi><mspace width="1em"/><mo separator="true">;</mo><mspace width="1em"/><mtext>動滑輪：</mtext><mi>F</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>W</mi></mrow><annotation encoding="application/x-tex">\text{定滑輪：} F = W \quad ; \quad \text{動滑輪：} F = \frac{1}{2} W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">定滑輪：</span></span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">W</span><span class="mspace" style="margin-right:1em;"></span><span class="mpunct">;</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord cjk_fallback">動滑輪：</span></span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.1389em;">W</span></span></span></span></span></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>動滑輪省力一半，但繩子拉動長度必須是物體上升高度的 2 倍（功守恆）。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">水溶液酸鹼指示劑變色階梯圖</div>
@@ -566,153 +601,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 石蕊試紙 ｜ 酚酞 (鹼紅) ｜ 廣用試紙 (紅橙黃綠藍靛紫)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 筷子與鑷子誤認為省力：筷子支點在虎口，手指施力點在中，食物抗力點在尖端，施力臂小於抗力臂，是「費力槓桿」，功能是省距離與靈活夾取。</div><div class="pitfall-item">❌ 定滑輪誤認為省力：升旗的定滑輪完全不省力（拉 1 公斤需出 1 公斤力），純粹提供「向下施力讓物體向上升」的方便方向變更。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級下學期第一次段考精選題</div>
-                <div class="walkthrough-question">【真題 1】日常生活中有許多槓桿工具，下列哪一組工具「全部都屬於費力但能增加工作靈活性」的槓桿？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】日常生活中有許多槓桿工具，下列哪一組工具「全部都屬於費力但能增加工作靈活性」的槓桿？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 拔釘鐵槌、開瓶器
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 筷子、鑷子、釣魚竿
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 裁紙刀、指甲剪
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 蹺蹺板、等臂天平
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>筷子、鑷子、釣魚竿的施力臂皆小於抗力臂，雖然費力，但能讓抗力點移動更大的距離與精準操作，屬於典型的「費力槓桿」。拔釘器與指甲剪為省力槓桿；天平不省力不費力。故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】一根等臂槓桿尺的中心點為固定支點，左右兩邊每隔 2 公分有一個刻度掛鉤。如果在支點「左邊第 3 格」掛上 4 個相同的砝碼，若要在支點「右邊第 2 格」掛上砝碼使槓桿保持水平平衡，右邊必須掛上幾個砝碼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】一根等臂槓桿尺的中心點為固定支點，左右兩邊每隔 2 公分有一個刻度掛鉤。如果在支點「左邊第 3 格」掛上 4 個相同的砝碼，若要在支點「右邊第 2 格」掛上砝碼使槓桿保持水平平衡，右邊必須掛上幾個砝碼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 3 個
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 4 個
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 6 個
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 8 個
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>1. 計算左側力矩：<br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>左側力矩</mtext><mo>=</mo><mtext>砝碼數</mtext><mo>×</mo><mtext>格數</mtext><mo>=</mo><mn>4</mn><mo>×</mo><mn>3</mn><mo>=</mo><mn>12</mn></mrow><annotation encoding="application/x-tex">\text{左側力矩} = \text{砝碼數} \times \text{格數} = 4 \times 3 = 12</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">左側力矩</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">砝碼數</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">格數</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">12</span></span></span></span>。<br>2. 根據槓桿平衡條件：左側力矩 = 右側力矩。<br>   <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>=</mo><mtext>右側砝碼數</mtext><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">12 = \text{右側砝碼數} \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">12</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord text"><span class="mord cjk_fallback">右側砝碼數</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>。<br>3. 右側砝碼數 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>÷</mo><mn>2</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">12 \div 2 = 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">12</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6444em;"></span><span class="mord">6</span></span></span></span> 個。<br>故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能精確在工具上標出「支點、施力點、抗力點」</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道定滑輪不省力只改方向，動滑輪省力一半</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握「施力在輪省力，施力在軸費力」的輪軸原理</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 35%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第2單元 / 南一第2單元 / 翰林第2單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 7：熱的傳播方式（傳導、對流、輻射）與保溫散熱科技</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級熱的傳播方式、三年級氣候與溫度</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>傳導對流輻射三途徑、保溫瓶隔熱構造、比熱與海陸風成因</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：水與鐵製品生鏽觀察、食物發霉腐壞經驗。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>鐵生鏽化學氧化反應、生鏽實驗變因控制、五大防鏽工法與食品防腐保鮮</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">鐵生鏽化學反應條件</div>
+                  <div class="highlight-desc">鐵生鏽必備「水分」與「氧氣」，酸性液體或鹽水會大幅加速生鏽腐蝕速度。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">防鏽五大防護工法</div>
+                  <div class="highlight-desc">塗油漆隔絕空氣、塗抹潤滑油、表面電鍍不易生銹金屬（鍍鋅/鍍錫）、乾燥劑防潮、抽真空包裝。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">食品防腐與保鮮原理</div>
+                  <div class="highlight-desc">低溫冷凍抑制微生物酵素活性、高溫殺菌密封（罐頭）、脫水乾燥與高糖高鹽醃漬降低水活性。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -734,25 +769,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 熱傳播三要素速記表</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">固體靠傳導、流體靠對流、真空靠輻射；保溫瓶：真空擋傳導對流，鍍銀反射擋輻射！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>太陽光與熱照射地球是純粹的「輻射」途徑。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">槓桿天平力矩平衡與省力機械</div>
@@ -780,153 +815,153 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 力矩平衡：左施力 × 左臂長 = 右施力 × 右臂長</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 誤以為保溫瓶能「製造熱」：保溫瓶沒有加熱功能，純粹是「阻斷熱的三種傳播途徑」，既能保溫（防熱散出），也能保冰（防外界熱侵入）。</div><div class="pitfall-item">❌ 冷氣機與暖氣機裝設位置混淆：冷空氣重下沉，冷氣裝高處；熱空氣輕上升，暖氣應放在靠近地面處。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台中市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】保溫瓶能夠長時間維持瓶內熱水的溫度，主要是因為它的構造全面阻斷了熱傳播的三種途徑。請問：保溫瓶內膽「鍍銀的光亮鏡面」主要功能是阻擋哪一種途徑的熱散失？雙層「真空夾層」又是阻擋哪兩種途徑？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】保溫瓶能夠長時間維持瓶內熱水的溫度，主要是因為它的構造全面阻斷了熱傳播的三種途徑。請問：保溫瓶內膽「鍍銀的光亮鏡面」主要功能是阻擋哪一種途徑的熱散失？雙層「真空夾層」又是阻擋哪兩種途徑？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 鍍銀阻擋傳導；真空阻擋對流與輻射
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 鍍銀阻擋輻射；真空阻擋傳導與對流
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 鍍銀阻擋對流；真空阻擋傳導與輻射
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 兩者皆是為了阻擋熱對流
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>1. 鍍銀的光滑表面能反射熱輻射，阻擋「熱輻射」散失。<br>2. 真空狀態內部沒有物質粒子，阻斷了需要介質的「熱傳導」與「熱對流」。<br>故正確答案為 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】寒冷的冬天裡，站在營火旁邊即使吹著冷風，面朝營火的臉頰依然會感到一陣陣溫暖灼熱。這種熱能直接傳遞到臉上的方式屬於下列何者？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】寒冷的冬天裡，站在營火旁邊即使吹著冷風，面朝營火的臉頰依然會感到一陣陣溫暖灼熱。這種熱能直接傳遞到臉上的方式屬於下列何者？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 熱傳導
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       B. 熱對流
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       C. 熱輻射
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 蒸發吸熱
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 C</strong><br>
                   【解題步驟】：<br>營火的熱空氣會隨對流往天空上升，吹到臉上的熱能是直接以電磁波形式直線放射過來的，此傳播方式為「熱輻射」。故選 C。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚區分傳導（固體）、對流（流體循環）、輻射（光熱直射無需介質）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我熟記保溫瓶三大結構（真空阻傳導對流、鍍銀擋輻射、塑膠蓋擋傳導）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道深色粗糙物體吸熱快且散熱也快，淺色平滑物體易反射熱</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6下期中考 (第1次段考)</span>
             <span class="badge badge-accent">6下</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">段考約佔 30%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 8：生物對環境的適應、演化天擇與臺灣特有種保育</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>三年級植物構造、五年級動物覓食與繁衍</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>食物鏈能量流向與金字塔遞減、生態系多樣性、適應與擬態保護色</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小四年級：生物棲息地與食物鏈初步、動植物生態適應。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>生態系生產者消費者分解者角色、食物網能量金字塔10%定律、生物累積與外來種防制</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">食物鏈箭號嚴格標準</div>
+                  <div class="highlight-desc">箭頭代表「能量與養分的流動路徑」，必為「被吃者 ➔ 掠食者」，綠色植物（生產者）永遠在食物鏈的最開頭。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">生態系能量傳遞 10% 定律</div>
+                  <div class="highlight-desc">能量在食物鏈傳遞時每層僅剩約 10%，其餘散失為熱能；脂溶性重金屬毒素則「逐層生物濃縮放大」。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">生物多樣性三大層次</div>
+                  <div class="highlight-desc">遺傳多樣性、物種多樣性與生態系多樣性；外來入侵種（綠鬣蜥/福壽螺）威脅本土生態平衡。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -946,25 +981,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 動物體色防禦三大策略</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">保護色（低調隱身融入背景） vs 警戒色（鮮豔警告有毒） vs 擬態（模仿別人）</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>天擇說關鍵口訣：變異、過度繁殖、生存競爭、適者生存。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">熱的三種傳播途徑與保溫瓶構造</div>
@@ -987,114 +1022,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 傳導(固體) ｜ 對流(液氣體) ｜ 輻射(真空波)</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 混淆保護色與警戒色：枯葉蝶是「保護色（偽裝成枯葉隱身）」；色彩鮮豔斑斕的箭毒蛙是「警戒色（昭告天下我有毒）」。</div><div class="pitfall-item">❌ 櫻花鉤吻鮭棲地特性：櫻花鉤吻鮭是冰河孓遺魚類，要求水溫必須低於 16°C 且高溶氧量之清澈高山溪流。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 台北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 1】被譽為臺灣「國寶魚」的櫻花鉤吻鮭，是臺灣極為珍貴的冰河時期孑遺生物。請問目前牠們主要棲息在臺灣哪一座國家公園的清澈冰涼高山溪流中？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】被譽為臺灣「國寶魚」的櫻花鉤吻鮭，是臺灣極為珍貴的冰河時期孑遺生物。請問目前牠們主要棲息在臺灣哪一座國家公園的清澈冰涼高山溪流中？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 墾丁國家公園
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 雪霸國家公園（七家灣溪）
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 陽明山國家公園
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 台江國家公園
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>櫻花鉤吻鮭需要低溫且高溶氧量的未受污染水質，主要棲息在雪霸國家公園的大甲溪上游「七家灣溪」流域。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 新北市某國小六年級下學期段考精選題</div>
-                <div class="walkthrough-question">【真題 2】英國生物學家達爾文提出著名的「天擇說」來解釋生物演化的機制。下列哪一項敘述最符合天擇說的核心觀點？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】英國生物學家達爾文提出著名的「天擇說」來解釋生物演化的機制。下列哪一項敘述最符合天擇說的核心觀點？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 長頸鹿是因為每一代都努力伸長脖子吃樹葉，脖子才一代比一代長並遺傳下去
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 生物族群中原本就存在頸長各異的個體，當環境變遷時，頸長的個體較容易取得食物存活下來並繁衍後代
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 所有生物都是由神明瞬間創造出來，且外觀永遠維持不變
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 只要生物大量進食，就能自動演化出防禦武器
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>選項 A 是拉馬克的「用進廢退說」；達爾文天擇說的核心是「先有遺傳變異，再由環境篩選適者生存」。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能清楚區別仙人掌針刺（葉退化防蒸散）與肉質莖（儲水光合作用）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能分辨保護色、擬態、警戒色的實例</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我知道櫻花鉤吻鮭是冰河孑遺生物，棲息於雪霸七家灣溪</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>

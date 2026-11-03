@@ -430,6 +430,31 @@
       padding-top: 6px;
       margin-top: 16px;
     }
+
+    /* White paper edition: no filled panels, comfortable A4 reading. */
+    @page { size: A4; margin: 14mm 13mm; }
+    body { font-size: 12px; line-height: 1.85; color: #172b24; }
+    body, body * { background: transparent !important; box-shadow: none !important; text-shadow: none !important; }
+    html, body { background: #fff !important; }
+    .unit-card { break-inside: auto; page-break-inside: auto; border: 0; border-top: 2px solid #375a49; padding: 15px 0; }
+    .unit-header, .section-title { break-after: avoid; }
+    .section-block { break-inside: auto; }
+    .walkthrough-card, tr, .checklist-item, .formula-item { break-inside: avoid; }
+    p, li { orphans: 3; widows: 3; }
+    .core-concept-item, .walkthrough-question, .walkthrough-explanation, .checklist-item { font-size: 12px; line-height: 1.85; color: #172b24; }
+    .review-plan { border: 1px solid #7c9083; padding: 14px; margin: 18px 0; font-size: 12px; }
+    .review-plan h2 { margin: 0 0 8px; font-size: 17px; }
+    .review-plan table { width: 100%; border-collapse: collapse; }
+    .review-plan td, .review-plan th { border: 1px solid #aebbb1; padding: 8px; text-align: left; }
+    .writing-space { border-bottom: 1px solid #aebbb1; height: 24px; }
+    svg rect { fill: white; }
+    .unit-dual-grid { display: block; break-inside: auto; page-break-inside: auto; }
+    .col-left, .col-right { display: block; }
+    .concept-item, .formula-detail, .pitfall-item, .walkthrough-option-item { font-size: 12px; line-height: 1.85; }
+    .highlight-desc { font-size: 11px; line-height: 1.8; }
+    .highlight-point { font-size: 12px; }
+    .unit-diagram-container { max-width: 450px; margin: 12px auto; }
+
   </style>
 </head>
 <body>
@@ -451,52 +476,62 @@
     </div>
   </div>
 
+  <section class="review-plan">
+    <h2>我的段考複習路線</h2>
+    <p>考試日期：____________　課本版本／冊次：____________　學校實際範圍：____________</p>
+    <p>先對照老師公告，再勾選本次需要的單元。下列為本站建議分組，不是各版本統一考試範圍。</p>
+    <table><thead><tr><th>本份單元</th><th>讀懂</th><th>試做</th><th>隔日回想</th></tr></thead><tbody>
+    <tr><td>單元 3：多元智能理論、自主學習策略（康乃爾與費曼學習法）</td><td>□</td><td>□</td><td>□</td></tr>
+    </tbody></table>
+    <p>版本查核：康軒、南一、翰林及其他版本尚未逐冊核對；請以實際課本目次補核。108 課綱涵蓋尚未完成逐條編審。</p>
+    <p>課綱來源：naer.edu.tw/PageSyllabus?fid=52　審定版本：textbooks.naer.edu.tw</p>
+  </section>
   <!-- 單元核心筆記列表 -->
   <div class="units-container">
-    
+
       <div class="unit-card">
         <div class="unit-header">
           <div class="handout-badge-row">
             <span class="badge badge-primary">6上期末考 (第2次段考)</span>
             <span class="badge badge-accent">6上</span>
-            <span class="badge" style="background: #dcfce7; color: #15803d;">期末評量 100%</span>
-            <span style="font-size: 10px; color: #64748b;">康軒第3單元 / 南一第3單元 / 翰林第3單元</span>
+
+            <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">單元 3：多元智能理論、自主學習策略（康乃爾與費曼學習法）</h2>
-          
+
             <div class="unit-pedagogy-row">
-              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>四年級認識自己的興趣愛好與特長</span>
-              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>迦納八大多元智能分析、費曼自主學習法、成長型思維 (Growth Mindset)</span>
+              <span class="pedagogy-pill prior">🎯 <strong>溫故知新：</strong>國小五年級：自我興趣喜好清單、職業角色探索認識。</span>
+              <span class="pedagogy-pill skill">🏅 <strong>能力指標：</strong>加德納多元智能理論優勢發掘、諾貝爾獎得主費曼極簡學習法、SMART 目標設定法</span>
             </div>
-          
+
         </div>
 
-        
+
           <div class="unit-highlights-box">
             <div class="highlights-box-title">🌟【段考三大核心知識亮點・高頻必考精華】</div>
             <div class="highlights-grid">
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 01</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">多元智能理論打破智力迷思</div>
+                  <div class="highlight-desc">語文、數理邏輯、空間視覺、肢體動覺、音樂、人際、內省、自然觀察八大智能，每個人皆有天賦亮點。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 02</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">費曼學習法四大閉環步驟</div>
+                  <div class="highlight-desc">選定概念 ➔ 用淺顯大白話教給門外漢或小學生 ➔ 找出卡殼盲點重新查書 ➔ 提煉簡化為生活類比。</div>
                 </div>
-              
+
                 <div class="highlight-card">
                   <div class="highlight-num">亮點 03</div>
-                  <div class="highlight-point">undefined</div>
-                  <div class="highlight-desc">undefined</div>
+                  <div class="highlight-point">SMART 目標設定原則</div>
+                  <div class="highlight-desc">具體的 (Specific)、可衡量的 (Measurable)、可達成的 (Attainable)、相關的 (Relevant)、有明確截止期限的 (Time-bound)。</div>
                 </div>
-              
+
             </div>
           </div>
-        
+
 
         <!-- 緊湊雙欄排版 (左欄觀念與公式，右欄向量圖解與防雷指南) -->
         <div class="unit-dual-grid">
@@ -517,25 +552,25 @@
             </div>
 
             <!-- 2. 名師必背公式與解題大招 -->
-            
+
               <div class="section-block">
                 <div class="section-title">⚡【名師公式・解題大招・速記口訣】</div>
                 <div class="formulas-grid">
-                  
+
                     <div class="formula-card">
                       <div class="formula-name">🌟 費曼學習法四部曲</div>
                       <div class="formula-body"><div class="formula-mnemonic-callout"><span class="mnemonic-quote-mark">“</span><span class="mnemonic-text">設定目標概念 ➔ 用大白話教給門外漢 ➔ 發現卡關盲點 ➔ 回溯簡化提煉！</span><span class="mnemonic-quote-mark">”</span></div></div>
                       <div class="formula-detail">💡 <strong>大招解析：</strong>能講給別人聽懂，才是真正內化知識的最高境界。</div>
                     </div>
-                  
+
                 </div>
               </div>
-            
+
           </div>
 
           <div class="col-right">
             <!-- 考點向量視覺圖解 -->
-            
+
               <div class="diagram-card">
                 <div class="diagram-badge">🎨 考點視覺圖解</div>
                 <div class="diagram-title">情緒紅綠燈與「我訊息」溝通三要素</div>
@@ -558,114 +593,115 @@
     </svg></div>
                 <div class="diagram-subtitle">💡 我訊息：事實陳述 ＋ 我的感受 ＋ 具體期待 ｜ 拒絕人身攻擊</div>
               </div>
-            
+
 
             <!-- 3. 歷屆常考易錯陷阱 -->
-            
+
               <div class="section-block">
                 <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
                 <div class="pitfalls-box">
                   <div class="pitfall-item">❌ 單一智力迷思：運動好或音樂好的人絕非智力低，在多元智能理論中，肢體動覺與音樂皆是人類寶貴的智慧形式。</div><div class="pitfall-item">❌ 死記硬背筆記法：通篇全抄課文不是康乃爾筆記法，關鍵在於左欄提問與底部的精煉反思摘要。</div>
                 </div>
               </div>
-            
+
           </div>
         </div>
 
         <!-- 4. 各校歷年真題實戰詳解 -->
-        
+
           <div class="section-block" style="border-top: 1px dashed #e2e8f0; padding-top: 8px; margin-top: 6px;">
-            <div class="section-title" style="color: #047857;">📝【各校歷年段考／畢業考真題實戰】</div>
-            
+            <div class="section-title" style="color: #047857;">📝【觀念應用練習（來源未查證，不標作歷屆真題）】</div>
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 臺北市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 1】小華非常喜歡走入森林觀察各類昆蟲與植物生態，並能迅速辨識數十種鳥類的叫聲與樹葉紋理。依據加德納的「多元智能理論」，小華在下列哪一項智能上表現最為突出？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 1】小華非常喜歡走入森林觀察各類昆蟲與植物生態，並能迅速辨識數十種鳥類的叫聲與樹葉紋理。依據加德納的「多元智能理論」，小華在下列哪一項智能上表現最為突出？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 空間智能
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 自然觀察智能
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 邏輯數學智能
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 音樂智能
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>自然觀察智能突出者對自然界的生物種類、地質特徵與生態現象具有敏銳的觀察、分類與辨識能力。故選 B。
                 </div>
               </div>
-            
+
               <div class="walkthrough-box">
-                <div class="walkthrough-source">🏛️ 高雄市某國小六年級上學期期末考精選題</div>
-                <div class="walkthrough-question">【真題 2】著名物理學家費曼提出一種極為高效的自主學習方法（費曼學習法），用來檢視自己是否真正徹底搞懂了某個艱深的知識概念。其最核心的實踐做法是什麼？</div>
+                <div class="walkthrough-source">🏛️ 本站練習題・原始出處待核實</div>
+                <div class="walkthrough-question">【練習 2】著名物理學家費曼提出一種極為高效的自主學習方法（費曼學習法），用來檢視自己是否真正徹底搞懂了某個艱深的知識概念。其最核心的實踐做法是什麼？</div>
                 <div class="walkthrough-options">
-                  
+
                     <div class="walkthrough-option-item" style="">
                       A. 將整本書從頭到尾一字不漏地抄寫十遍
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="border-color: #10b981; font-weight: 700;">
                       B. 嘗試用最通俗直白的話，講給完全不懂這個概念的小孩聽，直到對方完全理解為止
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       C. 購買五種不同顏色的螢光筆把整本課本塗滿
                     </div>
-                  
+
                     <div class="walkthrough-option-item" style="">
                       D. 考前整晚不睡覺死記硬背
                     </div>
-                  
+
                 </div>
                 <div class="walkthrough-explanation">
                   <strong>✅ 正確解答：選項 B</strong><br>
                   【解題步驟】：<br>費曼學習法的核心在於「以教代學」，以平白通俗的語言讓外行人聽懂，藉由輸出的過程主動診斷並修補自己認知盲區。故選 B。
                 </div>
               </div>
-            
+
           </div>
-        
+
 
         <!-- 5. 考前 10 分鐘必會檢核清單 (雙欄排列) -->
-        
+
           <div class="section-block" style="margin-bottom: 0;">
             <div class="section-title" style="color: #15803d;">📋【考前 10 分鐘必會檢核清單】</div>
             <div class="checklist-box compact-grid">
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能認識自己的多元智能優勢（語言、數理、空間、肢體、音樂等）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我掌握康乃爾筆記三分法（主欄、提示欄、摘要欄）</span>
                 </div>
-              
+
                 <div class="checklist-item">
                   <span class="box-square"></span>
                   <span>我能運用費曼學習法「以教代學」檢視自己是否真正搞懂觀念</span>
                 </div>
-              
+
             </div>
           </div>
-        
+
       </div>
-      
+
   </div>
 
+  <section class="review-plan"><h2>訂正與隔日回想</h2><p>卡住的知識點：___________________　回顧日期：____________</p><p>錯誤原因與正確方法：</p><div class="writing-space"></div><div class="writing-space"></div><div class="writing-space"></div></section>
   <div class="handout-footer">
-    108 課綱六年級專屬學科講義 ｜ 對齊康軒・南一・翰林三大版本 ｜ 祝考試順利・奪取高分！
+    小小學習島・六年級共同觀念複習 ｜ 版本進度請依學校公告核對 ｜ 白底列印版 2026-11-03
   </div>
 </body>
 </html>
