@@ -273,12 +273,13 @@ In our daily lives, we are always comparing things:
 - ⚡ **段考 5 秒破題口訣**：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
 - 🏷️ **題幹高頻熱門關鍵字**：Comparative -er than, Superlative the -est, more / the most, irregular forms
 
-### 📋 歷屆各校段考 4 大代表題型特徵分析
+### 📋 歷屆各校段考 5 大代表題型特徵分析
 
-1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
-2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
-3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
-4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
+2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
+3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
+4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
+5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -300,7 +301,7 @@ In our daily lives, we are always comparing things:
 
 - 🧠 **一句話記住**：短字 -er ＋ than；長字 more ＋ than；短母音字尾子音重複（big → bigger）。
 - 🌱 **生活例子**：Tom is taller than Ben. / A dog is bigger than a cat. / This book is more interesting than that one.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「比較級關鍵信號詞與字尾規則」時，立即啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。考前速記：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：短字 -er ＋ than；長字 more ＋ than；短母音字尾子音重複（big → bigger）。。解題時切記：good 的比較級是 better，不是 gooder。
 
 **先想想看**：遮住下面的說明，用自己的話說說「比較級：兩者比較」是什麼意思，再想一個你身邊的例子。
 
@@ -319,7 +320,7 @@ In our daily lives, we are always comparing things:
 
 - 🧠 **一句話記住**：the ＋ -est；the most ＋ 長形容詞；good → the best。
 - 🌱 **生活例子**：Tom is the tallest in our class. / This is the most exciting game of all.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「最高級關鍵信號詞」時，立即啟動「前面必加 the；單音節加 -est，三音節以上加 most；範圍片語 in the world / of all」解題。考前速記：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：the ＋ -est；the most ＋ 長形容詞；good → the best。。解題時切記：最高級前面一定要加 the。
 
 **先想想看**：遮住下面的說明，用自己的話說說「最高級：三者以上比較」是什麼意思，再想一個你身邊的例子。
 
@@ -338,7 +339,7 @@ In our daily lives, we are always comparing things:
 
 - 🧠 **一句話記住**：the ＋ 最高級 ＋ in the world。
 - 🌱 **生活例子**：Mount Everest is the highest mountain in the world. / The Pacific Ocean is the largest ocean.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「不規則三級變化大考必考天王」時，立即啟動「good ➔ better ➔ best；bad ➔ worse ➔ worst；many/much ➔ more ➔ most」解題。考前速記：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：the ＋ 最高級 ＋ in the world。。解題時切記：「在世界上」要用 in the world，不是 of the world。
 
 **先想想看**：遮住下面的說明，用自己的話說說「世界之最」是什麼意思，再想一個你身邊的例子。
 
@@ -388,14 +389,12 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** C. the largest
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「比較級關鍵信號詞與字尾規則」，直接啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 範圍是全世界地球上所有動物相比（三者以上），使用最高級句型「the + 最高級形容詞」；large 字尾已有 e，直接加 st 變成 "the largest"。故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：最高級漏掉 the：學生常寫 "He is tallest boy"，正確必須有 the ➔ "He is the tallest boy in our class"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -411,22 +410,20 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** B. better ; the fastest
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「比較級關鍵信號詞與字尾規則」，直接啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 1．第一個空格後面有 "than"，需使用比較級；good 的不規則比較級是 "better"。
 
 2．第二個空格後面有範圍 "in the class"，需使用最高級「the + fastest」。
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：最高級漏掉 the：學生常寫 "He is tallest boy"，正確必須有 the ➔ "He is the tallest boy in our class"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【段考高頻易錯陷阱題】　Mount Everest (珠穆朗瑪峰) is the ______ mountain in the world.
+**第 3 題**【生活素養與情境應用題】　Mount Everest (珠穆朗瑪峰) is the ______ mountain in the world.
 
 **A.** high  
 **B.** higher  
@@ -438,16 +435,16 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** C. highest
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「比較級關鍵信號詞與字尾規則」，直接啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 單音節形容詞 high，在三者以上比較時最高級加 -est，前面搭配 the：the highest mountain。
 
-⚠️ **【易錯防雷與陷阱剖析】**：最高級漏掉 the：學生常寫 "He is tallest boy"，正確必須有 the ➔ "He is the tallest boy in our class"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 4 題**【多步驟推導與跨觀念綜合題】　An elephant is much ______ than a dog.
+**第 4 題**【段考高頻易錯陷阱題】　An elephant is much ______ than a dog.
 
 **A.** heavier  
 **B.** heavy  
@@ -459,16 +456,16 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** A. heavier
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「比較級關鍵信號詞與字尾規則」，直接啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：子音組合拼讀規則：字母組合「ph」固定發 /f/ 音（如 dolphin, photo, elephant）。
 
 📐 **【詳盡解題步驟與算理推導】**：
 heavy 字尾為子音 + y，去 y 加 ier 變成 heavier；比較級前可加 much 強調程度「重得多」。
 
-⚠️ **【易錯防雷與陷阱剖析】**：最高級漏掉 the：學生常寫 "He is tallest boy"，正確必須有 the ➔ "He is the tallest boy in our class"。
+⚠️ **【易錯防雷與陷阱剖析】**：拼讀規則防雷：ph 視為單一子音音素 /f/，切勿拆開讀成 /p/ 或 /h/。
 
 </details>
 
-**第 5 題**【核心觀念與定義辨析題】　The Pacific Ocean is ______ than the Atlantic Ocean.
+**第 5 題**【多步驟推導與跨觀念綜合題】　The Pacific Ocean is ______ than the Atlantic Ocean.
 
 **A.** large  
 **B.** larger  
@@ -480,16 +477,16 @@ heavy 字尾為子音 + y，去 y 加 ier 變成 heavier；比較級前可加 mu
 
 ✅ **正確答案** B. larger
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「比較級關鍵信號詞與字尾規則」，直接啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 有 than 時使用比較級。large 字尾已有 e，直接加 r 變成 larger。
 
-⚠️ **【易錯防雷與陷阱剖析】**：最高級漏掉 the：學生常寫 "He is tallest boy"，正確必須有 the ➔ "He is the tallest boy in our class"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 6 題**【生活素養與情境應用題】　This science experiment is ______ than the one we did last week.
+**第 6 題**【核心觀念與定義辨析題】　This science experiment is ______ than the one we did last week.
 
 **A.** most interesting  
 **B.** more interesting  
@@ -501,12 +498,12 @@ heavy 字尾為子音 + y，去 y 加 ier 變成 heavier；比較級前可加 mu
 
 ✅ **正確答案** B. more interesting
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「比較級關鍵信號詞與字尾規則」，直接啟動「句子必有 than；單音節加 -er（taller），三音節以上加 more（more beautiful）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 三音節以上形容詞（in-ter-est-ing），比較級在前面加上 more：more interesting than。
 
-⚠️ **【易錯防雷與陷阱剖析】**：最高級漏掉 the：學生常寫 "He is tallest boy"，正確必須有 the ➔ "He is the tallest boy in our class"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 

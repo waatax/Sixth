@@ -280,12 +280,13 @@ Graduation is just around the corner! (畢業就在眼前了！)
 - ⚡ **段考 5 秒破題口訣**：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
 - 🏷️ **題幹高頻熱門關鍵字**：Future plans, will / be going to, Dream jobs, want to be a/an
 
-### 📋 歷屆各校段考 4 大代表題型特徵分析
+### 📋 歷屆各校段考 5 大代表題型特徵分析
 
-1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
-2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
-3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
-4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
+2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
+3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
+4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
+5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -307,7 +308,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：will ＋ 原形；am/is/are going to ＋ 原形。
 - 🌱 **生活例子**：It's cold. I will close the window.（臨時決定）/ I am going to visit my grandma this weekend.（已經計畫）
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「未來時間副詞關鍵信號」時，立即啟動「tomorrow, next week, in the future, soon」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：will ＋ 原形；am/is/are going to ＋ 原形。。解題時切記：be going to 的 be 要配合主詞：I am、He is、They are。
 
 **先想想看**：遮住下面的說明，用自己的話說說「未來式：will 與 be going to」是什麼意思，再想一個你身邊的例子。
 
@@ -326,7 +327,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：未來時間詞 → will 或 be going to。
 - 🌱 **生活例子**：tomorrow（明天）、next week（下週）、this weekend（這個週末）、in the future（將來）。
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「will vs be going to 語意辨析」時，立即啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：未來時間詞 → will 或 be going to。。解題時切記：this weekend 可能是未來或現在，要看前後文判斷。
 
 **先想想看**：遮住下面的說明，用自己的話說說「未來時間詞」是什麼意思，再想一個你身邊的例子。
 
@@ -345,7 +346,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：母音開頭的職業用 an（an engineer、an artist）。
 - 🌱 **生活例子**：I want to be a teacher. / I want to be an engineer.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「詢問未來的夢想與計畫句型」時，立即啟動「What do you want to be in the future? / I want to be an engineer.」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：母音開頭的職業用 an（an engineer、an artist）。。解題時切記：要說 I want to be a doctor，不能省略 be。
 
 **先想想看**：遮住下面的說明，用自己的話說說「談論夢想的職業」是什麼意思，再想一個你身邊的例子。
 
@@ -395,14 +396,12 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ✅ **正確答案** B. an artist
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 Mark 很有創意且熱愛畫畫 (painting pictures)，最適合的夢想職業是「藝術家 (artist)」；artist 字首為母音音素，冠詞使用 "an"。故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -419,18 +418,16 @@ Ben: "She wants to be a veterinarian because she loves dogs and cats."
 
 ✅ **正確答案** B. does
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 主詞 "your sister" 是第三人稱單數，在現在簡單式的疑問句中，助動詞使用 "does"。故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【段考高頻易錯陷阱題】　A: "What are you going to ______ this summer vacation?"  B: "I'm going to visit my grandparents in Hualien."
+**第 3 題**【生活素養與情境應用題】　A: "What are you going to ______ this summer vacation?"  B: "I'm going to visit my grandparents in Hualien."
 
 **A.** do  
 **B.** doing  
@@ -442,16 +439,16 @@ Ben: "She wants to be a veterinarian because she loves dogs and cats."
 
 ✅ **正確答案** A. do
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 be going to 後面必須接「原形動詞」：What are you going to do...?
 
-⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 4 題**【多步驟推導與跨觀念綜合題】　Look at those dark clouds in the sky! It ______ rain soon.
+**第 4 題**【段考高頻易錯陷阱題】　Look at those dark clouds in the sky! It ______ rain soon.
 
 **A.** went to  
 **B.** was  
@@ -463,16 +460,16 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 
 ✅ **正確答案** C. is going to
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 7：夢想職業、生涯探索與志向表述句型」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 看見天空烏雲密布代表即將發生的必然天氣，道地英語優先使用 is going to rain。
 
-⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 5 題**【核心觀念與定義辨析題】　My dream is to become a(n) ______ because I want to explore outer space and walk on the Moon.
+**第 5 題**【多步驟推導與跨觀念綜合題】　My dream is to become a(n) ______ because I want to explore outer space and walk on the Moon.
 
 **A.** firefighter  
 **B.** dentist  
@@ -484,16 +481,16 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 
 ✅ **正確答案** D. astronaut
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 explore outer space（探索外太空）、walk on the Moon（漫步月球）的職業是太空人 (astronaut)。
 
-⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 6 題**【生活素養與情境應用題】　I promise I ______ help you with your science project tomorrow afternoon.
+**第 6 題**【核心觀念與定義辨析題】　I promise I ______ help you with your science project tomorrow afternoon.
 
 **A.** did  
 **B.** am  
@@ -505,12 +502,12 @@ explore outer space（探索外太空）、walk on the Moon（漫步月球）的
 
 ✅ **正確答案** D. will
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 表達說話當下的個人主觀意願、許諾或即時決定時，搭配助動詞 will + 原形動詞。
 
-⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 

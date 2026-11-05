@@ -308,12 +308,13 @@
 - ⚡ **段考 5 秒破題口訣**：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
 - 🏷️ **題幹高頻熱門關鍵字**：Asking for directions, turn left/right, next to, across from, between
 
-### 📋 歷屆各校段考 4 大代表題型特徵分析
+### 📋 歷屆各校段考 5 大代表題型特徵分析
 
-1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
-2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
-3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
-4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
+2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
+3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
+4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
+5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -335,7 +336,7 @@
 
 - 🧠 **一句話記住**：next to 旁邊、across from 對面、between…and… 之間。
 - 🌱 **生活例子**：The bank is next to the park. / The library is between the school and the hospital.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「禮貌詢問路線開場句型」時，立即啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：next to 旁邊、across from 對面、between…and… 之間。。解題時切記：between 後面要接「兩個」地點，中間用 and 連接。
 
 **先想想看**：遮住下面的說明，用自己的話說說「表示位置的介系詞」是什麼意思，再想一個你身邊的例子。
 
@@ -354,7 +355,7 @@
 
 - 🧠 **一句話記住**：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…
 - 🌱 **生活例子**：A: Excuse me. How can I get to the train station? B: Go straight for two blocks and turn right.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「精確方位介系詞判定」時，立即啟動「next to (旁邊), across from (對面), between A and B (在兩者之間), on the corner of (轉角處)」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…。解題時切記：turn left 是「左轉」，on your left 是「在你的左邊」，意思不同。
 
 **先想想看**：遮住下面的說明，用自己的話說說「問路和指路的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -373,7 +374,7 @@
 
 - 🧠 **一句話記住**：by bus / by car / by train；走路 on foot。
 - 🌱 **生活例子**：I go to school by bus. / My dad goes to work by MRT. / I walk to school. = I go to school on foot.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「祈使句指引路線」時，立即啟動「Go straight (直走), Turn left/right at the second light (在第二個紅綠燈左/右轉)」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：by bus / by car / by train；走路 on foot。。解題時切記：不能說 by foot，也不要說 by a bus。
 
 **先想想看**：遮住下面的說明，用自己的話說說「交通工具的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -423,11 +424,9 @@
 
 ✅ **正確答案** C. are running
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 1．句首有 "Look!"（看啊！），表示此刻正在發生的動作，使用現在進行式。
 
 2．主詞 "The students" 是複數，be 動詞使用 "are"。
@@ -436,7 +435,7 @@
 
 故正確答案為 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -453,18 +452,16 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
 
 ✅ **正確答案** D. is writing
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 主詞是 She，進行式需要 "is + V-ing"；動詞 write 字尾是不發音的 e，必須「去 e 加 ing」➔ "is writing"。故選 D。
 
-⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【段考高頻易錯陷阱題】　A: "Excuse me, ______ do I get to the train station?"  B: "Go straight and turn left."
+**第 3 題**【生活素養與情境應用題】　A: "Excuse me, ______ do I get to the train station?"  B: "Go straight and turn left."
 
 **A.** who  
 **B.** where  
@@ -476,16 +473,16 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
 
 ✅ **正確答案** D. how
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 禮貌問路常用句型："How do I get to + 地點?"（請問我該如何到達...？）
 
-⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 4 題**【多步驟推導與跨觀念綜合題】　The bookstore is ______ the post office and the bank. 空格中應填入哪一個方位介系詞？
+**第 4 題**【段考高頻易錯陷阱題】　The bookstore is ______ the post office and the bank. 空格中應填入哪一個方位介系詞？
 
 **A.** under  
 **B.** next  
@@ -497,16 +494,16 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
 
 ✅ **正確答案** D. between
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 between A and B 代表「在 A 與 B 之間」：between the post office and the bank。
 
-⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 5 題**【核心觀念與定義辨析題】　The hospital is ______ from the museum; you need to cross the street to get there.
+**第 5 題**【多步驟推導與跨觀念綜合題】　The hospital is ______ from the museum; you need to cross the street to get there.
 
 **A.** next  
 **B.** across  
@@ -518,16 +515,16 @@ between A and B 代表「在 A 與 B 之間」：between the post office and the
 
 ✅ **正確答案** B. across
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 across from... 代表「在...對面」；提示提到「cross the street（過馬路）」，故選 across。
 
-⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 6 題**【生活素養與情境應用題】　"Go straight for two blocks and turn right on Main Street." 這句話的意思是？
+**第 6 題**【核心觀念與定義辨析題】　"Go straight for two blocks and turn right on Main Street." 這句話的意思是？
 
 **A.** 直走兩個街區，然後在主街（Main Street）向右轉  
 **B.** 倒退走兩個路口，然後向左轉  
@@ -539,12 +536,12 @@ across from... 代表「在...對面」；提示提到「cross the street（過�
 
 ✅ **正確答案** A. 直走兩個街區，然後在主街（Main Street）向右轉
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 Go straight（直走）；block（街區/路口）；turn right（向右轉）。
 
-⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 

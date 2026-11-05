@@ -348,12 +348,13 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 - ⚡ **段考 5 秒破題口訣**：三單動詞加 -s/-es；頻率副詞位置口訣：「be 後動前」（be動詞之後，一般動詞之前）！
 - 🏷️ **題幹高頻熱門關鍵字**：Daily Routines, What time, third-person singular -s/-es, frequency adverbs
 
-### 📋 歷屆各校段考 4 大代表題型特徵分析
+### 📋 歷屆各校段考 5 大代表題型特徵分析
 
-1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
-2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
-3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
-4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
+2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
+3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
+4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
+5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -375,7 +376,7 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 - 🧠 **一句話記住**：點用 at、天用 on、長時段用 in。
 - 🌱 **生活例子**：I get up at 6:30. / I have English class on Monday. / My birthday is in July. / I read books in the evening.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「頻率副詞百分比量表」時，立即啟動「always (100%) > usually (80%) > often (60%) > sometimes (30%) > never (0%)」解題。考前速記：三單動詞加 -s/-es；頻率副詞位置口訣：「be 後動前」（be動詞之後，一般動詞之前）！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：點用 at、天用 on、長時段用 in。。解題時切記：「at night」是固定說法，不是 in night。
 
 **先想想看**：遮住下面的說明，用自己的話說說「時間介系詞 at / on / in」是什麼意思，再想一個你身邊的例子。
 
@@ -394,7 +395,7 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 - 🧠 **一句話記住**：be 動詞「後」、一般動詞「前」。
 - 🌱 **生活例子**：I always brush my teeth. / She is usually happy. / He never eats breakfast.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「頻率副詞在句子中的位置口訣」時，立即啟動「be 後、動前、助後動前（如 He is always kind; She never eats meat）」解題。考前速記：三單動詞加 -s/-es；頻率副詞位置口訣：「be 後動前」（be動詞之後，一般動詞之前）！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：be 動詞「後」、一般動詞「前」。。解題時切記：不能說 I brush always my teeth，要說 I always brush my teeth。
 
 **先想想看**：遮住下面的說明，用自己的話說說「頻率副詞與它的位置」是什麼意思，再想一個你身邊的例子。
 
@@ -413,7 +414,7 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 - 🧠 **一句話記住**：一般加 -s；s、sh、ch、x、o 結尾加 -es；子音＋y 改 y 為 i 加 -es（study → studies）。
 - 🌱 **生活例子**：I play basketball. → He plays basketball. / She watches TV. / Tom goes to school.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「主詞是第三人稱單數 (He, She, It) 時動詞變化」時，立即啟動「一般動詞字尾加 -s, -es（watches, studies, goes）」解題。考前速記：三單動詞加 -s/-es；頻率副詞位置口訣：「be 後動前」（be動詞之後，一般動詞之前）！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：一般加 -s；s、sh、ch、x、o 結尾加 -es；子音＋y 改 y 為 i 加 -es（study → studies）。。解題時切記：主詞是 I 和 you 時，動詞不加 s。
 
 **先想想看**：遮住下面的說明，用自己的話說說「第三人稱單數動詞要加 s」是什麼意思，再想一個你身邊的例子。
 
@@ -463,18 +464,16 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 ✅ **正確答案** C. back
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「頻率副詞百分比量表」，直接啟動「always (100%) > usually (80%) > often (60%) > sometimes (30%) > never (0%)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：運用 Magic e 自然拼讀規則，字尾有不發音的 e 時，前面母音發字母長音（cake /keɪk/）；閉音節發短音（back /bæk/）。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 • cake, lake, name 的 a_e 結構皆發長母音 /e/。
 
 • back 的 a 處於閉音節，發短母音 /æ/。
 
 故發音與眾不同的是 C（back）。
 
-⚠️ **【易錯防雷與陷阱剖析】**：th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。
+⚠️ **【易錯防雷與陷阱剖析】**：長短母音辨析：閉音節單一母音發短音，字尾 a_e, i_e, o_e 發長音，作答時在心中念出音標確認。
 
 </details>
 
@@ -490,18 +489,16 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 ✅ **正確答案** B. /f/
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「頻率副詞百分比量表」，直接啟動「always (100%) > usually (80%) > often (60%) > sometimes (30%) > never (0%)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：子音組合拼讀規則：字母組合「ph」固定發 /f/ 音（如 dolphin, photo, elephant）。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 在英語拼讀規則中，子音組合「ph」固定發 /f/ 的聲音（如 phone, photo, dolphin, elephant）。故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。
+⚠️ **【易錯防雷與陷阱剖析】**：拼讀規則防雷：ph 視為單一子音音素 /f/，切勿拆開讀成 /p/ 或 /h/。
 
 </details>
 
-**第 3 題**【段考高頻易錯陷阱題】　A: "What time is it?"  B: "It's 7:15."  另一種道地的英語時間表達法是？
+**第 3 題**【生活素養與情境應用題】　A: "What time is it?"  B: "It's 7:15."  另一種道地的英語時間表達法是？
 
 **A.** It's a quarter to seven.  
 **B.** It's a quarter past seven.  
@@ -513,12 +510,12 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 ✅ **正確答案** B. It's a quarter past seven.
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「頻率副詞百分比量表」，直接啟動「always (100%) > usually (80%) > often (60%) > sometimes (30%) > never (0%)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：英語時間表達：15 分鐘為 a quarter，30 分鐘為 half；超過幾分用 past，差幾分用 to。
 
 📐 **【詳盡解題步驟與算理推導】**：
 a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一刻」，故為 a quarter past seven。
 
-⚠️ **【易錯防雷與陷阱剖析】**：th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。
+⚠️ **【易錯防雷與陷阱剖析】**：介系詞方向陷阱：7:15 是 a quarter past seven（7點過了一刻）；7:45 是 a quarter to eight（差一刻8點），切勿混淆！
 
 </details>
 
@@ -534,16 +531,16 @@ a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一
 
 ✅ **正確答案** A. at; in
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「頻率副詞百分比量表」，直接啟動「always (100%) > usually (80%) > often (60%) > sometimes (30%) > never (0%)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：時間介系詞黃金口訣：「具體鐘點用 at，一日時段用 in，特定某天/星期用 on」。
 
 📐 **【詳盡解題步驟與算理推導】**：
 具體鐘點時間用 at（at 6:30）；一日中的早中晚用 in（in the morning / in the afternoon）；具體某一天或星期用 on。
 
-⚠️ **【易錯防雷與陷阱剖析】**：th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。
+⚠️ **【易錯防雷與陷阱剖析】**：介系詞混淆防雷：鐘點時間 at 6:30，特定時段 in the morning，具體星期 on Monday，切勿填錯順序。
 
 </details>
 
-**第 5 題**【核心觀念與定義辨析題】　Tina is a hard-working student. She ______ finishes her homework before dinner.
+**第 5 題**【多步驟推導與跨觀念綜合題】　Tina is a hard-working student. She ______ finishes her homework before dinner.
 
 **A.** rarely  
 **B.** never  
@@ -555,16 +552,16 @@ a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一
 
 ✅ **正確答案** D. always
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「頻率副詞百分比量表」，直接啟動「always (100%) > usually (80%) > often (60%) > sometimes (30%) > never (0%)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：分析句子語境「hard-working（勤奮的）」，選擇代表高頻率肯定態度的頻率副詞 always（總是）。
 
 📐 **【詳盡解題步驟與算理推導】**：
 由「hard-working（勤奮的）」可知她「總是 (always)」在晚餐前完成功課；never（從不）、seldom（很少）不合語境。
 
-⚠️ **【易錯防雷與陷阱剖析】**：th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。
+⚠️ **【易錯防雷與陷阱剖析】**：語意與頻率量表陷阱：rarely、never、seldom 皆代表極低頻率或否定語氣，與勤奮學生的前文語境相反。
 
 </details>
 
-**第 6 題**【生活素養與情境應用題】　頻率副詞在句子中的標準文法位置是？例如在一般動詞與 be 動詞旁時：
+**第 6 題**【核心觀念與定義辨析題】　頻率副詞在句子中的標準文法位置是？例如在一般動詞與 be 動詞旁時：
 
 **A.** 在 be 動詞之後，在一般動詞之前  
 **B.** 在 be 動詞之前，在一般動詞之後  
@@ -576,12 +573,12 @@ a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一
 
 ✅ **正確答案** A. 在 be 動詞之後，在一般動詞之前
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「頻率副詞百分比量表」，直接啟動「always (100%) > usually (80%) > often (60%) > sometimes (30%) > never (0%)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
 
 📐 **【詳盡解題步驟與算理推導】**：
 「be 後動前，助動中間」：He is always happy. / He always plays tennis.
 
-⚠️ **【易錯防雷與陷阱剖析】**：th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。
+⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
 
 </details>
 

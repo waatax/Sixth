@@ -350,12 +350,13 @@
 - ⚡ **段考 5 秒破題口訣**：母音加 e 長母音發原音；先看問題抓關鍵字，再去文章掃描定位找答案！
 - 🏷️ **題幹高頻熱門關鍵字**：Reading comprehension, Phonics rules, Scanning, Sight words
 
-### 📋 歷屆各校段考 4 大代表題型特徵分析
+### 📋 歷屆各校段考 5 大代表題型特徵分析
 
-1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
-2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
-3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
-4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
+2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
+3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
+4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
+5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -377,7 +378,7 @@
 
 - 🧠 **一句話記住**：母音 ＋ 子音 ＋ e → 母音唸長音，e 不發音。
 - 🌱 **生活例子**：cap → cape、kit → kite、hop → hope、cut → cute。
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「Magic e (CVCe) 長母音規則」時，立即啟動「字尾有不發音的 e，前方母音發長母音本名音（如 hate, fine, home, cute）」解題。考前速記：母音加 e 長母音發原音；先看問題抓關鍵字，再去文章掃描定位找答案！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：母音 ＋ 子音 ＋ e → 母音唸長音，e 不發音。。解題時切記：有些常用字是例外，例如 have、give、love。
 
 **先想想看**：遮住下面的說明，用自己的話說說「Magic E 讓母音唸長音」是什麼意思，再想一個你身邊的例子。
 
@@ -396,7 +397,7 @@
 
 - 🧠 **一句話記住**：先抓大意，再找細節。
 - 🌱 **生活例子**：題目問 When did Amy go to Tainan? 就在文章中找時間詞，例如 last Sunday。
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「閱讀短文抓核心主旨題 (Main Idea)」時，立即啟動「仔細閱讀文章標題 (Title) 與第一段首尾句，避免被局部細節誤導」解題。考前速記：母音加 e 長母音發原音；先看問題抓關鍵字，再去文章掃描定位找答案！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：先抓大意，再找細節。。解題時切記：看不懂的生字先跳過，從上下文猜意思。
 
 **先想想看**：遮住下面的說明，用自己的話說說「略讀與掃讀（英文閱讀）」是什麼意思，再想一個你身邊的例子。
 
@@ -415,7 +416,7 @@
 
 - 🧠 **一句話記住**：un-/dis- 相反；-ful 有、-less 沒有；-ly 變副詞。
 - 🌱 **生活例子**：happy → unhappy；like → dislike；help → helpful / helpless；quick → quickly。
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「推論生詞詞義技巧 (Context Clues)」時，立即啟動「尋找前後句中的同義詞、對比詞（but/however）或舉例解釋」解題。考前速記：母音加 e 長母音發原音；先看問題抓關鍵字，再去文章掃描定位找答案！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：un-/dis- 相反；-ful 有、-less 沒有；-ly 變副詞。。解題時切記：friendly 雖然有 -ly，但它是形容詞，不是副詞。
 
 **先想想看**：遮住下面的說明，用自己的話說說「字首與字尾」是什麼意思，再想一個你身邊的例子。
 
@@ -466,14 +467,12 @@ David: "I _____ my grandparents in Hualien next Monday."
 
 ✅ **正確答案** B. am going to visit
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「Magic e (CVCe) 長母音規則」，直接啟動「字尾有不發音的 e，前方母音發長母音本名音（如 hate, fine, home, cute）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 問句詢問未來的計畫 (plans)，時間副詞為 "next Monday"（下週一），表達事先規劃好的未來活動，使用 "am going to + 原形動詞" ➔ "am going to visit"。故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：be going to 後面接名詞而非動詞：be going to 如果後面接的是地點（如 I am going to Taipei），那是「現在進行式表示即將出發」，並非未來式句型；未來式後面必須有動詞原形（如 I am going to buy a book）。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -489,18 +488,16 @@ David: "I _____ my grandparents in Hualien next Monday."
 
 ✅ **正確答案** A. will help
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「Magic e (CVCe) 長母音規則」，直接啟動「字尾有不發音的 e，前方母音發長母音本名音（如 hate, fine, home, cute）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 "I promise"（我承諾、我保證）表達說話當下對未來的承諾，使用 "will + 原形動詞" ➔ "will help"。故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：be going to 後面接名詞而非動詞：be going to 如果後面接的是地點（如 I am going to Taipei），那是「現在進行式表示即將出發」，並非未來式句型；未來式後面必須有動詞原形（如 I am going to buy a book）。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【段考高頻易錯陷阱題】　When you want to find a telephone number or a specific date in a long article quickly, which reading skill should you use?
+**第 3 題**【生活素養與情境應用題】　When you want to find a telephone number or a specific date in a long article quickly, which reading skill should you use?
 
 **A.** Silent translation  
 **B.** Skimming (略讀主旨)  
@@ -512,16 +509,16 @@ David: "I _____ my grandparents in Hualien next Monday."
 
 ✅ **正確答案** C. Scanning (掃讀特定關鍵細節)
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「Magic e (CVCe) 長母音規則」，直接啟動「字尾有不發音的 e，前方母音發長母音本名音（如 hate, fine, home, cute）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 專注目光快速捕捉特定數字、專有名詞、年代等具體單一資訊的技巧稱為「掃讀 (Scanning)」。
 
-⚠️ **【易錯防雷與陷阱剖析】**：be going to 後面接名詞而非動詞：be going to 如果後面接的是地點（如 I am going to Taipei），那是「現在進行式表示即將出發」，並非未來式句型；未來式後面必須有動詞原形（如 I am going to buy a book）。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 4 題**【多步驟推導與跨觀念綜合題】　In English word building, the prefix "un-" (like in "unhappy", "unreal", "unfair") usually means: ______.
+**第 4 題**【段考高頻易錯陷阱題】　In English word building, the prefix "un-" (like in "unhappy", "unreal", "unfair") usually means: ______.
 
 **A.** not / opposite of (否定/相反)  
 **B.** again  
@@ -533,16 +530,16 @@ David: "I _____ my grandparents in Hualien next Monday."
 
 ✅ **正確答案** A. not / opposite of (否定/相反)
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「Magic e (CVCe) 長母音規則」，直接啟動「字尾有不發音的 e，前方母音發長母音本名音（如 hate, fine, home, cute）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
 
 📐 **【詳盡解題步驟與算理推導】**：
 happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不公平），表相反否定。
 
-⚠️ **【易錯防雷與陷阱剖析】**：be going to 後面接名詞而非動詞：be going to 如果後面接的是地點（如 I am going to Taipei），那是「現在進行式表示即將出發」，並非未來式句型；未來式後面必須有動詞原形（如 I am going to buy a book）。
+⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
 
 </details>
 
-**第 5 題**【核心觀念與定義辨析題】　The suffix "-ful" in words like "careful", "helpful", and "colorful" turns a noun into an adjective meaning: ______.
+**第 5 題**【多步驟推導與跨觀念綜合題】　The suffix "-ful" in words like "careful", "helpful", and "colorful" turns a noun into an adjective meaning: ______.
 
 **A.** without  
 **B.** full of (充滿...的)  
@@ -554,16 +551,16 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 
 ✅ **正確答案** B. full of (充滿...的)
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「Magic e (CVCe) 長母音規則」，直接啟動「字尾有不發音的 e，前方母音發長母音本名音（如 hate, fine, home, cute）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 care（小心）➔ careful（充滿小心的/仔細的）；help ➔ helpful（樂於助人的）。
 
-⚠️ **【易錯防雷與陷阱剖析】**：be going to 後面接名詞而非動詞：be going to 如果後面接的是地點（如 I am going to Taipei），那是「現在進行式表示即將出發」，並非未來式句型；未來式後面必須有動詞原形（如 I am going to buy a book）。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 6 題**【生活素養與情境應用題】　Which of the following words has the same vowel sound as the word "seat" (/i/)?
+**第 6 題**【核心觀念與定義辨析題】　Which of the following words has the same vowel sound as the word "seat" (/i/)?
 
 **A.** bed  
 **B.** sit  
@@ -575,12 +572,12 @@ care（小心）➔ careful（充滿小心的/仔細的）；help ➔ helpful（
 
 ✅ **正確答案** C. team
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「Magic e (CVCe) 長母音規則」，直接啟動「字尾有不發音的 e，前方母音發長母音本名音（如 hate, fine, home, cute）」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 seat 中的 ea 發長母音 /i/，與 team 中的 ea 發音完全相同；sit 則為短母音 /ɪ/。
 
-⚠️ **【易錯防雷與陷阱剖析】**：be going to 後面接名詞而非動詞：be going to 如果後面接的是地點（如 I am going to Taipei），那是「現在進行式表示即將出發」，並非未來式句型；未來式後面必須有動詞原形（如 I am going to buy a book）。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 

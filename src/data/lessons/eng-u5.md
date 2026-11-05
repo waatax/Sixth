@@ -329,12 +329,13 @@
 - ⚡ **段考 5 秒破題口訣**：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
 - 🏷️ **題幹高頻熱門關鍵字**：Festivals, time prepositions (in/on/at), ordinal numbers, cultural traditions
 
-### 📋 歷屆各校段考 4 大代表題型特徵分析
+### 📋 歷屆各校段考 5 大代表題型特徵分析
 
-1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
-2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
-3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
-4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
+2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
+3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
+4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
+5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -356,7 +357,7 @@
 
 - 🧠 **一句話記住**：節日名稱第一個字母要大寫。
 - 🌱 **生活例子**：Lunar New Year（農曆新年）、Dragon Boat Festival（端午節）、Moon Festival（中秋節）、Halloween（萬聖節）、Christmas（聖誕節）。
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「西方三大節慶特色標誌」時，立即啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：節日名稱第一個字母要大寫。。解題時切記：中秋節也可說 Mid-Autumn Festival，兩種說法都對。
 
 **先想想看**：遮住下面的說明，用自己的話說說「重要節慶的英文」是什麼意思，再想一個你身邊的例子。
 
@@ -375,7 +376,7 @@
 
 - 🧠 **一句話記住**：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）
 - 🌱 **生活例子**：eat mooncakes（吃月餅）、give red envelopes（給紅包）、wear costumes（穿裝扮服）、decorate the Christmas tree（裝飾聖誕樹）、eat rice dumplings（吃粽子）。
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「臺灣傳統節慶英語介紹」時，立即啟動「Lunar New Year (red envelopes), Dragon Boat Festival (dragon boat race/rice dumplings)」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）。解題時切記：粽子是 rice dumplings，月餅是 mooncakes，不要混淆。
 
 **先想想看**：遮住下面的說明，用自己的話說說「節慶活動的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -394,7 +395,7 @@
 
 - 🧠 **一句話記住**：聖誕節常用 Merry，其他節日多用 Happy。
 - 🌱 **生活例子**：Happy New Year! / Merry Christmas! / Happy Halloween! / Happy Moon Festival!
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「節慶祝賀語」時，立即啟動「Merry Christmas! / Happy New Year! / Wishing you joy and prosperity!」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：聖誕節常用 Merry，其他節日多用 Happy。。解題時切記：別人祝福你時，可以回答 Thank you! The same to you!
 
 **先想想看**：遮住下面的說明，用自己的話說說「節日祝福語」是什麼意思，再想一個你身邊的例子。
 
@@ -445,18 +446,16 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 ✅ **正確答案** B. was ; swam
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 1．"your trip" 是單數，過去式用 "was"。
 
 2．Kenting 的活動發生在過去，swim 的過去式是不規則動詞 "swam"，與後方的 "saw" 時態對等一致。
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -472,18 +471,16 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 ✅ **正確答案** B. were
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 主詞是 "Lisa and her brother"（兩個人，為複數主詞），時間副詞是 yesterday，複數主詞搭配的過去式 be 動詞為 "were"。故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+⚠️ **【易錯防雷與陷阱剖析】**：助動詞原形動詞陷阱：問句或否定句中一旦出現 did 或 didn't，後方的主要動詞必須一律「還原為原形動詞」！
 
 </details>
 
-**第 3 題**【段考高頻易錯陷阱題】　On Lunar New Year's Eve, Taiwanese families get together to have a reunion dinner, and children receive ______ from elders.
+**第 3 題**【生活素養與情境應用題】　On Lunar New Year's Eve, Taiwanese families get together to have a reunion dinner, and children receive ______ from elders.
 
 **A.** red envelopes with lucky money  
 **B.** chocolate eggs  
@@ -495,16 +492,16 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 ✅ **正確答案** A. red envelopes with lucky money
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 除夕夜團圓飯後長輩發給晚輩裝有壓歲錢的「紅包 (red envelopes)」，象徵吉祥祝福。
 
-⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 4 題**【多步驟推導與跨觀念綜合題】　During the Dragon Boat Festival, people eat rice dumplings (zongzi) and watch exciting ______ races.
+**第 4 題**【段考高頻易錯陷阱題】　During the Dragon Boat Festival, people eat rice dumplings (zongzi) and watch exciting ______ races.
 
 **A.** dragon boat  
 **B.** horse  
@@ -516,16 +513,16 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 ✅ **正確答案** A. dragon boat
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 端午節經典傳統民俗為划龍舟競賽 (dragon boat races) 與包肉粽 (zongzi / rice dumplings)。
 
-⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 5 題**【核心觀念與定義辨析題】　On Halloween night (October 31st), children dress up in spooky costumes and go knocking on neighbors' doors saying: "______!"
+**第 5 題**【多步驟推導與跨觀念綜合題】　On Halloween night (October 31st), children dress up in spooky costumes and go knocking on neighbors' doors saying: "______!"
 
 **A.** Happy Birthday  
 **B.** Merry Christmas  
@@ -537,16 +534,16 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 ✅ **正確答案** C. Trick or treat
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 Trick or treat!（不給糖就搗蛋！）是萬聖節小朋友裝扮挨家挨戶討糖果的必備口號。
 
-⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 6 題**【生活素養與情境應用題】　Christmas is celebrated on December 25th. Many families decorate a Christmas ______ with bright lights and stars.
+**第 6 題**【核心觀念與定義辨析題】　Christmas is celebrated on December 25th. Many families decorate a Christmas ______ with bright lights and stars.
 
 **A.** pumpkin  
 **B.** boat  
@@ -558,12 +555,12 @@ Trick or treat!（不給糖就搗蛋！）是萬聖節小朋友裝扮挨家挨�
 
 ✅ **正確答案** D. tree
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 西方家庭在客廳佈置聖誕樹 (Christmas tree)，掛上彩燈、彩球與飾品歡慶佳節。
 
-⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 

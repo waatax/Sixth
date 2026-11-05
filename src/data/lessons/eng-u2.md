@@ -367,12 +367,13 @@
 - ⚡ **段考 5 秒破題口訣**：過去時間配過去式動詞；助動詞 did 一出現，主要動詞一律打回原形！
 - 🏷️ **題幹高頻熱門關鍵字**：Past tense, irregular verbs, Did you...? yesterday, last week, ago
 
-### 📋 歷屆各校段考 4 大代表題型特徵分析
+### 📋 歷屆各校段考 5 大代表題型特徵分析
 
-1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
-2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
-3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
-4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
+2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
+3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
+4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
+5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -394,7 +395,7 @@
 
 - 🧠 **一句話記住**：看到過去時間詞 → 動詞用過去式。
 - 🌱 **生活例子**：I played basketball yesterday. / We went to the zoo last Sunday.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「過去時間副詞關鍵信號」時，立即啟動「yesterday, last night, two days ago, in 2020」解題。考前速記：過去時間配過去式動詞；助動詞 did 一出現，主要動詞一律打回原形！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：看到過去時間詞 → 動詞用過去式。。解題時切記：同一句裡如果有 yesterday，動詞就不能用現在式。
 
 **先想想看**：遮住下面的說明，用自己的話說說「過去式：說已經發生的事」是什麼意思，再想一個你身邊的例子。
 
@@ -413,7 +414,7 @@
 
 - 🧠 **一句話記住**：規則加 -ed；不規則要背。
 - 🌱 **生活例子**：規則：play → played、watch → watched。不規則：go → went、see → saw、eat → ate、have → had。
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「高頻不規則過去式動詞快速辨識」時，立即啟動「go ➔ went, see ➔ saw, buy ➔ bought, eat ➔ ate, make ➔ made」解題。考前速記：過去時間配過去式動詞；助動詞 did 一出現，主要動詞一律打回原形！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：規則加 -ed；不規則要背。。解題時切記：go 的過去式是 went，不是 goed。
 
 **先想想看**：遮住下面的說明，用自己的話說說「規則與不規則動詞的過去式」是什麼意思，再想一個你身邊的例子。
 
@@ -432,7 +433,7 @@
 
 - 🧠 **一句話記住**：Did ＋ 主詞 ＋ 原形動詞？／ didn't ＋ 原形動詞。
 - 🌱 **生活例子**：Did you go to school yesterday? / I didn't see the movie.
-- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「過去式否定句與疑問句助動詞救援」時，立即啟動「使用助動詞 did/didn't 後，後方動詞【必定打回原形動詞 V】！」解題。考前速記：過去時間配過去式動詞；助動詞 did 一出現，主要動詞一律打回原形！
+- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：Did ＋ 主詞 ＋ 原形動詞？／ didn't ＋ 原形動詞。。解題時切記：不能說 Did you went…? 或 I didn't saw…。
 
 **先想想看**：遮住下面的說明，用自己的話說說「did 後面的動詞要用原形」是什麼意思，再想一個你身邊的例子。
 
@@ -484,14 +485,12 @@ Police Officer: "Go straight along Sun Street for one block. Turn right at the t
 
 ✅ **正確答案** B. between
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「過去時間副詞關鍵信號」，直接啟動「yesterday, last night, two days ago, in 2020」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 句型中後面出現了 "the post office AND the bank"（兩者之間），標準句型為「between A and B」（在 A 與 B 之間）。故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -507,11 +506,9 @@ Police Officer: "Go straight along Sun Street for one block. Turn right at the t
 
 ✅ **正確答案** B. The museum is on your right side. You cannot miss it.
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「過去時間副詞關鍵信號」，直接啟動「yesterday, last night, two days ago, in 2020」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-：
-
 • A 項：Turn left 即可，不加 to。
 
 • B 項："The museum is on your right side. You cannot miss it." 文法語意完全正確！
@@ -522,11 +519,11 @@ Police Officer: "Go straight along Sun Street for one block. Turn right at the t
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【段考高頻易錯陷阱題】　動詞 "go" 的過去式不規則變化是？
+**第 3 題**【生活素養與情境應用題】　動詞 "go" 的過去式不規則變化是？
 
 **A.** goes  
 **B.** goed  
@@ -538,16 +535,16 @@ Police Officer: "Go straight along Sun Street for one block. Turn right at the t
 
 ✅ **正確答案** D. went
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「過去時間副詞關鍵信號」，直接啟動「yesterday, last night, two days ago, in 2020」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went to the zoo.
 
-⚠️ **【易錯防雷與陷阱剖析】**：across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 4 題**【多步驟推導與跨觀念綜合題】　Yesterday, Emily ______ a delicious chocolate cake with her grandmother.
+**第 4 題**【段考高頻易錯陷阱題】　Yesterday, Emily ______ a delicious chocolate cake with her grandmother.
 
 **A.** bakes  
 **B.** baked  
@@ -559,16 +556,16 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 
 ✅ **正確答案** B. baked
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「過去時間副詞關鍵信號」，直接啟動「yesterday, last night, two days ago, in 2020」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 時間副詞為「Yesterday（昨天）」，動詞應使用過去式；bake 字尾已有 e，直接加 d 變成 baked。
 
-⚠️ **【易錯防雷與陷阱剖析】**：across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 5 題**【核心觀念與定義辨析題】　A: "Did you see any monkeys at the zoo last Sunday?"  B: "No, I ______."
+**第 5 題**【多步驟推導與跨觀念綜合題】　A: "Did you see any monkeys at the zoo last Sunday?"  B: "No, I ______."
 
 **A.** wasn't  
 **B.** don't  
@@ -580,16 +577,16 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 
 ✅ **正確答案** C. didn't
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「過去時間副詞關鍵信號」，直接啟動「yesterday, last night, two days ago, in 2020」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 問句以助動詞 "Did you...?" 開頭，否定簡答一律用 "No, I didn't."
 
-⚠️ **【易錯防雷與陷阱剖析】**：across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 6 題**【生活素養與情境應用題】　The boys ______ very excited when their team won the championship yesterday.
+**第 6 題**【核心觀念與定義辨析題】　The boys ______ very excited when their team won the championship yesterday.
 
 **A.** were  
 **B.** was  
@@ -601,12 +598,12 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 
 ✅ **正確答案** A. were
 
-🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「過去時間副詞關鍵信號」，直接啟動「yesterday, last night, two days ago, in 2020」解題。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
 
 📐 **【詳盡解題步驟與算理推導】**：
 主詞 The boys 為複數，過去式 be 動詞應選 were（單數用 was）。
 
-⚠️ **【易錯防雷與陷阱剖析】**：across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。
+⚠️ **【易錯防雷與陷阱剖析】**：助動詞原形動詞陷阱：問句或否定句中一旦出現 did 或 didn't，後方的主要動詞必須一律「還原為原形動詞」！
 
 </details>
 
