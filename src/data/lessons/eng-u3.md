@@ -280,7 +280,7 @@
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 🛰️ **Google Maps 導航背後的英文語音指令秘密！**  
 當你使用手機地圖導航時，試著把語音切換成「英文發音」，你會發現導航系統全部都在使用今天學到的句型：
@@ -295,26 +295,18 @@
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-C1）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-C1。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考城市景點問路（How can I get to the museum? Turn left, go straight, next to...）。
-- 📘 **南一版出題特色**：側重祈使句指路句型與情態助動詞 can / could you tell me the way to...? 禮貌用語。
-- 📙 **翰林版出題特色**：側重方位與空間介系詞（across from 對面, between A and B, on the corner of, behind, in front of）。
+- 📗 **康軒版可留意**：常考城市景點問路（How can I get to the museum? Turn left, go straight, next to...）。
+- 📘 **南一版可留意**：側重祈使句指路句型與情態助動詞 can / could you tell me the way to...? 禮貌用語。
+- 📙 **翰林版可留意**：側重方位與空間介系詞（across from 對面, between A and B, on the corner of, behind, in front of）。
 - ⚡ **段考 5 秒破題口訣**：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
 - 🏷️ **題幹高頻熱門關鍵字**：Asking for directions, turn left/right, next to, across from, between
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -340,7 +332,6 @@
 
 - 🧠 **一句話記住**：next to 旁邊、across from 對面、between…and… 之間。
 - 🌱 **生活例子**：The bank is next to the park. / The library is between the school and the hospital.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：next to 旁邊、across from 對面、between…and… 之間。。解題時切記：between 後面要接「兩個」地點，中間用 and 連接。
 
 **先想想看**：遮住下面的說明，用自己的話說說「表示位置的介系詞」是什麼意思，再想一個你身邊的例子。
 
@@ -359,7 +350,6 @@
 
 - 🧠 **一句話記住**：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…
 - 🌱 **生活例子**：A: Excuse me. How can I get to the train station? B: Go straight for two blocks and turn right.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…。解題時切記：turn left 是「左轉」，on your left 是「在你的左邊」，意思不同。
 
 **先想想看**：遮住下面的說明，用自己的話說說「問路和指路的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -378,7 +368,6 @@
 
 - 🧠 **一句話記住**：by bus / by car / by train；走路 on foot。
 - 🌱 **生活例子**：I go to school by bus. / My dad goes to work by MRT. / I walk to school. = I go to school on foot.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：by bus / by car / by train；走路 on foot。。解題時切記：不能說 by foot，也不要說 by a bus。
 
 **先想想看**：遮住下面的說明，用自己的話說說「交通工具的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -412,11 +401,38 @@
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### 位置介系詞圖像記憶
+
+- next to：在旁邊
+- across from：在對面
+- between A and B：在 A 和 B 之間
+- in front of：在前面
+- behind：在後面
+- on the corner of：在轉角
+
+地圖題要先站在題目給的方向，再判斷左右。Turn left／right 和 go straight 都要配合路線。
+
+### 問路句型
+
+- Excuse me, **how do I get to** the post office?
+- **Where is** the bank? It’s next to the school.
+- **Is there** a park near here? Yes, there is. / No, there isn’t.
+
+There is 接單數，There are 接複數。Go straight for two blocks. Turn right at the corner.
+
+### 地點單字配對
+
+museum（博物館）、movie theater（電影院）、train station（火車站）、bookstore（書店）、restaurant（餐廳）、library（圖書館）、post office（郵局）、hospital（醫院）、supermarket（超市）、park（公園）。
+
+看到句子要先判斷做什麼事，才能選地點：watch a movie → movie theater；borrow books → library。
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期期末考精選題】　A: "Excuse me, ______ do I get to the Central Train Station?"  B: "Go straight for two blocks and turn left on Sun Road. It's on your right."
+**第 1 題**【基礎練習】　A: "Excuse me, ______ do I get to the Central Train Station?"  B: "Go straight for two blocks and turn left on Sun Road. It's on your right."
 
 **A.** what  
 **B.** how  
@@ -428,9 +444,8 @@
 
 ✅ **正確答案** B. how
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．答句給出了具體的行走指路步驟（直走、左轉）。
 
 2．詢問「如何前往某個地點」的標準句型為 "How do I get to + 地點?"。
@@ -439,11 +454,9 @@
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　Look at the map. The bakery is located ______ the flower shop and the post office on First Street.
+**第 2 題**【基礎練習】　Look at the map. The bakery is located ______ the flower shop and the post office on First Street.
 
 **A.** next  
 **B.** across  
@@ -455,20 +468,17 @@
 
 ✅ **正確答案** C. between
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．題幹中出現 "the flower shop AND the post office"（花店「和」郵局）。
 
 2．表示位於兩者之間的標準片語是 "between A and B"。
 
 故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級上學期第二次段考精選題】　The city library is right ______ from the fire station. You just need to cross the street to get there.
+**第 3 題**【基礎練習】　The city library is right ______ from the fire station. You just need to cross the street to get there.
 
 **A.** next  
 **B.** behind  
@@ -480,20 +490,17 @@
 
 ✅ **正確答案** C. across
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．後方句子提示 "You just need to cross the street"（你只需要過馬路）。
 
 2．與介系詞 from 搭配表示「在...正對面」的片語為 "across from"。
 
 故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期期末考精選題】　A: "Is there a convenience store near here?"  B: "Yes, ______ a 7-Eleven on the corner of Park Road."
+**第 4 題**【基礎練習】　A: "Is there a convenience store near here?"  B: "Yes, ______ a 7-Eleven on the corner of Park Road."
 
 **A.** they are  
 **B.** there is  
@@ -505,41 +512,17 @@
 
 ✅ **正確答案** B. there is
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．問句使用 "Is there..." 進行存在提問。
 
 2．答句所指為單數名詞 "a 7-Eleven"，回答應使用單數存在句型 "Yes, there is..."。
 
 故正確答案為 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 5 題**【多步驟推導與跨觀念綜合題】　A: "Excuse me, ______ do I get to the train station?"  B: "Go straight and turn left."
-
-**A.** who  
-**B.** where  
-**C.** what  
-**D.** how
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** D. how
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-禮貌問路常用句型："How do I get to + 地點?"（請問我該如何到達...？）
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　The bookstore is ______ the post office and the bank. 空格中應填入哪一個方位介系詞？
+**第 5 題**【核心觀念與定義辨析題】　The bookstore is ______ the post office and the bank. 空格中應填入哪一個方位介系詞？
 
 **A.** under  
 **B.** next  
@@ -551,14 +534,387 @@
 
 ✅ **正確答案** D. between
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 between A and B 代表「在 A 與 B 之間」：between the post office and the bank。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+</details>
+
+## 🧪 段考題型實戰（先作答，再看步驟）
+
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **問路句型** | 問答和指路 | 6、7、8、9 |
+| **地圖判讀** | 位置介系詞 | 10、11、12、13 |
+| **地點與交通** | 地點單字和 by/on | 14、15、16、17、18、19 |
+
+**第 6 題**【選擇・課綱】　A: Excuse me, ______ do I get to the zoo? B: Take Bus 5.
+
+**A.** what  
+**B.** where  
+**C.** how  
+**D.** when
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. how
+
+🔍 **審題關鍵**：問怎麼去。
+
+📐 **解題步驟**：
+
+1. 回答是交通方式。
+2. 問句要用 how。
+
+⚠️ **易錯提醒**：where 問地點，不是問方法。
+
+📖 **回課文複習**：本頁「問路句型」。
 
 </details>
+
+**第 7 題**【選擇・課綱】　A: Is there a bank near here? B: ______
+
+**A.** Yes, there is.  
+**B.** Yes, it is.  
+**C.** No, there aren’t.  
+**D.** Yes, I am.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Yes, there is.
+
+🔍 **審題關鍵**：there is 問，there is 答。
+
+📐 **解題步驟**：
+
+1. 主詞 a bank 是單數。
+2. 肯定答 Yes, there is.
+
+⚠️ **易錯提醒**：aren’t 用於複數。
+
+📖 **回課文複習**：本頁「問路句型」。
+
+</details>
+
+**第 8 題**【選擇・課綱】　There ______ two parks in my town.
+
+**A.** is  
+**B.** are  
+**C.** am  
+**D.** be
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. are
+
+🔍 **審題關鍵**：後面是複數。
+
+📐 **解題步驟**：
+
+1. two parks 是複數。
+2. 用 are。
+
+⚠️ **易錯提醒**：就近看名詞。
+
+📖 **回課文複習**：知識點 There is / There are。
+
+</details>
+
+**第 9 題**【重組・參考東光國小112下英語】　Unscramble: the / to / do / get / How / station / I / ?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** How do I get to the station?
+
+🔍 **審題關鍵**：句型固定。
+
+📐 **解題步驟**：
+
+1. How do I get to + 地點。
+
+⚠️ **易錯提醒**：get 後面要有 to。
+
+📖 **回課文複習**：本頁「問路句型」。
+
+</details>
+
+**第 10 題**【選擇・課綱】　The bakery is ______ the bank and the school. (The bakery is in the middle.)
+
+**A.** next  
+**B.** between  
+**C.** across  
+**D.** behind
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. between
+
+🔍 **審題關鍵**：在兩者之間。
+
+📐 **解題步驟**：
+
+1. between A and B。
+
+⚠️ **易錯提醒**：next 要接 to。
+
+📖 **回課文複習**：本頁「位置介系詞」。
+
+</details>
+
+**第 11 題**【選擇・課綱】　The park is on the other side of the street from the hospital. It’s ______ the hospital.
+
+**A.** next to  
+**B.** across from  
+**C.** behind  
+**D.** in
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. across from
+
+🔍 **審題關鍵**：在對面。
+
+📐 **解題步驟**：
+
+1. 隔著馬路在另一邊。
+
+⚠️ **易錯提醒**：next to 是旁邊。
+
+📖 **回課文複習**：本頁「位置介系詞」。
+
+</details>
+
+**第 12 題**【閱讀・課綱】　Read: “Go straight for one block. Turn left. The museum is on your right, next to the bookstore.” Where is the museum after you turn left?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** On your right, next to the bookstore.
+
+🔍 **審題關鍵**：依序讀指令。
+
+📐 **解題步驟**：
+
+1. 先直走一個街區。
+2. 左轉。
+3. 博物館在右手邊。
+
+⚠️ **易錯提醒**：不要把 Turn left 和 on your right 混用。
+
+📖 **回課文複習**：知識點「問路和指路的說法」。
+
+</details>
+
+**第 13 題**【選擇・課綱】　Which means「向右轉」?
+
+**A.** Go straight  
+**B.** Turn right  
+**C.** Turn left  
+**D.** Go back
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Turn right
+
+🔍 **審題關鍵**：right 是右。
+
+📐 **解題步驟**：
+
+1. Turn right 表示右轉。
+
+⚠️ **易錯提醒**：on your right 表示在你的右邊。
+
+📖 **回課文複習**：知識點「問路和指路的說法」。
+
+</details>
+
+**第 14 題**【選擇・課綱】　I want to borrow some books. I should go to the ______.
+
+**A.** library  
+**B.** hospital  
+**C.** museum  
+**D.** restaurant
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. library
+
+🔍 **審題關鍵**：borrow books。
+
+📐 **解題步驟**：
+
+1. 借書去圖書館。
+
+⚠️ **易錯提醒**：bookstore 是買書。
+
+📖 **回課文複習**：本頁「地點單字配對」。
+
+</details>
+
+**第 15 題**【選擇・參考東光國小112下英語】　Dad bought two tickets and popcorn for the new film. We were at the ______.
+
+**A.** movie theater  
+**B.** train station  
+**C.** hospital  
+**D.** post office
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. movie theater
+
+🔍 **審題關鍵**：film 和 popcorn。
+
+📐 **解題步驟**：
+
+1. 看電影在電影院。
+
+⚠️ **易錯提醒**：movie 和 theater 要連起來。
+
+📖 **回課文複習**：本頁「地點單字配對」。
+
+</details>
+
+**第 16 題**【選擇・課綱】　They go to Tainan ______ train.
+
+**A.** on  
+**B.** by  
+**C.** in  
+**D.** at
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. by
+
+🔍 **審題關鍵**：by + 交通工具。
+
+📐 **解題步驟**：
+
+1. by train、by bus、by MRT。
+
+⚠️ **易錯提醒**：on foot 例外。
+
+📖 **回課文複習**：知識點「交通工具的說法」。
+
+</details>
+
+**第 17 題**【選擇・課綱】　A: ______ is the post office? B: It’s next to the bank.
+
+**A.** What  
+**B.** Where  
+**C.** Who  
+**D.** When
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Where
+
+🔍 **審題關鍵**：回答地點。
+
+📐 **解題步驟**：
+
+1. next to the bank 是位置。
+
+⚠️ **易錯提醒**：要從回答反推問句。
+
+📖 **回課文複習**：本頁「問路句型」。
+
+</details>
+
+**第 18 題**【寫作・課綱】　Write one sentence: Tell a friend how to get to your school.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: Go straight for two blocks and turn right. My school is on your left.
+
+🔍 **審題關鍵**：用祈使句。
+
+📐 **解題步驟**：
+
+1. 動詞放句首。
+2. 指出轉彎和位置。
+
+⚠️ **易錯提醒**：指路不用 You will go。
+
+📖 **回課文複習**：本頁「問路句型」。
+
+</details>
+
+**第 19 題**【閱讀・課綱】　Read: “There is a supermarket near my home. It’s across from a park. There are many trees in the park.” (1) What is across from the park? (2) Are there trees in the park?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) A supermarket. (2) Yes, there are.
+
+🔍 **審題關鍵**：Scan the text.
+
+📐 **解題步驟**：
+
+1. 第一、二句提到超市。
+2. many trees 表示有。
+
+⚠️ **易錯提醒**：are 配 trees 複數。
+
+📖 **回課文複習**：知識點 There is / There are。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 6 題（問答和指路）：where 問地點，不是問方法。
+- 第 7 題（問答和指路）：aren’t 用於複數。
+- 第 8 題（問答和指路）：就近看名詞。
+- 第 9 題（問答和指路）：get 後面要有 to。
+- 第 10 題（位置介系詞）：next 要接 to。
+- 第 11 題（位置介系詞）：next to 是旁邊。
+- 第 12 題（位置介系詞）：不要把 Turn left 和 on your right 混用。
+- 第 13 題（位置介系詞）：on your right 表示在你的右邊。
+- 第 14 題（地點單字和 by/on）：bookstore 是買書。
+- 第 15 題（地點單字和 by/on）：movie 和 theater 要連起來。
+- 第 16 題（地點單字和 by/on）：on foot 例外。
+- 第 17 題（地點單字和 by/on）：要從回答反推問句。
+- 第 18 題（地點單字和 by/on）：指路不用 You will go。
+- 第 19 題（地點單字和 by/on）：are 配 trees 複數。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 6 | C. how | 本頁「問路句型」。 |
+| 7 | A. Yes, there is. | 本頁「問路句型」。 |
+| 8 | B. are | 知識點 There is / There are。 |
+| 9 | How do I get to the station? | 本頁「問路句型」。 |
+| 10 | B. between | 本頁「位置介系詞」。 |
+| 11 | B. across from | 本頁「位置介系詞」。 |
+| 12 | On your right, next to the bookstore. | 知識點「問路和指路的說法」。 |
+| 13 | B. Turn right | 知識點「問路和指路的說法」。 |
+| 14 | A. library | 本頁「地點單字配對」。 |
+| 15 | A. movie theater | 本頁「地點單字配對」。 |
+| 16 | B. by | 知識點「交通工具的說法」。 |
+| 17 | B. Where | 本頁「問路句型」。 |
+| 18 | Example: Go straight for two blocks and turn right. My school is on your left. | 本頁「問路句型」。 |
+| 19 | (1) A supermarket. (2) Yes, there are. | 知識點 There is / There are。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 

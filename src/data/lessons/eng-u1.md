@@ -312,7 +312,7 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 📱 **用英語給 AI 智慧管家設定生活作息！**  
 在現代智慧家庭中，很多人會使用 Apple Siri、Google Assistant 或 Amazon Alexa 來管理 Daily Routine。試著用今天學到的語法對語音助理下指令吧：
@@ -335,26 +335,18 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-A1）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-A1。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考日常作息時間表達（What time do you get up? at 7:00）、頻率副詞位置（always, usually, sometimes, never）。
-- 📘 **南一版出題特色**：側重頻率副詞放在 be 動詞之後、一般動詞之前的語法防雷題。
-- 📙 **翰林版出題特色**：側重現在簡單式第三人稱單數主詞（He/She/It）動詞加 -s/-es 規則與 does 問句。
+- 📗 **康軒版可留意**：常考日常作息時間表達（What time do you get up? at 7:00）、頻率副詞位置（always, usually, sometimes, never）。
+- 📘 **南一版可留意**：側重頻率副詞放在 be 動詞之後、一般動詞之前的語法防雷題。
+- 📙 **翰林版可留意**：側重現在簡單式第三人稱單數主詞（He/She/It）動詞加 -s/-es 規則與 does 問句。
 - ⚡ **段考 5 秒破題口訣**：三單動詞加 -s/-es；頻率副詞位置口訣：「be 後動前」（be動詞之後，一般動詞之前）！
 - 🏷️ **題幹高頻熱門關鍵字**：Daily Routines, What time, third-person singular -s/-es, frequency adverbs
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -380,7 +372,6 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 - 🧠 **一句話記住**：點用 at、天用 on、長時段用 in。
 - 🌱 **生活例子**：I get up at 6:30. / I have English class on Monday. / My birthday is in July. / I read books in the evening.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：點用 at、天用 on、長時段用 in。。解題時切記：「at night」是固定說法，不是 in night。
 
 **先想想看**：遮住下面的說明，用自己的話說說「時間介系詞 at / on / in」是什麼意思，再想一個你身邊的例子。
 
@@ -399,7 +390,6 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 - 🧠 **一句話記住**：be 動詞「後」、一般動詞「前」。
 - 🌱 **生活例子**：I always brush my teeth. / She is usually happy. / He never eats breakfast.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：be 動詞「後」、一般動詞「前」。。解題時切記：不能說 I brush always my teeth，要說 I always brush my teeth。
 
 **先想想看**：遮住下面的說明，用自己的話說說「頻率副詞與它的位置」是什麼意思，再想一個你身邊的例子。
 
@@ -418,7 +408,6 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 - 🧠 **一句話記住**：一般加 -s；s、sh、ch、x、o 結尾加 -es；子音＋y 改 y 為 i 加 -es（study → studies）。
 - 🌱 **生活例子**：I play basketball. → He plays basketball. / She watches TV. / Tom goes to school.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：一般加 -s；s、sh、ch、x、o 結尾加 -es；子音＋y 改 y 為 i 加 -es（study → studies）。。解題時切記：主詞是 I 和 you 時，動詞不加 s。
 
 **先想想看**：遮住下面的說明，用自己的話說說「第三人稱單數動詞要加 s」是什麼意思，再想一個你身邊的例子。
 
@@ -452,11 +441,44 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### Simple Present 問答：Do 還是 Does
+
+主詞是 he、she、it 或單數人名時，動詞要變化；疑問句用 Does，動詞還原。
+
+- What time **do** you get up? I get up at 7:00.
+- What time **does** Helen **have** lunch? She **has** lunch at 12:00.
+- **Does** he play baseball? Yes, he **does**. / No, he **doesn't**.
+
+易錯：does 後面不可再加 s。have 的第三人稱是 has。
+
+### 時間和交通的小字
+
+| 用法 | 例子 |
+| :--- | :--- |
+| at + 時刻 | at 8:30 |
+| on + 星期／日期 | on Monday |
+| in + 上下午／月份 | in the morning, in May |
+| by + 交通工具 | by bus, by train |
+| on foot（走路） | I go to school on foot. |
+
+「How do you go to school?」問交通方式，不是問時間。
+
+### 問答要對得上：What、Where、How
+
+- What 問事情：What do you do in your free time?
+- Where 問地點：Where is Mike?
+- When／What time 問時間。
+- How 問方式：How does Jeff go to the library?
+
+考卷常出「選出正確對應句」，先看疑問詞，再看主詞和時態。
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期段考精選題】　A: "What time is it right now?"  B: "It's 7:15." 請問下列哪一個選項是 7:15 最道地的英語時間表達法？
+**第 1 題**【基礎練習】　A: "What time is it right now?"  B: "It's 7:15." 請問下列哪一個選項是 7:15 最道地的英語時間表達法？
 
 **A.** It's a quarter to seven.  
 **B.** It's a quarter past seven.  
@@ -471,6 +493,7 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 🔍 **【審題關鍵與破題思考】**：審題關鍵：英語時間表達：15 分鐘為 a quarter，30 分鐘為 half；超過幾分用 past，差幾分用 to。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．7:15 表示 7 點過了一刻鐘（15 分鐘）。
 
 2．英語中「一刻鐘」為 a quarter，「過了幾點」用介系詞 past。
@@ -485,7 +508,7 @@ A 選項是 6:45；C 選項是 7:30。
 
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期段考精選題】　Tina is an excellent student. She ______ finishes her homework before taking a rest, and she ______ late for school.
+**第 2 題**【基礎練習】　Tina is an excellent student. She ______ finishes her homework before taking a rest, and she ______ late for school.
 
 **A.** always ; is never  
 **B.** is always ; never is  
@@ -500,6 +523,7 @@ A 選項是 6:45；C 選項是 7:30。
 🔍 **【審題關鍵與破題思考】**：審題關鍵：分析句子語境「hard-working（勤奮的）」，選擇代表高頻率肯定態度的頻率副詞 always（總是）。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．第一空格：finishes 是一般動詞，頻率副詞放在一般動詞「前面」，故為 always finishes。
 
 2．第二空格：is 是 be 動詞，頻率副詞放在 be 動詞「後面」，故為 is never late。
@@ -512,7 +536,7 @@ A 選項是 6:45；C 選項是 7:30。
 
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級上學期第一次段考精選題】　My elder brother ______ his teeth carefully twice a day ______ the morning and before going to bed.
+**第 3 題**【基礎練習】　My elder brother ______ his teeth carefully twice a day ______ the morning and before going to bed.
 
 **A.** brush ; in  
 **B.** brushes ; in  
@@ -524,20 +548,17 @@ A 選項是 6:45；C 選項是 7:30。
 
 ✅ **正確答案** B. brushes ; in
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 1: Daily Routines, Time Expressions & Frequency Adverbs」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．主詞 My elder brother 是第三人稱單數，現在式動詞 brush 字尾是 -sh，必須加 -es 變成 brushes。
 
 2．在早晨、下午、晚上的時段固定搭配介系詞 in，即 "in the morning"。
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期段考精選題】　A: "______ does your father play tennis with his friends?"  B: "Twice a week."
+**第 4 題**【基礎練習】　A: "______ does your father play tennis with his friends?"  B: "Twice a week."
 
 **A.** How many  
 **B.** What time  
@@ -549,41 +570,17 @@ A 選項是 6:45；C 選項是 7:30。
 
 ✅ **正確答案** C. How often
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 1: Daily Routines, Time Expressions & Frequency Adverbs」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．答句 "Twice a week"（一週兩次）表示活動進行的「頻率次數」。
 
 2．英語中專門用來詢問發生頻率的疑問詞組是 "How often"（多久一次）。
 
 故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 5 題**【多步驟推導與跨觀念綜合題】　A: "What time is it?"  B: "It's 7:15."  另一種道地的英語時間表達法是？
-
-**A.** It's a quarter to seven.  
-**B.** It's a quarter past seven.  
-**C.** It's half past seven.  
-**D.** It's seven past fifteen.
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** B. It's a quarter past seven.
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：英語時間表達：15 分鐘為 a quarter，30 分鐘為 half；超過幾分用 past，差幾分用 to。
-
-📐 **【詳盡解題步驟與算理推導】**：
-a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一刻」，故為 a quarter past seven。
-
-⚠️ **【易錯防雷與陷阱剖析】**：介系詞方向陷阱：7:15 是 a quarter past seven（7點過了一刻）；7:45 是 a quarter to eight（差一刻8點），切勿混淆！
-
-</details>
-
-**第 6 題**【多步驟推導與跨觀念綜合題】　I usually wake up ______ 6:30 ______ the morning. 空格中依序應填入哪一組時間介系詞？
+**第 5 題**【多步驟推導與跨觀念綜合題】　I usually wake up ______ 6:30 ______ the morning. 空格中依序應填入哪一組時間介系詞？
 
 **A.** at; in  
 **B.** in; at  
@@ -598,11 +595,370 @@ a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一
 🔍 **【審題關鍵與破題思考】**：審題關鍵：時間介系詞黃金口訣：「具體鐘點用 at，一日時段用 in，特定某天/星期用 on」。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 具體鐘點時間用 at（at 6:30）；一日中的早中晚用 in（in the morning / in the afternoon）；具體某一天或星期用 on。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：介系詞混淆防雷：鐘點時間 at 6:30，特定時段 in the morning，具體星期 on Monday，切勿填錯順序。
 
 </details>
+
+## 🧪 段考題型實戰（先作答，再看步驟）
+
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **文法選擇** | 第三人稱和助動詞 | 6、7、8、9 |
+| **句意對應** | 問答配對 | 10、11、12 |
+| **句子重組** | 字序和標點 | 13、14 |
+| **閱讀與時間** | 時間表和 past/to | 15、16、17、18 |
+
+**第 6 題**【選擇・參考東光國小112下英語】　What time ______ Tina ______ dinner?
+
+**A.** do; have  
+**B.** does; has  
+**C.** does; have  
+**D.** do; has
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. does; have
+
+🔍 **審題關鍵**：Tina is singular.
+
+📐 **解題步驟**：
+
+1. 主詞 Tina 用 does。
+2. does 後面動詞用原形 have。
+
+⚠️ **易錯提醒**：does 已有 s，have 不能再變 has。
+
+📖 **回課文複習**：本頁 Simple Present 問答。
+
+</details>
+
+**第 7 題**【選擇・參考東光國小112下英語】　My brother ______ a bath at 9:00 every night.
+
+**A.** take  
+**B.** takes  
+**C.** taking  
+**D.** took
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. takes
+
+🔍 **審題關鍵**：every night means a habit.
+
+📐 **解題步驟**：
+
+1. 習慣動作用現在式。
+2. 主詞 my brother 是第三人稱單數，動詞加 s。
+
+⚠️ **易錯提醒**：taking 不能單獨當動詞。
+
+📖 **回課文複習**：知識點「第三人稱單數動詞要加 s」。
+
+</details>
+
+**第 8 題**【選擇・參考東光國小112下英語】　I go to the park ______ foot on Sundays.
+
+**A.** on  
+**B.** by  
+**C.** in  
+**D.** at
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. on
+
+🔍 **審題關鍵**：on foot is a fixed phrase.
+
+📐 **解題步驟**：
+
+1. 走路固定用 on foot。
+2. by 接 bus、train 等交通工具。
+
+⚠️ **易錯提醒**：不能說 by foot。
+
+📖 **回課文複習**：本頁「時間和交通的小字」。
+
+</details>
+
+**第 9 題**【選擇・課綱】　She ______ never late for school.
+
+**A.** am  
+**B.** is  
+**C.** are  
+**D.** be
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. is
+
+🔍 **審題關鍵**：be 動詞要配主詞。
+
+📐 **解題步驟**：
+
+1. She 配 is。
+2. 頻率副詞放在 be 動詞後面，正確句子是 She is never late for school.
+
+⚠️ **易錯提醒**：be 後、一般動詞前是頻率副詞位置。
+
+📖 **回課文複習**：核心觀念 4：頻率副詞位置。
+
+</details>
+
+**第 10 題**【選擇・參考東光國小112下英語】　A: How does Amy get to the swimming pool? B: ______
+
+**A.** She rides her bike there.  
+**B.** She swims at 7:00.  
+**C.** She swims on Sundays.  
+**D.** She is at the pool.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. She rides her bike there.
+
+🔍 **審題關鍵**：How 問方式。
+
+📐 **解題步驟**：
+
+1. 疑問詞 How 問用什麼方法。
+2. rides her bike 回答交通方式。
+
+⚠️ **易錯提醒**：at 7:00 回答時間。
+
+📖 **回課文複習**：本頁「問答要對得上」。
+
+</details>
+
+**第 11 題**【選擇・參考東光國小112下英語】　A: What does your sister like to do on weekends? B: ______
+
+**A.** She is at home.  
+**B.** She likes to draw comics.  
+**C.** At 8:00.  
+**D.** Yes, she does.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. She likes to draw comics.
+
+🔍 **審題關鍵**：What 問做什麼。
+
+📐 **解題步驟**：
+
+1. 回答要說明活動。
+
+⚠️ **易錯提醒**：Yes／No 只回答 Do 開頭的問句。
+
+📖 **回課文複習**：本頁「問答要對得上」。
+
+</details>
+
+**第 12 題**【選擇・課綱】　A: Does Kevin play the piano? B: ______
+
+**A.** Yes, he do.  
+**B.** Yes, he does.  
+**C.** No, he don’t.  
+**D.** Yes, she does.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Yes, he does.
+
+🔍 **審題關鍵**：Does 問，用 does 答。
+
+📐 **解題步驟**：
+
+1. 主詞 Kevin 是 he。
+2. 肯定簡答用 Yes, he does.
+
+⚠️ **易錯提醒**：he 要配 does，不是 do。
+
+📖 **回課文複習**：本頁 Simple Present 問答。
+
+</details>
+
+**第 13 題**【重組・參考東光國小112下英語】　Unscramble: up / What / does / get / time / Ken / ?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** What time does Ken get up?
+
+🔍 **審題關鍵**：疑問詞放句首。
+
+📐 **解題步驟**：
+
+1. What time 放最前面。
+2. 助動詞 does，再接主詞 Ken。
+3. 動詞原形 get up 放最後。
+
+⚠️ **易錯提醒**：結尾要有問號。
+
+📖 **回課文複習**：本頁 Simple Present 問答。
+
+</details>
+
+**第 14 題**【重組・參考東光國小112下英語】　Unscramble: always / to / school / She / walks / .
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** She always walks to school.
+
+🔍 **審題關鍵**：頻率副詞在一般動詞前。
+
+📐 **解題步驟**：
+
+1. 主詞 She。
+2. 頻率副詞 always。
+3. 動詞 walks，再接 to school。
+
+⚠️ **易錯提醒**：always 不放句尾。
+
+📖 **回課文複習**：核心觀念 4：頻率副詞位置。
+
+</details>
+
+**第 15 題**【選擇・課綱】　It’s 8:45. Which is correct?
+
+**A.** It’s a quarter past eight.  
+**B.** It’s a quarter to nine.  
+**C.** It’s half past eight.  
+**D.** It’s a quarter to eight.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. It’s a quarter to nine.
+
+🔍 **審題關鍵**：Fifteen minutes to 9.
+
+📐 **解題步驟**：
+
+1. 8:45 差 15 分到 9 點。
+2. a quarter to nine。
+
+⚠️ **易錯提醒**：past 表過幾分，to 表差幾分。
+
+📖 **回課文複習**：知識點「用英文說時間」。
+
+</details>
+
+**第 16 題**【閱讀・參考東光國小112下英語】　Read: “Ruby wakes up at 6:30 and takes the MRT with her dad. She eats noodles at noon. She usually practices the violin after school.” (1) How does Ruby travel? (2) What does she usually do after school?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) By MRT. (2) She practices the violin.
+
+🔍 **審題關鍵**：Scan for the key words.
+
+📐 **解題步驟**：
+
+1. Find “goes to school”.
+2. Find “after school”.
+
+⚠️ **易錯提醒**：回答要用第三人稱。
+
+📖 **回課文複習**：本頁「問答要對得上」。
+
+</details>
+
+**第 17 題**【寫作・參考東光國小112下英語】　Write one sentence about your weekend hobby.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: I play chess with my dad on Sundays.
+
+🔍 **審題關鍵**：用完整句。
+
+📐 **解題步驟**：
+
+1. 主詞 I。
+2. 動詞用原形。
+3. 句尾用句點。
+
+⚠️ **易錯提醒**：不要只寫 chess。
+
+📖 **回課文複習**：本頁「問答要對得上」。
+
+</details>
+
+**第 18 題**【選擇・課綱】　Which sentence is correct?
+
+**A.** He often is late.  
+**B.** He is often late.  
+**C.** He late often is.  
+**D.** Often he late is.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. He is often late.
+
+🔍 **審題關鍵**：be 動詞後面。
+
+📐 **解題步驟**：
+
+1. 頻率副詞放在 be 動詞後。
+
+⚠️ **易錯提醒**：一般動詞才放前面。
+
+📖 **回課文複習**：核心觀念 4：頻率副詞位置。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 6 題（第三人稱和助動詞）：does 已有 s，have 不能再變 has。
+- 第 7 題（第三人稱和助動詞）：taking 不能單獨當動詞。
+- 第 8 題（第三人稱和助動詞）：不能說 by foot。
+- 第 9 題（第三人稱和助動詞）：be 後、一般動詞前是頻率副詞位置。
+- 第 10 題（問答配對）：at 7:00 回答時間。
+- 第 11 題（問答配對）：Yes／No 只回答 Do 開頭的問句。
+- 第 12 題（問答配對）：he 要配 does，不是 do。
+- 第 13 題（字序和標點）：結尾要有問號。
+- 第 14 題（字序和標點）：always 不放句尾。
+- 第 15 題（時間表和 past/to）：past 表過幾分，to 表差幾分。
+- 第 16 題（時間表和 past/to）：回答要用第三人稱。
+- 第 17 題（時間表和 past/to）：不要只寫 chess。
+- 第 18 題（時間表和 past/to）：一般動詞才放前面。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 6 | C. does; have | 本頁 Simple Present 問答。 |
+| 7 | B. takes | 知識點「第三人稱單數動詞要加 s」。 |
+| 8 | A. on | 本頁「時間和交通的小字」。 |
+| 9 | B. is | 核心觀念 4：頻率副詞位置。 |
+| 10 | A. She rides her bike there. | 本頁「問答要對得上」。 |
+| 11 | B. She likes to draw comics. | 本頁「問答要對得上」。 |
+| 12 | B. Yes, he does. | 本頁 Simple Present 問答。 |
+| 13 | What time does Ken get up? | 本頁 Simple Present 問答。 |
+| 14 | She always walks to school. | 核心觀念 4：頻率副詞位置。 |
+| 15 | B. It’s a quarter to nine. | 知識點「用英文說時間」。 |
+| 16 | (1) By MRT. (2) She practices the violin. | 本頁「問答要對得上」。 |
+| 17 | Example: I play chess with my dad on Sundays. | 本頁「問答要對得上」。 |
+| 18 | B. He is often late. | 核心觀念 4：頻率副詞位置。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 

@@ -45,7 +45,7 @@ const CupertinoTabBar = () => {
     { path: '/gept', label: '全民英檢先修', icon: Award, color: '#8b5cf6', desc: '單字聽力雙語特訓' },
     { path: '/prep', label: '國中七年級先修', icon: GraduationCap, color: '#0ea5e9', desc: '會考必備銜接要點' },
     { path: '/memory-game', label: '記憶翻牌挑戰', icon: Layers, color: '#ec4899', desc: '專注力與腦力特訓' },
-    { path: '/question-bank', label: '全國段考試題庫', icon: HelpCircle, color: '#14b8a6', desc: '歷屆名校段考真題' },
+    { path: '/question-bank', label: '段考題型題庫', icon: HelpCircle, color: '#14b8a6', desc: '依段考題型編寫的練習題' },
     { path: '/resources', label: '全臺教育導航', icon: Globe, color: '#64748b', desc: '因材網與開放試題庫' }
   ];
 

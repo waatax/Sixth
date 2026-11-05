@@ -2250,8 +2250,10 @@ const LessonPage = () => {
               },
               code: ({ _node, inline, className, children, ...props }) => {
                 const textContent = String(children).replace(/\n$/, '');
+                // react-markdown v10 不再傳 inline：沒有語言標記、內容又沒有換行的就是行內程式碼
+                const isInlineCode = inline ?? (!className && !String(children).includes('\n'));
 
-                if (inline) {
+                if (isInlineCode) {
                   const isEnglish = isEnglishSubject && /^[a-zA-Z0-9\s',.?!/-]+$/.test(textContent.trim());
 
                   return (
@@ -2436,7 +2438,7 @@ const LessonPage = () => {
                 borderColor: '#6366f1',
                 color: '#6366f1'
               }}
-              title="查看本單元考前重點筆記、三版本特色與各校歷屆真題"
+              title="查看本單元考前重點筆記、版本提醒與段考題型練習"
             >
               <FileText size={16} /> 查看【{currentUnit?.title?.split('：')[1] || currentUnit?.title || '本單元'}】考前講義
             </button>

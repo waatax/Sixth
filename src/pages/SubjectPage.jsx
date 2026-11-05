@@ -282,7 +282,7 @@ const SubjectPage = () => {
               <span className="badge badge-success text-[11px] font-bold">支援 A4 / PDF 下載列印</span>
             </div>
             <p className="text-xs text-secondary mt-1 mb-0" style={{ lineHeight: 1.5 }}>
-              名師核心觀念、解題公式口訣、易錯防雷陷阱、各校歷年段考真題解析與 10 分鐘必會檢核清單！
+              名師核心觀念、解題公式口訣、易錯防雷陷阱、段考題型解析與 10 分鐘必會檢核清單！
             </p>
           </div>
         </div>

@@ -1295,7 +1295,7 @@ const ExamReviewNotesPage = () => {
                             <div className="note-section-block">
                               <h3 className="note-section-title" style={{ color: 'var(--accent-error)' }}>
                                 <AlertTriangle size={17} />
-                                <span>⚠️ 歷屆名校高頻常考易錯陷阱（避雷指南）</span>
+                                <span>⚠️ 段考常見易錯陷阱（避雷指南）</span>
                               </h3>
                               <div className="pitfalls-box">
                                 {note.examPitfalls.map((pitfall, idx) => (

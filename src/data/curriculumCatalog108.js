@@ -111,7 +111,7 @@ export const REFERENCE_BOOK_SERIES_108 = [
     tag: '段考滿分衝刺',
     color: '#7c3aed',
     books: [
-      { name: '《全國名校段考必考卷》', publisher: '各版本段考題庫', features: '收錄臺北、新北、臺中、高雄公立國小第一次、第二次與期末考真題。' },
+      { name: '段考題型練習卷', publisher: '本站依公開考卷題型重新命題', features: '包含第一次、第二次定期評量與期末考常見題型，題目皆非原卷。' },
       { name: '《PISA / PIRLS 跨領域素養題本》', publisher: '國教院素養導向', features: '長文圖表判讀、真實生活情境解題、是非說明題與作圖申論題。' },
       { name: '《小六畢業考暨升私中/資優班總複習》', publisher: '升學旗艦系列', features: '總結六年級上下學期全部核心考點，無縫接軌國中七年級課程。' }
     ]

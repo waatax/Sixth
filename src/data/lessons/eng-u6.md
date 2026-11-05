@@ -322,7 +322,7 @@
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 🤖 **AI 智慧閱讀家教 (AI Reading Companion)**  
 在數位學習時代，生成式 AI 工具（如 ChatGPT、Claude）能成為你的個人專屬雙語閱讀私人家教！  
@@ -337,26 +337,18 @@
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-B2）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-B2。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考長篇生活閱讀短文素養題、圖表菜單火車票判讀與尋找文章細節 (Scanning & Skimming)。
-- 📘 **南一版出題特色**：側重升中銜接 1200 必考核心字彙詞性（名詞、動詞、形容詞、副詞）之語意填空。
-- 📙 **翰林版出題特色**：側重自然拼讀法 (Phonics) 長短母音對照（a_e, ee, ea, igh, oa）與常見複合子音（ch, sh, th, ph）。
+- 📗 **康軒版可留意**：常考長篇生活閱讀短文素養題、圖表菜單火車票判讀與尋找文章細節 (Scanning & Skimming)。
+- 📘 **南一版可留意**：側重升中銜接 1200 必考核心字彙詞性（名詞、動詞、形容詞、副詞）之語意填空。
+- 📙 **翰林版可留意**：側重自然拼讀法 (Phonics) 長短母音對照（a_e, ee, ea, igh, oa）與常見複合子音（ch, sh, th, ph）。
 - ⚡ **段考 5 秒破題口訣**：母音加 e 長母音發原音；先看問題抓關鍵字，再去文章掃描定位找答案！
 - 🏷️ **題幹高頻熱門關鍵字**：Reading comprehension, Phonics rules, Scanning, Sight words
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -382,7 +374,6 @@
 
 - 🧠 **一句話記住**：母音 ＋ 子音 ＋ e → 母音唸長音，e 不發音。
 - 🌱 **生活例子**：cap → cape、kit → kite、hop → hope、cut → cute。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：母音 ＋ 子音 ＋ e → 母音唸長音，e 不發音。。解題時切記：有些常用字是例外，例如 have、give、love。
 
 **先想想看**：遮住下面的說明，用自己的話說說「Magic E 讓母音唸長音」是什麼意思，再想一個你身邊的例子。
 
@@ -401,7 +392,6 @@
 
 - 🧠 **一句話記住**：先抓大意，再找細節。
 - 🌱 **生活例子**：題目問 When did Amy go to Tainan? 就在文章中找時間詞，例如 last Sunday。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：先抓大意，再找細節。。解題時切記：看不懂的生字先跳過，從上下文猜意思。
 
 **先想想看**：遮住下面的說明，用自己的話說說「略讀與掃讀（英文閱讀）」是什麼意思，再想一個你身邊的例子。
 
@@ -420,7 +410,6 @@
 
 - 🧠 **一句話記住**：un-/dis- 相反；-ful 有、-less 沒有；-ly 變副詞。
 - 🌱 **生活例子**：happy → unhappy；like → dislike；help → helpful / helpless；quick → quickly。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：un-/dis- 相反；-ful 有、-less 沒有；-ly 變副詞。。解題時切記：friendly 雖然有 -ly，但它是形容詞，不是副詞。
 
 **先想想看**：遮住下面的說明，用自己的話說說「字首與字尾」是什麼意思，再想一個你身邊的例子。
 
@@ -454,11 +443,43 @@
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### 自然發音和子音群
+
+magic e 讓前面的母音發長音：cap → cape，kit → kite，hop → hope。
+
+常見子音群：bl（blue）、cl（class）、fl（flag）、gl（glass）、pl（play）、br（brown）、cr（cry）、dr（drive）、fr（frog）、gr（green）、tr（tree）、sk（skate）、sm（small）、sn（snow）、sp（spoon）、st（stop）、sw（swim）。
+
+聽力題可以先想字的第二個音。
+
+### 閱讀測驗三步驟
+
+1. 先看問題，圈出 Who、Where、When、What。
+2. 再讀文章，找到關鍵字所在句。
+3. 選項要對得上，時態也要一致。
+
+如果文章有兩個人名，要注意誰做了什麼；對話裡的 He、She、They 也要對應回人名。
+
+### 句子重組和標點
+
+重組題先判斷句型：
+
+- 直述句：主詞 + 動詞 + 其他，句尾句點。
+- 問句：疑問詞 + 助動詞 / be + 主詞 + 其他，句尾問號。
+- 句首大寫是線索。
+
+重組完要讀一次，看動詞和主詞有沒有配對。
+
+### 閱讀常見單字補給
+
+library（圖書館）、opens（開門）、closes（關門）、freezing（極冷）、boiling（極熱）。Past tense reminder: I was, you were, they were. 遇到不懂的字，先從上下文猜：It’s freezing! 前一句提到 very cold，可以推測是非常冷。
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期段考精選題】　When you want to look up the telephone number and address of a local dental clinic, which reference book should you check?
+**第 1 題**【基礎練習】　When you want to look up the telephone number and address of a local dental clinic, which reference book should you check?
 
 **A.** A cookbook  
 **B.** A telephone directory  
@@ -470,9 +491,8 @@
 
 ✅ **正確答案** B. A telephone directory
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．題幹要求尋找診所的「電話號碼與地址 (telephone number and address)」。
 
 2．專門記錄電話與通訊資訊的工具書是「電話簿/工商名錄 (telephone directory)」。
@@ -481,11 +501,9 @@
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期段考精選題】　In English word formation, adding the suffix "-ful" to a noun often creates an adjective meaning "full of". Which of the following words means "full of help or ready to give assistance"?
+**第 2 題**【基礎練習】　In English word formation, adding the suffix "-ful" to a noun often creates an adjective meaning "full of". Which of the following words means "full of help or ready to give assistance"?
 
 **A.** helpless  
 **B.** helpful  
@@ -497,20 +515,17 @@
 
 ✅ **正確答案** B. helpful
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．字首或字尾含義：-ful 表示「充滿...的」。
 
 2．"help + ful = helpful" 意思是「樂於助人的、有幫助的」。
 
 故正確答案為 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級下學期第一次段考精選題】　Read the sentence: "The winter in Antarctica was so *frigid* that even boiling water froze into ice in just a few seconds." What is the closest meaning of the word "*frigid*"?
+**第 3 題**【基礎練習】　Read the sentence: "The winter in Antarctica was so *frigid* that even boiling water froze into ice in just a few seconds." What is the closest meaning of the word "*frigid*"?
 
 **A.** extremely cold  
 **B.** very warm and sunny  
@@ -522,9 +537,8 @@
 
 ✅ **正確答案** A. extremely cold
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．從上下文線索尋找破案密碼："even boiling water froze into ice in just a few seconds"（連沸水都在幾秒內結成冰塊）。
 
 2．說明南極的冬天溫度極低，寒冷至極。
@@ -533,11 +547,9 @@
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期第二次段考精選題】　The prefix "un-" in English usually means "not" or "the opposite of". Which pair of words shows this correct relationship?
+**第 4 題**【基礎練習】　The prefix "un-" in English usually means "not" or "the opposite of". Which pair of words shows this correct relationship?
 
 **A.** clean - unclean (乾淨的 - 不乾淨的)  
 **B.** happy - gladly  
@@ -552,6 +564,7 @@
 🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．字首 "un-" 附加上去代表否定或相反意思。
 
 2．"unclean" 即為 "not clean"（不乾淨的）。
@@ -574,12 +587,9 @@
 
 ✅ **正確答案** C. Scanning (掃讀特定關鍵細節)
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
-專注目光快速捕捉特定數字、專有名詞、年代等具體單一資訊的技巧稱為「掃讀 (Scanning)」。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+專注目光快速捕捉特定數字、專有名詞、年代等具體單一資訊的技巧稱為「掃讀 (Scanning)」。
 
 </details>
 
@@ -598,11 +608,411 @@
 🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不公平），表相反否定。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
 
 </details>
+
+## 🧪 段考題型實戰（先作答，再看步驟）
+
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **自然發音** | magic e 和子音群 | 7、8、9 |
+| **字彙和文法** | 字首字尾與轉折詞 | 10、11、12、13 |
+| **閱讀理解** | 找關鍵資訊 | 14、15、16、17、21 |
+| **句子重組** | 字序 | 18、19、20 |
+
+**第 7 題**【選擇・課綱】　Which word has a long vowel sound?
+
+**A.** cap  
+**B.** cape  
+**C.** kit  
+**D.** hop
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. cape
+
+🔍 **審題關鍵**：字尾有 magic e。
+
+📐 **解題步驟**：
+
+1. cape 字尾有 e。
+2. a 發長音。
+
+⚠️ **易錯提醒**：e 本身不發音。
+
+📖 **回課文複習**：本頁「自然發音和子音群」。
+
+</details>
+
+**第 8 題**【選擇・參考東光國小112下英語】　Which word begins with the “dr” sound?
+
+**A.** train  
+**B.** dress  
+**C.** green  
+**D.** clock
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. dress
+
+🔍 **審題關鍵**：dr。
+
+📐 **解題步驟**：
+
+1. dress 開頭是 dr。
+2. train 開頭是 tr。
+
+⚠️ **易錯提醒**：tr 和 dr 很像。
+
+📖 **回課文複習**：本頁「自然發音和子音群」。
+
+</details>
+
+**第 9 題**【選擇・參考東光國小112下英語】　Which group has the same beginning sound?
+
+**A.** stop, stay, star  
+**B.** stop, spoon, skate  
+**C.** swim, glass, class  
+**D.** green, grass, dress
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. stop, stay, star
+
+🔍 **審題關鍵**：st。
+
+📐 **解題步驟**：
+
+1. 三個都以 st 開頭。
+
+⚠️ **易錯提醒**：spoon 是 sp，skate 是 sk。
+
+📖 **回課文複習**：本頁「自然發音和子音群」。
+
+</details>
+
+**第 10 題**【選擇・課綱】　“unhappy” means ______.
+
+**A.** very happy  
+**B.** not happy  
+**C.** happy again  
+**D.** happy too
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. not happy
+
+🔍 **審題關鍵**：un- 表否定。
+
+📐 **解題步驟**：
+
+1. un- 有「不」的意思。
+
+⚠️ **易錯提醒**：un- 不是加強語氣。
+
+📖 **回課文複習**：知識點「字首與字尾」。
+
+</details>
+
+**第 11 題**【選擇・課綱】　A person who teaches is a ______.
+
+**A.** teach  
+**B.** teacher  
+**C.** teaching  
+**D.** teaches
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. teacher
+
+🔍 **審題關鍵**：-er 表人。
+
+📐 **解題步驟**：
+
+1. teach + er = teacher。
+
+⚠️ **易錯提醒**：不是所有職業都加 er，例如 doctor。
+
+📖 **回課文複習**：知識點「字首與字尾」。
+
+</details>
+
+**第 12 題**【選擇・課綱】　I like cats, ______ my sister likes dogs.
+
+**A.** and  
+**B.** but  
+**C.** so  
+**D.** because
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. but
+
+🔍 **審題關鍵**：前後對比。
+
+📐 **解題步驟**：
+
+1. 喜歡的東西不同。
+2. 用 but 表示轉折。
+
+⚠️ **易錯提醒**：because 表原因。
+
+📖 **回課文複習**：核心觀念 4：轉折詞。
+
+</details>
+
+**第 13 題**【選擇・課綱】　It was raining, ______ we stayed home.
+
+**A.** so  
+**B.** but  
+**C.** or  
+**D.** before
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. so
+
+🔍 **審題關鍵**：因此。
+
+📐 **解題步驟**：
+
+1. 下雨是原因。
+2. 待在家是結果。
+
+⚠️ **易錯提醒**：because 要放在原因前面。
+
+📖 **回課文複習**：核心觀念 4：轉折詞。
+
+</details>
+
+**第 14 題**【閱讀・參考東光國小112下英語】　Read: “Kate: Where were you yesterday? Leo: I was at the zoo with my family. We saw pandas. Kate: Did you see tigers? Leo: No, we didn’t. They were sleeping.” (1) Where was Leo? (2) Did he see tigers?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) He was at the zoo. (2) No, he didn’t.
+
+🔍 **審題關鍵**：Scan for question words.
+
+📐 **解題步驟**：
+
+1. 第一個回答提到地點。
+2. No, we didn’t 回答第二題。
+
+⚠️ **易錯提醒**：回答的主詞要改成 he。
+
+📖 **回課文複習**：本頁「閱讀測驗三步驟」。
+
+</details>
+
+**第 15 題**【閱讀・課綱】　Read: “The new library opens at 9:00. It closes at 5:00 on Sundays. It’s next to the park.” When does it close on Sundays?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** At 5:00.
+
+🔍 **審題關鍵**：Find “Sundays”.
+
+📐 **解題步驟**：
+
+1. 找到 Sundays 的句子。
+2. closes at 5:00。
+
+⚠️ **易錯提醒**：opens 和 closes 要分清楚。
+
+📖 **回課文複習**：本頁「閱讀測驗三步驟」。
+
+</details>
+
+**第 16 題**【選擇・課綱】　You want to find a phone number in a long list. You should ______.
+
+**A.** skim  
+**B.** scan  
+**C.** read every word  
+**D.** stop reading
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. scan
+
+🔍 **審題關鍵**：找特定資料。
+
+📐 **解題步驟**：
+
+1. scan 是快速搜尋特定資訊。
+2. skim 看大意。
+
+⚠️ **易錯提醒**：兩個字很像，要記用途。
+
+📖 **回課文複習**：核心觀念 1：閱讀雙武器。
+
+</details>
+
+**第 17 題**【選擇・課綱】　Read: “The winter here is very cold. It’s freezing!” “freezing” means ______.
+
+**A.** very hot  
+**B.** very cold  
+**C.** very rainy  
+**D.** very sunny
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. very cold
+
+🔍 **審題關鍵**：上下文線索。
+
+📐 **解題步驟**：
+
+1. 前一句提到 very cold。
+
+⚠️ **易錯提醒**：猜字要回到句子。
+
+📖 **回課文複習**：核心觀念 3：上下文線索。
+
+</details>
+
+**第 18 題**【重組・參考東光國小112下英語】　Unscramble: your / Were / at / parents / ? / beach / the
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Were your parents at the beach?
+
+🔍 **審題關鍵**：Were 開頭。
+
+📐 **解題步驟**：
+
+1. Be 動詞放前。
+2. 主詞 your parents。
+3. 地點放最後。
+
+⚠️ **易錯提醒**：大寫開頭和問號是線索。
+
+📖 **回課文複習**：本頁「句子重組和標點」。
+
+</details>
+
+**第 19 題**【重組・參考東光國小112下英語】　Unscramble: played / and / I / . / Tina / badminton / school / at
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Tina and I played badminton at school.
+
+🔍 **審題關鍵**：別人放前面。
+
+📐 **解題步驟**：
+
+1. 主詞 Tina and I。
+2. 動詞 played。
+3. 地點 at school。
+
+⚠️ **易錯提醒**：禮貌上 I 放後面。
+
+📖 **回課文複習**：本頁「句子重組和標點」。
+
+</details>
+
+**第 20 題**【寫作・參考東光國小112下英語】　Write about last Saturday: Where were you, and what did you do?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: I was at my cousin’s home. We made pizza together.
+
+🔍 **審題關鍵**：時態一致。
+
+📐 **解題步驟**：
+
+1. 第一句用 was。
+2. 第二句用過去式動詞。
+
+⚠️ **易錯提醒**：Where 要回答地點。
+
+📖 **回課文複習**：本頁「閱讀測驗三步驟」。
+
+</details>
+
+**第 21 題**【閱讀・課綱】　Read: “The museum is closed on Mondays. Students can visit it for free on Fridays.” When can students visit for free?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** On Fridays.
+
+🔍 **審題關鍵**：Find “free”.
+
+📐 **解題步驟**：
+
+1. 找到 free 這個字。
+2. 同句提到 on Fridays。
+
+⚠️ **易錯提醒**：Mondays 是休館日。
+
+📖 **回課文複習**：本頁「閱讀測驗三步驟」。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 7 題（magic e 和子音群）：e 本身不發音。
+- 第 8 題（magic e 和子音群）：tr 和 dr 很像。
+- 第 9 題（magic e 和子音群）：spoon 是 sp，skate 是 sk。
+- 第 10 題（字首字尾與轉折詞）：un- 不是加強語氣。
+- 第 11 題（字首字尾與轉折詞）：不是所有職業都加 er，例如 doctor。
+- 第 12 題（字首字尾與轉折詞）：because 表原因。
+- 第 13 題（字首字尾與轉折詞）：because 要放在原因前面。
+- 第 14 題（找關鍵資訊）：回答的主詞要改成 he。
+- 第 15 題（找關鍵資訊）：opens 和 closes 要分清楚。
+- 第 16 題（找關鍵資訊）：兩個字很像，要記用途。
+- 第 17 題（找關鍵資訊）：猜字要回到句子。
+- 第 18 題（字序）：大寫開頭和問號是線索。
+- 第 19 題（字序）：禮貌上 I 放後面。
+- 第 20 題（字序）：Where 要回答地點。
+- 第 21 題（找關鍵資訊）：Mondays 是休館日。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 7 | B. cape | 本頁「自然發音和子音群」。 |
+| 8 | B. dress | 本頁「自然發音和子音群」。 |
+| 9 | A. stop, stay, star | 本頁「自然發音和子音群」。 |
+| 10 | B. not happy | 知識點「字首與字尾」。 |
+| 11 | B. teacher | 知識點「字首與字尾」。 |
+| 12 | B. but | 核心觀念 4：轉折詞。 |
+| 13 | A. so | 核心觀念 4：轉折詞。 |
+| 14 | (1) He was at the zoo. (2) No, he didn’t. | 本頁「閱讀測驗三步驟」。 |
+| 15 | At 5:00. | 本頁「閱讀測驗三步驟」。 |
+| 16 | B. scan | 核心觀念 1：閱讀雙武器。 |
+| 17 | B. very cold | 核心觀念 3：上下文線索。 |
+| 18 | Were your parents at the beach? | 本頁「句子重組和標點」。 |
+| 19 | Tina and I played badminton at school. | 本頁「句子重組和標點」。 |
+| 20 | Example: I was at my cousin’s home. We made pizza together. | 本頁「閱讀測驗三步驟」。 |
+| 21 | On Fridays. | 本頁「閱讀測驗三步驟」。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 

@@ -241,7 +241,7 @@ In our daily lives, we are always comparing things:
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 **🔭 韋伯太空望遠鏡 (JWST)：凝視宇宙最深遠、最古老的奇蹟！**
 2021 年底發射升空的「韋伯太空望遠鏡 (James Webb Space Telescope)」，是人類史上打造過最大、最強大的太空望遠鏡：
@@ -260,26 +260,18 @@ In our daily lives, we are always comparing things:
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-B1）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-B1。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考世界奇景與動物之比較（The blue whale is bigger than the elephant.）。
-- 📘 **南一版出題特色**：側重「as ... as 和...一樣」同級比較句型，以及最高級前方必加定冠詞「the」之鐵律。
-- 📙 **翰林版出題特色**：側重形容詞比較級與最高級變化規則（+er/+est, 字尾 y 變 i 加 er, 雙母音加 more/most, good-better-best）。
+- 📗 **康軒版可留意**：常考世界奇景與動物之比較（The blue whale is bigger than the elephant.）。
+- 📘 **南一版可留意**：側重「as ... as 和...一樣」同級比較句型，以及最高級前方必加定冠詞「the」之鐵律。
+- 📙 **翰林版可留意**：側重形容詞比較級與最高級變化規則（+er/+est, 字尾 y 變 i 加 er, 雙母音加 more/most, good-better-best）。
 - ⚡ **段考 5 秒破題口訣**：兩者比較加 -er than，三者以上 the 最高級 -est；長字多音節前面加 more 與 the most！
 - 🏷️ **題幹高頻熱門關鍵字**：Comparative -er than, Superlative the -est, more / the most, irregular forms
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -305,7 +297,6 @@ In our daily lives, we are always comparing things:
 
 - 🧠 **一句話記住**：短字 -er ＋ than；長字 more ＋ than；短母音字尾子音重複（big → bigger）。
 - 🌱 **生活例子**：Tom is taller than Ben. / A dog is bigger than a cat. / This book is more interesting than that one.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：短字 -er ＋ than；長字 more ＋ than；短母音字尾子音重複（big → bigger）。。解題時切記：good 的比較級是 better，不是 gooder。
 
 **先想想看**：遮住下面的說明，用自己的話說說「比較級：兩者比較」是什麼意思，再想一個你身邊的例子。
 
@@ -324,7 +315,6 @@ In our daily lives, we are always comparing things:
 
 - 🧠 **一句話記住**：the ＋ -est；the most ＋ 長形容詞；good → the best。
 - 🌱 **生活例子**：Tom is the tallest in our class. / This is the most exciting game of all.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：the ＋ -est；the most ＋ 長形容詞；good → the best。。解題時切記：最高級前面一定要加 the。
 
 **先想想看**：遮住下面的說明，用自己的話說說「最高級：三者以上比較」是什麼意思，再想一個你身邊的例子。
 
@@ -343,7 +333,6 @@ In our daily lives, we are always comparing things:
 
 - 🧠 **一句話記住**：the ＋ 最高級 ＋ in the world。
 - 🌱 **生活例子**：Mount Everest is the highest mountain in the world. / The Pacific Ocean is the largest ocean.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：the ＋ 最高級 ＋ in the world。。解題時切記：「在世界上」要用 in the world，不是 of the world。
 
 **先想想看**：遮住下面的說明，用自己的話說說「世界之最」是什麼意思，再想一個你身邊的例子。
 
@@ -377,11 +366,51 @@ In our daily lives, we are always comparing things:
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### 比較級和最高級規則
+
+| 規則 | 比較級 | 最高級 |
+| :--- | :--- | :--- |
+| 一般加 | tall → taller | tallest |
+| 字尾 e | nice → nicer | nicest |
+| 短母音加字尾 | big → bigger | biggest |
+| y 變 i | happy → happier | happiest |
+| 長字 | more beautiful | most beautiful |
+| 不規則 | good → better, bad → worse | best, worst |
+
+比較級接 than；最高級前加 the。
+
+### 比較句怎麼造
+
+- A is taller than B.
+- Which is bigger, a dog or a cat? A dog is bigger.
+- Who is the tallest in your class?
+- as + 原級 + as 表示一樣：Tom is as tall as Ben.
+
+只有兩個比較用比較級；三個以上用最高級。much 可加強比較級：much bigger。
+
+### 讀比較圖表
+
+圖表題先看單位，再比較數字：
+
+| Name | Age | Height |
+| :--- | :--- | :--- |
+| Ann | 12 | 150 cm |
+| Bo | 11 | 155 cm |
+| Cal | 13 | 148 cm |
+
+Bo is taller than Ann. Cal is the oldest. 句子要根據表格，不要憑感覺回答。
+
+### 比較常用形容詞
+
+young → younger（比較年輕）、old → older（比較老）、expensive → more expensive（比較貴）、cheap → cheaper（比較便宜）、fast → faster、slow → slower、long → longer、short → shorter。這些在比較價錢和年齡時常用。
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期畢業考精選題】　Mount Everest (珠穆朗瑪峰) in the Himalayas is ______ mountain in the entire world.
+**第 1 題**【基礎練習】　Mount Everest (珠穆朗瑪峰) in the Himalayas is ______ mountain in the entire world.
 
 **A.** higher  
 **B.** the highest  
@@ -393,9 +422,8 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** B. the highest
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．範圍是 "in the entire world"（在全世界），三者以上的全域比較要用「最高級」。
 
 2．high 的最高級是 highest，且最高級前面必須加上定冠詞 the。
@@ -404,11 +432,9 @@ In our daily lives, we are always comparing things:
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期畢業考精選題】　An elephant is much ______ than a sheep, but a blue whale is the ______ of all animals.
+**第 2 題**【基礎練習】　An elephant is much ______ than a sheep, but a blue whale is the ______ of all animals.
 
 **A.** bigger ; biggest  
 **B.** bigger ; largest  
@@ -423,6 +449,7 @@ In our daily lives, we are always comparing things:
 🔍 **【審題關鍵與破題思考】**：審題關鍵：子音組合拼讀規則：字母組合「ph」固定發 /f/ 音（如 dolphin, photo, elephant）。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．第一空格後有 than，表示大象與羊兩者比較，要用比較級 bigger。
 
 2．第二空格前有 the，後有 "of all animals"，表示全體三者以上比較，要用最高級 largest。
@@ -435,7 +462,7 @@ In our daily lives, we are always comparing things:
 
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級下學期期末考精選題】　This science experiment is ______ than the one we did last week. It needs more time and patience.
+**第 3 題**【基礎練習】　This science experiment is ______ than the one we did last week. It needs more time and patience.
 
 **A.** more difficult  
 **B.** difficult  
@@ -447,20 +474,17 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** A. more difficult
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．後方有 than，需用比較級。
 
 2．difficult 是三個音節的長單詞，比較級規則為在前面加上 more，即 "more difficult"。
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期畢業考精選題】　下列哪一組形容詞的「原級 ➔ 比較級 ➔ 最高級」不規則變化「完全正確」？
+**第 4 題**【基礎練習】　下列哪一組形容詞的「原級 ➔ 比較級 ➔ 最高級」不規則變化「完全正確」？
 
 **A.** good ➔ gooder ➔ goodest  
 **B.** bad ➔ worse ➔ worst  
@@ -472,9 +496,8 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** B. bad ➔ worse ➔ worst
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．bad 的不規則變化為：bad ➔ worse ➔ worst，B 完全正確。
 
 2．A 正確應為 good ➔ better ➔ best。
@@ -485,51 +508,408 @@ In our daily lives, we are always comparing things:
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 5 題**【多步驟推導與跨觀念綜合題】　Mount Everest (珠穆朗瑪峰) is the ______ mountain in the world.
+## 🧪 段考題型實戰（先作答，再看步驟）
 
-**A.** high  
-**B.** higher  
-**C.** highest  
-**D.** most high
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **比較級** | 比較級變化和 than | 5、6、7、8 |
+| **最高級** | the + 最高級 | 9、10、11、12 |
+| **圖表判讀** | 由表格造句 | 13、14、15、16、17、18、19 |
+
+**第 5 題**【選擇・課綱】　An elephant is ______ than a horse.
+
+**A.** big  
+**B.** bigger  
+**C.** biggest  
+**D.** the biggest
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. highest
+✅ **正確答案** B. bigger
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
+🔍 **審題關鍵**：than。
 
-📐 **【詳盡解題步驟與算理推導】**：
-單音節形容詞 high，在三者以上比較時最高級加 -est，前面搭配 the：the highest mountain。
+📐 **解題步驟**：
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+1. than 前用比較級。
+2. big 要重複 g 再加 er。
+
+⚠️ **易錯提醒**：biger 拼錯。
+
+📖 **回課文複習**：本頁「比較級和最高級規則」。
 
 </details>
 
-**第 6 題**【核心觀念與定義辨析題】　An elephant is much ______ than a dog.
+**第 6 題**【選擇・課綱】　This book is ______ interesting than that one.
 
-**A.** heavier  
-**B.** heavy  
+**A.** more  
+**B.** most  
+**C.** much  
+**D.** very
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. more
+
+🔍 **審題關鍵**：長字加 more。
+
+📐 **解題步驟**：
+
+1. interesting 是長字。
+
+⚠️ **易錯提醒**：不能加 er。
+
+📖 **回課文複習**：本頁「比較級和最高級規則」。
+
+</details>
+
+**第 7 題**【填充・課綱】　Write the comparative: happy → ______, nice → ______, good → ______.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** happier; nicer; better
+
+🔍 **審題關鍵**：變化不同。
+
+📐 **解題步驟**：
+
+1. y 改 i 加 er。
+2. nice 加 r。
+3. good 不規則。
+
+⚠️ **易錯提醒**：不能寫 gooder。
+
+📖 **回課文複習**：本頁「比較級和最高級規則」。
+
+</details>
+
+**第 8 題**【選擇・課綱】　My bag is much ______ than yours.
+
+**A.** heavy  
+**B.** heavier  
 **C.** heaviest  
-**D.** more heavy
+**D.** most heavy
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. heavier
+✅ **正確答案** B. heavier
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：子音組合拼讀規則：字母組合「ph」固定發 /f/ 音（如 dolphin, photo, elephant）。
+🔍 **審題關鍵**：much 加強比較級。
 
-📐 **【詳盡解題步驟與算理推導】**：
-heavy 字尾為子音 + y，去 y 加 ier 變成 heavier；比較級前可加 much 強調程度「重得多」。
+📐 **解題步驟**：
 
-⚠️ **【易錯防雷與陷阱剖析】**：拼讀規則防雷：ph 視為單一子音音素 /f/，切勿拆開讀成 /p/ 或 /h/。
+1. much + 比較級。
+2. y 改 i。
+
+⚠️ **易錯提醒**：very 才接原級。
+
+📖 **回課文複習**：本頁「比較句怎麼造」。
 
 </details>
+
+**第 9 題**【選擇・課綱】　Mount Everest is ______ mountain in the world.
+
+**A.** tall  
+**B.** taller  
+**C.** the tallest  
+**D.** tallest
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. the tallest
+
+🔍 **審題關鍵**：in the world。
+
+📐 **解題步驟**：
+
+1. 三者以上比較用最高級。
+2. 前面要有 the。
+
+⚠️ **易錯提醒**：不要漏 the。
+
+📖 **回課文複習**：本頁「比較級和最高級規則」。
+
+</details>
+
+**第 10 題**【選擇・課綱】　She is the ______ student in the class.
+
+**A.** good  
+**B.** better  
+**C.** best  
+**D.** most good
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. best
+
+🔍 **審題關鍵**：不規則。
+
+📐 **解題步驟**：
+
+1. good 的最高級是 best。
+
+⚠️ **易錯提醒**：most good 不存在。
+
+📖 **回課文複習**：本頁「比較級和最高級規則」。
+
+</details>
+
+**第 11 題**【選擇・課綱】　This is the ______ movie I have seen.
+
+**A.** bad  
+**B.** worse  
+**C.** worst  
+**D.** baddest
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. worst
+
+🔍 **審題關鍵**：不規則。
+
+📐 **解題步驟**：
+
+1. bad → worse → worst。
+
+⚠️ **易錯提醒**：baddest 不是標準用法。
+
+📖 **回課文複習**：本頁「比較級和最高級規則」。
+
+</details>
+
+**第 12 題**【選擇・課綱】　Which sentence is correct?
+
+**A.** Tom is the tallest than Ben.  
+**B.** Tom is taller than Ben.  
+**C.** Tom is more tall than Ben.  
+**D.** Tom taller is Ben.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Tom is taller than Ben.
+
+🔍 **審題關鍵**：than 配比較級。
+
+📐 **解題步驟**：
+
+1. tall 是短字。
+2. 比較兩人用 taller than。
+
+⚠️ **易錯提醒**：tallest 不和 than 一起。
+
+📖 **回課文複習**：本頁「比較句怎麼造」。
+
+</details>
+
+**第 13 題**【閱讀・課綱】　Table: Ann 12 years old, 150 cm. Bo 11 years old, 155 cm. Cal 13 years old, 148 cm. (1) Who is the tallest? (2) Who is the youngest? (3) Is Cal older than Ann?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) Bo. (2) Bo. (3) Yes, he is.
+
+🔍 **審題關鍵**：比較數字。
+
+📐 **解題步驟**：
+
+1. 身高最大是 155。
+2. 年齡最小是 11。
+3. 13 歲大於 12 歲。
+
+⚠️ **易錯提醒**：不要只看名字順序。
+
+📖 **回課文複習**：本頁「讀比較圖表」。
+
+</details>
+
+**第 14 題**【選擇・課綱】　A bike costs NT$3,000. A skateboard costs NT$1,500. Which sentence is true?
+
+**A.** The bike is more expensive.  
+**B.** The skateboard is more expensive.  
+**C.** They cost the same.  
+**D.** The bike is cheapest.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. The bike is more expensive.
+
+🔍 **審題關鍵**：比錢。
+
+📐 **解題步驟**：
+
+1. 3,000 大於 1,500。
+
+⚠️ **易錯提醒**：cheapest 用於三者以上。
+
+📖 **回課文複習**：本頁「比較句怎麼造」。
+
+</details>
+
+**第 15 題**【選擇・課綱】　Tom is 150 cm. Ben is 150 cm. Tom is ______ Ben.
+
+**A.** taller than  
+**B.** as tall as  
+**C.** the tallest  
+**D.** shorter than
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. as tall as
+
+🔍 **審題關鍵**：一樣高。
+
+📐 **解題步驟**：
+
+1. 身高相同用 as + 原級 + as。
+
+⚠️ **易錯提醒**：as 後面不用比較級。
+
+📖 **回課文複習**：本頁「比較句怎麼造」。
+
+</details>
+
+**第 16 題**【寫作・課綱】　Write two sentences comparing two animals.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: A tiger is bigger than a cat. A cat is cuter than a tiger.
+
+🔍 **審題關鍵**：用 than。
+
+📐 **解題步驟**：
+
+1. 選兩種動物。
+2. 用比較級寫。
+
+⚠️ **易錯提醒**：比較級要配 than。
+
+📖 **回課文複習**：本頁「比較句怎麼造」。
+
+</details>
+
+**第 17 題**【閱讀・課綱】　Read: “The Nile is one of the longest rivers in the world. The Pacific is the largest ocean. Asia is the biggest continent.” What is the largest ocean?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** The Pacific.
+
+🔍 **審題關鍵**：Find ocean.
+
+📐 **解題步驟**：
+
+1. 第二句回答問題。
+
+⚠️ **易錯提醒**：continent 是洲。
+
+📖 **回課文複習**：知識點「世界之最」。
+
+</details>
+
+**第 18 題**【重組・參考東光國小112下英語】　Unscramble: than / My / is / your / younger / sister / brother / .
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** My sister is younger than your brother.
+
+🔍 **審題關鍵**：than 連接兩者。
+
+📐 **解題步驟**：
+
+1. 主詞 My sister。
+2. is younger than。
+3. your brother。
+
+⚠️ **易錯提醒**：也可造成 My brother...，要合語意。
+
+📖 **回課文複習**：本頁「比較句怎麼造」。
+
+</details>
+
+**第 19 題**【選擇・課綱】　Which word group is correct?
+
+**A.** thin – thiner – thinest  
+**B.** thin – thinner – thinnest  
+**C.** thin – more thin – most thin  
+**D.** thin – thin – thin
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. thin – thinner – thinnest
+
+🔍 **審題關鍵**：短母音重複字尾。
+
+📐 **解題步驟**：
+
+1. thin 字尾 n 要重複。
+
+⚠️ **易錯提醒**：同規則：big、hot、fat。
+
+📖 **回課文複習**：本頁「比較級和最高級規則」。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 5 題（比較級變化和 than）：biger 拼錯。
+- 第 6 題（比較級變化和 than）：不能加 er。
+- 第 7 題（比較級變化和 than）：不能寫 gooder。
+- 第 8 題（比較級變化和 than）：very 才接原級。
+- 第 9 題（the + 最高級）：不要漏 the。
+- 第 10 題（the + 最高級）：most good 不存在。
+- 第 11 題（the + 最高級）：baddest 不是標準用法。
+- 第 12 題（the + 最高級）：tallest 不和 than 一起。
+- 第 13 題（由表格造句）：不要只看名字順序。
+- 第 14 題（由表格造句）：cheapest 用於三者以上。
+- 第 15 題（由表格造句）：as 後面不用比較級。
+- 第 16 題（由表格造句）：比較級要配 than。
+- 第 17 題（由表格造句）：continent 是洲。
+- 第 18 題（由表格造句）：也可造成 My brother...，要合語意。
+- 第 19 題（由表格造句）：同規則：big、hot、fat。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 5 | B. bigger | 本頁「比較級和最高級規則」。 |
+| 6 | A. more | 本頁「比較級和最高級規則」。 |
+| 7 | happier; nicer; better | 本頁「比較級和最高級規則」。 |
+| 8 | B. heavier | 本頁「比較句怎麼造」。 |
+| 9 | C. the tallest | 本頁「比較級和最高級規則」。 |
+| 10 | C. best | 本頁「比較級和最高級規則」。 |
+| 11 | C. worst | 本頁「比較級和最高級規則」。 |
+| 12 | B. Tom is taller than Ben. | 本頁「比較句怎麼造」。 |
+| 13 | (1) Bo. (2) Bo. (3) Yes, he is. | 本頁「讀比較圖表」。 |
+| 14 | A. The bike is more expensive. | 本頁「比較句怎麼造」。 |
+| 15 | B. as tall as | 本頁「比較句怎麼造」。 |
+| 16 | Example: A tiger is bigger than a cat. A cat is cuter than a tiger. | 本頁「比較句怎麼造」。 |
+| 17 | The Pacific. | 知識點「世界之最」。 |
+| 18 | My sister is younger than your brother. | 本頁「比較句怎麼造」。 |
+| 19 | B. thin – thinner – thinnest | 本頁「比較級和最高級規則」。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 

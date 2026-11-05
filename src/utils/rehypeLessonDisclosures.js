@@ -19,7 +19,7 @@ export default function rehypeLessonDisclosures() {
               stack.at(-1).push({ type: 'element', tagName: 'summary', properties: {}, children: [{ type: 'text', value: token.slice(9, -10) }] });
             }
           }
-        } else if (child.type === 'raw' && child.value.trim() === '<!-- learning-practice-v1 -->') {
+        } else if (child.type === 'raw' && /^<!--[^>]*-->$/.test(child.value.trim())) {
           continue;
         } else {
           visit(child);

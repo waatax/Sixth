@@ -247,7 +247,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 **🚀 未來世界新職業：2035 年你可能會應徵的夢幻工作！**
 當你從大學畢業時，世界上超過一半的工作可能是現在根本還沒發明的！牛津大學與世界經濟論壇 (WEF) 預測了未來的超級熱門新職業：
@@ -267,26 +267,18 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-A1）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-A1。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考未來計畫與夢想職業（What do you want to be in the future? I want to be a doctor.）。
-- 📘 **南一版出題特色**：側重 want to be 與 would like to be 句型後接職業名詞加不定冠詞 a/an（an engineer, a pilot）。
-- 📙 **翰林版出題特色**：側重未來式句型（will + 原形動詞 與 be going to + 原形動詞）之肯定、否定與疑問句。
+- 📗 **康軒版可留意**：常考未來計畫與夢想職業（What do you want to be in the future? I want to be a doctor.）。
+- 📘 **南一版可留意**：側重 want to be 與 would like to be 句型後接職業名詞加不定冠詞 a/an（an engineer, a pilot）。
+- 📙 **翰林版可留意**：側重未來式句型（will + 原形動詞 與 be going to + 原形動詞）之肯定、否定與疑問句。
 - ⚡ **段考 5 秒破題口訣**：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
 - 🏷️ **題幹高頻熱門關鍵字**：Future plans, will / be going to, Dream jobs, want to be a/an
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -312,7 +304,6 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：will ＋ 原形；am/is/are going to ＋ 原形。
 - 🌱 **生活例子**：It's cold. I will close the window.（臨時決定）/ I am going to visit my grandma this weekend.（已經計畫）
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：will ＋ 原形；am/is/are going to ＋ 原形。。解題時切記：be going to 的 be 要配合主詞：I am、He is、They are。
 
 **先想想看**：遮住下面的說明，用自己的話說說「未來式：will 與 be going to」是什麼意思，再想一個你身邊的例子。
 
@@ -331,7 +322,6 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：未來時間詞 → will 或 be going to。
 - 🌱 **生活例子**：tomorrow（明天）、next week（下週）、this weekend（這個週末）、in the future（將來）。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：未來時間詞 → will 或 be going to。。解題時切記：this weekend 可能是未來或現在，要看前後文判斷。
 
 **先想想看**：遮住下面的說明，用自己的話說說「未來時間詞」是什麼意思，再想一個你身邊的例子。
 
@@ -350,7 +340,6 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：母音開頭的職業用 an（an engineer、an artist）。
 - 🌱 **生活例子**：I want to be a teacher. / I want to be an engineer.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：母音開頭的職業用 an（an engineer、an artist）。。解題時切記：要說 I want to be a doctor，不能省略 be。
 
 **先想想看**：遮住下面的說明，用自己的話說說「談論夢想的職業」是什麼意思，再想一個你身邊的例子。
 
@@ -384,11 +373,41 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### 未來式兩種句型
+
+- **be going to + 原形**：I am going to visit my aunt tomorrow. 已有計畫。
+- **will + 原形**：It will rain tomorrow. 預測或當下決定。
+
+否定：I’m not going to swim. / He won’t go.
+
+問句：Are you going to study? Yes, I am. / Will he come? Yes, he will.
+
+### 未來時間詞
+
+tomorrow、next week、next month、this weekend、in the future、someday。
+
+看到這些詞，動詞就要用未來式。問「長大想做什麼」：What do you want to be? I want to be a pilot. 不要漏掉 a / an。an 用於母音開頭：an engineer, an artist。
+
+### 職業和工作內容
+
+| 職業 | 工作 |
+| :--- | :--- |
+| doctor / nurse | help sick people |
+| teacher | teach students |
+| pilot | fly airplanes |
+| chef / cook | cook food |
+| vet | take care of animals |
+| police officer | keep people safe |
+| firefighter | put out fires |
+| farmer | grow food |
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期期末考精選題】　A: "What are you going to ______ during the upcoming summer vacation?"  B: "My family and I are going to ______ Kenting National Park for three days."
+**第 1 題**【基礎練習】　A: "What are you going to ______ during the upcoming summer vacation?"  B: "My family and I are going to ______ Kenting National Park for three days."
 
 **A.** do ; visit  
 **B.** doing ; visiting  
@@ -403,6 +422,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．兩處句型皆為 "be going to + 原形動詞"。
 
 2．第一空格有 "are you going to"，後面必須接原形動詞 do。
@@ -413,11 +433,9 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期畢業考精選題】　Look at those heavy black clouds gathering in the sky and feel the strong wind! It ______ rain very soon.
+**第 2 題**【基礎練習】　Look at those heavy black clouds gathering in the sky and feel the strong wind! It ______ rain very soon.
 
 **A.** is going to  
 **B.** was  
@@ -429,9 +447,8 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ✅ **正確答案** A. is going to
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 7: Future Plans, Weather Forecast & Vacation Destinations」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．題幹給出了明確的當前客觀跡象："Look at those heavy black clouds"（看那些密布的烏雲）。
 
 2．在英語文法中，根據眼前的明顯跡象推斷某事即將發生，標準句型使用 "be going to + V"。
@@ -440,11 +457,9 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級下學期期末考精選題】　Amy loves taking care of hurt dogs, cats, and birds. Her biggest dream is to become a ______ in the future.
+**第 3 題**【基礎練習】　Amy loves taking care of hurt dogs, cats, and birds. Her biggest dream is to become a ______ in the future.
 
 **A.** pilot  
 **B.** veterinarian (vet)  
@@ -459,17 +474,16 @@ Graduation is just around the corner! (畢業就在眼前了！)
 🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．題幹提示 Amy 喜歡照顧受傷的動物（dogs, cats, and birds）。
 
 2．專門為動物看病的獸醫稱為 "veterinarian"，日常簡稱為 "vet"。
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期畢業考精選題】　下列四個關於未來時態與天氣預報的英文句子中，哪一個文法結構「完全正確」？
+**第 4 題**【基礎練習】　下列四個關於未來時態與天氣預報的英文句子中，哪一個文法結構「完全正確」？
 
 **A.** What will the weather be like tomorrow?  
 **B.** How will the weather be like tomorrow?  
@@ -481,9 +495,8 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ✅ **正確答案** A. What will the weather be like tomorrow?
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 7: Future Plans, Weather Forecast & Vacation Destinations」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．A 選項 "What will the weather be like...?" 結構完全正確。
 
 2．B 選項 How 不可與 like 連用，應改為 "How will the weather be...?"。
@@ -493,8 +506,6 @@ Graduation is just around the corner! (畢業就在眼前了！)
 4．D 選項 be going to 後面動詞必須用原形 help，不能加 -ing。
 
 故正確答案為 A。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -513,32 +524,384 @@ Graduation is just around the corner! (畢業就在眼前了！)
 🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-be going to 後面必須接「原形動詞」：What are you going to do...?
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+be going to 後面必須接「原形動詞」：What are you going to do...?
 
 </details>
 
-**第 6 題**【核心觀念與定義辨析題】　Look at those dark clouds in the sky! It ______ rain soon.
+## 🧪 段考題型實戰（先作答，再看步驟）
 
-**A.** went to  
-**B.** was  
-**C.** is going to  
-**D.** did
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **未來式** | will 和 be going to | 6、7、8、9、10 |
+| **時態判別** | 時間詞線索 | 11、12 |
+| **職業應用** | 職業與工作配對 | 13、14、15、16、17、18、19 |
+
+**第 6 題**【選擇・課綱】　I ______ going to visit my grandma next Sunday.
+
+**A.** am  
+**B.** is  
+**C.** are  
+**D.** will
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. is going to
+✅ **正確答案** A. am
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 7: Future Plans, Weather Forecast & Vacation Destinations」進行條理推導。
+🔍 **審題關鍵**：I + am。
 
-📐 **【詳盡解題步驟與算理推導】**：
-看見天空烏雲密布代表即將發生的必然天氣，道地英語優先使用 is going to rain。
+📐 **解題步驟**：
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+1. I am going to。
+
+⚠️ **易錯提醒**：will 不能和 going to 連用。
+
+📖 **回課文複習**：本頁「未來式兩種句型」。
 
 </details>
+
+**第 7 題**【選擇・課綱】　She will ______ a new bike next year.
+
+**A.** buy  
+**B.** buys  
+**C.** bought  
+**D.** buying
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. buy
+
+🔍 **審題關鍵**：will + 原形。
+
+📐 **解題步驟**：
+
+1. will 後面用原形。
+
+⚠️ **易錯提醒**：第三人稱不加 s。
+
+📖 **回課文複習**：本頁「未來式兩種句型」。
+
+</details>
+
+**第 8 題**【選擇・課綱】　A: Are you going to play basketball tomorrow? B: ______
+
+**A.** Yes, I am.  
+**B.** Yes, I do.  
+**C.** Yes, I did.  
+**D.** Yes, I will be.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Yes, I am.
+
+🔍 **審題關鍵**：Are 問，am 答。
+
+📐 **解題步驟**：
+
+1. Be 動詞問句用 be 回答。
+
+⚠️ **易錯提醒**：did 是過去。
+
+📖 **回課文複習**：本頁「未來式兩種句型」。
+
+</details>
+
+**第 9 題**【選擇・課綱】　Look at those dark clouds. It ______ rain soon.
+
+**A.** is going to  
+**B.** was  
+**C.** did  
+**D.** does
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. is going to
+
+🔍 **審題關鍵**：看到徵兆。
+
+📐 **解題步驟**：
+
+1. 有明確徵兆，常用 be going to。
+
+⚠️ **易錯提醒**：不要用過去式。
+
+📖 **回課文複習**：本頁「未來式兩種句型」。
+
+</details>
+
+**第 10 題**【選擇・課綱】　He ______ go to the party tomorrow. He’s sick.
+
+**A.** won’t  
+**B.** don’t  
+**C.** isn’t  
+**D.** didn’t
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. won’t
+
+🔍 **審題關鍵**：will not。
+
+📐 **解題步驟**：
+
+1. tomorrow 是未來。
+2. will not 縮寫 won’t。
+
+⚠️ **易錯提醒**：didn’t 是過去。
+
+📖 **回課文複習**：本頁「未來式兩種句型」。
+
+</details>
+
+**第 11 題**【選擇・參考東光國小112下英語】　Which sentence is correct?
+
+**A.** I played tennis tomorrow.  
+**B.** I will play tennis tomorrow.  
+**C.** I play tennis yesterday.  
+**D.** I will played tennis.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. I will play tennis tomorrow.
+
+🔍 **審題關鍵**：時間詞。
+
+📐 **解題步驟**：
+
+1. tomorrow 用未來。
+
+⚠️ **易錯提醒**：will 後面只能原形。
+
+📖 **回課文複習**：知識點「未來時間詞」。
+
+</details>
+
+**第 12 題**【填充・課綱】　Fill in with past, present or future: (1) I read every day. (2) I read last night. (3) I will read tonight.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) present; (2) past; (3) future
+
+🔍 **審題關鍵**：看時間詞。
+
+📐 **解題步驟**：
+
+1. every day 現在。
+2. last night 過去。
+3. will 未來。
+
+⚠️ **易錯提醒**：read 的過去式同形不同音。
+
+📖 **回課文複習**：知識點「未來時間詞」。
+
+</details>
+
+**第 13 題**【配對・課綱】　Match: (1) vet (2) pilot (3) firefighter (4) chef. A. flies airplanes B. takes care of animals C. cooks food D. puts out fires
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) B; (2) A; (3) D; (4) C
+
+🔍 **審題關鍵**：想工作內容。
+
+📐 **解題步驟**：
+
+1. vet 是獸醫。
+2. pilot 是飛行員。
+3. firefighter 是消防員。
+4. chef 是廚師。
+
+⚠️ **易錯提醒**：vet 不是 veteran。
+
+📖 **回課文複習**：本頁「職業和工作內容」。
+
+</details>
+
+**第 14 題**【選擇・課綱】　I want to be ______ engineer.
+
+**A.** a  
+**B.** an  
+**C.** the  
+**D.** 不用
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. an
+
+🔍 **審題關鍵**：engineer 母音開頭。
+
+📐 **解題步驟**：
+
+1. 母音音開頭用 an。
+
+⚠️ **易錯提醒**：看發音，不是看字母。
+
+📖 **回課文複習**：本頁「未來時間詞」。
+
+</details>
+
+**第 15 題**【選擇・課綱】　Who takes care of sick people in the hospital?
+
+**A.** Nurse  
+**B.** Pilot  
+**C.** Farmer  
+**D.** Cook
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Nurse
+
+🔍 **審題關鍵**：hospital。
+
+📐 **解題步驟**：
+
+1. 護理師在醫院照顧病人。
+
+⚠️ **易錯提醒**：不要只看單字長相。
+
+📖 **回課文複習**：本頁「職業和工作內容」。
+
+</details>
+
+**第 16 題**【寫作・課綱】　Write two sentences about your dream job.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: I want to be a vet. I will take care of animals.
+
+🔍 **審題關鍵**：want to be + will。
+
+📐 **解題步驟**：
+
+1. 用 want to be。
+2. 用 will 寫未來會做的事。
+
+⚠️ **易錯提醒**：要有 a / an。
+
+📖 **回課文複習**：知識點「I want to be a / an」。
+
+</details>
+
+**第 17 題**【閱讀・課綱】　Read: “Mia loves drawing. She is going to take art classes this summer. She wants to be an artist.” (1) What is Mia going to do? (2) What does she want to be?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) She is going to take art classes. (2) An artist.
+
+🔍 **審題關鍵**：Find going to.
+
+📐 **解題步驟**：
+
+1. 第二句回答(1)。
+2. 第三句回答(2)。
+
+⚠️ **易錯提醒**：artist 前用 an。
+
+📖 **回課文複習**：本頁「未來式兩種句型」。
+
+</details>
+
+**第 18 題**【重組・參考東光國小112下英語】　Unscramble: going / What / you / to / are / do / ? / tomorrow
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** What are you going to do tomorrow?
+
+🔍 **審題關鍵**：問句句型。
+
+📐 **解題步驟**：
+
+1. What 放句首。
+2. are you going to。
+3. do tomorrow。
+
+⚠️ **易錯提醒**：do 不能少。
+
+📖 **回課文複習**：本頁「未來式兩種句型」。
+
+</details>
+
+**第 19 題**【選擇・課綱】　Which one means「將來」?
+
+**A.** yesterday  
+**B.** in the future  
+**C.** last year  
+**D.** every day
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. in the future
+
+🔍 **審題關鍵**：future 是未來。
+
+📐 **解題步驟**：
+
+1. in the future 表將來。
+
+⚠️ **易錯提醒**：其他是過去或習慣。
+
+📖 **回課文複習**：本頁「未來時間詞」。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 6 題（will 和 be going to）：will 不能和 going to 連用。
+- 第 7 題（will 和 be going to）：第三人稱不加 s。
+- 第 8 題（will 和 be going to）：did 是過去。
+- 第 9 題（will 和 be going to）：不要用過去式。
+- 第 10 題（will 和 be going to）：didn’t 是過去。
+- 第 11 題（時間詞線索）：will 後面只能原形。
+- 第 12 題（時間詞線索）：read 的過去式同形不同音。
+- 第 13 題（職業與工作配對）：vet 不是 veteran。
+- 第 14 題（職業與工作配對）：看發音，不是看字母。
+- 第 15 題（職業與工作配對）：不要只看單字長相。
+- 第 16 題（職業與工作配對）：要有 a / an。
+- 第 17 題（職業與工作配對）：artist 前用 an。
+- 第 18 題（職業與工作配對）：do 不能少。
+- 第 19 題（職業與工作配對）：其他是過去或習慣。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 6 | A. am | 本頁「未來式兩種句型」。 |
+| 7 | A. buy | 本頁「未來式兩種句型」。 |
+| 8 | A. Yes, I am. | 本頁「未來式兩種句型」。 |
+| 9 | A. is going to | 本頁「未來式兩種句型」。 |
+| 10 | A. won’t | 本頁「未來式兩種句型」。 |
+| 11 | B. I will play tennis tomorrow. | 知識點「未來時間詞」。 |
+| 12 | (1) present; (2) past; (3) future | 知識點「未來時間詞」。 |
+| 13 | (1) B; (2) A; (3) D; (4) C | 本頁「職業和工作內容」。 |
+| 14 | B. an | 本頁「未來時間詞」。 |
+| 15 | A. Nurse | 本頁「職業和工作內容」。 |
+| 16 | Example: I want to be a vet. I will take care of animals. | 知識點「I want to be a / an」。 |
+| 17 | (1) She is going to take art classes. (2) An artist. | 本頁「未來式兩種句型」。 |
+| 18 | What are you going to do tomorrow? | 本頁「未來式兩種句型」。 |
+| 19 | B. in the future | 本頁「未來時間詞」。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 

@@ -725,7 +725,7 @@ const MockExamPage = () => {
                     }}
                   >
                     <Flame size={14} />
-                    <span>{examQuestions[currentIdx].challengeBadge || '🔥 單元模擬挑戰・壓軸真題'}</span>
+                    <span>{examQuestions[currentIdx].challengeBadge || '🔥 單元模擬挑戰・壓軸題'}</span>
                   </span>
                 </div>
               )}

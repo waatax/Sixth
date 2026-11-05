@@ -823,7 +823,7 @@ const QuizPage = () => {
               }}
             >
               <Flame size={14} />
-              <span>{question.challengeBadge || '🔥 單元模擬挑戰・壓軸真題'}</span>
+              <span>{question.challengeBadge || '🔥 單元模擬挑戰・壓軸題'}</span>
             </span>
           </div>
         )}

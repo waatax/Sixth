@@ -383,8 +383,8 @@ const totalWalkthroughCount = Object.values(examNotesMap).reduce((acc, n) => acc
 
 results.push({
   layer: '段考講義 48 組合檢驗',
-  target: `8科 × 2學期 × 3範圍 (48 份講義、${totalWalkthroughCount} 道真題步驟詳解)`,
-  method: '無空缺檢驗 + 考點向量圖解 + 審題雷達表格 + 步驟級真題解答',
+  target: `8科 × 2學期 × 3範圍 (48 份講義、${totalWalkthroughCount} 道練習題步驟詳解)`,
+  method: '無空缺檢驗 + 考點向量圖解 + 審題雷達表格 + 步驟級解答',
   result: validHandoutCombos === totalHandoutCombos ? `${validHandoutCombos} / ${totalHandoutCombos} 份講義 (100% 完美齊備)` : `${validHandoutCombos} / ${totalHandoutCombos} 份通過`
 });
 

@@ -340,7 +340,7 @@
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 👣 **數位足跡 (Digital Footprint) —— 網路世界裡的「永久過去式」！**  
 我們學過去式是為了記錄生活中的故事。但在今日的網際網路中，你的每一次點閱、發文、按讚與搜尋，都會被伺服器記錄為「**數位足跡 (Digital Footprint)**」。
@@ -354,26 +354,18 @@
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-B1）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-B1。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考過去假期旅遊故事（Where did you go? I went to...）、規則動詞加 -ed 讀音 (/t/, /d/, /ɪd/)。
-- 📘 **南一版出題特色**：側重助動詞 did 出現時，後方主要動詞必須「強制打回原形」的大考第一殺手陷阱。
-- 📙 **翰林版出題特色**：側重高頻不規則過去式動詞三態變化（go-went, see-saw, eat-ate, have-had, buy-bought, take-took）。
+- 📗 **康軒版可留意**：常考過去假期旅遊故事（Where did you go? I went to...）、規則動詞加 -ed 讀音 (/t/, /d/, /ɪd/)。
+- 📘 **南一版可留意**：側重助動詞 did 出現時，後方主要動詞必須「強制打回原形」的大考第一殺手陷阱。
+- 📙 **翰林版可留意**：側重高頻不規則過去式動詞三態變化（go-went, see-saw, eat-ate, have-had, buy-bought, take-took）。
 - ⚡ **段考 5 秒破題口訣**：過去時間配過去式動詞；助動詞 did 一出現，主要動詞一律打回原形！
 - 🏷️ **題幹高頻熱門關鍵字**：Past tense, irregular verbs, Did you...? yesterday, last week, ago
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -399,7 +391,6 @@
 
 - 🧠 **一句話記住**：看到過去時間詞 → 動詞用過去式。
 - 🌱 **生活例子**：I played basketball yesterday. / We went to the zoo last Sunday.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：看到過去時間詞 → 動詞用過去式。。解題時切記：同一句裡如果有 yesterday，動詞就不能用現在式。
 
 **先想想看**：遮住下面的說明，用自己的話說說「過去式：說已經發生的事」是什麼意思，再想一個你身邊的例子。
 
@@ -418,7 +409,6 @@
 
 - 🧠 **一句話記住**：規則加 -ed；不規則要背。
 - 🌱 **生活例子**：規則：play → played、watch → watched。不規則：go → went、see → saw、eat → ate、have → had。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：規則加 -ed；不規則要背。。解題時切記：go 的過去式是 went，不是 goed。
 
 **先想想看**：遮住下面的說明，用自己的話說說「規則與不規則動詞的過去式」是什麼意思，再想一個你身邊的例子。
 
@@ -437,7 +427,6 @@
 
 - 🧠 **一句話記住**：Did ＋ 主詞 ＋ 原形動詞？／ didn't ＋ 原形動詞。
 - 🌱 **生活例子**：Did you go to school yesterday? / I didn't see the movie.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：Did ＋ 主詞 ＋ 原形動詞？／ didn't ＋ 原形動詞。。解題時切記：不能說 Did you went…? 或 I didn't saw…。
 
 **先想想看**：遮住下面的說明，用自己的話說說「did 後面的動詞要用原形」是什麼意思，再想一個你身邊的例子。
 
@@ -471,11 +460,53 @@
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### was 和 were 的使用
+
+be 動詞的過去式：
+
+- I / he / she / it / 單數人名 → **was**
+- you / we / they / 複數 → **were**
+
+例：Peggy **was** at the train station. **Were** you at the movie theater? Yes, I **was**. / No, I **wasn’t**.
+
+問地點：Where **was** Emily yesterday? She **was** at the museum.
+
+### 一般動詞過去式三句型
+
+- 肯定：She **played** the piano yesterday.
+- 否定：She **didn’t play** the piano.
+- 疑問：**Did** she **play** the piano? Yes, she **did**. / No, she **didn’t**.
+- 問做什麼：What **did** you do yesterday? I **did** my homework.
+
+一旦出現 did 或 didn’t，後面動詞還原。
+
+### 不是過去式的陷阱
+
+看到 yesterday、last week、two days ago 用過去式。但 every day、usually 是現在式。
+
+常見不規則：go → went，have → had，do → did，see → saw，eat → ate，come → came，read → read，take → took，get → got。
+
+### 聽力常考子音群
+
+段考聽力常考起始子音群：tr、dr、gr、cr、st、sk、sp、sw、gl、pl。發音相近的要注意：
+
+- tr（train）和 dr（dress）
+- gl（glass）和 gr（grass）
+- st（stop）和 sp（spoon）
+
+聽的時候注意第二個音，並把單字放進句子裡練習。
+
+### 動詞過去式練習表
+
+watch → watched，listen → listened，clean → cleaned，bake → baked，study → studied，stop → stopped。字尾有 e 只加 d；子音加 y 要改 i 再加 ed；短母音子音結尾要重複字尾。
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期段考精選題】　Yesterday afternoon, Emily ______ a delicious chocolate cake for her mother's birthday party.
+**第 1 題**【基礎練習】　Yesterday afternoon, Emily ______ a delicious chocolate cake for her mother's birthday party.
 
 **A.** bake  
 **B.** bakes  
@@ -487,20 +518,17 @@
 
 ✅ **正確答案** C. baked
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．句子開頭有明確的過去時間副詞 "Yesterday afternoon"（昨天下午）。
 
 2．句子時態為過去簡單式，主要動詞 bake 字尾有 e，過去式直接加 -d 變成 baked。
 
 故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　A: "Did you ______ any sea turtles when you went snorkeling in Xiaoliuqiu last weekend?"  B: "Yes, I ______ three of them!"
+**第 2 題**【基礎練習】　A: "Did you ______ any sea turtles when you went snorkeling in Xiaoliuqiu last weekend?"  B: "Yes, I ______ three of them!"
 
 **A.** see ; saw  
 **B.** saw ; see  
@@ -512,9 +540,8 @@
 
 ✅ **正確答案** A. see ; saw
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．前句中有助動詞 Did，依照英語文法「助動詞後面一律接原形動詞」，故第一個空格必須填原形 see。
 
 2．答句是肯定句直述句，描述過去看見的事實，動詞要用過去式，see 的過去式是不規則動詞 saw。
@@ -523,11 +550,9 @@
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級上學期段考精選題】　Kevin: "Where ______ you go last night?"  Leo: "I ______ to the night market with my family."
+**第 3 題**【基礎練習】　Kevin: "Where ______ you go last night?"  Leo: "I ______ to the night market with my family."
 
 **A.** do ; go  
 **B.** did ; went  
@@ -542,6 +567,7 @@
 🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．時間副詞 "last night"（昨晚）指過去時間。
 
 2．問句主動詞是 go（一般動詞），疑問句必須用過去式助動詞 did 引導。
@@ -554,7 +580,7 @@
 
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期段考精選題】　The basketball players ______ very tired after the championship game yesterday, but they ______ extremely happy.
+**第 4 題**【基礎練習】　The basketball players ______ very tired after the championship game yesterday, but they ______ extremely happy.
 
 **A.** were ; were  
 **B.** was ; was  
@@ -569,6 +595,7 @@
 🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
 
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．時間副詞 yesterday 表過去時態。
 
 2．主詞 "The basketball players"（籃球員們）是複數名詞。
@@ -593,35 +620,369 @@
 
 ✅ **正確答案** D. went
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went to the zoo.
 
 ⚠️ **【易錯防雷與陷阱剖析】**：Did 後面動詞又寫成過去式：題目問 "Did you ______ (see) the movie?"，學生誤選 saw，正確必須選原形 see！
 
 </details>
 
-**第 6 題**【核心觀念與定義辨析題】　Yesterday, Emily ______ a delicious chocolate cake with her grandmother.
+## 🧪 段考題型實戰（先作答，再看步驟）
 
-**A.** bakes  
-**B.** baked  
-**C.** bake  
-**D.** baking
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **be 動詞過去式** | was、were 判斷 | 6、7、8、9 |
+| **一般動詞過去式** | Did 問句和動詞還原 | 10、11、12、13、14 |
+| **重組與閱讀** | 字序與文章理解 | 15、16、17、18 |
+
+**第 6 題**【選擇・參考東光國小112下英語】　______ you at the night market last Friday?
+
+**A.** Was  
+**B.** Were  
+**C.** Are  
+**D.** Did
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. baked
+✅ **正確答案** B. Were
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
+🔍 **審題關鍵**：you 配 were。
 
-📐 **【詳盡解題步驟與算理推導】**：
-時間副詞為「Yesterday（昨天）」，動詞應使用過去式；bake 字尾已有 e，直接加 d 變成 baked。
+📐 **解題步驟**：
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+1. last Friday 用過去式。
+2. you 的 be 動詞過去式是 were。
+
+⚠️ **易錯提醒**：are 是現在式。
+
+📖 **回課文複習**：本頁「was 和 were 的使用」。
 
 </details>
+
+**第 7 題**【選擇・參考東光國小112下英語】　______ was in Japan last week.
+
+**A.** We  
+**B.** They  
+**C.** Jenny  
+**D.** You
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. Jenny
+
+🔍 **審題關鍵**：was 配單數。
+
+📐 **解題步驟**：
+
+1. was 的主詞要單數。
+2. Jenny 是單數。
+
+⚠️ **易錯提醒**：反過來判斷主詞也是常見題。
+
+📖 **回課文複習**：本頁「was 和 were 的使用」。
+
+</details>
+
+**第 8 題**【選擇・參考東光國小112下英語】　A: Was Dora at the aquarium? B: ______
+
+**A.** Yes, she is.  
+**B.** Yes, she was.  
+**C.** No, I wasn’t.  
+**D.** No, she didn’t.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Yes, she was.
+
+🔍 **審題關鍵**：Was 問，was 答。
+
+📐 **解題步驟**：
+
+1. 主詞 Dora 是 she。
+2. 時態要和問句相同。
+
+⚠️ **易錯提醒**：is 時態不對。
+
+📖 **回課文複習**：本頁「was 和 were 的使用」。
+
+</details>
+
+**第 9 題**【選擇・參考東光國小112下英語】　A: Where was Owen last weekend? B: ______
+
+**A.** He is in Yilan.  
+**B.** He was in Yilan.  
+**C.** He was sleepy.  
+**D.** He went happy.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. He was in Yilan.
+
+🔍 **審題關鍵**：Where 問地點。
+
+📐 **解題步驟**：
+
+1. 要回答地點。
+2. 時態用過去式。
+
+⚠️ **易錯提醒**：He was sleepy 回答的是狀態。
+
+📖 **回課文複習**：本頁「was 和 were 的使用」。
+
+</details>
+
+**第 10 題**【選擇・參考東光國小112下英語】　A: What ______ your class do last Monday? B: We ______ a science project.
+
+**A.** do; did  
+**B.** do; do  
+**C.** did; did  
+**D.** did; do
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. did; did
+
+🔍 **審題關鍵**：兩個都是過去式。
+
+📐 **解題步驟**：
+
+1. 問過去做什麼，用 did。
+2. 回答 do 的過去式 did。
+
+⚠️ **易錯提醒**：第一個 did 是助動詞，第二個 did 是動詞。
+
+📖 **回課文複習**：本頁「一般動詞過去式三句型」。
+
+</details>
+
+**第 11 題**【選擇・參考東光國小112下英語】　A: ______ your uncle cook dinner last night? B: No, he ______.
+
+**A.** Did; don’t  
+**B.** Did; didn’t  
+**C.** Does; doesn’t  
+**D.** Was; wasn’t
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Did; didn’t
+
+🔍 **審題關鍵**：cook 是一般動詞。
+
+📐 **解題步驟**：
+
+1. 一般動詞過去式用 Did 問。
+2. 否定回答 didn’t。
+
+⚠️ **易錯提醒**：cook 不用 was。
+
+📖 **回課文複習**：本頁「一般動詞過去式三句型」。
+
+</details>
+
+**第 12 題**【選擇・課綱】　She didn’t ______ the movie last night.
+
+**A.** saw  
+**B.** see  
+**C.** sees  
+**D.** seeing
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. see
+
+🔍 **審題關鍵**：didn’t 後面還原。
+
+📐 **解題步驟**：
+
+1. 過去由 didn’t 表示。
+2. 動詞用原形 see。
+
+⚠️ **易錯提醒**：不要寫 didn’t saw。
+
+📖 **回課文複習**：知識點「did 後面的動詞要用原形」。
+
+</details>
+
+**第 13 題**【填充・參考東光國小112下英語】　Write the past tense: visit → ______, take → ______, go → ______, have → ______.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** visited; took; went; had
+
+🔍 **審題關鍵**：Regular and irregular.
+
+📐 **解題步驟**：
+
+1. visit 加 ed。
+2. take、go、have 都是不規則動詞。
+
+⚠️ **易錯提醒**：不能寫 goed 或 taked。
+
+📖 **回課文複習**：本頁「不是過去式的陷阱」。
+
+</details>
+
+**第 14 題**【選擇・參考東光國小112下英語】　A: Did Nora bake cookies last Sunday? B: ______
+
+**A.** No, she didn’t. She cleaned her room.  
+**B.** Yes, she cleaned her room.  
+**C.** No, she didn’t. She baked cookies.  
+**D.** Yes, she do.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. No, she didn’t. She cleaned her room.
+
+🔍 **審題關鍵**：前後要合理。
+
+📐 **解題步驟**：
+
+1. 否定後要接另外一件事。
+
+⚠️ **易錯提醒**：C 前後矛盾。
+
+📖 **回課文複習**：本頁「一般動詞過去式三句型」。
+
+</details>
+
+**第 15 題**【重組・參考東光國小112下英語】　Unscramble: last / the / . / Grandpa / hospital / was / week / in
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Grandpa was in the hospital last week.
+
+🔍 **審題關鍵**：主詞 + was + 地點 + 時間。
+
+📐 **解題步驟**：
+
+1. Grandpa was 開頭。
+2. in the hospital 地點。
+3. last week 放最後。
+
+⚠️ **易錯提醒**：時間通常放句尾。
+
+📖 **回課文複習**：本頁「was 和 were 的使用」。
+
+</details>
+
+**第 16 題**【重組・參考東光國小112下英語】　Unscramble: Where / Tom / last night / ? / was
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Where was Tom last night?
+
+🔍 **審題關鍵**：疑問詞放前面。
+
+📐 **解題步驟**：
+
+1. Where was + 主詞。
+2. 時間放句尾。
+
+⚠️ **易錯提醒**：問號不要漏。
+
+📖 **回課文複習**：本頁「was 和 were 的使用」。
+
+</details>
+
+**第 17 題**【閱讀・參考東光國小112下英語】　Read: “Ann: How was the concert? Bo: Lily was late, so we didn’t go. We went to a café and read comics.” (1) Did they see the concert? (2) Who was late?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) No, they didn’t. (2) Lily.
+
+🔍 **審題關鍵**：Find “didn’t go”.
+
+📐 **解題步驟**：
+
+1. didn’t go 表示沒去。
+2. Lily was late 直接提到。
+
+⚠️ **易錯提醒**：不要看到 concert 就答 Yes。
+
+📖 **回課文複習**：本頁「一般動詞過去式三句型」。
+
+</details>
+
+**第 18 題**【聽力字音・參考東光國小112下英語】　Say these words. Which pair starts with different sounds? (A) train – tree (B) grass – glass (C) stop – stay (D) swim – sweet
+
+**A.** train – tree  
+**B.** grass – glass  
+**C.** stop – stay  
+**D.** swim – sweet
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. grass – glass
+
+🔍 **審題關鍵**：gr 和 gl 不同。
+
+📐 **解題步驟**：
+
+1. train 和 tree 都是 tr。
+2. grass 是 gr，glass 是 gl。
+
+⚠️ **易錯提醒**：不要只看第一個字母。
+
+📖 **回課文複習**：本頁「聽力常考子音群」。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 6 題（was、were 判斷）：are 是現在式。
+- 第 7 題（was、were 判斷）：反過來判斷主詞也是常見題。
+- 第 8 題（was、were 判斷）：is 時態不對。
+- 第 9 題（was、were 判斷）：He was sleepy 回答的是狀態。
+- 第 10 題（Did 問句和動詞還原）：第一個 did 是助動詞，第二個 did 是動詞。
+- 第 11 題（Did 問句和動詞還原）：cook 不用 was。
+- 第 12 題（Did 問句和動詞還原）：不要寫 didn’t saw。
+- 第 13 題（Did 問句和動詞還原）：不能寫 goed 或 taked。
+- 第 14 題（Did 問句和動詞還原）：C 前後矛盾。
+- 第 15 題（字序與文章理解）：時間通常放句尾。
+- 第 16 題（字序與文章理解）：問號不要漏。
+- 第 17 題（字序與文章理解）：不要看到 concert 就答 Yes。
+- 第 18 題（字序與文章理解）：不要只看第一個字母。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 6 | B. Were | 本頁「was 和 were 的使用」。 |
+| 7 | C. Jenny | 本頁「was 和 were 的使用」。 |
+| 8 | B. Yes, she was. | 本頁「was 和 were 的使用」。 |
+| 9 | B. He was in Yilan. | 本頁「was 和 were 的使用」。 |
+| 10 | C. did; did | 本頁「一般動詞過去式三句型」。 |
+| 11 | B. Did; didn’t | 本頁「一般動詞過去式三句型」。 |
+| 12 | B. see | 知識點「did 後面的動詞要用原形」。 |
+| 13 | visited; took; went; had | 本頁「不是過去式的陷阱」。 |
+| 14 | A. No, she didn’t. She cleaned her room. | 本頁「一般動詞過去式三句型」。 |
+| 15 | Grandpa was in the hospital last week. | 本頁「was 和 were 的使用」。 |
+| 16 | Where was Tom last night? | 本頁「was 和 were 的使用」。 |
+| 17 | (1) No, they didn’t. (2) Lily. | 本頁「一般動詞過去式三句型」。 |
+| 18 | B. grass – glass | 本頁「聽力常考子音群」。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 

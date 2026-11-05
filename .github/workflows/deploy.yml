@@ -36,6 +36,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci
+      - name: Verify exam practice content
+        run: node scripts/verify-exam-practice.mjs
       - name: Verify study studio
         run: node scripts/verify-study-studio.mjs
       - name: Verify island content, equations and curriculum codes

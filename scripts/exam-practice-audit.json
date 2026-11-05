@@ -1,0 +1,581 @@
+{
+  "metric": "Non-whitespace characters. baselineCharacters is commit 391341b after removing template filler, duplicate and misplaced questions; rawBaselineCharacters is the untouched commit.",
+  "units": [
+    {
+      "unitId": "art-u1",
+      "rawBaselineCharacters": 17952,
+      "baselineCharacters": 16302,
+      "finalCharacters": 21258,
+      "growthPercent": 30.4,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "art-u2",
+      "rawBaselineCharacters": 16548,
+      "baselineCharacters": 14909,
+      "finalCharacters": 19563,
+      "growthPercent": 31.2,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "art-u3",
+      "rawBaselineCharacters": 16419,
+      "baselineCharacters": 14474,
+      "finalCharacters": 18819,
+      "growthPercent": 30,
+      "questions": 18,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "art-u4",
+      "rawBaselineCharacters": 16092,
+      "baselineCharacters": 13954,
+      "finalCharacters": 18348,
+      "growthPercent": 31.5,
+      "questions": 18,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "art-u5",
+      "rawBaselineCharacters": 14537,
+      "baselineCharacters": 12626,
+      "finalCharacters": 17318,
+      "growthPercent": 37.2,
+      "questions": 19,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "art-u6",
+      "rawBaselineCharacters": 13869,
+      "baselineCharacters": 12220,
+      "finalCharacters": 17094,
+      "growthPercent": 39.9,
+      "questions": 21,
+      "newQuestions": 15
+    },
+    {
+      "unitId": "comp-u1",
+      "rawBaselineCharacters": 16531,
+      "baselineCharacters": 14938,
+      "finalCharacters": 19427,
+      "growthPercent": 30.1,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "comp-u2",
+      "rawBaselineCharacters": 16427,
+      "baselineCharacters": 14780,
+      "finalCharacters": 19436,
+      "growthPercent": 31.5,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "comp-u3",
+      "rawBaselineCharacters": 15854,
+      "baselineCharacters": 14226,
+      "finalCharacters": 18939,
+      "growthPercent": 33.1,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "comp-u4",
+      "rawBaselineCharacters": 16371,
+      "baselineCharacters": 14881,
+      "finalCharacters": 19634,
+      "growthPercent": 31.9,
+      "questions": 21,
+      "newQuestions": 15
+    },
+    {
+      "unitId": "comp-u5",
+      "rawBaselineCharacters": 14790,
+      "baselineCharacters": 13133,
+      "finalCharacters": 17796,
+      "growthPercent": 35.5,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "comp-u6",
+      "rawBaselineCharacters": 15035,
+      "baselineCharacters": 13530,
+      "finalCharacters": 18506,
+      "growthPercent": 36.8,
+      "questions": 22,
+      "newQuestions": 16
+    },
+    {
+      "unitId": "eng-u1",
+      "rawBaselineCharacters": 19822,
+      "baselineCharacters": 18139,
+      "finalCharacters": 23997,
+      "growthPercent": 32.3,
+      "questions": 18,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "eng-u2",
+      "rawBaselineCharacters": 20574,
+      "baselineCharacters": 18904,
+      "finalCharacters": 25014,
+      "growthPercent": 32.3,
+      "questions": 18,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "eng-u3",
+      "rawBaselineCharacters": 18281,
+      "baselineCharacters": 16052,
+      "finalCharacters": 21825,
+      "growthPercent": 36,
+      "questions": 19,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "eng-u4",
+      "rawBaselineCharacters": 19228,
+      "baselineCharacters": 17308,
+      "finalCharacters": 22942,
+      "growthPercent": 32.6,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "eng-u5",
+      "rawBaselineCharacters": 19561,
+      "baselineCharacters": 16992,
+      "finalCharacters": 22925,
+      "growthPercent": 34.9,
+      "questions": 18,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "eng-u6",
+      "rawBaselineCharacters": 20360,
+      "baselineCharacters": 18866,
+      "finalCharacters": 24970,
+      "growthPercent": 32.4,
+      "questions": 21,
+      "newQuestions": 15
+    },
+    {
+      "unitId": "eng-u7",
+      "rawBaselineCharacters": 16168,
+      "baselineCharacters": 14346,
+      "finalCharacters": 20052,
+      "growthPercent": 39.8,
+      "questions": 19,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "eng-u8",
+      "rawBaselineCharacters": 15671,
+      "baselineCharacters": 13497,
+      "finalCharacters": 19780,
+      "growthPercent": 46.6,
+      "questions": 19,
+      "newQuestions": 15
+    },
+    {
+      "unitId": "man-u1",
+      "rawBaselineCharacters": 15208,
+      "baselineCharacters": 14163,
+      "finalCharacters": 18612,
+      "growthPercent": 31.4,
+      "questions": 17,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "man-u2",
+      "rawBaselineCharacters": 14557,
+      "baselineCharacters": 12858,
+      "finalCharacters": 17373,
+      "growthPercent": 35.1,
+      "questions": 17,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "man-u3",
+      "rawBaselineCharacters": 15268,
+      "baselineCharacters": 13340,
+      "finalCharacters": 17669,
+      "growthPercent": 32.5,
+      "questions": 17,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "man-u4",
+      "rawBaselineCharacters": 14689,
+      "baselineCharacters": 13244,
+      "finalCharacters": 18606,
+      "growthPercent": 40.5,
+      "questions": 18,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "man-u5",
+      "rawBaselineCharacters": 14391,
+      "baselineCharacters": 12393,
+      "finalCharacters": 17304,
+      "growthPercent": 39.6,
+      "questions": 18,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "man-u6",
+      "rawBaselineCharacters": 14935,
+      "baselineCharacters": 13232,
+      "finalCharacters": 17708,
+      "growthPercent": 33.8,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "man-u7",
+      "rawBaselineCharacters": 14932,
+      "baselineCharacters": 13205,
+      "finalCharacters": 17524,
+      "growthPercent": 32.7,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "man-u8",
+      "rawBaselineCharacters": 14862,
+      "baselineCharacters": 13364,
+      "finalCharacters": 18441,
+      "growthPercent": 38,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "math-u1",
+      "rawBaselineCharacters": 17268,
+      "baselineCharacters": 15848,
+      "finalCharacters": 21201,
+      "growthPercent": 33.8,
+      "questions": 15,
+      "newQuestions": 10
+    },
+    {
+      "unitId": "math-u2",
+      "rawBaselineCharacters": 16356,
+      "baselineCharacters": 14922,
+      "finalCharacters": 20756,
+      "growthPercent": 39.1,
+      "questions": 16,
+      "newQuestions": 10
+    },
+    {
+      "unitId": "math-u3",
+      "rawBaselineCharacters": 14064,
+      "baselineCharacters": 12561,
+      "finalCharacters": 16761,
+      "growthPercent": 33.4,
+      "questions": 16,
+      "newQuestions": 10
+    },
+    {
+      "unitId": "math-u4",
+      "rawBaselineCharacters": 14865,
+      "baselineCharacters": 13690,
+      "finalCharacters": 18193,
+      "growthPercent": 32.9,
+      "questions": 18,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "math-u5",
+      "rawBaselineCharacters": 15418,
+      "baselineCharacters": 13693,
+      "finalCharacters": 18008,
+      "growthPercent": 31.5,
+      "questions": 16,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "math-u6",
+      "rawBaselineCharacters": 14804,
+      "baselineCharacters": 13262,
+      "finalCharacters": 17432,
+      "growthPercent": 31.4,
+      "questions": 15,
+      "newQuestions": 10
+    },
+    {
+      "unitId": "math-u7",
+      "rawBaselineCharacters": 14421,
+      "baselineCharacters": 13307,
+      "finalCharacters": 17782,
+      "growthPercent": 33.6,
+      "questions": 17,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "math-u8",
+      "rawBaselineCharacters": 14794,
+      "baselineCharacters": 12933,
+      "finalCharacters": 17055,
+      "growthPercent": 31.9,
+      "questions": 16,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "math-u9",
+      "rawBaselineCharacters": 14590,
+      "baselineCharacters": 13122,
+      "finalCharacters": 17293,
+      "growthPercent": 31.8,
+      "questions": 16,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "math-u10",
+      "rawBaselineCharacters": 15622,
+      "baselineCharacters": 14039,
+      "finalCharacters": 20132,
+      "growthPercent": 43.4,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "math-u11",
+      "rawBaselineCharacters": 13235,
+      "baselineCharacters": 12384,
+      "finalCharacters": 16828,
+      "growthPercent": 35.9,
+      "questions": 17,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "math-u12",
+      "rawBaselineCharacters": 14542,
+      "baselineCharacters": 12912,
+      "finalCharacters": 17687,
+      "growthPercent": 37,
+      "questions": 18,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "pe-u1",
+      "rawBaselineCharacters": 14294,
+      "baselineCharacters": 12663,
+      "finalCharacters": 17189,
+      "growthPercent": 35.7,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "pe-u2",
+      "rawBaselineCharacters": 15010,
+      "baselineCharacters": 13344,
+      "finalCharacters": 17647,
+      "growthPercent": 32.2,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "pe-u3",
+      "rawBaselineCharacters": 16132,
+      "baselineCharacters": 12981,
+      "finalCharacters": 17806,
+      "growthPercent": 37.2,
+      "questions": 16,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "pe-u4",
+      "rawBaselineCharacters": 14226,
+      "baselineCharacters": 11451,
+      "finalCharacters": 16212,
+      "growthPercent": 41.6,
+      "questions": 17,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "pe-u5",
+      "rawBaselineCharacters": 14216,
+      "baselineCharacters": 10930,
+      "finalCharacters": 15538,
+      "growthPercent": 42.2,
+      "questions": 16,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "pe-u6",
+      "rawBaselineCharacters": 14932,
+      "baselineCharacters": 11823,
+      "finalCharacters": 16547,
+      "growthPercent": 40,
+      "questions": 16,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "sci-u1",
+      "rawBaselineCharacters": 17235,
+      "baselineCharacters": 16042,
+      "finalCharacters": 20895,
+      "growthPercent": 30.3,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "sci-u2",
+      "rawBaselineCharacters": 17481,
+      "baselineCharacters": 15992,
+      "finalCharacters": 21116,
+      "growthPercent": 32,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "sci-u3",
+      "rawBaselineCharacters": 16381,
+      "baselineCharacters": 14836,
+      "finalCharacters": 19446,
+      "growthPercent": 31.1,
+      "questions": 16,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "sci-u4",
+      "rawBaselineCharacters": 16665,
+      "baselineCharacters": 14986,
+      "finalCharacters": 19608,
+      "growthPercent": 30.8,
+      "questions": 17,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "sci-u5",
+      "rawBaselineCharacters": 16314,
+      "baselineCharacters": 14606,
+      "finalCharacters": 18990,
+      "growthPercent": 30,
+      "questions": 18,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "sci-u6",
+      "rawBaselineCharacters": 17006,
+      "baselineCharacters": 16009,
+      "finalCharacters": 21162,
+      "growthPercent": 32.2,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "sci-u7",
+      "rawBaselineCharacters": 16540,
+      "baselineCharacters": 14874,
+      "finalCharacters": 19330,
+      "growthPercent": 30,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "sci-u8",
+      "rawBaselineCharacters": 16897,
+      "baselineCharacters": 15630,
+      "finalCharacters": 20575,
+      "growthPercent": 31.6,
+      "questions": 18,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "sci-u9",
+      "rawBaselineCharacters": 14889,
+      "baselineCharacters": 13199,
+      "finalCharacters": 17541,
+      "growthPercent": 32.9,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "sci-u10",
+      "rawBaselineCharacters": 14801,
+      "baselineCharacters": 13119,
+      "finalCharacters": 17736,
+      "growthPercent": 35.2,
+      "questions": 20,
+      "newQuestions": 14
+    },
+    {
+      "unitId": "soc-u1",
+      "rawBaselineCharacters": 15962,
+      "baselineCharacters": 13706,
+      "finalCharacters": 17960,
+      "growthPercent": 31,
+      "questions": 17,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "soc-u2",
+      "rawBaselineCharacters": 14743,
+      "baselineCharacters": 13051,
+      "finalCharacters": 18025,
+      "growthPercent": 38.1,
+      "questions": 18,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "soc-u3",
+      "rawBaselineCharacters": 14702,
+      "baselineCharacters": 12659,
+      "finalCharacters": 17351,
+      "growthPercent": 37.1,
+      "questions": 17,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "soc-u4",
+      "rawBaselineCharacters": 15119,
+      "baselineCharacters": 13272,
+      "finalCharacters": 17523,
+      "growthPercent": 32,
+      "questions": 16,
+      "newQuestions": 11
+    },
+    {
+      "unitId": "soc-u5",
+      "rawBaselineCharacters": 14469,
+      "baselineCharacters": 12915,
+      "finalCharacters": 17698,
+      "growthPercent": 37,
+      "questions": 19,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "soc-u6",
+      "rawBaselineCharacters": 14695,
+      "baselineCharacters": 12934,
+      "finalCharacters": 17927,
+      "growthPercent": 38.6,
+      "questions": 18,
+      "newQuestions": 13
+    },
+    {
+      "unitId": "soc-u7",
+      "rawBaselineCharacters": 14276,
+      "baselineCharacters": 12564,
+      "finalCharacters": 17699,
+      "growthPercent": 40.9,
+      "questions": 18,
+      "newQuestions": 12
+    },
+    {
+      "unitId": "soc-u8",
+      "rawBaselineCharacters": 14440,
+      "baselineCharacters": 12452,
+      "finalCharacters": 17484,
+      "growthPercent": 40.4,
+      "questions": 18,
+      "newQuestions": 13
+    }
+  ]
+}

@@ -239,7 +239,7 @@ const TextbookReferenceCompendiumModal = ({ isOpen, onClose, unit, subject, onSt
                   color: '#d97706'
                 },
                 {
-                  title: '📕 《段考滿分卷》易錯失分防雷警訊（全國名校段考真題陷阱）',
+                  title: '📕 《段考滿分卷》易錯失分防雷警訊（段考常見陷阱）',
                   content: catalog.referenceBooks.examTrap.replace(/\$/g, ''),
                   color: '#dc2626'
                 }

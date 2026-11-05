@@ -136,7 +136,7 @@ function enrichNoteWithScope(note) {
   const highlightInfo = unitHighlightsMap[note.unitId] || {
     priorConcept: '前期核心觀念與先備基礎',
     masterySkill: '108 課綱核心素養實戰應用',
-    highlights: ['課綱核心概念精準掌握', '歷屆名校高頻考點聚焦', '段考避雷指引與真題詳解']
+    highlights: ['課綱核心概念精準掌握', '段考常見考點聚焦', '段考避雷指引與練習題詳解']
   };
   const versionFocus = getUnitVersionFocus(note.unitId);
   const normalizedHighlights = (highlightInfo.highlights || []).map((h, idx) => normalizeHighlightItem(h, idx));
@@ -246,7 +246,7 @@ export function getExamHandoutInfo(subjectId, semester = '6A', scope = 'all') {
   if (scope === 'midterm') {
     scopeName = is6A ? '期中考（第一次段考）重點講義' : '期中考（第一次段考）重點講義';
     badgeText = '🎯 期中段考必勝';
-    desc = `專為六年級${is6A ? '上' : '下'}學期「期中考／第一次段考」量身編修，集中攻克前半學期核心定義、公式口訣、易錯防雷陷阱與名校經典真題！`;
+    desc = `專為六年級${is6A ? '上' : '下'}學期「期中考／第一次段考」量身編修，集中攻克前半學期核心定義、公式口訣、易錯防雷陷阱與段考題型練習！`;
   } else if (scope === 'final') {
     scopeName = is6A ? '期末考（第二次段考）衝刺講義' : '畢業考（畢業考與國中先修）衝刺講義';
     badgeText = is6A ? '🏆 期末段考衝刺' : '🎓 畢業考高分衝刺';
@@ -254,7 +254,7 @@ export function getExamHandoutInfo(subjectId, semester = '6A', scope = 'all') {
   } else {
     scopeName = is6A ? '第一學期（期末總複習）完整講義' : '第二學期（畢業考與先修）完整講義';
     badgeText = '🌟 全學期大滿貫';
-    desc = `完整收錄六年級${is6A ? '上' : '下'}學期全部單元，一站式囊括完整觀念突破、名師大招、常考易錯題與各校真題解析！`;
+    desc = `完整收錄六年級${is6A ? '上' : '下'}學期全部單元，一站式囊括完整觀念突破、名師大招、常考易錯題與段考題型解析！`;
   }
 
   const pdfFileName = `${subjectId}_${semKey}_${scope}.pdf`;

@@ -316,7 +316,7 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 🤖 **智慧手錶與 AI 虛擬醫生助理 (AI Health Assistants)**  
 隨著物聯網科技的進步，現在的智慧手錶 (Smartwatch) 能夠 24 小時偵測心率、血氧濃度與體溫變化。
@@ -332,26 +332,18 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-A2）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-A2。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考身體不適就醫問答（What is wrong with you? I have a headache/stomachache/fever.）。
-- 📘 **南一版出題特色**：側重可數名詞與不可數名詞（water, juice, medicine）搭配 some/any 與量詞之辨別。
-- 📙 **翰林版出題特色**：側重飲食均衡建議（You should drink more water / take a rest. You should not eat too much fast food.）。
+- 📗 **康軒版可留意**：常考身體不適就醫問答（What is wrong with you? I have a headache/stomachache/fever.）。
+- 📘 **南一版可留意**：側重可數名詞與不可數名詞（water, juice, medicine）搭配 some/any 與量詞之辨別。
+- 📙 **翰林版可留意**：側重飲食均衡建議（You should drink more water / take a rest. You should not eat too much fast food.）。
 - ⚡ **段考 5 秒破題口訣**：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
 - 🏷️ **題幹高頻熱門關鍵字**：What is wrong, have a headache, should/should not, healthy diet
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -377,7 +369,6 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 - 🧠 **一句話記住**：可數：a/an、加 s；不可數：a cup of / a glass of / a piece of。
 - 🌱 **生活例子**：an apple、two bananas；a cup of tea、a bottle of water、a slice of pizza。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：可數：a/an、加 s；不可數：a cup of / a glass of / a piece of。。解題時切記：不可數名詞不能加 s，不能說 two waters，要說 two bottles of water。
 
 **先想想看**：遮住下面的說明，用自己的話說說「可數名詞與不可數名詞」是什麼意思，再想一個你身邊的例子。
 
@@ -396,7 +387,6 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 - 🧠 **一句話記住**：head ＋ ache = 頭痛；tooth ＋ ache = 牙痛。
 - 🌱 **生活例子**：I have a headache（頭痛）. / I have a stomachache（肚子痛）. / I have a fever（發燒）. / I have a sore throat（喉嚨痛）.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：head ＋ ache = 頭痛；tooth ＋ ache = 牙痛。。解題時切記：要說 I have a headache，不是 I am headache。
 
 **先想想看**：遮住下面的說明，用自己的話說說「說出身體哪裡不舒服」是什麼意思，再想一個你身邊的例子。
 
@@ -415,7 +405,6 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 - 🧠 **一句話記住**：should / shouldn't ＋ 原形動詞。
 - 🌱 **生活例子**：You should drink more water. / He should see a doctor. / You shouldn't eat too much candy.
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：should / shouldn't ＋ 原形動詞。。解題時切記：不能說 He should sees a doctor，should 後面不加 s。
 
 **先想想看**：遮住下面的說明，用自己的話說說「用 should 給建議」是什麼意思，再想一個你身邊的例子。
 
@@ -449,11 +438,40 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### 生病句型
+
+- What’s wrong with you? I have a headache / a toothache / a cold / a fever.
+- I feel sick. My stomach hurts.
+- You should see a doctor and drink more water.
+- You shouldn’t eat too much candy.
+
+句型：should + 動詞原形；shouldn’t + 動詞原形。不要加 to。
+
+### 可數和不可數
+
+| 可數（可加 s） | 不可數 |
+| :--- | :--- |
+| apple, egg, banana, sandwich | water, milk, rice, bread, juice |
+
+- How many + 複數名詞：How many eggs do you need?
+- How much + 不可數：How much milk do you drink?
+- a glass of water、a bowl of rice、a piece of cake 都是量詞。
+
+### 喜好和建議的回答
+
+- What do you want to eat? I want some rice.
+- Would you like some juice? Yes, please. / No, thanks.
+- It’s healthy／unhealthy to eat too much fried food.
+
+表示「不要吃太多」用 too much（不可數）或 too many（可數）。
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期期末考精選題】　Doctor: "You have a high fever and a terrible sore throat. You caught a bad flu. You should ______ in bed and you shouldn't ______ cold drinks."
+**第 1 題**【基礎練習】　Doctor: "You have a high fever and a terrible sore throat. You caught a bad flu. You should ______ in bed and you shouldn't ______ cold drinks."
 
 **A.** rest ; drink  
 **B.** rested ; drank  
@@ -465,9 +483,8 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ✅ **正確答案** A. rest ; drink
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．should 與 shouldn't 均為情態助動詞。
 
 2．根據文法規則，助動詞後方必須無條件接「原形動詞」。
@@ -476,11 +493,9 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　A: "What's wrong with Kevin? He is holding his cheek and crying."  B: "He has a serious ______. He needs to see a dentist right away."
+**第 2 題**【基礎練習】　A: "What's wrong with Kevin? He is holding his cheek and crying."  B: "He has a serious ______. He needs to see a dentist right away."
 
 **A.** headache  
 **B.** stomachache  
@@ -492,20 +507,17 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ✅ **正確答案** C. toothache
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．題幹提到 "holding his cheek"（捂著臉頰）以及 "see a dentist"（看牙醫）。
 
 2．牙醫 (dentist) 專門治療牙齒相關疾病，故填 toothache（牙痛）。
 
 故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級上學期期末考精選題】　When you are sick and the doctor prescribes some pills for you, you should remember to ______ on time after meals.
+**第 3 題**【基礎練習】　When you are sick and the doctor prescribes some pills for you, you should remember to ______ on time after meals.
 
 **A.** eat medicine  
 **B.** take medicine  
@@ -517,20 +529,17 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ✅ **正確答案** B. take medicine
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．在英語慣用語中，「吃藥」的固定動詞搭配一律使用 "take medicine"。
 
 2．使用 "eat medicine" 屬於典型的中式英文語病。
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期期末考精選題】　According to the healthy food guidelines (MyPlate), which of the following food items belongs to the "Dairy (乳製品)" category?
+**第 4 題**【基礎練習】　According to the healthy food guidelines (MyPlate), which of the following food items belongs to the "Dairy (乳製品)" category?
 
 **A.** Fried chicken  
 **B.** Brown rice  
@@ -542,9 +551,8 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ✅ **正確答案** C. Cheddar cheese and milk
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．Dairy 指的是由動物乳汁提煉製成的乳製品。
 
 2．起司 (cheese) 與牛奶 (milk) 是典型的乳製品。
@@ -552,8 +560,6 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 3．炸雞屬於 Protein；糙米屬於 Grains；花椰菜屬於 Vegetables。
 
 故正確答案為 C。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
@@ -569,12 +575,9 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ✅ **正確答案** A. headache
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
-由 "my head hurts（頭好痛）" 可知症狀為頭痛 (headache)。-ache 字尾表疼痛。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+由 "my head hurts（頭好痛）" 可知症狀為頭痛 (headache)。-ache 字尾表疼痛。
 
 </details>
 
@@ -590,14 +593,394 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ✅ **正確答案** C. drink
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 情態助動詞 should（應該）後面必須接「原形動詞」drink。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+</details>
+
+## 🧪 段考題型實戰（先作答，再看步驟）
+
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **健康表達** | 生病與建議 | 7、8、9、10 |
+| **食物數量** | How many 和 How much | 11、12、13、14 |
+| **閱讀與應用** | 建議和文章 | 15、16、17、18、19、20 |
+
+**第 7 題**【選擇・課綱】　A: What’s wrong with Amy? B: She ______ a toothache.
+
+**A.** has  
+**B.** have  
+**C.** is  
+**D.** do
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. has
+
+🔍 **審題關鍵**：She + has。
+
+📐 **解題步驟**：
+
+1. 生病用 have。
+2. 第三人稱單數變 has。
+
+⚠️ **易錯提醒**：不要用 is。
+
+📖 **回課文複習**：本頁「生病句型」。
 
 </details>
+
+**第 8 題**【選擇・課綱】　You have a fever. You should ______ some rest.
+
+**A.** take  
+**B.** took  
+**C.** taking  
+**D.** takes
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. take
+
+🔍 **審題關鍵**：should + 原形。
+
+📐 **解題步驟**：
+
+1. should 後面用原形。
+
+⚠️ **易錯提醒**：should 不加 to，也不變 s。
+
+📖 **回課文複習**：本頁「生病句型」。
+
+</details>
+
+**第 9 題**【選擇・課綱】　You ______ eat too much candy. It’s bad for your teeth.
+
+**A.** should  
+**B.** shouldn’t  
+**C.** are  
+**D.** can’t to
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. shouldn’t
+
+🔍 **審題關鍵**：不好就不要吃。
+
+📐 **解題步驟**：
+
+1. 後半句說明對牙齒不好。
+2. 所以用否定建議。
+
+⚠️ **易錯提醒**：can’t to 文法錯誤。
+
+📖 **回課文複習**：本頁「生病句型」。
+
+</details>
+
+**第 10 題**【配對・課綱】　Match: (1) I have a cold. (2) My stomach hurts. (3) I have a toothache. A. You should see a dentist. B. You should drink warm water and rest. C. You shouldn’t eat too much.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) B; (2) C; (3) A
+
+🔍 **審題關鍵**：症狀對建議。
+
+📐 **解題步驟**：
+
+1. 感冒要休息、喝水。
+2. 肚子痛不要吃太多。
+3. 牙痛要看牙醫。
+
+⚠️ **易錯提醒**：dentist 專指牙醫。
+
+📖 **回課文複習**：本頁「生病句型」。
+
+</details>
+
+**第 11 題**【選擇・課綱】　______ eggs do you want?
+
+**A.** How many  
+**B.** How much  
+**C.** What time  
+**D.** Where
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. How many
+
+🔍 **審題關鍵**：eggs 是可數複數。
+
+📐 **解題步驟**：
+
+1. 可數名詞用 How many。
+
+⚠️ **易錯提醒**：How much 接不可數。
+
+📖 **回課文複習**：本頁「可數和不可數」。
+
+</details>
+
+**第 12 題**【選擇・課綱】　______ milk do you drink every day?
+
+**A.** How many  
+**B.** How much  
+**C.** How old  
+**D.** How far
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. How much
+
+🔍 **審題關鍵**：milk 不可數。
+
+📐 **解題步驟**：
+
+1. 液體多為不可數。
+
+⚠️ **易錯提醒**：milk 不能加 s。
+
+📖 **回課文複習**：本頁「可數和不可數」。
+
+</details>
+
+**第 13 題**【選擇・課綱】　I’d like a ______ of water, please.
+
+**A.** piece  
+**B.** bowl  
+**C.** glass  
+**D.** slice
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. glass
+
+🔍 **審題關鍵**：水要用杯子。
+
+📐 **解題步驟**：
+
+1. a glass of water。
+2. a bowl of rice 用於飯。
+
+⚠️ **易錯提醒**：量詞要配合食物。
+
+📖 **回課文複習**：本頁「可數和不可數」。
+
+</details>
+
+**第 14 題**【選擇・課綱】　Which word is uncountable?
+
+**A.** apple  
+**B.** banana  
+**C.** rice  
+**D.** egg
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. rice
+
+🔍 **審題關鍵**：不能一粒一粒數著用。
+
+📐 **解題步驟**：
+
+1. rice 不可數。
+
+⚠️ **易錯提醒**：「米」雖有顆粒，英文不可數。
+
+📖 **回課文複習**：知識點「可數名詞與不可數名詞」。
+
+</details>
+
+**第 15 題**【閱讀・課綱】　Read: “Sam eats a lot of fried chicken. He drinks soda every day. He doesn’t like vegetables. Now he feels tired.” What should Sam do?
+
+**A.** Eat more vegetables and drink water  
+**B.** Eat more fried chicken  
+**C.** Drink more soda  
+**D.** Stay up late
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Eat more vegetables and drink water
+
+🔍 **審題關鍵**：找不健康的習慣。
+
+📐 **解題步驟**：
+
+1. 文章說油炸和汽水多。
+2. 建議改成蔬菜和水。
+
+⚠️ **易錯提醒**：答案要能解決文中問題。
+
+📖 **回課文複習**：本頁「生病句型」。
+
+</details>
+
+**第 16 題**【選擇・課綱】　A: Would you like some juice? B: ______
+
+**A.** Yes, please.  
+**B.** Yes, I am.  
+**C.** No, I don’t like to.  
+**D.** It’s juice.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Yes, please.
+
+🔍 **審題關鍵**：禮貌回應。
+
+📐 **解題步驟**：
+
+1. 接受用 Yes, please.
+2. 不用 No, thanks.
+
+⚠️ **易錯提醒**：Would you 和 Do you 回答習慣不同。
+
+📖 **回課文複習**：本頁「喜好和建議的回答」。
+
+</details>
+
+**第 17 題**【選擇・課綱】　You eat too ______ cookies.
+
+**A.** much  
+**B.** many  
+**C.** more  
+**D.** most
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. many
+
+🔍 **審題關鍵**：cookies 可數。
+
+📐 **解題步驟**：
+
+1. 可數複數用 too many。
+
+⚠️ **易錯提醒**：too much 接不可數。
+
+📖 **回課文複習**：本頁「喜好和建議的回答」。
+
+</details>
+
+**第 18 題**【重組・參考東光國小112下英語】　Unscramble: drink / should / more / You / water / .
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** You should drink more water.
+
+🔍 **審題關鍵**：主詞 + should + 動詞。
+
+📐 **解題步驟**：
+
+1. You should。
+2. drink more water。
+
+⚠️ **易錯提醒**：should 後面不加 to。
+
+📖 **回課文複習**：本頁「生病句型」。
+
+</details>
+
+**第 19 題**【寫作・課綱】　Write one healthy tip in English.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: You should sleep early and drink more water.
+
+🔍 **審題關鍵**：用 should。
+
+📐 **解題步驟**：
+
+1. 用 should + 原形。
+2. 提出合理建議。
+
+⚠️ **易錯提醒**：不要寫 should to。
+
+📖 **回課文複習**：本頁「生病句型」。
+
+</details>
+
+**第 20 題**【選擇・課綱】　Which food group has fish, eggs and beans?
+
+**A.** Vegetables  
+**B.** Protein foods  
+**C.** Fruits  
+**D.** Dairy
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Protein foods
+
+🔍 **審題關鍵**：豆魚蛋肉類。
+
+📐 **解題步驟**：
+
+1. 魚、蛋、豆提供蛋白質。
+
+⚠️ **易錯提醒**：Beans 也算 protein。
+
+📖 **回課文複習**：核心觀念 4：六大類食物。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 7 題（生病與建議）：不要用 is。
+- 第 8 題（生病與建議）：should 不加 to，也不變 s。
+- 第 9 題（生病與建議）：can’t to 文法錯誤。
+- 第 10 題（生病與建議）：dentist 專指牙醫。
+- 第 11 題（How many 和 How much）：How much 接不可數。
+- 第 12 題（How many 和 How much）：milk 不能加 s。
+- 第 13 題（How many 和 How much）：量詞要配合食物。
+- 第 14 題（How many 和 How much）：「米」雖有顆粒，英文不可數。
+- 第 15 題（建議和文章）：答案要能解決文中問題。
+- 第 16 題（建議和文章）：Would you 和 Do you 回答習慣不同。
+- 第 17 題（建議和文章）：too much 接不可數。
+- 第 18 題（建議和文章）：should 後面不加 to。
+- 第 19 題（建議和文章）：不要寫 should to。
+- 第 20 題（建議和文章）：Beans 也算 protein。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 7 | A. has | 本頁「生病句型」。 |
+| 8 | A. take | 本頁「生病句型」。 |
+| 9 | B. shouldn’t | 本頁「生病句型」。 |
+| 10 | (1) B; (2) C; (3) A | 本頁「生病句型」。 |
+| 11 | A. How many | 本頁「可數和不可數」。 |
+| 12 | B. How much | 本頁「可數和不可數」。 |
+| 13 | C. glass | 本頁「可數和不可數」。 |
+| 14 | C. rice | 知識點「可數名詞與不可數名詞」。 |
+| 15 | A. Eat more vegetables and drink water | 本頁「生病句型」。 |
+| 16 | A. Yes, please. | 本頁「喜好和建議的回答」。 |
+| 17 | B. many | 本頁「喜好和建議的回答」。 |
+| 18 | You should drink more water. | 本頁「生病句型」。 |
+| 19 | Example: You should sleep early and drink more water. | 本頁「生病句型」。 |
+| 20 | B. Protein foods | 核心觀念 4：六大類食物。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 

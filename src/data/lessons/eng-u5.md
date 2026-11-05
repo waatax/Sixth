@@ -301,7 +301,7 @@
 
 ---
 
-## 🚀 +10% 現代素養前瞻新知
+## 🚀 現代素養新知
 
 🌱 **SDGs 綠色節慶新風潮 (Sustainable & Eco-friendly Festivals)**  
 傳統節慶在帶來歡樂的同時，也可能產生碳排放與塑膠垃圾。現在全球正興起「**永續綠色節慶 (Sustainable Festivals)**」：
@@ -316,26 +316,18 @@
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先看「段考題型歸納與版本提醒」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；接著做「基礎例題熱身」和「段考題型實戰」，動手作答後再展開步驟詳解。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
 
 
-## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+## 🎯 段考題型歸納與版本提醒
 
-依據教育部 108 課綱指標（英-E-C2）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+對應 108 課綱指標：英-E-C2。段考常從四個方向出題：定義辨析、生活情境、易錯陷阱、多步驟綜合。各審定版本依同一份課綱編寫，單元順序和例子不同；下面的版本提醒是編輯整理，未逐冊核對，實際範圍請以課本目次和學校公告為準：
 
-- 📗 **康軒版出題特色**：常考東西方節慶文化（Christmas, Halloween, Chinese New Year, Dragon Boat Festival）活動與習俗。
-- 📘 **南一版出題特色**：側重問句 When is ...? 與序數（first, second, third, fourth...）及月份拼寫。
-- 📙 **翰林版出題特色**：側重時間介系詞精準搭配（in 年月季節、on 特定日子星期、at 具體鐘點時刻）。
+- 📗 **康軒版可留意**：常考東西方節慶文化（Christmas, Halloween, Chinese New Year, Dragon Boat Festival）活動與習俗。
+- 📘 **南一版可留意**：側重問句 When is ...? 與序數（first, second, third, fourth...）及月份拼寫。
+- 📙 **翰林版可留意**：側重時間介系詞精準搭配（in 年月季節、on 特定日子星期、at 具體鐘點時刻）。
 - ⚡ **段考 5 秒破題口訣**：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
 - 🏷️ **題幹高頻熱門關鍵字**：Festivals, time prepositions (in/on/at), ordinal numbers, cultural traditions
-
-### 📋 歷屆各校段考 5 大代表題型特徵分析
-
-1. **【題型 1：核心概念與定義辨析題】**：考驗概念本質與定義嚴謹度（如特殊數值、反例辨識、觀念是非），作答時緊扣定義，不憑直覺做猜測。
-2. **【題型 2：基礎算理與標準步驟題】**：考驗公式運算與標準步驟熟練度（如分數除法顛倒相乘、移項求解、柱體表面積計算），按部就班推導不跳步。
-3. **【題型 3：生活素養與情境應用題】**：結合真實生活情境（購物、排班、烹飪、地圖導航、氣象觀察），先圈出數值與單位，建立清晰的學科模型。
-4. **【題型 4：段考高頻易錯陷阱題】**：出題老師精心設計的易錯誘答項（如餘數單位換算、扇形漏加兩半徑、時速秒速混淆、反向條件），作答完畢務必代回驗算。
-5. **【題型 5：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算混淆。
 
 #### 📊 審題關鍵字破題雷達
 
@@ -361,7 +353,6 @@
 
 - 🧠 **一句話記住**：節日名稱第一個字母要大寫。
 - 🌱 **生活例子**：Lunar New Year（農曆新年）、Dragon Boat Festival（端午節）、Moon Festival（中秋節）、Halloween（萬聖節）、Christmas（聖誕節）。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：節日名稱第一個字母要大寫。。解題時切記：中秋節也可說 Mid-Autumn Festival，兩種說法都對。
 
 **先想想看**：遮住下面的說明，用自己的話說說「重要節慶的英文」是什麼意思，再想一個你身邊的例子。
 
@@ -380,7 +371,6 @@
 
 - 🧠 **一句話記住**：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）
 - 🌱 **生活例子**：eat mooncakes（吃月餅）、give red envelopes（給紅包）、wear costumes（穿裝扮服）、decorate the Christmas tree（裝飾聖誕樹）、eat rice dumplings（吃粽子）。
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）。解題時切記：粽子是 rice dumplings，月餅是 mooncakes，不要混淆。
 
 **先想想看**：遮住下面的說明，用自己的話說說「節慶活動的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -399,7 +389,6 @@
 
 - 🧠 **一句話記住**：聖誕節常用 Merry，其他節日多用 Happy。
 - 🌱 **生活例子**：Happy New Year! / Merry Christmas! / Happy Halloween! / Happy Moon Festival!
-- 🎯 **段考命題常考方式**：常考於段考概念是非題、選擇題或計算題，關鍵判別心法：聖誕節常用 Merry，其他節日多用 Happy。。解題時切記：別人祝福你時，可以回答 Thank you! The same to you!
 
 **先想想看**：遮住下面的說明，用自己的話說說「節日祝福語」是什麼意思，再想一個你身邊的例子。
 
@@ -433,11 +422,36 @@
 
 </details>
 
-## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
+## 🧩 段考回推補強：考卷會考、容易漏掉的觀念
+
+### 節慶介系詞
+
+- **on** + 特定日子：on Christmas Day, on New Year’s Eve, on October 31st
+- **in** + 月份、季節：in December, in winter
+- **at** + 特定時段：at Christmas（聖誕期間）
+
+節慶動作：eat mooncakes（吃月餅）、watch fireworks（看煙火）、give red envelopes（給紅包）、go trick-or-treating（萬聖節討糖）。
+
+### 序數和月份
+
+first（1st）、second（2nd）、third（3rd）、fourth（4th）、fifth（5th）、eighth（8th）、ninth（9th）、twelfth（12th）、twentieth（20th）。
+
+日期表達：My birthday is on May 2nd. When is your birthday? It’s in June.
+
+問節日時間用 When is...? 回答月份用 in，回答日期用 on。
+
+### 祝福語和文化差異
+
+- Happy New Year! Merry Christmas! Happy Mother’s Day!
+- Thank you. You too.
+
+Dragon Boat Festival 吃粽子（rice dumplings）；Moon Festival 賞月、吃月餅；Lantern Festival 猜燈謎；Thanksgiving 吃火雞（turkey）。回答別人祝福時，說 You too 比較自然。
+
+## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期段考精選題】　On Lunar New Year's Eve, Taiwanese families get together to have a big reunion dinner. Children are happiest because they can receive ______ from their parents and grandparents.
+**第 1 題**【基礎練習】　On Lunar New Year's Eve, Taiwanese families get together to have a big reunion dinner. Children are happiest because they can receive ______ from their parents and grandparents.
 
 **A.** pumpkin pies  
 **B.** red envelopes with lucky money  
@@ -449,20 +463,17 @@
 
 ✅ **正確答案** B. red envelopes with lucky money
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．農曆除夕夜 (Lunar New Year's Eve) 全家團圓吃年夜飯。
 
 2．傳統習俗中長輩會發給晚輩壓歲錢紅包，英文是 "red envelopes with lucky money"。
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期段考精選題】　During the Dragon Boat Festival in June, people across Taiwan participate in exciting dragon boat races on rivers and eat delicious ______ wrapped in bamboo leaves.
+**第 2 題**【基礎練習】　During the Dragon Boat Festival in June, people across Taiwan participate in exciting dragon boat races on rivers and eat delicious ______ wrapped in bamboo leaves.
 
 **A.** mooncakes  
 **B.** turkey legs  
@@ -474,20 +485,17 @@
 
 ✅ **正確答案** C. rice dumplings (zongzi)
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．端午節 (Dragon Boat Festival) 最具代表性的傳統美食是用竹葉包裹的粽子。
 
 2．粽子的英文標準表達為 "rice dumplings (zongzi)"。
 
 故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 3 題**【歷屆段考真題・新北市某國小六年級下學期第一次段考精選題】　On Halloween night (October 31st), children dress up in scary costumes and go door-to-door shouting "______!" to collect sweet treats.
+**第 3 題**【基礎練習】　On Halloween night (October 31st), children dress up in scary costumes and go door-to-door shouting "______!" to collect sweet treats.
 
 **A.** Merry Christmas!  
 **B.** Happy New Year!  
@@ -499,18 +507,15 @@
 
 ✅ **正確答案** C. Trick-or-treat!
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．萬聖節夜晚兒童挨家挨戶要糖果時的標誌性口號是 "Trick-or-treat!"（不給糖就搗蛋）。
 
 故選 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期段考精選題】　Christmas is celebrated ______ December 25th every year. Many people sing carols and exchange gifts around the tree.
+**第 4 題**【基礎練習】　Christmas is celebrated ______ December 25th every year. Many people sing carols and exchange gifts around the tree.
 
 **A.** in  
 **B.** at  
@@ -522,60 +527,383 @@
 
 ✅ **正確答案** C. on
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
-
 📐 **【詳盡解題步驟與算理推導】**：
+
 1．"December 25th" 是具體的日期（有月也有日）。
 
 2．根據時間介系詞規則，具體特定日期必須搭配介系詞 "on"。
 
 故正確答案為 C。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
 </details>
 
-**第 5 題**【多步驟推導與跨觀念綜合題】　On Lunar New Year's Eve, Taiwanese families get together to have a reunion dinner, and children receive ______ from elders.
+## 🧪 段考題型實戰（先作答，再看步驟）
 
-**A.** red envelopes with lucky money  
-**B.** chocolate eggs  
-**C.** carved pumpkins  
-**D.** Christmas stockings
+⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
+
+| 題型 | 考什麼 | 題號 |
+| :--- | :--- | :--- |
+| **節慶字彙** | 活動和食物配對 | 5、6、7、8 |
+| **介系詞與日期** | in、on 與序數 | 9、10、11、12 |
+| **情境應答** | 祝福和卡片 | 13、14、15、16、17、18 |
+
+**第 5 題**【配對・課綱】　Match: (1) Moon Festival (2) Dragon Boat Festival (3) Thanksgiving (4) Lunar New Year. A. turkey B. mooncakes C. red envelopes D. rice dumplings
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. red envelopes with lucky money
+✅ **正確答案** (1) B; (2) D; (3) A; (4) C
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
+🔍 **審題關鍵**：想節慶食物。
 
-📐 **【詳盡解題步驟與算理推導】**：
-除夕夜團圓飯後長輩發給晚輩裝有壓歲錢的「紅包 (red envelopes)」，象徵吉祥祝福。
+📐 **解題步驟**：
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+1. 中秋吃月餅。
+2. 端午吃粽子。
+3. 感恩節吃火雞。
+4. 過年發紅包。
+
+⚠️ **易錯提醒**：rice dumplings 就是粽子。
+
+📖 **回課文複習**：本頁「祝福語和文化差異」。
 
 </details>
 
-**第 6 題**【核心觀念與定義辨析題】　During the Dragon Boat Festival, people eat rice dumplings (zongzi) and watch exciting ______ races.
+**第 6 題**【選擇・課綱】　People often watch fireworks on ______.
 
-**A.** dragon boat  
-**B.** horse  
-**C.** car  
-**D.** bicycle
+**A.** New Year’s Eve  
+**B.** Teacher’s Day  
+**C.** Mother’s Day  
+**D.** Children’s Day only
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. dragon boat
+✅ **正確答案** A. New Year’s Eve
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
+🔍 **審題關鍵**：跨年看煙火。
 
-📐 **【詳盡解題步驟與算理推導】**：
-端午節經典傳統民俗為划龍舟競賽 (dragon boat races) 與包肉粽 (zongzi / rice dumplings)。
+📐 **解題步驟**：
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+1. 跨年常放煙火。
+
+⚠️ **易錯提醒**：要注意節日習俗。
+
+📖 **回課文複習**：本頁「節慶介系詞」。
 
 </details>
+
+**第 7 題**【選擇・課綱】　On Halloween, children say “______!”
+
+**A.** Merry Christmas  
+**B.** Trick or treat  
+**C.** Happy New Year  
+**D.** Thank you
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Trick or treat
+
+🔍 **審題關鍵**：討糖。
+
+📐 **解題步驟**：
+
+1. 萬聖節的固定說法。
+
+⚠️ **易錯提醒**：Halloween 在 October 31st。
+
+📖 **回課文複習**：本頁「節慶介系詞」。
+
+</details>
+
+**第 8 題**【閱讀・課綱】　Read: “The Lantern Festival comes after Lunar New Year. People make lanterns and guess riddles. They eat sweet rice balls.” What do people eat at the Lantern Festival?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Sweet rice balls.
+
+🔍 **審題關鍵**：Find “eat”.
+
+📐 **解題步驟**：
+
+1. 文章最後一句說明。
+
+⚠️ **易錯提醒**：不要選燈籠。
+
+📖 **回課文複習**：本頁「祝福語和文化差異」。
+
+</details>
+
+**第 9 題**【選擇・課綱】　Christmas is ______ December.
+
+**A.** on  
+**B.** in  
+**C.** at  
+**D.** to
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. in
+
+🔍 **審題關鍵**：月份用 in。
+
+📐 **解題步驟**：
+
+1. 月份用 in。
+
+⚠️ **易錯提醒**：有具體日期才用 on。
+
+📖 **回課文複習**：本頁「節慶介系詞」。
+
+</details>
+
+**第 10 題**【選擇・課綱】　My birthday is ______ June 5th.
+
+**A.** in  
+**B.** on  
+**C.** at  
+**D.** of
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. on
+
+🔍 **審題關鍵**：有日期。
+
+📐 **解題步驟**：
+
+1. 具體日期用 on。
+
+⚠️ **易錯提醒**：只有 June 才用 in。
+
+📖 **回課文複習**：本頁「序數和月份」。
+
+</details>
+
+**第 11 題**【填充・課綱】　Write the ordinal numbers: 1 → ______, 3 → ______, 8 → ______, 12 → ______.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** first; third; eighth; twelfth
+
+🔍 **審題關鍵**：不規則要記。
+
+📐 **解題步驟**：
+
+1. first、second、third 特殊。
+2. eight 加 h 成 eighth。
+3. twelve 變 twelfth。
+
+⚠️ **易錯提醒**：不要寫 twelveth。
+
+📖 **回課文複習**：本頁「序數和月份」。
+
+</details>
+
+**第 12 題**【選擇・課綱】　A: When is Teacher’s Day? B: ______
+
+**A.** It’s on September 28th.  
+**B.** It’s at school.  
+**C.** It’s very happy.  
+**D.** Yes, it is.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. It’s on September 28th.
+
+🔍 **審題關鍵**：When 問時間。
+
+📐 **解題步驟**：
+
+1. 答案要有日期。
+
+⚠️ **易錯提醒**：Where 才回答地點。
+
+📖 **回課文複習**：本頁「序數和月份」。
+
+</details>
+
+**第 13 題**【選擇・課綱】　A: Merry Christmas! B: ______
+
+**A.** Merry Christmas to you, too!  
+**B.** I’m fine.  
+**C.** How are you?  
+**D.** You’re welcome.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Merry Christmas to you, too!
+
+🔍 **審題關鍵**：回祝對方。
+
+📐 **解題步驟**：
+
+1. 對方祝福，要回應祝福。
+
+⚠️ **易錯提醒**：You’re welcome 回答 Thank you。
+
+📖 **回課文複習**：本頁「祝福語和文化差異」。
+
+</details>
+
+**第 14 題**【寫作・課綱】　Write a short card to your mom for Mother’s Day. (1–2 sentences)
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: Happy Mother’s Day, Mom! Thank you for taking care of me.
+
+🔍 **審題關鍵**：祝福 + 感謝。
+
+📐 **解題步驟**：
+
+1. 先寫祝福。
+2. 再寫感謝。
+
+⚠️ **易錯提醒**：Mother’s 要有 ’s。
+
+📖 **回課文複習**：核心觀念 4：英文節慶卡片。
+
+</details>
+
+**第 15 題**【重組・參考東光國小112下英語】　Unscramble: moon / family / the / My / watches / .
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** My family watches the moon.
+
+🔍 **審題關鍵**：My family 當單數。
+
+📐 **解題步驟**：
+
+1. 主詞 My family。
+2. 動詞 watches。
+3. 受詞 the moon。
+
+⚠️ **易錯提醒**：family 作整體時常用單數。
+
+📖 **回課文複習**：本頁「節慶介系詞」。
+
+</details>
+
+**第 16 題**【選擇・課綱】　People give red envelopes on ______.
+
+**A.** Lunar New Year  
+**B.** Halloween  
+**C.** Thanksgiving  
+**D.** Christmas in the U.S.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Lunar New Year
+
+🔍 **審題關鍵**：壓歲錢。
+
+📐 **解題步驟**：
+
+1. 農曆年發紅包。
+
+⚠️ **易錯提醒**：envelope 指信封。
+
+📖 **回課文複習**：本頁「祝福語和文化差異」。
+
+</details>
+
+**第 17 題**【閱讀・參考東光國小112下英語】　Read: “Last Moon Festival, my cousins came to my home. We had a barbecue and ate pomelos. We didn’t sleep early.” (1) What did they do? (2) Did they sleep early?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) They had a barbecue and ate pomelos. (2) No, they didn’t.
+
+🔍 **審題關鍵**：Past tense.
+
+📐 **解題步驟**：
+
+1. 找動作。
+2. didn’t sleep early 回答否定。
+
+⚠️ **易錯提醒**：要配合過去式回答。
+
+📖 **回課文複習**：核心觀念 1：台灣傳統節慶。
+
+</details>
+
+**第 18 題**【選擇・課綱】　Which one is a Western festival?
+
+**A.** Dragon Boat Festival  
+**B.** Thanksgiving  
+**C.** Lantern Festival  
+**D.** Moon Festival
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. Thanksgiving
+
+🔍 **審題關鍵**：火雞。
+
+📐 **解題步驟**：
+
+1. 感恩節來自美加。
+
+⚠️ **易錯提醒**：其餘都是華人傳統節慶。
+
+📖 **回課文複習**：核心觀念 2：西方節慶。
+
+</details>
+
+### 📋 考前一頁複習：本單元易錯清單
+
+- 第 5 題（活動和食物配對）：rice dumplings 就是粽子。
+- 第 6 題（活動和食物配對）：要注意節日習俗。
+- 第 7 題（活動和食物配對）：Halloween 在 October 31st。
+- 第 8 題（活動和食物配對）：不要選燈籠。
+- 第 9 題（in、on 與序數）：有具體日期才用 on。
+- 第 10 題（in、on 與序數）：只有 June 才用 in。
+- 第 11 題（in、on 與序數）：不要寫 twelveth。
+- 第 12 題（in、on 與序數）：Where 才回答地點。
+- 第 13 題（祝福和卡片）：You’re welcome 回答 Thank you。
+- 第 14 題（祝福和卡片）：Mother’s 要有 ’s。
+- 第 15 題（祝福和卡片）：family 作整體時常用單數。
+- 第 16 題（祝福和卡片）：envelope 指信封。
+- 第 17 題（祝福和卡片）：要配合過去式回答。
+- 第 18 題（祝福和卡片）：其餘都是華人傳統節慶。
+
+### ✅ 答案速查（寫完訂正用）
+
+<details>
+<summary>打開答案速查表</summary>
+
+| 題號 | 答案 | 答錯先複習 |
+| :--- | :--- | :--- |
+| 5 | (1) B; (2) D; (3) A; (4) C | 本頁「祝福語和文化差異」。 |
+| 6 | A. New Year’s Eve | 本頁「節慶介系詞」。 |
+| 7 | B. Trick or treat | 本頁「節慶介系詞」。 |
+| 8 | Sweet rice balls. | 本頁「祝福語和文化差異」。 |
+| 9 | B. in | 本頁「節慶介系詞」。 |
+| 10 | B. on | 本頁「序數和月份」。 |
+| 11 | first; third; eighth; twelfth | 本頁「序數和月份」。 |
+| 12 | A. It’s on September 28th. | 本頁「序數和月份」。 |
+| 13 | A. Merry Christmas to you, too! | 本頁「祝福語和文化差異」。 |
+| 14 | Example: Happy Mother’s Day, Mom! Thank you for taking care of me. | 核心觀念 4：英文節慶卡片。 |
+| 15 | My family watches the moon. | 本頁「節慶介系詞」。 |
+| 16 | A. Lunar New Year | 本頁「祝福語和文化差異」。 |
+| 17 | (1) They had a barbecue and ate pomelos. (2) No, they didn’t. | 核心觀念 1：台灣傳統節慶。 |
+| 18 | B. Thanksgiving | 核心觀念 2：西方節慶。 |
+
+</details>
+
+📎 **本單元參考的公開資料**：[基隆市東光國小 112 學年度下學期六年級英語第一次定期評量](https://olddgps.kl.edu.tw/index/file/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf)。
 
 ### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 
