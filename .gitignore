@@ -41,4 +41,5 @@ local-record/
 *.py
 __pycache__/
 *.pyc
+.claude/
 

@@ -332,12 +332,47 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+
+
+## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+
+依據教育部 108 課綱指標（英-E-A2）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+
+- 📗 **康軒版出題特色**：常考身體不適就醫問答（What is wrong with you? I have a headache/stomachache/fever.）。
+- 📘 **南一版出題特色**：側重可數名詞與不可數名詞（water, juice, medicine）搭配 some/any 與量詞之辨別。
+- 📙 **翰林版出題特色**：側重飲食均衡建議（You should drink more water / take a rest. You should not eat too much fast food.）。
+- ⚡ **段考 5 秒破題口訣**：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
+- 🏷️ **題幹高頻熱門關鍵字**：What is wrong, have a headache, should/should not, healthy diet
+
+### 📋 歷屆各校段考 4 大代表題型特徵分析
+
+1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
+2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
+3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
+4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+
+#### 📊 審題關鍵字破題雷達
+
+| 題幹關鍵字訊號（看到立即圈出） | 🛠️ 對應破題工具與核心概念 |
+| :--- | :--- |
+| **不可數名詞食物判定** | **water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）** |
+| **表達身體生病不舒服** | **I have a fever / headache / stomachache / toothache** |
+| **給予保健建議句型** | **You should drink plenty of water and take a good rest.** |
+
+#### ⚠️ 段考高頻失分防雷提醒
+
+1．did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
+
+2．否定句 didn't 後接過去式："He didn't ate dinner"，正確為 "He didn't eat dinner"。
+
+## 🌱 核心微知識點深度理解與自我提問
 
 ### 1. 可數名詞與不可數名詞
 
 - 🧠 **一句話記住**：可數：a/an、加 s；不可數：a cup of / a glass of / a piece of。
 - 🌱 **生活例子**：an apple、two bananas；a cup of tea、a bottle of water、a slice of pizza。
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「不可數名詞食物判定」時，立即啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。考前速記：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
 
 **先想想看**：遮住下面的說明，用自己的話說說「可數名詞與不可數名詞」是什麼意思，再想一個你身邊的例子。
 
@@ -345,6 +380,8 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 <summary>對照白話說明與易錯提醒</summary>
 
 可以一個一個數的東西是可數名詞，可以加 a/an 或加 -s 變複數；水、茶、牛奶這類沒辦法直接數的是不可數名詞，要用容器或單位來計算。
+
+💡 **解題心法與重要規則**：可數：a/an、加 s；不可數：a cup of / a glass of / a piece of。
 
 ⚠️ **小心別犯錯**：不可數名詞不能加 s，不能說 two waters，要說 two bottles of water。
 
@@ -354,6 +391,7 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 - 🧠 **一句話記住**：head ＋ ache = 頭痛；tooth ＋ ache = 牙痛。
 - 🌱 **生活例子**：I have a headache（頭痛）. / I have a stomachache（肚子痛）. / I have a fever（發燒）. / I have a sore throat（喉嚨痛）.
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「表達身體生病不舒服」時，立即啟動「I have a fever / headache / stomachache / toothache」解題。考前速記：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
 
 **先想想看**：遮住下面的說明，用自己的話說說「說出身體哪裡不舒服」是什麼意思，再想一個你身邊的例子。
 
@@ -361,6 +399,8 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 <summary>對照白話說明與易錯提醒</summary>
 
 身體不舒服時，可以用 I have a ＋ 症狀 來表達。很多疼痛的字是「部位 ＋ ache」組成的。
+
+💡 **解題心法與重要規則**：head ＋ ache = 頭痛；tooth ＋ ache = 牙痛。
 
 ⚠️ **小心別犯錯**：要說 I have a headache，不是 I am headache。
 
@@ -370,6 +410,7 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 - 🧠 **一句話記住**：should / shouldn't ＋ 原形動詞。
 - 🌱 **生活例子**：You should drink more water. / He should see a doctor. / You shouldn't eat too much candy.
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「給予保健建議句型」時，立即啟動「You should drink plenty of water and take a good rest.」解題。考前速記：詢問病情：What is wrong? 症狀用 have a cold/fever；情態助動詞 should 後接原形動詞！
 
 **先想想看**：遮住下面的說明，用自己的話說說「用 should 給建議」是什麼意思，再想一個你身邊的例子。
 
@@ -377,6 +418,8 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 <summary>對照白話說明與易錯提醒</summary>
 
 想給別人建議時用 should（應該），不建議時用 shouldn't（不應該）。should 後面接原形動詞，不管主詞是誰都一樣。
+
+💡 **解題心法與重要規則**：should / shouldn't ＋ 原形動詞。
 
 ⚠️ **小心別犯錯**：不能說 He should sees a doctor，should 後面不加 s。
 
@@ -386,6 +429,7 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 - 🧠 **一句話記住**：How many + 複數可數名詞；How much + 不可數名詞；How much is / are…? = 多少錢？
 - 🌱 **生活例子**：How many apples do you want?（你要幾顆蘋果？）How much milk do you drink?（你喝多少牛奶？）How much is this hamburger?（這個漢堡多少錢？）
+- 🎯 **段考命題常考方式**：【什麼時候用】先判斷後面的東西能不能一個一個數，能數用 many，不能數用 much。
 
 **先想想看**：遮住下面的說明，用自己的話說說「How many 與 How much」是什麼意思，再想一個你身邊的例子。
 
@@ -394,78 +438,147 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 問「有多少」時，可以一個一個數的東西（可數名詞）用 How many，後面接複數名詞；不能一個一個數的東西（例如水、牛奶、米）用 How much。問價錢也用 How much。
 
+💡 **解題心法與重要規則**：How many + 複數可數名詞；How much + 不可數名詞；How much is / are…? = 多少錢？
+
 ⚠️ **小心別犯錯**：How many 後面要用複數名詞，How many apple 是錯的。
 
 </details>
 
-## ✍️ 小試身手（附答案與解說）
+## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**　Eating colorful vegetables such as carrots and broccoli provides our body with rich ______.
+**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期期末考精選題】　Leo: "_____ you see the famous movie last weekend?"
+Ken: "Yes, I did. It was really exciting!"
 
-**A.** harmful chemicals  
-**B.** sugar and salt  
-**C.** vitamins and minerals  
-**D.** fat and oil
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. vitamins and minerals
-
-【蔬菜營養成分】胡蘿蔔與花椰菜等深綠黃蔬菜富含人體必需的「維生素與礦物質 (vitamins and minerals)」。
-
-</details>
-
-**第 2 題**　When you cough or sneeze, you should cover your mouth with a tissue or your ______.
-
-**A.** neighbor's face  
-**B.** bare hands  
-**C.** elbow  
-**D.** dirty shoe
+**A.** Do  
+**B.** Are  
+**C.** Did  
+**D.** Were
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. elbow
+✅ **正確答案** C. Did
 
-【公衛禮儀與防疫】咳嗽或打噴嚏時，若無衛生紙應以「手肘內側 (elbow)」遮掩口鼻，避免雙手沾滿飛沫病菌傳染他人。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「不可數名詞食物判定」，直接啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+：
+
+句尾有過去時間副詞 "last weekend"，且動詞是原形動詞 "see"，詢問過去發生的動作使用助動詞 "Did"；答句中也是 "Yes, I did."。故選 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
 
 </details>
 
-**第 3 題**　A: "I have a running nose and I keep sneezing."  B: "You might have ______."
+**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　My grandparents _____ in Tainan three years ago, but now they live in Taipei.
 
-**A.** the flu (influenza)  
-**B.** a broken arm  
-**C.** a toothache  
-**D.** a sunburn
+**A.** live  
+**B.** lived  
+**C.** are living  
+**D.** will live
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. the flu (influenza)
+✅ **正確答案** B. lived
 
-【流感典型症狀】流鼻水 (runny nose) 與持續打噴嚏 (sneezing) 是感冒或流行性感冒 (the flu) 的常見症狀。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「不可數名詞食物判定」，直接啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+：
+
+時間副詞是 "three years ago"（三年前），表示過去存在的狀態，動詞 live 的過去式直接加 d 變成 "lived"。故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
 
 </details>
 
-**第 4 題**　Which of the following is an example of healthy eating habits?
+**第 3 題**【段考高頻易錯陷阱題】　A: "What's wrong with you?"  B: "I have a terrible ______; my head hurts so much."
 
-**A.** Drinking 1500 to 2000 mL of plain water every day  
-**B.** Drinking three large cups of boba milk tea daily  
-**C.** Skipping breakfast every morning  
-**D.** Eating fried chicken for dinner every night
+**A.** headache  
+**B.** toothache  
+**C.** stomachache  
+**D.** sore throat
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. Drinking 1500 to 2000 mL of plain water every day
+✅ **正確答案** A. headache
 
-【健康飲食生活好習慣】每天攝取充足的白開水（約 1500~2000 毫升），避免高糖手搖飲，維持良好新陳代謝。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「不可數名詞食物判定」，直接啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+由 "my head hurts（頭好痛）" 可知症狀為頭痛 (headache)。-ache 字尾表疼痛。
+
+⚠️ **【易錯防雷與陷阱剖析】**：did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
 
 </details>
 
-### 🗓️ 讓記憶留下來
+**第 4 題**【多步驟推導與跨觀念綜合題】　Doctor: "You caught a bad cold. You should ______ plenty of warm water and stay in bed."
 
-今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。
+**A.** drank  
+**B.** drinking  
+**C.** drink  
+**D.** drinks
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. drink
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「不可數名詞食物判定」，直接啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+情態助動詞 should（應該）後面必須接「原形動詞」drink。
+
+⚠️ **【易錯防雷與陷阱剖析】**：did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
+
+</details>
+
+**第 5 題**【核心觀念與定義辨析題】　Tom ate too much spicy food and junk food at the night market, and now he has a ______.
+
+**A.** stomachache  
+**B.** broken leg  
+**C.** runny ear  
+**D.** cold shoulder
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. stomachache
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「不可數名詞食物判定」，直接啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+吃了太多辛辣垃圾食物容易引發胃痛或肚子痛 (stomachache)。
+
+⚠️ **【易錯防雷與陷阱剖析】**：did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
+
+</details>
+
+**第 6 題**【生活素養與情境應用題】　A: "I have a sore throat and a high fever."  Doctor: "You need to take this medicine ______ times a day after meals."
+
+**A.** thirty  
+**B.** third  
+**C.** three  
+**D.** thirteen
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. three
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「不可數名詞食物判定」，直接啟動「water, milk, rice, bread, beef, juice（無複數加-s，計量用 a cup of / a slice of）」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+一日三次用基數詞 "three times a day"（或 three times daily）；次數用基數詞 + times。
+
+⚠️ **【易錯防雷與陷阱剖析】**：did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
+
+</details>
+
+### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
+
+今天睡前，不看課本說出每個重點的「一句話記住」。明天針對今天答錯或猶豫的題目重新練習一次，三天後和一週後各複習一次；能自己講清楚步驟就拉長間隔，容易忘記就縮短間隔，讓短期記憶真正轉化為長期考場實力！

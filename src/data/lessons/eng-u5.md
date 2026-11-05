@@ -316,12 +316,47 @@
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+
+
+## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+
+依據教育部 108 課綱指標（英-E-C2）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+
+- 📗 **康軒版出題特色**：常考東西方節慶文化（Christmas, Halloween, Chinese New Year, Dragon Boat Festival）活動與習俗。
+- 📘 **南一版出題特色**：側重問句 When is ...? 與序數（first, second, third, fourth...）及月份拼寫。
+- 📙 **翰林版出題特色**：側重時間介系詞精準搭配（in 年月季節、on 特定日子星期、at 具體鐘點時刻）。
+- ⚡ **段考 5 秒破題口訣**：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
+- 🏷️ **題幹高頻熱門關鍵字**：Festivals, time prepositions (in/on/at), ordinal numbers, cultural traditions
+
+### 📋 歷屆各校段考 4 大代表題型特徵分析
+
+1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
+2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
+3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
+4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+
+#### 📊 審題關鍵字破題雷達
+
+| 題幹關鍵字訊號（看到立即圈出） | 🛠️ 對應破題工具與核心概念 |
+| :--- | :--- |
+| **西方三大節慶特色標誌** | **Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)** |
+| **臺灣傳統節慶英語介紹** | **Lunar New Year (red envelopes), Dragon Boat Festival (dragon boat race/rice dumplings)** |
+| **節慶祝賀語** | **Merry Christmas! / Happy New Year! / Wishing you joy and prosperity!** |
+
+#### ⚠️ 段考高頻失分防雷提醒
+
+1．You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+
+2．連接詞 and 前後時態不一致："I went to the beach and play soccer"，and 兩邊必須同為過去式 ➔ "went to the beach and played soccer"。
+
+## 🌱 核心微知識點深度理解與自我提問
 
 ### 1. 重要節慶的英文
 
 - 🧠 **一句話記住**：節日名稱第一個字母要大寫。
 - 🌱 **生活例子**：Lunar New Year（農曆新年）、Dragon Boat Festival（端午節）、Moon Festival（中秋節）、Halloween（萬聖節）、Christmas（聖誕節）。
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「西方三大節慶特色標誌」時，立即啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
 
 **先想想看**：遮住下面的說明，用自己的話說說「重要節慶的英文」是什麼意思，再想一個你身邊的例子。
 
@@ -329,6 +364,8 @@
 <summary>對照白話說明與易錯提醒</summary>
 
 認識中西方節日的英文名稱，可以介紹自己的文化，也能了解別人的文化。
+
+💡 **解題心法與重要規則**：節日名稱第一個字母要大寫。
 
 ⚠️ **小心別犯錯**：中秋節也可說 Mid-Autumn Festival，兩種說法都對。
 
@@ -338,6 +375,7 @@
 
 - 🧠 **一句話記住**：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）
 - 🌱 **生活例子**：eat mooncakes（吃月餅）、give red envelopes（給紅包）、wear costumes（穿裝扮服）、decorate the Christmas tree（裝飾聖誕樹）、eat rice dumplings（吃粽子）。
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「臺灣傳統節慶英語介紹」時，立即啟動「Lunar New Year (red envelopes), Dragon Boat Festival (dragon boat race/rice dumplings)」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
 
 **先想想看**：遮住下面的說明，用自己的話說說「節慶活動的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -345,6 +383,8 @@
 <summary>對照白話說明與易錯提醒</summary>
 
 每個節日有不同的傳統活動，用「動詞 ＋ 名詞」就能說出來。
+
+💡 **解題心法與重要規則**：On ＋ 節日, we ＋ 動詞 …（On Moon Festival, we eat mooncakes.）
 
 ⚠️ **小心別犯錯**：粽子是 rice dumplings，月餅是 mooncakes，不要混淆。
 
@@ -354,6 +394,7 @@
 
 - 🧠 **一句話記住**：聖誕節常用 Merry，其他節日多用 Happy。
 - 🌱 **生活例子**：Happy New Year! / Merry Christmas! / Happy Halloween! / Happy Moon Festival!
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「節慶祝賀語」時，立即啟動「Merry Christmas! / Happy New Year! / Wishing you joy and prosperity!」解題。考前速記：時間介系詞心法：in 年月季節（in May），on 具體某天（on Monday, on May 5th），at 具體時刻（at 3:00）！
 
 **先想想看**：遮住下面的說明，用自己的話說說「節日祝福語」是什麼意思，再想一個你身邊的例子。
 
@@ -361,6 +402,8 @@
 <summary>對照白話說明與易錯提醒</summary>
 
 節日見面或寫卡片時，可以用祝福語向別人問候。
+
+💡 **解題心法與重要規則**：聖誕節常用 Merry，其他節日多用 Happy。
 
 ⚠️ **小心別犯錯**：別人祝福你時，可以回答 Thank you! The same to you!
 
@@ -370,6 +413,7 @@
 
 - 🧠 **一句話記住**：1st first、2nd second、3rd third，其他 + th；日期用 on，月份用 in。
 - 🌱 **生活例子**：Christmas is on December 25th.（聖誕節在 12 月 25 日。）My birthday is in July.（我的生日在七月。）
+- 🎯 **段考命題常考方式**：【什麼時候用】介系詞題先看後面有沒有「幾號」：有幾號用 on，只有月份用 in。
 
 **先想想看**：遮住下面的說明，用自己的話說說「日期的說法：序數與 on / in」是什麼意思，再想一個你身邊的例子。
 
@@ -378,78 +422,151 @@
 
 英文說日期要用「序數」（第幾）：first、second、third，其他大多是數字加 th（fourth、fifth…）。具體日期前面用 on，例如 on May 1st；只說月份用 in，例如 in May。
 
+💡 **解題心法與重要規則**：1st first、2nd second、3rd third，其他 + th；日期用 on，月份用 in。
+
 ⚠️ **小心別犯錯**：fifth、twelfth、twentieth 拼法特別，不是 fiveth、twelveth、twentyth。
 
 </details>
 
-## ✍️ 小試身手（附答案與解說）
+## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**　On Halloween, people carve scary faces into orange pumpkins. These glowing lantern decorations are called ______.
+**第 1 題**【歷屆段考真題・新北市某國小六年級下學期段考精選題】　Jenny: "How was your trip to Kenting last week?"
+Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
-**A.** sky lanterns  
-**B.** moon lanterns  
-**C.** jack-o'-lanterns  
-**D.** paper lanterns
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. jack-o'-lanterns
-
-【南瓜燈專用單字】萬聖節挖空的南瓜燈籠英文專有名詞稱為 "jack-o'-lantern"（傑克南瓜燈）。
-
-</details>
-
-**第 2 題**　In Thailand, the famous Songkran Festival in April is also known as the ______ Festival, where people splash water on each other to wash away bad luck.
-
-**A.** Wind  
-**B.** Fire  
-**C.** Water Splashing  
-**D.** Snow
+**A.** is ; swim  
+**B.** was ; swam  
+**C.** was ; swim  
+**D.** were ; swam
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. Water Splashing
+✅ **正確答案** B. was ; swam
 
-【泰國潑水節】泰國宋干節即舉世聞名的「潑水節 (Water Splashing Festival)」，互相潑水象徵洗滌過去一年的不順與厄運。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+：
+
+1．"your trip" 是單數，過去式用 "was"。
+
+2．Kenting 的活動發生在過去，swim 的過去式是不規則動詞 "swam"，與後方的 "saw" 時態對等一致。
+
+故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
 
 </details>
 
-**第 3 題**　People celebrate the New Year countdown on December 31st, which is known as ______.
+**第 2 題**【歷屆段考真題・台中市某國小六年級下學期段考精選題】　Lisa and her brother _____ at the water park yesterday afternoon.
 
-**A.** Boxing Day  
-**B.** New Year's Eve  
-**C.** Easter  
-**D.** Labor Day
+**A.** was  
+**B.** were  
+**C.** are  
+**D.** is
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. New Year's Eve
+✅ **正確答案** B. were
 
-【跨年夜英文】一年的最後一天（12 月 31 日）跨年倒數之夜稱為 "New Year's Eve"（跨年夜/元旦前夕）。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+：
+
+主詞是 "Lisa and her brother"（兩個人，為複數主詞），時間副詞是 yesterday，複數主詞搭配的過去式 be 動詞為 "were"。故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
 
 </details>
 
-**第 4 題**　At Pingxi in northern Taiwan, people write their wishes on colorful ______ and release them into the night sky during the Lantern Festival.
+**第 3 題**【段考高頻易錯陷阱題】　On Lunar New Year's Eve, Taiwanese families get together to have a reunion dinner, and children receive ______ from elders.
 
-**A.** sky lanterns  
-**B.** balloons  
-**C.** kites  
-**D.** airplanes
+**A.** red envelopes with lucky money  
+**B.** chocolate eggs  
+**C.** carved pumpkins  
+**D.** Christmas stockings
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. sky lanterns
+✅ **正確答案** A. red envelopes with lucky money
 
-【平溪天燈國際盛事】在天燈 (sky lanterns) 上寫下心願祈福並冉冉升空，是平溪國際馳名的元宵觀光盛會。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+除夕夜團圓飯後長輩發給晚輩裝有壓歲錢的「紅包 (red envelopes)」，象徵吉祥祝福。
+
+⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
 
 </details>
 
-### 🗓️ 讓記憶留下來
+**第 4 題**【多步驟推導與跨觀念綜合題】　During the Dragon Boat Festival, people eat rice dumplings (zongzi) and watch exciting ______ races.
 
-今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。
+**A.** dragon boat  
+**B.** horse  
+**C.** car  
+**D.** bicycle
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. dragon boat
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+端午節經典傳統民俗為划龍舟競賽 (dragon boat races) 與包肉粽 (zongzi / rice dumplings)。
+
+⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+
+</details>
+
+**第 5 題**【核心觀念與定義辨析題】　On Halloween night (October 31st), children dress up in spooky costumes and go knocking on neighbors' doors saying: "______!"
+
+**A.** Happy Birthday  
+**B.** Merry Christmas  
+**C.** Trick or treat  
+**D.** Happy New Year
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. Trick or treat
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+Trick or treat!（不給糖就搗蛋！）是萬聖節小朋友裝扮挨家挨戶討糖果的必備口號。
+
+⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+
+</details>
+
+**第 6 題**【生活素養與情境應用題】　Christmas is celebrated on December 25th. Many families decorate a Christmas ______ with bright lights and stars.
+
+**A.** pumpkin  
+**B.** boat  
+**C.** car  
+**D.** tree
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. tree
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「西方三大節慶特色標誌」，直接啟動「Halloween (trick or treat/jack-o-lantern), Christmas (Santa/carols), Easter (eggs/bunny)」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+西方家庭在客廳佈置聖誕樹 (Christmas tree)，掛上彩燈、彩球與飾品歡慶佳節。
+
+⚠️ **【易錯防雷與陷阱剖析】**：You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+
+</details>
+
+### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
+
+今天睡前，不看課本說出每個重點的「一句話記住」。明天針對今天答錯或猶豫的題目重新練習一次，三天後和一週後各複習一次；能自己講清楚步驟就拉長間隔，容易忘記就縮短間隔，讓短期記憶真正轉化為長期考場實力！

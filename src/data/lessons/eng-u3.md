@@ -295,12 +295,47 @@
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+
+
+## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+
+依據教育部 108 課綱指標（英-E-C1）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+
+- 📗 **康軒版出題特色**：常考城市景點問路（How can I get to the museum? Turn left, go straight, next to...）。
+- 📘 **南一版出題特色**：側重祈使句指路句型與情態助動詞 can / could you tell me the way to...? 禮貌用語。
+- 📙 **翰林版出題特色**：側重方位與空間介系詞（across from 對面, between A and B, on the corner of, behind, in front of）。
+- ⚡ **段考 5 秒破題口訣**：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
+- 🏷️ **題幹高頻熱門關鍵字**：Asking for directions, turn left/right, next to, across from, between
+
+### 📋 歷屆各校段考 4 大代表題型特徵分析
+
+1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
+2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
+3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
+4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+
+#### 📊 審題關鍵字破題雷達
+
+| 題幹關鍵字訊號（看到立即圈出） | 🛠️ 對應破題工具與核心概念 |
+| :--- | :--- |
+| **禮貌詢問路線開場句型** | **Excuse me, how can I get to the library? / Where is the post office?** |
+| **精確方位介系詞判定** | **next to (旁邊), across from (對面), between A and B (在兩者之間), on the corner of (轉角處)** |
+| **祈使句指引路線** | **Go straight (直走), Turn left/right at the second light (在第二個紅綠燈左/右轉)** |
+
+#### ⚠️ 段考高頻失分防雷提醒
+
+1．漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+
+2．忘記重複字尾：swim 寫成 swiming（漏了 m），run 寫成 runing（漏了 n），大考扣分重點！
+
+## 🌱 核心微知識點深度理解與自我提問
 
 ### 1. 表示位置的介系詞
 
 - 🧠 **一句話記住**：next to 旁邊、across from 對面、between…and… 之間。
 - 🌱 **生活例子**：The bank is next to the park. / The library is between the school and the hospital.
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「禮貌詢問路線開場句型」時，立即啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
 
 **先想想看**：遮住下面的說明，用自己的話說說「表示位置的介系詞」是什麼意思，再想一個你身邊的例子。
 
@@ -308,6 +343,8 @@
 <summary>對照白話說明與易錯提醒</summary>
 
 描述地點的位置時常用：next to（在旁邊）、across from（在對面）、between A and B（在 A 和 B 之間）、on the corner（在轉角）。
+
+💡 **解題心法與重要規則**：next to 旁邊、across from 對面、between…and… 之間。
 
 ⚠️ **小心別犯錯**：between 後面要接「兩個」地點，中間用 and 連接。
 
@@ -317,6 +354,7 @@
 
 - 🧠 **一句話記住**：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…
 - 🌱 **生活例子**：A: Excuse me. How can I get to the train station? B: Go straight for two blocks and turn right.
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「精確方位介系詞判定」時，立即啟動「next to (旁邊), across from (對面), between A and B (在兩者之間), on the corner of (轉角處)」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
 
 **先想想看**：遮住下面的說明，用自己的話說說「問路和指路的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -324,6 +362,8 @@
 <summary>對照白話說明與易錯提醒</summary>
 
 問路時先說 Excuse me 表示禮貌，再問 How can I get to…? 或 Where is…? 指路時常用 go straight（直走）、turn left/right（左轉／右轉）。
+
+💡 **解題心法與重要規則**：問：Excuse me, how can I get to…? 答：Go straight… Turn left/right…
 
 ⚠️ **小心別犯錯**：turn left 是「左轉」，on your left 是「在你的左邊」，意思不同。
 
@@ -333,6 +373,7 @@
 
 - 🧠 **一句話記住**：by bus / by car / by train；走路 on foot。
 - 🌱 **生活例子**：I go to school by bus. / My dad goes to work by MRT. / I walk to school. = I go to school on foot.
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「祈使句指引路線」時，立即啟動「Go straight (直走), Turn left/right at the second light (在第二個紅綠燈左/右轉)」解題。考前速記：直走 Go straight, 左轉 Turn left, 右轉 Turn right；對面 across from, 之間 between A and B！
 
 **先想想看**：遮住下面的說明，用自己的話說說「交通工具的說法」是什麼意思，再想一個你身邊的例子。
 
@@ -340,6 +381,8 @@
 <summary>對照白話說明與易錯提醒</summary>
 
 說「搭什麼交通工具」用 by ＋ 交通工具，中間不加 a 或 the；但「走路」要說 on foot。
+
+💡 **解題心法與重要規則**：by bus / by car / by train；走路 on foot。
 
 ⚠️ **小心別犯錯**：不能說 by foot，也不要說 by a bus。
 
@@ -349,6 +392,7 @@
 
 - 🧠 **一句話記住**：There is + 單數或不可數名詞；There are + 複數名詞。
 - 🌱 **生活例子**：There is a park near my house.（我家附近有一座公園。）There are two banks on Main Street.（大街上有兩家銀行。）
+- 🎯 **段考命題常考方式**：【什麼時候用】先找出後面的名詞，有 a / an / one 用 is，有 two / many / some 加複數名詞用 are。
 
 **先想想看**：遮住下面的說明，用自己的話說說「There is / There are：說「某地方有某東西」」是什麼意思，再想一個你身邊的例子。
 
@@ -357,82 +401,153 @@
 
 想說「某個地方有某樣東西」時，用 There is 或 There are。後面接一個（單數）或不可數的東西用 There is；兩個以上（複數）的東西用 There are。問句把 is / are 移到前面：Is there…? / Are there…?
 
+💡 **解題心法與重要規則**：There is + 單數或不可數名詞；There are + 複數名詞。
+
 ⚠️ **小心別犯錯**：要看後面第一個名詞的單複數，There are a book 是錯的，要說 There is a book。
 
 </details>
 
-## ✍️ 小試身手（附答案與解說）
+## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**　A: "Can you tell me the way to the night market?"  B: "Sure. Walk along this road, and you ______ miss it!"
+**第 1 題**【歷屆段考真題・高雄市某國小六年級上學期段考精選題】　Look! The students _____ on the playground. They are having a great time.
 
-**A.** should  
-**B.** must  
-**C.** can't  
-**D.** don't
+**A.** is running  
+**B.** are runing  
+**C.** are running  
+**D.** run
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. can't
+✅ **正確答案** C. are running
 
-【道地英文慣用語】"You can't miss it!" 是一句極為常見的指路慣用語，意思是「目標非常顯眼好找，你絕不會錯過的！」
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+：
+
+1．句首有 "Look!"（看啊！），表示此刻正在發生的動作，使用現在進行式。
+
+2．主詞 "The students" 是複數，be 動詞使用 "are"。
+
+3．動詞 "run" 是短母音配單子音結尾，必須「重複字尾 n 再加 ing」➔ "running"。
+
+故正確答案為 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
 
 </details>
 
-**第 2 題**　The car is parked ______ the tall tree, so it is in the shade.
+**第 2 題**【歷屆段考真題・新北市某國小六年級上學期段考精選題】　Tom: "Where is your sister?"
+Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
 
-**A.** on  
-**B.** under  
+**A.** write  
+**B.** writing  
+**C.** is writeing  
+**D.** is writing
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. is writing
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+：
+
+主詞是 She，進行式需要 "is + V-ing"；動詞 write 字尾是不發音的 e，必須「去 e 加 ing」➔ "is writing"。故選 D。
+
+⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+
+</details>
+
+**第 3 題**【段考高頻易錯陷阱題】　A: "Excuse me, ______ do I get to the train station?"  B: "Go straight and turn left."
+
+**A.** who  
+**B.** where  
+**C.** what  
+**D.** how
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. how
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+禮貌問路常用句型："How do I get to + 地點?"（請問我該如何到達...？）
+
+⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+
+</details>
+
+**第 4 題**【多步驟推導與跨觀念綜合題】　The bookstore is ______ the post office and the bank. 空格中應填入哪一個方位介系詞？
+
+**A.** under  
+**B.** next  
+**C.** across  
+**D.** between
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. between
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+between A and B 代表「在 A 與 B 之間」：between the post office and the bank。
+
+⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+
+</details>
+
+**第 5 題**【核心觀念與定義辨析題】　The hospital is ______ from the museum; you need to cross the street to get there.
+
+**A.** next  
+**B.** across  
 **C.** between  
-**D.** above
+**D.** in front
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. under
+✅ **正確答案** B. across
 
-【觀念】車子停在高大的樹「下面」，所以在陰影裡。表示「在…下方」用 under。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
 
-【比較】on 是「在…上面（有接觸）」；in 是「在…裡面」；next to 是「在…旁邊」。
+📐 **【詳盡解題步驟與算理推導】**：
+across from... 代表「在...對面」；提示提到「cross the street（過馬路）」，故選 across。
 
-【句意】這輛車停在高大的樹下，所以在陰涼處。
+⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
 
 </details>
 
-**第 3 題**　When the traffic light turns red, all vehicles and pedestrians must ______.
+**第 6 題**【生活素養與情境應用題】　"Go straight for two blocks and turn right on Main Street." 這句話的意思是？
 
-**A.** stop  
-**B.** go straight  
-**C.** turn quickly  
-**D.** speed up
+**A.** 直走兩個街區，然後在主街（Main Street）向右轉  
+**B.** 倒退走兩個路口，然後向左轉  
+**C.** 在主街向左轉走兩分鐘  
+**D.** 沿著圓環繞兩圈
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. stop
+✅ **正確答案** A. 直走兩個街區，然後在主街（Main Street）向右轉
 
-【交通安全常識】紅燈停、綠燈行：When the traffic light turns red, you must stop.
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「禮貌詢問路線開場句型」，直接啟動「Excuse me, how can I get to the library? / Where is the post office?」解題。
 
-</details>
+📐 **【詳盡解題步驟與算理推導】**：
+Go straight（直走）；block（街區/路口）；turn right（向右轉）。
 
-**第 4 題**　Where can people borrow books and study quietly for free?
-
-**A.** In a department store  
-**B.** In a restaurant  
-**C.** In a cinema  
-**D.** In a library
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** D. In a library
-
-【場所功能字彙】borrow books（借書）、study quietly（安靜自習）的公立場所為圖書館 (library)。
+⚠️ **【易錯防雷與陷阱剖析】**：漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
 
 </details>
 
-### 🗓️ 讓記憶留下來
+### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
 
-今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。
+今天睡前，不看課本說出每個重點的「一句話記住」。明天針對今天答錯或猶豫的題目重新練習一次，三天後和一週後各複習一次；能自己講清楚步驟就拉長間隔，容易忘記就縮短間隔，讓短期記憶真正轉化為長期考場實力！

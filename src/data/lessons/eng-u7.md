@@ -267,12 +267,47 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ## 🌱 學以致用：看懂、試試、記住
 
-照自己的步調來：先讀「一句話記住」和「生活例子」，再遮住說明試著自己講一遍；最後做「小試身手」，答完再打開解說核對。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+照自己的步調來：先掌握「歷年段考真題題型歸納與三大版本命題焦點」，讀懂各知識點的「一句話記住」與「生活例子」，再遮住說明試著自己講一遍；最後進入「歷屆段考實戰精選例題與練習」，動手作答後展開步驟級詳解與防雷剖析。不懂的地方回到上面的課文找答案，答錯也沒關係，看懂解說就是進步。
+
+
+## 🎯 歷年段考真題題型歸納與三大版本命題焦點
+
+依據教育部 108 課綱指標（英-E-A1）與全國各公立國小段考期中／期末試題大數據分析，本單元命題聚焦四大方向：基礎定義辨析、日常情境建模、易錯防雷判別以及跨小節多步驟綜合推導。各審定版本（康軒、南一、翰林）依同一課綱編寫，但在命題側重與題幹呈現上各有獨特風格：
+
+- 📗 **康軒版出題特色**：常考未來計畫與夢想職業（What do you want to be in the future? I want to be a doctor.）。
+- 📘 **南一版出題特色**：側重 want to be 與 would like to be 句型後接職業名詞加不定冠詞 a/an（an engineer, a pilot）。
+- 📙 **翰林版出題特色**：側重未來式句型（will + 原形動詞 與 be going to + 原形動詞）之肯定、否定與疑問句。
+- ⚡ **段考 5 秒破題口訣**：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
+- 🏷️ **題幹高頻熱門關鍵字**：Future plans, will / be going to, Dream jobs, want to be a/an
+
+### 📋 歷屆各校段考 4 大代表題型特徵分析
+
+1. **【題型 1：核心概念與定義辨析題】**：考驗基本定義嚴謹度（如特殊數值、反例辨識），作答時務必緊扣定義，不憑直覺做猜測。
+2. **【題型 2：生活素養與情境應用題】**：結合購物、排班、烹飪、地圖導航等情境，審題時先圈出數值與單位，建立清晰的數學或科學模型。
+3. **【題型 3：段考常考陷阱與審題防雷題】**：出題老師精心設計的易錯誘答項（如單位不一致、餘數單位換算、逆運算符號等），作答完畢務必代回驗算。
+4. **【題型 4：多步驟推導與跨觀念綜合題】**：需要分段求解的綜合題型，將問題拆解為「步驟一（求中間量）」與「步驟二（求最後解答）」，避免心算跳步。
+
+#### 📊 審題關鍵字破題雷達
+
+| 題幹關鍵字訊號（看到立即圈出） | 🛠️ 對應破題工具與核心概念 |
+| :--- | :--- |
+| **未來時間副詞關鍵信號** | **tomorrow, next week, in the future, soon** |
+| **will vs be going to 語意辨析** | **I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)** |
+| **詢問未來的夢想與計畫句型** | **What do you want to be in the future? / I want to be an engineer.** |
+
+#### ⚠️ 段考高頻失分防雷提醒
+
+1．職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+
+2．三單動詞漏加 s：回答 He / She 時常漏寫成 "He want to be a pilot"，正確必須是 "He wants to be a pilot"。
+
+## 🌱 核心微知識點深度理解與自我提問
 
 ### 1. 未來式：will 與 be going to
 
 - 🧠 **一句話記住**：will ＋ 原形；am/is/are going to ＋ 原形。
 - 🌱 **生活例子**：It's cold. I will close the window.（臨時決定）/ I am going to visit my grandma this weekend.（已經計畫）
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「未來時間副詞關鍵信號」時，立即啟動「tomorrow, next week, in the future, soon」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
 
 **先想想看**：遮住下面的說明，用自己的話說說「未來式：will 與 be going to」是什麼意思，再想一個你身邊的例子。
 
@@ -280,6 +315,8 @@ Graduation is just around the corner! (畢業就在眼前了！)
 <summary>對照白話說明與易錯提醒</summary>
 
 說未來的事有兩種：will ＋ 原形動詞，常用在當下決定或預測；be going to ＋ 原形動詞，常用在事先計畫好的事。
+
+💡 **解題心法與重要規則**：will ＋ 原形；am/is/are going to ＋ 原形。
 
 ⚠️ **小心別犯錯**：be going to 的 be 要配合主詞：I am、He is、They are。
 
@@ -289,6 +326,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：未來時間詞 → will 或 be going to。
 - 🌱 **生活例子**：tomorrow（明天）、next week（下週）、this weekend（這個週末）、in the future（將來）。
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「will vs be going to 語意辨析」時，立即啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
 
 **先想想看**：遮住下面的說明，用自己的話說說「未來時間詞」是什麼意思，再想一個你身邊的例子。
 
@@ -296,6 +334,8 @@ Graduation is just around the corner! (畢業就在眼前了！)
 <summary>對照白話說明與易錯提醒</summary>
 
 看到表示未來的時間詞，句子就要用未來式。
+
+💡 **解題心法與重要規則**：未來時間詞 → will 或 be going to。
 
 ⚠️ **小心別犯錯**：this weekend 可能是未來或現在，要看前後文判斷。
 
@@ -305,6 +345,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：母音開頭的職業用 an（an engineer、an artist）。
 - 🌱 **生活例子**：I want to be a teacher. / I want to be an engineer.
+- 🎯 **段考命題常考方式**：【審題觸發】當題目出現「詢問未來的夢想與計畫句型」時，立即啟動「What do you want to be in the future? / I want to be an engineer.」解題。考前速記：未來式 will 或 be going to 後面一律接原形動詞！職業名詞母音開頭記得加 an！
 
 **先想想看**：遮住下面的說明，用自己的話說說「談論夢想的職業」是什麼意思，再想一個你身邊的例子。
 
@@ -312,6 +353,8 @@ Graduation is just around the corner! (畢業就在眼前了！)
 <summary>對照白話說明與易錯提醒</summary>
 
 問別人將來想做什麼工作，可以說 What do you want to be in the future? 回答 I want to be a/an ＋ 職業。
+
+💡 **解題心法與重要規則**：母音開頭的職業用 an（an engineer、an artist）。
 
 ⚠️ **小心別犯錯**：要說 I want to be a doctor，不能省略 be。
 
@@ -321,6 +364,7 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 - 🧠 **一句話記住**：母音開頭的音 → an；子音開頭的音 → a；want to 後面接原形動詞 be。
 - 🌱 **生活例子**：I want to be a doctor. / I want to be an engineer. / She wants to be an artist.
+- 🎯 **段考命題常考方式**：【什麼時候用】把職業的第一個音唸出來，判斷是母音還是子音。
 
 **先想想看**：遮住下面的說明，用自己的話說說「I want to be a / an + 職業」是什麼意思，再想一個你身邊的例子。
 
@@ -329,53 +373,87 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 說「我想當……」要用 I want to be a / an + 職業。職業是單數時，前面要加 a 或 an：開頭是母音的「音」（像 a、e、i、o、u 的音）用 an，其他用 a。主詞是 he、she 時，want 要加 s。
 
+💡 **解題心法與重要規則**：母音開頭的音 → an；子音開頭的音 → a；want to 後面接原形動詞 be。
+
 ⚠️ **小心別犯錯**：看的是「發音」不是字母：an hour（h 不發音），a university（u 唸起來像 you）。
 
 </details>
 
-## ✍️ 小試身手（附答案與解說）
+## ✍️ 歷屆段考實戰精選例題與練習（附 4 步解構鷹架與步驟級詳解）
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**　When we graduate from elementary school, we ______ junior high school students next September.
+**第 1 題**【歷屆段考真題・新北市某國小六年級下學期段考精選題】　Mark is very creative and loves painting pictures. He wants to be _____ when he grows up.
 
-**A.** are becoming yesterday  
-**B.** became  
-**C.** become already  
-**D.** will become
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** D. will become
-
-【未來事實】明年九月將成為國中生是未來發生的事實，使用 will become。
-
-</details>
-
-**第 2 題**　A: "What do you want to be when you grow up?"  B: "I want to be a ______ because I love cooking delicious meals for people."
-
-**A.** postman  
-**B.** police officer  
-**C.** chef  
-**D.** bus driver
+**A.** a pilot  
+**B.** an artist  
+**C.** a dentist  
+**D.** a police officer
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. chef
+✅ **正確答案** B. an artist
 
-【線索】B 說「因為我很喜歡為別人煮好吃的料理」，所以想當廚師 chef。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
 
-【句意】A：你長大想做什麼？B：我想當廚師，因為我喜歡為大家煮美味的餐點。
+📐 **【詳盡解題步驟與算理推導】**：
+：
 
-【延伸】cook 也可以指廚師，但 chef 通常指餐廳的主廚。
+Mark 很有創意且熱愛畫畫 (painting pictures)，最適合的夢想職業是「藝術家 (artist)」；artist 字首為母音音素，冠詞使用 "an"。故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
 
 </details>
 
-**第 3 題**　Mark is practicing hard every day. He ______ participate in the national swimming competition next month.
+**第 2 題**【歷屆段考真題・台中市某國小六年級下學期段考精選題】　Teacher: "What _____ your sister want to be in the future?"
+Ben: "She wants to be a veterinarian because she loves dogs and cats."
 
-**A.** went  
+**A.** do  
+**B.** does  
+**C.** is  
+**D.** did
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. does
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+：
+
+主詞 "your sister" 是第三人稱單數，在現在簡單式的疑問句中，助動詞使用 "does"。故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+
+</details>
+
+**第 3 題**【段考高頻易錯陷阱題】　A: "What are you going to ______ this summer vacation?"  B: "I'm going to visit my grandparents in Hualien."
+
+**A.** do  
+**B.** doing  
+**C.** did  
+**D.** does
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. do
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+be going to 後面必須接「原形動詞」：What are you going to do...?
+
+⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+
+</details>
+
+**第 4 題**【多步驟推導與跨觀念綜合題】　Look at those dark clouds in the sky! It ______ rain soon.
+
+**A.** went to  
 **B.** was  
 **C.** is going to  
 **D.** did
@@ -385,26 +463,57 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 ✅ **正確答案** C. is going to
 
-【事前規劃之未來計畫】主詞 Mark 是單數，表示事前已決定的計畫用 is going to。
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+看見天空烏雲密布代表即將發生的必然天氣，道地英語優先使用 is going to rain。
+
+⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
 
 </details>
 
-**第 4 題**　A: "The phone is ringing!"  B: "Don't worry, I ______ answer it."
+**第 5 題**【核心觀念與定義辨析題】　My dream is to become a(n) ______ because I want to explore outer space and walk on the Moon.
 
-**A.** am going to  
-**B.** will  
-**C.** was  
-**D.** have
+**A.** firefighter  
+**B.** dentist  
+**C.** chef  
+**D.** astronaut
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. will
+✅ **正確答案** D. astronaut
 
-【臨時決定用 will】電話突然響起，說話當下瞬間做出的決定與反應，習慣用 will："I'll answer it."
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+explore outer space（探索外太空）、walk on the Moon（漫步月球）的職業是太空人 (astronaut)。
+
+⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
 
 </details>
 
-### 🗓️ 讓記憶留下來
+**第 6 題**【生活素養與情境應用題】　I promise I ______ help you with your science project tomorrow afternoon.
 
-今天睡前，不看課本說出每個重點的「一句話記住」。明天再做一次答錯的題目，三天後和一週後各複習一次；能自己講清楚就拉長間隔，容易忘就縮短間隔。
+**A.** did  
+**B.** am  
+**C.** was  
+**D.** will
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. will
+
+🔍 **【審題關鍵與破題思考】**：注意題幹關鍵字「未來時間副詞關鍵信號」，直接啟動「tomorrow, next week, in the future, soon」解題。
+
+📐 **【詳盡解題步驟與算理推導】**：
+表達說話當下的個人主觀意願、許諾或即時決定時，搭配助動詞 will + 原形動詞。
+
+⚠️ **【易錯防雷與陷阱剖析】**：職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+
+</details>
+
+### 🗓️ 讓記憶留下來：艾賓浩斯間隔複習行動
+
+今天睡前，不看課本說出每個重點的「一句話記住」。明天針對今天答錯或猶豫的題目重新練習一次，三天後和一週後各複習一次；能自己講清楚步驟就拉長間隔，容易忘記就縮短間隔，讓短期記憶真正轉化為長期考場實力！

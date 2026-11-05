@@ -15,7 +15,7 @@ for (const unit of audit.units) {
   assert.equal(duplicate, undefined);
   assert.equal(count(baseline), unit.baselineCharacters);
   assert.equal(count(addition), unit.addedCharacters);
-  assert.ok(unit.addedCharacters >= unit.baselineCharacters * 0.1, unit.unitId);
+  assert.ok(unit.addedCharacters >= unit.baselineCharacters * 0.3, `${unit.unitId} must have at least 30% growth`);
   assert.ok(!addition.includes('undefined'), unit.unitId);
   const html = renderToStaticMarkup(React.createElement(ReactMarkdown, { rehypePlugins: [rehypeLessonDisclosures], children: addition }));
   assert.equal((html.match(/<details>/g) || []).length, unit.disclosures, unit.unitId);
