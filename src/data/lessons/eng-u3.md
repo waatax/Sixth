@@ -326,9 +326,13 @@
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．漏掉 be 動詞：許多學生直接寫 "I playing soccer"，缺少了 be 動詞，正確必須是 "I am playing soccer"！
+1．between 後面漏掉 and：between 必須搭配 and（between A and B），不可寫成 between A with B。
 
-2．忘記重複字尾：swim 寫成 swiming（漏了 m），run 寫成 runing（漏了 n），大考扣分重點！
+2．across from 漏掉 from：在...對面必須是 across from，不能只寫 across。
+
+3．turn right 與 on your right 混用：動詞轉彎直接用 Turn right（不加 on）；表示建築物位置才用 It's on your right。
+
+4．next to 漏掉 to：緊鄰旁邊是 next to，不可單獨只寫 next。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -412,56 +416,109 @@
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・高雄市某國小六年級上學期段考精選題】　Look! The students _____ on the playground. They are having a great time.
+**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期期末考精選題】　A: "Excuse me, ______ do I get to the Central Train Station?"  B: "Go straight for two blocks and turn left on Sun Road. It's on your right."
 
-**A.** is running  
-**B.** are runing  
-**C.** are running  
-**D.** run
+**A.** what  
+**B.** how  
+**C.** where  
+**D.** why
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. are running
+✅ **正確答案** B. how
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-1．句首有 "Look!"（看啊！），表示此刻正在發生的動作，使用現在進行式。
+1．答句給出了具體的行走指路步驟（直走、左轉）。
 
-2．主詞 "The students" 是複數，be 動詞使用 "are"。
+2．詢問「如何前往某個地點」的標準句型為 "How do I get to + 地點?"。
 
-3．動詞 "run" 是短母音配單子音結尾，必須「重複字尾 n 再加 ing」➔ "running"。
+3．若用 where，句型應為 "Where is the Central Train Station?"（不接 do I get to）。
 
-故正確答案為 C。
+故選 B。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 2 題**【歷屆段考真題・新北市某國小六年級上學期段考精選題】　Tom: "Where is your sister?"
-Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
+**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　Look at the map. The bakery is located ______ the flower shop and the post office on First Street.
 
-**A.** write  
-**B.** writing  
-**C.** is writeing  
-**D.** is writing
+**A.** next  
+**B.** across  
+**C.** between  
+**D.** on
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** D. is writing
+✅ **正確答案** C. between
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-主詞是 She，進行式需要 "is + V-ing"；動詞 write 字尾是不發音的 e，必須「去 e 加 ing」➔ "is writing"。故選 D。
+1．題幹中出現 "the flower shop AND the post office"（花店「和」郵局）。
+
+2．表示位於兩者之間的標準片語是 "between A and B"。
+
+故選 C。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　A: "Excuse me, ______ do I get to the train station?"  B: "Go straight and turn left."
+**第 3 題**【歷屆段考真題・新北市某國小六年級上學期第二次段考精選題】　The city library is right ______ from the fire station. You just need to cross the street to get there.
+
+**A.** next  
+**B.** behind  
+**C.** across  
+**D.** between
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. across
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．後方句子提示 "You just need to cross the street"（你只需要過馬路）。
+
+2．與介系詞 from 搭配表示「在...正對面」的片語為 "across from"。
+
+故選 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期期末考精選題】　A: "Is there a convenience store near here?"  B: "Yes, ______ a 7-Eleven on the corner of Park Road."
+
+**A.** they are  
+**B.** there is  
+**C.** there are  
+**D.** it has
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. there is
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．問句使用 "Is there..." 進行存在提問。
+
+2．答句所指為單數名詞 "a 7-Eleven"，回答應使用單數存在句型 "Yes, there is..."。
+
+故正確答案為 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　A: "Excuse me, ______ do I get to the train station?"  B: "Go straight and turn left."
 
 **A.** who  
 **B.** where  
@@ -473,7 +530,7 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
 
 ✅ **正確答案** D. how
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 禮貌問路常用句型："How do I get to + 地點?"（請問我該如何到達...？）
@@ -482,7 +539,7 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
 
 </details>
 
-**第 4 題**【段考高頻易錯陷阱題】　The bookstore is ______ the post office and the bank. 空格中應填入哪一個方位介系詞？
+**第 6 題**【核心觀念與定義辨析題】　The bookstore is ______ the post office and the bank. 空格中應填入哪一個方位介系詞？
 
 **A.** under  
 **B.** next  
@@ -494,52 +551,10 @@ Amy: "She is in her bedroom. She _____ a letter to her pen pal now."
 
 ✅ **正確答案** D. between
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 3: Asking for & Giving Directions, City Places & Spatial Prepositions」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 between A and B 代表「在 A 與 B 之間」：between the post office and the bank。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　The hospital is ______ from the museum; you need to cross the street to get there.
-
-**A.** next  
-**B.** across  
-**C.** between  
-**D.** in front
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** B. across
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-across from... 代表「在...對面」；提示提到「cross the street（過馬路）」，故選 across。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　"Go straight for two blocks and turn right on Main Street." 這句話的意思是？
-
-**A.** 直走兩個街區，然後在主街（Main Street）向右轉  
-**B.** 倒退走兩個路口，然後向左轉  
-**C.** 在主街向左轉走兩分鐘  
-**D.** 沿著圓環繞兩圈
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** A. 直走兩個街區，然後在主街（Main Street）向右轉
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 3：日常生活作息與現在進行式 (Present Continuous) 句型」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-Go straight（直走）；block（街區/路口）；turn right（向右轉）。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 

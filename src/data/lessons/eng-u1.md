@@ -366,9 +366,13 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．th 的有聲與無聲辨析：考題最愛考發音分類！「think, thank, three, tooth」是無聲 /θ/（舌尖輕咬吐氣）；「this, that, they, mother」是有聲 /ð/（聲帶振動）。
+1．7:45 誤寫成 a quarter to seven：7:45 是「差 15 分到 8 點」，必須寫 eight，不能寫 seven！
 
-2．ea 的短音例外：bread, head, ready 中的 ea 發短音 /ɛ/，與 clean, read 中的長音 /i/ 不同。
+2．頻率副詞位置放錯：寫成 "He always is late."（錯誤！正確是 "He is always late."）。
+
+3．第三人稱單數忘記加 -es：如 "My brother brush his teeth"（錯誤！brush 字尾 -sh 必須加 -es 變成 brushes）。
+
+4．時間介系詞混淆：具體鐘點誤用 in（如 in 6:30 錯誤，必須用 at 6:30）。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -452,53 +456,113 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期段考精選題】　Which of the following words has a DIFFERENT vowel sound from the other three?
+**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期段考精選題】　A: "What time is it right now?"  B: "It's 7:15." 請問下列哪一個選項是 7:15 最道地的英語時間表達法？
 
-**A.** cake  
-**B.** lake  
-**C.** back  
-**D.** name
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. back
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：運用 Magic e 自然拼讀規則，字尾有不發音的 e 時，前面母音發字母長音（cake /keɪk/）；閉音節發短音（back /bæk/）。
-
-📐 **【詳盡解題步驟與算理推導】**：
-• cake, lake, name 的 a_e 結構皆發長母音 /e/。
-
-• back 的 a 處於閉音節，發短母音 /æ/。
-
-故發音與眾不同的是 C（back）。
-
-⚠️ **【易錯防雷與陷阱剖析】**：長短母音辨析：閉音節單一母音發短音，字尾 a_e, i_e, o_e 發長音，作答時在心中念出音標確認。
-
-</details>
-
-**第 2 題**【歷屆段考真題・新北市某國小六年級上學期段考精選題】　Read the sentence: "The dolphin took a photo with the smart elephant." How is the letter combination "ph" pronounced in these words?
-
-**A.** /p/  
-**B.** /f/  
-**C.** /b/  
-**D.** /h/
+**A.** It's a quarter to seven.  
+**B.** It's a quarter past seven.  
+**C.** It's half past seven.  
+**D.** It's fifteen to eight.
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. /f/
+✅ **正確答案** B. It's a quarter past seven.
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：子音組合拼讀規則：字母組合「ph」固定發 /f/ 音（如 dolphin, photo, elephant）。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：英語時間表達：15 分鐘為 a quarter，30 分鐘為 half；超過幾分用 past，差幾分用 to。
 
 📐 **【詳盡解題步驟與算理推導】**：
-在英語拼讀規則中，子音組合「ph」固定發 /f/ 的聲音（如 phone, photo, dolphin, elephant）。故選 B。
+1．7:15 表示 7 點過了一刻鐘（15 分鐘）。
 
-⚠️ **【易錯防雷與陷阱剖析】**：拼讀規則防雷：ph 視為單一子音音素 /f/，切勿拆開讀成 /p/ 或 /h/。
+2．英語中「一刻鐘」為 a quarter，「過了幾點」用介系詞 past。
+
+3．因此 7:15 道地說法是 "It's a quarter past seven."。
+
+A 選項是 6:45；C 選項是 7:30。
+
+故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：介系詞方向陷阱：7:15 是 a quarter past seven（7點過了一刻）；7:45 是 a quarter to eight（差一刻8點），切勿混淆！
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　A: "What time is it?"  B: "It's 7:15."  另一種道地的英語時間表達法是？
+**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期段考精選題】　Tina is an excellent student. She ______ finishes her homework before taking a rest, and she ______ late for school.
+
+**A.** always ; is never  
+**B.** is always ; never is  
+**C.** never ; always is  
+**D.** always ; never is
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. always ; is never
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：分析句子語境「hard-working（勤奮的）」，選擇代表高頻率肯定態度的頻率副詞 always（總是）。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．第一空格：finishes 是一般動詞，頻率副詞放在一般動詞「前面」，故為 always finishes。
+
+2．第二空格：is 是 be 動詞，頻率副詞放在 be 動詞「後面」，故為 is never late。
+
+3．綜合兩空格：always ; is never。
+
+故正確答案為 A。
+
+⚠️ **【易錯防雷與陷阱剖析】**：語意與頻率量表陷阱：rarely、never、seldom 皆代表極低頻率或否定語氣，與勤奮學生的前文語境相反。
+
+</details>
+
+**第 3 題**【歷屆段考真題・新北市某國小六年級上學期第一次段考精選題】　My elder brother ______ his teeth carefully twice a day ______ the morning and before going to bed.
+
+**A.** brush ; in  
+**B.** brushes ; in  
+**C.** brush ; at  
+**D.** brushes ; on
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. brushes ; in
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 1: Daily Routines, Time Expressions & Frequency Adverbs」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．主詞 My elder brother 是第三人稱單數，現在式動詞 brush 字尾是 -sh，必須加 -es 變成 brushes。
+
+2．在早晨、下午、晚上的時段固定搭配介系詞 in，即 "in the morning"。
+
+故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期段考精選題】　A: "______ does your father play tennis with his friends?"  B: "Twice a week."
+
+**A.** How many  
+**B.** What time  
+**C.** How often  
+**D.** Where
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. How often
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 1: Daily Routines, Time Expressions & Frequency Adverbs」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．答句 "Twice a week"（一週兩次）表示活動進行的「頻率次數」。
+
+2．英語中專門用來詢問發生頻率的疑問詞組是 "How often"（多久一次）。
+
+故選 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　A: "What time is it?"  B: "It's 7:15."  另一種道地的英語時間表達法是？
 
 **A.** It's a quarter to seven.  
 **B.** It's a quarter past seven.  
@@ -519,7 +583,7 @@ a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一
 
 </details>
 
-**第 4 題**【多步驟推導與跨觀念綜合題】　I usually wake up ______ 6:30 ______ the morning. 空格中依序應填入哪一組時間介系詞？
+**第 6 題**【多步驟推導與跨觀念綜合題】　I usually wake up ______ 6:30 ______ the morning. 空格中依序應填入哪一組時間介系詞？
 
 **A.** at; in  
 **B.** in; at  
@@ -537,48 +601,6 @@ a quarter 代表 15 分鐘；past 代表「過」；7:15 即為「7 點過了一
 具體鐘點時間用 at（at 6:30）；一日中的早中晚用 in（in the morning / in the afternoon）；具體某一天或星期用 on。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：介系詞混淆防雷：鐘點時間 at 6:30，特定時段 in the morning，具體星期 on Monday，切勿填錯順序。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　Tina is a hard-working student. She ______ finishes her homework before dinner.
-
-**A.** rarely  
-**B.** never  
-**C.** seldom  
-**D.** always
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** D. always
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：分析句子語境「hard-working（勤奮的）」，選擇代表高頻率肯定態度的頻率副詞 always（總是）。
-
-📐 **【詳盡解題步驟與算理推導】**：
-由「hard-working（勤奮的）」可知她「總是 (always)」在晚餐前完成功課；never（從不）、seldom（很少）不合語境。
-
-⚠️ **【易錯防雷與陷阱剖析】**：語意與頻率量表陷阱：rarely、never、seldom 皆代表極低頻率或否定語氣，與勤奮學生的前文語境相反。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　頻率副詞在句子中的標準文法位置是？例如在一般動詞與 be 動詞旁時：
-
-**A.** 在 be 動詞之後，在一般動詞之前  
-**B.** 在 be 動詞之前，在一般動詞之後  
-**C.** 永遠只能放在句尾最後一個字  
-**D.** 永遠只能放在句首第一個字
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** A. 在 be 動詞之後，在一般動詞之前
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
-
-📐 **【詳盡解題步驟與算理推導】**：
-「be 後動前，助動中間」：He is always happy. / He always plays tennis.
-
-⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
 
 </details>
 

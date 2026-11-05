@@ -385,9 +385,13 @@
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．across from 漏掉 from：在...對面是「across from」，常有題目出「The bank is across the school」缺少 from。
+1．Did 後面動詞又寫成過去式：題目問 "Did you ______ (see) the movie?"，學生誤選 saw，正確必須選原形 see！
 
-2．on your right 介系詞用錯：在你的右手邊介系詞用「on」，不可用 in 或 at。
+2．不規則動詞胡亂加 -ed：把 buy 寫成 buyed（正確是 bought）；把 go 寫成 goed（正確是 went）。
+
+3．Be 動詞單複數配錯：主詞為 They 誤用 was（正確是 They were excited）。
+
+4．疑問詞過去式句型助動詞漏掉：問句寫成 "Where you went yesterday?"（錯誤！必須加助動詞 did 變成 "Where did you go yesterday?"）。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -471,59 +475,113 @@
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期段考精選題】　Dialogue Practice:
-Tourist: "Excuse me, how can I get to the Central Library?"
-Police Officer: "Go straight along Sun Street for one block. Turn right at the traffic light. The library is _____ the post office and the bank."
+**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期段考精選題】　Yesterday afternoon, Emily ______ a delicious chocolate cake for her mother's birthday party.
 
-**A.** next  
-**B.** between  
-**C.** across  
-**D.** under
+**A.** bake  
+**B.** bakes  
+**C.** baked  
+**D.** baking
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. between
+✅ **正確答案** C. baked
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-句型中後面出現了 "the post office AND the bank"（兩者之間），標準句型為「between A and B」（在 A 與 B 之間）。故選 B。
+1．句子開頭有明確的過去時間副詞 "Yesterday afternoon"（昨天下午）。
+
+2．句子時態為過去簡單式，主要動詞 bake 字尾有 e，過去式直接加 -d 變成 baked。
+
+故選 C。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 2 題**【歷屆段考真題・台中市某國小六年級上學期段考精選題】　Choose the correct sentence:
+**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　A: "Did you ______ any sea turtles when you went snorkeling in Xiaoliuqiu last weekend?"  B: "Yes, I ______ three of them!"
 
-**A.** Turn to left at the second corner.  
-**B.** The museum is on your right side. You cannot miss it.  
-**C.** How do I get the train station?  
-**D.** Go straight and turning right.
+**A.** see ; saw  
+**B.** saw ; see  
+**C.** see ; see  
+**D.** saw ; saw
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. The museum is on your right side. You cannot miss it.
+✅ **正確答案** A. see ; saw
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-• A 項：Turn left 即可，不加 to。
+1．前句中有助動詞 Did，依照英語文法「助動詞後面一律接原形動詞」，故第一個空格必須填原形 see。
 
-• B 項："The museum is on your right side. You cannot miss it." 文法語意完全正確！
+2．答句是肯定句直述句，描述過去看見的事實，動詞要用過去式，see 的過去式是不規則動詞 saw。
 
-• C 項：get to the train station 缺少 to。
+3．組合為：see ; saw。
 
-• D 項：祈使句對等連接，應為 Turn right。
+故選 A。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 3 題**【歷屆段考真題・新北市某國小六年級上學期段考精選題】　Kevin: "Where ______ you go last night?"  Leo: "I ______ to the night market with my family."
+
+**A.** do ; go  
+**B.** did ; went  
+**C.** did ; go  
+**D.** was ; went
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. did ; went
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．時間副詞 "last night"（昨晚）指過去時間。
+
+2．問句主動詞是 go（一般動詞），疑問句必須用過去式助動詞 did 引導。
+
+3．答句為過去肯定直述句，go 的不規則過去式是 went。
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+⚠️ **【易錯防雷與陷阱剖析】**：助動詞原形動詞陷阱：問句或否定句中一旦出現 did 或 didn't，後方的主要動詞必須一律「還原為原形動詞」！
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　動詞 "go" 的過去式不規則變化是？
+**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期段考精選題】　The basketball players ______ very tired after the championship game yesterday, but they ______ extremely happy.
+
+**A.** were ; were  
+**B.** was ; was  
+**C.** are ; are  
+**D.** was ; were
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. were ; were
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．時間副詞 yesterday 表過去時態。
+
+2．主詞 "The basketball players"（籃球員們）是複數名詞。
+
+3．複數主詞對應的過去式 be 動詞是 were。
+
+故選 A。
+
+⚠️ **【易錯防雷與陷阱剖析】**：助動詞原形動詞陷阱：問句或否定句中一旦出現 did 或 didn't，後方的主要動詞必須一律「還原為原形動詞」！
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　動詞 "go" 的過去式不規則變化是？
 
 **A.** goes  
 **B.** goed  
@@ -535,16 +593,16 @@ Police Officer: "Go straight along Sun Street for one block. Turn right at the t
 
 ✅ **正確答案** D. went
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went to the zoo.
 
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+⚠️ **【易錯防雷與陷阱剖析】**：Did 後面動詞又寫成過去式：題目問 "Did you ______ (see) the movie?"，學生誤選 saw，正確必須選原形 see！
 
 </details>
 
-**第 4 題**【段考高頻易錯陷阱題】　Yesterday, Emily ______ a delicious chocolate cake with her grandmother.
+**第 6 題**【核心觀念與定義辨析題】　Yesterday, Emily ______ a delicious chocolate cake with her grandmother.
 
 **A.** bakes  
 **B.** baked  
@@ -556,54 +614,12 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 
 ✅ **正確答案** B. baked
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 2: Past Actions, Weekend Activities & Irregular Verbs」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 時間副詞為「Yesterday（昨天）」，動詞應使用過去式；bake 字尾已有 e，直接加 d 變成 baked。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　A: "Did you see any monkeys at the zoo last Sunday?"  B: "No, I ______."
-
-**A.** wasn't  
-**B.** don't  
-**C.** didn't  
-**D.** haven't
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. didn't
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 2：社區探索、問路指引與方位介系詞應用」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-問句以助動詞 "Did you...?" 開頭，否定簡答一律用 "No, I didn't."
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　The boys ______ very excited when their team won the championship yesterday.
-
-**A.** were  
-**B.** was  
-**C.** are  
-**D.** is
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** A. were
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
-
-📐 **【詳盡解題步驟與算理推導】**：
-主詞 The boys 為複數，過去式 be 動詞應選 were（單數用 was）。
-
-⚠️ **【易錯防雷與陷阱剖析】**：助動詞原形動詞陷阱：問句或否定句中一旦出現 did 或 didn't，後方的主要動詞必須一律「還原為原形動詞」！
 
 </details>
 

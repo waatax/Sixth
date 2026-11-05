@@ -363,9 +363,13 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．did 後面動詞又寫過去式：許多學生寫 "Did you went to the park?"，大錯特錯！助動詞 did 出現，動詞必須回復原形，正確為 "Did you go to the park?"。
+1．吃藥寫成 eat medicine：中文說「吃藥」，英文必須用 "take medicine"！
 
-2．否定句 didn't 後接過去式："He didn't ate dinner"，正確為 "He didn't eat dinner"。
+2．should 後面動詞加 -s 或 -ed：如 "You should sees a doctor"（錯誤！should 後面只能接原形動詞 see）。
+
+3．headache 冠詞漏掉：一般身體輕微不適習慣加冠詞 a，如 have a cold, have a headache, have a fever。
+
+4．牙痛找錯醫生：牙痛 (toothache) 必須看牙醫 (dentist)，不能只寫 vet (獸醫)。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -449,50 +453,111 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期期末考精選題】　Leo: "_____ you see the famous movie last weekend?"
-Ken: "Yes, I did. It was really exciting!"
+**第 1 題**【歷屆段考真題・臺北市某國小六年級上學期期末考精選題】　Doctor: "You have a high fever and a terrible sore throat. You caught a bad flu. You should ______ in bed and you shouldn't ______ cold drinks."
 
-**A.** Do  
-**B.** Are  
-**C.** Did  
-**D.** Were
+**A.** rest ; drink  
+**B.** rested ; drank  
+**C.** rests ; drinking  
+**D.** resting ; drinks
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** C. Did
+✅ **正確答案** A. rest ; drink
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-句尾有過去時間副詞 "last weekend"，且動詞是原形動詞 "see"，詢問過去發生的動作使用助動詞 "Did"；答句中也是 "Yes, I did."。故選 C。
+1．should 與 shouldn't 均為情態助動詞。
+
+2．根據文法規則，助動詞後方必須無條件接「原形動詞」。
+
+3．兩個空格皆需原形動詞：rest ; drink。
+
+故選 A。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　My grandparents _____ in Tainan three years ago, but now they live in Taipei.
+**第 2 題**【歷屆段考真題・高雄市某國小六年級上學期期末考精選題】　A: "What's wrong with Kevin? He is holding his cheek and crying."  B: "He has a serious ______. He needs to see a dentist right away."
 
-**A.** live  
-**B.** lived  
-**C.** are living  
-**D.** will live
+**A.** headache  
+**B.** stomachache  
+**C.** toothache  
+**D.** sore throat
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. lived
+✅ **正確答案** C. toothache
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-時間副詞是 "three years ago"（三年前），表示過去存在的狀態，動詞 live 的過去式直接加 d 變成 "lived"。故選 B。
+1．題幹提到 "holding his cheek"（捂著臉頰）以及 "see a dentist"（看牙醫）。
+
+2．牙醫 (dentist) 專門治療牙齒相關疾病，故填 toothache（牙痛）。
+
+故選 C。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　A: "What's wrong with you?"  B: "I have a terrible ______; my head hurts so much."
+**第 3 題**【歷屆段考真題・新北市某國小六年級上學期期末考精選題】　When you are sick and the doctor prescribes some pills for you, you should remember to ______ on time after meals.
+
+**A.** eat medicine  
+**B.** take medicine  
+**C.** drink pills  
+**D.** chew drugs
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. take medicine
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．在英語慣用語中，「吃藥」的固定動詞搭配一律使用 "take medicine"。
+
+2．使用 "eat medicine" 屬於典型的中式英文語病。
+
+故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 4 題**【歷屆段考真題・臺中市某國小六年級上學期期末考精選題】　According to the healthy food guidelines (MyPlate), which of the following food items belongs to the "Dairy (乳製品)" category?
+
+**A.** Fried chicken  
+**B.** Brown rice  
+**C.** Cheddar cheese and milk  
+**D.** Broccoli
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. Cheddar cheese and milk
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．Dairy 指的是由動物乳汁提煉製成的乳製品。
+
+2．起司 (cheese) 與牛奶 (milk) 是典型的乳製品。
+
+3．炸雞屬於 Protein；糙米屬於 Grains；花椰菜屬於 Vegetables。
+
+故正確答案為 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　A: "What's wrong with you?"  B: "I have a terrible ______; my head hurts so much."
 
 **A.** headache  
 **B.** toothache  
@@ -504,7 +569,7 @@ Ken: "Yes, I did. It was really exciting!"
 
 ✅ **正確答案** A. headache
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 由 "my head hurts（頭好痛）" 可知症狀為頭痛 (headache)。-ache 字尾表疼痛。
@@ -513,7 +578,7 @@ Ken: "Yes, I did. It was really exciting!"
 
 </details>
 
-**第 4 題**【段考高頻易錯陷阱題】　Doctor: "You caught a bad cold. You should ______ plenty of warm water and stay in bed."
+**第 6 題**【核心觀念與定義辨析題】　Doctor: "You caught a bad cold. You should ______ plenty of warm water and stay in bed."
 
 **A.** drank  
 **B.** drinking  
@@ -525,52 +590,10 @@ Ken: "Yes, I did. It was really exciting!"
 
 ✅ **正確答案** C. drink
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 4: Health, Common Illnesses & Modal Auxiliaries for Advice」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 情態助動詞 should（應該）後面必須接「原形動詞」drink。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　Tom ate too much spicy food and junk food at the night market, and now he has a ______.
-
-**A.** stomachache  
-**B.** broken leg  
-**C.** runny ear  
-**D.** cold shoulder
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** A. stomachache
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-吃了太多辛辣垃圾食物容易引發胃痛或肚子痛 (stomachache)。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　A: "I have a sore throat and a high fever."  Doctor: "You need to take this medicine ______ times a day after meals."
-
-**A.** thirty  
-**B.** third  
-**C.** three  
-**D.** thirteen
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. three
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 4：過去式時態 (Past Tense)、動詞變化與時間副詞」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-一日三次用基數詞 "three times a day"（或 three times daily）；次數用基數詞 + times。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 

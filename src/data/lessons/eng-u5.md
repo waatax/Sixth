@@ -347,9 +347,13 @@
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．You 搭配 was："Where was you yesterday?" 錯誤！You 一律搭配 were ➔ "Where were you yesterday?"。
+1．節慶日期介系詞混淆：只寫月份用 in（in December）；寫出幾月幾號必須用 on（on December 25th）。
 
-2．連接詞 and 前後時態不一致："I went to the beach and play soccer"，and 兩邊必須同為過去式 ➔ "went to the beach and played soccer"。
+2．粽子與月餅英文拼寫錯誤：粽子是 rice dumplings，月餅是 mooncakes，不可寫反。
+
+3．萬聖節與復活節混淆：Halloween 是南瓜燈與糖果；Easter 是彩蛋 (Easter eggs) 與復活節兔子。
+
+4．節慶專有名詞大寫遺漏：Lunar New Year, Halloween, Christmas 字首必須大寫。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -433,25 +437,24 @@
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・新北市某國小六年級下學期段考精選題】　Jenny: "How was your trip to Kenting last week?"
-Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
+**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期段考精選題】　On Lunar New Year's Eve, Taiwanese families get together to have a big reunion dinner. Children are happiest because they can receive ______ from their parents and grandparents.
 
-**A.** is ; swim  
-**B.** was ; swam  
-**C.** was ; swim  
-**D.** were ; swam
+**A.** pumpkin pies  
+**B.** red envelopes with lucky money  
+**C.** Christmas stockings  
+**D.** scented sachets
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. was ; swam
+✅ **正確答案** B. red envelopes with lucky money
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-1．"your trip" 是單數，過去式用 "was"。
+1．農曆除夕夜 (Lunar New Year's Eve) 全家團圓吃年夜飯。
 
-2．Kenting 的活動發生在過去，swim 的過去式是不規則動詞 "swam"，與後方的 "saw" 時態對等一致。
+2．傳統習俗中長輩會發給晚輩壓歲錢紅包，英文是 "red envelopes with lucky money"。
 
 故選 B。
 
@@ -459,28 +462,80 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 </details>
 
-**第 2 題**【歷屆段考真題・台中市某國小六年級下學期段考精選題】　Lisa and her brother _____ at the water park yesterday afternoon.
+**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期段考精選題】　During the Dragon Boat Festival in June, people across Taiwan participate in exciting dragon boat races on rivers and eat delicious ______ wrapped in bamboo leaves.
 
-**A.** was  
-**B.** were  
-**C.** are  
-**D.** is
+**A.** mooncakes  
+**B.** turkey legs  
+**C.** rice dumplings (zongzi)  
+**D.** candy canes
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. were
+✅ **正確答案** C. rice dumplings (zongzi)
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-主詞是 "Lisa and her brother"（兩個人，為複數主詞），時間副詞是 yesterday，複數主詞搭配的過去式 be 動詞為 "were"。故選 B。
+1．端午節 (Dragon Boat Festival) 最具代表性的傳統美食是用竹葉包裹的粽子。
 
-⚠️ **【易錯防雷與陷阱剖析】**：助動詞原形動詞陷阱：問句或否定句中一旦出現 did 或 didn't，後方的主要動詞必須一律「還原為原形動詞」！
+2．粽子的英文標準表達為 "rice dumplings (zongzi)"。
+
+故選 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　On Lunar New Year's Eve, Taiwanese families get together to have a reunion dinner, and children receive ______ from elders.
+**第 3 題**【歷屆段考真題・新北市某國小六年級下學期第一次段考精選題】　On Halloween night (October 31st), children dress up in scary costumes and go door-to-door shouting "______!" to collect sweet treats.
+
+**A.** Merry Christmas!  
+**B.** Happy New Year!  
+**C.** Trick-or-treat!  
+**D.** Thank you very much!
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. Trick-or-treat!
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．萬聖節夜晚兒童挨家挨戶要糖果時的標誌性口號是 "Trick-or-treat!"（不給糖就搗蛋）。
+
+故選 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期段考精選題】　Christmas is celebrated ______ December 25th every year. Many people sing carols and exchange gifts around the tree.
+
+**A.** in  
+**B.** at  
+**C.** on  
+**D.** for
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. on
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．"December 25th" 是具體的日期（有月也有日）。
+
+2．根據時間介系詞規則，具體特定日期必須搭配介系詞 "on"。
+
+故正確答案為 C。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　On Lunar New Year's Eve, Taiwanese families get together to have a reunion dinner, and children receive ______ from elders.
 
 **A.** red envelopes with lucky money  
 **B.** chocolate eggs  
@@ -492,7 +547,7 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 ✅ **正確答案** A. red envelopes with lucky money
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 除夕夜團圓飯後長輩發給晚輩裝有壓歲錢的「紅包 (red envelopes)」，象徵吉祥祝福。
@@ -501,7 +556,7 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 </details>
 
-**第 4 題**【段考高頻易錯陷阱題】　During the Dragon Boat Festival, people eat rice dumplings (zongzi) and watch exciting ______ races.
+**第 6 題**【核心觀念與定義辨析題】　During the Dragon Boat Festival, people eat rice dumplings (zongzi) and watch exciting ______ races.
 
 **A.** dragon boat  
 **B.** horse  
@@ -513,52 +568,10 @@ Max: "It _____ wonderful! We _____ in the ocean and saw many colorful fish."
 
 ✅ **正確答案** A. dragon boat
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 5: Festivals, Cultural Customs & Traditional Celebrations」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 端午節經典傳統民俗為划龍舟競賽 (dragon boat races) 與包肉粽 (zongzi / rice dumplings)。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　On Halloween night (October 31st), children dress up in spooky costumes and go knocking on neighbors' doors saying: "______!"
-
-**A.** Happy Birthday  
-**B.** Merry Christmas  
-**C.** Trick or treat  
-**D.** Happy New Year
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. Trick or treat
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-Trick or treat!（不給糖就搗蛋！）是萬聖節小朋友裝扮挨家挨戶討糖果的必備口號。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　Christmas is celebrated on December 25th. Many families decorate a Christmas ______ with bright lights and stars.
-
-**A.** pumpkin  
-**B.** boat  
-**C.** car  
-**D.** tree
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** D. tree
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 5：假期休閒活動敘事、過去感受表達與情境對話」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-西方家庭在客廳佈置聖誕樹 (Christmas tree)，掛上彩燈、彩球與飾品歡慶佳節。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 

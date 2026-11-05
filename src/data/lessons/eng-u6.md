@@ -368,9 +368,13 @@
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．be going to 後面接名詞而非動詞：be going to 如果後面接的是地點（如 I am going to Taipei），那是「現在進行式表示即將出發」，並非未來式句型；未來式後面必須有動詞原形（如 I am going to buy a book）。
+1．dictionary 與 directory 拼寫混淆：查電話號碼是 telephone directory，查單字是 dictionary！
 
-2．will 後面加了 s 或 ing："He will goes home" 錯誤！will 是助動詞，後面必須接原形 ➔ "He will go home"。
+2．字尾加 -ly 拼寫規則錯誤：happy 變副詞要去 y 改 i 加 ly 變成 happily。
+
+3．忽略閱讀題幹中的 NOT 或 EXCEPT：題目問 "Which is NOT true?"，粗心選成正確的選項。
+
+4．閱讀測驗只看字面不看上下文：單詞有多重意思，必須依據句子語境決定真實含義。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -454,50 +458,111 @@
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期段考精選題】　Sarah: "What are your plans for the winter vacation?"
-David: "I _____ my grandparents in Hualien next Monday."
+**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期段考精選題】　When you want to look up the telephone number and address of a local dental clinic, which reference book should you check?
 
-**A.** visited  
-**B.** am going to visit  
-**C.** visit  
-**D.** was visiting
+**A.** A cookbook  
+**B.** A telephone directory  
+**C.** A dictionary  
+**D.** An English novel
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. am going to visit
+✅ **正確答案** B. A telephone directory
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-問句詢問未來的計畫 (plans)，時間副詞為 "next Monday"（下週一），表達事先規劃好的未來活動，使用 "am going to + 原形動詞" ➔ "am going to visit"。故選 B。
+1．題幹要求尋找診所的「電話號碼與地址 (telephone number and address)」。
+
+2．專門記錄電話與通訊資訊的工具書是「電話簿/工商名錄 (telephone directory)」。
+
+3．dictionary 是查單字字義發音，不可混淆。
+
+故選 B。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期段考精選題】　Don't worry. I promise I _____ you clean the classroom after school.
+**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期段考精選題】　In English word formation, adding the suffix "-ful" to a noun often creates an adjective meaning "full of". Which of the following words means "full of help or ready to give assistance"?
 
-**A.** will help  
-**B.** helped  
-**C.** am helping  
-**D.** was helping
+**A.** helpless  
+**B.** helpful  
+**C.** unhelpful  
+**D.** helping
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** A. will help
+✅ **正確答案** B. helpful
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-"I promise"（我承諾、我保證）表達說話當下對未來的承諾，使用 "will + 原形動詞" ➔ "will help"。故選 A。
+1．字首或字尾含義：-ful 表示「充滿...的」。
+
+2．"help + ful = helpful" 意思是「樂於助人的、有幫助的」。
+
+故正確答案為 B。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　When you want to find a telephone number or a specific date in a long article quickly, which reading skill should you use?
+**第 3 題**【歷屆段考真題・新北市某國小六年級下學期第一次段考精選題】　Read the sentence: "The winter in Antarctica was so *frigid* that even boiling water froze into ice in just a few seconds." What is the closest meaning of the word "*frigid*"?
+
+**A.** extremely cold  
+**B.** very warm and sunny  
+**C.** dark and noisy  
+**D.** windy and dusty
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. extremely cold
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．從上下文線索尋找破案密碼："even boiling water froze into ice in just a few seconds"（連沸水都在幾秒內結成冰塊）。
+
+2．說明南極的冬天溫度極低，寒冷至極。
+
+3．因此 "*frigid*" 的意思最接近 "extremely cold"（極度寒冷）。
+
+故選 A。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期第二次段考精選題】　The prefix "un-" in English usually means "not" or "the opposite of". Which pair of words shows this correct relationship?
+
+**A.** clean - unclean (乾淨的 - 不乾淨的)  
+**B.** happy - gladly  
+**C.** friendly - kindly  
+**D.** easy - difficult
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. clean - unclean (乾淨的 - 不乾淨的)
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．字首 "un-" 附加上去代表否定或相反意思。
+
+2．"unclean" 即為 "not clean"（不乾淨的）。
+
+故選 A。
+
+⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　When you want to find a telephone number or a specific date in a long article quickly, which reading skill should you use?
 
 **A.** Silent translation  
 **B.** Skimming (略讀主旨)  
@@ -509,7 +574,7 @@ David: "I _____ my grandparents in Hualien next Monday."
 
 ✅ **正確答案** C. Scanning (掃讀特定關鍵細節)
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 6: Reading Strategies, Word Formation & Context Clues」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 專注目光快速捕捉特定數字、專有名詞、年代等具體單一資訊的技巧稱為「掃讀 (Scanning)」。
@@ -518,7 +583,7 @@ David: "I _____ my grandparents in Hualien next Monday."
 
 </details>
 
-**第 4 題**【段考高頻易錯陷阱題】　In English word building, the prefix "un-" (like in "unhappy", "unreal", "unfair") usually means: ______.
+**第 6 題**【核心觀念與定義辨析題】　In English word building, the prefix "un-" (like in "unhappy", "unreal", "unfair") usually means: ______.
 
 **A.** not / opposite of (否定/相反)  
 **B.** again  
@@ -536,48 +601,6 @@ David: "I _____ my grandparents in Hualien next Monday."
 happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不公平），表相反否定。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　The suffix "-ful" in words like "careful", "helpful", and "colorful" turns a noun into an adjective meaning: ______.
-
-**A.** without  
-**B.** full of (充滿...的)  
-**C.** never  
-**D.** made of stone
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** B. full of (充滿...的)
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-care（小心）➔ careful（充滿小心的/仔細的）；help ➔ helpful（樂於助人的）。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　Which of the following words has the same vowel sound as the word "seat" (/i/)?
-
-**A.** bed  
-**B.** sit  
-**C.** team  
-**D.** hat
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. team
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 6：未來計畫、意向表達與未來式 (Future Tense) 文法」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-seat 中的 ea 發長母音 /i/，與 team 中的 ea 發音完全相同；sit 則為短母音 /ɪ/。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 

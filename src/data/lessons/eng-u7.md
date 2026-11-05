@@ -298,9 +298,13 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．職業冠詞 a 與 an 混淆：engineer、artist、astronaut 前面要用 an，常有題目出 a engineer 作為干擾陷阱。
+1．be going to 後面接過去式或 -ing：如 "He is going to visited"（錯誤！to 後面必須接原形動詞 visit）。
 
-2．三單動詞漏加 s：回答 He / She 時常漏寫成 "He want to be a pilot"，正確必須是 "He wants to be a pilot"。
+2．will 與 be going to 重複連用：寫出 "I will going to do"（嚴重語病！兩者二選一）。
+
+3．天氣句型混用：寫成 "How will the weather be like?"（大錯！How 不可加 like，若有 like 必須用 What）。
+
+4．be 動詞依主詞配錯：I am going to, He is going to, They are going to，be 動詞須隨主詞人稱變化。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -384,50 +388,117 @@ Graduation is just around the corner! (畢業就在眼前了！)
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・新北市某國小六年級下學期段考精選題】　Mark is very creative and loves painting pictures. He wants to be _____ when he grows up.
+**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期期末考精選題】　A: "What are you going to ______ during the upcoming summer vacation?"  B: "My family and I are going to ______ Kenting National Park for three days."
 
-**A.** a pilot  
-**B.** an artist  
-**C.** a dentist  
-**D.** a police officer
+**A.** do ; visit  
+**B.** doing ; visiting  
+**C.** did ; visited  
+**D.** do ; visited
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. an artist
+✅ **正確答案** A. do ; visit
 
 🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-Mark 很有創意且熱愛畫畫 (painting pictures)，最適合的夢想職業是「藝術家 (artist)」；artist 字首為母音音素，冠詞使用 "an"。故選 B。
+1．兩處句型皆為 "be going to + 原形動詞"。
+
+2．第一空格有 "are you going to"，後面必須接原形動詞 do。
+
+3．第二空格有 "are going to"，後面同樣必須接原形動詞 visit。
+
+4．組合為：do ; visit。
+
+故選 A。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 2 題**【歷屆段考真題・台中市某國小六年級下學期段考精選題】　Teacher: "What _____ your sister want to be in the future?"
-Ben: "She wants to be a veterinarian because she loves dogs and cats."
+**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期畢業考精選題】　Look at those heavy black clouds gathering in the sky and feel the strong wind! It ______ rain very soon.
 
-**A.** do  
-**B.** does  
-**C.** is  
-**D.** did
+**A.** is going to  
+**B.** was  
+**C.** rained  
+**D.** will be
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. does
+✅ **正確答案** A. is going to
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 7: Future Plans, Weather Forecast & Vacation Destinations」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-主詞 "your sister" 是第三人稱單數，在現在簡單式的疑問句中，助動詞使用 "does"。故選 B。
+1．題幹給出了明確的當前客觀跡象："Look at those heavy black clouds"（看那些密布的烏雲）。
+
+2．在英語文法中，根據眼前的明顯跡象推斷某事即將發生，標準句型使用 "be going to + V"。
+
+3．主詞 It 搭配 is going to rain。
+
+故選 A。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　A: "What are you going to ______ this summer vacation?"  B: "I'm going to visit my grandparents in Hualien."
+**第 3 題**【歷屆段考真題・新北市某國小六年級下學期期末考精選題】　Amy loves taking care of hurt dogs, cats, and birds. Her biggest dream is to become a ______ in the future.
+
+**A.** pilot  
+**B.** veterinarian (vet)  
+**C.** firefighter  
+**D.** chef
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. veterinarian (vet)
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．題幹提示 Amy 喜歡照顧受傷的動物（dogs, cats, and birds）。
+
+2．專門為動物看病的獸醫稱為 "veterinarian"，日常簡稱為 "vet"。
+
+故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期畢業考精選題】　下列四個關於未來時態與天氣預報的英文句子中，哪一個文法結構「完全正確」？
+
+**A.** What will the weather be like tomorrow?  
+**B.** How will the weather be like tomorrow?  
+**C.** It will rains heavily next Monday.  
+**D.** I am going to helping my sister tonight.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. What will the weather be like tomorrow?
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 7: Future Plans, Weather Forecast & Vacation Destinations」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．A 選項 "What will the weather be like...?" 結構完全正確。
+
+2．B 選項 How 不可與 like 連用，應改為 "How will the weather be...?"。
+
+3．C 選項 will 後面動詞必須用原形 rain，不能加 -s。
+
+4．D 選項 be going to 後面動詞必須用原形 help，不能加 -ing。
+
+故正確答案為 A。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　A: "What are you going to ______ this summer vacation?"  B: "I'm going to visit my grandparents in Hualien."
 
 **A.** do  
 **B.** doing  
@@ -448,7 +519,7 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 
 </details>
 
-**第 4 題**【段考高頻易錯陷阱題】　Look at those dark clouds in the sky! It ______ rain soon.
+**第 6 題**【核心觀念與定義辨析題】　Look at those dark clouds in the sky! It ______ rain soon.
 
 **A.** went to  
 **B.** was  
@@ -460,52 +531,10 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 
 ✅ **正確答案** C. is going to
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 7：夢想職業、生涯探索與志向表述句型」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 7: Future Plans, Weather Forecast & Vacation Destinations」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 看見天空烏雲密布代表即將發生的必然天氣，道地英語優先使用 is going to rain。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　My dream is to become a(n) ______ because I want to explore outer space and walk on the Moon.
-
-**A.** firefighter  
-**B.** dentist  
-**C.** chef  
-**D.** astronaut
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** D. astronaut
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-explore outer space（探索外太空）、walk on the Moon（漫步月球）的職業是太空人 (astronaut)。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　I promise I ______ help you with your science project tomorrow afternoon.
-
-**A.** did  
-**B.** am  
-**C.** was  
-**D.** will
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** D. will
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-表達說話當下的個人主觀意願、許諾或即時決定時，搭配助動詞 will + 原形動詞。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 

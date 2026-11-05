@@ -291,9 +291,13 @@ In our daily lives, we are always comparing things:
 
 #### ⚠️ 段考高頻失分防雷提醒
 
-1．最高級漏掉 the：學生常寫 "He is tallest boy"，正確必須有 the ➔ "He is the tallest boy in our class"。
+1．最高級漏掉 the：題目寫 "He is tallest boy in class"，缺少 the 被扣分，必須是 "He is THE tallest boy"。
 
-2．不規則變化寫成 regular："gooder" 或 "goodest" 完全不存在！正確是 good ➔ better ➔ best；bad ➔ worse ➔ worst。
+2．比較級重複加 more：如 more bigger（大錯特錯！加了 -er 就不能再加 more，二選一）。
+
+3．good 與 bad 寫成規則變化：寫出 gooder 或 badder（零分！正確是 better, best, worse, worst）。
+
+4．雙寫字尾漏掉：big 變比較級是 bigger、最高級是 biggest（漏掉雙寫 g）。
 
 ## 🌱 核心微知識點深度理解與自我提問
 
@@ -377,45 +381,26 @@ In our daily lives, we are always comparing things:
 
 先自己作答，再打開「看答案與解說」核對。
 
-**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期畢業考精選題】　The blue whale is _____ animal that has ever lived on the Earth.
+**第 1 題**【歷屆段考真題・臺北市某國小六年級下學期畢業考精選題】　Mount Everest (珠穆朗瑪峰) in the Himalayas is ______ mountain in the entire world.
 
-**A.** large  
-**B.** larger than  
-**C.** the largest  
-**D.** most large
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** C. the largest
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-範圍是全世界地球上所有動物相比（三者以上），使用最高級句型「the + 最高級形容詞」；large 字尾已有 e，直接加 st 變成 "the largest"。故選 C。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期畢業考精選題】　Peter's math score is _____ than Kevin's, but Kevin is _____ runner in the class.
-
-**A.** good ; the fast  
-**B.** better ; the fastest  
-**C.** more good ; fastest  
-**D.** best ; faster
+**A.** higher  
+**B.** the highest  
+**C.** highest  
+**D.** more higher
 
 <details>
 <summary>看答案與解說</summary>
 
-✅ **正確答案** B. better ; the fastest
+✅ **正確答案** B. the highest
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
-1．第一個空格後面有 "than"，需使用比較級；good 的不規則比較級是 "better"。
+1．範圍是 "in the entire world"（在全世界），三者以上的全域比較要用「最高級」。
 
-2．第二個空格後面有範圍 "in the class"，需使用最高級「the + fastest」。
+2．high 的最高級是 highest，且最高級前面必須加上定冠詞 the。
+
+3．故正確答案為 "the highest"。
 
 故選 B。
 
@@ -423,7 +408,88 @@ In our daily lives, we are always comparing things:
 
 </details>
 
-**第 3 題**【生活素養與情境應用題】　Mount Everest (珠穆朗瑪峰) is the ______ mountain in the world.
+**第 2 題**【歷屆段考真題・高雄市某國小六年級下學期畢業考精選題】　An elephant is much ______ than a sheep, but a blue whale is the ______ of all animals.
+
+**A.** bigger ; biggest  
+**B.** bigger ; largest  
+**C.** bigger ; larger  
+**D.** big ; largest
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. bigger ; largest
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：子音組合拼讀規則：字母組合「ph」固定發 /f/ 音（如 dolphin, photo, elephant）。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．第一空格後有 than，表示大象與羊兩者比較，要用比較級 bigger。
+
+2．第二空格前有 the，後有 "of all animals"，表示全體三者以上比較，要用最高級 largest。
+
+3．組合為：bigger ; largest。
+
+故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：拼讀規則防雷：ph 視為單一子音音素 /f/，切勿拆開讀成 /p/ 或 /h/。
+
+</details>
+
+**第 3 題**【歷屆段考真題・新北市某國小六年級下學期期末考精選題】　This science experiment is ______ than the one we did last week. It needs more time and patience.
+
+**A.** more difficult  
+**B.** difficult  
+**C.** most difficult  
+**D.** difficulter
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. more difficult
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．後方有 than，需用比較級。
+
+2．difficult 是三個音節的長單詞，比較級規則為在前面加上 more，即 "more difficult"。
+
+故選 A。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 4 題**【歷屆段考真題・臺中市某國小六年級下學期畢業考精選題】　下列哪一組形容詞的「原級 ➔ 比較級 ➔ 最高級」不規則變化「完全正確」？
+
+**A.** good ➔ gooder ➔ goodest  
+**B.** bad ➔ worse ➔ worst  
+**C.** many ➔ more ➔ manyest  
+**D.** big ➔ bigger ➔ most big
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. bad ➔ worse ➔ worst
+
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
+
+📐 **【詳盡解題步驟與算理推導】**：
+1．bad 的不規則變化為：bad ➔ worse ➔ worst，B 完全正確。
+
+2．A 正確應為 good ➔ better ➔ best。
+
+3．C 正確應為 many ➔ more ➔ most。
+
+4．D 正確應為 big ➔ bigger ➔ biggest。
+
+故選 B。
+
+⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
+
+</details>
+
+**第 5 題**【多步驟推導與跨觀念綜合題】　Mount Everest (珠穆朗瑪峰) is the ______ mountain in the world.
 
 **A.** high  
 **B.** higher  
@@ -435,7 +501,7 @@ In our daily lives, we are always comparing things:
 
 ✅ **正確答案** C. highest
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
+🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「Unit 8: Adjectives: Comparatives, Superlatives & Global Landmarks」進行條理推導。
 
 📐 **【詳盡解題步驟與算理推導】**：
 單音節形容詞 high，在三者以上比較時最高級加 -est，前面搭配 the：the highest mountain。
@@ -444,7 +510,7 @@ In our daily lives, we are always comparing things:
 
 </details>
 
-**第 4 題**【段考高頻易錯陷阱題】　An elephant is much ______ than a dog.
+**第 6 題**【核心觀念與定義辨析題】　An elephant is much ______ than a dog.
 
 **A.** heavier  
 **B.** heavy  
@@ -462,48 +528,6 @@ In our daily lives, we are always comparing things:
 heavy 字尾為子音 + y，去 y 加 ier 變成 heavier；比較級前可加 much 強調程度「重得多」。
 
 ⚠️ **【易錯防雷與陷阱剖析】**：拼讀規則防雷：ph 視為單一子音音素 /f/，切勿拆開讀成 /p/ 或 /h/。
-
-</details>
-
-**第 5 題**【多步驟推導與跨觀念綜合題】　The Pacific Ocean is ______ than the Atlantic Ocean.
-
-**A.** large  
-**B.** larger  
-**C.** largest  
-**D.** more large
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** B. larger
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-有 than 時使用比較級。large 字尾已有 e，直接加 r 變成 larger。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
-
-</details>
-
-**第 6 題**【核心觀念與定義辨析題】　This science experiment is ______ than the one we did last week.
-
-**A.** most interesting  
-**B.** more interesting  
-**C.** interesting  
-**D.** interestinger
-
-<details>
-<summary>看答案與解說</summary>
-
-✅ **正確答案** B. more interesting
-
-🔍 **【審題關鍵與破題思考】**：審題關鍵：先圈出題幹已知條件與所求目標，連結「單元 8：形容詞比較級與最高級 (Comparatives & Superlatives)」進行條理推導。
-
-📐 **【詳盡解題步驟與算理推導】**：
-三音節以上形容詞（in-ter-est-ing），比較級在前面加上 more：more interesting than。
-
-⚠️ **【易錯防雷與陷阱剖析】**：常考誘答防雷：作答時仔細比對各選項差異，特別留意題幹限定條件或反向詢問，避免因跳步計算或看漏關鍵字而失分。
 
 </details>
 
