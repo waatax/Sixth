@@ -18,6 +18,7 @@ import {
   getUnitVersionFocus
 } from './unitHighlights.js';
 import { conceptBridges } from '../conceptBridges.js';
+import { examSupplements } from './examSupplements.js';
 // Keep original option letters aligned with worked explanations in printable notes.
 
 // 段考講義真題：四選一正確答案位置平衡
@@ -142,8 +143,18 @@ function enrichNoteWithScope(note) {
   const normalizedHighlights = (highlightInfo.highlights || []).map((h, idx) => normalizeHighlightItem(h, idx));
   const bridge = conceptBridges[note.unitId] || {};
 
+  const extra = examSupplements[note.unitId] || {};
+  // 講義資料中所有文字的字面反斜線 n 都改成真正換行（\neq、\newline 等公式指令不受影響）
+  const fixNewlines = (v) => (typeof v === 'string' ? v.replace(/\\n(?![a-z])/g, '\n')
+    : Array.isArray(v) ? v.map(fixNewlines)
+      : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, fixNewlines(x)])) : v);
+  note = fixNewlines(note);
   return {
     ...note,
+    // 解析裡的字面反斜線 n 改成真正換行（\neq 等公式指令不受影響）
+    pastExamWalkthroughs: (note.pastExamWalkthroughs || []).map((w) => ({ ...w, explanation: String(w.explanation || '').replace(/\\n(?![a-z])/g, '\n') })),
+    supplements: extra.supplements || [],
+    questionTypeGuide: extra.questionTypeGuide || [],
     examScope: meta.scope,
     examScopeLabel: meta.label,
     examWeight: meta.weight,

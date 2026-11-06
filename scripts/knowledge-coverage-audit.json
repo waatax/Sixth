@@ -1,0 +1,331 @@
+{
+  "lexiconSize": 3635,
+  "totals": {
+    "questions": 3021,
+    "lessonGaps": 0,
+    "handoutGaps": 0
+  },
+  "byUnit": {
+    "art-u1": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "art-u2": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "art-u3": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "art-u4": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "art-u5": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "art-u6": {
+      "total": 50,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "comp-u1": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "comp-u2": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "comp-u3": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "comp-u4": {
+      "total": 50,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "comp-u5": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "comp-u6": {
+      "total": 51,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u1": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u2": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u3": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u4": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u5": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u6": {
+      "total": 50,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u7": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "eng-u8": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u1": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u2": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u3": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u4": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u5": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u6": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u7": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "man-u8": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u1": {
+      "total": 44,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u10": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u11": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u12": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u2": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u3": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u4": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u5": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u6": {
+      "total": 44,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u7": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u8": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "math-u9": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "pe-u1": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "pe-u2": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "pe-u3": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "pe-u4": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "pe-u5": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "pe-u6": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u1": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u10": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u2": {
+      "total": 49,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u3": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u4": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u5": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u6": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u7": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u8": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "sci-u9": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u1": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u2": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u3": {
+      "total": 46,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u4": {
+      "total": 45,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u5": {
+      "total": 48,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u6": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u7": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    },
+    "soc-u8": {
+      "total": 47,
+      "lessonGaps": 0,
+      "handoutGaps": 0
+    }
+  },
+  "gaps": []
+}

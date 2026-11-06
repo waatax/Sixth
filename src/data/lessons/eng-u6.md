@@ -475,6 +475,16 @@ magic e 讓前面的母音發長音：cap → cape，kit → kite，hop → hope
 
 library（圖書館）、opens（開門）、closes（關門）、freezing（極冷）、boiling（極熱）。Past tense reminder: I was, you were, they were. 遇到不懂的字，先從上下文猜：It’s freezing! 前一句提到 very cold，可以推測是非常冷。
 
+## 📚 必備知識補充（題庫、講義、例題逐題回推）
+
+測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。
+
+- **Context clues**: "The path was treacherous, so we walked slowly." treacherous means dangerous and hazardous.
+- The **main idea** is the most important point or central message of a paragraph.
+- **Antonyms** are words with opposite meanings, such as brave and cowardly; synonyms have similar meanings.
+- The prefix **un-** means "not": clean → unclean, happy → unhappy.
+- stop, stay and star all begin with the same blend **st**.
+
 ## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
@@ -614,6 +624,50 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 ⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
 
 </details>
+
+## 🧭 題型教學：本單元會遇到的題型
+
+每一種題型都有自己的作答方法。先看方法，再到下面的練習題實際演練。
+
+### 選擇題
+
+1. 先看空格前後的主詞和時間詞。
+2. 判斷時態、單複數和詞性。
+3. 把答案放回句子讀一次。
+
+⚠️ **常見失分**：忽略 yesterday、every day 等時間線索。
+
+✏️ **馬上練習**：下方第 7 題。
+
+### 重組題
+
+1. 先找主詞和動詞。
+2. 大寫開頭的字放第一，標點放最後。
+3. 排好後讀一次，看文法是否正確。
+
+⚠️ **常見失分**：問句的助動詞位置放錯。
+
+✏️ **馬上練習**：下方第 18 題。
+
+### 閱讀題
+
+1. 先讀題目，再讀文章。
+2. 在文章中找到和題目關鍵字相同的句子。
+3. 答案要能在文章中找到依據。
+
+⚠️ **常見失分**：用自己的經驗回答，忽略文章內容。
+
+✏️ **馬上練習**：下方第 14 題。
+
+### 寫作題
+
+1. 先確認題目要寫什麼、寫幾句。
+2. 用學過的句型，主詞和動詞要配對。
+3. 寫完檢查大小寫、標點和拼字。
+
+⚠️ **常見失分**：只寫單字或片語，沒有寫成完整句子。
+
+✏️ **馬上練習**：下方第 20 題。
 
 ## 🧪 段考題型實戰（先作答，再看步驟）
 

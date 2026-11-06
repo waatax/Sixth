@@ -9,6 +9,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const LESSONS = path.join(ROOT, 'src/data/lessons');
 const DATA = path.join(ROOT, 'scripts/exam-practice-data');
+const COVERAGE = path.join(ROOT, 'scripts/coverage-data');
 const BASE_COMMIT = '391341b';
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 
@@ -167,6 +168,42 @@ export function renderUnit(entry, sources, startAt) {
   return { gap: gap.join('\n'), practice: practice.join('\n') };
 }
 
+// 單元會出現的題型：新題的題型，加上測驗題庫一律是選擇題
+function unitTypes(entry) {
+  const order = ['選擇', '是非', '填充', '計算', '應用', '題組', '配對', '分類', '排序', '填代號', '改錯', '重組', '閱讀', '寫作', '素養', '聽力字音'];
+  const found = new Set(['選擇', ...entry.qs.map((q) => q.k)]);
+  return order.filter((k) => found.has(k));
+}
+
+function renderCoverage(list) {
+  if (!list.length) return '';
+  return ['## 📚 必備知識補充（題庫、講義、例題逐題回推）', '', '測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。', '', ...list.map((b) => `- ${b}`), '', ''].join('\n');
+}
+
+function renderTypes(guide, startAt) {
+  const out = ['## 🧭 題型教學：本單元會遇到的題型', '', '每一種題型都有自己的作答方法。先看方法，再到下面的練習題實際演練。', ''];
+  for (const g of guide) {
+    out.push(`### ${g.type}題`, '');
+    g.steps.forEach((s, i) => out.push(`${i + 1}. ${s}`));
+    out.push('', `⚠️ **常見失分**：${g.trap}`);
+    if (g.example >= 0) out.push('', `✏️ **馬上練習**：下方第 ${startAt + g.example} 題。`);
+    out.push('');
+  }
+  return out.join('\n');
+}
+
+// 講義用：Markdown 轉成單行文字，公式保留給講義的 KaTeX 處理
+function mdToPlain(md) {
+  return String(md)
+    .split('\n')
+    .filter((l) => !/^\|\s*:?-{3}/.test(l))
+    .map((l) => (l.startsWith('|') ? l.replace(/^\||\|$/g, '').split('|').map((c) => c.trim()).join('：') : l.replace(/^[-*]\s+|^#+\s*/, '')))
+    .filter(Boolean)
+    .join('；')
+    .replace(/\*\*/g, '')
+    .replace(/；；+/g, '；');
+}
+
 export async function loadData() {
   const { SOURCES } = await import(pathToFileURL(path.join(DATA, 'sources.mjs')).href);
   const units = {};
@@ -180,7 +217,17 @@ export async function loadData() {
       if (entry.basis) units[unit].basis = entry.basis;
     }
   }
-  return { SOURCES, units };
+  // 逐題回推補齊的必備知識
+  for (const f of fs.readdirSync(COVERAGE)) {
+    if (f.startsWith('_') || !f.endsWith('.mjs')) continue;
+    const mod = await import(pathToFileURL(path.join(COVERAGE, f)).href);
+    for (const [unit, list] of Object.entries(mod.default)) {
+      if (!units[unit]) units[unit] = { gaps: [], qs: [] };
+      units[unit].coverage = [...(units[unit].coverage || []), ...list];
+    }
+  }
+  const { typeGuide } = await import(pathToFileURL(path.join(COVERAGE, '_types.mjs')).href);
+  return { SOURCES, units, typeGuide };
 }
 
 // OneDrive 同步可能短暫鎖住檔案；內容沒變就不寫，避免多餘的同步
@@ -214,7 +261,8 @@ function syncLegacyAudit() {
 }
 
 export async function build({ write = true } = {}) {
-  const { SOURCES, units } = await loadData();
+  const { SOURCES, units, typeGuide } = await loadData();
+  const supplements = {};
   const report = [];
   for (const file of fs.readdirSync(LESSONS).filter((f) => f.endsWith('.md'))) {
     const unit = file.replace('.md', '');
@@ -225,12 +273,19 @@ export async function build({ write = true } = {}) {
     let questions = (text.match(/^\*\*第 \d+ 題\*\*/gm) || []).length;
     if (entry) {
       const { gap, practice } = renderUnit(entry, SOURCES, questions + 1);
+      const types = unitTypes(entry);
+      const guide = types.map((k) => ({ type: k, ...typeGuide(unit, k), example: entry.qs.findIndex((q) => q.k === k) }));
+      const coverageMd = renderCoverage(entry.coverage || []);
+      const typeMd = renderTypes(guide, questions + 1);
+      supplements[unit] = { supplements: [...(entry.gaps || []).map((g) => `【${g.title}】${mdToPlain(g.body)}`), ...(entry.coverage || []).map(mdToPlain)], questionTypeGuide: guide.map(({ type, steps, trap }) => ({ type, steps, trap })) };
       const practiceAt = text.indexOf('## ✍️ 基礎例題熱身');
-      text = `${text.slice(0, practiceAt)}${gap}\n${text.slice(practiceAt)}`;
+      text = `${text.slice(0, practiceAt)}${gap}\n${coverageMd}${text.slice(practiceAt)}`;
       const reviewAt = text.indexOf('### 🗓️', practiceAt);
-      text = reviewAt >= 0 ? `${text.slice(0, reviewAt)}${practice}\n${text.slice(reviewAt)}` : `${text}\n\n${practice}\n`;
+      const block = `${typeMd}\n${practice}`;
+      text = reviewAt >= 0 ? `${text.slice(0, reviewAt)}${block}\n${text.slice(reviewAt)}` : `${text}\n\n${block}\n`;
       questions += entry.qs.length;
     }
+    text = fixBoldFlanking(text);
     const before = count(normalized);
     const after = count(text);
     report.push({ unitId: unit, rawBaselineCharacters: count(base), baselineCharacters: before, finalCharacters: after, growthPercent: +(((after - before) / before) * 100).toFixed(1), questions, newQuestions: entry ? entry.qs.length : 0 });
@@ -239,6 +294,7 @@ export async function build({ write = true } = {}) {
   report.sort((a, b) => a.unitId.localeCompare(b.unitId, 'en', { numeric: true }));
   if (write) {
     syncLegacyAudit();
+    writeWithRetry(path.join(ROOT, 'src/data/examNotes/examSupplements.js'), `// 由 scripts/enrich-exam-practice.mjs 產生，請改 scripts/exam-practice-data 與 scripts/coverage-data。\nexport const examSupplements = ${JSON.stringify(supplements, null, 1)};\n`);
     fs.writeFileSync(path.join(ROOT, 'scripts/exam-practice-audit.json'), `${JSON.stringify({
       metric: `Non-whitespace characters. baselineCharacters is commit ${BASE_COMMIT} after removing template filler, duplicate and misplaced questions; rawBaselineCharacters is the untouched commit.`,
       units: report,
@@ -249,6 +305,8 @@ export async function build({ write = true } = {}) {
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const report = await build();
+  // 講義補上回答各題所需的課文句子（需在課文寫入後執行）
+  execSync("node scripts/sync-handout-coverage.mjs", { cwd: ROOT, stdio: "inherit" });
   const done = report.filter((r) => r.newQuestions);
   const short = done.filter((r) => r.growthPercent < 30);
   console.log(`units with new content: ${done.length}/${report.length}`);

@@ -98,7 +98,7 @@ function renderMathText(text) {
     } catch {
       return match;
     }
-  });
+  }).replace(/\n/g, '<br>');
 }
 
 function renderDisplayFormula(formula) {
@@ -650,6 +650,15 @@ function buildHandoutHtml(handoutInfo, notesList) {
               </div>
             </div>
 
+            ${note.supplements && note.supplements.length > 0 ? `
+              <div class="section-block">
+                <div class="section-title">📚【必備知識補充（依題目逐題回推）】</div>
+                <div class="concepts-list">
+                  ${note.supplements.map(c => `<div class="concept-item">${renderMathText(c)}</div>`).join('')}
+                </div>
+              </div>
+            ` : ''}
+
             <!-- 2. 名師必背公式與解題大招 -->
             ${note.keyFormulas && note.keyFormulas.length > 0 ? `
               <div class="section-block">
@@ -681,7 +690,7 @@ function buildHandoutHtml(handoutInfo, notesList) {
             <!-- 3. 歷屆常考易錯陷阱 -->
             ${note.examPitfalls && note.examPitfalls.length > 0 ? `
               <div class="section-block">
-                <div class="section-title" style="color: #b91c1c;">⚠️【歷屆名校高頻常考易錯陷阱】</div>
+                <div class="section-title" style="color: #b91c1c;">⚠️【段考常見易錯陷阱】</div>
                 <div class="pitfalls-box">
                   ${note.examPitfalls.map(p => `<div class="pitfall-item">${renderMathText(p)}</div>`).join('')}
                 </div>
@@ -689,6 +698,15 @@ function buildHandoutHtml(handoutInfo, notesList) {
             ` : ''}
           </div>
         </div>
+
+        ${note.questionTypeGuide && note.questionTypeGuide.length > 0 ? `
+          <div class="section-block">
+            <div class="section-title">🧭【題型教學：怎麼讀題、怎麼作答】</div>
+            <div class="concepts-list">
+              ${note.questionTypeGuide.map(t => `<div class="concept-item"><strong>${t.type}</strong>：${t.steps.join(' → ')}<br>⚠️ ${t.trap}</div>`).join('')}
+            </div>
+          </div>
+        ` : ''}
 
         <!-- 4. 各校歷年真題實戰詳解 -->
         ${note.pastExamWalkthroughs && note.pastExamWalkthroughs.length > 0 ? `

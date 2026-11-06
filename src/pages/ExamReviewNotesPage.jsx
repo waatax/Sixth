@@ -1215,6 +1215,37 @@ const ExamReviewNotesPage = () => {
                             </div>
                           )}
 
+                          {focusSection === 'all' && note.supplements?.length > 0 && (
+                            <div className="note-section-block">
+                              <h3 className="note-section-title">
+                                <BookOpen size={17} style={{ color: 'var(--accent-primary)' }} />
+                                <span>📚 必備知識補充（依題目逐題回推）</span>
+                              </h3>
+                              <div className="core-concepts-list">
+                                {note.supplements.map((item, idx) => (
+                                  <div key={idx} className="core-concept-item" dangerouslySetInnerHTML={{ __html: renderMathText(item) }} />
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {focusSection === 'all' && note.questionTypeGuide?.length > 0 && (
+                            <div className="note-section-block">
+                              <h3 className="note-section-title">
+                                <BookOpen size={17} style={{ color: '#047857' }} />
+                                <span>🧭 題型教學：怎麼讀題、怎麼作答</span>
+                              </h3>
+                              <div className="core-concepts-list">
+                                {note.questionTypeGuide.map((t) => (
+                                  <div key={t.type} className="core-concept-item">
+                                    <strong>{t.type}</strong>：{t.steps.join(' → ')}
+                                    <div style={{ marginTop: 4, color: '#b91c1c' }}>⚠️ {t.trap}</div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
                           {/* 2. ⚡ 名師公式・解題大招・速記口訣 */}
                           {note.keyFormulas && note.keyFormulas.length > 0 && (
                             <div className="note-section-block">
