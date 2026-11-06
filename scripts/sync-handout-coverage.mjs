@@ -2,6 +2,7 @@
 // 同時產生課文缺口的逐題依據清單，供人工複核。
 //   node scripts/sync-handout-coverage.mjs
 import fs from 'node:fs';
+import process from 'node:process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { audit, sentences, bestEvidence } from './audit-knowledge-coverage.mjs';

@@ -176,7 +176,7 @@ export const engQuestions = {
     },
     {
       id: 'en2-8',
-      question: '动詞 "run" 的過去式是？',
+      question: '動詞 "run" 的過去式是？',
       options: ['ran', 'runned', 'running', 'runs'],
       answerIndex: 0,
       explanation: '【不規則變化】run ➔ ran ➔ run。例如：He ran very fast to catch the school bus this morning.'
@@ -225,7 +225,7 @@ export const engQuestions = {
     },
     {
       id: 'en2-15',
-      question: '动詞 "study" 的過去式變化規則是？',
+      question: '動詞 "study" 的過去式變化規則是？',
       options: ['去 y 加 ied ➔ studied', '直接加 ed ➔ studyed', '直接加 d ➔ studyd', '維持原形 ➔ study'],
       answerIndex: 0,
       explanation: '【子音 + y 的過去式變化】study 字尾為「子音 d + y」，變過去式時必須「去 y 加上 -ied」變成 studied。'
@@ -329,10 +329,10 @@ export const engQuestions = {
     },
     {
       id: 'en3-13',
-      question: 'The teacher is standing ______ the classroom, facing all the students.',
+      question: 'The teacher is standing ______ the students and talking to them.',
       options: ['in front of', 'behind', 'between', 'next'],
       answerIndex: 0,
-      explanation: '【面向全體學生方位】老師面對全班站在教室最前台，使用方位片語 in front of（在...前面）。'
+      explanation: '【面向全體學生方位】老師站在學生們的前面，用 in front of（在……前面）。\n【易錯提醒】in front of the classroom 是「在教室外面的前方」；人在教室裡的前方要說 at the front of the classroom。'
     },
     {
       id: 'en3-14',
@@ -433,7 +433,7 @@ export const engQuestions = {
     },
     {
       id: 'en4-11',
-      question: 'A: "I have a running nose and I keep sneezing."  B: "You might have ______."',
+      question: 'A: "I have a runny nose and I keep sneezing."  B: "You might have ______."',
       options: ['the flu (influenza)', 'a broken arm', 'a toothache', 'a sunburn'],
       answerIndex: 0,
       explanation: '【流感典型症狀】流鼻水 (runny nose) 與持續打噴嚏 (sneezing) 是感冒或流行性感冒 (the flu) 的常見症狀。'
@@ -579,10 +579,10 @@ export const engQuestions = {
     },
     {
       id: 'en5-15',
-      question: 'Which Taiwanese cultural festival was designated by UNESCO as a Masterpiece of Oral and Intangible Heritage of Humanity?',
+      question: 'In which Taiwanese festival do believers walk for days and hundreds of kilometers, following the goddess in a sedan chair?',
       options: ['The Mazu Pilgrimage', 'The Comic Con', 'The Strawberry Festival', 'The Book Fair'],
       answerIndex: 0,
-      explanation: '【媽祖遶境國際文化遺產】大甲媽祖與白沙屯媽祖遶境被聯合國列為世界非物質文化遺產 (Mazu Pilgrimage)。'
+      explanation: '【媽祖遶境】Mazu Pilgrimage（媽祖遶境進香），例如大甲媽祖、白沙屯媽祖，信徒跟著神轎徒步好幾天、走幾百公里。文化部已把它們登錄為重要民俗。\n【單字】walk 走路、believer 信徒、sedan chair 轎子。'
     },
     {
       id: 'en5-16',

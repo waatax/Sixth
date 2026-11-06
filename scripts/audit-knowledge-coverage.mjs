@@ -3,6 +3,7 @@
 //   node scripts/audit-knowledge-coverage.mjs            產生報告
 //   node scripts/audit-knowledge-coverage.mjs --strict   有缺口就失敗（CI 用）
 import fs from 'node:fs';
+import process from 'node:process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 

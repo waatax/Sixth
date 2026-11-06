@@ -5,6 +5,7 @@
 // 4. 每個單元實用內容成長至少 30%
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import process from 'node:process';
 import path from 'node:path';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';

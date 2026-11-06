@@ -2,6 +2,7 @@
 // 可重複執行：每次都從「基準版」重算，不會疊加。
 //   node scripts/enrich-exam-practice.mjs
 import fs from 'node:fs';
+import process from 'node:process';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';

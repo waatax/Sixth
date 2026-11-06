@@ -451,7 +451,7 @@ Dragon Boat Festival 吃粽子（rice dumplings）；Moon Festival 賞月、吃�
 
 測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。
 
-- The **Mazu Pilgrimage**（媽祖信俗）was listed by UNESCO as an Intangible Cultural Heritage in 2009.
+- The **Mazu Pilgrimage**（媽祖遶境進香）: believers walk for days and hundreds of kilometers, following the goddess in a **sedan chair**（轎子）. Taiwan lists the Dajia and Baishatun pilgrimages as important folk customs（重要民俗）.
 - Ordinal numbers: the third = **3rd**, the first = 1st, the second = 2nd, the twentieth = 20th.
 
 ## ✍️ 基礎例題熱身

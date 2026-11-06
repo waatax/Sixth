@@ -38,7 +38,7 @@ export default {
     'Colorful vegetables such as carrots and broccoli give us **vitamins and minerals**.',
   ],
   'eng-u5': [
-    'The **Mazu Pilgrimage**（媽祖信俗）was listed by UNESCO as an Intangible Cultural Heritage in 2009.',
+    'The **Mazu Pilgrimage**（媽祖遶境進香）: believers walk for days and hundreds of kilometers, following the goddess in a **sedan chair**（轎子）. Taiwan lists the Dajia and Baishatun pilgrimages as important folk customs（重要民俗）.',
     'Ordinal numbers: the third = **3rd**, the first = 1st, the second = 2nd, the twentieth = 20th.',
   ],
   'eng-u6': [
@@ -62,7 +62,7 @@ export default {
     '杯底有沒溶解的食鹽表示飽和，再加水可以繼續溶解。',
   ],
   'sci-u3': [
-    '**電熱水瓶**利用電流熱效應加熱，主要不是靠電磁鐵或馬達；電風扇、吹風機、洗衣機則有馬達。',
+    '**傳統電熱水壺**利用電流熱效應（電熱絲發熱）加熱，沒有用到電磁鐵或馬達；有電動出水功能的電熱水瓶裡面有小馬達。電風扇、吹風機、洗衣機也有馬達。',
     '奧斯特實驗：導線放在指北針正上方並與指針平行，通電後指針會偏轉；電流方向相反，偏轉方向也相反。',
     '電磁鐵要用**漆包線**，表面的絕緣漆能防止相鄰線圈互相接觸而短路。',
     '磁鐵的 N 極靠近指北針的 N 極會互相排斥；靠近 S 極會互相吸引。',
