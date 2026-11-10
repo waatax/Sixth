@@ -252,7 +252,7 @@ export const artQuestions = {
     },
     {
       id: 'ar3-2',
-      question: '古典戲劇結構大師亞里斯多德確立的「三幕劇結構 (Three-Act Structure)」，其三個幕次通常依序為？',
+      question: '編劇常用的「三幕劇結構 (Three-Act Structure)」，其三個幕次通常依序為？',
       options: ['第一幕：開端（鋪陳角色背景與引發事件） ➔ 第二幕：發展與對抗（衝突升級陷危機） ➔ 第三幕：高潮與結局（衝突解決與領悟）', '前奏 ➔ 睡覺 ➔ 吃飯', '高潮 ➔ 開端 ➔ 中間', '只有一幕講完就下台'],
       answerIndex: 0,
       explanation: '【三幕劇經典架構】起承轉合的戲劇化版本：鋪陳 (Setup) ➔ 對抗 (Confrontation) ➔ 解決 (Resolution)，是當代電影舞台劇最穩固的敘事基石。'

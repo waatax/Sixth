@@ -487,7 +487,7 @@ export const mockChallengesData = {
       challengeBadge: '🔥 臺灣特有種生態系',
       question: '【模擬挑戰・臺灣高山冰河孑遺生物】被譽為臺灣「國寶魚」、目前生活在雪霸國家公園七家灣溪冰冷清澈溪流中的冰河孑遺生物是哪一種魚類？保護其棲地的核心關鍵為何？',
       options: [
-        '臺灣櫻花鉤吻鮭；維持水溫低於 16°C、清澈水質與高溶氧量',
+        '臺灣櫻花鉤吻鮭；維持水溫低於 17°C、清澈水質與高溶氧量',
         '吳郭魚；耐高溫與汙濁水質',
         '大肚魚；消滅蚊子幼蟲孑孓',
         '草魚；大量種植水草作為飼料'
@@ -1108,7 +1108,7 @@ export const mockChallengesData = {
       isMockChallenge: true,
       challengeBadge: '🔥 節慶日期與序數詞',
       question: '【模擬挑戰・節日日期表達法】"Christmas Eve is celebrated _______ December 24th every year." Which preposition and date form is CORRECT?',
-      options: ['on (具體日期前用 on)', 'at', 'in', 'by'],
+      options: ['on', 'at', 'in', 'by'],
       answerIndex: 0,
       explanation: '【介系詞文法】具體的某月某日（如 December 24th）屬於「特定日子」，前面介系詞一律用 on！若是只有月份沒有日期（如 in December），才使用 in。'
     }
