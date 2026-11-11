@@ -338,7 +338,10 @@ export function QuestionCard({ question: q, testMode = false, onAnswered, onNext
       )}
       {result && !testMode && (
         <div className={`isl-feedback ${result.correct ? "good" : "again"}`} role="status">
-          <strong>{result.correct ? "答對了！你的想法很棒" : "差一點，我們一起弄懂"}</strong>
+          <div className="isl-feedback-top">
+            <strong>{result.correct ? "答對了！你的想法很棒" : "差一點，我們一起弄懂"}</strong>
+            <ReadAloud id={`exp-${q.key}`} text={`解析：${q.explanation}`} label="聽解析" />
+          </div>
           {!result.correct && q.type !== "pair" && (
             <p>
               正確答案：<b><Rich>{q.type === "mcq" ? q.options[q.answerIndex] : q.options[0]}</Rich></b>

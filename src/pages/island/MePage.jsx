@@ -139,12 +139,12 @@ export default function MePage() {
         </section>
       </div>
 
-      {favoriteLessons.length > 0 && (
-        <section className="isl-card" aria-labelledby="fav-title">
-          <div className="isl-card-head">
-            <h2 id="fav-title">💖 我喜歡的主題</h2>
-            <span>已收藏 {favoriteLessons.length} 課</span>
-          </div>
+      <section className="isl-card" aria-labelledby="fav-title">
+        <div className="isl-card-head">
+          <h2 id="fav-title">💖 我喜歡的主題</h2>
+          <span>已收藏 {favoriteLessons.length} 課</span>
+        </div>
+        {favoriteLessons.length > 0 ? (
           <ul className="isl-todo">
             {favoriteLessons.slice(0, 8).map((lesson) => (
               <li key={lesson.id} style={subjectVars(subjectById(lesson.subject))}>
@@ -157,8 +157,12 @@ export default function MePage() {
               </li>
             ))}
           </ul>
-        </section>
-      )}
+        ) : (
+          <p className="isl-fav-empty">
+            在微課頁面點擊「❤️ 我喜歡這課」，就能把喜愛的主題收藏在手札，還能收集「愛上探索」專屬貼紙！
+          </p>
+        )}
+      </section>
 
       <section className="isl-card" aria-labelledby="sticker-title">
         <div className="isl-card-head">

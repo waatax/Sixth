@@ -111,7 +111,7 @@ try {
       await fits(`${q.key} question`);
       await answer(q);
       await fits(`${q.key} feedback`);
-      await page.locator(".isl-feedback button").click();
+      await page.locator(".isl-feedback .isl-btn").click();
     }
     await page.locator(".isl-result").waitFor();
     await fits(`${lesson.id} result`);

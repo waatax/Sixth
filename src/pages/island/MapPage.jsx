@@ -7,9 +7,20 @@ import { useIsland } from "./IslandContext.jsx";
 import { gradeNames, subjectById, SubjectIcon, subjectVars } from "./parts.jsx";
 
 const haystack = (l) =>
-  `${l.title} ${l.goal} ${l.keywords} ${l.explanation} ${l.codes.join(" ")} ${subjectById(l.subject).name}`.toLowerCase();
+  `${l.title} ${l.goal} ${l.keywords} ${l.explanation} ${l.funFact || ""} ${l.typeGuide || ""} ${l.codes.join(" ")} ${subjectById(l.subject).name}`.toLowerCase();
 
-function Station({ lesson, progress, isNext, showGrade }) {
+const QUICK_TAGS = [
+  { label: "🧮 分數小數", val: "分數" },
+  { label: "📐 幾何面積", val: "面積" },
+  { label: "🌱 動植物生態", val: "生物" },
+  { label: "⛅ 天氣水循環", val: "天氣" },
+  { label: "📖 閱讀成語", val: "成語" },
+  { label: "🗣️ 生活英語", val: "英語" },
+  { label: "🎨 藝術童謠", val: "音樂" },
+  { label: "🦺 防災安全", val: "安全" },
+];
+
+function Station({ lesson, progress, isNext, showGrade, isFavorite }) {
   const state = lessonState(lesson, progress);
   const subject = subjectById(lesson.subject);
   const node = state.mastered ? <Star size={18} fill="currentColor" aria-hidden="true" /> : state.due ? <RotateCcw size={17} aria-hidden="true" /> : state.complete ? <Check size={19} aria-hidden="true" /> : <SubjectIcon subject={subject} size={18} />;
@@ -18,7 +29,10 @@ function Station({ lesson, progress, isNext, showGrade }) {
       <span className="isl-node">{node}</span>
       <Link to={`/explore/${lesson.id}`} className="isl-station-card">
         <span className="isl-station-text">
-          <b>{lesson.title}</b>
+          <b>
+            {lesson.title}
+            {isFavorite && <span className="isl-fav-heart" title="已收藏的主題" aria-label="已收藏的主題"> 💖</span>}
+          </b>
           <small>{lesson.goal}</small>
           <span className="isl-station-meta">
             {showGrade && <em>{gradeNames[lesson.grade - 1]}年級</em>}
@@ -65,12 +79,33 @@ export default function MapPage() {
           <button type="button" aria-label="清除搜尋" onClick={() => setQuery("")}><X size={18} aria-hidden="true" /></button>
         )}
       </label>
+      <div className="isl-search-tags" role="group" aria-label="熱門探索主題">
+        <span className="isl-search-tags-label">熱門探索：</span>
+        {QUICK_TAGS.map((t) => (
+          <button
+            type="button"
+            key={t.val}
+            className={`isl-tag-pill ${query === t.val ? "on" : ""}`}
+            onClick={() => setQuery(query === t.val ? "" : t.val)}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
       {q ? (
         <section aria-live="polite">
           <p className="isl-map-count">找到 {results.length} 課{results.length === 40 ? "以上" : ""}</p>
           {results.length ? (
             <ol className="isl-path is-search">
-              {results.map((l) => <Station key={l.id} lesson={l} progress={progress} showGrade />)}
+              {results.map((l) => (
+                <Station
+                  key={l.id}
+                  lesson={l}
+                  progress={progress}
+                  showGrade
+                  isFavorite={Boolean(island.best?.[`like:${l.id}`])}
+                />
+              ))}
             </ol>
           ) : (
             <div className="isl-empty">
@@ -104,7 +139,15 @@ export default function MapPage() {
             <span>{done}/{lessons.length}</span>
           </div>
           <ol className="isl-path">
-            {lessons.map((l) => <Station key={l.id} lesson={l} progress={progress} isNext={l.id === next.id && !lessonState(l, progress).complete} />)}
+            {lessons.map((l) => (
+              <Station
+                key={l.id}
+                lesson={l}
+                progress={progress}
+                isNext={l.id === next.id && !lessonState(l, progress).complete}
+                isFavorite={Boolean(island.best?.[`like:${l.id}`])}
+              />
+            ))}
           </ol>
           {grade === 6 && (
             <Link to={`/subject/${subject}`} className="isl-search-link">想學更深入？到小六完整教材 <ChevronRight size={16} aria-hidden="true" /></Link>

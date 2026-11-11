@@ -1,6 +1,6 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowRight, Check, Flame, RotateCcw, Search } from "lucide-react";
+import { ArrowRight, Check, Flame, RotateCcw, Search, Sparkles } from "lucide-react";
 import { gardenLessons, subjectsForGrade } from "../../data/elementaryGarden.js";
 import { lessonState, recommendLesson, taipeiDay } from "../../utils/gardenEngine.js";
 import { DAILY_GOAL, levelOf, questsOf, streakOf } from "../../utils/islandGame.js";
@@ -43,6 +43,17 @@ export default function HomePage() {
   const streak = streakOf(island);
   const today = island.days[taipeiDay()] || { xp: 0 };
   const quests = questsOf(island);
+
+  const [wonderSeed, setWonderSeed] = useState(0);
+  const wonderLesson = useMemo(() => {
+    if (!lessons.length) return null;
+    const list = lessons.filter((l) => l.funFact);
+    if (!list.length) return lessons[0];
+    const dayStr = taipeiDay();
+    const charSum = [...dayStr].reduce((s, c) => s + c.charCodeAt(0), 0);
+    const idx = Math.abs(charSum + wonderSeed) % list.length;
+    return list[idx];
+  }, [lessons, wonderSeed]);
 
   if (!grade)
     return (
@@ -87,6 +98,34 @@ export default function HomePage() {
           出發 <ArrowRight size={18} aria-hidden="true" />
         </Link>
       </section>
+
+      {wonderLesson && (
+        <section className="isl-wonder-box" aria-labelledby="wonder-title">
+          <div className="isl-wonder-box-head">
+            <span className="isl-wonder-tag"><Sparkles size={14} aria-hidden="true" /> 今日奇妙探索</span>
+            <button
+              type="button"
+              className="isl-wonder-shuffle"
+              onClick={() => setWonderSeed((s) => s + 1)}
+              title="換一則奇妙發現"
+              aria-label="換一則奇妙發現"
+            >
+              換一則 🎲
+            </button>
+          </div>
+          <div className="isl-wonder-body">
+            <div className="isl-wonder-text">
+              <h3 id="wonder-title">
+                <b>{subjectById(wonderLesson.subject).name}</b> · {wonderLesson.title}
+              </h3>
+              <p>{wonderLesson.funFact}</p>
+            </div>
+            <Link to={`/explore/${wonderLesson.id}`} className="isl-wonder-link">
+              去解密 <ArrowRight size={15} aria-hidden="true" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       <div className="isl-home-cols">
         <section className="isl-card isl-today" aria-labelledby="today-title">

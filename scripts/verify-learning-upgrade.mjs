@@ -17,7 +17,7 @@ for (const unit of audit.units) {
   assert.equal(count(addition), unit.addedCharacters);
   assert.ok(unit.addedCharacters >= unit.baselineCharacters * 0.3, `${unit.unitId} must have at least 30% growth`);
   assert.ok(!addition.includes('undefined'), unit.unitId);
-  const html = renderToStaticMarkup(React.createElement(ReactMarkdown, { rehypePlugins: [rehypeLessonDisclosures], children: addition }));
+  const html = renderToStaticMarkup(React.createElement(ReactMarkdown, { rehypePlugins: [rehypeLessonDisclosures] }, addition));
   assert.equal((html.match(/<details>/g) || []).length, unit.disclosures, unit.unitId);
   assert.equal((html.match(/<summary>/g) || []).length, unit.disclosures, unit.unitId);
   assert.ok(unit.knowledgePoints >= 4 && unit.workedQuestions >= 4, unit.unitId);
@@ -27,7 +27,7 @@ for (const unit of audit.units) {
   assert.ok(!/\n答案：/.test(addition), `${unit.unitId}: answers must not trigger the lesson page's second reveal toggle`);
   disclosureTotal += unit.disclosures;
 }
-const unsafe = renderToStaticMarkup(React.createElement(ReactMarkdown, { rehypePlugins: [rehypeLessonDisclosures], children: '<script>alert(1)</script>' }));
+const unsafe = renderToStaticMarkup(React.createElement(ReactMarkdown, { rehypePlugins: [rehypeLessonDisclosures] }, '<script>alert(1)</script>'));
 assert.ok(!unsafe.includes('<script>'));
 
 const spoken = [];

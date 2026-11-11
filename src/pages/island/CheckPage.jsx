@@ -7,11 +7,20 @@ import { useIsland } from "./IslandContext.jsx";
 import { fireConfetti, gradeNames, QuestionCard, Rich, Ring, subjectById, SubjectIcon, subjectVars } from "./parts.jsx";
 
 const LENGTHS = [5, 10, 20];
+const QUESTION_TYPES = [
+  { id: "all", name: "全部題型" },
+  { id: "mcq", name: "🎯 選擇題" },
+  { id: "tf", name: "⭕ 是非題" },
+  { id: "num", name: "🔢 填數字" },
+  { id: "ord", name: "🚂 順序題" },
+  { id: "pair", name: "🃏 配對題" },
+];
 
 export default function CheckPage() {
   const { island, progress, answer, checkDone } = useIsland();
   const [grade, setGrade] = useState(island.grade || 3);
   const [subject, setSubject] = useState("all");
+  const [typeFilter, setTypeFilter] = useState("all");
   const [length, setLength] = useState(10);
   const [run, setRun] = useState(null);
   const [index, setIndex] = useState(0);
@@ -24,13 +33,24 @@ export default function CheckPage() {
   function start() {
     const lessons = shuffled(gardenLessons.filter((l) => l.grade === grade && (subject === "all" || l.subject === subject)));
     const questions = [];
-    // Walk lessons round-robin so a check samples widely before repeating a topic.
-    for (let round = 0; questions.length < length && round < 4; round++)
+    for (let round = 0; questions.length < length && round < 4; round++) {
       for (const lesson of lessons) {
         if (questions.length === length) break;
-        const q = lesson.questions[round];
-        if (q) questions.push({ q, lesson });
+        const pool = typeFilter === "all" ? lesson.questions : lesson.questions.filter((q) => q.type === typeFilter);
+        const q = pool[round % pool.length];
+        if (q && !questions.some((x) => x.q.key === q.key)) questions.push({ q, lesson });
       }
+    }
+    if (questions.length < length && typeFilter !== "all") {
+      for (const lesson of lessons) {
+        for (const q of lesson.questions) {
+          if (questions.length === length) break;
+          if (q.type === typeFilter && !questions.some((x) => x.q.key === q.key)) {
+            questions.push({ q, lesson });
+          }
+        }
+      }
+    }
     setRun(shuffled(questions));
     setIndex(0);
     setMarks([]);
@@ -75,6 +95,19 @@ export default function CheckPage() {
       s.total++;
       if (marks[i]) s.correct++;
     });
+    const typeLabels = {
+      mcq: "🎯 選擇題",
+      tf: "⭕ 是非題",
+      num: "🔢 填數字",
+      ord: "🚂 順序題",
+      pair: "🃏 配對題",
+    };
+    const byType = {};
+    run.forEach((item, i) => {
+      const t = (byType[item.q.type] ||= { total: 0, correct: 0 });
+      t.total++;
+      if (marks[i]) t.correct++;
+    });
     const message = pct >= 90 ? "這個範圍你很熟了！" : pct >= 60 ? "基礎不錯，把錯的補起來就更穩了。" : "沒關係，這正是知道要學什麼的好機會。";
     return (
       <div className="isl-report">
@@ -101,6 +134,18 @@ export default function CheckPage() {
                 </li>
               );
             })}
+          </ul>
+        </section>
+        <section className="isl-card" aria-labelledby="by-type">
+          <h2 id="by-type">題型掌握度分析</h2>
+          <ul className="isl-bars">
+            {Object.entries(byType).map(([tid, t]) => (
+              <li key={tid}>
+                <span>{typeLabels[tid] || tid}</span>
+                <i><b style={{ width: `${(t.correct / t.total) * 100}%` }} /></i>
+                <small>{t.correct}/{t.total}</small>
+              </li>
+            ))}
           </ul>
         </section>
         {wrong.length > 0 ? (
@@ -148,6 +193,20 @@ export default function CheckPage() {
           {subjects.map((s) => (
             <button type="button" key={s.id} className={subject === s.id ? "on" : ""} style={subjectVars(s)} aria-pressed={subject === s.id} onClick={() => setSubject(s.id)}>
               <SubjectIcon subject={s} size={16} />{s.name}
+            </button>
+          ))}
+        </div>
+        <h2>題型焦點</h2>
+        <div className="isl-chips" role="group" aria-label="選擇題型焦點">
+          {QUESTION_TYPES.map((t) => (
+            <button
+              type="button"
+              key={t.id}
+              className={typeFilter === t.id ? "on" : ""}
+              aria-pressed={typeFilter === t.id}
+              onClick={() => setTypeFilter(t.id)}
+            >
+              {t.name}
             </button>
           ))}
         </div>

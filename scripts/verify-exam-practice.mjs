@@ -54,7 +54,7 @@ for (const file of allFiles) {
     try { katex.renderToString(formula, { throwOnError: true, strict: false }); } catch (e) { fail(`${unit}: 公式錯誤 ${formula} (${e.message.slice(0, 60)})`); }
   }
 
-  const html = renderToStaticMarkup(React.createElement(ReactMarkdown, { remarkPlugins: [remarkGfm, remarkMath], rehypePlugins: [rehypeLessonDisclosures], children: text }));
+  const html = renderToStaticMarkup(React.createElement(ReactMarkdown, { remarkPlugins: [remarkGfm, remarkMath], rehypePlugins: [rehypeLessonDisclosures] }, text));
   if (html.includes('&lt;details&gt;')) fail(`${unit}: <details> 沒有轉換（常見原因：多行公式 $$ 沒有獨立一行）`);
   const tableLeak = html.replace(/<pre>[\s\S]*?<\/pre>/g, '').replace(/<code[\s\S]*?<\/code>/g, '');
   if (/(^|>)\s*\|[^<\n]*\|\s*(<|$)/m.test(tableLeak)) fail(`${unit}: 表格沒有正常轉換`);
