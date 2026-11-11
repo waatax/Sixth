@@ -15,6 +15,10 @@ export const matchSets = [
   { id: "s-phys", grade: 6, subject: "science", title: "力與能量", pairs: [["定滑輪", "改變施力方向"], ["槓桿", "支點與力臂"], ["傳導", "金屬湯匙變燙"], ["對流", "熱水往上"], ["輻射", "太陽曬暖"], ["太陽能板", "光變成電"]] },
   { id: "o-social", grade: 3, subject: "social", title: "社區與地圖", pairs: [["119", "消防與救護"], ["110", "報警"], ["113", "保護專線"], ["圖例", "符號的意思"], ["指北針", "看方位"], ["比例尺", "縮小多少"]] },
   { id: "o-hist", grade: 5, subject: "social", title: "臺灣年代", pairs: [["1895", "日治開始"], ["1945", "戰後"], ["1949", "戒嚴開始"], ["1987", "解除戒嚴"], ["1996", "總統直選"], ["玉山", "約 3952 公尺"]] },
+  { id: "m-ten", grade: 1, subject: "math", title: "湊十好朋友", pairs: [["1", "9"], ["2", "8"], ["3", "7"], ["4", "6"], ["5", "再加 5 得 10"], ["10", "1 個十"]] },
+  { id: "c-measure", grade: 1, subject: "mandarin", title: "量詞配一配", pairs: [["一朵", "鮮花"], ["一條", "小魚"], ["一本", "故事書"], ["一雙", "運動鞋"], ["一把", "雨傘"], ["一顆", "紅蘋果"]] },
+  { id: "s-solar", grade: 6, subject: "science", title: "太空與地球", pairs: [["地球自轉", "日夜交替"], ["地球公轉", "四季變化"], ["北極星", "指引正北方"], ["月球", "地球的衛星"], ["太陽", "發光發熱恆星"], ["板塊運動", "造成地震"]] },
+  { id: "a-inst", grade: 4, subject: "arts", title: "樂器與藝術", pairs: [["小提琴", "弦樂器"], ["長笛", "管樂器"], ["大鼓", "打擊樂器"], ["紅加黃", "橙色"], ["黃加藍", "綠色"], ["紅加藍", "紫色"]] },
 ];
 
 export const sortSets = [
@@ -34,6 +38,8 @@ export const sortSets = [
   { id: "english-part", grade: 5, subject: "english", title: "單數或複數", bins: ["單數", "複數"], items: [["a cat", 0], ["three dogs", 1], ["one box", 0], ["two boxes", 1], ["an apple", 0], ["children", 1], ["a child", 0], ["feet", 1]] },
   { id: "recycle", grade: 2, subject: "life", title: "回收或廚餘", bins: ["資源回收", "廚餘"], items: [["寶特瓶", 0], ["果皮", 1], ["鋁罐", 0], ["剩飯", 1], ["舊報紙", 0], ["菜葉", 1]] },
   { id: "color-temp", grade: 3, subject: "arts", title: "暖色或冷色", bins: ["暖色", "冷色"], items: [["紅色", 0], ["藍色", 1], ["橙色", 0], ["綠色", 1], ["黃色", 0], ["青色", 1]] },
+  { id: "magnet-sort", grade: 3, subject: "science", title: "磁鐵吸得住嗎", bins: ["磁鐵能吸引", "磁鐵不能吸"], items: [["鐵釘", 0], ["塑膠杯", 1], ["鐵製迴紋針", 0], ["木頭積木", 1], ["鐵夾子", 0], ["鋁罐", 1], ["鋼珠", 0], ["橡皮擦", 1]] },
+  { id: "net-safe", grade: 6, subject: "integrative", title: "數位公民判斷", bins: ["安全友善", "有風險不當"], items: [["先查證再分享", 0], ["公開家裡住址", 1], ["尊重圖片著作權", 0], ["點開不明中獎連結", 1], ["友善留言鼓勵人", 0], ["把密碼借給網友", 1]] },
 ];
 
 export const orderSets = [
@@ -50,13 +56,16 @@ export const orderSets = [
   { id: "wash", grade: 2, subject: "health_pe", title: "洗手五步", items: ["濕", "搓", "沖", "捧", "擦"] },
   { id: "week", grade: 3, subject: "english", title: "Days of the week", items: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] },
   { id: "design", grade: 6, subject: "arts", title: "設計流程", items: ["了解需求", "畫草圖", "試用", "改良"] },
+  { id: "planets", grade: 6, subject: "science", title: "行星離太陽由近到遠", items: ["水星", "金星", "地球", "火星", "木星"] },
+  { id: "burn-aid", grade: 6, subject: "health_pe", title: "燙傷急救五步驟", items: ["沖", "脫", "泡", "蓋", "送"] },
+  { id: "area-unit", grade: 5, subject: "math", title: "面積單位由小到大", items: ["1 平方公分", "1 平方公尺", "1 公畝", "1 公頃", "1 平方公里"] },
 ];
 
 export const spellWords = [
-  [3, "cat", "貓", "🐱"], [3, "dog", "狗", "🐶"], [3, "sun", "太陽", "☀️"], [3, "red", "紅色", "🔴"], [3, "bus", "公車", "🚌"], [3, "pen", "筆", "🖊️"], [3, "book", "書", "📖"], [3, "fish", "魚", "🐟"], [3, "tree", "樹", "🌳"], [3, "apple", "蘋果", "🍎"], [3, "milk", "牛奶", "🥛"], [3, "ball", "球", "⚽"],
-  [4, "water", "水", "💧"], [4, "tiger", "老虎", "🐯"], [4, "green", "綠色", "🟢"], [4, "happy", "快樂的", "😄"], [4, "seven", "七", "7️⃣"], [4, "chair", "椅子", "🪑"], [4, "house", "房子", "🏠"], [4, "rainy", "下雨的", "🌧️"], [4, "sunny", "晴朗的", "☀️"], [4, "bread", "麵包", "🍞"], [4, "mouse", "老鼠", "🐭"], [4, "clock", "時鐘", "🕒"],
-  [5, "school", "學校", "🏫"], [5, "friend", "朋友", "🤝"], [5, "father", "爸爸", "👨"], [5, "mother", "媽媽", "👩"], [5, "summer", "夏天", "🏖️"], [5, "winter", "冬天", "❄️"], [5, "Monday", "星期一", "📅"], [5, "banana", "香蕉", "🍌"], [5, "rabbit", "兔子", "🐰"], [5, "flower", "花", "🌸"], [5, "orange", "橘子", "🍊"], [5, "window", "窗戶", "🪟"],
-  [6, "library", "圖書館", "📚"], [6, "teacher", "老師", "🧑‍🏫"], [6, "weather", "天氣", "⛅"], [6, "science", "自然科學", "🔬"], [6, "morning", "早上", "🌅"], [6, "kitchen", "廚房", "🍳"], [6, "bicycle", "腳踏車", "🚲"], [6, "elephant", "大象", "🐘"], [6, "computer", "電腦", "💻"], [6, "birthday", "生日", "🎂"], [6, "tomorrow", "明天", "📆"], [6, "hospital", "醫院", "🏥"],
+  [3, "cat", "貓", "🐱"], [3, "dog", "狗", "🐶"], [3, "sun", "太陽", "☀️"], [3, "red", "紅色", "🔴"], [3, "bus", "公車", "🚌"], [3, "pen", "筆", "🖊️"], [3, "book", "書", "📖"], [3, "fish", "魚", "🐟"], [3, "tree", "樹", "🌳"], [3, "apple", "蘋果", "🍎"], [3, "milk", "牛奶", "🥛"], [3, "ball", "球", "⚽"], [3, "bird", "鳥", "🐦"], [3, "star", "星星", "⭐"],
+  [4, "water", "水", "💧"], [4, "tiger", "老虎", "🐯"], [4, "green", "綠色", "🟢"], [4, "happy", "快樂的", "😄"], [4, "seven", "七", "7️⃣"], [4, "chair", "椅子", "🪑"], [4, "house", "房子", "🏠"], [4, "rainy", "下雨的", "🌧️"], [4, "sunny", "晴朗的", "☀️"], [4, "bread", "麵包", "🍞"], [4, "mouse", "老鼠", "🐭"], [4, "clock", "時鐘", "🕒"], [4, "juice", "果汁", "🧃"], [4, "music", "音樂", "🎵"],
+  [5, "school", "學校", "🏫"], [5, "friend", "朋友", "🤝"], [5, "father", "爸爸", "👨"], [5, "mother", "媽媽", "👩"], [5, "summer", "夏天", "🏖️"], [5, "winter", "冬天", "❄️"], [5, "Monday", "星期一", "📅"], [5, "banana", "香蕉", "🍌"], [5, "rabbit", "兔子", "🐰"], [5, "flower", "花", "🌸"], [5, "orange", "橘子", "🍊"], [5, "window", "窗戶", "🪟"], [5, "hungry", "肚子餓", "😋"], [5, "doctor", "醫生", "🩺"],
+  [6, "library", "圖書館", "📚"], [6, "teacher", "老師", "🧑‍🏫"], [6, "weather", "天氣", "⛅"], [6, "science", "自然科學", "🔬"], [6, "morning", "早上", "🌅"], [6, "kitchen", "廚房", "🍳"], [6, "bicycle", "腳踏車", "🚲"], [6, "elephant", "大象", "🐘"], [6, "computer", "電腦", "💻"], [6, "birthday", "生日", "🎂"], [6, "tomorrow", "明天", "📆"], [6, "hospital", "醫院", "🏥"], [6, "rainbow", "彩虹", "🌈"], [6, "planet", "行星", "🪐"],
 ];
 
 const rand = (a, b) => a + Math.floor(Math.random() * (b - a + 1));

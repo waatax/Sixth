@@ -63,6 +63,10 @@ export default function MePage() {
   const states = useMemo(() => gardenLessons.map((l) => ({ lesson: l, state: lessonState(l, progress) })), [progress]);
   const due = states.filter((s) => s.state.due);
   const mistakes = states.filter((s) => s.state.mistakes && !s.state.due);
+  const favoriteLessons = useMemo(
+    () => gardenLessons.filter((l) => island.best?.[`like:${l.id}`] > 0),
+    [island.best],
+  );
   function downloadReport() {
     const lines = [
       ["年級", "領域", "課綱代碼", "主題", "練習狀態", "累積試答", "累積答對", "最早複習日期"],
@@ -134,6 +138,27 @@ export default function MePage() {
           </ul>
         </section>
       </div>
+
+      {favoriteLessons.length > 0 && (
+        <section className="isl-card" aria-labelledby="fav-title">
+          <div className="isl-card-head">
+            <h2 id="fav-title">💖 我喜歡的主題</h2>
+            <span>已收藏 {favoriteLessons.length} 課</span>
+          </div>
+          <ul className="isl-todo">
+            {favoriteLessons.slice(0, 8).map((lesson) => (
+              <li key={lesson.id} style={subjectVars(subjectById(lesson.subject))}>
+                <Link to={`/explore/${lesson.id}`}>
+                  <span>{gradeNames[lesson.grade - 1]}年級 · {subjectById(lesson.subject).name}</span>
+                  <b>{lesson.title}</b>
+                  <em>再回去探索</em>
+                  <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="isl-card" aria-labelledby="sticker-title">
         <div className="isl-card-head">

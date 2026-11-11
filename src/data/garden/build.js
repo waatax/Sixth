@@ -2,6 +2,11 @@
 // Questions: "問|正解|錯|錯|錯|理由", "tf:敘述|T或F|理由", "num:問|答案|單位|理由",
 // "ord:提示|甲>乙>丙|理由", "pair:提示|左=右,左=右|理由".
 import { balanceQuestion } from "../../utils/balanceOptions.js";
+import {
+  extraQuestionByLessonId,
+  buildFunFact,
+  buildTypeGuide,
+} from "./enrichment.js";
 
 export const stageOf = (grade) =>
   grade <= 2 ? "第一學習階段" : grade <= 4 ? "第二學習階段" : "第三學習階段";
@@ -103,7 +108,11 @@ export function buildLesson(row, subject, order) {
     const [label, value] = panel.split("|");
     return { label, value };
   });
-  return {
+  const allQs =
+    qs.length < 3 && extraQuestionByLessonId[id]
+      ? [...qs, extraQuestionByLessonId[id]]
+      : qs;
+  const lesson = {
     id,
     grade,
     subject,
@@ -117,7 +126,7 @@ export function buildLesson(row, subject, order) {
     stage: stageOf(grade),
     minutes: grade <= 2 ? 4 : grade <= 4 ? 5 : 6,
     panels: panelList,
-    questions: qs.map((text, i) =>
+    questions: allQs.map((text, i) =>
       parseQuestion(text, {
         key: `garden:${id}:${i}`,
         lessonId: id,
@@ -127,6 +136,9 @@ export function buildLesson(row, subject, order) {
     ),
     order,
   };
+  lesson.funFact = buildFunFact(lesson);
+  lesson.typeGuide = buildTypeGuide(lesson);
+  return lesson;
 }
 
 // Math rows: L("N-1-2", 標題, 目標, 解說, 提醒, 三格整理, 圖解, 題目, 關鍵字)

@@ -155,6 +155,8 @@ export const STICKERS = [
   { id: "game-spell", emoji: "⛵", name: "拼字船長", how: "拼字船完成 5 個字" },
   { id: "game-boss", emoji: "🏆", name: "島主挑戰者", how: "打敗島主" },
   { id: "subject-all", emoji: "🌈", name: "全科探險家", how: "每個科目都完成一課" },
+  { id: "love-1", emoji: "💖", name: "愛上探索", how: "收藏第一堂喜歡的課" },
+  { id: "love-5", emoji: "🤩", name: "知識粉絲", how: "收藏 5 堂喜歡的課" },
   { id: "level-5", emoji: "🏡", name: "蓋好花園", how: "達到第 5 級" },
   { id: "level-10", emoji: "🗼", name: "點亮燈塔", how: "達到第 10 級" },
 ];
@@ -190,6 +192,8 @@ export function checkStickers(island, stats, now = Date.now()) {
   award("game-spell", (island.best.spell || 0) >= 5);
   award("game-boss", (island.best.boss || 0) >= 1);
   award("subject-all", stats.subjects >= 9);
+  award("love-1", (island.best.likes || 0) >= 1);
+  award("love-5", (island.best.likes || 0) >= 5);
   award("level-5", lv >= 5);
   award("level-10", lv >= 10);
   if (!earned.length) return { island, earned };

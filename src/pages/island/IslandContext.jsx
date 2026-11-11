@@ -108,6 +108,24 @@ export function IslandProvider({ children }) {
     [commit],
   );
 
+  const toggleLike = useCallback(
+    (lessonId) => {
+      const { progress: p, island: i } = refs.current;
+      const likeKey = `like:${lessonId}`;
+      const wasLiked = Boolean(i.best[likeKey]);
+      const nextBest = { ...i.best, [likeKey]: wasLiked ? 0 : 1 };
+      const likesCount = Object.entries(nextBest).filter(([k, v]) => k.startsWith("like:") && v > 0).length;
+      nextBest.likes = likesCount;
+      const rewardedKey = `liked-xp:${lessonId}`;
+      const giveXp = !wasLiked && !i.best[rewardedKey] ? 3 : 0;
+      if (giveXp) nextBest[rewardedKey] = 1;
+      const nextIsland = giveXp ? addActivity(i, { xp: giveXp }) : i;
+      if (!wasLiked && i.sound) playSound("correct");
+      commit(p, { ...nextIsland, best: nextBest });
+    },
+    [commit],
+  );
+
   const dismissToast = useCallback((key) => setToasts((t) => t.filter((x) => x.key !== key)), []);
 
   useEffect(() => {
@@ -120,8 +138,8 @@ export function IslandProvider({ children }) {
   }, []);
 
   const value = useMemo(
-    () => ({ progress, island, stats, toasts, saveFailed, answer, markRead, finishLesson, gameDone, checkDone, setPref, dismissToast }),
-    [progress, island, stats, toasts, saveFailed, answer, markRead, finishLesson, gameDone, checkDone, setPref, dismissToast],
+    () => ({ progress, island, stats, toasts, saveFailed, answer, markRead, finishLesson, gameDone, checkDone, setPref, toggleLike, dismissToast }),
+    [progress, island, stats, toasts, saveFailed, answer, markRead, finishLesson, gameDone, checkDone, setPref, toggleLike, dismissToast],
   );
   return <IslandContext.Provider value={value}>{children}</IslandContext.Provider>;
 }

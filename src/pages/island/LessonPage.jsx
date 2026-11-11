@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Check, Lightbulb, RotateCcw, Sparkles, Target } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Heart, Lightbulb, RotateCcw, Sparkles, Target } from "lucide-react";
 import ConceptPicture from "../../components/garden/ConceptPicture";
 import { gardenLessons } from "../../data/elementaryGarden.js";
 import { lessonState, taipeiDay } from "../../utils/gardenEngine.js";
@@ -9,7 +9,8 @@ import { fireConfetti, gradeNames, QuestionCard, ReadAloud, Rich, subjectById, S
 
 export default function LessonPage({ lessonId }) {
   const lesson = gardenLessons.find((l) => l.id === lessonId);
-  const { progress, answer, markRead, finishLesson } = useIsland();
+  const { progress, island, answer, markRead, finishLesson, toggleLike } = useIsland();
+  const liked = Boolean(lesson && island?.best?.[`like:${lesson.id}`]);
   const [step, setStep] = useState(0);
   const [results, setResults] = useState([]);
   const [earned, setEarned] = useState(0);
@@ -91,7 +92,7 @@ export default function LessonPage({ lessonId }) {
             </p>
             <h1 ref={heading} tabIndex={-1}>{lesson.title}</h1>
             <p className="isl-goal"><Target size={18} aria-hidden="true" /> <span><Rich>{lesson.goal}</Rich></span></p>
-            <ReadAloud id={`lesson-${lesson.id}`} text={`${lesson.title}。${lesson.goal}。${lesson.explanation}。提醒：${lesson.trap}`} label="聽這一課" />
+            <ReadAloud id={`lesson-${lesson.id}`} text={`${lesson.title}。${lesson.goal}。${lesson.explanation}。提醒：${lesson.trap}。生活中的奇妙發現：${lesson.funFact || ""}`} label="聽這一課" />
             <p className="isl-explain"><Rich>{lesson.explanation}</Rich></p>
           </div>
           <div className="isl-learn-visual">
@@ -116,6 +117,36 @@ export default function LessonPage({ lessonId }) {
                 <p><Rich>{lesson.trap}</Rich></p>
               </div>
             </div>
+            {lesson.funFact && (
+              <div className="isl-wonder">
+                <div className="isl-wonder-head">
+                  <h2>🌟 生活中的奇妙發現</h2>
+                  <button
+                    type="button"
+                    className={`isl-like-btn${liked ? " liked" : ""}`}
+                    aria-pressed={liked}
+                    onClick={() => toggleLike(lesson.id)}
+                  >
+                    <Heart size={16} aria-hidden="true" />
+                    <span>{liked ? "已喜歡這課" : "我喜歡這課"}</span>
+                  </button>
+                </div>
+                <p><Rich>{lesson.funFact}</Rich></p>
+              </div>
+            )}
+            {lesson.typeGuide?.length > 0 && (
+              <div className="isl-type-guide">
+                <h2>🎯 相關可能題型與破題祕笈</h2>
+                <ul className="isl-type-list">
+                  {lesson.typeGuide.map((item) => (
+                    <li key={item.type}>
+                      <b>{item.icon} {item.badge}</b>
+                      <p><Rich>{item.tip}</Rich></p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <div className="isl-learn-cta">
             <button type="button" className="isl-btn isl-btn-wide" onClick={begin}>

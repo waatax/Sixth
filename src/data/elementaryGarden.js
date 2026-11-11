@@ -1,7 +1,12 @@
 // Island lessons: the original representative micro-lessons plus the curriculum-mapped library.
 // Grade placement is a suggested route, not a publisher's table of contents.
 import { balanceQuestion } from "../utils/balanceOptions.js";
-import { buildLesson } from "./garden/build.js";
+import { buildLesson, parseQuestion } from "./garden/build.js";
+import {
+  extraQuestionByLessonId,
+  buildFunFact,
+  buildTypeGuide,
+} from "./garden/enrichment.js";
 import { mathG1, mathG2 } from "./garden/mathLower.js";
 import { mathG3, mathG4 } from "./garden/mathMiddle.js";
 import { mathG5, mathG6 } from "./garden/mathUpper.js";
@@ -1091,29 +1096,9 @@ const legacyLessons = rows.map(
   (
     [grade, subject, title, goal, explanation, trap, panels, recall, transfer],
     index,
-  ) => ({
-    id: `g${grade}-${subject}`,
-    grade,
-    subject,
-    title,
-    goal,
-    explanation,
-    trap,
-    codes: legacyCodes[`g${grade}-${subject}`] || [],
-    keywords: "",
-    visual: legacyVisuals[`g${grade}-${subject}`] || null,
-    stage:
-      grade <= 2
-        ? "第一學習階段"
-        : grade <= 4
-          ? "第二學習階段"
-          : "第三學習階段",
-    minutes: grade <= 2 ? 4 : 6,
-    panels: panels.map((panel) => {
-      const [label, value] = panel.split("|");
-      return { label, value };
-    }),
-    questions: [recall, transfer].map(
+  ) => {
+    const id = `g${grade}-${subject}`;
+    const baseQuestions = [recall, transfer].map(
       ([question, options, answerExplanation], i) => ({
         ...balanceQuestion({
           question,
@@ -1123,13 +1108,50 @@ const legacyLessons = rows.map(
         }),
         type: "mcq",
         key: `garden:${grade}:${subject}:${i}`,
-        unitId: `g${grade}-${subject}`,
+        unitId: id,
         kind: i ? "換個情境試試" : "把觀念想起來",
         hint: i ? `想想這課的提醒：${trap}` : `回想學習目標：${goal}`,
       }),
-    ),
-    order: index,
-  }),
+    );
+    if (extraQuestionByLessonId[id]) {
+      baseQuestions.push(
+        parseQuestion(extraQuestionByLessonId[id], {
+          key: `garden:${grade}:${subject}:2`,
+          lessonId: id,
+          kind: "進階挑戰",
+          hint: `想想這課的提醒：${trap}`,
+        }),
+      );
+    }
+    const lesson = {
+      id,
+      grade,
+      subject,
+      title,
+      goal,
+      explanation,
+      trap,
+      codes: legacyCodes[id] || [],
+      keywords: "",
+      visual: legacyVisuals[id] || null,
+      stage:
+        grade <= 2
+          ? "第一學習階段"
+          : grade <= 4
+            ? "第二學習階段"
+            : "第三學習階段",
+      minutes: grade <= 2 ? 4 : 6,
+      panels: panels.map((panel) => {
+        const [label, value] = panel.split("|");
+        return { label, value };
+      }),
+      questions: baseQuestions,
+      order: index,
+    };
+    lesson.funFact = buildFunFact(lesson);
+    lesson.typeGuide = buildTypeGuide(lesson);
+    return lesson;
+  },
 );
 
 const library = {

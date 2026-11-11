@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Check, RotateCcw, Shield, Volume2 } from "lucide-react";
 import { gardenLessons, subjectsForGrade } from "../../data/elementaryGarden.js";
 import { makeRocketQuestion, matchSets, orderSets, sortSets, spellWords } from "../../data/garden/games.js";
@@ -498,6 +498,7 @@ const components = { rocket: Rocket, match: Match, sort: Sort, order: Order, spe
 
 export default function GamesPage({ gameId }) {
   const { island } = useIsland();
+  const navigate = useNavigate();
   const game = catalog.find((g) => g.id === gameId);
   useEffect(() => {
     document.title = `${game ? game.name : "遊戲島"}｜小小學習島`;
@@ -506,9 +507,16 @@ export default function GamesPage({ gameId }) {
     const Game = components[game.id];
     return <Game game={game} />;
   }
+  function surpriseGame() {
+    const pick = catalog[Math.floor(Math.random() * catalog.length)];
+    navigate(`/games/${pick.id}`);
+  }
   return (
     <div className="isl-games">
-      <h1>遊戲島</h1>
+      <div className="isl-section-head">
+        <h1>遊戲島</h1>
+        <button type="button" className="isl-btn-soft" onClick={surpriseGame}>🎲 隨機驚喜挑戰</button>
+      </div>
       <p className="isl-lead">用玩的把觀念練熟。遊戲經驗每天有上限，別忘了也要學新課喔！</p>
       <ul className="isl-game-list">
         {catalog.map((g) => (

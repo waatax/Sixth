@@ -8,7 +8,8 @@ import { createServer } from "vite";
 import { gardenLessons } from "../src/data/elementaryGarden.js";
 
 const vite = await createServer({
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, watch: null },
+  optimizeDeps: { noDiscovery: true },
   appType: "custom",
   logLevel: "error",
 });

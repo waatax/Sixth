@@ -219,6 +219,18 @@ html:has(.isl) { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .isl-trap svg { color: #a26d00; flex: none; }
 .isl-trap h2 { font-size: 1em; margin-bottom: 2px; }
 .isl-trap p { font-size: .96em; }
+.isl-wonder { display: grid; gap: 6px; background: var(--ss); border: 2px solid color-mix(in srgb, var(--sc) 24%, white); padding: 12px; border-radius: 14px; }
+.isl-wonder-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; }
+.isl-wonder h2 { font-size: 1em; color: var(--sc); }
+.isl-wonder p { font-size: .95em; line-height: 1.55; }
+.isl-like-btn { display: inline-flex; align-items: center; gap: 5px; min-height: 36px; padding: 4px 10px; border-radius: 99px; background: #fff; border: 2px solid color-mix(in srgb, var(--sc) 30%, white) !important; color: var(--sc); font-weight: 800; font-size: .84em; }
+.isl-like-btn.liked { background: #ffe4ec; border-color: #d6336c !important; color: #b4235a; }
+.isl-type-guide { display: grid; gap: 8px; background: #f6f8fb; border: 2px solid var(--line); padding: 12px; border-radius: 14px; }
+.isl-type-guide h2 { font-size: 1em; color: var(--ink); }
+.isl-type-list { display: grid; gap: 6px; }
+.isl-type-list li { display: grid; gap: 2px; background: #fff; padding: 8px 10px; border-radius: 10px; border-left: 4px solid var(--sc); }
+.isl-type-list b { font-size: .9em; color: var(--sc); }
+.isl-type-list p { font-size: .88em; color: var(--muted); line-height: 1.45; }
 .isl-learn-cta { padding-bottom: env(safe-area-inset-bottom); }
 .isl-frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; margin: 0 .15em; line-height: 1.05; font-size: .82em; font-weight: 700; white-space: nowrap; }
 .isl-frac span { display: block; padding: 0 .2em; }
