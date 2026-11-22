@@ -475,6 +475,14 @@ magic e 讓前面的母音發長音：cap → cape，kit → kite，hop → hope
 
 library（圖書館）、opens（開門）、closes（關門）、freezing（極冷）、boiling（極熱）。Past tense reminder: I was, you were, they were. 遇到不懂的字，先從上下文猜：It’s freezing! 前一句提到 very cold，可以推測是非常冷。
 
+### Reading skills, word building and linking words
+
+- **Skimming（略讀）**：快速看標題、第一句和最後一句，抓文章大意。**Scanning（掃讀）**：要找特定資料（電話、時間、價錢）時，眼睛快速掃，只找關鍵字。
+- **字尾表示「人」**：-er（teach → teacher、farm → farmer）、-or（act → actor、visit → visitor）、-ist（art → artist、science → scientist）。
+- **字首 re-**：表示「再一次」，redo（再做一次）、rewrite（重寫）、reuse（再使用）。
+- **連接詞**：and（和、而且）、but（但是，前後相反）、so（所以，表示結果）、because（因為，表示原因）。I was tired, so I went to bed early. I went to bed early because I was tired.
+- **Magic e（不發音的 e）**：字尾加 e，前面的母音變成長母音：cap → cape、kit → kite、hop → hope、cut → cute。
+
 ## 📚 必備知識補充（題庫、講義、例題逐題回推）
 
 測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。
@@ -571,7 +579,7 @@ library（圖書館）、opens（開門）、closes（關門）、freezing（極
 
 ✅ **正確答案** A. clean - unclean (乾淨的 - 不乾淨的)
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
+🔍 **【審題關鍵與破題思考】**：字首 un- 加在形容詞前面，意思變成「不、相反」，所以要找「原字 + un- 原字」的一組。
 
 📐 **【詳盡解題步驟與算理推導】**：
 
@@ -581,7 +589,7 @@ library（圖書館）、opens（開門）、closes（關門）、freezing（極
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
+⚠️ **【易錯防雷與陷阱剖析】**：easy - difficult 雖然意思相反，但不是用字首 un- 造出來的；happy - gladly 意思相近，不是相反。
 
 </details>
 
@@ -615,13 +623,13 @@ library（圖書館）、opens（開門）、closes（關門）、freezing（極
 
 ✅ **正確答案** A. not / opposite of (否定/相反)
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：頻率副詞在句中的標準文法位置：「be 動詞之後、一般動詞之前、助動詞與本動詞之間」。
+🔍 **【審題關鍵與破題思考】**：看例字找共同意思：unhappy 不快樂、unfair 不公平，un- 都表示「不、相反」。
 
 📐 **【詳盡解題步驟與算理推導】**：
 
 happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不公平），表相反否定。
 
-⚠️ **【易錯防雷與陷阱剖析】**：位置順序陷阱：遇 be 動詞放在後面（is always）；遇一般動詞放在前面（always does homework），不可顛倒位置。
+⚠️ **【易錯防雷與陷阱剖析】**：不要和 re-（再一次，如 redo）、pre-（之前，如 preview）混淆。
 
 </details>
 
@@ -638,6 +646,16 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 ⚠️ **常見失分**：忽略 yesterday、every day 等時間線索。
 
 ✏️ **馬上練習**：下方第 7 題。
+
+### 填充題
+
+1. 先確定空格要填的是數字、名詞還是單位。
+2. 把答案放回句子讀一次，看通不通順。
+3. 注意題目要求的格式，例如最簡分數、注音或國字。
+
+⚠️ **常見失分**：只寫數字忘了單位，或沒有化成題目要求的形式。
+
+✏️ **馬上練習**：下方第 24 題。
 
 ### 重組題
 
@@ -669,6 +687,16 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 
 ✏️ **馬上練習**：下方第 20 題。
 
+### 聽力字音題
+
+1. 先看選項，猜可能考什麼音。
+2. 注意第二個字母的音，例如 tr 和 dr。
+3. 把單字放進句子裡唸，加強記憶。
+
+⚠️ **常見失分**：只看第一個字母就作答。
+
+✏️ **馬上練習**：下方第 26 題。
+
 ## 🧪 段考題型實戰（先作答，再看步驟）
 
 ⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。
@@ -679,6 +707,9 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 | **字彙和文法** | 字首字尾與轉折詞 | 10、11、12、13 |
 | **閱讀理解** | 找關鍵資訊 | 14、15、16、17、21 |
 | **句子重組** | 字序 | 18、19、20 |
+| **閱讀策略** | skimming / scanning、公告閱讀 | 22、23 |
+| **構詞與發音** | 字尾 -er/-or/-ist、字首 re-、magic e | 24、25、26 |
+| **連接詞** | so / because / but | 27、28 |
 
 **第 7 題**【選擇・課綱】　Which word has a long vowel sound?
 
@@ -1023,6 +1054,214 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 
 </details>
 
+**第 22 題**【選擇・課綱】　You want to find the phone number of a restaurant on a long flyer. Which reading skill should you use?
+
+**A.** Scanning  
+**B.** Skimming  
+**C.** Reading every word slowly  
+**D.** Reading from the last page
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Scanning
+
+🔍 **審題關鍵**：找特定資料用哪一種？
+
+📐 **解題步驟**：
+
+1. 電話號碼是特定的資料。
+2. Scanning 是快速掃過、只找關鍵字。
+3. 所以用 Scanning。
+
+🧠 **觀念說明**：兩種策略目的不同：skimming 抓大意，scanning 找細節。
+
+✔️ **檢查方法**：如果題目是「這張傳單主要在介紹什麼」，才用 skimming。
+
+⚠️ **易錯提醒**：把兩個長得像的字記反。
+
+🔁 **舉一反三**：You want to know the main idea of a story quickly. Which skill?（答：Skimming）
+
+📖 **回課文複習**：Unit 6：Skimming 和 Scanning。
+
+</details>
+
+**第 23 題**【閱讀・課綱】　Read the notice: "City Library — Open: Tuesday to Sunday, 9:00 a.m. – 8:00 p.m. Closed on Mondays. Story time for kids: Saturday 2:00 p.m." (1) Can you go to the library on Monday? (2) When is story time?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) No, it's closed on Mondays. (2) On Saturday at 2:00 p.m.
+
+🔍 **審題關鍵**：用 scanning 找 Monday 和 Story time。
+
+📐 **解題步驟**：
+
+1. Closed on Mondays → 星期一不開。
+2. Story time for kids: Saturday 2:00 p.m. → 星期六下午兩點。
+
+🧠 **觀念說明**：公告題是最常見的 scanning 練習：找到關鍵字就找到答案。
+
+✔️ **檢查方法**：Open 寫 Tuesday to Sunday，正好不包含 Monday，兩個資訊互相印證。
+
+⚠️ **易錯提醒**：回答 Yes, 因為沒注意到 Closed。
+
+🔁 **舉一反三**：What time does the library close?（答：At eight p.m.）
+
+📖 **回課文複習**：Unit 6：Skimming 和 Scanning。
+
+</details>
+
+**第 24 題**【填充・課綱】　Add an ending to make a word for a person: act → ______；art → ______；farm → ______.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** actor；artist；farmer
+
+🔍 **審題關鍵**：字尾 -er、-or、-ist 都可以表示「做這件事的人」。
+
+📐 **解題步驟**：
+
+1. act（表演）→ actor（演員）。
+2. art（藝術）→ artist（藝術家）。
+3. farm（農場）→ farmer（農夫）。
+
+🧠 **觀念說明**：記住常見字尾，看到新單字也能猜出意思。
+
+✔️ **檢查方法**：visit → visitor、science → scientist 也符合規則。
+
+⚠️ **易錯提醒**：寫成 acter、arter。
+
+🔁 **舉一反三**：A person who sings is a ______.（答：singer）
+
+📖 **回課文複習**：Unit 6：字尾表示「人」。
+
+</details>
+
+**第 25 題**【選擇・課綱】　The prefix "re-" in "rewrite" and "reuse" means ______.
+
+**A.** again  
+**B.** not  
+**C.** before  
+**D.** very
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. again
+
+🔍 **審題關鍵**：rewrite = write again。
+
+📐 **解題步驟**：
+
+1. rewrite：再寫一次。
+2. reuse：再使用一次。
+3. 所以 re- 表示 again。
+
+🧠 **觀念說明**：字首 un- 表示相反（not），re- 表示再一次，兩個常被拿來比較。
+
+✔️ **檢查方法**：recycle（回收再利用）也有 re-。
+
+⚠️ **易錯提醒**：和 un- 搞混選 not。
+
+🔁 **舉一反三**：What does "redo" mean?（答：to do again）
+
+📖 **回課文複習**：Unit 6：字首 re-。
+
+</details>
+
+**第 26 題**【聽力字音・課綱】　Which pair shows the "magic e" (the vowel becomes long)?
+
+**A.** kit → kite  
+**B.** cat → cats  
+**C.** run → runs  
+**D.** big → bigger
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. kit → kite
+
+🔍 **審題關鍵**：字尾加上不發音的 e。
+
+📐 **解題步驟**：
+
+1. kit 的 i 是短母音 /ɪ/。
+2. 加 e 變成 kite，i 唸長母音 /aɪ/。
+3. 其他選項是加 s 或 -er，不是 magic e。
+
+🧠 **觀念說明**：Magic e 本身不發音，但會讓前面的母音「唸自己的名字」。
+
+✔️ **檢查方法**：cap → cape、hop → hope 也一樣。
+
+⚠️ **易錯提醒**：以為加任何字尾都會改變母音。
+
+🔁 **舉一反三**：Read: cut → ______（答：cute）
+
+📖 **回課文複習**：Unit 6：Magic e。
+
+</details>
+
+**第 27 題**【選擇・課綱】　It rained heavily this morning, ______ the baseball game was canceled.
+
+**A.** so  
+**B.** because  
+**C.** but  
+**D.** or
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. so
+
+🔍 **審題關鍵**：前面是原因，後面是結果。
+
+📐 **解題步驟**：
+
+1. 下大雨（原因）→ 比賽取消（結果）。
+2. 表示結果用 so。
+3. because 要放在原因前面。
+
+🧠 **觀念說明**：so 和 because 方向相反：A, so B（A 導致 B）；B because A。
+
+✔️ **檢查方法**：改寫：The game was canceled because it rained heavily.
+
+⚠️ **易錯提醒**：看到因果關係就選 because，忽略位置。
+
+🔁 **舉一反三**：I like math, ______ my brother doesn't.（答：but）
+
+📖 **回課文複習**：Unit 6：連接詞。
+
+</details>
+
+**第 28 題**【重組・課綱】　Unscramble: because / was / I / sick / stayed home / I / .
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** I stayed home because I was sick.
+
+🔍 **審題關鍵**：because 後面接原因。
+
+📐 **解題步驟**：
+
+1. 結果：I stayed home。
+2. 原因：I was sick。
+3. 用 because 連接：I stayed home because I was sick.
+
+🧠 **觀念說明**：一個句子裡有兩個主詞和動詞時，要用連接詞連起來。
+
+✔️ **檢查方法**：也可以寫成 I was sick, so I stayed home. 意思相同。
+
+⚠️ **易錯提醒**：寫成 Because I was sick I stayed home 沒有逗號（放句首時要加逗號）。
+
+🔁 **舉一反三**：Combine: I was hungry. I ate a sandwich.（答：I was hungry, so I ate a sandwich.）
+
+📖 **回課文複習**：Unit 6：連接詞。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 7 題（magic e 和子音群）：e 本身不發音。
@@ -1040,6 +1279,13 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 - 第 19 題（字序）：禮貌上 I 放後面。
 - 第 20 題（字序）：Where 要回答地點。
 - 第 21 題（找關鍵資訊）：Mondays 是休館日。
+- 第 22 題（skimming / scanning、公告閱讀）：把兩個長得像的字記反。
+- 第 23 題（skimming / scanning、公告閱讀）：回答 Yes, 因為沒注意到 Closed。
+- 第 24 題（字尾 -er/-or/-ist、字首 re-、magic e）：寫成 acter、arter。
+- 第 25 題（字尾 -er/-or/-ist、字首 re-、magic e）：和 un- 搞混選 not。
+- 第 26 題（字尾 -er/-or/-ist、字首 re-、magic e）：以為加任何字尾都會改變母音。
+- 第 27 題（so / because / but）：看到因果關係就選 because，忽略位置。
+- 第 28 題（so / because / but）：寫成 Because I was sick I stayed home 沒有逗號（放句首時要加逗號）。
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -1063,6 +1309,13 @@ happy（快樂）➔ unhappy（不快樂）；fair（公平）➔ unfair（不�
 | 19 | Tina and I played badminton at school. | 本頁「句子重組和標點」。 |
 | 20 | Example: I was at my cousin’s home. We made pizza together. | 本頁「閱讀測驗三步驟」。 |
 | 21 | On Fridays. | 本頁「閱讀測驗三步驟」。 |
+| 22 | A. Scanning | Unit 6：Skimming 和 Scanning。 |
+| 23 | (1) No, it's closed on Mondays. (2) On Saturday at 2:00 p.m. | Unit 6：Skimming 和 Scanning。 |
+| 24 | actor；artist；farmer | Unit 6：字尾表示「人」。 |
+| 25 | A. again | Unit 6：字首 re-。 |
+| 26 | A. kit → kite | Unit 6：Magic e。 |
+| 27 | A. so | Unit 6：連接詞。 |
+| 28 | I stayed home because I was sick. | Unit 6：連接詞。 |
 
 </details>
 

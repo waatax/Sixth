@@ -100,6 +100,22 @@ for (const file of allFiles) {
   if (r.finalCharacters !== count(text)) fail(`${unit}: 檔案和稽核紀錄不一致，請重跑 enrich-exam-practice.mjs`);
 }
 
+// 第三輪（2026-11）：每單元例題練習區的題數與字數都要比 c7c282b 多 30% 以上，且稽核檔和檔案一致
+const r3File = 'scripts/exam-practice-r3-audit.json';
+let r3Summary = '';
+if (fs.existsSync(r3File)) {
+  const { practiceRegion, questionCount } = await import('./enrich-exam-practice.mjs');
+  const r3 = JSON.parse(fs.readFileSync(r3File, 'utf8'));
+  for (const u of r3.units) {
+    const text = fs.readFileSync(path.join(LESSONS, `${u.unitId}.md`), 'utf8');
+    if (u.questionGrowthPercent < 30) fail(`${u.unitId}: 第三輪例題只增加 ${u.questionGrowthPercent}%，未達 30%`);
+    if (u.practiceGrowthPercent < 30) fail(`${u.unitId}: 第三輪例題練習區字數只增加 ${u.practiceGrowthPercent}%，未達 30%`);
+    if (u.questionsAfter !== questionCount(text) || u.practiceCharsAfter !== count(practiceRegion(text))) fail(`${u.unitId}: 第三輪稽核紀錄和檔案不一致，請重跑 enrich-exam-practice.mjs`);
+  }
+  const t = r3.totals;
+  r3Summary = `第三輪：例題 ${t.questionsBefore} → ${t.questionsAfter} 題（+${(((t.questionsAfter - t.questionsBefore) / t.questionsBefore) * 100).toFixed(1)}%），例題練習區 ${t.practiceCharsBefore} → ${t.practiceCharsAfter} 字（+${(((t.practiceCharsAfter - t.practiceCharsBefore) / t.practiceCharsBefore) * 100).toFixed(1)}%）。`;
+} else if (REQUIRE_ALL) fail('缺少第三輪稽核檔 scripts/exam-practice-r3-audit.json');
+
 if (errors.length) {
   console.error(errors.join('\n'));
   console.error(`\nFAIL ${errors.length} 項`);
@@ -107,3 +123,4 @@ if (errors.length) {
 }
 assert.ok(total > 0);
 console.log(`PASS: ${Object.keys(units).length} 單元、${total} 題新題、${needChecks} 項知識點回推、${checked} 道程式驗算，每單元成長皆達 30%。`);
+if (r3Summary) console.log(r3Summary);

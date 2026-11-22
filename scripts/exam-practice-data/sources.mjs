@@ -13,6 +13,12 @@ export const SOURCES = {
   DG112E1: { short: '東光國小112下英語', name: '基隆市東光國小 112 學年度下學期六年級英語第一次定期評量', url: `${DG}/170/%E7%AC%AC1%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E8%8B%B1%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf` },
   DG112M2: { short: '東光國小112下國語', name: '基隆市東光國小 112 學年度下學期六年級國語第二次定期評量', url: `${DG}/170/%E7%AC%AC2%E6%AC%A1%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F_%E5%9C%8B%E8%AA%9E%E9%A0%98%E5%9F%9F.pdf` },
   MY108M1: { short: '明義國小108上國語', name: '花蓮縣明義國小 108 學年度上學期六年級國語期中評量', url: 'https://xc.hlc.edu.tw/~myps_www/modules/tad_uploader/index.php?op=dlfile&cfsn=4265&cat_sn=434&fn=%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%8A%B1%E8%93%AE%E5%B8%82%E6%98%8E%E7%BE%A9%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8108%E5%AD%B8%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%AD%B8%E6%9C%9F%E5%85%AD%E5%B9%B4%E7%B4%9A%E5%9C%8B%E8%AA%9E%E7%A7%91%E6%9C%9F%E4%B8%AD%E8%A9%95%E9%87%8F%E8%A9%A6%E5%8D%B7.pdf' },
+  // 第三輪（2026-11）新讀的公開考卷
+  MY113M2: { short: '明義國小113下數學', name: '花蓮縣明義國小 113 學年度第二學期六年級數學期末定期評量', url: 'https://xc.hlc.edu.tw/~myps_www/modules/tad_uploader/index.php?op=dlfile&cfsn=7740&cat_sn=799&fn=113%E5%AD%B8%E5%B9%B4%E5%BA%A6%E5%85%AD%E5%B9%B4%E7%B4%9A%E4%B8%8B%E5%AD%B8%E6%9C%9F%E6%95%B8%E5%AD%B8%E7%A7%91%E6%9C%9F%E6%9C%AB%E5%AE%9A%E6%9C%9F%E8%A9%95%E9%87%8F%E8%A9%A6%E5%8D%B7.pdf' },
+  MY113N1: { short: '明義國小113上國語', name: '花蓮縣明義國小 113 學年度第一學期六年級國語期末定期評量', url: 'https://xc.hlc.edu.tw/~myps_www/modules/tad_uploader/index.php?op=dlfile&cfsn=7414&cat_sn=799&fn=113%E5%AD%B8%E5%B9%B4%E5%BA%A6%E5%85%AD%E4%B8%8A%E5%9C%8B%E8%AA%9E%E7%A7%91%E6%9C%9F%E6%9C%AB%E8%A9%A6%E5%8D%B7.pdf' },
+  MY113C2: { short: '明義國小113下社會', name: '花蓮縣明義國小 113 學年度第二學期六年級社會期末定期評量', url: 'https://xc.hlc.edu.tw/~myps_www/modules/tad_uploader/index.php?op=dlfile&cfsn=7927&cat_sn=799&fn=113%E5%AD%B8%E5%B9%B4%E5%85%AD%E4%B8%8B%E7%A4%BE%E6%9C%83%E7%A7%91++%E6%9C%9F%E6%9C%AB%E8%80%83%E8%A9%A6%E5%8D%B7.pdf' },
+  YA113C1: { short: '永安國小113上社會', name: '高雄市永安國小 113 學年度上學期六年級社會領域期末評量', url: 'https://www.yap.kh.edu.tw/upload/33/104_44061/113%E5%85%AD%E5%B9%B4%E7%B4%9A%E6%9C%9F%E6%9C%AB%E8%A9%95%E9%87%8F%E7%A4%BE%E6%9C%83%E9%A0%98%E5%9F%9F%E8%A9%A6%E5%8D%B7.pdf' },
+  YA113C2: { short: '永安國小113下社會', name: '高雄市永安國小 113 學年度下學期六年級社會領域期末評量', url: 'https://www.yap.kh.edu.tw/upload/33/104_44061/113%E4%B8%8B%E5%85%AD%E7%A4%BE%E6%9C%83%E6%9C%9F%E6%9C%AB%E8%A9%95%E9%87%8F%E8%A9%A6%E5%8D%B7.pdf' },
   TCM: { short: '公開國語文測驗', name: '臺中市校園網站公開的國小六年級國語文測驗', url: 'https://school.tc.edu.tw/open-message/064644/get-file/608a0243b6ef1721261226c5' },
 };
 

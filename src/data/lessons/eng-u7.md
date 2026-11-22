@@ -403,6 +403,14 @@ tomorrow、next week、next month、this weekend、in the future、someday。
 | firefighter | put out fires |
 | farmer | grow food |
 
+### Future plans: will, be going to and jobs
+
+- **be going to**：已經計畫好的事，或已經看到跡象、馬上要發生的事。Look at the clouds! It's going to rain. / Look! The baby is going to fall!
+- **will**：說話當下臨時決定、預測或承諾。I'll help you. / I will be a doctor in the future.
+- **will 和 be going to 後面都接原形動詞**：I will went（✗）→ I will go（○）。
+- **未來的時間詞**：tomorrow、next week、next year、in the future、this weekend。
+- **職業描述**：A dentist takes care of people's teeth. A pilot flies planes. A firefighter puts out fires. A farmer grows food. A vet takes care of sick animals. A cook (chef) makes food.
+
 ## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
@@ -419,7 +427,7 @@ tomorrow、next week、next month、this weekend、in the future、someday。
 
 ✅ **正確答案** A. do ; visit
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
+🔍 **【審題關鍵與破題思考】**：be going to 後面一定接原形動詞，兩個空格都要用原形 do、visit。
 
 📐 **【詳盡解題步驟與算理推導】**：
 
@@ -471,7 +479,7 @@ tomorrow、next week、next month、this weekend、in the future、someday。
 
 ✅ **正確答案** B. veterinarian (vet)
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
+🔍 **【審題關鍵與破題思考】**：從「照顧受傷的狗、貓、鳥」找職業線索：照顧動物、幫動物看病的是獸醫 veterinarian (vet)。
 
 📐 **【詳盡解題步驟與算理推導】**：
 
@@ -521,7 +529,7 @@ tomorrow、next week、next month、this weekend、in the future、someday。
 
 ✅ **正確答案** A. do
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：題幹出現「will vs be going to 語意辨析」，直接啟動「I will help you. (當下主動提供幫助) vs Look at the dark clouds! It is going to rain. (已有跡象即將發生)」核心工具推導。
+🔍 **【審題關鍵與破題思考】**：be going to 後面接原形動詞，所以填 do；回答也用 I'm going to + 原形動詞。
 
 📐 **【詳盡解題步驟與算理推導】**：
 
@@ -563,6 +571,16 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 
 ✏️ **馬上練習**：下方第 13 題。
 
+### 改錯題
+
+1. 逐字讀，懷疑的字先圈起來。
+2. 把字放回語詞想字義，判斷部首是否合理。
+3. 寫出錯字和正確字。
+
+⚠️ **常見失分**：只找到一個錯字就停下來，同一句可能不只一個。
+
+✏️ **馬上練習**：下方第 21 題。
+
 ### 重組題
 
 1. 先找主詞和動詞。
@@ -599,9 +617,10 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 
 | 題型 | 考什麼 | 題號 |
 | :--- | :--- | :--- |
-| **未來式** | will 和 be going to | 6、7、8、9、10 |
+| **未來式** | will 和 be going to | 6、7、8、9、10、20、21、22 |
 | **時態判別** | 時間詞線索 | 11、12 |
 | **職業應用** | 職業與工作配對 | 13、14、15、16、17、18、19 |
+| **職業與夢想** | 職業描述、閱讀、寫作 | 23、24、25 |
 
 **第 6 題**【選擇・課綱】　I ______ going to visit my grandma next Sunday.
 
@@ -924,6 +943,174 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 
 </details>
 
+**第 20 題**【選擇・課綱】　Look! The little boy is running too fast. He ______ fall down!
+
+**A.** is going to  
+**B.** goes to  
+**C.** went to  
+**D.** was going
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. is going to
+
+🔍 **審題關鍵**：已經看到跡象、馬上要發生。
+
+📐 **解題步驟**：
+
+1. 小男孩跑太快 → 有跌倒的跡象。
+2. 有跡象的預測用 be going to。
+3. 主詞 He 用 is going to + 原形 fall。
+
+🧠 **觀念說明**：be going to 強調「看得到的證據」；will 多用在沒有證據的預測或當下決定。
+
+✔️ **檢查方法**：同類句子：Look at the dark clouds. It's going to rain.
+
+⚠️ **易錯提醒**：選 went to，被 fall 的意思干擾成過去式。
+
+🔁 **舉一反三**：The phone is ringing. — I ______ answer it.（答：will，當下決定）
+
+📖 **回課文複習**：Unit 7：be going to。
+
+</details>
+
+**第 21 題**【改錯・課綱】　Find and correct the mistake: "I will went to the science museum next Saturday."
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** went → go（I will go to the science museum next Saturday.）
+
+🔍 **審題關鍵**：will 後面接什麼？
+
+📐 **解題步驟**：
+
+1. next Saturday 是未來。
+2. will 後面要接原形動詞。
+3. went 改成 go。
+
+🧠 **觀念說明**：未來式的動詞不會變化，時態由 will 表示。
+
+✔️ **檢查方法**：也可以寫成 I am going to go to the science museum next Saturday.
+
+⚠️ **易錯提醒**：看到 went 是過去式卻沒發現和 next Saturday 矛盾。
+
+🔁 **舉一反三**：She will ______ (be) twelve next year.（答：be）
+
+📖 **回課文複習**：Unit 7：will 和 be going to 後面都接原形動詞。
+
+</details>
+
+**第 22 題**【重組・課綱】　Put the words in the right order: going / What / you / are / do / to / tomorrow / ?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** What are you going to do tomorrow?
+
+🔍 **審題關鍵**：疑問詞 + be 動詞 + 主詞 + going to + 原形動詞？
+
+📐 **解題步驟**：
+
+1. 疑問詞 What 放最前面。
+2. be 動詞 are 放在主詞 you 前面形成問句。
+3. 接 going to do，最後放 tomorrow 和問號。
+
+🧠 **觀念說明**：be going to 的問句把 be 動詞移到主詞前面。
+
+✔️ **檢查方法**：回答：I'm going to visit my aunt tomorrow.
+
+⚠️ **易錯提醒**：寫成 What you are going to do tomorrow?
+
+🔁 **舉一反三**：Unscramble: will / Where / go / you / ?（答：Where will you go?）
+
+📖 **回課文複習**：Unit 7：be going to。
+
+</details>
+
+**第 23 題**【配對・課綱】　Match the job with the description: (1) dentist　(2) firefighter　(3) farmer　(4) pilot　A. puts out fires　B. flies planes　C. takes care of people's teeth　D. grows food
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) C；(2) A；(3) D；(4) B
+
+🔍 **審題關鍵**：先找自己最確定的配。
+
+📐 **解題步驟**：
+
+1. dentist → takes care of people's teeth。
+2. firefighter → puts out fires。
+3. farmer → grows food。
+4. pilot → flies planes。
+
+🧠 **觀念說明**：職業描述常用「主詞 + 動詞 -s + 受詞」的句型，例如 A pilot flies planes.
+
+✔️ **檢查方法**：四個描述各用一次。
+
+⚠️ **易錯提醒**：把 put out（撲滅）看成 put on（穿上）。
+
+🔁 **舉一反三**：Who takes care of sick animals?（答：A vet.）
+
+📖 **回課文複習**：Unit 7：職業描述。
+
+</details>
+
+**第 24 題**【閱讀・課綱】　Read: "Leo loves cooking. He often makes breakfast for his family on weekends. He is going to take a cooking class this summer. He will open a restaurant in the future." (1) What is Leo going to do this summer? (2) What will Leo probably be in the future?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) He is going to take a cooking class. (2) A cook / chef (restaurant owner).
+
+🔍 **審題關鍵**：第二題要從線索推論。
+
+📐 **解題步驟**：
+
+1. this summer → is going to take a cooking class。
+2. loves cooking、open a restaurant → 未來可能當廚師。
+3. 回答 A cook (chef).
+
+🧠 **觀念說明**：推論題的答案要有文章依據：喜歡做菜 + 想開餐廳。
+
+✔️ **檢查方法**：答案不能是 pilot 或 doctor，文章完全沒有相關線索。
+
+⚠️ **易錯提醒**：第一題寫成 He will open a restaurant，那是 in the future 的計畫。
+
+🔁 **舉一反三**：What does Leo do on weekends?（答：He makes breakfast for his family.）
+
+📖 **回課文複習**：Unit 7：職業描述、be going to。
+
+</details>
+
+**第 25 題**【寫作・課綱】　My dream job: write two sentences to say what you will be and why.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: I will be a vet in the future. I want to take care of sick animals because I love dogs and cats.
+
+🔍 **審題關鍵**：第一句說職業，第二句用 because 說原因。
+
+📐 **解題步驟**：
+
+1. 第一句：I will be a(n) + 職業 + in the future.
+2. 第二句：I want to + 原形動詞 … because …
+3. 檢查 a / an：an engineer、an artist。
+
+🧠 **觀念說明**：寫作題要回答題目的兩個要求：what 和 why。
+
+✔️ **檢查方法**：檢查清單：有職業 ✔、有原因 ✔、will 後接原形 be ✔、大寫標點 ✔。
+
+⚠️ **易錯提醒**：寫 I will a doctor.，漏了 be。
+
+🔁 **舉一反三**：用 be going to 寫一句這個週末的計畫。（答：I'm going to read a comic book this weekend.）
+
+📖 **回課文複習**：Unit 7：will。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 6 題（will 和 be going to）：will 不能和 going to 連用。
@@ -940,6 +1127,12 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 - 第 17 題（職業與工作配對）：artist 前用 an。
 - 第 18 題（職業與工作配對）：do 不能少。
 - 第 19 題（職業與工作配對）：其他是過去或習慣。
+- 第 20 題（be going to 與 will、原形動詞）：選 went to，被 fall 的意思干擾成過去式。
+- 第 21 題（be going to 與 will、原形動詞）：看到 went 是過去式卻沒發現和 next Saturday 矛盾。
+- 第 22 題（be going to 與 will、原形動詞）：寫成 What you are going to do tomorrow?
+- 第 23 題（職業描述、閱讀、寫作）：把 put out（撲滅）看成 put on（穿上）。
+- 第 24 題（職業描述、閱讀、寫作）：第一題寫成 He will open a restaurant，那是 in the future 的計畫。
+- 第 25 題（職業描述、閱讀、寫作）：寫 I will a doctor.，漏了 be。
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -962,6 +1155,12 @@ be going to 後面必須接「原形動詞」：What are you going to do...?
 | 17 | (1) She is going to take art classes. (2) An artist. | 本頁「未來式兩種句型」。 |
 | 18 | What are you going to do tomorrow? | 本頁「未來式兩種句型」。 |
 | 19 | B. in the future | 本頁「未來時間詞」。 |
+| 20 | A. is going to | Unit 7：be going to。 |
+| 21 | went → go（I will go to the science museum next Saturday.） | Unit 7：will 和 be going to 後面都接原形動詞。 |
+| 22 | What are you going to do tomorrow? | Unit 7：be going to。 |
+| 23 | (1) C；(2) A；(3) D；(4) B | Unit 7：職業描述。 |
+| 24 | (1) He is going to take a cooking class. (2) A cook / chef (restaurant owner). | Unit 7：職業描述、be going to。 |
+| 25 | Example: I will be a vet in the future. I want to take care of sick animals because I love dogs and cats. | Unit 7：will。 |
 
 </details>
 

@@ -428,6 +428,13 @@ museum（博物館）、movie theater（電影院）、train station（火車站
 
 看到句子要先判斷做什麼事，才能選地點：watch a movie → movie theater；borrow books → library。
 
+### Directions and transport: reading a map
+
+- **位置用語**：next to（在旁邊）、between A and B（在 A 和 B 中間）、across from（在對面）、on the corner（在轉角）、in front of（在前面）、behind（在後面）。
+- **指路句型**：Go straight two blocks.（直走兩個路口）→ Turn left.（左轉）→ It's on your right.（在你的右手邊）
+- **交通方式**：by bus、by train、by MRT、by bike，但走路要說 **on foot**（不是 by foot）。問交通方式用 How do you go to …?
+- **How far 和 How long**：How far is it? 問距離（It's two kilometers.）；How long does it take? 問花多少時間（It takes ten minutes.）。
+
 ## 📚 必備知識補充（題庫、講義、例題逐題回推）
 
 測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。
@@ -560,6 +567,16 @@ between A and B 代表「在 A 與 B 之間」：between the post office and the
 
 ✏️ **馬上練習**：下方第 6 題。
 
+### 配對題
+
+1. 先配最有把握的。
+2. 用過的選項打勾，縮小範圍。
+3. 最後檢查每個選項是否只用一次（除非題目允許重複）。
+
+⚠️ **常見失分**：一開始就猜，後面會連帶配錯。
+
+✏️ **馬上練習**：下方第 24 題。
+
 ### 重組題
 
 1. 先找主詞和動詞。
@@ -599,6 +616,8 @@ between A and B 代表「在 A 與 B 之間」：between the post office and the
 | **問路句型** | 問答和指路 | 6、7、8、9 |
 | **地圖判讀** | 位置介系詞 | 10、11、12、13 |
 | **地點與交通** | 地點單字和 by/on | 14、15、16、17、18、19 |
+| **看圖指路** | 位置介系詞、指路句 | 20、21 |
+| **交通與疑問詞** | on foot、How far / How long | 22、23、24、25 |
 
 **第 6 題**【選擇・課綱】　A: Excuse me, ______ do I get to the zoo? B: Take Bus 5.
 
@@ -923,6 +942,183 @@ between A and B 代表「在 A 與 B 之間」：between the post office and the
 
 </details>
 
+**第 20 題**【閱讀・課綱】　Read the map description: "On Park Street, there are four places in a row: the post office, the bank, the bakery and the park. The library is across from the bank." (1) Where is the bank? (2) Where is the library?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) It's between the post office and the bakery. (2) It's across from the bank.
+
+🔍 **審題關鍵**：先畫出四個地點的順序。
+
+📐 **解題步驟**：
+
+1. 順序：post office → bank → bakery → park。
+2. bank 左邊是 post office，右邊是 bakery：between the post office and the bakery。
+3. library 在 bank 的對面：across from the bank。
+
+🧠 **觀念說明**：位置題最好先在紙上畫簡圖，再用介系詞描述。
+
+✔️ **檢查方法**：bank 旁邊也可以說 next to the post office，但題目要最精確的位置，用 between。
+
+⚠️ **易錯提醒**：between 後面要接兩個地點，用 and 連接。
+
+🔁 **舉一反三**：Where is the bakery?（答：It's between the bank and the park.）
+
+📖 **回課文複習**：Unit 3：位置用語。
+
+</details>
+
+**第 21 題**【選擇・課綱】　A: Excuse me, how do I get to the hospital? B: Go straight two blocks and turn right. It's on your left. Which picture route is correct?
+
+**A.** 直走兩個路口 → 右轉 → 醫院在左手邊  
+**B.** 直走兩個路口 → 左轉 → 醫院在右手邊  
+**C.** 右轉 → 直走兩個路口 → 醫院在左手邊  
+**D.** 直走一個路口 → 右轉 → 醫院在右手邊
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. 直走兩個路口 → 右轉 → 醫院在左手邊
+
+🔍 **審題關鍵**：照句子的順序一步一步翻譯。
+
+📐 **解題步驟**：
+
+1. Go straight two blocks → 直走兩個路口。
+2. turn right → 右轉。
+3. It's on your left → 在你的左手邊。
+
+🧠 **觀念說明**：指路題常把 left 和 right、turn 和 on your 對調，要逐字對照。
+
+✔️ **檢查方法**：把 A 再翻回英文，和原句完全相同。
+
+⚠️ **易錯提醒**：turn right 和 on your left 同時出現，容易記混。
+
+🔁 **舉一反三**：「過馬路」英文怎麼說？（答：cross the street）
+
+📖 **回課文複習**：Unit 3：指路句型。
+
+</details>
+
+**第 22 題**【選擇・課綱】　My home is very close to school, so I go to school ______.
+
+**A.** by foot  
+**B.** on foot  
+**C.** by walk  
+**D.** on bus
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. on foot
+
+🔍 **審題關鍵**：走路是特別的說法。
+
+📐 **解題步驟**：
+
+1. 交通工具用 by：by bus、by bike。
+2. 走路要說 on foot。
+3. by foot、by walk、on bus 都不正確。
+
+🧠 **觀念說明**：這是固定說法，要整組記：go to school on foot = walk to school。
+
+✔️ **檢查方法**：同義句：I walk to school. 意思相同。
+
+⚠️ **易錯提醒**：套用 by 的規則寫成 by foot。
+
+🔁 **舉一反三**：I go to Kaohsiung ______ high-speed rail.（答：by）
+
+📖 **回課文複習**：Unit 3：交通方式。
+
+</details>
+
+**第 23 題**【選擇・課綱】　A: ______ does it take to get to the train station? B: It takes about fifteen minutes by bus.
+
+**A.** How far  
+**B.** How long  
+**C.** How many  
+**D.** How often
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. How long
+
+🔍 **審題關鍵**：回答是「花多少時間」。
+
+📐 **解題步驟**：
+
+1. 回答 It takes about fifteen minutes → 時間長度。
+2. 問時間長度用 How long does it take?
+3. How far 問距離；How many 問數量；How often 問頻率。
+
+🧠 **觀念說明**：疑問詞要從「答句的內容」倒推。
+
+✔️ **檢查方法**：如果答案是 It's three kilometers away，才用 How far。
+
+⚠️ **易錯提醒**：看到「去車站」就選 How far。
+
+🔁 **舉一反三**：______ is it from here to the zoo? It's two kilometers.（答：How far）
+
+📖 **回課文複習**：Unit 3：How far 和 How long。
+
+</details>
+
+**第 24 題**【配對・課綱】　Match: (1) How do you go to Taipei?　(2) Where is the museum?　(3) How far is the beach?　A. It's next to the city hall.　B. By high-speed rail.　C. It's about five kilometers away.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) B；(2) A；(3) C
+
+🔍 **審題關鍵**：How 問方式、Where 問地點、How far 問距離。
+
+📐 **解題步驟**：
+
+1. How do you go → By high-speed rail.
+2. Where → It's next to the city hall.
+3. How far → It's about five kilometers away.
+
+🧠 **觀念說明**：問答配對時，先看答句開頭：By 表示方式，next to 表示位置，kilometers 表示距離。
+
+✔️ **檢查方法**：三組都能用疑問詞對應，沒有重複。
+
+⚠️ **易錯提醒**：把 How far 配到位置的答案。
+
+🔁 **舉一反三**：How do you go to Penghu?（答：By plane. 或 By boat.）
+
+📖 **回課文複習**：Unit 3：位置用語、交通方式。
+
+</details>
+
+**第 25 題**【寫作・課綱】　Write one sentence to tell a visitor how to get from school to the MRT station: go straight 1 block, turn left, it's on the right.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Go straight one block and turn left. The MRT station is on your right.
+
+🔍 **審題關鍵**：用祈使句：動詞原形開頭。
+
+📐 **解題步驟**：
+
+1. 直走一個路口：Go straight one block.
+2. 左轉：turn left。
+3. 在右手邊：It's (The MRT station is) on your right.
+
+🧠 **觀念說明**：指路用祈使句（Go、Turn），簡短清楚。
+
+✔️ **檢查方法**：檢查大寫開頭、句號結尾、block 單數（one block）。
+
+⚠️ **易錯提醒**：寫成 Go straight one blocks.
+
+🔁 **舉一反三**：加上禮貌用語的開頭？（答：Sure! / No problem. Go straight...）
+
+📖 **回課文複習**：Unit 3：指路句型。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 6 題（問答和指路）：where 問地點，不是問方法。
@@ -939,6 +1135,12 @@ between A and B 代表「在 A 與 B 之間」：between the post office and the
 - 第 17 題（地點單字和 by/on）：要從回答反推問句。
 - 第 18 題（地點單字和 by/on）：指路不用 You will go。
 - 第 19 題（地點單字和 by/on）：are 配 trees 複數。
+- 第 20 題（位置介系詞、指路句）：between 後面要接兩個地點，用 and 連接。
+- 第 21 題（位置介系詞、指路句）：turn right 和 on your left 同時出現，容易記混。
+- 第 22 題（on foot、How far / How long）：套用 by 的規則寫成 by foot。
+- 第 23 題（on foot、How far / How long）：看到「去車站」就選 How far。
+- 第 24 題（on foot、How far / How long）：把 How far 配到位置的答案。
+- 第 25 題（on foot、How far / How long）：寫成 Go straight one blocks.
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -961,6 +1163,12 @@ between A and B 代表「在 A 與 B 之間」：between the post office and the
 | 17 | B. Where | 本頁「問路句型」。 |
 | 18 | Example: Go straight for two blocks and turn right. My school is on your left. | 本頁「問路句型」。 |
 | 19 | (1) A supermarket. (2) Yes, there are. | 知識點 There is / There are。 |
+| 20 | (1) It's between the post office and the bakery. (2) It's across from the bank. | Unit 3：位置用語。 |
+| 21 | A. 直走兩個路口 → 右轉 → 醫院在左手邊 | Unit 3：指路句型。 |
+| 22 | B. on foot | Unit 3：交通方式。 |
+| 23 | B. How long | Unit 3：How far 和 How long。 |
+| 24 | (1) B；(2) A；(3) C | Unit 3：位置用語、交通方式。 |
+| 25 | Go straight one block and turn left. The MRT station is on your right. | Unit 3：指路句型。 |
 
 </details>
 

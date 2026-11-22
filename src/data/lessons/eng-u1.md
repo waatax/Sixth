@@ -474,6 +474,14 @@ $$\text{例：He } \textcolor{#2196f3}{\textbf{is}} \text{ } \textcolor{#e91e63}
 
 考卷常出「選出正確對應句」，先看疑問詞，再看主詞和時態。
 
+### Daily routines: time, frequency and he/she + -s
+
+- **說時間兩種方式**：9:40 可以說 nine forty，也可以說 twenty to ten（差 20 分就 10 點）；9:15 是 nine fifteen 或 a quarter past nine。
+- **第三人稱單數**：主詞是 he、she、it、my dad、Amy 這類單數時，一般動詞要加 -s 或 -es：drive → drives，watch → watches，go → goes，study → studies。
+- **How often 問頻率**：回答 once a week（一週一次）、twice a week（一週兩次）、three times a week（一週三次）、every day（每天）。
+- **讀作息表（scanning）**：先找題目問的「星期」和「活動」，再到表格同一列、同一欄找答案。
+- **問時間的句型**：What time does + 主詞 + 原形動詞？例如 What time does your brother get up?
+
 ## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
@@ -616,6 +624,36 @@ A 選項是 6:45；C 選項是 7:30。
 
 ✏️ **馬上練習**：下方第 6 題。
 
+### 填充題
+
+1. 先確定空格要填的是數字、名詞還是單位。
+2. 把答案放回句子讀一次，看通不通順。
+3. 注意題目要求的格式，例如最簡分數、注音或國字。
+
+⚠️ **常見失分**：只寫數字忘了單位，或沒有化成題目要求的形式。
+
+✏️ **馬上練習**：下方第 20 題。
+
+### 配對題
+
+1. 先配最有把握的。
+2. 用過的選項打勾，縮小範圍。
+3. 最後檢查每個選項是否只用一次（除非題目允許重複）。
+
+⚠️ **常見失分**：一開始就猜，後面會連帶配錯。
+
+✏️ **馬上練習**：下方第 21 題。
+
+### 改錯題
+
+1. 逐字讀，懷疑的字先圈起來。
+2. 把字放回語詞想字義，判斷部首是否合理。
+3. 寫出錯字和正確字。
+
+⚠️ **常見失分**：只找到一個錯字就停下來，同一句可能不只一個。
+
+✏️ **馬上練習**：下方第 24 題。
+
 ### 重組題
 
 1. 先找主詞和動詞。
@@ -656,6 +694,8 @@ A 選項是 6:45；C 選項是 7:30。
 | **句意對應** | 問答配對 | 10、11、12 |
 | **句子重組** | 字序和標點 | 13、14 |
 | **閱讀與時間** | 時間表和 past/to | 15、16、17、18 |
+| **時間與頻率** | 時間說法、How often、第三人稱 | 19、20、21 |
+| **重組與閱讀** | 句子重組、作息表、改錯 | 22、23、24 |
 
 **第 6 題**【選擇・參考東光國小112下英語】　What time ______ Tina ______ dinner?
 
@@ -963,6 +1003,175 @@ A 選項是 6:45；C 選項是 7:30。
 
 </details>
 
+**第 19 題**【選擇・課綱】　It is 9:40 now. Which one is NOT correct for 9:40?
+
+**A.** nine forty  
+**B.** twenty to ten  
+**C.** forty past nine  
+**D.** twenty to nine
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. twenty to nine
+
+🔍 **審題關鍵**：to 是「差幾分到幾點」。
+
+📐 **解題步驟**：
+
+1. 9:40 可以直接說 nine forty。
+2. 9:40 差 20 分就 10 點：twenty to ten。
+3. forty past nine（9 點過 40 分）文法上也說得通，但較少用。
+4. twenty to nine 是 8:40，不是 9:40。
+
+🧠 **觀念說明**：past 表示「過了」，to 表示「還差」；用 to 時，後面要接「下一個整點」。
+
+✔️ **檢查方法**：10:00 減 20 分鐘 = 9:40，所以 twenty to ten 正確。
+
+⚠️ **易錯提醒**：把 to 後面接成現在的整點 nine，就少了一小時。
+
+🔁 **舉一反三**：How do you say 7:45 with "to"?（答：a quarter to eight）
+
+📖 **回課文複習**：Unit 1：說時間兩種方式。
+
+</details>
+
+**第 20 題**【填充・課綱】　My dad usually ______ (drive) to work, but my mom ______ (take) the MRT.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** drives；takes
+
+🔍 **審題關鍵**：主詞 my dad、my mom 都是單數。
+
+📐 **解題步驟**：
+
+1. my dad 是第三人稱單數，drive 加 -s：drives。
+2. my mom 也是單數，take 加 -s：takes。
+3. usually 是頻率副詞，放在一般動詞前面，不影響動詞變化。
+
+🧠 **觀念說明**：一般現在式描述習慣，主詞是單數時動詞要加 -s。
+
+✔️ **檢查方法**：換成 My parents usually drive to work. 主詞複數就不加 -s。
+
+⚠️ **易錯提醒**：看到 usually 就忘了加 -s。
+
+🔁 **舉一反三**：My sister ______ (study) English every day.（答：studies）
+
+📖 **回課文複習**：Unit 1：第三人稱單數。
+
+</details>
+
+**第 21 題**【配對・課綱】　Match the questions and answers. (1) How often do you play basketball?　(2) What time do you go to bed?　(3) How do you go to school?　A. At ten.　B. Twice a week.　C. On foot.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) B；(2) A；(3) C
+
+🔍 **審題關鍵**：看疑問詞：How often 問次數、What time 問幾點、How 問方式。
+
+📐 **解題步驟**：
+
+1. How often → 頻率 → Twice a week.
+2. What time → 時間 → At ten.
+3. How do you go → 交通方式 → On foot.
+
+🧠 **觀念說明**：問答配對的關鍵是「疑問詞」，先圈出來再找對應的答案種類。
+
+✔️ **檢查方法**：把每組問答連起來讀，意思都合理。
+
+⚠️ **易錯提醒**：把 How often 和 How 混淆。
+
+🔁 **舉一反三**：How often does Amy read books? → She reads books ______ a week (3 次).（答：three times）
+
+📖 **回課文複習**：Unit 1：How often 問頻率。
+
+</details>
+
+**第 22 題**【重組・課綱】　Unscramble: get up / does / What time / your brother / ?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** What time does your brother get up?
+
+🔍 **審題關鍵**：問句順序：疑問詞 + does + 主詞 + 原形動詞？
+
+📐 **解題步驟**：
+
+1. 疑問詞 What time 放最前面。
+2. 接助動詞 does。
+3. 再接主詞 your brother 和原形動詞 get up。
+4. 最後加問號。
+
+🧠 **觀念說明**：有 does 的問句，後面的動詞要用原形（get up，不是 gets up）。
+
+✔️ **檢查方法**：回答：He gets up at six thirty. 肯定句的動詞才加 -s。
+
+⚠️ **易錯提醒**：寫成 What time your brother does get up?
+
+🔁 **舉一反三**：Unscramble: does / Where / live / she / ?（答：Where does she live?）
+
+📖 **回課文複習**：Unit 1：問時間的句型。
+
+</details>
+
+**第 23 題**【閱讀・課綱】　Read Amy's schedule: Monday — swimming 4:30 p.m.; Wednesday — piano 5:00 p.m.; Friday — swimming 4:30 p.m.; Saturday — art class 10:00 a.m. (1) What time does Amy have piano class? (2) How often does Amy go swimming?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) At five (5:00 p.m.) on Wednesday. (2) Twice a week.
+
+🔍 **審題關鍵**：Scanning：先找 piano 和 swimming 那幾列。
+
+📐 **解題步驟**：
+
+1. piano 只在 Wednesday，時間 5:00 p.m.。
+2. swimming 在 Monday 和 Friday，一週兩次。
+3. 一週兩次是 twice a week。
+
+🧠 **觀念說明**：表格閱讀不需要從頭讀到尾，用關鍵字找到那一列就好。
+
+✔️ **檢查方法**：數一數 swimming 出現 2 次，答 twice a week 正確。
+
+⚠️ **易錯提醒**：把 a.m. 和 p.m. 看錯；或把 twice 寫成 two times（意思對，但 twice 更常用）。
+
+🔁 **舉一反三**：When does Amy have art class?（答：On Saturday at ten in the morning.）
+
+📖 **回課文複習**：Unit 1：讀作息表。
+
+</details>
+
+**第 24 題**【改錯・課綱】　Find and correct the mistake: "Kevin go to the library every Sunday."
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** go → goes（Kevin goes to the library every Sunday.）
+
+🔍 **審題關鍵**：every Sunday 是習慣；Kevin 是單數。
+
+📐 **解題步驟**：
+
+1. every Sunday 表示習慣，用現在式。
+2. 主詞 Kevin 是第三人稱單數。
+3. go 要變成 goes（字尾是 o 加 -es）。
+
+🧠 **觀念說明**：以 o、s、sh、ch、x 結尾的動詞加 -es：goes、watches、washes、fixes。
+
+✔️ **檢查方法**：改後讀一次：Kevin goes to the library every Sunday. 文法正確。
+
+⚠️ **易錯提醒**：改成 gos。
+
+🔁 **舉一反三**：She ______ (watch) TV after dinner.（答：watches）
+
+📖 **回課文複習**：Unit 1：第三人稱單數。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 6 題（第三人稱和助動詞）：does 已有 s，have 不能再變 has。
@@ -978,6 +1187,12 @@ A 選項是 6:45；C 選項是 7:30。
 - 第 16 題（時間表和 past/to）：回答要用第三人稱。
 - 第 17 題（時間表和 past/to）：不要只寫 chess。
 - 第 18 題（時間表和 past/to）：一般動詞才放前面。
+- 第 19 題（時間說法、How often、第三人稱）：把 to 後面接成現在的整點 nine，就少了一小時。
+- 第 20 題（時間說法、How often、第三人稱）：看到 usually 就忘了加 -s。
+- 第 21 題（時間說法、How often、第三人稱）：把 How often 和 How 混淆。
+- 第 22 題（句子重組、作息表、改錯）：寫成 What time your brother does get up?
+- 第 23 題（句子重組、作息表、改錯）：把 a.m. 和 p.m. 看錯；或把 twice 寫成 two times（意思對，但 twice 更常用）。
+- 第 24 題（句子重組、作息表、改錯）：改成 gos。
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -999,6 +1214,12 @@ A 選項是 6:45；C 選項是 7:30。
 | 16 | (1) By MRT. (2) She practices the violin. | 本頁「問答要對得上」。 |
 | 17 | Example: I play chess with my dad on Sundays. | 本頁「問答要對得上」。 |
 | 18 | B. He is often late. | 核心觀念 4：頻率副詞位置。 |
+| 19 | D. twenty to nine | Unit 1：說時間兩種方式。 |
+| 20 | drives；takes | Unit 1：第三人稱單數。 |
+| 21 | (1) B；(2) A；(3) C | Unit 1：How often 問頻率。 |
+| 22 | What time does your brother get up? | Unit 1：問時間的句型。 |
+| 23 | (1) At five (5:00 p.m.) on Wednesday. (2) Twice a week. | Unit 1：讀作息表。 |
+| 24 | go → goes（Kevin goes to the library every Sunday.） | Unit 1：第三人稱單數。 |
 
 </details>
 

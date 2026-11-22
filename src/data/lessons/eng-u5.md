@@ -447,6 +447,13 @@ first（1st）、second（2nd）、third（3rd）、fourth（4th）、fifth（5t
 
 Dragon Boat Festival 吃粽子（rice dumplings）；Moon Festival 賞月、吃月餅；Lantern Festival 猜燈謎；Thanksgiving 吃火雞（turkey）。回答別人祝福時，說 You too 比較自然。
 
+### Festivals and dates: ordinals and prepositions
+
+- **序數拼法**：1st first、2nd second、3rd third、5th fifth、8th eighth、9th ninth、12th twelfth、20th twentieth、21st twenty-first、22nd twenty-second、31st thirty-first。
+- **日期介系詞**：特定日期用 on（on May 5th、on Christmas Day），月份和年份用 in（in July、in 2025），時刻用 at（at seven）。
+- **臺灣節日的英文和習俗**：Lunar New Year — red envelopes；Lantern Festival — lanterns、riddles；Dragon Boat Festival — rice dumplings、dragon boat races；Mid-Autumn Festival (Moon Festival) — mooncakes、pomelos；Teacher's Day — September 28th。
+- **When is …? 的回答**：It's on + 日期。When is your birthday? — It's on March 3rd.
+
 ## 📚 必備知識補充（題庫、講義、例題逐題回推）
 
 測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。
@@ -617,6 +624,8 @@ Dragon Boat Festival 吃粽子（rice dumplings）；Moon Festival 賞月、吃�
 | **節慶字彙** | 活動和食物配對 | 5、6、7、8 |
 | **介系詞與日期** | in、on 與序數 | 9、10、11、12 |
 | **情境應答** | 祝福和卡片 | 13、14、15、16、17、18 |
+| **序數與介系詞** | 序數拼寫、on/in/at | 19、20 |
+| **節日文化** | 節日配對、閱讀邀請卡 | 21、22、23、24 |
 
 **第 5 題**【配對・課綱】　Match: (1) Moon Festival (2) Dragon Boat Festival (3) Thanksgiving (4) Lunar New Year. A. turkey B. mooncakes C. red envelopes D. rice dumplings
 
@@ -933,6 +942,179 @@ Dragon Boat Festival 吃粽子（rice dumplings）；Moon Festival 賞月、吃�
 
 </details>
 
+**第 19 題**【填充・課綱】　Write the ordinal numbers: 22nd = ______；31st = ______；12th = ______.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** twenty-second；thirty-first；twelfth
+
+🔍 **審題關鍵**：個位數是 1、2、3 時特別注意。
+
+📐 **解題步驟**：
+
+1. 22nd：個位 2 → second，twenty-second。
+2. 31st：個位 1 → first，thirty-first。
+3. 12th：twelve 去 ve 加 fth → twelfth。
+
+🧠 **觀念說明**：序數字尾和縮寫要配對：1 → st、2 → nd、3 → rd，其他 → th（11、12、13 也是 th）。
+
+✔️ **檢查方法**：11th eleventh、13th thirteenth 都用 th。
+
+⚠️ **易錯提醒**：寫成 twelveth 或 twenty-twoth。
+
+🔁 **舉一反三**：Write "the 3rd" in words.（答：third）
+
+📖 **回課文複習**：Unit 5：序數拼法。
+
+</details>
+
+**第 20 題**【選擇・課綱】　The Dragon Boat Festival is ______ the fifth day of the fifth lunar month. This year it is ______ June.
+
+**A.** on ; in  
+**B.** in ; on  
+**C.** at ; in  
+**D.** on ; at
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. on ; in
+
+🔍 **審題關鍵**：特定日子用 on，月份用 in。
+
+📐 **解題步驟**：
+
+1. the fifth day of the fifth lunar month 是特定某一天 → on。
+2. June 是月份 → in。
+3. 所以選 on ; in。
+
+🧠 **觀念說明**：介系詞從小範圍到大範圍：at（時刻）→ on（日子）→ in（月、年、季節）。
+
+✔️ **檢查方法**：on Monday、on my birthday 也都是特定日子。
+
+⚠️ **易錯提醒**：看到 month 就用 in；但這裡指的是那個月的「某一天」。
+
+🔁 **舉一反三**：I was born ______ 2014.（答：in）
+
+📖 **回課文複習**：Unit 5：日期介系詞。
+
+</details>
+
+**第 21 題**【配對・課綱】　Match the festival with what people do: (1) Lunar New Year　(2) Lantern Festival　(3) Dragon Boat Festival　(4) Mid-Autumn Festival　A. eat rice dumplings　B. eat mooncakes and pomelos　C. give red envelopes　D. guess riddles on lanterns
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) C；(2) D；(3) A；(4) B
+
+🔍 **審題關鍵**：每個節日都有代表的食物或活動。
+
+📐 **解題步驟**：
+
+1. 農曆新年 → 發紅包 red envelopes。
+2. 元宵節 → 猜燈謎 riddles on lanterns。
+3. 端午節 → 吃粽子 rice dumplings。
+4. 中秋節 → 吃月餅、柚子 mooncakes and pomelos。
+
+🧠 **觀念說明**：介紹自己的文化是英語課的重要目標，節日英文要能說也要能配對。
+
+✔️ **檢查方法**：四個活動各用一次。
+
+⚠️ **易錯提醒**：把 Lantern Festival 和 Mid-Autumn Festival 混淆（都和月亮、晚上有關）。
+
+🔁 **舉一反三**：When is Teacher's Day in Taiwan?（答：It's on September 28th.）
+
+📖 **回課文複習**：Unit 5：臺灣節日的英文和習俗。
+
+</details>
+
+**第 22 題**【閱讀・課綱】　Read the card: "Dear Mia, Please come to my Halloween party! Date: October 31st (Friday). Time: 6:30 p.m. Place: My home, 12 Sun Road. Wear a costume! — Nora" (1) When is the party? (2) What should Mia wear?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) It's on October 31st (Friday) at 6:30 p.m. (2) She should wear a costume.
+
+🔍 **審題關鍵**：邀請卡的資訊通常列在 Date、Time、Place。
+
+📐 **解題步驟**：
+
+1. Date: October 31st，Time: 6:30 p.m.
+2. 回答時用 on + 日期、at + 時間。
+3. Wear a costume! → 她應該穿戲服（變裝）。
+
+🧠 **觀念說明**：讀邀請卡要抓四個重點：誰、什麼活動、什麼時候、在哪裡。
+
+✔️ **檢查方法**：Halloween 就在 10 月 31 日，和卡片日期一致。
+
+⚠️ **易錯提醒**：把 Place 的地址當成時間。
+
+🔁 **舉一反三**：Where is the party?（答：At Nora's home, 12 Sun Road.）
+
+📖 **回課文複習**：Unit 5：日期介系詞。
+
+</details>
+
+**第 23 題**【選擇・課綱】　A: When is your birthday? B: ______
+
+**A.** It's on March 3rd.  
+**B.** It's at March 3rd.  
+**C.** I'm March 3rd.  
+**D.** It's in March 3rd.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. It's on March 3rd.
+
+🔍 **審題關鍵**：回答日期用 It's on + 日期。
+
+📐 **解題步驟**：
+
+1. When is …? 問日期。
+2. 特定日期用 on。
+3. 所以回答 It's on March 3rd.
+
+🧠 **觀念說明**：只有月份時才用 in：My birthday is in March.
+
+✔️ **檢查方法**：把答案放回對話：When is your birthday? It's on March 3rd. 通順。
+
+⚠️ **易錯提醒**：答成 I'm March 3rd.（我是三月三日）意思錯誤。
+
+🔁 **舉一反三**：When is Christmas?（答：It's on December 25th.）
+
+📖 **回課文複習**：Unit 5：When is …? 的回答。
+
+</details>
+
+**第 24 題**【寫作・課綱】　Write a two-sentence card to invite a friend to your Moon Festival barbecue. Include the date and one activity.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** Example: Please come to my Moon Festival barbecue on September 17th. We will eat mooncakes and look at the moon together!
+
+🔍 **審題關鍵**：邀請卡要有活動、日期，再加一個活動內容。
+
+📐 **解題步驟**：
+
+1. 第一句：Please come to my … on + 日期。
+2. 第二句：We will + 原形動詞（eat mooncakes、look at the moon）。
+3. 檢查大寫、標點和日期介系詞。
+
+🧠 **觀念說明**：寫作題要「完整句子 + 題目要求的資訊」，缺一項就會被扣分。
+
+✔️ **檢查方法**：檢查清單：有活動名稱 ✔、有日期 ✔、有一個活動 ✔、句子完整 ✔。
+
+⚠️ **易錯提醒**：只寫 Moon Festival, September 17th.，沒有寫成完整句子。
+
+🔁 **舉一反三**：用 Happy … ! 寫一句節日祝福。（答：Happy Mid-Autumn Festival!）
+
+📖 **回課文複習**：Unit 5：臺灣節日的英文和習俗。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 5 題（活動和食物配對）：rice dumplings 就是粽子。
@@ -949,6 +1131,12 @@ Dragon Boat Festival 吃粽子（rice dumplings）；Moon Festival 賞月、吃�
 - 第 16 題（祝福和卡片）：envelope 指信封。
 - 第 17 題（祝福和卡片）：要配合過去式回答。
 - 第 18 題（祝福和卡片）：其餘都是華人傳統節慶。
+- 第 19 題（序數拼寫、on/in/at）：寫成 twelveth 或 twenty-twoth。
+- 第 20 題（序數拼寫、on/in/at）：看到 month 就用 in；但這裡指的是那個月的「某一天」。
+- 第 21 題（節日配對、閱讀邀請卡）：把 Lantern Festival 和 Mid-Autumn Festival 混淆（都和月亮、晚上有關）。
+- 第 22 題（節日配對、閱讀邀請卡）：把 Place 的地址當成時間。
+- 第 23 題（節日配對、閱讀邀請卡）：答成 I'm March 3rd.（我是三月三日）意思錯誤。
+- 第 24 題（節日配對、閱讀邀請卡）：只寫 Moon Festival, September 17th.，沒有寫成完整句子。
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -971,6 +1159,12 @@ Dragon Boat Festival 吃粽子（rice dumplings）；Moon Festival 賞月、吃�
 | 16 | A. Lunar New Year | 本頁「祝福語和文化差異」。 |
 | 17 | (1) They had a barbecue and ate pomelos. (2) No, they didn’t. | 核心觀念 1：台灣傳統節慶。 |
 | 18 | B. Thanksgiving | 核心觀念 2：西方節慶。 |
+| 19 | twenty-second；thirty-first；twelfth | Unit 5：序數拼法。 |
+| 20 | A. on ; in | Unit 5：日期介系詞。 |
+| 21 | (1) C；(2) D；(3) A；(4) B | Unit 5：臺灣節日的英文和習俗。 |
+| 22 | (1) It's on October 31st (Friday) at 6:30 p.m. (2) She should wear a costume. | Unit 5：日期介系詞。 |
+| 23 | A. It's on March 3rd. | Unit 5：When is …? 的回答。 |
+| 24 | Example: Please come to my Moon Festival barbecue on September 17th. We will eat mooncakes and look at the moon together! | Unit 5：臺灣節日的英文和習俗。 |
 
 </details>
 

@@ -467,6 +467,13 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 表示「不要吃太多」用 too much（不可數）或 too many（可數）。
 
+### Health and food: advice, -ache words and measure words
+
+- **-ache 疼痛字**：headache（頭痛）、toothache（牙痛）、stomachache（肚子痛）、backache（背痛）、earache（耳朵痛）。
+- **給建議用 should / shouldn't + 原形動詞**：I have a toothache. → You should see a dentist. You shouldn't eat too much candy.
+- **a few 和 a little**：a few 接可數名詞（a few apples），a little 接不可數名詞（a little sugar、a little milk）。
+- **量詞**：a glass of milk（一杯牛奶）、a bowl of rice（一碗飯）、a slice of bread（一片麵包）、a cup of tea（一杯茶）、a bottle of water（一瓶水）。
+
 ## 📚 必備知識補充（題庫、講義、例題逐題回推）
 
 測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。
@@ -629,6 +636,16 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 ✏️ **馬上練習**：下方第 10 題。
 
+### 改錯題
+
+1. 逐字讀，懷疑的字先圈起來。
+2. 把字放回語詞想字義，判斷部首是否合理。
+3. 寫出錯字和正確字。
+
+⚠️ **常見失分**：只找到一個錯字就停下來，同一句可能不只一個。
+
+✏️ **馬上練習**：下方第 26 題。
+
 ### 重組題
 
 1. 先找主詞和動詞。
@@ -668,6 +685,8 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 | **健康表達** | 生病與建議 | 7、8、9、10 |
 | **食物數量** | How many 和 How much | 11、12、13、14 |
 | **閱讀與應用** | 建議和文章 | 15、16、17、18、19、20 |
+| **身體不適與建議** | -ache、should | 21、22 |
+| **可數與不可數** | a few / a little、量詞 | 23、24、25、26 |
 
 **第 7 題**【選擇・課綱】　A: What’s wrong with Amy? B: She ______ a toothache.
 
@@ -999,6 +1018,174 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 
 </details>
 
+**第 21 題**【配對・課綱】　Match the problem with the best advice: (1) I have a toothache.　(2) I have a fever.　(3) I have a stomachache.　A. You should drink warm water and see a doctor.　B. You should see a dentist.　C. You shouldn't eat ice cream now.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) B；(2) A；(3) C
+
+🔍 **審題關鍵**：牙痛看牙醫；發燒多喝水看醫生；肚子痛不要吃冰。
+
+📐 **解題步驟**：
+
+1. toothache → dentist（牙醫）。
+2. fever → drink warm water, see a doctor。
+3. stomachache → shouldn't eat ice cream。
+
+🧠 **觀念說明**：建議要符合病症，才是合理的回答。
+
+✔️ **檢查方法**：三組各用一次，意思都合理。
+
+⚠️ **易錯提醒**：把 dentist 和 doctor 搞混。
+
+🔁 **舉一反三**：I have a headache. → You should ______.（答：take a rest / go to bed early）
+
+📖 **回課文複習**：Unit 4：-ache 疼痛字、給建議。
+
+</details>
+
+**第 22 題**【重組・課綱】　Unscramble: eat / You / more / should / vegetables / .
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** You should eat more vegetables.
+
+🔍 **審題關鍵**：主詞 + should + 原形動詞 + 其他。
+
+📐 **解題步驟**：
+
+1. 主詞 You 放最前面。
+2. should 後面接原形動詞 eat。
+3. more vegetables 是受詞，最後加句號。
+
+🧠 **觀念說明**：should 是助動詞，後面一定接原形動詞。
+
+✔️ **檢查方法**：換成否定：You shouldn't eat too much fried food.
+
+⚠️ **易錯提醒**：寫成 You should eats more vegetables.
+
+🔁 **舉一反三**：Unscramble: go / should / to bed / early / You（答：You should go to bed early.）
+
+📖 **回課文複習**：Unit 4：給建議。
+
+</details>
+
+**第 23 題**【選擇・課綱】　Mom needs ______ eggs and ______ milk to make pancakes.
+
+**A.** a few ; a little  
+**B.** a little ; a few  
+**C.** many ; many  
+**D.** much ; a few
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. a few ; a little
+
+🔍 **審題關鍵**：eggs 可數、milk 不可數。
+
+📐 **解題步驟**：
+
+1. eggs 有 -s，是可數名詞 → a few。
+2. milk 是不可數名詞 → a little。
+3. 所以選 a few ; a little。
+
+🧠 **觀念說明**：判斷可不可數：能一個一個數（egg、apple）是可數；液體、粉末（milk、sugar、water）是不可數。
+
+✔️ **檢查方法**：How many eggs? How much milk? 問句也用不同的字。
+
+⚠️ **易錯提醒**：看到「少量」就都用 a little。
+
+🔁 **舉一反三**：There is ______ water in the bottle.（答：a little）
+
+📖 **回課文複習**：Unit 4：a few 和 a little。
+
+</details>
+
+**第 24 題**【配對・課綱】　Match: (1) a ______ of rice　(2) a ______ of bread　(3) a ______ of milk　(4) a ______ of tea　A. slice　B. bowl　C. glass　D. cup
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) B；(2) A；(3) C；(4) D
+
+🔍 **審題關鍵**：想一想裝或切的方式。
+
+📐 **解題步驟**：
+
+1. 飯用碗裝：a bowl of rice。
+2. 麵包切片：a slice of bread。
+3. 牛奶用玻璃杯：a glass of milk。
+4. 茶用茶杯：a cup of tea。
+
+🧠 **觀念說明**：不可數名詞不能直接加數字，要用量詞：two glasses of milk。
+
+✔️ **檢查方法**：每個量詞各用一次。
+
+⚠️ **易錯提醒**：寫成 two milks。
+
+🔁 **舉一反三**：「兩瓶水」英文？（答：two bottles of water）
+
+📖 **回課文複習**：Unit 4：量詞。
+
+</details>
+
+**第 25 題**【閱讀・課綱】　Read: "Ben eats a slice of bread and drinks a glass of milk for breakfast. For lunch, he has a bowl of rice and some vegetables. He drinks a bottle of cola every afternoon." (1) What does Ben have for breakfast? (2) What should Ben change? Why?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) A slice of bread and a glass of milk. (2) He should drink less cola (drink water instead), because cola has too much sugar.
+
+🔍 **審題關鍵**：第二題要用健康飲食的知識判斷。
+
+📐 **解題步驟**：
+
+1. 早餐：a slice of bread and a glass of milk。
+2. 每天下午一瓶可樂，糖分太多。
+3. 建議：He should drink water instead of cola.
+
+🧠 **觀念說明**：素養型閱讀不只找答案，還要提出合理的建議和理由。
+
+✔️ **檢查方法**：建議用 should + 原形動詞，理由用 because。
+
+⚠️ **易錯提醒**：只回答「drink cola」，沒有說要改什麼。
+
+🔁 **舉一反三**：Is Ben's lunch healthy?（答：Yes, it has rice and vegetables.）
+
+📖 **回課文複習**：Unit 4：量詞、給建議。
+
+</details>
+
+**第 26 題**【改錯・課綱】　Find and correct the mistake: "You should drinks more water."
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** drinks → drink（You should drink more water.）
+
+🔍 **審題關鍵**：should 後面接什麼形式的動詞？
+
+📐 **解題步驟**：
+
+1. should 是助動詞。
+2. 助動詞後面接原形動詞。
+3. drinks 改成 drink。
+
+🧠 **觀念說明**：助動詞（can、should、will、did）後面都要用原形動詞。
+
+✔️ **檢查方法**：He should drink more water. 主詞換成 he，動詞仍是原形。
+
+⚠️ **易錯提醒**：主詞是 you 卻加 -s。
+
+🔁 **舉一反三**：She can ______ (swim).（答：swim）
+
+📖 **回課文複習**：Unit 4：給建議用 should。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 7 題（生病與建議）：不要用 is。
@@ -1015,6 +1202,12 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 - 第 18 題（建議和文章）：should 後面不加 to。
 - 第 19 題（建議和文章）：不要寫 should to。
 - 第 20 題（建議和文章）：Beans 也算 protein。
+- 第 21 題（-ache、should）：把 dentist 和 doctor 搞混。
+- 第 22 題（-ache、should）：寫成 You should eats more vegetables.
+- 第 23 題（a few / a little、量詞）：看到「少量」就都用 a little。
+- 第 24 題（a few / a little、量詞）：寫成 two milks。
+- 第 25 題（a few / a little、量詞）：只回答「drink cola」，沒有說要改什麼。
+- 第 26 題（a few / a little、量詞）：主詞是 you 卻加 -s。
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -1037,6 +1230,12 @@ $$\text{否定句：主詞} + \textcolor{#e91e63}{\textbf{shouldn't}} + \textcol
 | 18 | You should drink more water. | 本頁「生病句型」。 |
 | 19 | Example: You should sleep early and drink more water. | 本頁「生病句型」。 |
 | 20 | B. Protein foods | 核心觀念 4：六大類食物。 |
+| 21 | (1) B；(2) A；(3) C | Unit 4：-ache 疼痛字、給建議。 |
+| 22 | You should eat more vegetables. | Unit 4：給建議。 |
+| 23 | A. a few ; a little | Unit 4：a few 和 a little。 |
+| 24 | (1) B；(2) A；(3) C；(4) D | Unit 4：量詞。 |
+| 25 | (1) A slice of bread and a glass of milk. (2) He should drink less cola (drink water instead), because cola has too much sugar. | Unit 4：量詞、給建議。 |
+| 26 | drinks → drink（You should drink more water.） | Unit 4：給建議用 should。 |
 
 </details>
 

@@ -96,6 +96,8 @@ function normalize(unit, source) {
   t = t.replace(/^🔍 \*\*【審題關鍵與破題思考】\*\*：審題關鍵：先圈出題幹已知條件與所求目標.*\n\n?/gm, '');
   t = t.replace(/^⚠️ \*\*【易錯防雷與陷阱剖析】\*\*：常考誘答防雷：作答時仔細比對各選項差異.*\n\n?/gm, '');
   t = t.replace(/。。/g, '。');
+  // 程式碼框（圖表）裡粗體不會轉換，畫面會露出 **；改用寬度相同的「」標示
+  if (unit === 'eng-u8') t = t.replace('│ 📍 **in** (', '│ 📍 「in」 (').replace('│ 👥 **of** (', '│ 👥 「of」 (');
   // 事實更正：三幕劇是現代編劇整理出的結構，亞里斯多德只提出「開端、中段、結局」
   t = t.replace(/古典戲劇結構大師亞里斯多德確立的「三幕劇結構/g, '編劇常用的「三幕劇結構');
 
@@ -114,10 +116,81 @@ function normalize(unit, source) {
       if (kept.some((k) => similar(k.stem, stem) > 0.72)) return;
       kept.push({ stem, block });
     });
-    const body = kept.map((k, i) => k.block.replace(/^\*\*第 \d+ 題\*\*/, `**第 ${i + 1} 題**`)).join('');
+    const body = kept.map((k, i) => fixTemplateLines(unit, k.block).replace(/^\*\*第 \d+ 題\*\*/, `**第 ${i + 1} 題**`)).join('');
     t = t.slice(0, practiceStart) + head + body + t.slice(end);
   }
   return t;
+}
+
+// 舊例題套錯模板：解析和題目講的是不同觀念（例如小數除法配分數除法、英文字首配頻率副詞）。
+// 依題幹找到該題，把「審題關鍵／易錯防雷」改成對應這一題的說明；null 表示整行刪除。
+const H = '🔍 **【審題關鍵與破題思考】**：';
+const T = '⚠️ **【易錯防雷與陷阱剖析】**：';
+const TEMPLATE_FIXES = {
+  'comp-u4': [{ stem: '服務學習」專案實踐中', hint: '題目問「轉化為智慧、自我成長」的步驟，關鍵在服務後回頭想：學到什麼、下次怎麼做得更好，也就是反思。', trap: '服務行動最忙最顯眼，但只做不想，經驗不會變成能力；服務學習的四個階段是準備、服務、反思、慶賀。', opt: ['**D.** 吃便當階段', '**D.** 拍照上傳階段'] }],
+  'eng-u6': [
+    { stem: 'Which pair of words shows this correct relationship', hint: '字首 un- 加在形容詞前面，意思變成「不、相反」，所以要找「原字 + un- 原字」的一組。', trap: 'easy - difficult 雖然意思相反，但不是用字首 un- 造出來的；happy - gladly 意思相近，不是相反。' },
+    { stem: 'the prefix "un-" (like in "unhappy"', hint: '看例字找共同意思：unhappy 不快樂、unfair 不公平，un- 都表示「不、相反」。', trap: '不要和 re-（再一次，如 redo）、pre-（之前，如 preview）混淆。' },
+  ],
+  'eng-u7': [
+    { stem: 'What are you going to ______ during the upcoming', hint: 'be going to 後面一定接原形動詞，兩個空格都要用原形 do、visit。', trap: null },
+    { stem: 'Amy loves taking care of hurt dogs', hint: '從「照顧受傷的狗、貓、鳥」找職業線索：照顧動物、幫動物看病的是獸醫 veterinarian (vet)。', trap: null },
+    { stem: 'What are you going to ______ this summer vacation?"  B', hint: 'be going to 後面接原形動詞，所以填 do；回答也用 I\'m going to + 原形動詞。', trap: null },
+  ],
+  'eng-u8': [{ stem: 'An elephant is much ______ than a sheep', hint: '看到 than 用比較級，看到 the ... of all 用最高級；big 是短母音結尾，要重複字尾 g 再加 -er。', trap: 'bigger 要雙寫 g；第二格選項 largest 和 biggest 都表示最大，題目只給 largest，配 the 和 of all animals 用最高級。' }],
+  'eng-u2': [{ stem: 'The basketball players ______ very tired', hint: null, trap: '主詞 The basketball players 是複數，be 動詞過去式要用 were；was 只配 I、he、she、it 和單數名詞。' }],
+  'man-u4': [
+    { stem: '何者運用了「暗喻（隱喻', hint: '譬喻分三種：明喻用「像、好像、如」，暗喻用「是、成為、變成」，借喻只出現喻依。先找喻詞再判斷。', trap: '「好像沒睡好」是推測，不是譬喻；「春天邁著腳步」是擬人。' },
+    { stem: '關於「對偶」與「排比」修辭手法的比較', hint: '對偶看「兩句、字數相等、詞性相對」；排比看「三句以上、結構相同」。', trap: '兩句對稱是對偶，三句以上才是排比，不要只憑「有節奏感」判斷。' },
+    { stem: '雖然含有「好像」一詞', hint: '譬喻要有「本體」和「喻體」兩種不同的東西互相比較；「好像」表示猜測時，不是譬喻。', trap: '看到「好像」不一定是譬喻：「他好像生病了」是推測語氣。' },
+    { stem: '彎彎的月亮像一艘小小的金色小船', hint: '找喻詞：句中有「像」，把月亮（本體）比成小船（喻體），是明喻。', trap: '「靜靜停泊」是配合小船的動作延伸，主體仍是譬喻，不是擬人。' },
+  ],
+  'math-u3': [{ stem: '一條長 10 公尺的童軍繩', hint: '小數除法求「幾段、剩多少」：商取整數是段數，餘數的小數點要對齊被除數原來的小數點。', trap: '移位後算出餘數 10，要還原成原來的單位才是 1 公尺；寫成 10 公尺會比繩子全長還多，一看就不合理。' }],
+  'math-u4': [{ stem: '已知比例式 $5 : 8 = 35 : x$', hint: '比例式「外項乘積＝內項乘積」，或看前項 5 變成 35 是乘 7，後項也乘 7。', trap: '不要用加法：5 到 35 是乘 7，不是加 30，所以 $x=8\\times7=56$，不是 38。' }],
+  'math-u5': [{ stem: '甲圓的半徑是 4 公分，乙圓的直徑是 16 公分', hint: '先把兩圓都換成直徑（或都換成半徑）再比較：甲直徑 8，乙直徑 16。', trap: '直接拿乙的直徑 16 和甲的半徑 4 相比，會誤算成 4 倍。圓周長和直徑成正比，直徑 2 倍，圓周長也是 2 倍。' }],
+  'math-u6': [
+    { stem: '在正方形中央形成一個葉子形狀', hint: null, trap: '葉子形是「兩個四分之一圓重疊的部分」：一個四分之一圓 78.5 減掉一個直角三角形 50，得 28.5，再乘 2 才是 57。只算一半會選 28.5。' },
+    { stem: '一個圓環的外圓半徑是 10 公分', hint: '圓環面積＝外圓面積－內圓面積＝$3.14\\times(10\\times10-6\\times6)$。', trap: '不能用「半徑相減」$(10-6)\\times(10-6)\\times3.14$，那是半徑 4 的小圓面積，不是圓環。' },
+  ],
+  'math-u7': [
+    { stem: '甲、乙兩地相距 90 公里。大雄騎自行車', hint: '相向而行：兩人每小時一起拉近「速率和」，相遇時間＝距離÷速率和＝$90\\div(18+42)$。', trap: '用速率差 $42-18$ 是「追趕」的算法；相向而行要用速率和。' },
+    { stem: '換算為「秒速」是多少公尺', hint: '時速換秒速：公里換公尺乘 1000，小時換秒除以 3600，$72\\times1000\\div3600=20$。', trap: '只除以 60 會得到分速（1200 公尺），還要再除以 60 才是秒速。' },
+    { stem: '高鐵以時速 300 公里行駛', hint: '已知速率和時間求距離：距離＝速率×時間＝$300\\times1.5$。', trap: '1.5 小時不是 1 小時 50 分，是 1 小時 30 分；直接用 1.5 相乘即可。' },
+    { stem: '小明跑 100 公尺花了 20 秒', hint: null, trap: '秒速＝距離÷時間，要寫單位「公尺／秒」；把時間除以距離 $20\\div100$ 會得到錯誤的 0.2。' },
+  ],
+  'math-u10': [{ stem: '若以「弟弟的錢」為基準量', hint: '比值＝比較量÷基準量；「以弟弟為基準」表示弟弟的錢放在除數。', trap: '寫成 $400\\div600$ 是以哥哥為基準，答案會變成 $\\frac{2}{3}$。' }],
+  'math-u11': [
+    { stem: '解方程式「x + 15 = 42」', hint: null, trap: '等號兩邊同時減 15 才能讓 x 單獨留下，寫成 $42+15$ 會得到 57；算完把 27 代回原式驗算。' },
+    { stem: '解方程式「x - 18 = 35」', hint: null, trap: '等號兩邊同時加 18；寫成 $35-18=17$ 是方向做反了，代回 $17-18$ 不等於 35。' },
+  ],
+  'pe-u3': [{ stem: '第一線救援行動口訣是', hint: '民眾版 CPR 口訣「叫叫 C D」：叫（確認意識）、叫（求救打 119、拿 AED）、C（胸外按壓）、D（使用 AED）。', trap: null }],
+  'sci-u2': [{ stem: '自製紫色高麗菜汁作為酸鹼指示劑', hint: '紫色高麗菜汁遇酸變紅、中性維持紫色、遇鹼變綠（或藍綠）。白醋是酸、純水中性、肥皂水是鹼。', trap: null }],
+  'sci-u8': [{ stem: '生物多樣性越高、食物網越複雜', hint: '食物網越複雜，每種動物有越多種食物可以選擇；一種生物變少時，能量可以從別的路徑流動。', trap: '穩定不代表生物體型變大，也不代表可以不需要陽光；關鍵是「替代食物」多。' }],
+  'soc-u4': [{ stem: '下列何者屬於全球化帶來的「負面衝擊」', hint: '全球化讓各地緊密相連，好處是交流快，壞處是一地的問題（金融危機、傳染病）也會很快擴散到全世界。', trap: '資訊交流、旅遊方便、出口機會增加都是正面影響，題目問「負面衝擊」。' }],
+  'soc-u5': [{ stem: '保障兒童能接受學校教育、參與文化活動', hint: '《兒童權利公約》常歸納四種權利：生存權、受保護權、發展權、參與權；受教育、遊戲休閒屬於發展權。', trap: '參與權是表達意見、參與決定；受教育讓孩子長大發展潛能，屬於發展權。' }],
+  'soc-u6': [{ stem: '請問該議程共提出了幾大項永續發展目標', hint: '聯合國 2015 年通過的永續發展目標 SDGs 共 17 項目標、169 項細項目標，期限是 2030 年。', trap: null }],
+};
+
+function replaceLine(block, prefix, value) {
+  if (value === undefined) return block;
+  const re = new RegExp(`^${prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}.*\\n\\n?`, 'm');
+  if (value === null) return block.replace(re, '');
+  if (re.test(block)) return block.replace(re, `${prefix}${value}\n\n`);
+  // 原本沒有這一行：加在正確答案後面（審題）或 </details> 前面（易錯）
+  if (prefix === H) return block.replace(/(✅ \*\*正確答案\*\*[^\n]*\n\n)/, `$1${prefix}${value}\n\n`);
+  return block.replace(/<\/details>/, `${prefix}${value}\n\n</details>`);
+}
+
+function fixTemplateLines(unit, block) {
+  const stem = block.split('\n')[0];
+  for (const f of TEMPLATE_FIXES[unit] || []) {
+    if (!stem.includes(f.stem)) continue;
+    let b = replaceLine(block, H, f.hint);
+    b = replaceLine(b, T, f.trap);
+    if (f.opt) b = b.replace(f.opt[0], f.opt[1]);
+    return b;
+  }
+  return block;
 }
 
 const SOURCE_NOTE = '⚖️ **題目來源說明**：以下是本站重新命題的練習題，數字與情境都改過，不是原卷題目。標「參考」的題目，題型取自公開考卷或課程計畫；標「課綱」的題目依 108 課綱重點命題。學校實際範圍請以老師公告為準。';
@@ -134,7 +207,10 @@ function renderQuestion(q, n, sources) {
   out.push('📐 **解題步驟**：', '');
   q.steps.forEach((s, i) => out.push(`${i + 1}. ${s}`));
   out.push('');
+  if (q.why) out.push(`🧠 **觀念說明**：${q.why}`, '');
+  if (q.verify) out.push(`✔️ **檢查方法**：${q.verify}`, '');
   if (q.trap) out.push(`⚠️ **易錯提醒**：${q.trap}`, '');
+  if (q.more) out.push(`🔁 **舉一反三**：${q.more}`, '');
   if (q.where) out.push(`📖 **回課文複習**：${q.where}`, '');
   out.push('</details>', '');
   return out.join('\n');
@@ -210,7 +286,9 @@ function mdToPlain(md) {
 export async function loadData() {
   const { SOURCES } = await import(pathToFileURL(path.join(DATA, 'sources.mjs')).href);
   const units = {};
-  for (const f of fs.readdirSync(DATA)) {
+  // 第三輪資料（r3-*）一律排在最後，既有題號才不會位移（人工複核紀錄以題號為鍵）
+  const order = (f) => (f.startsWith('r3-') ? 1 : 0);
+  for (const f of fs.readdirSync(DATA).sort((a, b) => order(a) - order(b) || (a < b ? -1 : a > b ? 1 : 0))) {
     if (f === 'sources.mjs' || f.startsWith('_') || !f.endsWith('.mjs')) continue;
     const mod = await import(pathToFileURL(path.join(DATA, f)).href);
     for (const [unit, entry] of Object.entries(mod.default)) {
@@ -263,7 +341,39 @@ function syncLegacyAudit() {
   writeWithRetry(file, `${JSON.stringify(audit, null, 2)}\n`);
 }
 
+// 第三輪（2026-11）：以 c7c282b 為基準，量「例題練習區」（基礎例題熱身起到複習行動前）的題數與字數
+const R3_BASE = 'c7c282b';
+export const practiceRegion = (text) => {
+  const i = text.indexOf('## ✍️ 基礎例題熱身');
+  if (i < 0) return '';
+  const j = text.indexOf('### 🗓️', i);
+  return text.slice(i, j > i ? j : text.length);
+};
+export const questionCount = (text) => (text.match(/^\*\*第 \d+ 題\*\*/gm) || []).length;
+
+function round3Audit(files) {
+  const units = files.map(({ unit, text }) => {
+    let before = '';
+    try {
+      before = execSync(`git show ${R3_BASE}:src/data/lessons/${unit}.md`, { cwd: ROOT, encoding: 'utf8', maxBuffer: 1 << 26 });
+    } catch { /* 新單元沒有基準 */ }
+    const qb = questionCount(before);
+    const qa = questionCount(text);
+    const cb = count(practiceRegion(before));
+    const ca = count(practiceRegion(text));
+    return { unitId: unit, questionsBefore: qb, questionsAfter: qa, questionGrowthPercent: +(((qa - qb) / Math.max(1, qb)) * 100).toFixed(1), practiceCharsBefore: cb, practiceCharsAfter: ca, practiceGrowthPercent: +(((ca - cb) / Math.max(1, cb)) * 100).toFixed(1), pageCharsBefore: count(before), pageCharsAfter: count(text) };
+  }).sort((a, b) => a.unitId.localeCompare(b.unitId, 'en', { numeric: true }));
+  const sum = (k) => units.reduce((s, u) => s + u[k], 0);
+  fs.writeFileSync(path.join(ROOT, 'scripts/exam-practice-r3-audit.json'), `${JSON.stringify({
+    metric: `Round 3 (2026-11). Base commit ${R3_BASE}. practiceChars = non-whitespace characters from「基礎例題熱身」to the spaced-review section, i.e. the worked-example practice area after each lesson.`,
+    totals: { questionsBefore: sum('questionsBefore'), questionsAfter: sum('questionsAfter'), practiceCharsBefore: sum('practiceCharsBefore'), practiceCharsAfter: sum('practiceCharsAfter'), pageCharsBefore: sum('pageCharsBefore'), pageCharsAfter: sum('pageCharsAfter') },
+    units,
+  }, null, 2)}\n`);
+  return units;
+}
+
 export async function build({ write = true } = {}) {
+  const written = [];
   const { SOURCES, units, typeGuide } = await loadData();
   const supplements = {};
   const report = [];
@@ -293,7 +403,9 @@ export async function build({ write = true } = {}) {
     const after = count(text);
     report.push({ unitId: unit, rawBaselineCharacters: count(base), baselineCharacters: before, finalCharacters: after, growthPercent: +(((after - before) / before) * 100).toFixed(1), questions, newQuestions: entry ? entry.qs.length : 0 });
     if (write) writeWithRetry(path.join(LESSONS, file), text);
+    written.push({ unit, text });
   }
+  if (write) round3Audit(written);
   report.sort((a, b) => a.unitId.localeCompare(b.unitId, 'en', { numeric: true }));
   if (write) {
     syncLegacyAudit();

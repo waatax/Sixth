@@ -502,6 +502,14 @@ be 動詞的過去式：
 
 watch → watched，listen → listened，clean → cleaned，bake → baked，study → studied，stop → stopped。字尾有 e 只加 d；子音加 y 要改 i 再加 ed；短母音子音結尾要重複字尾。
 
+### Past tense: irregular verbs, was/were and -ed sounds
+
+- **常見不規則動詞**：buy → bought、eat → ate、see → saw、take → took、teach → taught、go → went、have → had、make → made、run → ran、swim → swam、write → wrote、get → got。teach 的過去式是 taught，不是 teached。
+- **was / were**：I、he、she、it、單數名詞用 was；you、we、they、複數名詞用 were。There were a lot of people at the park yesterday.（people 是複數）
+- **Did 問句的回答**：Did you go out? — No, I didn't. I stayed home. 回答的第二句也要用過去式。
+- **-ed 的三種發音（延伸）**：/t/（watched、helped）、/d/（played、cleaned）、/ɪd/（wanted、needed：原形字尾是 t 或 d 時）。
+- **時間線索決定時態**：yesterday、last week、two days ago → 過去式；every day、usually → 現在式。
+
 ## 📚 必備知識補充（題庫、講義、例題逐題回推）
 
 測驗題庫、段考講義和課文例題會考到，但前面課文沒有說清楚的知識，都整理在這裡。
@@ -598,8 +606,6 @@ watch → watched，listen → listened，clean → cleaned，bake → baked，s
 
 ✅ **正確答案** A. were ; were
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：觀察句中時間副詞（yesterday, last night），動詞需轉換為過去式（規則加 -ed 或不規則動詞變化）。
-
 📐 **【詳盡解題步驟與算理推導】**：
 
 1．時間副詞 yesterday 表過去時態。
@@ -610,7 +616,7 @@ watch → watched，listen → listened，clean → cleaned，bake → baked，s
 
 故選 A。
 
-⚠️ **【易錯防雷與陷阱剖析】**：助動詞原形動詞陷阱：問句或否定句中一旦出現 did 或 didn't，後方的主要動詞必須一律「還原為原形動詞」！
+⚠️ **【易錯防雷與陷阱剖析】**：主詞 The basketball players 是複數，be 動詞過去式要用 were；was 只配 I、he、she、it 和單數名詞。
 
 </details>
 
@@ -697,6 +703,8 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 | **be 動詞過去式** | was、were 判斷 | 6、7、8、9 |
 | **一般動詞過去式** | Did 問句和動詞還原 | 10、11、12、13、14 |
 | **重組與閱讀** | 字序與文章理解 | 15、16、17、18 |
+| **不規則動詞與 be 動詞** | 過去式變化、was/were | 19、20、21 |
+| **發音與時態判斷** | -ed 發音、時間線索、閱讀 | 22、23、24 |
 
 **第 6 題**【選擇・參考東光國小112下英語】　______ you at the night market last Friday?
 
@@ -1003,6 +1011,189 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 
 </details>
 
+**第 19 題**【選擇・課綱】　Which past tense is WRONG?
+
+**A.** buy → bought  
+**B.** teach → teached  
+**C.** see → saw  
+**D.** take → took
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** B. teach → teached
+
+🔍 **審題關鍵**：不規則動詞不能直接加 -ed。
+
+📐 **解題步驟**：
+
+1. buy → bought 正確。
+2. teach 的過去式是 taught，不是 teached。
+3. see → saw、take → took 都正確。
+
+🧠 **觀念說明**：常用動詞大多是不規則變化，要一個一個記；可以把 bought、taught 放在一起記（都是 -ought / -aught）。
+
+✔️ **檢查方法**：Mr. Lin taught us English last year. 句子通順。
+
+⚠️ **易錯提醒**：看到規則就套用，把 teach 也加 -ed。
+
+🔁 **舉一反三**：What is the past tense of "think"?（答：thought）
+
+📖 **回課文複習**：Unit 2：常見不規則動詞。
+
+</details>
+
+**第 20 題**【選擇・課綱】　There ______ a lot of people at the night market last Saturday.
+
+**A.** is  
+**B.** are  
+**C.** was  
+**D.** were
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** D. were
+
+🔍 **審題關鍵**：看時間（last Saturday）和名詞單複數（people）。
+
+📐 **解題步驟**：
+
+1. last Saturday → 過去式，刪掉 is、are。
+2. people 是複數名詞。
+3. 複數過去式用 were。
+
+🧠 **觀念說明**：people 雖然沒有 -s，但意思是「人們」，是複數。
+
+✔️ **檢查方法**：換成 There was a big crowd. crowd 是單數，才用 was。
+
+⚠️ **易錯提醒**：因為 people 沒有 s，就以為是單數用 was。
+
+🔁 **舉一反三**：My shoes ______ dirty yesterday.（答：were）
+
+📖 **回課文複習**：Unit 2：was / were。
+
+</details>
+
+**第 21 題**【填充・課綱】　A: Did you go to the movies last night? B: No, I didn't. I ______ (stay) home and ______ (read) a comic book.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** stayed；read（過去式拼法相同，讀音改成 /rɛd/）
+
+🔍 **審題關鍵**：說的是昨晚的事，兩個動詞都用過去式。
+
+📐 **解題步驟**：
+
+1. last night → 過去式。
+2. stay 是規則動詞：stayed。
+3. read 的過去式拼法不變，還是 read，但讀音改成 /rɛd/。
+
+🧠 **觀念說明**：Did 問句的回答句，除了 didn't 後面用原形，其他敘述句仍用過去式。
+
+✔️ **檢查方法**：I didn't go out. I stayed home. 兩句都描述昨晚，時態一致。
+
+⚠️ **易錯提醒**：因為問句用了 Did，就把回答的動詞都寫成原形 stay。
+
+🔁 **舉一反三**：Did Tina call you? — Yes, she ______ (call) me at eight.（答：called）
+
+📖 **回課文複習**：Unit 2：Did 問句的回答。
+
+</details>
+
+**第 22 題**【聽力字音・課綱】　Which word's -ed ending sounds like /ɪd/?
+
+**A.** watched  
+**B.** played  
+**C.** wanted  
+**D.** helped
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. wanted
+
+🔍 **審題關鍵**：原形字尾是 t 或 d 的動詞，-ed 讀 /ɪd/。
+
+📐 **解題步驟**：
+
+1. want 字尾是 t，wanted 的 -ed 讀 /ɪd/。
+2. watched、helped 的 -ed 讀 /t/。
+3. played 的 -ed 讀 /d/。
+
+🧠 **觀念說明**：多一個 /ɪd/ 音節，是因為 t+t、d+d 連在一起很難發音。
+
+✔️ **檢查方法**：needed、visited 也讀 /ɪd/，因為原形字尾是 d、t。
+
+⚠️ **易錯提醒**：以為所有 -ed 都唸 /ɪd/。
+
+🔁 **舉一反三**：Which -ed sounds /t/: cleaned / cooked / needed?（答：cooked）
+
+📖 **回課文複習**：Unit 2：-ed 的三種發音。
+
+</details>
+
+**第 23 題**【選擇・課綱】　Which sentence is correct?
+
+**A.** I visit my grandma yesterday.  
+**B.** I visited my grandma every Sunday.  
+**C.** I visited my grandma two days ago.  
+**D.** I visiting my grandma last week.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** C. I visited my grandma two days ago.
+
+🔍 **審題關鍵**：先找每句的時間詞，再看動詞是否配合。
+
+📐 **解題步驟**：
+
+1. A：yesterday 要用過去式 visited。
+2. B：every Sunday 是習慣，要用現在式 visit。
+3. C：two days ago 用過去式 visited，正確。
+4. D：visiting 不能單獨當動詞。
+
+🧠 **觀念說明**：時間副詞是判斷時態最可靠的線索。
+
+✔️ **檢查方法**：C 的時間詞 ago 和過去式 visited 對得上。
+
+⚠️ **易錯提醒**：只看動詞有沒有 -ed，忽略時間詞。
+
+🔁 **舉一反三**：He ______ (play) basketball every day.（答：plays）
+
+📖 **回課文複習**：Unit 2：時間線索決定時態。
+
+</details>
+
+**第 24 題**【閱讀・課綱】　Read: "Last Sunday, Leo and his family went to Yilan. They took a train in the morning. They ate fish and swam in the river. Leo saw a big frog. They came back home at night." (1) How did they go to Yilan? (2) What did Leo see?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) By train. (2) He saw a big frog.
+
+🔍 **審題關鍵**：用關鍵字找句子：took a train、saw。
+
+📐 **解題步驟**：
+
+1. They took a train → 搭火車去 → By train.
+2. Leo saw a big frog → 他看到一隻大青蛙。
+3. 回答用過去式：He saw a big frog.
+
+🧠 **觀念說明**：閱讀題的答案要在文章裡找得到依據，回答時保持過去式。
+
+✔️ **檢查方法**：文章裡 took、ate、swam、saw、came 都是不規則過去式，練習辨認原形：take、eat、swim、see、come。
+
+⚠️ **易錯提醒**：回答寫成 He see a big frog.
+
+🔁 **舉一反三**：What did they eat?（答：They ate fish.）
+
+📖 **回課文複習**：Unit 2：常見不規則動詞。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 6 題（was、were 判斷）：are 是現在式。
@@ -1018,6 +1209,12 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 - 第 16 題（字序與文章理解）：問號不要漏。
 - 第 17 題（字序與文章理解）：不要看到 concert 就答 Yes。
 - 第 18 題（字序與文章理解）：不要只看第一個字母。
+- 第 19 題（過去式變化、was/were）：看到規則就套用，把 teach 也加 -ed。
+- 第 20 題（過去式變化、was/were）：因為 people 沒有 s，就以為是單數用 was。
+- 第 21 題（過去式變化、was/were）：因為問句用了 Did，就把回答的動詞都寫成原形 stay。
+- 第 22 題（-ed 發音、時間線索、閱讀）：以為所有 -ed 都唸 /ɪd/。
+- 第 23 題（-ed 發音、時間線索、閱讀）：只看動詞有沒有 -ed，忽略時間詞。
+- 第 24 題（-ed 發音、時間線索、閱讀）：回答寫成 He see a big frog.
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -1039,6 +1236,12 @@ go ➔ went（過去式）➔ gone（過去分詞）。例如：Yesterday I went
 | 16 | Where was Tom last night? | 本頁「was 和 were 的使用」。 |
 | 17 | (1) No, they didn’t. (2) Lily. | 本頁「一般動詞過去式三句型」。 |
 | 18 | B. grass – glass | 本頁「聽力常考子音群」。 |
+| 19 | B. teach → teached | Unit 2：常見不規則動詞。 |
+| 20 | D. were | Unit 2：was / were。 |
+| 21 | stayed；read（過去式拼法相同，讀音改成 /rɛd/） | Unit 2：Did 問句的回答。 |
+| 22 | C. wanted | Unit 2：-ed 的三種發音。 |
+| 23 | C. I visited my grandma two days ago. | Unit 2：時間線索決定時態。 |
+| 24 | (1) By train. (2) He saw a big frog. | Unit 2：常見不規則動詞。 |
 
 </details>
 

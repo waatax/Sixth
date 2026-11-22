@@ -4,578 +4,578 @@
     {
       "unitId": "art-u1",
       "baselineCharacters": 12083,
-      "addedCharacters": 9864,
-      "growthPercent": 81.64,
+      "addedCharacters": 13053,
+      "growthPercent": 108.03,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "art-u2",
       "baselineCharacters": 10755,
-      "addedCharacters": 9841,
-      "growthPercent": 91.5,
+      "addedCharacters": 12932,
+      "growthPercent": 120.24,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "art-u3",
       "baselineCharacters": 10295,
-      "addedCharacters": 9554,
-      "growthPercent": 92.8,
+      "addedCharacters": 12911,
+      "growthPercent": 125.41,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "art-u4",
       "baselineCharacters": 9680,
-      "addedCharacters": 9576,
-      "growthPercent": 98.93,
+      "addedCharacters": 13118,
+      "growthPercent": 135.52,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "art-u5",
       "baselineCharacters": 8081,
-      "addedCharacters": 10200,
-      "growthPercent": 126.22,
+      "addedCharacters": 13657,
+      "growthPercent": 169,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "art-u6",
       "baselineCharacters": 7851,
-      "addedCharacters": 9978,
-      "growthPercent": 127.09,
+      "addedCharacters": 13734,
+      "growthPercent": 174.93,
       "knowledgePoints": 4,
-      "workedQuestions": 21,
-      "disclosures": 26
+      "workedQuestions": 28,
+      "disclosures": 33
     },
     {
       "unitId": "comp-u1",
       "baselineCharacters": 9925,
-      "addedCharacters": 10249,
-      "growthPercent": 103.26,
+      "addedCharacters": 13740,
+      "growthPercent": 138.44,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "comp-u2",
       "baselineCharacters": 9840,
-      "addedCharacters": 10476,
-      "growthPercent": 106.46,
+      "addedCharacters": 14359,
+      "growthPercent": 145.92,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "comp-u3",
       "baselineCharacters": 9388,
-      "addedCharacters": 10566,
-      "growthPercent": 112.55,
+      "addedCharacters": 14124,
+      "growthPercent": 150.45,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "comp-u4",
       "baselineCharacters": 10035,
-      "addedCharacters": 10660,
-      "growthPercent": 106.23,
+      "addedCharacters": 14672,
+      "growthPercent": 146.21,
       "knowledgePoints": 4,
-      "workedQuestions": 21,
-      "disclosures": 26
+      "workedQuestions": 28,
+      "disclosures": 33
     },
     {
       "unitId": "comp-u5",
       "baselineCharacters": 8145,
-      "addedCharacters": 10464,
-      "growthPercent": 128.47,
+      "addedCharacters": 14172,
+      "growthPercent": 174,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "comp-u6",
       "baselineCharacters": 8446,
-      "addedCharacters": 10972,
-      "growthPercent": 129.91,
+      "addedCharacters": 15180,
+      "growthPercent": 179.73,
       "knowledgePoints": 4,
-      "workedQuestions": 22,
-      "disclosures": 27
+      "workedQuestions": 29,
+      "disclosures": 34
     },
     {
       "unitId": "eng-u1",
       "baselineCharacters": 12909,
-      "addedCharacters": 11505,
-      "growthPercent": 89.12,
+      "addedCharacters": 16012,
+      "growthPercent": 124.04,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "eng-u2",
       "baselineCharacters": 14162,
-      "addedCharacters": 11511,
-      "growthPercent": 81.28,
+      "addedCharacters": 15630,
+      "growthPercent": 110.37,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "eng-u3",
       "baselineCharacters": 11327,
-      "addedCharacters": 11045,
-      "growthPercent": 97.51,
+      "addedCharacters": 15466,
+      "growthPercent": 136.54,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "eng-u4",
       "baselineCharacters": 12275,
-      "addedCharacters": 11320,
-      "growthPercent": 92.22,
+      "addedCharacters": 15547,
+      "growthPercent": 126.66,
+      "knowledgePoints": 4,
+      "workedQuestions": 26,
+      "disclosures": 31
+    },
+    {
+      "unitId": "eng-u5",
+      "baselineCharacters": 12472,
+      "addedCharacters": 15963,
+      "growthPercent": 127.99,
+      "knowledgePoints": 4,
+      "workedQuestions": 24,
+      "disclosures": 29
+    },
+    {
+      "unitId": "eng-u6",
+      "baselineCharacters": 13560,
+      "addedCharacters": 16993,
+      "growthPercent": 125.32,
+      "knowledgePoints": 4,
+      "workedQuestions": 28,
+      "disclosures": 33
+    },
+    {
+      "unitId": "eng-u7",
+      "baselineCharacters": 9213,
+      "addedCharacters": 15765,
+      "growthPercent": 171.12,
+      "knowledgePoints": 4,
+      "workedQuestions": 25,
+      "disclosures": 30
+    },
+    {
+      "unitId": "eng-u8",
+      "baselineCharacters": 9040,
+      "addedCharacters": 15640,
+      "growthPercent": 173.01,
+      "knowledgePoints": 4,
+      "workedQuestions": 25,
+      "disclosures": 30
+    },
+    {
+      "unitId": "man-u1",
+      "baselineCharacters": 9002,
+      "addedCharacters": 14829,
+      "growthPercent": 164.73,
+      "knowledgePoints": 4,
+      "workedQuestions": 23,
+      "disclosures": 28
+    },
+    {
+      "unitId": "man-u2",
+      "baselineCharacters": 8494,
+      "addedCharacters": 14140,
+      "growthPercent": 166.47,
+      "knowledgePoints": 4,
+      "workedQuestions": 23,
+      "disclosures": 28
+    },
+    {
+      "unitId": "man-u3",
+      "baselineCharacters": 9156,
+      "addedCharacters": 13171,
+      "growthPercent": 143.85,
+      "knowledgePoints": 4,
+      "workedQuestions": 23,
+      "disclosures": 28
+    },
+    {
+      "unitId": "man-u4",
+      "baselineCharacters": 8303,
+      "addedCharacters": 14576,
+      "growthPercent": 175.55,
+      "knowledgePoints": 4,
+      "workedQuestions": 24,
+      "disclosures": 29
+    },
+    {
+      "unitId": "man-u5",
+      "baselineCharacters": 8237,
+      "addedCharacters": 13728,
+      "growthPercent": 166.66,
+      "knowledgePoints": 4,
+      "workedQuestions": 24,
+      "disclosures": 29
+    },
+    {
+      "unitId": "man-u6",
+      "baselineCharacters": 8658,
+      "addedCharacters": 13630,
+      "growthPercent": 157.43,
+      "knowledgePoints": 4,
+      "workedQuestions": 25,
+      "disclosures": 30
+    },
+    {
+      "unitId": "man-u7",
+      "baselineCharacters": 8995,
+      "addedCharacters": 13067,
+      "growthPercent": 145.27,
+      "knowledgePoints": 4,
+      "workedQuestions": 25,
+      "disclosures": 30
+    },
+    {
+      "unitId": "man-u8",
+      "baselineCharacters": 8600,
+      "addedCharacters": 13919,
+      "growthPercent": 161.85,
+      "knowledgePoints": 4,
+      "workedQuestions": 26,
+      "disclosures": 31
+    },
+    {
+      "unitId": "math-u1",
+      "baselineCharacters": 10891,
+      "addedCharacters": 14661,
+      "growthPercent": 134.62,
       "knowledgePoints": 4,
       "workedQuestions": 20,
       "disclosures": 25
     },
     {
-      "unitId": "eng-u5",
-      "baselineCharacters": 12472,
-      "addedCharacters": 11418,
-      "growthPercent": 91.55,
+      "unitId": "math-u10",
+      "baselineCharacters": 9609,
+      "addedCharacters": 14191,
+      "growthPercent": 147.68,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
-      "unitId": "eng-u6",
-      "baselineCharacters": 13560,
-      "addedCharacters": 12251,
-      "growthPercent": 90.35,
+      "unitId": "math-u11",
+      "baselineCharacters": 7687,
+      "addedCharacters": 13919,
+      "growthPercent": 181.07,
+      "knowledgePoints": 4,
+      "workedQuestions": 24,
+      "disclosures": 29
+    },
+    {
+      "unitId": "math-u12",
+      "baselineCharacters": 8680,
+      "addedCharacters": 13687,
+      "growthPercent": 157.68,
+      "knowledgePoints": 4,
+      "workedQuestions": 24,
+      "disclosures": 29
+    },
+    {
+      "unitId": "math-u2",
+      "baselineCharacters": 9964,
+      "addedCharacters": 15569,
+      "growthPercent": 156.25,
       "knowledgePoints": 4,
       "workedQuestions": 21,
       "disclosures": 26
     },
     {
-      "unitId": "eng-u7",
-      "baselineCharacters": 9213,
-      "addedCharacters": 11479,
-      "growthPercent": 124.6,
-      "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
-    },
-    {
-      "unitId": "eng-u8",
-      "baselineCharacters": 9044,
-      "addedCharacters": 11274,
-      "growthPercent": 124.66,
-      "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
-    },
-    {
-      "unitId": "man-u1",
-      "baselineCharacters": 9002,
-      "addedCharacters": 10500,
-      "growthPercent": 116.64,
-      "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
-    },
-    {
-      "unitId": "man-u2",
-      "baselineCharacters": 8494,
-      "addedCharacters": 9831,
-      "growthPercent": 115.74,
-      "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
-    },
-    {
-      "unitId": "man-u3",
-      "baselineCharacters": 9156,
-      "addedCharacters": 9242,
-      "growthPercent": 100.94,
-      "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
-    },
-    {
-      "unitId": "man-u4",
-      "baselineCharacters": 8303,
-      "addedCharacters": 11239,
-      "growthPercent": 135.36,
-      "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
-    },
-    {
-      "unitId": "man-u5",
-      "baselineCharacters": 8237,
-      "addedCharacters": 9902,
-      "growthPercent": 120.21,
-      "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
-    },
-    {
-      "unitId": "man-u6",
-      "baselineCharacters": 8658,
-      "addedCharacters": 9884,
-      "growthPercent": 114.16,
-      "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
-    },
-    {
-      "unitId": "man-u7",
-      "baselineCharacters": 8995,
-      "addedCharacters": 9255,
-      "growthPercent": 102.89,
-      "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
-    },
-    {
-      "unitId": "man-u8",
-      "baselineCharacters": 8600,
-      "addedCharacters": 10613,
-      "growthPercent": 123.41,
-      "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
-    },
-    {
-      "unitId": "math-u1",
-      "baselineCharacters": 10891,
-      "addedCharacters": 11025,
-      "growthPercent": 101.23,
-      "knowledgePoints": 4,
-      "workedQuestions": 15,
-      "disclosures": 20
-    },
-    {
-      "unitId": "math-u10",
-      "baselineCharacters": 9609,
-      "addedCharacters": 11109,
-      "growthPercent": 115.61,
-      "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
-    },
-    {
-      "unitId": "math-u11",
-      "baselineCharacters": 7687,
-      "addedCharacters": 9634,
-      "growthPercent": 125.33,
-      "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
-    },
-    {
-      "unitId": "math-u12",
-      "baselineCharacters": 8680,
-      "addedCharacters": 9702,
-      "growthPercent": 111.77,
-      "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
-    },
-    {
-      "unitId": "math-u2",
-      "baselineCharacters": 9964,
-      "addedCharacters": 11553,
-      "growthPercent": 115.95,
-      "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
-    },
-    {
       "unitId": "math-u3",
       "baselineCharacters": 7926,
-      "addedCharacters": 9575,
-      "growthPercent": 120.8,
+      "addedCharacters": 12446,
+      "growthPercent": 157.03,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "math-u4",
       "baselineCharacters": 8814,
-      "addedCharacters": 10094,
-      "growthPercent": 114.52,
+      "addedCharacters": 13894,
+      "growthPercent": 157.64,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "math-u5",
       "baselineCharacters": 9335,
-      "addedCharacters": 9159,
-      "growthPercent": 98.11,
+      "addedCharacters": 11889,
+      "growthPercent": 127.36,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "math-u6",
       "baselineCharacters": 8158,
-      "addedCharacters": 9766,
-      "growthPercent": 119.71,
+      "addedCharacters": 12768,
+      "growthPercent": 156.51,
       "knowledgePoints": 4,
-      "workedQuestions": 15,
-      "disclosures": 20
+      "workedQuestions": 20,
+      "disclosures": 25
     },
     {
       "unitId": "math-u7",
       "baselineCharacters": 8058,
-      "addedCharacters": 10329,
-      "growthPercent": 128.18,
+      "addedCharacters": 13521,
+      "growthPercent": 167.8,
       "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
+      "workedQuestions": 23,
+      "disclosures": 28
     },
     {
       "unitId": "math-u8",
       "baselineCharacters": 8688,
-      "addedCharacters": 8853,
-      "growthPercent": 101.9,
+      "addedCharacters": 11783,
+      "growthPercent": 135.62,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "math-u9",
       "baselineCharacters": 8389,
-      "addedCharacters": 9630,
-      "growthPercent": 114.79,
+      "addedCharacters": 12489,
+      "growthPercent": 148.87,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "pe-u1",
       "baselineCharacters": 7984,
-      "addedCharacters": 10157,
-      "growthPercent": 127.22,
+      "addedCharacters": 13772,
+      "growthPercent": 172.49,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "pe-u2",
       "baselineCharacters": 8907,
-      "addedCharacters": 9769,
-      "growthPercent": 109.68,
+      "addedCharacters": 13105,
+      "growthPercent": 147.13,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "pe-u3",
       "baselineCharacters": 9523,
-      "addedCharacters": 9146,
-      "growthPercent": 96.04,
+      "addedCharacters": 11915,
+      "growthPercent": 125.12,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "pe-u4",
       "baselineCharacters": 7911,
-      "addedCharacters": 9471,
-      "growthPercent": 119.72,
+      "addedCharacters": 12919,
+      "growthPercent": 163.3,
       "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
+      "workedQuestions": 23,
+      "disclosures": 28
     },
     {
       "unitId": "pe-u5",
       "baselineCharacters": 7854,
-      "addedCharacters": 8580,
-      "growthPercent": 109.24,
+      "addedCharacters": 11136,
+      "growthPercent": 141.79,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "pe-u6",
       "baselineCharacters": 8474,
-      "addedCharacters": 9177,
-      "growthPercent": 108.3,
+      "addedCharacters": 12188,
+      "growthPercent": 143.83,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "sci-u1",
       "baselineCharacters": 11254,
-      "addedCharacters": 10271,
-      "growthPercent": 91.27,
+      "addedCharacters": 13848,
+      "growthPercent": 123.05,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "sci-u10",
       "baselineCharacters": 8581,
-      "addedCharacters": 10098,
-      "growthPercent": 117.68,
+      "addedCharacters": 13538,
+      "growthPercent": 157.77,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "sci-u2",
       "baselineCharacters": 11560,
-      "addedCharacters": 10385,
-      "growthPercent": 89.84,
+      "addedCharacters": 14379,
+      "growthPercent": 124.39,
       "knowledgePoints": 4,
-      "workedQuestions": 20,
-      "disclosures": 25
+      "workedQuestions": 26,
+      "disclosures": 31
     },
     {
       "unitId": "sci-u3",
       "baselineCharacters": 10493,
-      "addedCharacters": 9866,
-      "growthPercent": 94.02,
+      "addedCharacters": 12985,
+      "growthPercent": 123.75,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "sci-u4",
       "baselineCharacters": 10661,
-      "addedCharacters": 9993,
-      "growthPercent": 93.73,
+      "addedCharacters": 13801,
+      "growthPercent": 129.45,
       "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
+      "workedQuestions": 23,
+      "disclosures": 28
     },
     {
       "unitId": "sci-u5",
       "baselineCharacters": 10264,
-      "addedCharacters": 9430,
-      "growthPercent": 91.87,
+      "addedCharacters": 13389,
+      "growthPercent": 130.45,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "sci-u6",
       "baselineCharacters": 10954,
-      "addedCharacters": 10903,
-      "growthPercent": 99.53,
+      "addedCharacters": 14513,
+      "growthPercent": 132.49,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "sci-u7",
       "baselineCharacters": 10420,
-      "addedCharacters": 9853,
-      "growthPercent": 94.56,
+      "addedCharacters": 13679,
+      "growthPercent": 131.28,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "sci-u8",
       "baselineCharacters": 10689,
-      "addedCharacters": 10534,
-      "growthPercent": 98.55,
+      "addedCharacters": 15093,
+      "growthPercent": 141.2,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "sci-u9",
       "baselineCharacters": 8694,
-      "addedCharacters": 9413,
-      "growthPercent": 108.27,
+      "addedCharacters": 13403,
+      "growthPercent": 154.16,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "soc-u1",
       "baselineCharacters": 9972,
-      "addedCharacters": 8600,
-      "growthPercent": 86.24,
+      "addedCharacters": 12072,
+      "growthPercent": 121.06,
       "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
+      "workedQuestions": 23,
+      "disclosures": 28
     },
     {
       "unitId": "soc-u2",
       "baselineCharacters": 8743,
-      "addedCharacters": 10112,
-      "growthPercent": 115.66,
+      "addedCharacters": 14286,
+      "growthPercent": 163.4,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "soc-u3",
       "baselineCharacters": 8392,
-      "addedCharacters": 10122,
-      "growthPercent": 120.61,
+      "addedCharacters": 14176,
+      "growthPercent": 168.92,
       "knowledgePoints": 4,
-      "workedQuestions": 17,
-      "disclosures": 22
+      "workedQuestions": 23,
+      "disclosures": 28
     },
     {
       "unitId": "soc-u4",
       "baselineCharacters": 8819,
-      "addedCharacters": 9591,
-      "growthPercent": 108.75,
+      "addedCharacters": 13238,
+      "growthPercent": 150.11,
       "knowledgePoints": 4,
-      "workedQuestions": 16,
-      "disclosures": 21
+      "workedQuestions": 21,
+      "disclosures": 26
     },
     {
       "unitId": "soc-u5",
       "baselineCharacters": 8129,
-      "addedCharacters": 10349,
-      "growthPercent": 127.31,
+      "addedCharacters": 14164,
+      "growthPercent": 174.24,
       "knowledgePoints": 4,
-      "workedQuestions": 19,
-      "disclosures": 24
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "soc-u6",
       "baselineCharacters": 8637,
-      "addedCharacters": 10341,
-      "growthPercent": 119.73,
+      "addedCharacters": 15490,
+      "growthPercent": 179.34,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 25,
+      "disclosures": 30
     },
     {
       "unitId": "soc-u7",
       "baselineCharacters": 8268,
-      "addedCharacters": 10200,
-      "growthPercent": 123.37,
+      "addedCharacters": 13983,
+      "growthPercent": 169.12,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     },
     {
       "unitId": "soc-u8",
       "baselineCharacters": 7919,
-      "addedCharacters": 10564,
-      "growthPercent": 133.4,
+      "addedCharacters": 14849,
+      "growthPercent": 187.51,
       "knowledgePoints": 4,
-      "workedQuestions": 18,
-      "disclosures": 23
+      "workedQuestions": 24,
+      "disclosures": 29
     }
   ]
 }

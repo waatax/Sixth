@@ -75,8 +75,8 @@ In our daily lives, we are always comparing things:
    ┌───────────────────────┬───────────────────────────────────────────┐
    │ 介系詞                │ 搭配的範圍名詞                            │
    ├───────────────────────┼───────────────────────────────────────────┤
-   │ 📍 **in** (地點/單數團體)│ in Taiwan, in the world, in my family, in the class│
-   │ 👥 **of** (同類群體/複數)│ of all the students, of the three animals │
+   │ 📍 「in」 (地點/單數團體)│ in Taiwan, in the world, in my family, in the class│
+   │ 👥 「of」 (同類群體/複數)│ of all the students, of the three animals │
    └───────────────────────┴───────────────────────────────────────────┘
 ```
 
@@ -406,6 +406,15 @@ Bo is taller than Ann. Cal is the oldest. 句子要根據表格，不要憑感�
 
 young → younger（比較年輕）、old → older（比較老）、expensive → more expensive（比較貴）、cheap → cheaper（比較便宜）、fast → faster、slow → slower、long → longer、short → shorter。這些在比較價錢和年齡時常用。
 
+### Comparisons: irregular forms, more/most and as … as
+
+- **不規則比較級**：good → better → best；bad → worse → worst；many / much → more → most。
+- **長形容詞用 more / most**：beautiful → more beautiful → the most beautiful；interesting → more interesting → the most interesting。短形容詞加 -er / -est：tall → taller → tallest。
+- **不能重複**：more taller（✗）、most biggest（✗）。
+- **as + 原級 + as**：表示「一樣」。Tom is as tall as Ben. = Tom 和 Ben 一樣高。
+- **讀比較表格**：先看題目比的是什麼（高度、價錢、年齡），再找最大或最小的數字。三者以上用最高級加 the。
+- **世界之最例句**：The Pacific Ocean is the largest ocean in the world. The cheetah is the fastest land animal.
+
 ## ✍️ 基礎例題熱身
 
 先自己作答，再打開「看答案與解說」核對。
@@ -446,7 +455,7 @@ young → younger（比較年輕）、old → older（比較老）、expensive �
 
 ✅ **正確答案** B. bigger ; largest
 
-🔍 **【審題關鍵與破題思考】**：審題關鍵：子音組合拼讀規則：字母組合「ph」固定發 /f/ 音（如 dolphin, photo, elephant）。
+🔍 **【審題關鍵與破題思考】**：看到 than 用比較級，看到 the ... of all 用最高級；big 是短母音結尾，要重複字尾 g 再加 -er。
 
 📐 **【詳盡解題步驟與算理推導】**：
 
@@ -458,7 +467,7 @@ young → younger（比較年輕）、old → older（比較老）、expensive �
 
 故選 B。
 
-⚠️ **【易錯防雷與陷阱剖析】**：拼讀規則防雷：ph 視為單一子音音素 /f/，切勿拆開讀成 /p/ 或 /h/。
+⚠️ **【易錯防雷與陷阱剖析】**：bigger 要雙寫 g；第二格選項 largest 和 biggest 都表示最大，題目只給 largest，配 the 和 of all animals 用最高級。
 
 </details>
 
@@ -534,6 +543,16 @@ young → younger（比較年輕）、old → older（比較老）、expensive �
 
 ✏️ **馬上練習**：下方第 7 題。
 
+### 改錯題
+
+1. 逐字讀，懷疑的字先圈起來。
+2. 把字放回語詞想字義，判斷部首是否合理。
+3. 寫出錯字和正確字。
+
+⚠️ **常見失分**：只找到一個錯字就停下來，同一句可能不只一個。
+
+✏️ **馬上練習**：下方第 22 題。
+
 ### 重組題
 
 1. 先找主詞和動詞。
@@ -573,6 +592,8 @@ young → younger（比較年輕）、old → older（比較老）、expensive �
 | **比較級** | 比較級變化和 than | 5、6、7、8 |
 | **最高級** | the + 最高級 | 9、10、11、12 |
 | **圖表判讀** | 由表格造句 | 13、14、15、16、17、18、19 |
+| **比較級形式** | 不規則、more/most、改錯 | 20、21、22 |
+| **比較的閱讀與意思** | 表格比較、as…as、世界之最 | 23、24、25 |
 
 **第 5 題**【選擇・課綱】　An elephant is ______ than a horse.
 
@@ -920,6 +941,181 @@ young → younger（比較年輕）、old → older（比較老）、expensive �
 
 </details>
 
+**第 20 題**【填充・課綱】　Fill in: My English is ______ (good) than last year, but my brother's English is the ______ (good) in our family.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** better；best
+
+🔍 **審題關鍵**：good 是不規則變化。
+
+📐 **解題步驟**：
+
+1. than → 比較級：good → better。
+2. the … in our family → 最高級：best。
+
+🧠 **觀念說明**：最常用的形容詞反而是不規則的，要特別記：good / better / best、bad / worse / worst。
+
+✔️ **檢查方法**：把 gooder、goodest 代入就知道不通。
+
+⚠️ **易錯提醒**：寫成 gooder。
+
+🔁 **舉一反三**：This is the ______ (bad) day of my life.（答：worst）
+
+📖 **回課文複習**：Unit 8：不規則比較級。
+
+</details>
+
+**第 21 題**【選擇・課綱】　I think science is ______ than history.
+
+**A.** more interesting  
+**B.** interestinger  
+**C.** most interesting  
+**D.** more interestinger
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. more interesting
+
+🔍 **審題關鍵**：interesting 是長形容詞。
+
+📐 **解題步驟**：
+
+1. 有 than → 用比較級。
+2. interesting 音節多，比較級用 more interesting。
+3. 不能同時用 more 和 -er。
+
+🧠 **觀念說明**：短字加 -er，長字加 more，兩個只能選一個。
+
+✔️ **檢查方法**：最高級：the most interesting subject。
+
+⚠️ **易錯提醒**：選 D，同時用 more 和 -er。
+
+🔁 **舉一反三**：Which is correct: more beautiful / beautifuller?（答：more beautiful）
+
+📖 **回課文複習**：Unit 8：長形容詞用 more / most。
+
+</details>
+
+**第 22 題**【改錯・課綱】　Find and correct the mistake: "My sister is more taller than me."
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** 刪掉 more（My sister is taller than me.）
+
+🔍 **審題關鍵**：tall 是短形容詞。
+
+📐 **解題步驟**：
+
+1. tall 的比較級是 taller。
+2. more 和 -er 不能同時使用。
+3. 刪掉 more。
+
+🧠 **觀念說明**：比較級只要一種標記：-er 或 more。
+
+✔️ **檢查方法**：My sister is the tallest in my family. 最高級也只用 -est。
+
+⚠️ **易錯提醒**：把 taller 改回 tall，變成 more tall，也不對。
+
+🔁 **舉一反三**：Correct: "This is the most biggest box."（答：the biggest box）
+
+📖 **回課文複習**：Unit 8：不能重複。
+
+</details>
+
+**第 23 題**【閱讀・課綱】　Read the table: Pencil case A — NT$120；Pencil case B — NT$85；Pencil case C — NT$150. (1) Which one is the cheapest? (2) Is A more expensive than B?
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** (1) Pencil case B is the cheapest. (2) Yes, it is. (A is more expensive than B.)
+
+🔍 **審題關鍵**：價錢最小是 cheapest；expensive 是長形容詞。
+
+📐 **解題步驟**：
+
+1. 三個價錢：120、85、150，最小的是 85 → B is the cheapest。
+2. A 120 比 B 85 貴 → Yes, A is more expensive than B.
+3. expensive 用 more / most，cheap 加 -er / -est。
+
+🧠 **觀念說明**：表格比較題先找數字大小，再選比較級或最高級。
+
+✔️ **檢查方法**：C 150 最大 → C is the most expensive.
+
+⚠️ **易錯提醒**：寫成 the expensivest。
+
+🔁 **舉一反三**：Which one is the most expensive?（答：Pencil case C.）
+
+📖 **回課文複習**：Unit 8：讀比較表格。
+
+</details>
+
+**第 24 題**【選擇・課綱】　"Tom is as tall as Ben." What does it mean?
+
+**A.** Tom and Ben are the same height.  
+**B.** Tom is taller than Ben.  
+**C.** Ben is taller than Tom.  
+**D.** Tom is the tallest.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. Tom and Ben are the same height.
+
+🔍 **審題關鍵**：as … as 表示「一樣」。
+
+📐 **解題步驟**：
+
+1. as + 原級 + as 表示兩者相同。
+2. Tom is as tall as Ben = 兩人一樣高。
+
+🧠 **觀念說明**：as … as 中間用原級（tall），不是比較級（taller）。
+
+✔️ **檢查方法**：否定：Tom is not as tall as Ben. = Tom 比 Ben 矮。
+
+⚠️ **易錯提醒**：看到 tall 就以為 Tom 比較高。
+
+🔁 **舉一反三**：My bag is as heavy as yours. 意思？（答：我的包包和你的一樣重）
+
+📖 **回課文複習**：Unit 8：as + 原級 + as。
+
+</details>
+
+**第 25 題**【選擇・課綱】　Choose the correct sentence about the Pacific Ocean.
+
+**A.** The Pacific Ocean is the largest ocean in the world.  
+**B.** The Pacific Ocean is larger ocean in the world.  
+**C.** The Pacific Ocean is the most large ocean in the world.  
+**D.** The Pacific Ocean is largest than other oceans.
+
+<details>
+<summary>看答案與解說</summary>
+
+✅ **正確答案** A. The Pacific Ocean is the largest ocean in the world.
+
+🔍 **審題關鍵**：in the world 表示全部比較，用最高級 the + -est。
+
+📐 **解題步驟**：
+
+1. in the world → 最高級。
+2. large → the largest。
+3. B 少 the 且用比較級；C 不用 most；D 最高級不能接 than。
+
+🧠 **觀念說明**：最高級前面要加 the，後面常接 in + 範圍或 of + 群體。
+
+✔️ **檢查方法**：太平洋確實是世界最大的洋，事實也正確。
+
+⚠️ **易錯提醒**：選 D，把比較級和最高級混用。
+
+🔁 **舉一反三**：The cheetah is the ______ (fast) land animal.（答：fastest）
+
+📖 **回課文複習**：Unit 8：世界之最例句。
+
+</details>
+
 ### 📋 考前一頁複習：本單元易錯清單
 
 - 第 5 題（比較級變化和 than）：biger 拼錯。
@@ -937,6 +1133,12 @@ young → younger（比較年輕）、old → older（比較老）、expensive �
 - 第 17 題（由表格造句）：continent 是洲。
 - 第 18 題（由表格造句）：也可造成 My brother...，要合語意。
 - 第 19 題（由表格造句）：同規則：big、hot、fat。
+- 第 20 題（不規則、more/most、改錯）：寫成 gooder。
+- 第 21 題（不規則、more/most、改錯）：選 D，同時用 more 和 -er。
+- 第 22 題（不規則、more/most、改錯）：把 taller 改回 tall，變成 more tall，也不對。
+- 第 23 題（表格比較、as…as、世界之最）：寫成 the expensivest。
+- 第 24 題（表格比較、as…as、世界之最）：看到 tall 就以為 Tom 比較高。
+- 第 25 題（表格比較、as…as、世界之最）：選 D，把比較級和最高級混用。
 
 ### ✅ 答案速查（寫完訂正用）
 
@@ -960,6 +1162,12 @@ young → younger（比較年輕）、old → older（比較老）、expensive �
 | 17 | The Pacific. | 知識點「世界之最」。 |
 | 18 | My sister is younger than your brother. | 本頁「比較句怎麼造」。 |
 | 19 | B. thin – thinner – thinnest | 本頁「比較級和最高級規則」。 |
+| 20 | better；best | Unit 8：不規則比較級。 |
+| 21 | A. more interesting | Unit 8：長形容詞用 more / most。 |
+| 22 | 刪掉 more（My sister is taller than me.） | Unit 8：不能重複。 |
+| 23 | (1) Pencil case B is the cheapest. (2) Yes, it is. (A is more expensive than B.) | Unit 8：讀比較表格。 |
+| 24 | A. Tom and Ben are the same height. | Unit 8：as + 原級 + as。 |
+| 25 | A. The Pacific Ocean is the largest ocean in the world. | Unit 8：世界之最例句。 |
 
 </details>
 
