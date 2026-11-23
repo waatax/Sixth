@@ -6,9 +6,7 @@ import {
   BookOpen,
   FileText,
   Sparkles,
-  AlertTriangle,
-  Play,
-  Layers
+  Play
 } from 'lucide-react';
 import {
   REFERENCE_BOOK_SERIES_108,

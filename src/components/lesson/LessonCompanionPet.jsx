@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MessageCircle, Zap } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { useGamification } from '../../context/GamificationContext';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/soundEffects';
 import confetti from 'canvas-confetti';
@@ -8,8 +8,8 @@ import confetti from 'canvas-confetti';
  * Interactive Mascot Companion for Lesson Page
  * Accompanies students as they read, providing growth-mindset praise and pet buffs.
  */
-const LessonCompanionPet = ({ scrollProgress = 0, masteredCount = 0, totalConcepts = 0, subjectId = '' }) => {
-  const { activePetTemplate, currentPetStats, activePetId, addCoins, addXp } = useGamification();
+const LessonCompanionPet = ({ scrollProgress = 0, masteredCount = 0 }) => {
+  const { activePetTemplate, currentPetStats, addCoins, addXp } = useGamification();
   const [petMessage, setPetMessage] = useState('');
   const [isBouncing, setIsBouncing] = useState(false);
   const [interactedCount, setInteractedCount] = useState(0);

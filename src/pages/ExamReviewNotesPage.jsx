@@ -35,7 +35,6 @@ import {
   Target,
   Award,
   Compass,
-  Clock,
   ZoomIn,
   X,
   Lightbulb

@@ -6,11 +6,9 @@ import {
   ChevronDown, 
   Heart, 
   Volume2, 
-  Sparkles, 
   Share2, 
   Check, 
   Zap, 
-  RotateCcw,
   CheckCircle2,
   XCircle,
   Square

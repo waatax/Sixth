@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Zap, Shield, RotateCcw } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useGamification } from '../../context/GamificationContext';
 import { playSound } from '../../utils/soundEffects';
 import confetti from 'canvas-confetti';
@@ -26,7 +26,6 @@ const GachaLootModal = ({ isOpen, onClose }) => {
   const { coins, gems, addCoins, addGems, buyItem } = useGamification();
   const [isOpening, setIsOpening] = useState(false);
   const [pulledItems, setPulledItems] = useState([]);
-  const [drawMode, setDrawMode] = useState(1); // 1 or 5
 
   if (!isOpen) return null;
 

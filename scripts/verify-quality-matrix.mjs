@@ -211,7 +211,7 @@ try {
   const timeMatch = buildOut.match(/✓ built in ([\d.]+s)/);
   if (timeMatch) buildTime = timeMatch[1];
   buildSuccess = true;
-} catch (_e) {
+} catch  {
   buildSuccess = false;
 }
 
@@ -230,7 +230,7 @@ try {
   const lintOut = execSync('npm run lint', { cwd: rootDir, encoding: 'utf8' });
   const m = lintOut.match(/Found \d+ warnings and (\d+) errors/);
   if (m) lintErrors = parseInt(m[1], 10);
-} catch (_e) {
+} catch  {
   lintErrors = 1;
 }
 

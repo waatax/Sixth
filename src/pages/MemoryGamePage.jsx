@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, RotateCcw, Sparkles, Timer, Flame, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, RotateCcw, Timer, Flame, CheckCircle2 } from 'lucide-react';
 import { useGamification } from '../context/GamificationContext';
 import confetti from 'canvas-confetti';
 import { playSound } from '../utils/soundEffects';
@@ -73,7 +73,7 @@ const MemoryGamePage = () => {
     const deck = DECKS[deckKey] || DECKS.math;
     const cardsList = [];
 
-    deck.pairs.forEach((pair, idx) => {
+    deck.pairs.forEach((pair) => {
       cardsList.push({ uid: `${pair.id}_a`, pairId: pair.id, text: pair.a, type: 'a' });
       cardsList.push({ uid: `${pair.id}_b`, pairId: pair.id, text: pair.b, type: 'b' });
     });

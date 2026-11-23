@@ -15,7 +15,6 @@ import {
   Volume2, 
   Sparkles, 
   Search, 
-  ChevronRight, 
   RotateCcw,
   X
 } from 'lucide-react';

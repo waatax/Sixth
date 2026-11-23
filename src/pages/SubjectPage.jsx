@@ -10,7 +10,6 @@ import {
   ArrowRight, 
   Clock, 
   ShieldCheck, 
-  Zap, 
   Volume2, 
   Headphones,
   Search,
@@ -37,9 +36,7 @@ const SubjectPage = () => {
   const navigate = useNavigate();
   const { 
     unitStars = {}, 
-    unitCrowns = {},
     readLessons = {}, 
-    bookmarks = [], 
     toggleBookmark, 
     isBookmarked,
     selectedTextbookVersion = 'all',

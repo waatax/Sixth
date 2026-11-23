@@ -176,7 +176,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     if (gapL.includes(r)) byUnit[r.unit].lessonGaps += 1;
     if (gapH.includes(r)) byUnit[r.unit].handoutGaps += 1;
   }
-  fs.writeFileSync(path.join(ROOT, 'scripts/knowledge-coverage-audit.json'), `${JSON.stringify({ lexiconSize, totals: { questions: results.length, lessonGaps: gapL.length, handoutGaps: gapH.length }, byUnit, gaps: results.filter((r) => gapL.includes(r) || gapH.includes(r)).map(({ explain, ...r }) => r) }, null, 2)}\n`);
+  fs.writeFileSync(path.join(ROOT, 'scripts/knowledge-coverage-audit.json'), `${JSON.stringify({ lexiconSize, totals: { questions: results.length, lessonGaps: gapL.length, handoutGaps: gapH.length }, byUnit, gaps: results.filter((r) => gapL.includes(r) || gapH.includes(r)).map(({ explain: _explain, ...r }) => r) }, null, 2)}\n`);
   const bySrc = (arr) => Object.entries(arr.reduce((m, r) => ((m[r.from] = (m[r.from] || 0) + 1), m), {})).map(([k, v]) => `${k} ${v}`).join('、');
   console.log(`概念詞庫 ${lexiconSize} 個；題目 ${results.length} 題（${bySrc(results)}）`);
   console.log(`課文：自動確認 ${by('lessonBy', 'auto')}、人工複核 ${by('lessonBy', 'reviewed')}、缺口 ${gapL.length}（${bySrc(gapL)}）`);

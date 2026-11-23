@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp, CheckCircle2, XCircle, Volume2, Sparkles } from
 import { speechEngine } from '../../utils/speechHelper';
 import { playSound } from '../../utils/soundEffects';
 
-const InteractiveMisconceptionCard = ({ mythText, truthText, id = null, isEnglish = false }) => {
+const InteractiveMisconceptionCard = ({ mythText, truthText, isEnglish = false }) => {
   const [revealed, setRevealed] = useState(false);
 
   const toggleReveal = () => {

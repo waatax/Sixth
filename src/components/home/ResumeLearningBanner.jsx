@@ -2,12 +2,9 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Play, 
-  BookOpen, 
   FileText, 
   CheckCircle2, 
-  Clock, 
-  Flame, 
-  GraduationCap
+  Clock
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import SubjectIconBadge from '../common/SubjectIconBadge';

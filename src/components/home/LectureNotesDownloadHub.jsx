@@ -4,21 +4,11 @@ import {
   Download, 
   Search, 
   BookOpen, 
-  CheckCircle2, 
   Filter, 
-  ExternalLink,
-  Calendar,
   ArrowRight
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import { triggerHaptic, playSound } from '../../utils/soundEffects';
-
-// Format bytes into readable MB
-function formatFileSize(bytes) {
-  if (!bytes) return '約 1.2 MB';
-  const mb = bytes / (1024 * 1024);
-  return `${mb.toFixed(1)} MB`;
-}
 
 // 講義清單資料（內嵌自 manifest 並附帶學科與段考範圍定義）
 const HANDOUT_CATALOG = [

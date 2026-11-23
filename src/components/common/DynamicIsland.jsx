@@ -6,8 +6,7 @@ import {
   Moon, 
   Eye, 
   Zap, 
-  X, 
-  ChevronRight
+  X
 } from 'lucide-react';
 import { useGamification, getXpForNextLevel } from '../../context/GamificationContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -21,8 +20,7 @@ const DynamicIsland = () => {
     gems, 
     currentTitle, 
     streak, 
-    activePetTemplate, 
-    currentPetStats 
+    activePetTemplate
   } = useGamification();
 
   const { theme, setTheme } = useTheme();

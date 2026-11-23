@@ -120,7 +120,7 @@ export const GlobalCommandPalette = () => {
     // 1. All 64 Units
     coursesData.subjects.forEach(subject => {
       const units = coursesData.units[subject.id] || [];
-      units.forEach((unit, idx) => {
+      units.forEach((unit) => {
         list.push({
           id: `unit-${unit.id}`,
           type: 'lesson',

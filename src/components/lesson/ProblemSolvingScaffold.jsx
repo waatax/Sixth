@@ -8,7 +8,6 @@ import {
   AlertTriangle, 
   Volume2, 
   ChevronRight, 
-  ChevronUp, 
   RotateCcw,
   Eye
 } from 'lucide-react';
@@ -179,7 +178,6 @@ const ProblemSolvingScaffold = ({ rawText = '', children, isEnglish = false }) =
       {/* Step by Step Mode or Full View Mode */}
       <div className="p-5 space-y-3.5" style={{ backgroundColor: 'var(--bg-secondary)' }}>
         {stepsData.map((step, idx) => {
-          const Icon = step.icon;
           const isVisible = !stepByStepMode || idx <= currentStep;
 
           if (!isVisible) return null;

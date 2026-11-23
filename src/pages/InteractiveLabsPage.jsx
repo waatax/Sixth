@@ -3,10 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
   RotateCcw, 
-  Play, 
-  HelpCircle, 
-  CheckCircle2, 
-  Award
+  Play
 } from 'lucide-react';
 import { interactiveLabsList } from '../data/interactiveLabsData';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
@@ -66,7 +63,7 @@ const InteractiveLabsPage = () => {
   // Lab 6: Speed Race Chase
   const [speedA, setSpeedA] = useState(8); // m/s
   const [speedB, setSpeedB] = useState(5); // m/s
-  const [headStart, setHeadStart] = useState(30); // meters
+  const [headStart] = useState(30); // meters
   const [raceProgress, setRaceProgress] = useState(0); // 0 to 100%
   const [isRacing, setIsRacing] = useState(false);
 

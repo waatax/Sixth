@@ -3,11 +3,8 @@ import {
   Sparkles, 
   RotateCcw, 
   Play, 
-  Sliders, 
-  Zap, 
   Volume2,
   CheckCircle2,
-  Clock,
   ArrowRight
 } from 'lucide-react';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/soundEffects';
@@ -18,7 +15,7 @@ import confetti from 'canvas-confetti';
 /**
  * Embedded Mini-Lab Interactive STEM & Language Simulator for Lesson Pages
  */
-const LessonMiniLabWidget = ({ unitId, subjectId }) => {
+const LessonMiniLabWidget = ({ unitId }) => {
   const { addCoins, addXp } = useGamification();
   const [hasRewarded, setHasRewarded] = useState(false);
 

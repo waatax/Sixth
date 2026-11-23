@@ -3,17 +3,12 @@ import { Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import { 
   Zap, 
-  Globe, 
   ArrowRight, 
   Sparkles, 
-  CheckCircle2, 
   ShieldCheck, 
-  Award,
-  Layers,
   FileText,
   BookOpen,
   Download,
-  Search,
   FlaskConical,
   Flame,
   Lightbulb
@@ -50,9 +45,6 @@ const HomePage = () => {
   const [isGachaOpen, setIsGachaOpen] = useState(false);
 
   const { 
-    coins, 
-    gems, 
-    level, 
     currentTitle, 
     activePetTemplate, 
     currentPetStats, 

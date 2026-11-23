@@ -1,16 +1,12 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { 
   BookOpen, 
-  Globe, 
   GraduationCap, 
   Zap, 
   Timer, 
   Menu, 
   X, 
-  Moon, 
-  Type, 
-  VolumeX, 
   Sparkles, 
   CheckCircle2,
   Swords,
@@ -33,7 +29,6 @@ import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
 const Header = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const { theme, setTheme, fontSize, FONT_SIZES, increaseFontSize, decreaseFontSize } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [examToolsDropdownOpen, setExamToolsDropdownOpen] = useState(false);

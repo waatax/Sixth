@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { 
   BookOpen, 
   Zap, 
@@ -23,7 +23,6 @@ import { triggerHaptic, playSound } from '../../utils/soundEffects';
 
 const CupertinoTabBar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const [isMoreSheetOpen, setIsMoreSheetOpen] = useState(false);
 
   const mainTabs = [

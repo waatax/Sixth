@@ -15,8 +15,7 @@ import {
   Lightbulb,
   Flame,
   Maximize2,
-  Minimize2,
-  EyeOff
+  Minimize2
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useGamification } from '../../context/GamificationContext';

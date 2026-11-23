@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { 
-  ArrowRight, RotateCcw, Sparkles, 
+  RotateCcw, Sparkles, 
   Eye, Move, CheckCircle2 
 } from 'lucide-react';
 import { playSound } from '../../utils/soundEffects';

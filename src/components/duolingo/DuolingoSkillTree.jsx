@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   Play,
   BookOpen,
-  Star,
-  Layers,
-  Dumbbell
+  Layers
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useGamification } from '../../context/GamificationContext';
@@ -26,7 +24,6 @@ const UNIT_BANNER_PALETTES = [
 
 const DuolingoSkillTree = ({
   units = [],
-  subject,
   selectedVersion = 'all',
   onStartLesson,
   onOpenCompendium
@@ -284,7 +281,7 @@ const DuolingoSkillTree = ({
                           if (isChest) {
                             handleOpenChest(unit);
                           } else {
-                            onStartLesson && onStartLesson(unit, node.stage);
+                            onStartLesson?.(unit, node.stage);
                           }
                         }}
                         className="mb-2 px-3 py-1 rounded-xl text-[11px] font-black uppercase tracking-wider bg-white dark:bg-slate-900 shadow-md border-2 animate-bounce cursor-pointer"
@@ -372,7 +369,7 @@ const DuolingoSkillTree = ({
                         <button
                           onClick={() => {
                             setActivePopoverKey(null);
-                            onStartLesson && onStartLesson(unit, node.stage);
+                            onStartLesson?.(unit, node.stage);
                           }}
                           className="w-full py-2.5 px-4 rounded-xl font-black text-xs sm:text-sm text-white flex items-center justify-center gap-1.5 cursor-pointer transition-transform active:translate-y-0.5"
                           style={{

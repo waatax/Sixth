@@ -11,8 +11,7 @@ import {
   BookOpen,
   ChevronRight,
   Flame,
-  Zap,
-  Layers
+  Zap
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';

@@ -39,7 +39,7 @@ const QuestionDiagram = ({ diagram }) => {
 };
 
 // 依據 diagram.type 分流渲染特定 SVG 圖示
-function renderDiagramContent(type, diagram) {
+function renderDiagramContent(type) {
   switch (type) {
     // ----------------------------------------------------
     // 🧮 1. 數學：幾何鋪色葉形面積（正方形 10cm + 兩扇形重疊）

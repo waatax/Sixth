@@ -204,7 +204,7 @@ class SpeechEngine {
   speakMixed(text, options = {}) {
     this.stop();
     const sequence = this.sequence;
-    const rawParts = this.cleanText(text).match(/[A-Za-z]+(?:[A-Za-z0-9 ,.'’?!:;\/-]*[A-Za-z0-9.!?])?|[^A-Za-z]+/g) || [];
+    const rawParts = this.cleanText(text).match(/[A-Za-z]+(?:[A-Za-z0-9 ,.'’?!:;/-]*[A-Za-z0-9.!?])?|[^A-Za-z]+/g) || [];
     // 只有真正的英文單字或句子才換英文語音；選項字母 A～D、GCD 這類縮寫留在中文語句裡一起念，避免聲音一直切換
     const merged = [];
     for (const raw of rawParts) {

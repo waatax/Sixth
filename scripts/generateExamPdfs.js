@@ -612,7 +612,6 @@ function buildHandoutHtml(handoutInfo, notesList) {
           <div class="handout-badge-row">
             <span class="badge badge-primary">${note.examScopeLabel || '段考重點'}</span>
             <span class="badge badge-accent">${note.term}</span>
-            ${false && note.examWeight ? `<span class="badge" style="background: #dcfce7; color: #15803d;">${note.examWeight}</span>` : ''}
             <span style="font-size: 10px; color: #64748b;">共同觀念整理・版本冊次待核對</span>
           </div>
           <h2 class="unit-title">${note.title}</h2>

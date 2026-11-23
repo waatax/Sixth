@@ -1,14 +1,9 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import {
-  BookOpen,
-  Trophy,
-  Heart,
   Search,
   X,
   Play,
-  CheckCircle2,
-  ArrowRight,
   Gamepad2
 } from 'lucide-react';
 import {

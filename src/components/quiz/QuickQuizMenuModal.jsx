@@ -7,8 +7,6 @@ import {
   Timer,
   CheckCircle2,
   FileText,
-  Sparkles,
-  Flame,
   ArrowRight,
   Target
 } from 'lucide-react';

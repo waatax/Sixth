@@ -10,8 +10,7 @@ import {
   BookOpen, 
   MessageSquare, 
   Sparkles, 
-  Zap, 
-  Check
+  Zap
 } from 'lucide-react';
 import { englishAudioData } from '../../data/englishAudioData';
 import { speechEngine } from '../../utils/speechHelper';
@@ -23,7 +22,7 @@ const EnglishAudioStudio = ({ unitId }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeSpeechId, setActiveSpeechId] = useState(null);
   const [speechRate, setSpeechRate] = useState(1.0);
-  const [currentParagraphIndex, setCurrentParagraphIndex] = useState(0);
+  const [, setCurrentParagraphIndex] = useState(0);
   const [continuousPlaying, setContinuousPlaying] = useState(false);
   const [playbackMode, setPlaybackMode] = useState('en-only'); // 'en-only' | 'en-zh'
   const playbackModeRef = useRef('en-only');
@@ -353,7 +352,7 @@ const EnglishAudioStudio = ({ unitId }) => {
           </div>
 
           <div className="reading-passage-box">
-            {audioData.readAloudPassage?.paragraphs?.map((p, idx) => {
+            {audioData.readAloudPassage?.paragraphs?.map((p) => {
               const isCurrent = activeSpeechId === p.id;
               return (
                 <div 

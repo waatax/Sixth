@@ -11,7 +11,6 @@ import {
   Bookmark, 
   ArrowRight,
   TrendingUp,
-  Zap,
   Network
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
@@ -397,8 +396,6 @@ export const GlobalKnowledgeRadar = () => {
           {/* Subject Radar Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {subjectStats.map(sub => {
-              const uList = coursesData.units[sub.id] || [];
-              const firstUnread = uList.find(u => !readLessons[u.id]) || uList[0];
 
               return (
                 <div

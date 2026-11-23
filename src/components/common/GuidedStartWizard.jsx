@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Compass, Zap, Target, ArrowRight, RotateCcw, HeartHandshake, Smile } from 'lucide-react';
+import { Compass, ArrowRight, RotateCcw, HeartHandshake, Smile } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import { playSound } from '../../utils/soundEffects';
 
 const GuidedStartWizard = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  const [selectedGoal, setSelectedGoal] = useState(null);
-  const [selectedSubject, setSelectedSubject] = useState('math');
+  const [, setSelectedGoal] = useState(null);
+  const [, setSelectedSubject] = useState('math');
   const [savedPlan, setSavedPlan] = useState(null);
-  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const plan = localStorage.getItem('sixth_guided_plan');

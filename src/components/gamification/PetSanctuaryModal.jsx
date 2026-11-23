@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Sparkles, Award, CheckCircle2, Utensils, Crown } from 'lucide-react';
+import { X, Sparkles, CheckCircle2, Utensils } from 'lucide-react';
 import { useGamification, PET_TEMPLATES } from '../../context/GamificationContext';
 import confetti from 'canvas-confetti';
 import { playSound } from '../../utils/soundEffects';
@@ -10,9 +10,7 @@ const PetSanctuaryModal = ({ isOpen, onClose }) => {
     petStats, 
     inventory, 
     selectPet, 
-    feedPet,
-    coins,
-    gems
+    feedPet
   } = useGamification();
 
   const [selectedPetKey, setSelectedPetKey] = useState(activePetId);

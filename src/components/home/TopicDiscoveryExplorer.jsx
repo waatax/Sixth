@@ -9,10 +9,8 @@ import {
   FlaskConical, 
   CheckCircle2, 
   Flame, 
-  GraduationCap, 
   Filter,
-  ChevronRight,
-  SlidersHorizontal
+  ChevronRight
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import { interactiveLabsList } from '../../data/interactiveLabsData';

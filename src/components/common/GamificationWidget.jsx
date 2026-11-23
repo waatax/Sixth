@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Flame, Zap, Trophy, CheckCircle, X, Heart } from 'lucide-react';
+import { Flame, Zap, Trophy, X } from 'lucide-react';
 import { useGamification, getXpForNextLevel } from '../../context/GamificationContext';
 import PetSanctuaryModal from '../gamification/PetSanctuaryModal';
 import TrophyHallModal from '../gamification/TrophyHallModal';
@@ -14,8 +14,7 @@ const GamificationWidget = () => {
     badges, 
     currentTitle, 
     activePetTemplate, 
-    currentPetStats,
-    unitStars
+    currentPetStats
   } = useGamification();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +23,6 @@ const GamificationWidget = () => {
 
   const nextLevelXp = getXpForNextLevel(level);
   const currentLevelProgress = Math.min(100, Math.round((xp % 100) / 100 * 100));
-  const completedUnitCount = Object.keys(unitStars || {}).length;
 
   const currentEvolution = activePetTemplate?.evolutions.slice().reverse().find(e => (currentPetStats?.level || 1) >= e.minLevel) || activePetTemplate?.evolutions[0];
 

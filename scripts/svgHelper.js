@@ -1,6 +1,5 @@
 // Generator script for all Grade 6 educational SVG diagrams
 import fs from 'fs';
-import path from 'path';
 
 const outDir = 'public/images';
 if (!fs.existsSync(outDir)) {

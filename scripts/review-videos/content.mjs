@@ -171,7 +171,7 @@ function splitConcept(raw) {
       out.push(...parts);
     } else out.push(l);
   }
-  lines = out.map((l) => l.replace(/^(?:[•\-]|\d+[.、])\s*/, ''));
+  lines = out.map((l) => l.replace(/^(?:[•-]|\d+[.、])\s*/, ''));
   return { title, lines };
 }
 

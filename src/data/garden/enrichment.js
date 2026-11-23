@@ -71,7 +71,7 @@ const typeMeta = {
   ord: {
     badge: "先後順序排列題",
     icon: "🪜",
-    strategy: (l) =>
+    strategy: () =>
       `先找出「最先發生（最大／最小）」和「最後一步」，再把中間的項目順著邏輯排進去。`,
   },
   pair: {

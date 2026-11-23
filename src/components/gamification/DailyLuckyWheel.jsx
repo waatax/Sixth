@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sparkles, X, Award } from 'lucide-react';
+import { Sparkles, X } from 'lucide-react';
 import { useGamification } from '../../context/GamificationContext';
 import confetti from 'canvas-confetti';
 import { playSound } from '../../utils/soundEffects';

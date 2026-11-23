@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 import {
   Flame,
   Heart,
-  Zap,
   Target,
   BookOpen
 } from 'lucide-react';

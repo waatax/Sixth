@@ -5,8 +5,6 @@ import {
   Trash2, 
   CheckCircle2, 
   Sparkles, 
-  HelpCircle, 
-  Trophy, 
   Volume2,
   Swords,
   Zap
@@ -26,7 +24,7 @@ const MistakesPage = () => {
   // Mistake Smasher Mini-Game Mode
   const [smasherMode, setSmasherMode] = useState(false);
   const [currentSmasherIdx, setCurrentSmasherIdx] = useState(0);
-  const [smashedCount, setSmashedCount] = useState(0);
+  const [, setSmashedCount] = useState(0);
   const [smashAnimation, setSmashAnimation] = useState(false);
   const [smashResult, setSmashResult] = useState(null); // 'hit' or 'miss'
 

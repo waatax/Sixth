@@ -775,7 +775,7 @@ const UNIT_ORDER_PUZZLES = {
 function buildUnitOrderExercise(unit, kps, catalog) {
   const custom = UNIT_ORDER_PUZZLES[unit.id];
   if (custom) {
-    const isWordSentence = custom.steps.every(s => /^[A-Za-z,\.\?!'\s]+$/.test(s));
+    const isWordSentence = custom.steps.every(s => /^[A-Za-z,.?!'\s]+$/.test(s));
     const allRaw = [...custom.steps, ...(custom.distractors || [])];
     const shuffled = deterministicShuffle(allRaw, `${unit.id}-order`);
     return {
@@ -847,7 +847,7 @@ function buildUnitMatchingExercise(unit, quizQuestions, kps, catalog) {
     const stemShort = cleanLatexText(q.question)
       .replace(/^【[^】]+】/, '')
       .replace(/^請問/, '')
-      .replace(/[？\?]$/, '')
+      .replace(/[？?]$/, '')
       .trim();
     if (stemShort && correctOpt && !usedLeft.has(stemShort.slice(0, 18))) {
       usedLeft.add(stemShort.slice(0, 18));

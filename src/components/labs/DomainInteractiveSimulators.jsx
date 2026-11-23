@@ -5,10 +5,8 @@ import {
   Play, 
   Pause, 
   Zap, 
-  Volume2, 
   Heart, 
   Compass, 
-  BookOpen, 
   ShieldCheck, 
   ArrowRight, 
   Flame, 
@@ -653,7 +651,6 @@ export const FivePowersSandbox = () => {
 // 🎨 3. 藝術：12 色相環與光學/顏料色彩調色盤 (Color Wheel Mixer Lab)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 export const ColorWheelMixerLab = () => {
-  const { addCoins, addXp } = useGamification();
   const [activeMode, setActiveMode] = useState('wheel'); // 'wheel' | 'rgb_light' | 'cmy_pigment'
   const [selectedHueIdx, setSelectedHueIdx] = useState(0);
 
@@ -1199,7 +1196,6 @@ export const TimeManagementMatrixLab = () => {
     { id: 8, title: '沉迷打連線對戰遊戲到凌晨兩點', quadrant: 'IV', hint: '毀滅作息需戒除' }
   ]);
 
-  const [activeTask, setActiveTask] = useState(null);
   const [hasRewarded, setHasRewarded] = useState(false);
 
   const quadrants = [
