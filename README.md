@@ -57,6 +57,17 @@ npm run test:responsive
 
 新增課程：在 `src/data/garden/` 加一列（格式見 `build.js`），圖解類型見 `src/components/garden/Visual.jsx`。
 
+### 段考重點複習影片
+
+`scripts/review-videos/` 把六年級八科、上下學期、期中／期末（6 下為畢業考）共 32 次考試，各做成一支 1080p 複習影片（MP4 + 章節 + .srt 字幕）。每支依序講：核心觀念 → 必背公式口訣 → 段考補強 → 必備知識 → 考古題型地圖 → 題型實戰（倒數 3 秒先作答，再公布答案與步驟）→ 易錯陷阱 → 單元小結 → 題型破題法。內容全部取自 `src/data/examNotes` 與 `src/data/lessons/*.md`，改講義後重跑即可更新。
+
+```sh
+node scripts/review-videos/make.mjs                          # 全部 32 支，輸出到 videos/（不進版控）
+node scripts/review-videos/make.mjs --only math-6A-midterm   # 只做一支
+```
+
+需要 Windows（中文旁白用 OneCore 語音 Yating，英文用 SAPI 語音 Zira）、ffmpeg 與 Playwright Chromium。暫存檔放在系統暫存資料夾的 `sixth-review-videos/`，可用 `REVIEW_VIDEO_BUILD`、`REVIEW_VIDEO_OUT` 改位置。
+
 ## 官方資料與設計依據
 
 - [國家教育研究院・正式公布課綱](https://www.naer.edu.tw/PageSyllabus?fid=52)

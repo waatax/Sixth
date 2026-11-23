@@ -43,3 +43,6 @@ __pycache__/
 *.pyc
 .claude/
 
+
+# 產生的複習影片（體積大，不進版控）
+/videos/
