@@ -1,17 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
-  Sparkles, 
   RotateCcw, 
   Play, 
-  Pause, 
   HelpCircle, 
-  Zap, 
   CheckCircle2, 
-  Flame,
-  Award,
-  Layers
+  Award
 } from 'lucide-react';
 import { interactiveLabsList } from '../data/interactiveLabsData';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';

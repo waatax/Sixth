@@ -8,17 +8,14 @@ import {
   ArrowLeft, 
   Compass, 
   ArrowRight, 
-  Star, 
   Clock, 
   ShieldCheck, 
-  Flame, 
   Zap, 
   Volume2, 
   Headphones,
   Search,
   X,
   Trophy,
-  RotateCcw,
   Sparkles,
   FileText,
   Download,
@@ -74,7 +71,7 @@ const SubjectPage = () => {
   const lastStudiedUnitId = useMemo(() => {
     try {
       return localStorage.getItem(`sixth_last_studied_${subjectId}`);
-    } catch (e) {
+    } catch  {
       return null;
     }
   }, [subjectId]);
@@ -117,7 +114,7 @@ const SubjectPage = () => {
     try {
       localStorage.setItem(`sixth_last_studied_${subjectId}`, unitId);
       localStorage.setItem('sixth_last_unit', unitId);
-    } catch (e) {}
+    } catch  {}
   };
 
   return (

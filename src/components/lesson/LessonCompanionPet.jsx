@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Sparkles, MessageCircle, Heart, Zap, Award } from 'lucide-react';
+import { MessageCircle, Zap } from 'lucide-react';
 import { useGamification } from '../../context/GamificationContext';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/soundEffects';
 import confetti from 'canvas-confetti';

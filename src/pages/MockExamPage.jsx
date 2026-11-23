@@ -7,14 +7,11 @@ import {
   Trophy,
   RotateCcw,
   ArrowLeft,
-  FileText,
   Volume2,
   BookOpen,
-  Sparkles,
   ChevronRight,
   Flame,
   Zap,
-  Target,
   Layers
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
@@ -26,7 +23,7 @@ import {
   getUnitsBySubject108
 } from '../data/curriculumCatalog108';
 import { useGamification } from '../context/GamificationContext';
-import { playSound, triggerHaptic } from '../utils/soundEffects';
+import { playSound } from '../utils/soundEffects';
 import { speechEngine } from '../utils/speechHelper';
 import QuestionDiagram from '../components/quiz/QuestionDiagram';
 import DuolingoLessonModal from '../components/duolingo/DuolingoLessonModal';
@@ -223,7 +220,7 @@ const MockExamPage = () => {
       if (newMistakes.length > 0) {
         localStorage.setItem('sixth_student_mistakes', JSON.stringify([...existingMistakes, ...newMistakes]));
       }
-    } catch (e) {}
+    } catch  {}
   };
 
   const minutes = Math.floor(timeLeft / 60);

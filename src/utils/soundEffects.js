@@ -65,7 +65,7 @@ export const triggerHaptic = (type = 'light') => {
       default:
         navigator.vibrate(15);
     }
-  } catch (_e) {
+  } catch  {
     // Ignore haptic errors on unsupported devices
   }
 };
@@ -82,7 +82,7 @@ export const dispatchDynamicIsland = (detail) => {
       }
     });
     window.dispatchEvent(event);
-  } catch (_e) {}
+  } catch  {}
 };
 
 export const toggleMute = () => {
@@ -391,7 +391,7 @@ export const playSound = (type, customPitch = 1.0) => {
       });
       triggerHaptic('light');
     }
-  } catch (_e) {
+  } catch  {
     // Ignore audio context errors on auto-play blocked
   }
 };

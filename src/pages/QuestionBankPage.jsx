@@ -5,7 +5,6 @@ import { quizData } from '../data/quizData';
 import { 
   ArrowLeft,
   FileText, 
-  Download, 
   ExternalLink, 
   Printer, 
   Eye, 
@@ -16,10 +15,8 @@ import {
   Volume2, 
   Sparkles, 
   Search, 
-  Filter, 
   ChevronRight, 
   RotateCcw,
-  Check,
   X
 } from 'lucide-react';
 import { playSound } from '../utils/soundEffects';
@@ -107,7 +104,7 @@ const QuestionBankPage = () => {
           });
           localStorage.setItem('sixth_student_mistakes', JSON.stringify(existingMistakes));
         }
-      } catch (e) {}
+      } catch  {}
     }
     setDrillShowExplanation(true);
   };

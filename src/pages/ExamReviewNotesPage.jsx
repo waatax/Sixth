@@ -11,7 +11,7 @@ import {
 } from '../data/examNotes';
 import { getUnitDiagram } from '../data/examNotes/unitDiagrams';
 import { getKnowledgePointsByUnit } from '../data/knowledgePoints';
-import { getKnowledgePointInfographic } from '../data/knowledgeInfographics';
+
 import KnowledgeMasteryModal from '../components/examNotes/KnowledgeMasteryModal';
 import VisualKnowledgeHubModal from '../components/common/VisualKnowledgeHubModal';
 import { 
@@ -35,12 +35,9 @@ import {
   Target,
   Award,
   Compass,
-  Layers,
   Clock,
-  ShieldCheck,
   ZoomIn,
   X,
-  Check,
   Lightbulb
 } from 'lucide-react';
 import { playSound } from '../utils/soundEffects';
@@ -369,7 +366,6 @@ const ExamReviewNotesPage = () => {
       <div style="margin-bottom: 8px;">
         <span class="badge">${n.examScopeLabel || '段考重點'}</span>
         <span class="badge" style="background: #fef3c7; color: #b45309;">${n.term}</span>
-        ${false && n.examWeight ? `<span class="badge" style="background: #dcfce7; color: #15803d;">${n.examWeight}</span>` : ''}
         <span style="font-size: 11px; color: #64748b;">共同概念整理・版本冊次待核對</span>
       </div>
       <h2 style="font-size: 16px; margin: 0 0 10px 0; color: #0f172a; border-left: 3.5px solid #2563eb; padding-left: 6px;">${n.title}</h2>
@@ -914,11 +910,6 @@ const ExamReviewNotesPage = () => {
                         <span className="badge badge-accent font-bold">
                           {note.examScopeLabel || note.term}
                         </span>
-                        {false && note.examWeight && (
-                          <span className="badge badge-success font-bold text-xs">
-                            {note.examWeight}
-                          </span>
-                        )}
                         <span className="badge badge-secondary text-xs">
                           共同概念整理・版本冊次待核對
                         </span>

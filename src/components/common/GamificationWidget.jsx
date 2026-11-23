@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Award, Flame, Zap, Trophy, Star, CheckCircle, X, Sparkles, Heart } from 'lucide-react';
+import { Flame, Zap, Trophy, CheckCircle, X, Heart } from 'lucide-react';
 import { useGamification, getXpForNextLevel } from '../../context/GamificationContext';
 import PetSanctuaryModal from '../gamification/PetSanctuaryModal';
 import TrophyHallModal from '../gamification/TrophyHallModal';

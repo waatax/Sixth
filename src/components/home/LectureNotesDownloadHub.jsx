@@ -1,16 +1,12 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  FileText, 
   Download, 
   Search, 
   BookOpen, 
-  Sparkles, 
   CheckCircle2, 
   Filter, 
-  Eye, 
   ExternalLink,
-  Layers,
   Calendar,
   ArrowRight
 } from 'lucide-react';

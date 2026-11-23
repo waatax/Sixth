@@ -6,13 +6,9 @@ import {
   Zap,
   Timer,
   CheckCircle2,
-  BookOpen,
   FileText,
-  Play,
   Sparkles,
-  Award,
   Flame,
-  Layers,
   ArrowRight,
   Target
 } from 'lucide-react';

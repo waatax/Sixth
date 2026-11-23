@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, RotateCcw, Trophy, Sparkles, Timer, Flame, Award, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, RotateCcw, Sparkles, Timer, Flame, CheckCircle2 } from 'lucide-react';
 import { useGamification } from '../context/GamificationContext';
 import confetti from 'canvas-confetti';
 import { playSound } from '../utils/soundEffects';

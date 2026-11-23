@@ -217,7 +217,7 @@ const GeptPage = () => {
       const earnedXp = Math.min(currentQuizQuestions.length * 10, 200);
       stats.xp = (stats.xp || 0) + earnedXp;
       localStorage.setItem('sixth_student_stats', JSON.stringify(stats));
-    } catch (e) {}
+    } catch  {}
   };
 
   const levelData = geptData.levels.find(l => l.id === activeLevel) || geptData.levels[0];

@@ -11,16 +11,13 @@ import {
   RotateCcw, 
   Volume2, 
   VolumeX, 
-  ShieldCheck, 
   Heart, 
   Flame, 
   HelpCircle, 
   Keyboard, 
-  Target,
   Lightbulb,
   Compass,
-  PenTool,
-  FileText
+  PenTool
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { quizData } from '../data/quizData';
@@ -301,7 +298,7 @@ const QuizPage = () => {
         if (newMistakes.length > 0) {
           localStorage.setItem('sixth_student_mistakes', JSON.stringify([...existingMistakes, ...newMistakes]));
         }
-      } catch (e) {}
+      } catch  {}
 
       playSound('levelup');
       triggerHaptic('heavy');

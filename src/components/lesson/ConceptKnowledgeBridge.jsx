@@ -9,8 +9,7 @@ import {
   GraduationCap, 
   Radio, 
   Volume2, 
-  Globe,
-  Share2
+  Globe
 } from 'lucide-react';
 import { getConceptBridge } from '../../data/conceptBridges';
 import { playSound } from '../../utils/soundEffects';

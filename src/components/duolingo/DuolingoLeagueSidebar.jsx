@@ -2,13 +2,9 @@ import { useMemo } from 'react';
 import {
   Flame,
   Heart,
-  Trophy,
   Zap,
-  Shield,
   Target,
-  Crown,
-  BookOpen,
-  CheckCircle2
+  BookOpen
 } from 'lucide-react';
 import { useGamification } from '../../context/GamificationContext';
 import { REFERENCE_BOOK_SERIES_108 } from '../../data/curriculumCatalog108';

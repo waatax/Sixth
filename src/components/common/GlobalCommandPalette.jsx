@@ -3,18 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Search, 
   X, 
-  BookOpen, 
   FileText, 
   FlaskConical, 
   Zap, 
   Sparkles, 
-  Clock, 
   ArrowRight, 
   CornerDownLeft, 
   Flame, 
-  ShieldCheck, 
   History, 
-  Layers,
   GraduationCap,
   Swords,
   Timer,
@@ -65,7 +61,7 @@ export const GlobalCommandPalette = () => {
     try {
       const saved = localStorage.getItem(RECENT_SEARCHES_KEY);
       if (saved) setRecentSearches(JSON.parse(saved));
-    } catch (e) {
+    } catch  {
       setRecentSearches([]);
     }
   }, []);
@@ -263,7 +259,7 @@ export const GlobalCommandPalette = () => {
     setRecentSearches(next);
     try {
       localStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(next));
-    } catch (e) {}
+    } catch  {}
   };
 
   const handleSelectItem = (item) => {
@@ -307,7 +303,7 @@ export const GlobalCommandPalette = () => {
     setRecentSearches([]);
     try {
       localStorage.removeItem(RECENT_SEARCHES_KEY);
-    } catch (e) {}
+    } catch  {}
     playSound('click');
   };
 

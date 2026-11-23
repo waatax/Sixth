@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
   Compass, 
-  Sparkles, 
   CheckCircle2, 
   Star, 
   Flame, 
@@ -10,12 +9,9 @@ import {
   Shuffle, 
   Trophy, 
   Bookmark, 
-  Layers, 
   ArrowRight,
   TrendingUp,
-  Award,
   Zap,
-  Clock,
   Network
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
@@ -46,7 +42,7 @@ export const GlobalKnowledgeRadar = () => {
     try {
       const today = new Date().toISOString().slice(0, 10);
       return localStorage.getItem(`sixth_daily_chest_${today}`) === 'true';
-    } catch (e) {
+    } catch  {
       return false;
     }
   });
@@ -119,7 +115,7 @@ export const GlobalKnowledgeRadar = () => {
     const today = new Date().toISOString().slice(0, 10);
     try {
       localStorage.setItem(`sixth_daily_chest_${today}`, 'true');
-    } catch (e) {}
+    } catch  {}
     setDailyChestClaimed(true);
     addXp(120, 'daily_mastery_chest');
     addCoins(30);

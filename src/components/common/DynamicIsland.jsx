@@ -1,17 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { 
-  Sparkles, 
   Volume2, 
   VolumeX, 
   Sun, 
   Moon, 
   Eye, 
-  Flame, 
   Zap, 
   X, 
-  ShieldCheck, 
-  ChevronRight,
-  Award
+  ChevronRight
 } from 'lucide-react';
 import { useGamification, getXpForNextLevel } from '../../context/GamificationContext';
 import { useTheme } from '../../context/ThemeContext';

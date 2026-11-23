@@ -6,13 +6,11 @@ import {
   Copy, 
   Check, 
   X, 
-  Sparkles, 
   Download, 
   Highlighter, 
   PenTool, 
   Clock, 
-  PlusCircle, 
-  Tag 
+  PlusCircle 
 } from 'lucide-react';
 import { playSound } from '../../utils/soundEffects';
 
@@ -35,7 +33,7 @@ const LessonNotebookDrawer = ({ isOpen, onClose, unitId, unitTitle, subjectName 
       setNoteContent(saved || '');
       const savedHl = localStorage.getItem(highlightsKey);
       setHighlights(savedHl ? JSON.parse(savedHl) : []);
-    } catch (e) {}
+    } catch  {}
   }, [unitId, storageKey, highlightsKey, isOpen]);
 
   // Auto-save debounced
@@ -47,7 +45,7 @@ const LessonNotebookDrawer = ({ isOpen, onClose, unitId, unitTitle, subjectName 
         const now = new Date();
         const timeStr = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
         setLastSavedTime(timeStr);
-      } catch (e) {}
+      } catch  {}
     }, 1200);
 
     return () => clearTimeout(timer);
@@ -61,7 +59,7 @@ const LessonNotebookDrawer = ({ isOpen, onClose, unitId, unitTitle, subjectName 
       setLastSavedTime(`${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`);
       playSound('coin');
       setTimeout(() => setSavedToast(false), 2000);
-    } catch (e) {}
+    } catch  {}
   };
 
   const handleClear = () => {
@@ -69,7 +67,7 @@ const LessonNotebookDrawer = ({ isOpen, onClose, unitId, unitTitle, subjectName 
       setNoteContent('');
       try {
         localStorage.removeItem(storageKey);
-      } catch (e) {}
+      } catch  {}
       playSound('click');
     }
   };
@@ -136,7 +134,7 @@ const LessonNotebookDrawer = ({ isOpen, onClose, unitId, unitTitle, subjectName 
     setHighlights(updated);
     try {
       localStorage.setItem(highlightsKey, JSON.stringify(updated));
-    } catch (e) {}
+    } catch  {}
     playSound('click');
   };
 

@@ -3,11 +3,8 @@ import { Link } from 'react-router-dom';
 import {
   Play,
   BookOpen,
-  Trophy,
   Star,
-  CheckCircle2,
   Layers,
-  Gift,
   Dumbbell
 } from 'lucide-react';
 import confetti from 'canvas-confetti';

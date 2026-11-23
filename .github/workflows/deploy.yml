@@ -26,16 +26,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: 'npm'
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Install dependencies
         run: npm ci
+      - name: Lint (errors only)
+        run: npx oxlint --quiet
       - name: Verify exam practice content
         run: node scripts/verify-exam-practice.mjs
       - name: Verify every question is answerable from lessons and handouts
@@ -59,7 +61,7 @@ jobs:
       - name: Verify learning content and speech regression
         run: node scripts/verify-learning-upgrade.mjs
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           # Upload entire repository
           path: './dist'

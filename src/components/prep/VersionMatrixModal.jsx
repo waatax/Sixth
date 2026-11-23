@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, BookOpen, AlertTriangle, CheckCircle2, ChevronRight, Filter } from 'lucide-react';
+import { X, BookOpen, AlertTriangle, CheckCircle2, Filter } from 'lucide-react';
 import { versionMatrix } from '../../data/prepCurriculumAlignment';
 import { playSound } from '../../utils/soundEffects';
 

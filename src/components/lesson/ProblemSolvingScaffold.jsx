@@ -8,11 +8,9 @@ import {
   AlertTriangle, 
   Volume2, 
   ChevronRight, 
-  ChevronDown, 
   ChevronUp, 
   RotateCcw,
-  Eye,
-  Award
+  Eye
 } from 'lucide-react';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../../utils/soundEffects';
 import { speechEngine } from '../../utils/speechHelper';

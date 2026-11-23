@@ -2,18 +2,14 @@ import { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   BookOpen, 
-  HelpCircle, 
   Globe, 
   GraduationCap, 
   Zap, 
   Timer, 
   Menu, 
   X, 
-  Sun, 
   Moon, 
-  Eye, 
   Type, 
-  Volume2, 
   VolumeX, 
   Sparkles, 
   CheckCircle2,
@@ -29,7 +25,6 @@ import {
 } from 'lucide-react';
 import GamificationWidget from '../common/GamificationWidget';
 import EyeCareToolbar from '../common/EyeCareToolbar';
-import SubjectIconBadge from '../common/SubjectIconBadge';
 // 兩個大型視窗內含全部題庫與知識點資料，打開時才載入
 const VisualKnowledgeHubModal = lazy(() => import('../common/VisualKnowledgeHubModal'));
 const QuickQuizMenuModal = lazy(() => import('../quiz/QuickQuizMenuModal'));

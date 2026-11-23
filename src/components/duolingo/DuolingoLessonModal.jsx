@@ -16,7 +16,6 @@ import {
   Flame,
   Maximize2,
   Minimize2,
-  Eye,
   EyeOff
 } from 'lucide-react';
 import confetti from 'canvas-confetti';

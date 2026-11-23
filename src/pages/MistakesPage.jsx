@@ -5,16 +5,11 @@ import {
   Trash2, 
   CheckCircle2, 
   Sparkles, 
-  Heart, 
   HelpCircle, 
-  ShieldCheck, 
   Trophy, 
-  Smile, 
   Volume2,
   Swords,
-  Flame,
-  Zap,
-  RotateCcw
+  Zap
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { playSound, triggerHaptic, dispatchDynamicIsland } from '../utils/soundEffects';
@@ -40,7 +35,7 @@ const MistakesPage = () => {
     if (saved) {
       try {
         setMistakes(JSON.parse(saved));
-      } catch (_e) {}
+      } catch  {}
     }
   }, []);
 

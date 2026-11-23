@@ -3,24 +3,18 @@ import { Link } from 'react-router-dom';
 import { coursesData } from '../data/courses';
 import { 
   Zap, 
-  Timer, 
   Globe, 
   ArrowRight, 
   Sparkles, 
-  Compass, 
   CheckCircle2, 
   ShieldCheck, 
-  GraduationCap, 
   Award,
-  Swords,
   Layers,
   FileText,
   BookOpen,
   Download,
-  HelpCircle,
   Search,
   FlaskConical,
-  BookmarkCheck,
   Flame,
   Lightbulb
 } from 'lucide-react';

@@ -5,9 +5,16 @@
     "browser": true,
     "es2022": true
   },
+  "ignorePatterns": ["dist/**", "public/**", "Local/**", "videos/**"],
   "rules": {
     "no-undef": "error",
     "react/rules-of-hooks": "error",
     "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["scripts/**", "vite.config.js"],
+      "env": { "node": true, "browser": true }
+    }
+  ]
 }

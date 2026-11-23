@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Users, Sparkles, Award, ArrowRight, CheckCircle2, MessageSquare, Lightbulb, ShieldCheck, Layers, Filter } from 'lucide-react';
+import { X, Users, Sparkles, ArrowRight, CheckCircle2, MessageSquare, Lightbulb, ShieldCheck, Layers, Filter } from 'lucide-react';
 import { expertCouncil, iterationLogs, completenessMatrix7x7 } from '../../data/prepCurriculumAlignment';
 import { playSound } from '../../utils/soundEffects';
 

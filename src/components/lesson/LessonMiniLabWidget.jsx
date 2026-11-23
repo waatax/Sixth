@@ -3,14 +3,10 @@ import {
   Sparkles, 
   RotateCcw, 
   Play, 
-  Pause, 
   Sliders, 
-  Award, 
   Zap, 
-  ExternalLink,
   Volume2,
   CheckCircle2,
-  HelpCircle,
   Clock,
   ArrowRight
 } from 'lucide-react';
@@ -88,12 +84,12 @@ const LessonMiniLabWidget = ({ unitId, subjectId }) => {
         try {
           oscNodeRef.current.stop();
           oscNodeRef.current.disconnect();
-        } catch (_e) {}
+        } catch  {}
       }
       if (audioCtxRef.current && audioCtxRef.current.state !== 'closed') {
         try {
           audioCtxRef.current.close();
-        } catch (_e) {}
+        } catch  {}
       }
     };
   }, []);
@@ -153,7 +149,7 @@ const LessonMiniLabWidget = ({ unitId, subjectId }) => {
         try {
           oscNodeRef.current.stop();
           oscNodeRef.current.disconnect();
-        } catch (_e) {}
+        } catch  {}
       }
       setIsOscPlaying(false);
     } else {
@@ -190,7 +186,7 @@ const LessonMiniLabWidget = ({ unitId, subjectId }) => {
               osc.disconnect();
             }
             setIsOscPlaying(false);
-          } catch (_e) {}
+          } catch  {}
         }, 2500);
       } catch (err) {
         console.warn('AudioContext error', err);

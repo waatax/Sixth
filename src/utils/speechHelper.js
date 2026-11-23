@@ -14,7 +14,7 @@ class SpeechEngine {
       try {
         const stored = localStorage.getItem('sixth_speech_rate');
         if (stored) savedRate = parseFloat(stored) || 1.0;
-      } catch (e) {}
+      } catch  {}
     }
     this.rate = Math.min(1.5, Math.max(0.5, savedRate));
     this.sequence = 0;
@@ -242,7 +242,7 @@ class SpeechEngine {
     if (this.synth) {
       try {
         this.synth.cancel();
-      } catch (e) {}
+      } catch  {}
     }
     this.isPlaying = false;
     this.activeId = null;
@@ -267,7 +267,7 @@ class SpeechEngine {
     if (typeof window !== 'undefined') {
       try {
         localStorage.setItem('sixth_speech_rate', String(this.rate));
-      } catch (e) {}
+      } catch  {}
     }
     this.notifyListeners();
   }

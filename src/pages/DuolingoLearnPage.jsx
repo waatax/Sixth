@@ -1,26 +1,19 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import {
-  Sparkles,
   BookOpen,
-  Layers,
   Trophy,
-  Flame,
   Heart,
   Search,
   X,
   Play,
-  FileText,
   CheckCircle2,
-  ShieldCheck,
   ArrowRight,
-  Compass,
   Gamepad2
 } from 'lucide-react';
 import {
   TEXTBOOK_VERSIONS_108,
   REFERENCE_BOOK_SERIES_108,
-  CURRICULUM_SUBJECT_GROUPS,
   getAll108Subjects,
   getUnitsBySubject108
 } from '../data/curriculumCatalog108';

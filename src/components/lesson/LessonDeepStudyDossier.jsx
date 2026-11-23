@@ -191,7 +191,7 @@ const LessonDeepStudyDossier = ({
         icon: '✨'
       });
       setTimeout(() => setCopied(false), 2000);
-    } catch (e) {}
+    } catch  {}
   };
 
   return (

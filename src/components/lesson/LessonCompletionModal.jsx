@@ -1,13 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { 
   Trophy, 
-  CheckCircle2, 
   ArrowRight, 
   Sparkles, 
   FlaskConical, 
   HelpCircle, 
   X, 
-  RotateCcw,
   Star,
   Award,
   Zap

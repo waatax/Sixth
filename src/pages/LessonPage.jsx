@@ -212,7 +212,7 @@ const LessonPage = () => {
       const saved = localStorage.getItem('sixth_widescreen_mode');
       if (saved !== null) return saved === 'true';
       return typeof window !== 'undefined' && window.innerWidth >= 1280;
-    } catch (e) {
+    } catch  {
       return false;
     }
   });
@@ -249,7 +249,7 @@ const LessonPage = () => {
     setWidescreenMode(next);
     try {
       localStorage.setItem('sixth_widescreen_mode', next.toString());
-    } catch (e) {}
+    } catch  {}
     playSound('pop');
     triggerHaptic('medium');
     dispatchDynamicIsland({
@@ -266,7 +266,7 @@ const LessonPage = () => {
   const [readingTheme, setReadingTheme] = useState(() => {
     try {
       return localStorage.getItem('sixth_reading_theme') || 'normal';
-    } catch (e) {
+    } catch  {
       return 'normal';
     }
   });
@@ -294,7 +294,7 @@ const LessonPage = () => {
       setUserHighlights(savedHl ? JSON.parse(savedHl) : []);
 
       setHasBookmarked(!!localStorage.getItem(`bookmark_${unitId}`));
-    } catch (e) {
+    } catch  {
       setMasteredConcepts([]);
       setMasteredSections([]);
       setUserHighlights([]);
@@ -324,7 +324,7 @@ const LessonPage = () => {
             top: rect.top + window.scrollY - 52,
             left: Math.max(10, rect.left + window.scrollX + rect.width / 2 - 140)
           });
-        } catch (e) {
+        } catch  {
           setSelectedTextBubble(null);
         }
       } else {
@@ -368,7 +368,7 @@ const LessonPage = () => {
           localStorage.setItem(`sixth_last_studied_${currentSubject.id}`, unitId);
         }
         localStorage.setItem('sixth_last_studied_time', Date.now().toString());
-      } catch (e) {}
+      } catch  {}
     }
   }, [unitId, currentSubject]);
 
@@ -412,7 +412,7 @@ const LessonPage = () => {
         setScrollProgress(progress);
         try {
           localStorage.setItem(`sixth_unit_progress_${unitId}`, Math.round(progress).toString());
-        } catch (e) {}
+        } catch  {}
         
         if (window.scrollY > 260) {
           setShowFloatingDock(true);
@@ -456,7 +456,7 @@ const LessonPage = () => {
         try {
           const mdContent = await mdModules[path]();
           setContent(preprocessLessonMarkdown(mdContent));
-        } catch (_err) {
+        } catch  {
           setContent('# 糟糕！無法載入教學內容\n\n內容檔案可能遺失或正在建置中。');
         }
       } else {
@@ -508,7 +508,7 @@ const LessonPage = () => {
         : [...prev, concept];
       try {
         localStorage.setItem(`sixth_mastered_concepts_${unitId}`, JSON.stringify(next));
-      } catch (e) {}
+      } catch  {}
 
       if (!prev.includes(concept)) {
         playSound('coin');
@@ -530,7 +530,7 @@ const LessonPage = () => {
       const next = isAlready ? prev.filter(id => id !== secId) : [...prev, secId];
       try {
         localStorage.setItem(`sixth_sec_mastery_${unitId}`, JSON.stringify(next));
-      } catch (e) {}
+      } catch  {}
 
       if (!isAlready) {
         playSound('coin');
@@ -560,7 +560,7 @@ const LessonPage = () => {
     setUserHighlights(nextList);
     try {
       localStorage.setItem(`sixth_highlights_${unitId}`, JSON.stringify(nextList));
-    } catch (e) {}
+    } catch  {}
 
     playSound('coin');
     triggerHaptic('light');
@@ -580,7 +580,7 @@ const LessonPage = () => {
     const updated = saved ? `${saved}\n\n📌 摘錄重點：\n"${selectedTextBubble.text}"` : `📌 摘錄重點：\n"${selectedTextBubble.text}"`;
     try {
       localStorage.setItem(noteKey, updated);
-    } catch (e) {}
+    } catch  {}
 
     playSound('correct');
     dispatchDynamicIsland({
@@ -708,7 +708,7 @@ const LessonPage = () => {
     setReadingTheme(nextTheme);
     try {
       localStorage.setItem('sixth_reading_theme', nextTheme);
-    } catch (e) {}
+    } catch  {}
     playSound('click');
     triggerHaptic('light');
   };

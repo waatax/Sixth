@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import MathText from '../common/MathText';
-import { HelpCircle, ChevronDown, ChevronUp, CheckCircle2, XCircle, Volume2, Sparkles } from 'lucide-react';
+import { ChevronDown, ChevronUp, CheckCircle2, XCircle, Volume2, Sparkles } from 'lucide-react';
 import { speechEngine } from '../../utils/speechHelper';
 import { playSound } from '../../utils/soundEffects';
 

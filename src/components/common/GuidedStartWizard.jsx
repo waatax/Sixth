@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Compass, Sparkles, Zap, BookOpen, Target, ArrowRight, RotateCcw, CheckCircle2, HeartHandshake, Smile, Award } from 'lucide-react';
+import { Compass, Zap, Target, ArrowRight, RotateCcw, HeartHandshake, Smile } from 'lucide-react';
 import { coursesData } from '../../data/courses';
 import { playSound } from '../../utils/soundEffects';
 
@@ -17,7 +17,7 @@ const GuidedStartWizard = () => {
     if (plan) {
       try {
         setSavedPlan(JSON.parse(plan));
-      } catch (e) {}
+      } catch  {}
     }
   }, []);
 

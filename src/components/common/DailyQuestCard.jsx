@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, Circle, Trophy, Zap, Sparkles, ChevronRight, Gift } from 'lucide-react';
+import { CheckCircle2, Circle, Zap, ChevronRight, Gift } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { playSound } from '../../utils/soundEffects';
 
@@ -20,7 +20,7 @@ const DailyQuestCard = () => {
         const parsed = JSON.parse(saved);
         setQuests(parsed.quests || quests);
         setClaimed(parsed.claimed || false);
-      } catch (e) {}
+      } catch  {}
     }
   }, [todayStr]);
 

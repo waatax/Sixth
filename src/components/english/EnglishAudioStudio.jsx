@@ -11,7 +11,6 @@ import {
   MessageSquare, 
   Sparkles, 
   Zap, 
-  HelpCircle,
   Check
 } from 'lucide-react';
 import { englishAudioData } from '../../data/englishAudioData';

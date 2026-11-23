@@ -1,4 +1,4 @@
-import { Flame, Zap } from 'lucide-react';
+import { Flame } from 'lucide-react';
 
 const ComboFlameIndicator = ({ comboCount }) => {
   if (comboCount <= 1) return null;

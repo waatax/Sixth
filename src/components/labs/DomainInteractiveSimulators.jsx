@@ -4,20 +4,13 @@ import {
   RotateCcw, 
   Play, 
   Pause, 
-  HelpCircle, 
   Zap, 
-  CheckCircle2, 
   Volume2, 
-  VolumeX, 
   Heart, 
-  Clock, 
   Compass, 
-  Palette, 
   BookOpen, 
-  Layers, 
   ShieldCheck, 
   ArrowRight, 
-  ChevronRight, 
   Flame, 
   Award,
   Activity,
@@ -986,7 +979,7 @@ export const CprRhythmMetronomeLab = () => {
       gain.connect(ctx.destination);
       osc.start();
       osc.stop(ctx.currentTime + 0.08);
-    } catch (_e) {}
+    } catch  {}
   };
 
   // Metronome timer loop

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { 
-  Zap, ArrowRight, RotateCcw, Sparkles, 
-  HelpCircle, Eye, Compass, Move, CheckCircle2 
+  ArrowRight, RotateCcw, Sparkles, 
+  Eye, Move, CheckCircle2 
 } from 'lucide-react';
 import { playSound } from '../../utils/soundEffects';
 

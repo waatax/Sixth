@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Sparkles, Heart } from 'lucide-react';
 import { useGamification } from '../../context/GamificationContext';
 import PetSanctuaryModal from './PetSanctuaryModal';
 import { playSound } from '../../utils/soundEffects';

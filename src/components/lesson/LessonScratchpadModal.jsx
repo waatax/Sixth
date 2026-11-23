@@ -8,7 +8,6 @@ import {
   X, 
   Grid, 
   Square, 
-  Sparkles, 
   Check, 
   Maximize2,
   Minimize2
@@ -86,7 +85,7 @@ const LessonScratchpadModal = ({ isOpen, onClose, unitId, unitTitle }) => {
       localStorage.setItem(storageKey, dataUrl);
       setHasSaved(true);
       setTimeout(() => setHasSaved(false), 1500);
-    } catch (e) {}
+    } catch  {}
   };
 
   const undo = () => {
@@ -105,7 +104,7 @@ const LessonScratchpadModal = ({ isOpen, onClose, unitId, unitTitle }) => {
       setHistoryStep(prevStep);
       try {
         localStorage.setItem(storageKey, imgData);
-      } catch (e) {}
+      } catch  {}
     };
     img.src = imgData;
     playSound('click');

@@ -99,7 +99,7 @@ const FlashcardsPage = () => {
       } else {
         setMasteredIds([]);
       }
-    } catch (e) {}
+    } catch  {}
   }, [currentSubject, geptLevel]);
 
   // Stop continuous play when unmounting
@@ -152,7 +152,7 @@ const FlashcardsPage = () => {
           parsed.xp = (parsed.xp || 0) + 10;
           localStorage.setItem('sixth_student_stats', JSON.stringify(parsed));
         }
-      } catch (e) {}
+      } catch  {}
 
       playSound('correct');
 

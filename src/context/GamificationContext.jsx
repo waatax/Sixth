@@ -304,7 +304,7 @@ export const GamificationProvider = ({ children }) => {
       if (saved) {
         return { ...INITIAL_STATE, ...JSON.parse(saved) };
       }
-    } catch (e) {}
+    } catch  {}
     return INITIAL_STATE;
   });
 
@@ -312,7 +312,7 @@ export const GamificationProvider = ({ children }) => {
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    } catch (e) {}
+    } catch  {}
   }, [state]);
 
   // Check Daily Streak upon mount

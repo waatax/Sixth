@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Lightbulb, Zap, Award, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Compass, Lightbulb, Zap, Award, CheckCircle2 } from 'lucide-react';
 import { playSound } from '../../utils/soundEffects';
 
 const STAGES = [

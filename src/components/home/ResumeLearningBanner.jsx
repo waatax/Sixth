@@ -2,14 +2,11 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Play, 
-  Sparkles, 
   BookOpen, 
   FileText, 
   CheckCircle2, 
   Clock, 
-  ArrowRight, 
   Flame, 
-  Compass,
   GraduationCap
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';
@@ -33,7 +30,7 @@ export const ResumeLearningBanner = () => {
           setMasteredCount(JSON.parse(concepts).length);
         }
       }
-    } catch (e) {
+    } catch  {
       setLastUnitId(null);
     }
   }, []);

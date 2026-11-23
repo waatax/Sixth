@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { X, Heart, Sparkles, Zap, Award, CheckCircle2, ChevronRight, Utensils, Shield, Crown } from 'lucide-react';
-import { useGamification, PET_TEMPLATES, SHOP_ITEMS } from '../../context/GamificationContext';
+import { X, Sparkles, Award, CheckCircle2, Utensils, Crown } from 'lucide-react';
+import { useGamification, PET_TEMPLATES } from '../../context/GamificationContext';
 import confetti from 'canvas-confetti';
 import { playSound } from '../../utils/soundEffects';
 

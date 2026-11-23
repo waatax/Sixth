@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -6,17 +6,13 @@ import {
   ChevronDown, 
   Heart, 
   Volume2, 
-  VolumeX, 
   Sparkles, 
-  HelpCircle, 
   Share2, 
   Check, 
   Zap, 
-  Flame, 
   RotateCcw,
   CheckCircle2,
   XCircle,
-  Play,
   Square
 } from 'lucide-react';
 import { shortsReelsData } from '../data/shortsData';

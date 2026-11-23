@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
-import HomePage from './pages/StudyStudio';
+const HomePage = lazy(() => import('./pages/StudyStudio'));
 import { GamificationProvider } from './context/GamificationContext';
 import PetCompanionWidget from './components/gamification/PetCompanionWidget';
 import './App.css';

@@ -6,7 +6,7 @@
 // 4. 所有主流參考書與輔助教材編列：課堂自修、學習評量、名師講義、段考滿分卷、素養題本
 
 import { coursesData } from './courses.js';
-import { textbookVersionMatrix, getUnitVersionFocus } from './examNotes/textbookVersionMatrix.js';
+import { getUnitVersionFocus } from './examNotes/textbookVersionMatrix.js';
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // 📚 一、108 課綱所有課本版本清單 (Textbook Versions Registry)

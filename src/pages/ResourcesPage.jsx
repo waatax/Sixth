@@ -6,7 +6,6 @@ import {
   ShieldCheck, 
   Star, 
   Copy, 
-  Check, 
   BookOpen, 
   Sparkles, 
   Search, 

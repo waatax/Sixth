@@ -4,19 +4,14 @@ import {
   Search, 
   X, 
   Sparkles, 
-  BookOpen, 
   ArrowRight, 
   FileText, 
   FlaskConical, 
   CheckCircle2, 
   Flame, 
-  Compass, 
   GraduationCap, 
-  Clock, 
   Filter,
-  Layers,
   ChevronRight,
-  TrendingUp,
   SlidersHorizontal
 } from 'lucide-react';
 import { coursesData } from '../../data/courses';

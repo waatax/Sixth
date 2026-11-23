@@ -6,15 +6,11 @@ import {
   BookOpen,
   FileText,
   Sparkles,
-  CheckCircle2,
   AlertTriangle,
   Play,
-  ArrowRight,
-  Layers,
-  Award
+  Layers
 } from 'lucide-react';
 import {
-  TEXTBOOK_VERSIONS_108,
   REFERENCE_BOOK_SERIES_108,
   getUnitCompleteCatalog
 } from '../../data/curriculumCatalog108';
