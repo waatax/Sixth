@@ -35,6 +35,7 @@ import {
   Printer,
   Palette,
   FileText,
+  Play,
   Flame,
   X,
   BookmarkCheck,
@@ -48,6 +49,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { coursesData } from '../data/courses';
+import { unitExamScopeMap } from '../data/examNotes';
 import { getConceptBridge } from '../data/conceptBridges';
 import LessonDeepStudyDossier from '../components/lesson/LessonDeepStudyDossier';
 import { interactiveLabsList } from '../data/interactiveLabsData';
@@ -172,6 +174,7 @@ const getSectionIconInfo = (title = '') => {
 
 const LessonPage = () => {
   const { unitId } = useParams();
+  const reviewScope = unitExamScopeMap[unitId]?.scope;
   const navigate = useNavigate();
   const { increaseFontSize, decreaseFontSize, focusMode, setFocusMode } = useTheme();
   const { 
@@ -1043,6 +1046,14 @@ const LessonPage = () => {
               <FileText size={12} />
               <span>章節講義 (PDF)</span>
             </button>
+          )}
+
+          {reviewScope && currentSubject && (
+            <Link className="badge flex items-center gap-1.5"
+              to={`/exam-notes/${currentSubject.id}/${currentUnit.semester}/${reviewScope}#review-videos`}>
+              <Play size={14} aria-hidden="true" />
+              段考複習影片
+            </Link>
           )}
 
           {/* Scratchpad Button */}

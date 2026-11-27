@@ -201,7 +201,7 @@ export default function HomePage() {
       <section className="isl-more" aria-label="更多學習工具">
         <Link to="/check"><span aria-hidden="true">📝</span><b>小考檢查</b><small>看看哪裡要加強</small></Link>
         {grade === 6 && <Link to="/practice"><span aria-hidden="true">🎓</span><b>小六練習室</b><small>64 單元與題庫</small></Link>}
-        {grade === 6 && <Link to="/exam-notes"><span aria-hidden="true">📒</span><b>段考講義</b><small>可下載列印</small></Link>}
+        {grade === 6 && <Link to="/exam-notes"><span aria-hidden="true">📒</span><b>段考講義與影片</b><small>八科複習與練習</small></Link>}
         <Link to="/labs"><span aria-hidden="true">🔬</span><b>互動實驗</b><small>動手驗證想法</small></Link>
         <Link to="/flashcards"><span aria-hidden="true">🗂️</span><b>記憶閃卡</b><small>先回想再翻面</small></Link>
       </section>

@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect } from 'react';
 import ExamReviewPlanner from '../components/examNotes/ExamReviewPlanner';
+import ExamReviewVideos from '../components/examNotes/ExamReviewVideos';
 import MathText from '../components/common/MathText';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import katex from 'katex';
 import { coursesData } from '../data/courses';
 import {
@@ -156,31 +157,22 @@ function getUnitMasteryInfo(note, checkedMap) {
 const ExamReviewNotesPage = () => {
   const { subjectId = 'math', semester = '6A', scope = 'all' } = useParams();
   const navigate = useNavigate();
+  const { hash } = useLocation();
 
   const currentSubject = subjectId.toLowerCase();
   const currentSemester = semester.toUpperCase(); // '6A' or '6B'
 
   // 當前段考範圍: 'all' (全學期) | 'midterm' (期中考/第一次段考) | 'final' (期末考/畢業考)
-  const [examScope, setExamScope] = useState(scope.toLowerCase());
-
-  useEffect(() => {
-    if (scope) {
-      setExamScope(scope.toLowerCase());
-    }
-  }, [scope]);
+  const examScope = scope.toLowerCase();
 
   // 若 URL 帶有 #note-xxx 錨點，自動平滑捲動至該單元卡片
   useEffect(() => {
-    if (window.location.hash) {
-      const id = window.location.hash.replace('#', '');
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 180);
-    }
-  }, [currentSubject, currentSemester, examScope]);
+    if (!hash) return;
+    const timer = setTimeout(() => {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 180);
+    return () => clearTimeout(timer);
+  }, [hash, currentSubject, currentSemester, examScope]);
   const [searchQuery, setSearchQuery] = useState('');
   const [revealedSolutions, setRevealedSolutions] = useState({});
   const [checkedItems, setCheckedItems] = useState({});
@@ -306,7 +298,6 @@ const ExamReviewNotesPage = () => {
 
   // 切換段考階段
   const handleSelectScope = (newScope) => {
-    setExamScope(newScope);
     navigate(`/exam-notes/${currentSubject}/${currentSemester}/${newScope}`);
     playSound('click');
   };
@@ -854,6 +845,9 @@ const ExamReviewNotesPage = () => {
       </div>
 
       {/* 主體雙欄排版：左側浮動目錄 (TOC) + 右側筆記卡片清單 */}
+      <ExamReviewVideos subject={currentSubject} semester={currentSemester} scope={examScope}
+        subjectName={currentSubjectMeta.shortName} />
+
       <div className="notes-main-layout">
         {/* 左側浮動目錄 (TOC) */}
         <aside className="notes-toc-sidebar">
