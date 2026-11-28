@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react';
 import { ExternalLink, Play } from 'lucide-react';
-import { getReviewVideos, reviewPlaylistUrl, reviewVideoWatchUrl } from '../../data/reviewVideos';
+import { getReviewVideos, reviewVideoWatchUrl } from '../../data/reviewVideos';
 import { reviewChaptersByVideo } from '../../data/reviewVideoChapters';
 import './ExamReviewVideos.css';
 
 const editions = [
+  { id: 'knowledge', name: '知識與解題' },
   { id: 'full', name: '完整段考複習' },
-  { id: 'aligned', name: '課綱速覽' }
 ];
 
 function formatRuntime(seconds) {
@@ -94,15 +94,12 @@ export default function ExamReviewVideos({ subject, semester, scope, subjectName
       <div className="review-videos-heading">
         <div>
           <h2 id="review-videos-title">段考複習影片</h2>
-          <p>從完整段考複習開始，依單元看觀念、題型與詳解。看完可接著做下方的講義練習。課綱速覽適合先了解單元重點。</p>
+          <p>從「知識與解題」開始，依單元複習觀念、跟著例題練習。也可切換「完整段考複習」。</p>
         </div>
-        <a href={reviewPlaylistUrl} target="_blank" rel="noopener noreferrer">
-          YouTube 播放清單 <ExternalLink size={15} aria-hidden="true" />
-        </a>
       </div>
       <div className="review-video-grid">
         {groups.map((group) => (
-          <ExamVideoCard key={group.aligned.id} group={group} title={`${term}${subjectName}・${group.exam}`} />
+          <ExamVideoCard key={group.knowledge.id} group={group} title={`${term}${subjectName}・${group.exam}`} />
         ))}
       </div>
       <p className="review-videos-note">影片來源為 WL 學習頻道。實際段考範圍以老師公告為準。</p>

@@ -30,7 +30,6 @@
   color: var(--text-secondary);
 }
 
-.review-videos-heading a,
 .review-video-watch {
   display: inline-flex;
   gap: .4rem;
