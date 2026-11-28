@@ -46,6 +46,6 @@ export function getReviewVideos(subject, semester, scope) {
   });
 }
 
-export function reviewVideoWatchUrl(id) {
-  return `https://www.youtube.com/watch?v=${id}`;
+export function reviewVideoWatchUrl(id, start = 0) {
+  return `https://www.youtube.com/watch?v=${id}${start > 0 ? `&t=${start}s` : ''}`;
 }

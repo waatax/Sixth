@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { ExternalLink, Play } from 'lucide-react';
 import { getReviewVideos, reviewPlaylistUrl, reviewVideoWatchUrl } from '../../data/reviewVideos';
+import { reviewChaptersByVideo } from '../../data/reviewVideoChapters';
 import './ExamReviewVideos.css';
 
 const editions = [
-  { id: 'aligned', name: '課綱對齊版' },
-  { id: 'full', name: '長篇重點複習' }
+  { id: 'full', name: '完整段考複習' },
+  { id: 'aligned', name: '課綱速覽' }
 ];
 
 function formatRuntime(seconds) {
@@ -14,9 +15,15 @@ function formatRuntime(seconds) {
 
 function ExamVideoCard({ group, title }) {
   const [edition, setEdition] = useState(editions[0]);
-  const [playing, setPlaying] = useState(false);
+  const [playback, setPlayback] = useState(null);
+  const player = useRef(null);
   const video = group[edition.id];
   const videoTitle = `${title} ${edition.name}`;
+  const chapters = reviewChaptersByVideo[video.id];
+  const play = (start) => {
+    setPlayback((previous) => ({ start, key: (previous?.key ?? 0) + 1 }));
+    if (start > 0) player.current?.scrollIntoView({ block: 'nearest' });
+  };
 
   return (
     <article className="review-video-card">
@@ -27,7 +34,7 @@ function ExamVideoCard({ group, title }) {
             onClick={() => {
               if (choice.id !== edition.id) {
                 setEdition(choice);
-                setPlaying(false);
+                setPlayback(null);
               }
             }}>
             <span>{choice.name}</span>
@@ -36,13 +43,14 @@ function ExamVideoCard({ group, title }) {
         ))}
       </div>
 
-      <div className="review-video-player">
-        {playing ? (
-          <iframe src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&playsinline=1`}
+      {chapters && <p className="review-video-note">共 {chapters.units.length} 個單元、{chapters.questions} 題影片示範。</p>}
+      <div className="review-video-player" ref={player}>
+        {playback ? (
+          <iframe key={playback.key} src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&playsinline=1&start=${playback.start}`}
             title={videoTitle} allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
             referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
         ) : (
-          <button type="button" className="review-video-poster" onClick={() => setPlaying(true)}
+          <button type="button" className="review-video-poster" onClick={() => play(0)}
             aria-label={`播放 ${videoTitle}`}>
             <span className="review-video-play"><Play size={22} fill="currentColor" aria-hidden="true" /></span>
             <span>播放影片</span>
@@ -50,10 +58,28 @@ function ExamVideoCard({ group, title }) {
         )}
       </div>
 
-      <a className="review-video-watch" href={reviewVideoWatchUrl(video.id)}
+      <a className="review-video-watch" href={reviewVideoWatchUrl(video.id, playback?.start)}
         target="_blank" rel="noopener noreferrer" aria-label={`在 YouTube 觀看 ${videoTitle}（另開分頁）`}>
         在 YouTube 觀看 <ExternalLink size={15} aria-hidden="true" />
       </a>
+      {chapters && (
+        <details className="review-video-chapters">
+          <summary>依單元跳到觀念或題型</summary>
+          <ol>
+            {chapters.units.map(({ title: unitTitle, concept, practice }) => (
+              <li key={concept}>
+                <strong>{unitTitle}</strong>
+                <div className="review-video-editions">
+                  <button type="button" onClick={() => play(concept)}
+                    aria-label={`播放 ${unitTitle} 觀念講解`}>觀念講解 <span className="review-video-runtime">{formatRuntime(concept)}</span></button>
+                  <button type="button" onClick={() => play(practice)}
+                    aria-label={`播放 ${unitTitle} 題型實戰`}>題型實戰 <span className="review-video-runtime">{formatRuntime(practice)}</span></button>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </details>
+      )}
     </article>
   );
 }
@@ -68,7 +94,7 @@ export default function ExamReviewVideos({ subject, semester, scope, subjectName
       <div className="review-videos-heading">
         <div>
           <h2 id="review-videos-title">段考複習影片</h2>
-          <p>先看課綱對齊版。遇到題目，暫停寫下答案和理由。需要多練時，再看長篇重點複習或接著做下方講義練習。</p>
+          <p>從完整段考複習開始，依單元看觀念、題型與詳解。看完可接著做下方的講義練習。課綱速覽適合先了解單元重點。</p>
         </div>
         <a href={reviewPlaylistUrl} target="_blank" rel="noopener noreferrer">
           YouTube 播放清單 <ExternalLink size={15} aria-hidden="true" />

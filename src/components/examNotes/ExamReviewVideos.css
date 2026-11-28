@@ -99,8 +99,30 @@
   white-space: nowrap;
 }
 
+.review-video-note {
+  margin: 0 0 .65rem;
+  color: var(--text-secondary);
+}
+
+.review-video-chapters summary {
+  cursor: pointer;
+  padding: .45rem 0;
+  font-weight: 750;
+}
+
+.review-video-chapters ol {
+  margin: .55rem 0 0;
+  padding-inline-start: 1.1rem;
+}
+
+.review-video-chapters li strong {
+  display: block;
+  margin-bottom: .35rem;
+}
+
 .review-video-player {
   display: grid;
+  scroll-margin-block-start: 6rem;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: .65rem;
